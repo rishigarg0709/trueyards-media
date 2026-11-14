@@ -1,2 +1,0 @@
-powai-skyline-night https://images.unsplash.com/photo-1578993074370-5865598d5b1e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-marine-drive-golden https://images.unsplash.com/photo-1716396635935-b7ba3d91a1cb?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
