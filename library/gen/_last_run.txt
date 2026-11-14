@@ -1,10 +1,15 @@
-h-small-house-a: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (3d2ea1da-c200-424b-8287-e72dd9fe0d82)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-small-house-b: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (5e0aae41-f177-4e09-b669-30298356c34a)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-small-house-c: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (af29936c-8326-410e-99ad-cdfc16820098)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-bars-a: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (30702638-5ec4-4062-86a7-a7117be61284)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-bars-b: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (7644c00d-f51d-4258-bb3a-0c503947309a)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-bars-c: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (7726d8dd-4eba-4f7e-af93-275c901e8028)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-premium-a: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (ab00f36a-2d04-4d3a-85ed-c3b305ff0b5e)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-premium-b: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (1712e866-373b-42ff-a22e-483f3fb4f156)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-city-slab-a: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (94efbea7-2024-42a6-a238-f8e94c6c3656)","code":5006}],"success":false,"result":{},"messages":[]}'
-h-city-slab-b: failed HTTP Error 400: Bad Request b'{"errors":[{"message":"AiError: Bad input: Error: Additional or unevaluated properties \'/seed\' at \'/\' not allowed (82de3f9f-0271-4638-88b5-387f88ac70bf)","code":5006}],"success":false,"result":{},"messages":[]}'
+h-small-house-a: ok 424473 bytes
+h-small-house-b: ok 375261 bytes
+h-small-house-c: ok 432393 bytes
+h-lone-house-a: ok 190692 bytes
+h-lone-house-b: ok 238145 bytes
+h-lone-house-c: ok 228881 bytes
+h-bars-a: ok 427201 bytes
+h-bars-b: ok 432376 bytes
+h-bars-c: ok 363059 bytes
+h-premium-a: ok 289628 bytes
+h-premium-b: ok 280766 bytes
+h-premium-c: ok 260658 bytes
+h-city-slab-a: ok 441970 bytes
+h-city-slab-b: ok 441161 bytes
+h-city-slab-c: ok 337281 bytes
