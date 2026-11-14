@@ -33,9 +33,9 @@ Fetch 2 or 3 more candidates than needed, look at them at full size, and use onl
 
 ## library/gen (story-specific 3D images, generated daily, free, no laptop)
 This is the default source for the images that make a post feel made for that day's story. A GitHub workflow calls Cloudflare Workers AI (FLUX schnell, free daily allowance of roughly 20 to 50 images).
-1. Write `gen/<anything>.json`: a list of `{"name": "...", "prompt": "..."}` (optional `"seed"`). Max 24 items per file. Commit and push.
+1. Write `gen/<anything>.json`: a list of `{"name": "...", "prompt": "..."}` (no other fields; the model rejects a seed). Max 24 items per file. Commit and push.
 2. Wait about 60 to 90 seconds (`gh run list -R rishigarg0709/trueyards-media -L 1`), then `git pull`. Files appear at library/gen/<name>.jpg (1024 x 1024). library/gen/_last_run.txt lists what worked and any error.
-3. For every image you need, generate 3 or 4 variants (same prompt, names ending -a, -b, -c, different seeds). Open each at full size and keep only the best. Delete the rejects before committing the post. If none is good, rewrite the prompt once; if still weak, use library/ai or Unsplash instead.
+3. For every image you need, generate 3 or 4 variants (names ending -a, -b, -c; the same prompt gives a different image each call, and small wording changes give more range). Open each at full size and keep only the best. Delete the rejects before committing the post. If none is good, rewrite the prompt once; if still weak, use library/ai or Unsplash instead.
 
 House prompt style (keep it, so the feed looks like one brand):
 "Ultra premium 3D render, studio product photography of <subject>, seamless <warm cream | deep emerald green | near-black charcoal> background, soft diffused light, long soft shadow, minimal editorial still life, large empty space on the <left|right|top> for text, photorealistic architectural model materials, extremely detailed, no text"

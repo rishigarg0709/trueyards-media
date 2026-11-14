@@ -32,8 +32,7 @@ jobs:
                   model=it.get("model","@cf/black-forest-labs/flux-1-schnell")
                   if not model.startswith("@cf/"): log.append(f"{name}: bad model"); continue
                   body={"prompt":str(it.get("prompt",""))[:2000],"steps":int(it.get("steps",8))}
-                  if "seed" in it: body["seed"]=int(it["seed"])
-                  req=urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/{model}",data=json.dumps(body).encode(),headers={"Authorization":"Bearer "+tok,"Content-Type":"application/json"})
+                          req=urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/{model}",data=json.dumps(body).encode(),headers={"Authorization":"Bearer "+tok,"Content-Type":"application/json"})
                   try:
                       raw=urllib.request.urlopen(req,timeout=180).read()
                       try:
