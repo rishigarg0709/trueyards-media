@@ -31,6 +31,7 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 ## Brand and design
 - Logo: TrueYards wordmark ("True" in ink or white, "Yards" in green #2f9f78 on light or #5cc49c on dark) with the green square Y mark. Header on every slide: wordmark top left, "NN / NN" counter top right.
 - Size: 1080 x 1350 (4:5). Render at 2x and downscale to 1080 x 1350 JPEG (quality 90) before publishing. Keep key text inside the central 3:4 area. Body text at least 28 px at 1080 width.
+- td.html: midnight navy data story (Outfit thin lowercase, amber #ffb454, 3D model images generated on navy). Made 14 Nov for the under 50 lakh post.
 - Three proven looks live in engine/templates (study them, then make new variations; do not copy one every day):
   - ta.html: warm cream editorial (Outfit thin lowercase headlines, one red accent #e2452b, a ruler running under all slides). Use for money maths.
   - tb.html: deep green poster (Anton caps, red tape with numbered seals, still-life photos). Use for checklists and buyer protection.
