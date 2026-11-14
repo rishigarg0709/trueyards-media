@@ -1,0 +1,72 @@
+[
+ {
+  "name": "e-house-a",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board with crisp laser-cut edges, tiny balcony and flat roof, a small brass door key lying on the table in front of it. The model sits in the right third of the frame, the left 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-house-b",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board with crisp laser-cut edges, tiny balcony and flat roof, a small brass door key lying on the table in front of it. The model sits in the right third of the frame, the left 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-stacks-a",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. Two stacks of plain brass coins standing side by side on the table: the left stack is very tall, about twenty coins, the right stack is very short, about four coins. Coins are smooth blank metal discs with no markings. Both stacks centred, generous empty backdrop above and around them. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-stacks-b",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. Two stacks of plain brass coins standing side by side on the table: the left stack is very tall, about twenty coins, the right stack is very short, about four coins. Coins are smooth blank metal discs with no markings. Both stacks centred, generous empty backdrop above and around them. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-paid-a",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board, its front door open with warm light glowing from inside, a brass key resting in the door. The model sits in the left third of the frame, the right 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-paid-b",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board, its front door open with warm light glowing from inside, a brass key resting in the door. The model sits in the left third of the frame, the right 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-hourglass-a",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A slim brass and clear glass hourglass with pale sand, half of the sand already fallen, standing next to a tiny white museum-board model house. Objects centred, generous empty backdrop around them. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-hourglass-b",
+  "model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A slim brass and clear glass hourglass with pale sand, half of the sand already fallen, standing next to a tiny white museum-board model house. Objects centred, generous empty backdrop around them. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-house-9",
+  "model": "@cf/black-forest-labs/flux-2-klein-9b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board with crisp laser-cut edges, tiny balcony and flat roof, a small brass door key lying on the table in front of it. The model sits in the right third of the frame, the left 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ },
+ {
+  "name": "e-paid-9",
+  "model": "@cf/black-forest-labs/flux-2-klein-9b",
+  "width": 1920,
+  "height": 1280,
+  "prompt": "Editorial product photograph for a premium finance magazine, shot on a medium format camera with a 90mm lens at f/8, one large softbox from the upper left, soft long shadow falling to the right, true-to-life materials, fine paper texture visible, calm and minimal, no text, no letters, no numbers, no logos, no people, no hands. A handmade architectural scale model of a small two-storey modern Indian house built from white museum board, its front door open with warm light glowing from inside, a brass key resting in the door. The model sits in the left third of the frame, the right 55 percent of the frame is empty backdrop. Background: seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper, evenly lit, no horizon line, no vignette."
+ }
+]

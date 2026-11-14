@@ -31,8 +31,16 @@ jobs:
                   name=re.sub(r"[^A-Za-z0-9_-]","",str(it.get("name","")))[:60] or "image"
                   model=it.get("model","@cf/black-forest-labs/flux-1-schnell")
                   if not model.startswith("@cf/"): log.append(f"{name}: bad model"); continue
-                  body={"prompt":str(it.get("prompt",""))[:2000],"steps":int(it.get("steps",8))}
-                  req=urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/{model}",data=json.dumps(body).encode(),headers={"Authorization":"Bearer "+tok,"Content-Type":"application/json"})
+                  prompt=str(it.get("prompt",""))[:3000]
+                  url=f"https://api.cloudflare.com/client/v4/accounts/{acc}/ai/run/{model}"
+                  if "flux-2" in model:
+                      fields={"prompt":prompt,"width":str(int(it.get("width",1024))),"height":str(int(it.get("height",1024)))}
+                      if "steps" in it: fields["steps"]=str(int(it["steps"]))
+                      bd="----ty"+os.urandom(8).hex()
+                      data="".join(f"--{bd}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n" for k,v in fields.items())+f"--{bd}--\r\n"
+                      req=urllib.request.Request(url,data=data.encode(),headers={"Authorization":"Bearer "+tok,"Content-Type":"multipart/form-data; boundary="+bd})
+                  else:
+                      req=urllib.request.Request(url,data=json.dumps({"prompt":prompt[:2000],"steps":int(it.get("steps",8))}).encode(),headers={"Authorization":"Bearer "+tok,"Content-Type":"application/json"})
                   try:
                       raw=urllib.request.urlopen(req,timeout=180).read()
                       try:
