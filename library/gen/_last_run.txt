@@ -1,0 +1,5 @@
+t1-tower-model-cream: ok 426420 bytes
+t2-rate-dial-green: ok 378705 bytes
+t3-coins-keys-cream: ok 426429 bytes
+t4-expressway-diorama: ok 388909 bytes
+t5-city-blocks-dark: ok 364216 bytes
