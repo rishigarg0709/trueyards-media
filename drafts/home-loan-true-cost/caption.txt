@@ -1,0 +1,20 @@
+A ₹50 lakh home loan over 20 years costs ₹1.04 crore. Here is where the money goes, year by year.
+
+An illustration at 8.5%, with the rate held fixed:
+
+• EMI: ₹43,391 a month
+• Month 1: ₹35,417 of it is interest. Only ₹7,974 repays the loan
+• Year 5: ₹26 lakh paid, loan down by just ₹5.9 lakh
+• Year 10: ₹52 lakh paid, ₹35 lakh still owed
+• Year 12: only now does most of each EMI repay the loan
+• Year 20: ₹1.04 crore paid, ₹54.1 lakh of it interest
+
+What moves the line in this illustration: one extra EMI every year ends the loan in 16 years 9 months with ₹10.3 lakh less interest. Raising the EMI 5% every year ends it in 12 years 3 months.
+
+Floating rates move, so real numbers will differ. Check your own loan's terms before prepaying.
+
+Send this to someone paying an EMI.
+
+Own calculation using the standard EMI formula. Educational content, not advice. Images are AI-generated.
+
+#homeloan #emi #personalfinanceindia #homebuying #realestateindia
