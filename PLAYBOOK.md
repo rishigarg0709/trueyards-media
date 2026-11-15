@@ -57,3 +57,10 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 - Windsor free plan: only this Instagram account is connected; the Facebook Page is not. Turn on Instagram's "share to Facebook" in the app for cross-posting.
 - Max 10 images per carousel through the API.
 - If Windsor reports the account disconnected or write actions disabled, stop and tell Rishi in one line.
+
+## Reels: hook and style rules (Rishi feedback, 15 Nov 2026)
+- The first 1 to 3 seconds decide everything. Never open on a slow word reveal over a still. Frame 0 must already show the core tension (a big number, a before/after, a contradiction), with motion from the first frame.
+- Land the payoff of the hook on the music drop at about 1.5 s (flash, shake, impact), then a curiosity line by second 3.
+- Story reels: one short sentence per screen, held long enough to read; one recurring device carries the story (countdown, year counter, price tag).
+- Rotate visual styles. Do not reuse the same palette and fonts reel after reel. Styles so far: "Bone/Red 3D" (Mumbai), "Ledger Noir" black/ivory/saffron with Fraunces + Space Grotesk + Plex Mono (Gurgaon).
+- Music: catchy, beat-forward tracks (hip hop, phonk, desi). Rishi rejected dark ambient underscores and orchestral hip hop. Offer 2 to 3 track previews of the hook when unsure.
