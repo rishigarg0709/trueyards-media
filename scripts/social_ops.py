@@ -164,7 +164,7 @@ def op_ig_scan(req):
            "onlyPostsNewerThan": f"{int(req.get('days', 7))} days", "addParentData": False}
     j = http(f"https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token={E('APIFY_TOKEN')}&timeout=280", inp, timeout=320)
     if isinstance(j, dict): return {"error": j}
-    keep = ("ownerUsername", "url", "type", "productType", "timestamp", "caption", "likesCount", "commentsCount", "videoViewCount", "videoPlayCount", "videoDuration", "hashtags")
+    keep = ("ownerUsername", "url", "type", "productType", "timestamp", "caption", "likesCount", "commentsCount", "videoViewCount", "videoPlayCount", "videoDuration", "hashtags", "musicInfo", "ownerFullName")
     rows = [{k: it.get(k) for k in keep} for it in j]
     for r in rows:
         if r.get("caption"): r["caption"] = r["caption"][:600]
