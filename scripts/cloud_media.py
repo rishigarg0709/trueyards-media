@@ -68,7 +68,12 @@ def addvoice(t):
     j = req(f"https://api.elevenlabs.io/v1/voices/add/{t['owner']}/{t['voice_id']}", {"new_name": t["new_name"]}, {"xi-api-key": EL})
     return "added "+json.dumps(j)[:120]
 
-KINDS = {"shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
+def usage(t):
+    j = req("https://api.elevenlabs.io/v1/user/subscription", None, {"xi-api-key": EL}, method="GET")
+    keep = {k: j.get(k) for k in ("tier","character_count","character_limit","next_character_count_reset_unix","status","billing_period","currency")}
+    open(f"{OUT}/{t['name']}.json", "w").write(json.dumps(keep, indent=1)); return "usage ok"
+
+KINDS = {"usage": usage, "shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
 for f in sorted(glob.glob("jobs/*.json")):
     for t in json.load(open(f)):
         try: msg = KINDS[t["kind"]](t)
