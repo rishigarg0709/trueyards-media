@@ -27,7 +27,7 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 - Carousels: slide 2 as a second hook; judge on saves and follows.
 - Accent colour: red vs green vs amber.
 - Posting slot: midday (12:23) vs evening (19:07).
-- Look (STYLE_SYSTEM.md A to F) and voice (Jessa, George, Viraj): rotate and compare skip rate, hold ratio and sends.
+- Look (STYLE_SYSTEM.md A to F) and voice (Jessa, George, Riya; alternates Monika, Tara): rotate and compare skip rate, hold ratio and sends.
 
 ## History
 - 2026-11-16: file created.
