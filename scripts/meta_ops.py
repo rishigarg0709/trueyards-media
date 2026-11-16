@@ -110,9 +110,8 @@ BOOST_NAME = "TrueYards Boost"
 def guard():
     cap = float(CFG["boost_monthly_cap_inr"])
     spent = month_spend()
-    days_left = (datetime.date.today().replace(day=28) + datetime.timedelta(days=4)).replace(day=1) - datetime.date.today()
-    if spent + CFG["boost_daily_budget_inr"] * days_left.days * 1.18 > cap * 1.18 and spent >= cap:
-        raise SystemExit(f"monthly cap reached: spent {spent} of {cap}")
+    if spent + float(CFG["boost_daily_budget_inr"]) > cap:
+        raise SystemExit(f"monthly cap reached: spent INR {spent:.0f} of {cap:.0f}")
     return spent
 
 def find_campaign():
