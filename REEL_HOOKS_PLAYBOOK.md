@@ -78,7 +78,8 @@ What makes a hook weak:
 - Words reveal at the voice's timestamps, so the text never leads or lags the voice.
 - Voice uses short phrases with natural pauses capped at about 0.4 s. There's never dead air longer than 0.6 s.
 - Music sits about 10 dB under the voice. Use a beat drop for the pattern interrupt and at the twist.
-- **Mix image types for the job, never one type for a whole reel.** Real photos only where the actual look of a landmark is the point (proof shots). 3D renders and motion graphics for hooks, comparisons, maps, rules and numbers (towers rising, height lines, laser cuts, stamps). AI images for mood, history and the future. Label AI and 3D visuals.
+- **Mix image types for the job, never one type for a whole reel.** Real photos only where the actual look of a landmark is the point (proof shots). photoreal AI images with designed overlays for hooks; clean motion graphics for comparisons, maps, rules and numbers (towers rising, height lines, laser cuts, stamps). AI images for mood, history and the future. Label AI and 3D visuals.
+- **Look: realistic and professional, like a news documentary.** Use photoreal AI images or real photos, a slow camera push, clean lower-third text, thin news-style callouts and one decisive event (an erase, a stamp, a scan). No cartoon or game-style 3D (Rishi rejected it).
 - **Hooks are built, not found.** A stock photo with text over it is not a hook. Frame 0 needs a designed motion-graphic event (something growing, slicing, slamming, counting) that tells the story without sound.
 - **Text must read on any frame.** Never put coloured text straight on a bright or hazy photo. Use a solid or blurred backing panel, a dark scrim of at least 60% behind text, or white text with green as a highlight block, not green letters. Check a frame mid-reveal, not only finished frames.
 
