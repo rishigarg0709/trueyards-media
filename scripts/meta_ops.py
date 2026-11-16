@@ -196,8 +196,131 @@ def op_pause_all(req):
     camp = find_campaign()
     return call(camp["id"], {"status": "PAUSED"}, "POST") if camp else {"note": "no campaign"}
 
+
+# ---------- publishing (Instagram + Facebook) ----------
+IG = CFG["ig_user_id"]
+
+def _wait_container(cid, tries=40):
+    st = {}
+    for _ in range(tries):
+        st = call(cid, {"fields": "status_code,status"})
+        if st.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"):
+            return st
+        time.sleep(15)
+    return st
+
+def op_ig_reel(req):
+    """{video_url, cover_url?, caption, share_to_feed?, trial?, trial_strategy?, dry?}"""
+    p = {"media_type": "REELS", "video_url": req["video_url"], "caption": req.get("caption", ""),
+         "share_to_feed": "true" if req.get("share_to_feed", True) else "false"}
+    if req.get("cover_url"): p["cover_url"] = req["cover_url"]
+    if req.get("trial"):
+        p["trial_params"] = {"graduation_strategy": req.get("trial_strategy", "MANUAL")}
+        p.pop("share_to_feed", None)
+    c = call(f"{IG}/media", p, "POST")
+    if "id" not in c: return {"container_error": c}
+    st = _wait_container(c["id"])
+    if st.get("status_code") != "FINISHED": return {"container": c["id"], "status": st}
+    if req.get("dry"): return {"container": c["id"], "status": st, "note": "dry run, not published"}
+    pub = call(f"{IG}/media_publish", {"creation_id": c["id"]}, "POST")
+    if "id" in pub:
+        pub["permalink"] = call(pub["id"], {"fields": "permalink"}).get("permalink")
+    return {"published": pub}
+
+def op_ig_carousel(req):
+    """{image_urls:[...], caption, dry?}"""
+    kids = []
+    for u in req["image_urls"]:
+        k = call(f"{IG}/media", {"image_url": u, "is_carousel_item": "true"}, "POST")
+        if "id" not in k: return {"child_error": k, "url": u}
+        kids.append(k["id"])
+    c = call(f"{IG}/media", {"media_type": "CAROUSEL", "children": ",".join(kids), "caption": req.get("caption", "")}, "POST")
+    if "id" not in c: return {"container_error": c}
+    st = _wait_container(c["id"])
+    if req.get("dry"): return {"container": c["id"], "status": st, "note": "dry run, not published"}
+    pub = call(f"{IG}/media_publish", {"creation_id": c["id"]}, "POST")
+    if "id" in pub:
+        pub["permalink"] = call(pub["id"], {"fields": "permalink"}).get("permalink")
+    return {"published": pub}
+
+def op_ig_story(req):
+    """{image_url | video_url} : posts a story (e.g. the new reel's cover)."""
+    p = {"media_type": "STORIES"}
+    if req.get("video_url"): p["video_url"] = req["video_url"]
+    else: p["image_url"] = req["image_url"]
+    c = call(f"{IG}/media", p, "POST")
+    if "id" not in c: return {"container_error": c}
+    st = _wait_container(c["id"])
+    if req.get("dry"): return {"container": c["id"], "status": st}
+    return {"published": call(f"{IG}/media_publish", {"creation_id": c["id"]}, "POST")}
+
+def op_fb_reel(req):
+    """{video_url, description} : native Facebook Page reel."""
+    p = page()
+    if not p: return {"error": "no page"}
+    tok = p["access_token"]
+    st = call(f"{p['id']}/video_reels", {"upload_phase": "start"}, "POST", token=tok)
+    vid = st.get("video_id")
+    if not vid: return {"start_error": st}
+    r = urllib.request.Request(f"https://rupload.facebook.com/video-upload/{V}/{vid}", method="POST",
+                               headers={"Authorization": f"OAuth {tok}", "file_url": req["video_url"]})
+    try:
+        with urllib.request.urlopen(r, timeout=300) as h: up = json.loads(h.read())
+    except urllib.error.HTTPError as e:
+        return {"upload_error": e.code}
+    if req.get("dry"): return {"video_id": vid, "upload": up, "note": "dry run, not published"}
+    fin = call(f"{p['id']}/video_reels", {"upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED",
+               "description": req.get("description", "")}, "POST", token=tok)
+    return {"video_id": vid, "finish": fin}
+
+def op_fb_photos(req):
+    """{image_urls:[...], message} : multi-photo Page post (Facebook version of a carousel)."""
+    p = page()
+    if not p: return {"error": "no page"}
+    tok = p["access_token"]; ids = []
+    for u in req["image_urls"]:
+        ph = call(f"{p['id']}/photos", {"url": u, "published": "false"}, "POST", token=tok)
+        if "id" not in ph: return {"photo_error": ph}
+        ids.append({"media_fbid": ph["id"]})
+    if req.get("dry"): return {"uploaded_unpublished": len(ids)}
+    return {"post": call(f"{p['id']}/feed", {"message": req.get("message", ""), "attached_media": ids}, "POST", token=tok)}
+
+# ---------- comments ----------
+def op_comments(req):
+    """{days?} : recent comments on Instagram posts and Facebook Page posts, with existing replies."""
+    since = time.time() - int(req.get("days", 3)) * 86400
+    out = {"instagram": [], "facebook": []}
+    for m in call(f"{IG}/media", {"fields": "id,permalink,caption,timestamp", "limit": 25}).get("data", []):
+        if datetime.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp() < since: continue
+        cs = call(f"{m['id']}/comments", {"fields": "id,text,username,timestamp,like_count,replies{id,text,username,timestamp}", "limit": 50})
+        for c in cs.get("data", []):
+            c["media_id"] = m["id"]; c["permalink"] = m.get("permalink"); c["post_caption"] = (m.get("caption") or "")[:120]
+            out["instagram"].append(c)
+    p = page()
+    if p:
+        tok = p["access_token"]
+        for post in call(f"{p['id']}/posts", {"fields": "id,message,created_time", "limit": 25}, token=tok).get("data", []):
+            cs = call(f"{post['id']}/comments", {"fields": "id,message,from,created_time,comments{id,message,from}", "limit": 50}, token=tok)
+            for c in cs.get("data", []):
+                c["post_id"] = post["id"]; c["post_message"] = (post.get("message") or "")[:120]
+                out["facebook"].append(c)
+    return out
+
+def op_reply(req):
+    """{platform: instagram|facebook, comment_id, message}"""
+    if req["platform"] == "instagram":
+        return call(f"{req['comment_id']}/replies", {"message": req["message"]}, "POST")
+    p = page()
+    return call(f"{req['comment_id']}/comments", {"message": req["message"]}, "POST", token=p["access_token"])
+
+def op_hide(req):
+    """{comment_id} : hide spam or abuse on Instagram."""
+    return call(req["comment_id"], {"hide": "true"}, "POST")
+
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
-       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all}
+       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all,
+       "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
+       "comments": op_comments, "reply": op_reply, "hide": op_hide}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
 
 def main():
