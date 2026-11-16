@@ -3,11 +3,11 @@
 Pick top to bottom, skipping a topic if its pillar matches either of the last 2 reels. Mark `[x] YYYY-MM-DD` when published. Hooks are starting points; every fact must be verified on the day. Pillars: mystery, story, history, money, rules, global, news, marvel, builders, weird, myth.
 
 - [x] 2026-11-16 | mystery | Why Delhi has no skyscrapers | contradiction + erase
-- [ ] story | Noida Twin Towers: built, fought over, blown up in seconds | "28 August 2022, 2:30 pm. Two towers taller than Qutub Minar. Gone in seconds." | hook 14 story cold open | send: anyone in NCR, anyone who bought from a builder
-- [ ] global | Why Japanese houses lose value like cars | "In Japan, a 30-year-old house can be worth almost nothing." | hook 25 counterintuitive economics | send: the friend who says property always goes up
-- [ ] marvel | How Burj Khalifa stands on sand | "The tallest building on Earth stands on sand." | hook 1 contradiction | send: social currency, anyone who has visited Dubai
-- [ ] money | Follow ₹1 crore: where your flat price actually goes (land, approvals, construction, taxes, margin) | "You paid ₹1 crore. The bricks cost a fraction of it." | hook 2 number slam | send: anyone buying a flat
-- [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands. Then someone filled in the sea." | hook 6 time jump | send: every Mumbaikar
+- [ ] story | Noida Twin Towers: built, fought over, blown up in seconds | "28 August 2022, 2:30 pm. Two towers taller than Qutub Minar. Gone in seconds." | hook 14 story cold open | send: anyone in NCR, anyone who bought from a builder | look A Newsroom Red, voice Viraj
+- [ ] global | Why Japanese houses lose value like cars | "In Japan, a 30-year-old house can be worth almost nothing." | hook 25 counterintuitive economics | send: the friend who says property always goes up | look F Tokyo Neutral, voice Jessa
+- [ ] marvel | How Burj Khalifa stands on sand | "The tallest building on Earth stands on sand." | hook 1 contradiction | send: social currency, anyone who has visited Dubai | look E Blueprint, voice George
+- [ ] money | Follow ₹1 crore: where your flat price actually goes (land, approvals, construction, taxes, margin) | "You paid ₹1 crore. The bricks cost a fraction of it." | hook 2 number slam | send: anyone buying a flat | look C Midnight Gold, voice Viraj
+- [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands. Then someone filled in the sea." | hook 6 time jump | send: every Mumbaikar | look D Archive Sepia, voice George
 - [ ] history | How Gurgaon went from farmland to a skyline | "Gurgaon had almost no towers a few decades ago." | time jump
 - [ ] rules | Carpet vs built-up vs super built-up area | "You're paying for space you'll never stand in." | stakes for viewer
 - [ ] mystery | Why Mumbai flats are so small and so expensive | "Mumbai's biggest problem is the sea." | myth bust
