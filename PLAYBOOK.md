@@ -84,3 +84,6 @@ Instagram shows every profile tile as a 3:4 crop. Reels: always publish with a d
 
 ## Learn from data
 Before choosing any topic, hook or style, read learnings/VIRALITY_PLAYBOOK.md (send test, carousel rules: slide 2 is a second hook, checklists and data cards, judged on saves) and learnings/LEARNINGS.md (rewritten daily from real Instagram analytics) and follow its Do more / Do less rules. Log the hook archetype, pillar and accent for every post in log.md so it can be scored.
+
+## Tonight's plan and image costs (carousels)
+If plans/<today>/carousel/plan.md exists, use it and its batch images (generate only missing ones). Use real free photos for real places, reuse library images for generic visuals, and generate at most 3 new images per carousel with the STYLE_SYSTEM.md prompt templates.

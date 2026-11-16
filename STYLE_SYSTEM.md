@@ -37,3 +37,12 @@ Model eleven_v3. Use v3 delivery tags sparingly ([pause], [whispers] on a secret
 9. Finish: light film grain and gentle vignette matched to the look; consistent colour grade across all images in the reel (same prompt grade words, same seed style).
 10. Pacing: a new visual every 1.5 to 3 s, a mini-reveal every 5 to 8 s, the last line loops back to frame 0.
 11. QA before publish: check the 5 busiest frames at full size (text readable, nothing overlapping the logo or the Instagram UI zones: keep text out of the bottom 320 px and right 140 px), audio peaks, and the cover crop (y 240 to 1680).
+
+## Image prompt templates (append the look's grade line to every Gemini prompt for that reel)
+- A Newsroom Red: "photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+- B Emerald Doc: "photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos"
+- C Midnight Gold: "photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos"
+- D Archive Sepia: "aged archival photograph look, sepia split-tone, soft paper texture, slight vignette and dust, period-accurate details, no modern objects, no text"
+- E Blueprint: "photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels"
+- F Tokyo Neutral: "quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos"
+Composition for every image: vertical 9:16 at 2K, main subject in the middle third, empty calmer area in the lower third for captions, top 300 px darker for the logo. Ask for wide framing so 2 to 3 crops can be cut from one image.
