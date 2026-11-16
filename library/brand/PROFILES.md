@@ -7,3 +7,4 @@
   - YouTube / LinkedIn: render the same HTML at their banner sizes, 3x scale.
 - Link: https://trueyards.in
 - Handles: IG/Threads trueyards.in, X @trueyards_in (@TrueYards is an unrelated 2013 account), FB TrueYards.
+- Cover text: TrueYards logo + "Real estate, explained." only. No subheading (Rishi, 16 Nov).
