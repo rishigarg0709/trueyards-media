@@ -20,9 +20,9 @@ Rules for every look: one accent colour only; text must read on its worst frame 
 |---|---|---|---|
 | Jessa | yj30vwTGJxSHezdAGsv9 | easygoing American, conversational | weird facts, global, light stories |
 | George | JBFqnCBsd6RMkjVDRZzb | warm British documentary storyteller | history, marvels, slow-burn stories |
-| Riya (TY Riya) | vYENaCJHl4vFKNDYPr8y | confident, clear Indian English professional VO | India rules, money, NCR and Indian city stories |
+| Tara (TY Tara) | P7vsEyTOpZ6YUTulin8m | expressive Indian English, actress | India rules, money, NCR and Indian city stories, dramatic stories |
 
-Alternates approved by Rishi (use occasionally): Monika (2zRM7PkgwBPiau2jvVXc, deep and natural, Indian English), Tara (P7vsEyTOpZ6YUTulin8m, expressive, Indian English). Do not use Viraj (Rishi disliked).
+Rishi's final pick (2026-11-16): Jessa, George and Tara only. Do not use Viraj, Riya or Monika.
 Model eleven_v3. Use v3 delivery tags sparingly ([pause], [whispers] on a secret, [excited] on a reveal). Never clone a real person's voice.
 
 ## Editing standard (applies to every look)
