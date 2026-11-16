@@ -1,0 +1,221 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:600;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0b0d10}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0b0d10;color:#fff;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0b0d10}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 124px/.95 IN;letter-spacing:-.03em;text-transform:uppercase}
+.M{font:900 84px/1 IN;letter-spacing:-.025em;text-transform:uppercase}
+.B{font:600 52px/1.18 IN;letter-spacing:-.01em}
+.K{font:500 25px/1.2 PM;letter-spacing:.2em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.g{color:#E63B2E}
+.hl{background:#E63B2E;color:#fff;padding:0 .12em;border-radius:4px}
+.ts{text-shadow:0 4px 26px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.6)}
+.tag{display:inline-block;background:#E63B2E;color:#fff;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:3px}
+.tagw{display:inline-block;background:#fff;color:#0b0d10;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:3px}
+.stamp{border:7px solid #E63B2E;color:#E63B2E;font:900 76px/1 IN;letter-spacing:.04em;padding:16px 28px 12px;text-transform:uppercase;border-radius:6px;background:rgba(11,13,16,.35)}
+.card{background:#f3f1ec;color:#0b0d10;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+#tl{position:absolute;left:70px;top:236px;width:940px;height:70px;z-index:20}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.55)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.08;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<svg id="tl" viewBox="0 0 940 70"></svg>
+<div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<svg id="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11"/><feColorMatrix values="0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .9 0"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+</div>
+<script>
+const WS=[["India's", 0.0, 0.491], ["Supreme", 0.514, 0.679], ["Court", 0.742, 1.057], ["ordered", 1.104, 1.434], ["these", 1.472, 1.66], ["two", 1.698, 1.811], ["towers", 1.876, 2.264], ["blown", 2.314, 2.566], ["up.", 2.642, 2.925], ["Taller", 3.16, 3.689], ["than", 3.719, 3.84], ["Qutub", 3.915, 4.142], ["Minar,", 4.198, 4.642], ["and", 4.877, 4.991], ["nobody", 5.044, 5.368], ["ever", 5.398, 5.519], ["lived", 5.557, 5.745], ["in", 5.795, 5.896], ["them.", 5.942, 6.234], ["So", 6.47, 6.722], ["why", 6.778, 6.948], ["destroy", 7.005, 7.401], ["them?", 7.446, 7.72], ["It", 7.956, 8.308], ["starts", 8.361, 8.685], ["with", 8.7, 8.76], ["a", 8.798, 8.836], ["garden.", 8.901, 9.373], ["In", 9.608, 10.111], ["2009,", 10.187, 10.942], ["the", 10.96, 11.017], ["builder's", 11.055, 11.394], ["new", 11.432, 11.545], ["plan", 11.636, 11.998], ["put", 12.074, 12.3], ["two", 12.338, 12.451], ["towers", 12.516, 12.904], ["on", 12.929, 12.979], ["green", 13.029, 13.281], ["space", 13.344, 13.658], ["promised", 13.7, 14.036], ["to", 14.086, 14.187], ["residents.", 14.24, 14.815], ["Then", 15.051, 15.413], ["they", 15.443, 15.564], ["grew.", 15.625, 15.942], ["Twenty-four", 16.092, 17.149], ["floors", 17.214, 17.602], ["became", 17.656, 17.979], ["forty.", 18.067, 18.576], ["The", 18.812, 19.208], ["problem?", 19.265, 19.718], ["They", 19.954, 20.286], ["stood", 20.336, 20.588], ["nine", 20.633, 20.814], ["metres", 20.879, 21.267], ["from", 21.297, 21.418], ["an", 21.443, 21.493], ["existing", 21.552, 22.022], ["building.", 22.063, 22.497], ["The", 22.733, 22.903], ["rules", 22.966, 23.28], ["asked", 23.33, 23.582], ["for", 23.62, 23.733], ["sixteen.", 23.808, 24.422], ["And", 24.658, 24.997], ["nobody", 25.062, 25.45], ["asked", 25.5, 25.752], ["the", 25.771, 25.827], ["residents.", 25.88, 26.456], ["So", 26.692, 27.144], ["the", 27.163, 27.22], ["residents", 27.258, 27.597], ["went", 27.627, 27.748], ["to", 27.798, 27.899], ["court.", 27.962, 28.236], ["In", 28.472, 28.975], ["2014,", 29.05, 29.956], ["the", 29.975, 30.031], ["High", 30.061, 30.182], ["Court", 30.232, 30.484], ["said,", 30.544, 30.875], ["demolish.", 31.11, 31.664], ["In", 31.9, 32.454], ["2021,", 32.529, 33.397], ["the", 33.605, 33.661], ["Supreme", 33.708, 34.039], ["Court", 34.076, 34.265], ["agreed,", 34.33, 34.811], ["and", 35.047, 35.104], ["said", 35.149, 35.33], ["Noida's", 35.406, 35.858], ["planning", 35.9, 36.236], ["authority", 36.289, 36.764], ["had", 36.821, 36.991], ["colluded.", 37.036, 37.611], ["Buyers", 37.847, 38.688], ["got", 38.725, 38.839], ["refunds", 38.905, 39.367], ["with", 39.397, 39.518], ["twelve", 39.572, 39.895], ["percent", 39.952, 40.348], ["interest.", 40.415, 41.009], ["Then,", 41.245, 42.166], ["in", 42.216, 42.317], ["August", 42.36, 42.619], ["2022,", 42.694, 43.581], ["3,700", 43.817, 45.175], ["kilos", 45.213, 45.477], ["of", 45.527, 45.628], ["explosives.", 45.697, 46.48], ["A", 46.716, 47.018], ["ten-year", 47.075, 47.395], ["fight,", 47.458, 47.77], ["over", 47.969, 48.452], ["in", 48.553, 48.754], ["seconds.", 48.829, 49.461], ["Was", 49.697, 50.49], ["it", 50.515, 50.565], ["the", 50.584, 50.641], ["right", 50.678, 50.867], ["call...", 50.942, 51.301], ["or", 51.537, 51.587], ["a", 51.625, 51.662], ["waste?", 51.738, 52.285]];
+const BEATS=[0.433, 1.06, 1.687, 2.314, 2.941, 3.568, 4.172, 4.799, 5.425, 6.052, 6.679, 7.306, 7.933, 8.56, 9.187, 9.814, 10.441, 11.045, 11.672, 12.299, 12.926, 13.552, 14.179, 14.806, 15.433, 16.06, 16.687, 17.314, 17.941, 18.568, 19.195, 19.799, 20.426, 21.053, 21.679, 22.306, 22.933, 23.56, 24.187, 24.814, 25.441, 26.068, 26.695, 27.299, 27.949, 28.576, 29.203, 29.806, 30.433, 31.06, 31.687, 32.314, 32.941, 33.522, 34.149, 34.775, 35.402, 36.029, 36.656, 37.26, 37.887, 38.514, 39.141, 39.768, 40.395, 41.022, 41.649, 42.276, 42.902, 43.529, 44.156, 44.783, 45.41, 46.037, 46.664, 47.268, 47.895, 48.522, 49.149, 49.776, 50.403, 51.029, 51.656, 52.283, 52.91, 53.514, 54.141, 54.768, 55.395, 56.022, 56.649, 57.276, 57.903, 58.53, 59.156, 59.783];
+window.RO=null;
+const S=document.getElementById('s');
+const RED='#E63B2E';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9'\-]/g,'').replace(/'$/,'');
+const at=(w,n=1)=>{let c=0;for(const x of WS){if(norm(x[0])===w){c++;if(c===n)return x[1]}}throw new Error('word '+w+' '+n)};
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const ph=(p,src,css)=>{const e=document.createElement('img');e.src='img/'+src+'.jpg';e.className='ph';e.style.cssText=css||'';p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*34}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${-4}deg)`};
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:SN(t0),fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// ---------- scene times ----------
+const tBlown=at('blown'), tTaller=at('taller')-.1, tAnd=at('and'), tSo=at('so')-.1, tIt=at('it')-.1, t2009=at('2009'), tThen=at('then')-.1, tProb=at('the',2)-.1, tAnd2=at('and',2)-.1, tSo2=at('so',2), tIn14=at('in',3)-.1, tIn21=at('in',4)-.1, tBuy=at('buyers')-.1, tThen2=at('then',2)-.1, tA=at('a',2)-.1, tWas=at('was')-.1;
+const HOOKEV=tBlown-.04;
+// 1. HOOK: towers -> dust scan wipe on "blown"
+add(0,sc=>{
+ const box=mk(sc,'','left:0;top:0;width:1080px;height:1920px;transform-origin:540px 1000px');
+ const im1=document.createElement('img');im1.src='img/towers.jpg';im1.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px';box.appendChild(im1);
+ const im2=document.createElement('img');im2.src='img/dust.jpg';im2.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px';box.appendChild(im2);
+ const X0=225,X1=835,Y0=620,Y1=1390;
+ const br=[];[[X0,Y0,'border-left','border-top'],[X1-50,Y0,'border-right','border-top'],[X0,Y1-50,'border-left','border-bottom'],[X1-50,Y1-50,'border-right','border-bottom']].forEach(([x,y,a,b])=>{const e=document.createElement('div');e.style.cssText=`position:absolute;left:${x}px;top:${y}px;width:50px;height:50px;${a}:6px solid #fff;${b}:6px solid #fff`;box.appendChild(e);br.push(e)});
+ const scan=document.createElement('div');scan.style.cssText=`position:absolute;left:0;width:1080px;height:6px;background:${RED};box-shadow:0 0 18px 6px rgba(230,59,46,.85),0 0 60px 18px rgba(230,59,46,.35)`;box.appendChild(scan);
+ const sh=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.86) 0%,rgba(6,8,12,.55) 26%,rgba(6,8,12,0) 38%,rgba(0,0,0,0) 70%,rgba(6,8,12,.6) 100%)');
+ const k=mk(sc,'K','left:70px;top:340px;color:#fff','<span style="color:'+RED+'">●</span> Noida · Supreme Court order');
+ const h=mk(sc,'H ts','left:70px;top:390px;width:960px;font-size:112px','Court ordered:<br><span id="bu" style="padding:0 .1em;margin-left:-.1em;border-radius:6px;background:'+RED+'">blow them up</span>');
+ const st=mk(sc,'stamp','left:300px;top:1440px;transform-origin:50% 50%','Demolished');
+ const tS=HOOKEV,dS=.55;
+ return t=>{const sk=t>=tS&&t<tS+.35?Math.sin(t*95)*9*(1-(t-tS)/.35):0;box.style.transform=`translate(${sk}px,${sk*.6}px) scale(${1.08+.1*eo(t/4)})`;
+  br.forEach((e,n)=>{const p=eo((t-.05-n*.05)/.35);e.style.opacity=cl(p*1.5)*(1-cl((t-tS)/.2));e.style.transform=`scale(${1.6-.6*p})`;e.style.borderColor=t>=1.1?RED:'#fff'});
+  h.style.transform=`scale(${1+.04*(t>=tS?Math.exp(-(t-tS)/.2):0)})`;h.style.transformOrigin='0 50%';
+  const sp=eo((t-tS)/dS);const sy=-10+1950*sp;scan.style.top=sy+'px';scan.style.opacity=t>=tS&&sp<1?1:0;
+  im2.style.clipPath=t<tS?'inset(0 0 100% 0)':`inset(0 0 ${Math.max(0,1920-sy)}px 0)`;
+  if(t>=tS+.25)slam(st,t,tS+.25);else st.style.opacity=0}});
+// 2. Taller than Qutub Minar (bars), then nobody lived in them (window push)
+add(tTaller,sc=>{const bg=ph(sc,'towers','filter:grayscale(1) brightness(.32) blur(3px)');
+ const k=mk(sc,'K','left:70px;top:360px;color:#bbb','Height');
+ const a=T(sc,'M ts','left:70px;top:410px;width:940px',[['Taller',at('taller')],['than',at('than')],['\n'],['Qutub',at('qutub'),'g'],['Minar',at('minar'),'g']]);
+ const base=1430,scl=6.4;
+ const bar=(x,h,c,lab,sub,tt)=>{const e=mk(sc,'',`left:${x}px;top:${base}px;width:280px;height:0;background:${c};border-radius:4px 4px 0 0`);const l=mk(sc,'',`left:${x}px;width:280px;text-align:center;top:${base}px;font:900 66px/1 IN;letter-spacing:-.03em;color:#fff`,lab);const s2=mk(sc,'K',`left:${x-30}px;width:340px;text-align:center;top:${base+24}px;color:#ccc;font-size:21px`,sub);return {e,l,s2,h,tt}};
+ const B1=bar(170,72.5*scl,'#f3f1ec','73 m','Qutub Minar',at('taller')+.15),B2=bar(600,103*scl,RED,'~103 m','Apex tower',at('qutub'));
+ const gl=mk(sc,'',`left:110px;top:${base}px;width:860px;height:4px;background:#fff`);
+ const grp=[k,a,gl,B1.e,B1.l,B1.s2,B2.e,B2.l,B2.s2];
+ const win=mk(sc,'','left:0;top:0;width:1080px;height:1920px;overflow:hidden;opacity:0');const wi=document.createElement('img');wi.src='img/towers.jpg';wi.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:395px 900px';win.appendChild(wi);
+ const wg=mk(win,'','position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.15) 50%,rgba(0,0,0,.82) 80%)');
+ const n=T(sc,'M ts','left:70px;top:1180px;width:940px;font-size:88px',[['Nobody',at('nobody'),'hl'],['ever',at('ever')],['\n'],['lived',at('lived')],['in',at('in')],['them.',at('them')]]);
+ const tN=tAnd-tTaller;
+ return t=>{bg.style.transform=`scale(${1.1+.02*t})`;rv(a,t);[B1,B2].forEach(B=>{const p=eo((t-(B.tt-tTaller))/.6);B.e.style.height=(B.h*p)+'px';B.e.style.top=(base-B.h*p)+'px';B.l.style.top=(base-B.h*p-82)+'px';B.l.style.opacity=cl((t-(B.tt-tTaller)-.25)/.2);B.s2.style.opacity=cl((t-(B.tt-tTaller))/.2)});
+  const sw=t>=tN-.05;grp.forEach(e=>e.style.visibility=sw?'hidden':'visible');win.style.opacity=sw?1:0;wi.style.transform=`scale(${2.3+.25*cl((t-tN)/2)})`;rv(n,t)}},true);
+// 3. So why destroy them?
+add(tSo,sc=>{const b=ph(sc,'dust','filter:grayscale(1) contrast(1.15) brightness(.42);object-position:50% 40%');
+ const q=T(sc,'H ts','left:70px;top:700px;width:940px;font-size:150px',[['So',at('so')],['why',at('why')],['\n'],['destroy',at('destroy'),'g'],['\n'],['them?',at('them',2),'',1]]);
+ const rt=mk(sc,'tag','left:70px;top:1230px;font-size:32px;padding:16px 26px 13px','The case file ↓');const tRt=at('them',2)-tSo+.2;
+ return t=>{b.style.transform=`scale(${1.25-.05*t})`;rv(q,t);const p=eb((t-tRt)/.3);rt.style.opacity=cl((t-tRt)/.08);rt.style.transform=`scale(${.5+.5*p})`;rt.style.transformOrigin='0 50%'}});
+// 4. It starts with a garden (aerial, outline lawn, two footprints slam)
+add(tIt,sc=>{const b=ph(sc,'garden','transform-origin:540px 1050px');
+ const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.75) 0%,rgba(6,8,12,0) 22%,rgba(0,0,0,0) 62%,rgba(6,8,12,.88) 80%,rgba(6,8,12,.92) 100%)');
+ const o=svg(sc,'',`<path id="lw" d="M455,720 L625,720 L760,1060 L815,1270 L265,1270 L320,1060 Z" fill="rgba(40,195,157,0)" stroke="#fff" stroke-width="6" stroke-dasharray="14 10" stroke-linejoin="round"/><rect id="f1" x="380" y="930" width="120" height="250" fill="${RED}" opacity="0"/><rect id="f2" x="580" y="930" width="120" height="250" fill="${RED}" opacity="0"/>`);
+ const lw=o.querySelector('#lw'),f1=o.querySelector('#f1'),f2=o.querySelector('#f2');const L=2400;lw.style.strokeDasharray=L;
+ const lab=mk(sc,'tagw','left:330px;top:640px','Promised green area');
+ const h=T(sc,'M ts','left:70px;top:340px;width:940px;font-size:96px',[['It',at('it')],['starts',at('starts')],['with',at('with')],['\n'],['a',at('a')],['garden.',at('garden'),'g',1]]);
+ const s=T(sc,'B ts','left:72px;top:1330px;width:880px',[['2009:',at('2009'),'hl'],['a',at('new')],['new',at('new')],['plan',at('plan')],['puts',at('put')],['\n'],['2 towers',at('two',2),'g'],['on',at('on')],['that',at('green')],['green',at('green')],['space.',at('space')]]);
+ const tT=at('towers',2)-tIt,tG=t2009-tIt;
+ return t=>{b.style.transform=`scale(${1.04+.08*eio(t/7)})`;rv(h,t,t2009-.15);rv(s,t);
+  const p=eo((t-tG+.1)/1.1);lw.setAttribute('stroke-dasharray',`${L*p} ${L}`);lw.setAttribute('fill',`rgba(40,195,157,${.22*cl((t-tG-1)/.4)})`);fade(lab,t,tG+.6,.25,10);
+  [f1,f2].forEach((f,i)=>{const q=cl((t-tT-i*.12)/.12);f.setAttribute('opacity',q*.9);f.setAttribute('transform',`translate(${(i?640:440)*(1-q)*0},${-(1-q)*120})`)});
+  lw.setAttribute('stroke',t>=tT?RED:'#fff');lab.style.background=t>=tT?RED:'#fff';lab.style.color=t>=tT?'#fff':'#0b0d10'}},true);
+// 5. Then they grew: 24 -> 40 floors
+add(tThen,sc=>{const bg=ph(sc,'towers','filter:grayscale(1) brightness(.3);object-position:50% 50%');
+ const h=T(sc,'M ts','left:70px;top:360px;width:940px',[['Then',at('then')],['they',at('they')],['grew.',at('grew'),'g',1]]);
+ const fl=[];const x=600,w=330,fh=21,base=1460;for(let i=0;i<40;i++)fl.push(mk(sc,'',`left:${x}px;top:${base-(i+1)*fh}px;width:${w}px;height:${fh-4}px;background:${i<24?'#f3f1ec':RED};opacity:0`));
+ const num=mk(sc,'','left:70px;top:820px;font:900 300px/1 IN;letter-spacing:-.05em;color:#fff','24');
+ const nl=mk(sc,'K','left:80px;top:1130px;color:#ddd;font-size:30px','floors in the plan');
+ const yr=mk(sc,'K','left:80px;top:1180px;color:'+RED+';font-size:26px','2009 plan');
+ const t24=at('twenty-four')-tThen,t40=at('forty')-tThen;
+ return t=>{bg.style.transform=`scale(${1.15+.03*t})`;rv(h,t);const n=t<t40-.6?24*eo((t-t24+.3)/.5):24+16*eo((t-t40+.6)/.7);num.textContent=Math.max(0,Math.round(n));num.style.color=t>=t40?RED:'#fff';fade(num,t,t24-.3,.2,0);fade(nl,t,t24,.2);yr.textContent=t>=t40-.6?'2012 revision':'2009 plan';fade(yr,t,t24,.2);
+  fl.forEach((e,i)=>{const ti=i<24?t24-.3+i*.02:t40-.6+(i-24)*.045;e.style.opacity=cl((t-ti)/.05)})}});
+// 6. The problem: 9 m vs 16 m
+add(tProb,sc=>{const b=ph(sc,'gap','transform-origin:552px 1000px');
+ const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.78) 0%,rgba(6,8,12,.2) 25%,rgba(0,0,0,0) 50%,rgba(6,8,12,.85) 76%,rgba(6,8,12,.92) 100%)');
+ const h=T(sc,'M ts','left:70px;top:350px;width:940px;font-size:90px',[['The',at('the',2)],['problem?',at('problem'),'g']]);
+ const cx=552,y1=1000,g9=200,g16=g9*16/9;
+ const d=svg(sc,'',`<g id="d9"><line x1="${cx-g9/2}" y1="${y1}" x2="${cx+g9/2}" y2="${y1}" stroke="${RED}" stroke-width="7"/><line x1="${cx-g9/2}" y1="${y1-40}" x2="${cx-g9/2}" y2="${y1+40}" stroke="${RED}" stroke-width="7"/><line x1="${cx+g9/2}" y1="${y1-40}" x2="${cx+g9/2}" y2="${y1+40}" stroke="${RED}" stroke-width="7"/></g><g id="d16"><line x1="${cx-g16/2}" y1="${y1+150}" x2="${cx+g16/2}" y2="${y1+150}" stroke="#fff" stroke-width="5" stroke-dasharray="16 10"/><line x1="${cx-g16/2}" y1="${y1+115}" x2="${cx-g16/2}" y2="${y1+185}" stroke="#fff" stroke-width="5"/><line x1="${cx+g16/2}" y1="${y1+115}" x2="${cx+g16/2}" y2="${y1+185}" stroke="#fff" stroke-width="5"/></g>`);
+ const d9=d.querySelector('#d9'),d16=d.querySelector('#d16');
+ const l9=mk(sc,'','left:0;width:1104px;text-align:center;top:'+(y1-150)+'px;font:900 104px/1 IN;color:#fff;letter-spacing:-.03em','9 m');
+ const l16=mk(sc,'K','left:0;width:1104px;text-align:center;top:'+(y1+205)+'px;color:#fff;font-size:30px','16 m required');
+ const s=T(sc,'B ts','left:72px;top:1340px;width:880px',[['Built',at('stood')],['just',at('stood')],['9 m',at('nine'),'hl'],['from',at('from')],['\n'],['an',at('an')],['existing',at('existing')],['building.',at('building')]]);
+ const s2=T(sc,'B ts','left:72px;top:1340px;width:880px',[['The',at('the',3)],['rules',at('rules')],['asked',at('asked')],['for',at('for')],['16 m.',at('sixteen'),'hl',1]]);
+ const st=mk(sc,'stamp','left:600px;top:560px;font-size:56px','Violation');
+ const t9=at('nine')-tProb,t16=at('sixteen')-tProb,tR=at('the',3)-tProb;
+ return t=>{b.style.transform=`scale(${1.75-.08*eio(t/6)})`;rv(h,t);
+  const p=eo((t-t9)/.4);d9.style.opacity=cl((t-t9)/.1);d9.setAttribute('transform',`translate(${cx*(1-p)},0) scale(${p},1)`);fade(l9,t,t9+.1,.2,10);
+  const q=eo((t-t16)/.4);d16.style.opacity=cl((t-t16)/.1);d16.setAttribute('transform',`translate(${cx*(1-q)},0) scale(${q},1)`);fade(l16,t,t16+.2,.2,10);
+  rv(s,t,at('the',3)-.12);rv(s2,t);if(t>=t16+.6)slam(st,t,t16+.6);else st.style.opacity=0}},true);
+// 7. Nobody asked the residents -> court
+add(tAnd2,sc=>{const b=ph(sc,'files','transform-origin:620px 1000px');
+ const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.7) 0%,rgba(6,8,12,0) 25%,rgba(0,0,0,0) 55%,rgba(6,8,12,.88) 75%,rgba(6,8,12,.95) 100%)');
+ const h=T(sc,'M ts','left:70px;top:1180px;width:940px;font-size:84px',[['And',at('and',2)],['nobody',at('nobody',2),'hl'],['\n'],['asked',at('asked',2)],['the',at('the',4)],['\n'],['residents.',at('residents',2)]]);
+ const h2=T(sc,'M ts','left:70px;top:1180px;width:940px;font-size:84px',[['So',at('so',2)],['they',at('residents',3)],['\n'],['went',at('went')],['to',at('to',2)],['court.',at('court',2),'g',1]]);
+ const st=mk(sc,'stamp','left:120px;top:560px;font-size:54px;line-height:1.05','Residents\' consent:<br>none');
+ const tS2=tSo2-tAnd2-.1;
+ return t=>{b.style.transform=`scale(${1.08+.07*eio(t/4)}) translateX(${-t*6}px)`;rv(h,t,tSo2-.1);rv(h2,t);if(t>=at('residents',2)-tAnd2+.1)slam(st,t,at('residents',2)-tAnd2+.1);else st.style.opacity=0}},true);
+// 8a. 2014 High Court
+const caseCard=(sc,court,date,verdict,tt,extra)=>{const card=mk(sc,'card','left:90px;top:520px;width:900px;height:760px');
+ mk(card,'K','position:absolute;left:56px;top:56px;color:#666',court);mk(card,'','position:absolute;left:56px;top:100px;width:788px;height:3px;background:#0b0d10');
+ mk(card,'K','position:absolute;right:56px;top:56px;color:'+RED,date);
+ const lines=[];for(let i=0;i<6;i++)lines.push(mk(card,'',`position:absolute;left:56px;top:${150+i*46}px;width:${780-(i%3)*140}px;height:20px;background:#e2ddd2;border-radius:3px`));
+ const v=mk(card,'stamp','position:absolute;left:150px;top:460px;font-size:88px;background:rgba(243,241,236,.6)',verdict);
+ return {card,lines,v}};
+add(tIn14,sc=>{const b=ph(sc,'files','filter:brightness(.3) blur(4px)');
+ const k=T(sc,'M ts','left:90px;top:360px;font-size:80px',[['2014.',at('2014'),'g'],['High',at('high')],['Court:',at('court',3)]]);
+ const C=caseCard(sc,'Allahabad High Court','Apr 2014','Demolish');
+ const tV=at('demolish')-tIn14;
+ return t=>{b.style.transform=`scale(${1.1+.02*t})`;rv(k,t);const p=eb((t-.1)/.5);C.card.style.transform=`translateY(${(1-p)*1000}px) rotate(${(1-p)*7-1}deg)`;C.lines.forEach((l,i)=>l.style.opacity=cl((t-.5-i*.06)/.15));if(t>=tV)slam(C.v,t,tV);else C.v.style.opacity=0}});
+// 8b. 2021 Supreme Court
+add(tIn21,sc=>{const b=ph(sc,'files','filter:brightness(.3) blur(4px);transform:scaleX(-1)');
+ const k=T(sc,'M ts','left:90px;top:360px;font-size:80px',[['2021.',at('2021'),'g'],['Supreme',at('supreme',2)],['Court:',at('court',4)]]);
+ const C=caseCard(sc,'Supreme Court of India','31 Aug 2021','Upheld');
+ const s=T(sc,'B ts','left:92px;top:1340px;width:880px;font-size:48px',[['Noida\'s',at("noida's")],['planning',at('planning')],['authority',at('authority')],['\n'],['had',at('had')],['colluded.',at('colluded'),'hl',1]]);
+ const tV=at('agreed')-tIn21;
+ return t=>{rv(k,t);const p=eb((t-.1)/.5);C.card.style.transform=`translateY(${(1-p)*1000}px) rotate(${(1-p)*-7+1}deg)`;C.lines.forEach((l,i)=>l.style.opacity=cl((t-.5-i*.06)/.15));if(t>=tV)slam(C.v,t,tV);else C.v.style.opacity=0;rv(s,t)}},true);
+// 9. Refunds 12%
+add(tBuy,sc=>{const b=ph(sc,'towers','filter:grayscale(1) brightness(.35);transform-origin:700px 900px');
+ const h=T(sc,'M ts','left:70px;top:360px;width:940px',[['Buyers',at('buyers')],['got',at('got')],['\n'],['refunds',at('refunds'),'g']]);
+ const n=mk(sc,'','left:62px;top:760px;font:900 360px/1 IN;letter-spacing:-.06em;color:#fff','0%');
+ const s=mk(sc,'B ts','left:72px;top:1140px;width:880px','interest a year, from the day they paid');
+ const tN=at('twelve')-tBuy;
+ return t=>{b.style.transform=`scale(${1.8+.06*t})`;rv(h,t);const p=eo((t-tN)/.6);n.textContent=Math.round(12*p)+'%';n.style.opacity=cl((t-tN+.05)/.08);n.style.color=p>=1?RED:'#fff';n.style.transform=`scale(${p>=1?1+.05*Math.exp(-(t-tN-.6)/.15):1})`;n.style.transformOrigin='0 60%';fade(s,t,tN+.5,.25)}},true);
+// 10. August 2022: 3,700 kg
+add(tThen2,sc=>{const b=ph(sc,'charges','transform-origin:560px 900px');
+ const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.75) 0%,rgba(6,8,12,0) 25%,rgba(0,0,0,0) 52%,rgba(6,8,12,.86) 72%,rgba(6,8,12,.94) 100%)');
+ const k=T(sc,'M ts','left:70px;top:360px;width:940px;font-size:84px',[['August',at('august')],['2022.',at('2022'),'g']]);
+ const n=mk(sc,'','left:62px;top:1110px;font:900 230px/1 IN;letter-spacing:-.05em;color:#fff','0');
+ const s=T(sc,'B ts','left:72px;top:1360px;width:880px',[['kg',at('kilos'),'g'],['of',at('of')],['explosives',at('explosives')]]);
+ const tN=at('3700')-tThen2;
+ return t=>{b.style.transform=`scale(${1.05+.1*eio(t/5)})`;rv(k,t);const p=eo((t-tN)/1.1);n.textContent=Math.round(3700*p).toLocaleString('en-IN');n.style.opacity=cl((t-tN+.05)/.1);rv(s,t)}});
+// 11. A ten-year fight, over in seconds (towers -> dust again)
+add(tA,sc=>{const box=mk(sc,'','left:0;top:0;width:1080px;height:1920px;transform-origin:540px 1000px');
+ const i1=document.createElement('img');i1.src='img/towers.jpg';i1.style.cssText='position:absolute;inset:0;width:1080px;height:1920px';box.appendChild(i1);
+ const i2=document.createElement('img');i2.src='img/dust.jpg';i2.style.cssText='position:absolute;inset:0;width:1080px;height:1920px;opacity:0';box.appendChild(i2);
+ const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(6,8,12,.86) 0%,rgba(6,8,12,.5) 26%,rgba(6,8,12,0) 40%,rgba(0,0,0,0) 70%,rgba(6,8,12,.6) 100%)');
+ const h=T(sc,'H ts','left:70px;top:380px;width:960px;font-size:116px',[['A',at('a',2)],['10-year',at('ten-year'),'g'],['fight.',at('fight')],['\n'],['Over',at('over')],['in',at('in',6)],['seconds.',at('seconds'),'hl',1]]);
+ const tS=at('seconds')-tA;
+ return t=>{const sk=t>=tS&&t<tS+.35?Math.sin(t*95)*8*(1-(t-tS)/.35):0;box.style.transform=`translate(${sk}px,${sk*.6}px) scale(${1.18-.06*t})`;const p=cl((t-tS)/.12);i2.style.opacity=p;rv(h,t)}});
+// 12. Pick a side, loops back to the standing towers
+add(tWas,sc=>{const b=ph(sc,'towers','filter:grayscale(1) brightness(.34)');const r=mk(sc,'sh','background:'+RED+';mix-blend-mode:multiply;opacity:.9');
+ const h=T(sc,'H ts','left:70px;top:560px;width:940px;font-size:120px',[['Was',at('was')],['it',at('it',2)],['the',at('the',8)],['\n'],['right',at('right')],['call...',at('call')],['\n'],['or',at('or')],['a',at('a',3)],['waste?',at('waste'),'',1]]);
+ const f=mk(sc,'B','left:72px;top:1230px;color:#fff;font-size:40px;opacity:.92','Send this to someone buying in NCR');
+ const tW=at('waste')-tWas;
+ const lp=ph(sc,'towers','opacity:0');
+ return t=>{b.style.transform=`scale(${1.12-.02*t})`;rv(h,t);fade(f,t,tW+.4);const q=cl((t-(END-tWas-.45))/.4);lp.style.opacity=q;lp.style.transform=`scale(${1.08})`}});
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+// ---------- case timeline device ----------
+const TL=document.getElementById('tl');const YRS=[['2009',t2009],['2012',at('forty')-.6],['2014',at('2014')],['2021',at('2021')],['2022',at('2022')]];
+const xs=i=>20+i*225;
+let th=`<rect x="20" y="52" width="900" height="3" fill="#fff" opacity=".3"/><rect id="tlf" x="20" y="51" width="0" height="5" fill="${RED}"/>`;
+YRS.forEach((y,i)=>{th+=`<circle id="tc${i}" cx="${xs(i)}" cy="53.5" r="9" fill="#0b0d10" stroke="#fff" stroke-width="3"/><text id="tt${i}" x="${xs(i)}" y="30" text-anchor="${i==0?'start':i==4?'end':'middle'}" font-family="PM" font-size="22" fill="#fff" opacity=".55">${y[0]}</text>`});
+TL.innerHTML=th;
+const tlU=t=>{const on=t>=tIt&&t<tWas;TL.style.opacity=on?cl((t-tIt)/.3):0;let cur=-1;YRS.forEach((y,i)=>{if(t>=y[1])cur=i});
+ const prev=cur>=0?YRS[cur][1]:0;const fx=cur<0?0:xs(cur)-20;document.getElementById('tlf').setAttribute('width',Math.max(0,fx));
+ YRS.forEach((y,i)=>{const c=document.getElementById('tc'+i),tx=document.getElementById('tt'+i);const a=i<=cur;c.setAttribute('fill',a?RED:'#0b0d10');c.setAttribute('stroke',a?RED:'#fff');c.setAttribute('r',i===cur?9+5*Math.exp(-(t-y[1])/.2):9);tx.setAttribute('opacity',i===cur?1:a?.8:.45);tx.setAttribute('fill',i===cur?RED:'#fff')})};
+const AIL='AI visualisation, not the real towers or site.';
+const FINE=[[0,AIL],[tTaller,'Apex ~103 m (32 floors built), Qutub Minar 72.5 m. Never occupied.'],[tSo,AIL],[tIt,AIL+' 2009 revised plan added towers 16 and 17 on the green area.'],[tThen,'Floors as sanctioned: 24 (2009), 40 (2012 revision).'],[tProb,'Supreme Court, 31 Aug 2021: actual gap 9 m; 16 m required (NBR 2010). '+AIL],[tAnd2,'No consent of buyers under UP Apartments Act, 2010. AI visualisation.'],[tIn14,'Emerald Court Owner RWA v. State of UP, Allahabad HC, 11 Apr 2014.'],[tIn21,'Supertech Ltd v. Emerald Court Owner RWA, Supreme Court, 31 Aug 2021.'],[tBuy,'Refund with 12% a year interest from each deposit (SC order).'],[tThen2,'Demolished 28 Aug 2022, about 3,700 kg of explosives. '+AIL],[tA,AIL+' Educational content, not advice.'],[tWas,'']];
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.t0);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(lt)}});
+ tlU(t);
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.16*Math.exp(-(t-s.t0)/.06))});if(t>=HOOKEV)fl=Math.max(fl,.55*Math.exp(-(t-HOOKEV)/.08));{const ts=at('seconds');if(t>=ts)fl=Math.max(fl,.45*Math.exp(-(t-ts)/.08))}document.getElementById('flash').style.opacity=fl;
+};
+</script></body></html>
