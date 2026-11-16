@@ -9,3 +9,4 @@
 | 2026-11-15 | posts/2026-11-15-warehousing | India's warehouses just had their biggest nine months in three years (Vestian Q3 2026) | Carousel, 7 slides, look tc (from queue); images library/ai c_docks, c_inside, c_park | 17880307479565603 |
 
 - 2026-11-16 | REEL | Why Delhi has no skyscrapers | media 18341456980274380 | hook: forbidden/contradiction, photoreal AI tower erased on "no" | red/white | Jessa VO + 96 BPM beat (dl-beat-1) | drafts/delhi-skyscrapers-reel
+- 2026-11-16 | CAROUSEL | LEGAL? 3 words decide it (RERA, CC, OC) | media 17919778947535616 | https://www.instagram.com/p/DfzSwEejReb/ | look G Bold Type (first test, from inspiration log) | 8 slides, no AI images | also on Facebook Page | posts/sample-bold-type
