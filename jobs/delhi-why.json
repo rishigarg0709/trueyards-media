@@ -1,0 +1,53 @@
+[
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "text": "Why does Delhi... have almost no skyscrapers? [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "name": "dl-why-1"
+ },
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "text": "Why does Delhi... have almost no skyscrapers? [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "name": "dl-why-2"
+ },
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "text": "Why does Delhi... have almost no skyscrapers? [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "name": "dl-why-3"
+ },
+ {
+  "kind": "music",
+  "name": "dl-beat-1",
+  "prompt": "Modern documentary hip-hop instrumental at exactly 96 BPM in 4/4, for a fast news explainer reel. Punchy kick and crisp snare on every bar, deep 808 sub bass, tense minor-key piano motif, tight hi-hats, confident and driving, strong clear downbeats throughout, starts immediately with the full beat from the first second (no intro), short riser and drop around 30 seconds, steady energy to the end. No vocals.",
+  "ms": 62000
+ },
+ {
+  "kind": "music",
+  "name": "dl-beat-2",
+  "prompt": "Modern documentary hip-hop instrumental at exactly 96 BPM in 4/4, for a fast news explainer reel. Punchy kick and crisp snare on every bar, deep 808 sub bass, tense minor-key piano motif, tight hi-hats, confident and driving, strong clear downbeats throughout, starts immediately with the full beat from the first second (no intro), short riser and drop around 30 seconds, steady energy to the end. No vocals.",
+  "ms": 62000
+ }
+]
