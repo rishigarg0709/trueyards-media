@@ -23,6 +23,7 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python3 scripts/social_ops.py
       - name: Commit results
         run: |

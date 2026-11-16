@@ -156,12 +156,26 @@ def op_x_post(req):
     if ids: body["media"] = {"media_ids": ids}
     return http(url, body, {"Authorization": x_auth("POST", url)})
 
-OPS = {"yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
+# ---------- competitor scan (Apify Instagram scraper) ----------
+def op_ig_scan(req):
+    """{usernames:[...], per_user?:12, days?:7} -> top recent public posts with engagement."""
+    urls = [f"https://www.instagram.com/{u.strip('@')}/" for u in req["usernames"]]
+    inp = {"directUrls": urls, "resultsType": "posts", "resultsLimit": int(req.get("per_user", 12)),
+           "onlyPostsNewerThan": f"{int(req.get('days', 7))} days", "addParentData": False}
+    j = http(f"https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token={E('APIFY_TOKEN')}&timeout=280", inp, timeout=320)
+    if isinstance(j, dict): return {"error": j}
+    keep = ("ownerUsername", "url", "type", "productType", "timestamp", "caption", "likesCount", "commentsCount", "videoViewCount", "videoPlayCount", "videoDuration", "hashtags")
+    rows = [{k: it.get(k) for k in keep} for it in j]
+    for r in rows:
+        if r.get("caption"): r["caption"] = r["caption"][:600]
+    return {"count": len(rows), "posts": rows}
+
+OPS = {"ig_scan": op_ig_scan, "yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
        "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post}
 
 def scrub(o):
     s = json.dumps(o)
-    for k in ("YT_CLIENT_SECRET", "YT_REFRESH_TOKEN", "THREADS_TOKEN", "X_API_SECRET", "X_ACCESS_SECRET", "X_ACCESS_TOKEN"):
+    for k in ("APIFY_TOKEN", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN", "THREADS_TOKEN", "X_API_SECRET", "X_ACCESS_SECRET", "X_ACCESS_TOKEN"):
         v = E(k)
         if v: s = s.replace(v, "***")
     return json.loads(s)
