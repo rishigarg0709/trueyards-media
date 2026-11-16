@@ -1,6 +1,0 @@
-[
- {"kind":"voices","name":"el-voices"},
- {"kind":"voice","name":"test-voice","text":"Thirteen years to build them. Nine seconds to bring them down."},
- {"kind":"models","name":"gemini-image-models"},
- {"kind":"image","name":"test-image","prompt":"Vertical 9:16 editorial photograph: two tall unfinished concrete residential towers in a dense Indian suburb at dusk, dust in the air, dramatic sky, documentary style, no text, no people.","aspect":"9:16","size":"2K"}
-]
