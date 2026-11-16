@@ -28,3 +28,8 @@
 - Note: OAuth 2.0 client secret was shown on screen once; unused by us; Rishi to regenerate when convenient.
 - FB bio now "Real Estate Explained." to match IG; FB + X covers 4K without subheading.
 - 2026-11-16 | CAROUSEL | Super built-up area, explained to a beginner (Aarav pizza) | media 17969838036213337 | https://www.instagram.com/p/Dfztg0_CetD/ | look H Explained to a beginner, episode 1 | 9 slides | also on Facebook | posts/sample-story-carousel
+
+## 2026-11-16 LinkedIn
+- Page 128124088: tagline "Real Estate Explained.", 4K banner (library/brand/li-header-4k.jpg).
+- App "TrueYards Autopilot" 264256372 (client id 86mgjkdkguiqos), page-verified. Community Management API (development tier) request submitted 21:28 IST under FORTEASIA REALTY PRIVATE LIMITED, Faridabad address; use case Direct Advertiser, page management + analytics. Await email from Microsoft Vetting Services to the business email.
+- Publisher ready: social_ops op li_post (needs LI_TOKEN after approval).
