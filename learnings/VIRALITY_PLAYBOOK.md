@@ -21,12 +21,12 @@ Every reel, carousel and analytics run reads this. LEARNINGS.md (our own data) o
 6. Every number has a source in the caption or last frame; estimates are labelled.
 7. No engagement bait ("comment YES", "tag 3 friends", "share if you agree"), no buy/sell/invest advice, no builder or project promotion, no politics.
 
-## 3. Topic mix (start here, LEARNINGS.md adjusts)
-- 40% India rules and buyer protection (RERA, carpet vs super built-up, OC/CC, stamp duty, hidden costs, scams): protective sends.
-- 30% global marvels and weird facts (megaprojects, Japan houses lose value, 1 euro homes): social-currency sends, cross-language reach.
-- 20% India history and city stories (Lutyens' Delhi, Chandigarh, Mumbai's black-topped buildings): city-identity sends.
-- 10% news explained.
-Language experiment: English text with Hinglish voice vs English voice; decide from our data.
+## 3. What to make (Rishi, 2026-11-16: no fixed topic quotas)
+- Anything interesting about real estate, told as a story: facts, history, cities, marvels, money, rules, builders, weird facts, myth vs fact, global comparisons, news. Mostly India, some global.
+- Pick by how strong the story is, not by category. The test: is there a surprising question, a turn, and a payoff someone would want to send? (The Delhi skyscrapers reel is the model: a familiar place, a puzzle, a reveal.)
+- Story shape: familiar anchor, a specific gap, rising clues, a twist that beats expectations, payoff, loop back.
+- Keep variety so we learn; do not post the same kind of topic three times in a row. Let our own data, not preset percentages, shift the mix over time.
+- Language experiment: English text with Hinglish voice vs English voice; decide from our data.
 
 ## 4. Hook library (rotate; log the archetype in log.md)
 1 Contradiction: "This 2BHK costs more than a villa. Legally."

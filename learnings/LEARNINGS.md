@@ -23,7 +23,7 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 ## Running experiments
 - Hook tournament (weeks 1 to 4): number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this; tag each in log.md.
 - Reel length: 35 to 45 s vs 46 to 55 s.
-- Topic mix: 40% India rules and protection, 30% global marvels and weird facts, 20% India history and cities, 10% news.
+- Topics: no quotas (Rishi). Story-first across the whole real estate scope; track which story types win and lean in from data.
 - Carousels: slide 2 as a second hook; judge on saves and follows.
 - Accent colour: red vs green vs amber.
 - Posting slot: midday (12:23) vs evening (19:07).
