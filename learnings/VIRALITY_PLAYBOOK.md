@@ -73,9 +73,9 @@ Formats to rotate: how X works, map zoom (space to street), timeline, versus spl
 - Saves per reach: over 1% good, over 3% excellent.
 - Likes per reach: 3 to 5% healthy, under 2% weak.
 - Hold ratio (avg watch / length): over 40% good, over 60% excellent; compare within length bands.
-- Skip rate (reels_skip_rate if the API returns it): beat our 14-day median (small-account average is about 65%).
+- Skip rate (reels_skip_rate, confirmed available): beat our 14-day median (small-account average is about 65%).
 - Rewatch proxy: views/reach over 1.1.
-- Follows per 1,000 reach: 2 to 5 typical, over 8 strong.
+- Follows per 1,000 reach: 2 to 5 typical, over 8 strong. (Reels do not return follows via API; use account follower change on the day.)
 - Hook diagnosis: low hold plus low views/reach = hook failed. High hold but low sends = payoff not share-worthy.
 - These benchmarks are weak industry heuristics; our own rolling medians are the real bar.
 
