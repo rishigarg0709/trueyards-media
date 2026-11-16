@@ -78,3 +78,6 @@ Full rulebook: REEL_HOOKS_PLAYBOOK.md. Every reel must pass its frame-0 test and
 
 ## Logo in reels and posts
 Use the official icon file library/brand/trueyards-icon.png (teal #28c39d square, dark asymmetric Y) next to the wordmark: "True" in white on dark backgrounds or ink on light ones, "Yards" in #28c39d. Never recolour the logo to match a reel's accent colour.
+
+## Grid previews
+Instagram shows every profile tile as a 3:4 crop. Reels: always publish with a designed cover (scripts/reel/cover.cjs, see REEL_PIPELINE.md), never a random frame. Carousels (1080x1350): keep the logo, title and any key text at least 60 px in from the left and right edges and inside the slide's centre so the 3:4 tile crop shows the whole hook.
