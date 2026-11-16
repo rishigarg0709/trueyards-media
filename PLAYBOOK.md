@@ -89,6 +89,9 @@ Before choosing any topic, hook or style, read learnings/VIRALITY_PLAYBOOK.md (s
 ## Tonight's plan and image costs (carousels)
 If plans/<today>/carousel/plan.md exists, use it and its batch images (generate only missing ones). Use real free photos for real places and reuse library images where they truly fit, but never let cost thin out the visuals: generate up to 5 new images per carousel (batch price, about Rs 6 each) with the STYLE_SYSTEM.md prompt templates.
 
+## Cross-posting carousels
+After Instagram succeeds, also push social/requests/<date>-carousel-threads.json {"op":"threads_post","image_urls":[...],"text":<caption, 500 chars max>} and <date>-carousel-x.json {"op":"x_post","image_urls":[first 4 slides],"text":<hook plus one fact, under 270 chars>}. Skip any platform whose result shows auth_error and note it in log.md.
+
 ## Meta bot publishing
 Write request JSON files to meta/requests/ (mkdir -p first), push, then poll git pull every 15 s for meta/results/<same name>.json (reels can take 2 to 5 minutes). Ops: ig_reel {video_url, cover_url, caption, share_to_feed}, ig_reel with "trial":true (Trial Reel: shown only to non-followers, kept off the grid, graduation MANUAL), ig_carousel {image_urls, caption}, ig_story {image_url}, fb_reel {video_url, description}, fb_photos {image_urls, message}. Use raw.githubusercontent.com URLs of files already pushed. Never print or handle the token; the workflow holds it.
 
