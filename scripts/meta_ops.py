@@ -124,7 +124,7 @@ def find_campaign():
 
 def make_adset(camp_id):
     base = {"campaign_id": camp_id, "status": "PAUSED", "billing_event": "IMPRESSIONS",
-            "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "age_max": 50,
+            "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22,
                           "publisher_platforms": ["instagram", "facebook"],
                           "targeting_automation": {"advantage_audience": 1}}}
     tries = [
