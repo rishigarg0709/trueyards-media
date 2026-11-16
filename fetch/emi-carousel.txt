@@ -1,2 +1,0 @@
-emi-towers-field https://images.unsplash.com/photo-1793540675788-44d467cac16b?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-emi-night-skyline https://images.unsplash.com/photo-1761413049230-2c0dd9af7c9d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
