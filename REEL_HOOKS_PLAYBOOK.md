@@ -78,7 +78,9 @@ What makes a hook weak:
 - Words reveal at the voice's timestamps, so the text never leads or lags the voice.
 - Voice uses short phrases with natural pauses capped at about 0.4 s. There's never dead air longer than 0.6 s.
 - Music sits about 10 dB under the voice. Use a beat drop for the pattern interrupt and at the twist.
-- Use **real photos of real places** whenever the story names a real place. Use AI images only for abstractions or the future, and label them "AI visual".
+- **Mix image types for the job, never one type for a whole reel.** Real photos only where the actual look of a landmark is the point (proof shots). 3D renders and motion graphics for hooks, comparisons, maps, rules and numbers (towers rising, height lines, laser cuts, stamps). AI images for mood, history and the future. Label AI and 3D visuals.
+- **Hooks are built, not found.** A stock photo with text over it is not a hook. Frame 0 needs a designed motion-graphic event (something growing, slicing, slamming, counting) that tells the story without sound.
+- **Text must read on any frame.** Never put coloured text straight on a bright or hazy photo. Use a solid or blurred backing panel, a dark scrim of at least 60% behind text, or white text with green as a highlight block, not green letters. Check a frame mid-reveal, not only finished frames.
 
 ## 7. Share triggers (why someone hits send)
 
@@ -111,7 +113,8 @@ End with a **send prompt that's a question with a side to pick**: "Would you liv
 - [ ] Pattern interrupt between 1.5 and 2.5 s
 - [ ] Visual change every 3 s or less
 - [ ] Open loop named in the first 6 s, closed near the end
-- [ ] Real place = real photo, credited; AI images labelled
+- [ ] Imagery mixed by purpose (real for proof, 3D/motion for the hook and data, AI for mood); AI and 3D labelled, photos credited
+- [ ] Every text block passes contrast on its worst frame (backing panel or scrim; no green letters on light photos)
 - [ ] Every number checked against a source, with sources in fine print or the caption
 - [ ] Ends on a pick-a-side question or send prompt, loops cleanly
 - [ ] 30 to 60 s total
