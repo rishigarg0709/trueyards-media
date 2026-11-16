@@ -24,7 +24,7 @@ def call(path, params=None, method="GET", token=None):
     p["access_token"] = token or TOKEN
     data = None
     url = f"{G}/{path.lstrip('/')}"
-    if method == "GET":
+    if method in ("GET", "DELETE"):
         url += "?" + urllib.parse.urlencode(p)
     else:
         data = urllib.parse.urlencode({k: (json.dumps(v) if isinstance(v, (dict, list)) else v) for k, v in p.items()}).encode()
@@ -313,6 +313,15 @@ def op_reply(req):
     p = page()
     return call(f"{req['comment_id']}/comments", {"message": req["message"]}, "POST", token=p["access_token"])
 
+def op_fb_posts(req):
+    p = page()
+    return call(f"{p['id']}/posts", {"fields": "id,message,created_time,permalink_url", "limit": 15}, token=p["access_token"])
+
+def op_fb_delete(req):
+    """{post_id} : delete a Facebook Page post (only when Rishi asked)."""
+    p = page()
+    return call(req["post_id"], {}, "DELETE", token=p["access_token"])
+
 def op_hide(req):
     """{comment_id} : hide spam or abuse on Instagram."""
     return call(req["comment_id"], {"hide": "true"}, "POST")
@@ -320,15 +329,19 @@ def op_hide(req):
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
        "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
-       "comments": op_comments, "reply": op_reply, "hide": op_hide}
+       "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
 
 def main():
     if not TOKEN:
         sys.exit("META_TOKEN secret missing")
     os.makedirs("meta/results", exist_ok=True)
+    os.makedirs("meta/processed", exist_ok=True)
     for f in sorted(glob.glob("meta/requests/*.json")):
         name = os.path.basename(f)[:-5]
+        if os.path.exists(f"meta/processed/{name}"):
+            print(f"skip {name}: already processed"); os.remove(f); continue
+        open(f"meta/processed/{name}", "w").write(datetime.datetime.utcnow().isoformat())
         try:
             req = json.load(open(f))
             fn = OPS.get(req.get("op"))
