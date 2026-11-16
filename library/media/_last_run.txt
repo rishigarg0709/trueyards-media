@@ -1,5 +1,2 @@
-2026-11-16 06:40 UTC
-vs-sarah [voice]: voice ok
-vs-matilda [voice]: voice ok
-vs-laura [voice]: voice ok
-vs-brian [voice]: voice ok
+2026-11-16 06:47 UTC
+test-image [image]: image ok
