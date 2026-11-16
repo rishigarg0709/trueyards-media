@@ -19,3 +19,13 @@ For each shared post: what it is, why it works, what we can borrow, and status (
   4. Comment-keyword offer: a genuinely useful free resource (for example a RERA and documents checklist PDF) sent by DM when someone comments a word. Grey zone: Instagram demotes pure engagement bait, so only do it when the resource is real and useful, and not on every post.
 - Rishi approved the clean illustrated style for this carousel series (cartoon style still not used for reels).
 - Status: ADOPTED 2026-11-16 as look H, weekly series with Aarav; first episode posts/sample-story-carousel (posted 2026-11-16 night).
+
+## 2026-11-16 | @theautomationguy.ai reel on "Claude Content Skills" | instagram.com/p/DeXBnT1OU0b | reviewed postplusai/postplus-skills (27 skills)
+- Seen: a free pack of generic Claude skills for Instagram (research, hooks, scripts, carousels, captions, calendar, comment replies). Mostly overlaps what TrueYards already runs with real APIs and its own learning loop. Not installed; ideas only.
+- Adopted (16 Nov 2026, Rishi asked):
+  1. Audience voice mining: weekly scan also pulls real comments from the top outlier posts (social-ops op ig_comments) and recent Reddit threads (r/indianrealestate, r/IndiaInvestments, r/india, via web search) and clusters the actual questions, objections and phrases. Feeds topics and hook wording. Comments are evidence of questions, not of sales.
+  2. Reference decode for the top 3 outliers each week: hook essence, the viewer question it raises, the structure worth borrowing, and the forbidden drift (what we must not copy: creator identity, exact overlays, wording).
+  3. Survivorship check: the scan also notes 2 to 3 posts in the same format that flopped, so a "pattern" is not just the winners.
+  4. Funnel-stage diagnosis and experiment discipline: VIRALITY_PLAYBOOK.md sections 6 and 7.
+  5. Cross-post claim ledger: REEL_PIPELINE.md step 8 and PLAYBOOK.md step 7b.
+- Parked for later: creator discovery and outreach (collabs feature), Search Console measurement (website articles).

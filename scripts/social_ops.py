@@ -239,9 +239,17 @@ def op_threads_reply(req):
     th_wait(c["id"])
     return {"published": th(f"{me['id']}/threads_publish", {"creation_id": c["id"]})}
 
+def op_ig_comments(req):
+    """{post_urls:[...], per_post?:60} -> public comments on those posts (audience voice mining)."""
+    inp = {"directUrls": req["post_urls"], "resultsLimit": int(req.get("per_post", 60))}
+    j = http(f"https://api.apify.com/v2/acts/apify~instagram-comment-scraper/run-sync-get-dataset-items?token={E('APIFY_TOKEN')}&timeout=280", inp, timeout=320)
+    if isinstance(j, dict): return {"error": j}
+    keep = ("postUrl", "text", "ownerUsername", "likesCount", "timestamp", "repliesCount")
+    return {"count": len(j), "comments": [{k: it.get(k) for k in keep} for it in j]}
+
 OPS = {"ig_scan": op_ig_scan, "yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
        "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post,
-       "threads_comments": op_threads_comments, "threads_reply": op_threads_reply}
+       "threads_comments": op_threads_comments, "ig_comments": op_ig_comments, "threads_reply": op_threads_reply}
 
 def scrub(o):
     s = json.dumps(o)

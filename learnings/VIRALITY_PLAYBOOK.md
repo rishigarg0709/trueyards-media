@@ -82,7 +82,10 @@ Formats to rotate: how X works, map zoom (space to street), timeline, versus spl
 Breakout rule: at 6 h, reach at least 3x the 14-day median for that format and age, sends per reach at least 1%, hold at or above median. Then: reply to every comment, share to Stories, make it the boost candidate, and queue a follow-up (Part 2 or a deeper carousel) within 24 to 48 h. Never re-upload the same file.
 Winner remix: a post in our top 10% for sends gets 2 to 3 derivatives within 2 weeks (same topic new hook; same hook new topic; carousel deep-dive). Change at least the hook, first 3 s and voice.
 
+- Funnel-stage diagnosis (adopted 16 Nov 2026 from the PostPlus skills review): diagnose the stage before prescribing a fix. Low reach for its format = distribution question (hook, cover, posting time, audio). Good reach but low hold, saves or sends = message or format question (payoff, structure, pacing). Good engagement but few follows or profile visits per reach = journey question (bio, grid consistency, series promise, end card). Each diagnosis is a hypothesis; name one alternative explanation.
+
 ## 7. Experiment plan
+- Experiment discipline (adopted 16 Nov 2026): every experiment states one changed variable (topic, hook, format, length, look, audio or slot), the hypothesis, the comparison posts, the review date and the result that would change our mind. Never change several variables at once when the goal is learning. Never call a winner from one post.
 - Weeks 1 to 4, hook tournament: fixed format (motion-graphic explainer, 35 to 50 s). Rotate 8 archetypes: number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this. Primary: hold ratio and skip; secondary: sends.
 - Weeks 5 to 8: topic x geography x language. Primary: sends per reach and follows per 1,000 reach.
 - Week 9 on: 70% proven winners, 20% adjacent variations, 10% wild experiments. Retire an archetype after 4 weeks in the bottom quartile. Re-test winners every 6 to 8 weeks.
