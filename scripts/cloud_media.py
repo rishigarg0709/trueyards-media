@@ -35,7 +35,7 @@ def voices(t):
     open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} voices"
 
 def image(t):
-    model = t.get("model", "gemini-3-pro-image-preview")
+    model = t.get("model", "gemini-3-pro-image")
     parts = [{"text": t["prompt"]}]
     for ip in t.get("inputs", []):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
@@ -48,6 +48,70 @@ def image(t):
         if d:
             open(f"{OUT}/{t['name']}.png", "wb").write(base64.b64decode(d["data"])); return "image ok"
     return "no image: " + json.dumps(j)[:300]
+
+def _img_request(t):
+    parts = [{"text": t["prompt"]}]
+    for ip in t.get("inputs", []):
+        mt = "image/png" if ip.endswith(".png") else "image/jpeg"
+        parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
+    return {"contents": [{"parts": parts}],
+            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
+
+def batch_submit(t):
+    """Half-price Gemini images. t = {kind, name, model?, images:[{name, prompt, aspect?, size?, inputs?}]}.
+    Results are saved later by the batch-poll workflow into library/media/<image name>.png."""
+    model = t.get("model", "gemini-3-pro-image")
+    reqs = [{"request": _img_request(i), "metadata": {"key": i["name"]}} for i in t["images"]]
+    body = {"batch": {"display_name": t["name"], "input_config": {"requests": {"requests": reqs}}}}
+    j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchGenerateContent", body, {"x-goog-api-key": GM})
+    os.makedirs("batches/pending", exist_ok=True)
+    rec = {"batch": j.get("name"), "name": t["name"], "model": model, "submitted": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
+           "images": t["images"], "fallback_after_utc": t.get("fallback_after_utc")}
+    json.dump(rec, open(f"batches/pending/{t['name']}.json", "w"), indent=1)
+    return f"batch submitted {j.get('name')} ({len(reqs)} images)"
+
+def _find(o, key):
+    if isinstance(o, dict):
+        if key in o: return o[key]
+        for v in o.values():
+            r = _find(v, key)
+            if r is not None: return r
+    if isinstance(o, list):
+        for v in o:
+            r = _find(v, key)
+            if r is not None: return r
+    return None
+
+def batch_poll():
+    os.makedirs("batches/done", exist_ok=True); os.makedirs("batches/failed", exist_ok=True)
+    for f in sorted(glob.glob("batches/pending/*.json")):
+        rec = json.load(open(f))
+        try:
+            j = req(f"https://generativelanguage.googleapis.com/v1beta/{rec['batch']}", None, {"x-goog-api-key": GM}, method="GET")
+        except Exception as e:
+            log.append(f"{rec['name']} poll error {e!r}"[:200]); continue
+        state = _find(j, "state") or ""
+        if "SUCCEEDED" in state:
+            items = _find(j, "inlinedResponses")
+            if isinstance(items, dict): items = items.get("inlinedResponses", [])
+            got = []
+            for it in items or []:
+                key = (it.get("metadata") or {}).get("key")
+                for c in (it.get("response") or {}).get("candidates", []):
+                    for p in c.get("content", {}).get("parts", []):
+                        d = p.get("inlineData") or p.get("inline_data")
+                        if d and key:
+                            open(f"{OUT}/{key}.png", "wb").write(base64.b64decode(d["data"])); got.append(key)
+            rec["saved"] = got; rec["missing"] = [i["name"] for i in rec["images"] if i["name"] not in got]
+            rec["finished"] = time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime())
+            json.dump(rec, open(f"batches/done/{rec['name']}.json", "w"), indent=1); os.remove(f)
+            log.append(f"{rec['name']}: batch done, {len(got)} saved, missing {rec['missing']}")
+        elif any(x in state for x in ("FAILED", "CANCELLED", "EXPIRED")):
+            rec["state"] = state; json.dump(rec, open(f"batches/failed/{rec['name']}.json", "w"), indent=1); os.remove(f)
+            log.append(f"{rec['name']}: batch {state}; post runs must fall back to the normal image job")
+        else:
+            log.append(f"{rec['name']}: {state or 'pending'}")
+
 
 def models(t):
     j = req("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", None, {"x-goog-api-key": GM}, method="GET")
@@ -73,7 +137,11 @@ def usage(t):
     keep = {k: j.get(k) for k in ("tier","character_count","character_limit","next_character_count_reset_unix","status","billing_period","currency")}
     open(f"{OUT}/{t['name']}.json", "w").write(json.dumps(keep, indent=1)); return "usage ok"
 
-KINDS = {"usage": usage, "shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
+KINDS = {"batch_submit": batch_submit, "usage": usage, "shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
+if len(sys.argv) > 1 and sys.argv[1] == "poll":
+    batch_poll()
+    open(f"{OUT}/_last_poll.txt", "w").write(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime()) + "\n".join(log))
+    sys.exit(0)
 for f in sorted(glob.glob("jobs/*.json")):
     for t in json.load(open(f)):
         try: msg = KINDS[t["kind"]](t)
