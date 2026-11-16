@@ -17,6 +17,11 @@ jobs:
           python3 scripts/cloud_media.py poll
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Free 4K upscale of new images
+        run: |
+          git status --porcelain --untracked-files=all library/media | grep -q '\.png$' || { echo "no new images"; exit 0; }
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q spandrel pillow numpy
+          python3 scripts/upscale.py
       - name: Commit
         run: |
           git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
