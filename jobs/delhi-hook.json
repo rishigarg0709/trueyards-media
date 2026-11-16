@@ -1,0 +1,41 @@
+[
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Delhi has almost no skyscrapers. [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "name": "dl-hook-1"
+ },
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Delhi has almost no skyscrapers. [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "name": "dl-hook-2"
+ },
+ {
+  "kind": "voice",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Delhi has almost no skyscrapers. [short pause] Twenty kilometres away, Gurgaon and Noida are full of them.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  },
+  "name": "dl-hook-3"
+ }
+]
