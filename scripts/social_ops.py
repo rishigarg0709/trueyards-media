@@ -170,12 +170,54 @@ def op_ig_scan(req):
         if r.get("caption"): r["caption"] = r["caption"][:600]
     return {"count": len(rows), "posts": rows}
 
+# ---------- LinkedIn company page (Community Management API) ----------
+LI_ORG = "urn:li:organization:128124088"
+def li_h(extra=None):
+    h = {"Authorization": f"Bearer {E('LI_TOKEN')}", "LinkedIn-Version": "202510", "X-Restli-Protocol-Version": "2.0.0"}
+    h.update(extra or {}); return h
+
+def li_upload(kind, blob):
+    """kind: images | videos. Returns asset urn or (None, err)."""
+    if kind == "images":
+        j = http("https://api.linkedin.com/rest/images?action=initializeUpload", {"initializeUploadRequest": {"owner": LI_ORG}}, li_h())
+        v = j.get("value") or {}
+        if not v.get("uploadUrl"): return None, j
+        http(v["uploadUrl"], blob, {"Authorization": f"Bearer {E('LI_TOKEN')}", "Content-Type": "application/octet-stream"}, method="PUT")
+        return v["image"], None
+    j = http("https://api.linkedin.com/rest/videos?action=initializeUpload",
+             {"initializeUploadRequest": {"owner": LI_ORG, "fileSizeBytes": len(blob), "uploadCaptions": False, "uploadThumbnail": False}}, li_h())
+    v = j.get("value") or {}
+    if not v.get("uploadInstructions"): return None, j
+    etags = []
+    for ins in v["uploadInstructions"]:
+        r = urllib.request.Request(ins["uploadUrl"], data=blob[ins["firstByte"]:ins["lastByte"] + 1], method="PUT",
+                                   headers={"Content-Type": "application/octet-stream"})
+        with urllib.request.urlopen(r, timeout=600) as resp: etags.append(resp.headers.get("etag"))
+    http("https://api.linkedin.com/rest/videos?action=finalizeUpload",
+         {"finalizeUploadRequest": {"video": v["video"], "uploadToken": v.get("uploadToken", ""), "uploadedPartIds": etags}}, li_h())
+    return v["video"], None
+
+def op_li_post(req):
+    """{text, video_url? | image_url?} : one post on the TrueYards company page."""
+    body = {"author": LI_ORG, "commentary": req.get("text", "")[:3000], "visibility": "PUBLIC",
+            "distribution": {"feedDistribution": "MAIN_FEED", "targetEntities": [], "thirdPartyDistributionChannels": []},
+            "lifecycleState": "PUBLISHED", "isReshareDisabledByAuthor": False}
+    if req.get("video_url"):
+        urn, err = li_upload("videos", fetch(req["video_url"]))
+        if err: return {"media_error": err}
+        body["content"] = {"media": {"title": req.get("title", "TrueYards"), "id": urn}}
+    elif req.get("image_url"):
+        urn, err = li_upload("images", fetch(req["image_url"]))
+        if err: return {"media_error": err}
+        body["content"] = {"media": {"id": urn}}
+    return http("https://api.linkedin.com/rest/posts", body, li_h())
+
 OPS = {"ig_scan": op_ig_scan, "yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
-       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post}
+       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post}
 
 def scrub(o):
     s = json.dumps(o)
-    for k in ("APIFY_TOKEN", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN", "THREADS_TOKEN", "X_API_SECRET", "X_ACCESS_SECRET", "X_ACCESS_TOKEN"):
+    for k in ("APIFY_TOKEN", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN", "THREADS_TOKEN", "X_API_SECRET", "X_ACCESS_SECRET", "X_ACCESS_TOKEN", "LI_TOKEN"):
         v = E(k)
         if v: s = s.replace(v, "***")
     return json.loads(s)
