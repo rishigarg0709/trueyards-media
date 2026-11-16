@@ -90,7 +90,7 @@ def op_insights(req):
     fb = {}
     if p:
         fb = {"page": call(p["id"], {"fields": "name,followers_count,fan_count"}, token=p["access_token"]),
-              "insights": call(f"{p['id']}/insights", {"metric": "page_impressions_unique,page_post_engagements,page_follows", "period": "day", "date_preset": "last_28d"}, token=p["access_token"])}
+              "insights": call(f"{p['id']}/insights", {"metric": "page_impressions_unique,page_post_engagements,page_daily_follows_unique", "period": "day", "date_preset": "last_28d"}, token=p["access_token"])}
     return scrub({"instagram_media": media, "instagram_account": acct, "facebook": fb})
 
 def month_spend():
@@ -122,24 +122,39 @@ def find_campaign():
             return c
     return None
 
+def make_adset(camp_id):
+    base = {"campaign_id": camp_id, "status": "PAUSED", "billing_event": "IMPRESSIONS",
+            "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "age_max": 50,
+                          "publisher_platforms": ["instagram", "facebook"],
+                          "targeting_automation": {"advantage_audience": 1}}}
+    tries = [
+        dict(name="TrueYards Boost - India profile visits", optimization_goal="PROFILE_AND_PAGE_ENGAGEMENT",
+             destination_type="INSTAGRAM_PROFILE"),
+        dict(name="TrueYards Boost - India engagement", optimization_goal="POST_ENGAGEMENT", destination_type="ON_POST"),
+    ]
+    errs = []
+    for t in tries:
+        r = call(f"{ACT}/adsets", {**base, **t}, "POST")
+        if "id" in r:
+            return {"adset": r, "goal": t["optimization_goal"], "earlier_errors": errs}
+        errs.append(r.get("error", {}).get("error_user_msg") or r.get("error", {}).get("message"))
+        if "regional" in json.dumps(r).lower():
+            base["regional_regulated_categories"] = []
+    return {"error": errs}
+
 def op_boost_setup(req):
     """One-time: creates the single always-on campaign + ad set, PAUSED. Budget fixed from config."""
-    if find_campaign():
-        return {"note": "campaign already exists", "campaign": find_campaign()}
-    budget = int(CFG["boost_daily_budget_inr"]) * 100  # Meta uses paise
-    c = call(f"{ACT}/campaigns", {"name": BOOST_NAME, "objective": "OUTCOME_ENGAGEMENT", "status": "PAUSED",
-             "special_ad_categories": [], "daily_budget": budget, "bid_strategy": "LOWEST_COST_WITHOUT_CAP"}, "POST")
-    if "error" in c:
-        return {"campaign_error": c}
-    p = page()
-    adset = call(f"{ACT}/adsets", {
-        "name": "TrueYards Boost - India profile visits", "campaign_id": c["id"], "status": "PAUSED",
-        "billing_event": "IMPRESSIONS", "optimization_goal": "PROFILE_AND_PAGE_ENGAGEMENT",
-        "destination_type": "INSTAGRAM_PROFILE", "promoted_object": {"page_id": p["id"]} if p else {},
-        "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "age_max": 50,
-                      "publisher_platforms": ["instagram", "facebook"], "targeting_automation": {"advantage_audience": 1}},
-    }, "POST")
-    return {"campaign": c, "adset": adset}
+    c = find_campaign()
+    if not c:
+        budget = int(CFG["boost_daily_budget_inr"]) * 100  # paise
+        c = call(f"{ACT}/campaigns", {"name": BOOST_NAME, "objective": "OUTCOME_ENGAGEMENT", "status": "PAUSED",
+                 "special_ad_categories": [], "daily_budget": budget, "bid_strategy": "LOWEST_COST_WITHOUT_CAP"}, "POST")
+        if "error" in c:
+            return {"campaign_error": c}
+    sets = call(f"{c['id']}/adsets", {"fields": "id,name,optimization_goal,status"}).get("data", [])
+    if sets:
+        return {"campaign": c, "adsets": sets, "note": "already set up"}
+    return {"campaign": c, **make_adset(c["id"])}
 
 def op_boost_post(req):
     """Adds an existing Instagram post as an ad inside the fixed campaign. Never touches budget."""
@@ -153,7 +168,7 @@ def op_boost_post(req):
     p = page()
     creative = call(f"{ACT}/adcreatives", {"name": f"boost {req['media_id']}", "object_id": p["id"],
                     "instagram_user_id": CFG["ig_user_id"], "source_instagram_media_id": req["media_id"],
-                    "call_to_action": {"type": "VIEW_INSTAGRAM_PROFILE"}}, "POST")
+                    }, "POST")
     if "error" in creative:
         return {"creative_error": creative}
     ad = call(f"{ACT}/ads", {"name": f"boost {req['media_id']}", "adset_id": sets[0]["id"],
