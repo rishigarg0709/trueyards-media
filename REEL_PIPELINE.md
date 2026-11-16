@@ -35,3 +35,9 @@ Before anything else, read REEL_HOOKS_PLAYBOOK.md (the rules) and look at the re
 - No dark boxes behind captions; use gradients and text shadow, or highlight blocks on key words.
 - Music must be catchy and beat-driven; downbeat on the hook's key word, cuts on beats.
 - Vary visual style between consecutive reels (fonts, accent, layout), keep quality constant.
+
+## ElevenLabs credit budget (Creator plan: 131,000 credits a month, resets on the 16th)
+- Budget per reel: about 1,600 credits (voiceover about 800, music about 700 for 45 s). 60 reels a month is about 96,000, leaving room for retries and the weekly music reel.
+- Voice: write the final script before generating; at most one regeneration per reel.
+- Music: generate 45 s, not longer. Save every good track to library/music/<look>/ with its BPM; reuse a saved track for the same look instead of generating when one fits.
+- Before generating, run the usage job ({"kind":"usage","name":"el-usage"}). If used credits exceed the share of the month passed plus 10% (for example over 60% by day 15), reuse library music for that reel.
