@@ -72,3 +72,6 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 - Music: ElevenLabs Music bed per reel, ducked about 10 dB under the voice, lifting in pauses.
 - Cloud jobs: push a JSON list to jobs/*.json (kinds: voice, music, image, shared, addvoice, voices, models); results land in library/media/.
 - Style 3 "Height Ruler": cream/black/TrueYards green, Inter 900 + Plex Mono, block-column wipes, a persistent ruler device. Used for the Delhi skyscrapers reel.
+
+## Hooks and virality
+Full rulebook: REEL_HOOKS_PLAYBOOK.md. Every reel must pass its frame-0 test and pre-publish checklist.
