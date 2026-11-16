@@ -1,5 +1,6 @@
 // Reel cover in the house template. usage: node cover.cjs <spec.json> <out.jpg>
 // spec: {"image": "/abs/path.jpg", "focus": "50% 40%", "kicker": "1 ACRE · GURGAON", "title": "₹50,000 to<br><mark>₹88 crore</mark>", "accent": "#ff3b30", "dark": true}
+// Output: <out> at 2160x3840 (4K master, YouTube) + <out>-ig.jpg at 1440x2560 (Meta API max-width safe).
 // Layout keeps everything inside the 3:4 grid crop (y 240 to 1680) so profile tiles look uniform.
 const fs=require('fs'),path=require('path');const {chromium}=require(process.env.PW||'/opt/npm-tools/node_modules/playwright');
 (async()=>{const [specF,out]=process.argv.slice(2);const S=JSON.parse(fs.readFileSync(specF));const R=path.resolve(__dirname,'../..');
@@ -17,8 +18,10 @@ h1{position:absolute;left:80px;top:1240px;width:930px;color:#fff;font:900 108px/
 mark{background:${acc};color:#fff;padding:0 .1em;border-radius:10px;-webkit-box-decoration-break:clone}
 </style></head><body><div class="bg"></div><div class="sh"></div><div class="lg"><img src="file://${R}/library/brand/trueyards-icon.png"><span>True<b>Yards</b></span></div><div class="k">${S.kicker||''}</div><h1>${S.title}</h1></body></html>`;
 const tmp=path.join(require('os').tmpdir(),'cover_'+Date.now()+'.html');fs.writeFileSync(tmp,html);
-const b=await chromium.launch({args:['--allow-file-access-from-files']});const p=await b.newPage({viewport:{width:1080,height:1920}});
+const b=await chromium.launch({args:['--allow-file-access-from-files']});const p=await b.newPage({viewport:{width:1080,height:1920},deviceScaleFactor:2});
 await p.goto('file://'+tmp);await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(300);
 const h=await p.evaluate(()=>{const e=document.querySelector('h1');return e.getBoundingClientRect().bottom});
 if(h>1640)console.log('WARN title bottom at',Math.round(h),'px, outside the 3:4 grid crop; shorten the title');
-await p.screenshot({path:out,type:'jpeg',quality:92});await b.close();console.log('cover',out)})();
+await p.screenshot({path:out,type:'jpeg',quality:95});await b.close();
+const ig=out.replace(/\.jpe?g$/i,'')+'-ig.jpg';require('child_process').execFileSync('python3',['-c',"import sys;from PIL import Image;Image.open(sys.argv[1]).resize((1440,2560),Image.LANCZOS).save(sys.argv[2],quality=95,subsampling=0)",out,ig]);
+console.log('cover 4K',out,'| IG/FB/Threads',ig)})();

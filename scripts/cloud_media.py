@@ -41,7 +41,7 @@ def image(t):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
         parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
     body = {"contents": [{"parts": parts}],
-            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
+            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "4K")}}}
     j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body, {"x-goog-api-key": GM})
     for p in j["candidates"][0]["content"]["parts"]:
         d = p.get("inlineData") or p.get("inline_data")
@@ -55,7 +55,7 @@ def _img_request(t):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
         parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
     return {"contents": [{"parts": parts}],
-            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
+            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "4K")}}}
 
 def batch_submit(t):
     """Half-price Gemini images. t = {kind, name, model?, images:[{name, prompt, aspect?, size?, inputs?}]}.
