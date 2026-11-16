@@ -158,8 +158,9 @@ def op_x_post(req):
 
 # ---------- competitor scan (Apify Instagram scraper) ----------
 def op_ig_scan(req):
-    """{usernames:[...], per_user?:12, days?:7} -> top recent public posts with engagement."""
-    urls = [f"https://www.instagram.com/{u.strip('@')}/" for u in req["usernames"]]
+    """{usernames:[...], per_user?:12, days?:7} -> top recent public posts with engagement.
+    {post_urls:[...], days:3650} -> those specific posts with full captions."""
+    urls = req.get("post_urls") or [f"https://www.instagram.com/{u.strip('@')}/" for u in req["usernames"]]
     inp = {"directUrls": urls, "resultsType": "posts", "resultsLimit": int(req.get("per_user", 12)),
            "onlyPostsNewerThan": f"{int(req.get('days', 7))} days", "addParentData": False}
     j = http(f"https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items?token={E('APIFY_TOKEN')}&timeout=280", inp, timeout=320)
@@ -167,7 +168,7 @@ def op_ig_scan(req):
     keep = ("ownerUsername", "url", "type", "productType", "timestamp", "caption", "likesCount", "commentsCount", "videoViewCount", "videoPlayCount", "videoDuration", "hashtags", "musicInfo", "ownerFullName")
     rows = [{k: it.get(k) for k in keep} for it in j]
     for r in rows:
-        if r.get("caption"): r["caption"] = r["caption"][:600]
+        if r.get("caption") and not req.get("post_urls"): r["caption"] = r["caption"][:600]
     return {"count": len(rows), "posts": rows}
 
 # ---------- LinkedIn company page (Community Management API) ----------
