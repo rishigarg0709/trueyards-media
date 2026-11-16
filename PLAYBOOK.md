@@ -49,12 +49,12 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 4a. Quality gate (do not skip). Open the launch reference slides posts/2026-11-14-carpet-area/slide-1.jpg and slide-3.jpg, then open every new slide at full size next to them. Publish only if all are true: (1) the cover would stop a scroll and reads in under 2 seconds; (2) images are blended with no visible box edges, no stretched or pixelated photos, no watermark; (3) no clipped, overlapping or orphaned text, no EDGE warnings; (4) every slide has one idea and clear hierarchy; (5) nothing looks like a stock template; (6) every figure has a source. Fix and re-render up to 3 rounds. If it still falls short, do not publish it: publish the oldest folder in queue/ instead, or if the queue is empty, skip the day and tell Rishi in one line. A missed day is better than a weak post.
 5. Write caption.txt: first line restates the hook with keywords; short body; a send prompt naming who to send it to; the source line; the disclaimer; at most 5 hashtags. Under 2,200 characters.
 6. Move/copy the slides to posts/<YYYY-MM-DD>-<slug>/slide-1.jpg ... and caption.txt. Commit and push to main. Raw URLs: https://raw.githubusercontent.com/rishigarg0709/trueyards-media/main/posts/<folder>/slide-K.jpg. Wait about 30 seconds after pushing.
-7. Publish with Windsor.ai: connector "instagram", action "create_carousel_post", account "17841429830946947", params {image_urls: [...in order...], caption}. If it fails because an image cannot be fetched, wait a minute and retry once.
+7. Publish with the Meta bot (see "Meta bot publishing" below): push meta/requests/<date>-carousel-ig.json {"op":"ig_carousel","image_urls":[...raw.githubusercontent.com URLs in order...],"caption":"..."} and meta/requests/<date>-carousel-fb.json {"op":"fb_photos","image_urls":[...same...],"message":"<same caption>"} in one push; read meta/results/ for the media id and permalink. Fallback only if the Meta bot result shows an error: Windsor.ai connector "instagram", action "create_carousel_post", account "17841429830946947", params {image_urls, caption}. Instagram's API cannot add music to carousels; skip that.
 8. Append a row to log.md (include the image files used) and push.
 9. Final message for Rishi (pushed to his phone): first line bold "TrueYards post live, <date>", then the title, one line on why this topic, and a reminder to add a music track from his phone (carousels with music reach more; the API cannot attach music). No em dashes.
 
 ## Limits
-- Windsor free plan: only this Instagram account is connected; the Facebook Page is not. Turn on Instagram's "share to Facebook" in the app for cross-posting.
+- Facebook: every post also goes natively to the TrueYards Facebook Page through the Meta bot (fb_reel, fb_photos). Windsor is now only the fallback publisher for Instagram.
 - Max 10 images per carousel through the API.
 - If Windsor reports the account disconnected or write actions disabled, stop and tell Rishi in one line.
 
@@ -87,3 +87,6 @@ Before choosing any topic, hook or style, read learnings/VIRALITY_PLAYBOOK.md (s
 
 ## Tonight's plan and image costs (carousels)
 If plans/<today>/carousel/plan.md exists, use it and its batch images (generate only missing ones). Use real free photos for real places, reuse library images for generic visuals, and generate at most 3 new images per carousel with the STYLE_SYSTEM.md prompt templates.
+
+## Meta bot publishing
+Write request JSON files to meta/requests/ (mkdir -p first), push, then poll git pull every 15 s for meta/results/<same name>.json (reels can take 2 to 5 minutes). Ops: ig_reel {video_url, cover_url, caption, share_to_feed}, ig_reel with "trial":true (Trial Reel: shown only to non-followers, kept off the grid, graduation MANUAL), ig_carousel {image_urls, caption}, ig_story {image_url}, fb_reel {video_url, description}, fb_photos {image_urls, message}. Use raw.githubusercontent.com URLs of files already pushed. Never print or handle the token; the workflow holds it.
