@@ -27,3 +27,4 @@
 - First API post: tweet 2122355035698823654. Text-only posts ~ $0.015; avoid links in posts ($0.20 each).
 - Note: OAuth 2.0 client secret was shown on screen once; unused by us; Rishi to regenerate when convenient.
 - FB bio now "Real Estate Explained." to match IG; FB + X covers 4K without subheading.
+- 2026-11-16 | CAROUSEL | Super built-up area, explained to a beginner (Aarav pizza) | media 17969838036213337 | https://www.instagram.com/p/Dfztg0_CetD/ | look H Explained to a beginner, episode 1 | 9 slides | also on Facebook | posts/sample-story-carousel
