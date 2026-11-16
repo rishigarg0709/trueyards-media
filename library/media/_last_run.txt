@@ -1,13 +1,9 @@
-2026-11-16 06:51 UTC
-add-jessa [addvoice]: added {"voice_id": "yj30vwTGJxSHezdAGsv9"}
-add-zara [addvoice]: added {"voice_id": "jqcCZkN6Knx8BJ5TBdYR"}
-add-jessica-anne [addvoice]: added {"voice_id": "lxYfHSkYm1EzQzGhdbfc"}
-add-monika [addvoice]: added {"voice_id": "2zRM7PkgwBPiau2jvVXc"}
-add-jon [addvoice]: added {"voice_id": "MFZUKuGQUsGJPQjTS4wC"}
-add-ranbir [addvoice]: added {"voice_id": "2iAXJEMO2o0PqUHzvZwQ"}
-vh-jessa [voice]: voice ok
-vh-zara [voice]: voice ok
-vh-jessica-anne [voice]: voice ok
-vh-monika [voice]: voice ok
-vh-jon [voice]: voice ok
-vh-ranbir [voice]: voice ok
+2026-11-16 06:58 UTC
+dl-vo [voice]: voice ok
+dl-music [music]: music ok 960514 bytes
+dl-sprawl [image]: image ok
+dl-gurgaon [image]: image ok
+dl-plane [image]: image ok
+dl-qutub [image]: image ok
+dl-lutyens [image]: image ok
+dl-future [image]: image ok
