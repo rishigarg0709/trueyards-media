@@ -64,3 +64,11 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 - Story reels: one short sentence per screen, held long enough to read; one recurring device carries the story (countdown, year counter, price tag).
 - Rotate visual styles. Do not reuse the same palette and fonts reel after reel. Styles so far: "Bone/Red 3D" (Mumbai), "Ledger Noir" black/ivory/saffron with Fraunces + Space Grotesk + Plex Mono (Gurgaon).
 - Music: catchy, beat-forward tracks (hip hop, phonk, desi). Rishi rejected dark ambient underscores and orchestral hip hop. Offer 2 to 3 track previews of the hook when unsure.
+
+## Voiceover reels (16 Nov 2026)
+- Narrator: ElevenLabs voice "Jessa - Easygoing and Effortless" (voice_id yj30vwTGJxSHezdAGsv9), model eleven_v3. Rishi picked it as the most natural.
+- Humanise scripts: short sentences, "..." and [short pause]/[pause] tags, a question to the viewer at the end. Trim any pause longer than 0.4 s in the edit.
+- Every on-screen word reveals at its spoken timestamp (alignment from /with-timestamps). Frame 0 shows the full hook statement before the voice says it.
+- Music: ElevenLabs Music bed per reel, ducked about 10 dB under the voice, lifting in pauses.
+- Cloud jobs: push a JSON list to jobs/*.json (kinds: voice, music, image, shared, addvoice, voices, models); results land in library/media/.
+- Style 3 "Height Ruler": cream/black/TrueYards green, Inter 900 + Plex Mono, block-column wipes, a persistent ruler device. Used for the Delhi skyscrapers reel.

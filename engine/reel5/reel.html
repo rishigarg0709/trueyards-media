@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:600;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#f2ede3}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#f2ede3;color:#121212;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#f2ede3}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 128px/.96 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.04 IN;letter-spacing:-.025em}
+.B{font:600 50px/1.18 IN;letter-spacing:-.01em}
+.K{font:500 25px/1.2 PM;letter-spacing:.2em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.g{color:#14a06b}.wh{color:#fff}
+.hl{background:#14a06b;color:#fff;padding:0 .14em;border-radius:6px}
+.tag{display:inline-block;background:#121212;color:#f2ede3;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:6px}
+.card{background:#fffdf8;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.25)}
+#rul{position:absolute;right:34px;top:330px;width:120px;height:1220px;z-index:20}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21}
+#brand b{color:#14a06b}
+#fine{position:absolute;left:70px;width:860px;top:1610px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.09;mix-blend-mode:multiply;z-index:25}
+</style></head><body><div id="s">
+<div id="brand">True<b>Yards</b></div>
+<svg id="rul" viewBox="0 0 120 1220"></svg>
+<div id="fine"></div><div id="flash"></div>
+<svg id="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+</div>
+<script>
+const WS=[["Delhi", 0.0, 0.48], ["is", 0.613, 0.88], ["India's", 0.933, 1.36], ["capital...", 1.43, 2.18], ["and", 2.363, 2.383], ["it", 2.436, 2.543], ["has", 2.683, 3.103], ["almost", 3.183, 3.663], ["no", 3.796, 4.063], ["skyscrapers.", 4.143, 5.103], ["Twenty", 5.634, 5.703], ["kilometres", 5.761, 6.343], ["away,", 6.407, 6.903], ["Gurgaon", 6.943, 7.543], ["and", 7.583, 7.703], ["Noida", 7.743, 8.103], ["are", 8.223, 8.583], ["full", 8.647, 8.903], ["of", 8.956, 9.063], ["them.", 9.127, 9.463], ["So", 10.025, 10.043], ["what's", 10.091, 10.363], ["stopping", 10.407, 10.763], ["Delhi?", 10.843, 11.323], ["Reason", 11.874, 11.943], ["one...", 12.043, 12.613], ["planes.", 13.011, 13.253], ["Every", 13.42, 13.913], ["building", 13.957, 14.313], ["within", 14.359, 14.633], ["twenty", 14.679, 14.953], ["kilometres", 15.011, 15.593], ["of", 15.646, 15.753], ["the", 15.773, 15.833], ["airport", 15.903, 16.393], ["needs", 16.446, 16.713], ["a", 16.753, 16.793], ["height", 16.827, 17.033], ["clearance.", 17.097, 17.833], ["Reason", 18.322, 18.413], ["two...", 18.513, 19.153], ["history.", 19.608, 19.873], ["Delhi", 20.02, 20.533], ["has", 20.613, 20.853], ["a", 20.893, 20.933], ["hundred", 20.993, 21.413], ["and", 21.493, 21.733], ["seventy-four", 21.783, 22.533], ["protected", 22.589, 23.093], ["monuments.", 23.157, 24.04], ["Nothing", 24.04, 24.583], ["new", 24.623, 24.743], ["can", 24.803, 24.983], ["be", 25.01, 25.063], ["built", 25.116, 25.383], ["within", 25.417, 25.623], ["a", 25.703, 25.783], ["hundred", 25.823, 26.103], ["metres", 26.16, 26.503], ["of", 26.53, 26.583], ["them.", 26.647, 27.063], ["Reason", 27.542, 27.633], ["three...", 27.7, 28.482], ["the", 28.544, 28.574], ["heart", 28.641, 28.974], ["of", 29.027, 29.134], ["the", 29.154, 29.214], ["city,", 29.278, 29.944], ["Lutyens'", 30.064, 30.784], ["Delhi,", 30.817, 31.144], ["is", 31.31, 31.514], ["a", 31.554, 31.594], ["bungalow", 31.674, 32.154], ["zone.", 32.234, 32.634], ["Low-rise,", 32.854, 33.904], ["by", 33.957, 34.064], ["design.", 34.144, 34.704], ["So", 35.134, 35.187], ["for", 35.227, 35.347], ["years,", 35.467, 36.227], ["Delhi's", 36.294, 36.707], ["tallest", 36.757, 37.107], ["building", 37.16, 37.587], ["was...", 37.747, 38.617], ["a", 39.113, 39.161], ["government", 39.17, 39.257], ["office.", 39.348, 40.19], ["About", 40.19, 40.607], ["a", 40.647, 40.687], ["hundred", 40.717, 40.927], ["metres.", 41.018, 41.647], ["Noida's", 42.086, 42.426], ["tallest", 42.486, 42.906], ["is", 42.986, 43.146], ["more", 43.178, 43.306], ["than", 43.354, 43.546], ["twice", 43.639, 44.106], ["that.", 44.17, 44.506], ["But", 44.846, 44.866], ["in", 44.893, 44.946], ["August", 45.003, 45.346], ["2026,", 45.506, 46.786], ["Delhi's", 46.839, 47.266], ["new", 47.326, 47.506], ["master", 47.563, 47.906], ["plan", 47.986, 48.306], ["removed", 48.386, 48.946], ["height", 48.98, 49.186], ["limits", 49.243, 49.586], ["across", 49.643, 49.986], ["most", 50.066, 50.386], ["of", 50.413, 50.466], ["the", 50.506, 50.626], ["city.", 50.69, 51.026], ["So", 51.52, 51.556], ["the", 51.576, 51.636], ["skyline...", 51.736, 52.865], ["is", 52.933, 52.951], ["about", 53.004, 53.271], ["to", 53.324, 53.431], ["change.", 53.511, 54.151], ["Would", 54.517, 54.584], ["you", 54.624, 54.744], ["live", 54.808, 55.064], ["on", 55.117, 55.224], ["the", 55.244, 55.304], ["fiftieth", 55.344, 55.704], ["floor", 55.757, 56.024], ["in", 56.051, 56.104], ["Delhi?", 56.171, 56.584]];
+const S=document.getElementById('s');
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9'\-]/g,'').replace(/'$/,'');
+const at=(w,n=1)=>{let c=0;for(const x of WS){if(norm(x[0])===w){c++;if(c===n)return x[1]}}throw new Error('word '+w)};
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const ph=(p,src,css)=>{const e=document.createElement('img');e.src='img/'+src+'.jpg';e.className='ph';e.style.cssText=css||'';p.appendChild(e);return e};
+// tokens: [[text, time, cls]] ; newline token '\n'
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*34}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+// words by text sequence helper: build tokens from phrase with times of consecutive words starting at word index found by at()
+const W=(phrase,startWord,n=1,cls)=>{let i=0,c=0;for(;i<WS.length;i++){if(norm(WS[i][0])===startWord){c++;if(c===n)break}}return phrase.split(' ').map((p,k)=>p==='/'?'\n':[p,WS[Math.min(i+k-(phrase.split(' ').slice(0,k).filter(x=>x==='/').length),WS.length-1)][1],cls])};
+const SC=[];const add=(t0,fn)=>SC.push({t0,fn});
+const END=WS[WS.length-1][2]+2.3;
+// ---------- scenes ----------
+const tTw=at('twenty')-.12, tSo=at('so')-.1, tR1=at('reason')-.1, tR2=at('reason',2)-.1, tR3=at('reason',3)-.1, tSo2=at('so',2)-.1, tBut=at('but')-.1, tSo3=at('so',3)-.1, tWould=at('would')-.1;
+add(0,sc=>{const b=ph(sc,'sprawl');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.82) 85%)');
+ const k=mk(sc,'K wh','left:70px;top:1010px','New Delhi · 2026');
+ const a=T(sc,'M wh','left:70px;top:1060px;width:860px',[["India's",-.2],["capital",-.2],["has",-.2]]);
+ const h=T(sc,'H wh','left:70px;top:1160px;width:880px',[["almost",-.2],['\n'],["no",-.2,'g'],['\n'],["skyscrapers.",-.2]]);
+ return t=>{b.style.transform=`scale(${1.16-.08*t/5.6})`;fade(k,t,-1,.2,0);rv(a,t);rv(h,t);const tn=at('no');const pp=Math.exp(-Math.max(0,t-tn)/.25)*(t>=tn?1:0);h.style.transform=`scale(${1+.05*pp})`;h.style.transformOrigin='0 50%'}});
+add(tTw,sc=>{const b=ph(sc,'gurgaon');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,0) 35%,rgba(0,0,0,.85) 80%)');
+ const big=mk(sc,'H wh','left:70px;top:960px;font-size:210px','20 km');const s=T(sc,'B wh','left:72px;top:1190px;width:860px',[['away,',at('away')],['Gurgaon',at('gurgaon'),'g'],['and',at('and',2)],['Noida',at('noida'),'g'],['\n'],['are',at('are')],['full',at('full')],['of',at('of')],['them.',at('them')]]);
+ return t=>{b.style.transform=`scale(${1.04+.07*t/4.4}) translateY(${-20*t}px)`;const p=eb(t/.35);big.style.opacity=cl(t/.1);big.style.transform=`scale(${.7+.3*p})`;big.style.transformOrigin='0 50%';rv(s,t)}});
+add(tSo,sc=>{const b=ph(sc,'sprawl','filter:grayscale(1) contrast(1.1) brightness(.55)');
+ const q=T(sc,'H wh','left:70px;top:720px;width:900px;font-size:150px',[["So",at('so')],["what's",at("what's")],['\n'],["stopping",at('stopping'),'g'],['\n'],["Delhi?",at('delhi',2),'',1]]);
+ return t=>{b.style.transform=`scale(${1.3+.05*t})`;rv(q,t)}});
+add(tR1,sc=>{const b=ph(sc,'plane');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 78%)');
+ const tg=mk(sc,'tag','left:70px;top:980px','REASON 01');const h=T(sc,'H wh','left:70px;top:1050px',[['Planes.',at('planes'),'',1]]);
+ const s=T(sc,'B wh','left:72px;top:1200px;width:900px',[['Every',at('every')],['building',at('building')],['within',at('within')],['20 km',at('twenty',2),'g'],['\n'],['of',at('of',2)],['the',at('the')],['airport',at('airport')],['needs',at('needs')],['a',at('a')],['\n'],['height',at('height'),'hl'],['clearance.',at('clearance'),'hl']]);
+ const ring=document.createElementNS('http://www.w3.org/2000/svg','svg');ring.setAttribute('viewBox','0 0 1080 1920');ring.style.cssText='left:0;top:0;width:1080px;height:1920px';ring.innerHTML='<circle cx="540" cy="300" r="10" fill="none" stroke="#14a06b" stroke-width="5"/><circle cx="540" cy="300" r="10" fill="none" stroke="#14a06b" stroke-width="3" opacity=".6"/>';sc.appendChild(ring);
+ return t=>{b.style.transform=`scale(${1.12-.08*t/6.4}) translateY(${t*6}px)`;fade(tg,t,.05,.2,0);rv(h,t);rv(s,t);const cs=ring.querySelectorAll('circle');const tt=t-(at('twenty',2)-tR1);cs.forEach((c,i)=>{const p=((tt-i*.6)%1.6)/1.6;const on=tt>0;c.setAttribute('r',on?40+620*eo(p):0);c.setAttribute('opacity',on?(1-p)*.9:0)})}});
+add(tR2,sc=>{const b=ph(sc,'qutub');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,0) 48%,rgba(0,0,0,.85) 80%)');
+ const tg=mk(sc,'tag','left:70px;top:980px','REASON 02');const h=T(sc,'H wh','left:70px;top:1050px',[['History.',at('history'),'',1]]);
+ const n=mk(sc,'H wh','left:70px;top:1190px;font-size:150px','0');const nl=mk(sc,'B wh','left:72px;top:1350px','protected monuments');
+ const s=T(sc,'B wh','left:72px;top:1190px;width:880px',[['Nothing',at('nothing')],['new',at('new')],['can',at('can')],['be',at('be')],['built',at('built')],['\n'],['within',at('within',2)],['100 m',at('hundred',2),'hl'],['of',at('of',3)],['them.',at('them',2)]]);
+ const ring=mk(sc,'','left:540px;top:600px;width:10px;height:10px;border:5px dashed #14a06b;border-radius:50%;transform:translate(-50%,-50%)');const rl=mk(sc,'K','left:0;width:1080px;text-align:center;top:350px;color:#fff','100 m · no new construction');
+ const tN=at('hundred')-tR2,tNothing=at('nothing')-tR2;
+ return t=>{b.style.transform=`scale(${1.06+.06*t/9})`;fade(tg,t,.05,.2,0);rv(h,t);const cnt=cl((t-tN)/.9);n.textContent=Math.round(174*eo(cnt));n.style.opacity=t>tN-.1&&t<tNothing-.1?1:0;nl.style.opacity=n.style.opacity;
+  rv(s,t);const r=eo((t-tNothing-.6)/.7);ring.style.width=ring.style.height=(10+560*r)+'px';ring.style.left='540px';ring.style.top='560px';ring.style.opacity=t>tNothing+.5?1:0;rl.style.opacity=cl((t-tNothing-1.1)/.3)}});
+add(tR3,sc=>{const b=ph(sc,'lutyens');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.86) 80%)');
+ const tg=mk(sc,'tag','left:70px;top:980px','REASON 03');const h=T(sc,'H wh','left:70px;top:1050px;font-size:118px',[["Lutyens'",at("lutyens")],['Delhi.',at('delhi',4)]]);
+ const s=T(sc,'B wh','left:72px;top:1200px;width:880px',[['A',at('a',4)],['bungalow',at('bungalow'),'g'],['zone.',at('zone')],['\n'],['Low-rise,',at('low-rise'),'hl'],['by',at('by')],['design.',at('design')]]);
+ const pre=T(sc,'B wh','left:72px;top:900px;width:880px;font-size:40px;opacity:.85',[['The',at('the',2)],['heart',at('heart')],['of',at('of',4)],['the',at('the',3)],['city',at('city')]]);
+ return t=>{b.style.transform=`scale(${1.18-.1*t/7.5}) rotate(${-1+t*.15}deg)`;fade(tg,t,.05,.2,0);rv(pre,t);rv(h,t);rv(s,t)}});
+add(tSo2,sc=>{sc.style.background='#f2ede3';
+ const k=mk(sc,'K','left:70px;top:330px;color:#666','Tallest building');
+ const a=T(sc,'M','left:70px;top:380px;width:900px',[['For',at('for')],['years,',at('years')],["Delhi's",at("delhi's")],['tallest',at('tallest')],['\n'],['was',at('was')],['a',at('a',5)],['government',at('government'),'g'],['office.',at('office'),'g']]);
+ const base=1440, sc_=3.6;
+ const bar=(x,h,c,lab,sub,tt)=>{const e=mk(sc,'',`left:${x}px;top:${base}px;width:300px;height:0;background:${c};border-radius:8px 8px 0 0`);const l=mk(sc,'',`left:${x}px;width:300px;text-align:center;top:${base}px;font:900 64px/1 IN;letter-spacing:-.03em`,lab);const s2=mk(sc,'K',`left:${x-20}px;width:340px;text-align:center;top:${base+24}px;color:#555;font-size:21px`,sub);return {e,l,s2,h,tt}};
+ const B1=bar(150,101*sc_,'#121212','~100 m','Civic Centre, Delhi',at('about')-tSo2), B2=bar(560,214*sc_,'#14a06b','214 m',"Noida's tallest",at("noida's")-tSo2);
+ const gl=mk(sc,'',`left:110px;top:${base}px;width:820px;height:4px;background:#121212`);
+ const x2=T(sc,'M','left:70px;top:1520px;width:900px;font-size:54px',[['More',at('more')],['than',at('than')],['twice',at('twice'),'hl'],['that.',at('that')]]);
+ return t=>{fade(k,t,0,.2,0);rv(a,t);[B1,B2].forEach(B=>{const p=eo((t-B.tt)/.7);B.e.style.height=(B.h*p)+'px';B.e.style.top=(base-B.h*p)+'px';B.l.style.top=(base-B.h*p-80)+'px';B.l.style.opacity=cl((t-B.tt-.3)/.2);B.s2.style.opacity=cl((t-B.tt)/.2)});rv(x2,t);a.style.opacity=1}});
+add(tBut,sc=>{sc.style.background='#121212';
+ const card=mk(sc,'card','left:90px;top:470px;width:900px;height:900px');
+ mk(card,'K','position:absolute;left:56px;top:56px;color:#777','Master Plan for Delhi 2047');
+ mk(card,'','position:absolute;left:56px;top:100px;width:788px;height:3px;background:#121212');
+ const d=mk(card,'K','position:absolute;right:56px;top:56px;color:#14a06b','Aug 2026');
+ const tx=T(card,'M','position:absolute;left:56px;top:150px;width:800px;font-size:72px',[['Height',at('height',2)],['limits',at('limits')],['\n'],['removed',at('removed'),'hl'],['\n'],['across',at('across')],['most',at('most')],['of',at('of',5)],['\n'],['the',at('the',4)],['city.',at('city',2)]]);
+ const lines=[];for(let i=0;i<5;i++)lines.push(mk(card,'',`position:absolute;left:56px;top:${560+i*52}px;width:${780-(i%2)*160}px;height:22px;background:#e6e0d4;border-radius:4px`));
+ const ex=mk(card,'B','position:absolute;left:56px;top:800px;font-size:30px;color:#555','*Except Lutyens\' Delhi, near monuments and a few zones');
+ const k=T(sc,'B wh','left:90px;top:330px;font-size:44px',[['But',at('but')],['in',at('in',1)],['August',at('august')],['2026...',at('2026')]]);
+ return t=>{rv(k,t);const p=eb((t-.15)/.5);card.style.transform=`translateY(${(1-p)*900}px) rotate(${(1-p)*8-1.2}deg)`;rv(tx,t);lines.forEach((l,i)=>{l.style.opacity=cl((t-1.5-i*.08)/.2)});ex.style.opacity=cl((t-(at('city',2)-tBut)-.2)/.3);fade(d,t,.6)}});
+add(tSo3,sc=>{const b=ph(sc,'future');const g=mk(sc,'sh','background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 78%)');
+ const h=T(sc,'H wh','left:70px;top:1060px;width:900px;font-size:120px',[['The',at('the',5)],['skyline',at('skyline')],['\n'],['is',at('is',4)],['about',at('about',2)],['to',at('to')],['\n'],['change.',at('change'),'g',1]]);
+ return t=>{b.style.transform=`scale(${1.2-.12*eio(t/3)}) translateY(${(1-eio(t/3))*60}px)`;rv(h,t)}});
+add(tWould,sc=>{sc.style.background='#14a06b';
+ const h=T(sc,'H wh','left:70px;top:560px;width:940px;font-size:122px',[['Would',at('would')],['you',at('you')],['live',at('live')],['\n'],['on',at('on')],['the',at('the',6)],['\n'],['50th',at('fiftieth'),'',1],['floor',at('floor')],['\n'],['in',at('in',2)],['Delhi?',at('delhi',5)]]);
+ const c=mk(sc,'','left:70px;top:1180px;padding:24px 34px;background:#121212;color:#fff;border-radius:60px;font:800 40px/1 IN','Comment YES or NO 👇');
+ const f=mk(sc,'B','left:72px;top:1300px;color:#eafff4;font-size:38px','Follow for more city stories');
+ return t=>{rv(h,t);fade(c,t,1.4);fade(f,t,1.9)}});
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,t1:i+1<SC.length?SC[i+1].t0:END}});
+window.DUR=END;
+// ---------- height ruler device ----------
+const R=document.getElementById('rul');const RH=1100,RM=220,y=m=>1160-m/RM*RH;
+let rh='<rect x="70" y="60" width="6" height="1100" fill="currentColor" opacity=".3"/>';
+for(let m=0;m<=RM;m+=20)rh+=`<rect x="${m%100?62:52}" y="${y(m)-1.5}" width="${m%100?14:24}" height="3" fill="currentColor" opacity=".55"/>`+(m%100?'':`<text x="44" y="${y(m)+8}" text-anchor="end" font-family="PM" font-size="20" fill="currentColor" opacity=".7">${m}</text>`);
+rh+='<rect id="rf" x="70" width="6" fill="#14a06b"/><g id="rm"><polygon points="82,0 100,-11 100,11" fill="#14a06b"/><rect x="0" y="-22" width="0" height="0"/></g><text id="rt" x="112" font-family="PM" font-size="22" font-weight="500" fill="#14a06b" text-anchor="end"></text>';
+R.innerHTML=rh;
+const RS=[[0,12,'~12 m'],[tTw+.3,200,'200 m+'],[tSo,12,'~12 m']].concat([[tR2+.5,73,'Qutub 73 m'],[tR3,15,'15 m'],[at('about')-.1,101,'101 m'],[at("noida's"),214,'214 m'],[tBut,214,'214 m'],[tSo3,220,'?']]);
+const ruler=t=>{let a=RS[0],b=null;for(let i=0;i<RS.length;i++){if(t>=RS[i][0]){a=RS[i];b=RS[i-1]}}const p=b?eio((t-a[0])/.8):1;const m=b?b[1]+(a[1]-b[1])*p:a[1];
+ document.getElementById('rf').setAttribute('y',y(m));document.getElementById('rf').setAttribute('height',1160-y(m));document.getElementById('rm').setAttribute('transform',`translate(0,${y(m)})`);
+ const tt=document.getElementById('rt');tt.setAttribute('y',y(m)-24);tt.textContent=a[2];tt.setAttribute('x',118);
+ const dark=t<tSo2||(t>=tSo3&&t<tWould)||(t>=tTw&&t<tSo2);R.style.color=dark?'#fff':'#121212';R.style.opacity=t>=tWould?0:1};
+const FINE=[[0,''],[tR1,'Rule: AAI height clearance within 20 km of the aerodrome (GSR 751(E), 2015).'],[tR2,'174 centrally protected monuments in Delhi (ASI). Prohibited area: 100 m; regulated: further 200 m.'],[tR3,''],[tSo2,'Civic Centre ~101 m (2010). Noida: Cyberthum Tower A, 213.7 m (CTBUH).'],[tBut,'Master Plan for Delhi 2047, unveiled Aug 2026.'],[tSo3,'AI-generated imagery. Educational content, not investment advice.'],[tWould,'']];
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  // block-glitch wipe in: first .3s, columns reveal
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&lt<.32){let cp='';const p=lt/.32;const pts=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n;pts.push(`${x0}px ${0}px, ${x1}px 0px, ${x1}px ${1920*q}px, ${x0}px ${1920*q}px`)}s.sc.style.clipPath='none';s.sc.style.webkitMaskImage='none';
+    const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.t0);s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(lt)}});
+ ruler(t);
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;const dark=!(t>=tSo2&&t<tBut);fe.style.color=dark?'rgba(255,255,255,.55)':'rgba(18,18,18,.5)';
+ document.getElementById('brand').style.color=(t<tSo2||(t>=tSo3&&t<tWould)||t>=tBut)?'#fff':'#121212';document.querySelector('#brand b').style.color=t>=tWould?'#121212':'#14a06b';
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0)fl=Math.max(fl,.18*Math.exp(-(t-s.t0)/.06))});document.getElementById('flash').style.opacity=fl;
+};
+</script></body></html>
