@@ -36,7 +36,11 @@ def voices(t):
 
 def image(t):
     model = t.get("model", "gemini-3-pro-image-preview")
-    body = {"contents": [{"parts": [{"text": t["prompt"]}]}],
+    parts = [{"text": t["prompt"]}]
+    for ip in t.get("inputs", []):
+        mt = "image/png" if ip.endswith(".png") else "image/jpeg"
+        parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
+    body = {"contents": [{"parts": parts}],
             "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
     j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body, {"x-goog-api-key": GM})
     for p in j["candidates"][0]["content"]["parts"]:
