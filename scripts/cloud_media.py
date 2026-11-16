@@ -50,7 +50,21 @@ def models(t):
     rows = [m["name"] for m in j.get("models", []) if "image" in m["name"]]
     open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} image models"
 
-KINDS = {"voice": voice, "music": music, "voices": voices, "image": image, "models": models}
+
+def shared(t):
+    import urllib.parse
+    q={"page_size":str(t.get("n",30)),"sort":t.get("sort","usage_character_count_1y"),"category":t.get("category","professional")}
+    for k in ("gender","accent","use_cases","language","search","descriptives","age"):
+        if t.get(k): q[k]=t[k]
+    j = req("https://api.elevenlabs.io/v1/shared-voices?"+urllib.parse.urlencode(q), None, {"xi-api-key": EL}, method="GET")
+    rows=[f"{v['public_owner_id']}|{v['voice_id']}|{v['name']}|{v.get('gender')}|{v.get('accent')}|{v.get('age')}|{v.get('use_case')}|{v.get('descriptive')}|uses1y={v.get('usage_character_count_1y')}|{(v.get('description') or '')[:120]}" for v in j.get("voices",[])]
+    open(f"{OUT}/{t['name']}.txt","w").write("\n".join(rows)); return f"{len(rows)} shared voices"
+
+def addvoice(t):
+    j = req(f"https://api.elevenlabs.io/v1/voices/add/{t['owner']}/{t['voice_id']}", {"new_name": t["new_name"]}, {"xi-api-key": EL})
+    return "added "+json.dumps(j)[:120]
+
+KINDS = {"shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
 for f in sorted(glob.glob("jobs/*.json")):
     for t in json.load(open(f)):
         try: msg = KINDS[t["kind"]](t)

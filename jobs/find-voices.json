@@ -1,0 +1,6 @@
+[
+ {"kind":"shared","name":"sv-female-narr","gender":"female","use_cases":"narrative_story","language":"en","n":25},
+ {"kind":"shared","name":"sv-female-social","gender":"female","use_cases":"social_media","language":"en","n":25},
+ {"kind":"shared","name":"sv-male-narr","gender":"male","use_cases":"narrative_story","language":"en","n":25},
+ {"kind":"shared","name":"sv-indian","accent":"indian","language":"en","n":25}
+]
