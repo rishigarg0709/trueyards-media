@@ -1,0 +1,4 @@
+lutyens-bungalow https://commons.wikimedia.org/wiki/Special:FilePath/Lutyens_Bungalow_Delhi_India.jpg?width=2400
+lutyens-bungalow-meta https://commons.wikimedia.org/w/api.php?action=query&titles=File:Lutyens_Bungalow_Delhi_India.jpg&prop=imageinfo&iiprop=extmetadata|size&format=json
+raisina https://commons.wikimedia.org/wiki/Special:FilePath/Jaipur_Column_at_Rashtrapati_Bhavan,_New_Delhi.jpg?width=2400
+raisina-meta https://commons.wikimedia.org/w/api.php?action=query&titles=File:Jaipur_Column_at_Rashtrapati_Bhavan,_New_Delhi.jpg&prop=imageinfo&iiprop=extmetadata|size&format=json
