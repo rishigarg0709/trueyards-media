@@ -326,10 +326,31 @@ def op_hide(req):
     """{comment_id} : hide spam or abuse on Instagram."""
     return call(req["comment_id"], {"hide": "true"}, "POST")
 
+
+def op_brand(req):
+    """Reads IG bio/website and the FB Page cover; saves the largest cover rendition to meta/brand/fb-cover.jpg."""
+    out = {"instagram": call(CFG["ig_user_id"], {"fields": "username,name,biography,website,profile_picture_url"})}
+    p = page()
+    if not p: return {**out, "page": "not visible"}
+    pt = p["access_token"]
+    pg = call(p["id"], {"fields": "name,about,cover{id,source,offset_y}"}, token=pt)
+    out["page"] = pg
+    cid = (pg.get("cover") or {}).get("id")
+    if cid:
+        ph = call(cid, {"fields": "images,width,height"}, token=pt)
+        imgs = sorted(ph.get("images", []), key=lambda i: i.get("width", 0) * i.get("height", 0), reverse=True)
+        out["cover_sizes"] = [(i.get("width"), i.get("height")) for i in imgs]
+        if imgs:
+            os.makedirs("meta/brand", exist_ok=True)
+            with urllib.request.urlopen(imgs[0]["source"], timeout=60) as r:
+                open("meta/brand/fb-cover.jpg", "wb").write(r.read())
+            out["saved"] = "meta/brand/fb-cover.jpg"
+    return out
+
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
        "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
-       "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide}
+       "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide, "brand": op_brand}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
 
 def main():
