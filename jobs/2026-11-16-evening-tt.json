@@ -1,0 +1,59 @@
+[
+ {
+  "kind": "voice",
+  "name": "tt-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Two towers taller than Qutub Minar... and India's Supreme Court ordered them blown up. Noida. 28 August 2022. Gone in seconds. [short pause] But why would a court destroy towers nobody ever lived in? It starts with a garden. In 2009, the builder's revised plan put two new towers on the green space promised to residents. Then the plan grew. Twenty-four floors... became forty. Here's the problem. The towers stood just nine metres from an existing building. The rules asked for sixteen. And the residents? Nobody asked them. [short pause] So they went to court. In 2014, the High Court said... demolish. In 2021, the Supreme Court agreed, and said Noida's own planning authority had colluded. Buyers got their money back... with twelve percent interest. Then came 3,700 kilos of explosives. A ten-year fight... over in seconds. So was tearing them down the right call... or a waste?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "tt-vo-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Two towers taller than Qutub Minar... and India's Supreme Court ordered them blown up. Noida. 28 August 2022. Gone in seconds. [short pause] But why would a court destroy towers nobody ever lived in? It starts with a garden. In 2009, the builder's revised plan put two new towers on the green space promised to residents. Then the plan grew. Twenty-four floors... became forty. Here's the problem. The towers stood just nine metres from an existing building. The rules asked for sixteen. And the residents? Nobody asked them. [short pause] So they went to court. In 2014, the High Court said... demolish. In 2021, the Supreme Court agreed, and said Noida's own planning authority had colluded. Buyers got their money back... with twelve percent interest. Then came 3,700 kilos of explosives. A ten-year fight... over in seconds. So was tearing them down the right call... or a waste?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "tt-beat",
+  "prompt": "Tense cinematic trap instrumental at exactly 96 BPM in 4/4, punchy 808 kick, tight snare, ticking hi-hats, dark plucked synth riff, investigative news documentary energy, catchy hook, starts immediately with the full beat, strong clear downbeats, no vocals",
+  "ms": 45000
+ },
+ {
+  "kind": "image",
+  "name": "tt-towers",
+  "prompt": "Two tall unfinished grey concrete residential towers, about 32 storeys, standing side by side inside a completed Indian gated housing society of cream ten-storey apartment blocks in Noida, bare concrete shells with empty window openings and no glass, a small green lawn at their base, dusk sky with heavy clouds, seen from a low distance at street level looking slightly up. Vertical 9:16, wide framing with room to crop, main subject in the middle third, calmer darker lower third for captions, top 300 px darker sky. No people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+ },
+ {
+  "kind": "image",
+  "name": "tt-garden",
+  "prompt": "High aerial view looking down at an Indian gated housing society: rows of cream ten-storey apartment towers around a bright triangular green lawn with trees and walking paths, parked cars, late afternoon overcast light, the triangular lawn clearly in the centre of the frame. Vertical 9:16, wide framing with room to crop, main subject in the middle third, calmer darker lower third for captions, top 300 px darker sky. No people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+ },
+ {
+  "kind": "image",
+  "name": "tt-gap",
+  "prompt": "Looking straight up from the ground into a very narrow gap between two tall concrete residential towers in India, one finished cream building with balconies and one raw unfinished grey concrete shell, the two walls almost touching, a thin strip of grey sky between them, strong perspective. Vertical 9:16, wide framing with room to crop, main subject in the middle third, calmer darker lower third for captions, top 300 px darker sky. No people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+ },
+ {
+  "kind": "image",
+  "name": "tt-charges",
+  "prompt": "Close-up of a massive grey reinforced concrete column inside an empty unfinished building, dozens of small drilled holes packed in a grid, bright red and yellow detonating cords and wires running from the holes, geotextile fabric wrapped around nearby columns, dim light from openings, documentary detail shot. Vertical 9:16, wide framing with room to crop, main subject in the middle third, calmer darker lower third for captions, top 300 px darker sky. No people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+ },
+ {
+  "kind": "image",
+  "name": "tt-files",
+  "prompt": "Still life on a dark wooden courtroom table: tall stacks of thick legal case files tied with red cloth tape, a brass judge's gavel resting beside them, a rolled architectural building plan, moody window light from the left, deep shadows, nobody present. Vertical 9:16, wide framing with room to crop, main subject in the middle third, calmer darker lower third for captions, top 300 px darker sky. No people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks"
+ }
+]
