@@ -56,7 +56,7 @@ Everything is made at 4K-class resolution and each platform gets the highest ver
 
 | Asset | Master | Instagram / Facebook / Threads / LinkedIn | YouTube | X |
 |---|---|---|---|---|
-| Reel | `reel-4k.mp4` 2160x3840, CRF 14 | `reel.mp4` 1440x2560, ≤24 Mbps | `reel-4k.mp4` (plays in 4K) | `reel-x.mp4` 1068x1900 |
+| Reel | `reel-4k.mp4` 2160x3840, CRF 14 (local only) | `reel.mp4` 1440x2560, ≤24 Mbps | `reel-yt.mp4` 2160x3840 (plays in 4K) | `reel-x.mp4` 1068x1900 |
 | Reel cover | `cover.jpg` 2160x3840 | `cover-ig.jpg` 1440x2560 | `cover.jpg` | n/a |
 | Carousel slide | `master/*-slide-N.jpg` 2160x2700 | `*-slide-N.jpg` 1440x1800 | n/a | 1440x1800 |
 | AI images (Gemini) | 4K by default | | | |
@@ -65,5 +65,6 @@ Rules
 - Frames render at deviceScaleFactor 2 (1080 layout, 2160x3840 pixels). `SCALE=1` only for drafts, never for publishing.
 - Meta's API rejects reels wider than 1920 px or above 25 Mbps and images wider than 1440 px, and Instagram streams at about 1080p anyway. Uploading 1440 wide downscaled from a 4K master gives the sharpest result Instagram will show.
 - Source photos must be at least 3840 px on the long edge (Unsplash full-size download, Gemini 4K, Gemini 4K upscale for anything smaller). Never stretch a small image.
+- Every upload file is capped under 95 MB so it can be served from GitHub raw URLs (100 MB limit); the archival master stays local.
 - Encode: H.264 High, level 5.1, closed GOP (2 s), 30 fps, yuv420p, AAC 48 kHz. Master `-preset slow`.
 - Check before publishing: `ffprobe` each export for width, height and bitrate; look at one full-size still for soft text or blur.
