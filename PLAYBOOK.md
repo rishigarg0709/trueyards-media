@@ -75,3 +75,6 @@ Seasonal overrides: Union Budget (1 Feb), RBI policy days, ITR season (July), fe
 
 ## Hooks and virality
 Full rulebook: REEL_HOOKS_PLAYBOOK.md. Every reel must pass its frame-0 test and pre-publish checklist.
+
+## Logo in reels and posts
+Use the official icon file library/brand/trueyards-icon.png (teal #28c39d square, dark asymmetric Y) next to the wordmark: "True" in white on dark backgrounds or ink on light ones, "Yards" in #28c39d. Never recolour the logo to match a reel's accent colour.
