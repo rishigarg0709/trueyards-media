@@ -17,5 +17,5 @@ For each shared post: what it is, why it works, what we can borrow, and status (
   2. A recurring ORIGINAL character (never a caricature of a real person; that post leans on a look-alike of a real CEO, which we must not do) so followers recognise the series.
   3. Layout: 2 to 3 short lines top, one big picture below, one beat per slide, 10 to 13 slides.
   4. Comment-keyword offer: a genuinely useful free resource (for example a RERA and documents checklist PDF) sent by DM when someone comments a word. Grey zone: Instagram demotes pure engagement bait, so only do it when the resource is real and useful, and not on every post.
-- Conflicts to resolve with Rishi: he rejected cartoon or game-style 3D for reels; is a clean illustrated style acceptable for a carousel series?
-- Status: proposed to Rishi.
+- Rishi approved the clean illustrated style for this carousel series (cartoon style still not used for reels).
+- Status: ADOPTED 2026-11-16 as look H, weekly series with Aarav; first episode posts/sample-story-carousel (posted 2026-11-16 night).
