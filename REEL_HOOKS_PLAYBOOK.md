@@ -77,7 +77,8 @@ What makes a hook weak:
 - One idea per screen. Keep on-screen text to 7 words or fewer per line.
 - Words reveal at the voice's timestamps, so the text never leads or lags the voice.
 - Voice uses short phrases with natural pauses capped at about 0.4 s. There's never dead air longer than 0.6 s.
-- Music sits about 10 dB under the voice. Use a beat drop for the pattern interrupt and at the twist.
+- **One colour theme per reel**: white plus one accent (red or green) for every highlight, tag, ruler and end card. Never mix accents.
+- **Music works with the edit**: use a steady-BPM beat track (ElevenLabs Music, BPM stated in the prompt). Detect beats, offset the track so a downbeat lands on the hook's key word or visual event, and snap scene cuts to the nearest beat (within 0.2 s). Music sits about 9 dB under the voice and comes forward between lines.
 - **Mix image types for the job, never one type for a whole reel.** Real photos only where the actual look of a landmark is the point (proof shots). photoreal AI images with designed overlays for hooks; clean motion graphics for comparisons, maps, rules and numbers (towers rising, height lines, laser cuts, stamps). AI images for mood, history and the future. Label AI and 3D visuals.
 - **Look: realistic and professional, like a news documentary.** Use photoreal AI images or real photos, a slow camera push, clean lower-third text, thin news-style callouts and one decisive event (an erase, a stamp, a scan). No cartoon or game-style 3D (Rishi rejected it).
 - **Hooks are built, not found.** A stock photo with text over it is not a hook. Frame 0 needs a designed motion-graphic event (something growing, slicing, slamming, counting) that tells the story without sound.
