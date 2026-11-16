@@ -20,3 +20,10 @@
 - First API post published: media id 17925919575445030 (Gurgaon 1 acre story).
 - Token expires ~15 Jan 2027; reminder set for 5 Jan (trig_017wte9qjiWo68Cq7W51C4Zi). Auto-refresh can't rewrite GitHub secrets, so renewal is manual.
 - YouTube: OAuth app published, web client "TrueYards uploader" created; ID verification in review; check at 10:23 on 17 Nov (trig_018ZrXR713ungr1Kw7ewtJ4j).
+
+## 2026-11-16 X connected
+- @trueyards_in created (@TrueYards taken by unrelated 2013 account). Profile: logo, 4K header, bio "Real Estate Explained.", trueyards.in.
+- Dev console: pay-per-use, app 33646762 set Read+Write. Keys X_API_KEY/SECRET, X_ACCESS_TOKEN/SECRET in GitHub. ~$10 credit, auto-recharge off.
+- First API post: tweet 2122355035698823654. Text-only posts ~ $0.015; avoid links in posts ($0.20 each).
+- Note: OAuth 2.0 client secret was shown on screen once; unused by us; Rishi to regenerate when convenient.
+- FB bio now "Real Estate Explained." to match IG; FB + X covers 4K without subheading.
