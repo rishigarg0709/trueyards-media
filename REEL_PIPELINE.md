@@ -9,7 +9,7 @@ Before anything else, read REEL_HOOKS_PLAYBOOK.md (the rules) and look at the re
 - `pip install --break-system-packages librosa soundfile numpy pillow` if missing. ffmpeg must exist.
 
 ## Steps
-1. **Learnings first.** Read learnings/LEARNINGS.md and follow its Do more / Do less and running experiments when picking the topic, hook archetype, length and style. Log the hook archetype, length, accent and music style in log.md so the analytics run can score them.
+1. **Learnings first.** Read learnings/VIRALITY_PLAYBOOK.md (publish gate, hook library, topic mix) and learnings/LEARNINGS.md and follow its Do more / Do less and running experiments when picking the topic, hook archetype, length and style. Log the hook archetype (number from the hook library), format, pillar, India or global, language, length, accent, music style and the send-test answer in log.md so the analytics run can score them.
    **Topic.** Take the first unchecked topic in `queue/reel-topics.md` whose pillar differs from the last 2 reels in log.md (a big news story can jump the queue). Mark it `[x]` with the date when published. When fewer than 10 remain, add 15 new scored topics across the pillars.
 2. **Research.** Verify every number and claim from primary or reputable sources found today. Keep a source list for the caption. If a fact can't be verified, drop it.
 3. **Script.** 35 to 55 s of narration (about 110 to 150 words). Hook line states the conflict by 1.5 s. Open loop early, escalate, pay off, end on a pick-a-side question. Short sentences, `...` and `[short pause]` for natural rhythm. No em dashes.

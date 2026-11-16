@@ -83,4 +83,4 @@ Use the official icon file library/brand/trueyards-icon.png (teal #28c39d square
 Instagram shows every profile tile as a 3:4 crop. Reels: always publish with a designed cover (scripts/reel/cover.cjs, see REEL_PIPELINE.md), never a random frame. Carousels (1080x1350): keep the logo, title and any key text at least 60 px in from the left and right edges and inside the slide's centre so the 3:4 tile crop shows the whole hook.
 
 ## Learn from data
-Before choosing any topic, hook or style, read learnings/LEARNINGS.md (rewritten daily from real Instagram analytics) and follow its Do more / Do less rules. Log the hook archetype, pillar and accent for every post in log.md so it can be scored.
+Before choosing any topic, hook or style, read learnings/VIRALITY_PLAYBOOK.md (send test, carousel rules: slide 2 is a second hook, checklists and data cards, judged on saves) and learnings/LEARNINGS.md (rewritten daily from real Instagram analytics) and follow its Do more / Do less rules. Log the hook archetype, pillar and accent for every post in log.md so it can be scored.

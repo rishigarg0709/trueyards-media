@@ -68,13 +68,24 @@ def op_insights(req):
                 r = {}
                 break
             reel = m.get("media_product_type") == "REELS"
-            metrics = "reach,views,shares,saved,total_interactions" + (",ig_reels_avg_watch_time,ig_reels_video_view_total_time" if reel else ",follows,profile_visits")
-            ins = call(f"{m['id']}/insights", {"metric": metrics})
-            if "error" in ins and reel:
-                ins = call(f"{m['id']}/insights", {"metric": "reach,views,shares,saved,total_interactions"})
-            m["insights"] = {d["name"]: d["values"][0]["value"] for d in ins.get("data", [])}
+            want = ["reach", "views", "likes", "comments", "shares", "saved", "total_interactions", "follows", "profile_visits"]
+            if reel:
+                want += ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time", "reels_skip_rate"]
+            got, errs = {}, {}
+            ins = call(f"{m['id']}/insights", {"metric": ",".join(want)})
             if "error" in ins:
-                m["insights_error"] = ins["error"].get("message")
+                for w in want:
+                    one = call(f"{m['id']}/insights", {"metric": w})
+                    if "error" in one:
+                        errs[w] = one["error"].get("message", "")[:80]
+                    for d in one.get("data", []):
+                        got[d["name"]] = d["values"][0]["value"] if d.get("values") else d.get("total_value", {}).get("value")
+            else:
+                for d in ins.get("data", []):
+                    got[d["name"]] = d["values"][0]["value"] if d.get("values") else d.get("total_value", {}).get("value")
+            m["insights"] = got
+            if errs:
+                m["unavailable_metrics"] = errs
             media.append(m)
         nxt = r.get("paging", {}).get("next") if r else None
         if not nxt:
