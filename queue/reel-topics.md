@@ -3,18 +3,18 @@
 Pick top to bottom, skipping a topic if its pillar matches either of the last 2 reels. Mark `[x] YYYY-MM-DD` when published. Hooks are starting points; every fact must be verified on the day. Pillars: mystery, story, history, money, rules, global, news, marvel, builders, weird, myth.
 
 - [x] 2026-11-16 | mystery | Why Delhi has no skyscrapers | contradiction + erase
-- [ ] story | Noida Twin Towers: built, fought over, blown up in seconds | "These towers were legal... until they weren't." | story + payoff
-- [ ] global | Why Japanese houses lose value like cars | "In Japan, your house is worth zero in 30 years." | contradiction
-- [ ] money | Where your ₹1 crore flat price actually goes (land, approvals, construction, taxes, margin) | "You paid ₹1 crore. The bricks cost a fraction of it." | number slam
+- [ ] story | Noida Twin Towers: built, fought over, blown up in seconds | "28 August 2022, 2:30 pm. Two towers taller than Qutub Minar. Gone in seconds." | hook 14 story cold open | send: anyone in NCR, anyone who bought from a builder
+- [ ] global | Why Japanese houses lose value like cars | "In Japan, a 30-year-old house can be worth almost nothing." | hook 25 counterintuitive economics | send: the friend who says property always goes up
+- [ ] marvel | How Burj Khalifa stands on sand | "The tallest building on Earth stands on sand." | hook 1 contradiction | send: social currency, anyone who has visited Dubai
+- [ ] money | Follow ₹1 crore: where your flat price actually goes (land, approvals, construction, taxes, margin) | "You paid ₹1 crore. The bricks cost a fraction of it." | hook 2 number slam | send: anyone buying a flat
+- [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands. Then someone filled in the sea." | hook 6 time jump | send: every Mumbaikar
 - [ ] history | How Gurgaon went from farmland to a skyline | "Gurgaon had almost no towers a few decades ago." | time jump
 - [ ] rules | Carpet vs built-up vs super built-up area | "You're paying for space you'll never stand in." | stakes for viewer
-- [ ] marvel | How Burj Khalifa stands on sand | "The tallest building on Earth stands on sand." | contradiction
 - [ ] mystery | Why Mumbai flats are so small and so expensive | "Mumbai's biggest problem is the sea." | myth bust
 - [ ] story | Lavasa: India's private hill city that turned into a ghost town | "India built a whole city. Then everyone left." | story
 - [ ] weird | Spite houses: homes built only to annoy the neighbours | "This house exists only to block a view." | forbidden/weird
 - [ ] global | What ₹1 crore buys in 6 world cities | "Same money. Six very different homes." | visual contrast list
 - [ ] money | Rent vs buy, the honest maths | "Renting isn't throwing money away. Here's the maths." | myth bust
-- [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands." | time jump
 - [ ] story | Amrapali: tens of thousands of homebuyers waiting for homes they paid for | "They paid for homes that didn't arrive." | stakes
 - [ ] marvel | Saudi Arabia's The Line: a city in a straight line | "A city 170 km long and 200 m wide." | number slam (verify current status)
 - [ ] myth | Does property always go up? | "Property never loses value. Really?" | myth bust
