@@ -2,3 +2,7 @@ node_modules/
 templates/*.png
 templates/*-sheet.jpg
 work/
+reels/*/frames/
+reels/*/*.wav
+reels/*/still_*.jpg
+reels/*/reel.mp4
