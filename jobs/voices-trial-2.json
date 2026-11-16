@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "addvoice",
+  "name": "add-riya",
+  "owner": "f87f057c2250691953ac2e6227859706764bd08c88a055a18c74261957885a51",
+  "voice_id": "vYENaCJHl4vFKNDYPr8y",
+  "new_name": "TY Riya"
+ },
+ {
+  "kind": "addvoice",
+  "name": "add-monika",
+  "owner": "f87f057c2250691953ac2e6227859706764bd08c88a055a18c74261957885a51",
+  "voice_id": "2zRM7PkgwBPiau2jvVXc",
+  "new_name": "TY Monika"
+ },
+ {
+  "kind": "addvoice",
+  "name": "add-tara",
+  "owner": "f87f057c2250691953ac2e6227859706764bd08c88a055a18c74261957885a51",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "new_name": "TY Tara"
+ },
+ {
+  "kind": "voice",
+  "name": "vt-riya",
+  "voice_id": "vYENaCJHl4vFKNDYPr8y",
+  "model": "eleven_v3",
+  "text": "28 August 2022. 2:30 in the afternoon. Two towers taller than Qutub Minar... gone in nine seconds. This is the story of how they were built, fought over, and blown up."
+ },
+ {
+  "kind": "voice",
+  "name": "vt-monika",
+  "voice_id": "2zRM7PkgwBPiau2jvVXc",
+  "model": "eleven_v3",
+  "text": "28 August 2022. 2:30 in the afternoon. Two towers taller than Qutub Minar... gone in nine seconds. This is the story of how they were built, fought over, and blown up."
+ },
+ {
+  "kind": "voice",
+  "name": "vt-tara",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "28 August 2022. 2:30 in the afternoon. Two towers taller than Qutub Minar... gone in nine seconds. This is the story of how they were built, fought over, and blown up."
+ }
+]
