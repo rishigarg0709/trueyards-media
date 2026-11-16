@@ -18,7 +18,7 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 - (filled in by the daily run)
 
 ## Do less
-- Rishi disliked and deleted the 2026-11-16 carousel "Your EMI didn't change. Your loan did." (dark green, text-heavy, hourglass and house model, RBI repo explainer). Avoid that treatment; prefer the Bold Type look G or image-led looks, and keep carousel copy short.
+- Rishi disliked and deleted the 2026-11-16 carousel "Your EMI didn't change. Your loan did." (dark green, text-heavy, hourglass and house model, RBI repo explainer). Why (Rishi): unlike the first carousels it lacked the big Gemini 3D models and still-life objects on nearly every slide, crossing slide edges; the middle slides were text-only. See PLAYBOOK.md visual richness rules.
 - (filled in by the daily run)
 
 ## Running experiments
