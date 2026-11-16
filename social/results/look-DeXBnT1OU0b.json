@@ -1,0 +1,38 @@
+{
+ "op": "ig_scan",
+ "ran_at": "2026-11-16T17:43:02.867341Z",
+ "result": {
+  "count": 1,
+  "posts": [
+   {
+    "ownerUsername": "theautomationguy.ai",
+    "url": "https://www.instagram.com/p/DeXBnT1OU0b/",
+    "type": "Video",
+    "productType": "clips",
+    "timestamp": "2026-10-11T15:54:21.000Z",
+    "caption": "Claude can basically run your Instagram content for FREE. \ud83e\udd2f This feels illegal. \ud83d\udc80\n\nImagine having an entire AI content team without hiring a single person. That\u2019s exactly what Claude Content Skills is built to help you do.\n\nThis free collection includes 52 skill folders, with 30 specifically focused on Instagram content creation and growth. \ud83d\ude80\n\nHere\u2019s what you can do with it:\n\ud83d\udd25 Research trending topics and viral Reels in your niche.\n\ud83c\udfaf Analyze viral hooks, content structure, pacing, and storytelling.\n\u270d\ufe0f Generate scroll-stopping Reel hooks and scripts in your own voice.\n\ud83c\udfac Build Reels with scene-by-scene breakdowns and on-screen text.\n\ud83c\udfa8 Create Instagram carousels that people want to save and share.\n\ud83d\udcdd Generate captions, hashtags, and calls to action.\n\ud83d\udcc5 Plan your content calendar instead of wondering what to post every day.\n\ud83d\udcac Streamline comment replies and turn engagement into potential leads.\n\nAnd the best part? You can use these free Claude skills to build a repeatable content workflow instead of starting from scratch every single day.\n\nNo more staring at a blank screen wondering, \u201cWhat should I post today?\u201d \ud83d\udc40\n\nWant the full setup? Comment \u201cINSTAGRAM\u201d and I\u2019ll DM you the link. Save this Reel so you can set it up later. \ud83d\udccc\n\n[Claude AI, Claude Content Skills, free Claude skills, Claude AI tutorial, Instagram growth, Instagram automation, AI tools for Instagram, free AI tools, AI content creation, viral Instagram Reels, Instagram Reels strategy, viral hook generator, AI Reel script writer, Instagram carousel generator, AI caption generator, content calendar, social media marketing, Instagram growth tips, content creator tools, creator economy, AI marketing tools, social media content strategy]\n\n#explore #fyp #claude #explorepage #viral",
+    "likesCount": 332,
+    "commentsCount": 1447,
+    "videoViewCount": null,
+    "videoPlayCount": 26478,
+    "videoDuration": 47.413696,
+    "hashtags": [
+     "explore",
+     "fyp",
+     "claude",
+     "explorepage",
+     "viral"
+    ],
+    "musicInfo": {
+     "artist_name": "The Weeknd, Playboi Carti",
+     "song_name": "Timeless",
+     "uses_original_audio": false,
+     "should_mute_audio": false,
+     "should_mute_audio_reason": "",
+     "audio_id": "516926864308616"
+    },
+    "ownerFullName": "Prateek Guglani"
+   }
+  ]
+ }
+}
