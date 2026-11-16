@@ -212,8 +212,35 @@ def op_li_post(req):
         body["content"] = {"media": {"id": urn}}
     return http("https://api.linkedin.com/rest/posts", body, li_h())
 
+def op_threads_comments(req):
+    """{days?} : replies other people left on our recent Threads posts (with our existing answers)."""
+    me = th("me", {"fields": "id,username"}, "GET")
+    if "id" not in me: return {"auth_error": me}
+    since = time.time() - int(req.get("days", 3)) * 86400
+    posts = th(f"{me['id']}/threads", {"fields": "id,text,timestamp,permalink", "limit": 25}, "GET").get("data", [])
+    out = []
+    for m in posts:
+        try:
+            if datetime.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp() < since: continue
+        except Exception: pass
+        cs = th(f"{m['id']}/conversation", {"fields": "id,text,username,timestamp,replied_to,is_reply_owned_by_me", "reverse": "false"}, "GET")
+        for c in cs.get("data", []):
+            c["post_id"] = m["id"]; c["post_text"] = (m.get("text") or "")[:120]; c["permalink"] = m.get("permalink")
+            out.append(c)
+    return {"username": me.get("username"), "comments": out}
+
+def op_threads_reply(req):
+    """{reply_to_id, text} : publish a reply under a Threads post or reply."""
+    me = th("me", {"fields": "id"}, "GET")
+    if "id" not in me: return {"auth_error": me}
+    c = th(f"{me['id']}/threads", {"media_type": "TEXT", "text": req["text"][:500], "reply_to_id": req["reply_to_id"]})
+    if "id" not in c: return {"container_error": c}
+    th_wait(c["id"])
+    return {"published": th(f"{me['id']}/threads_publish", {"creation_id": c["id"]})}
+
 OPS = {"ig_scan": op_ig_scan, "yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
-       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post}
+       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post,
+       "threads_comments": op_threads_comments, "threads_reply": op_threads_reply}
 
 def scrub(o):
     s = json.dumps(o)
