@@ -1,7 +1,2 @@
-2026-11-16 11:10 UTC
-add-riya [addvoice]: added {"voice_id": "vYENaCJHl4vFKNDYPr8y"}
-add-monika [addvoice]: added {"voice_id": "2zRM7PkgwBPiau2jvVXc"}
-add-tara [addvoice]: added {"voice_id": "P7vsEyTOpZ6YUTulin8m"}
-vt-riya [voice]: voice ok
-vt-monika [voice]: voice ok
-vt-tara [voice]: voice ok
+2026-11-16 11:26 UTC
+el-usage [usage]: usage ok
