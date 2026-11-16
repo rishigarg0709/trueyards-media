@@ -26,6 +26,7 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 - Topics: no quotas (Rishi). Story-first across the whole real estate scope; track which story types win and lean in from data.
 - Carousels: slide 2 as a second hook; judge on saves and follows.
 - Accent colour: red vs green vs amber.
+- Trial twins (daily, midday reel): main hook vs trial hook on the same body, shown to non-followers. Compare skip rate and hold ratio per pair; count wins per hook archetype (a winner needs about 70% of pairs).
 - Posting slot: midday (12:23) vs evening (19:07).
 - Look (STYLE_SYSTEM.md A to F) and voice (Jessa, George, Tara): rotate and compare skip rate, hold ratio and sends.
 
