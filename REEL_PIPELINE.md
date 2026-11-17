@@ -68,3 +68,6 @@ Rules
 - Every upload file is capped under 95 MB so it can be served from GitHub raw URLs (100 MB limit); the archival master stays local.
 - Encode: H.264 High, level 5.1, closed GOP (2 s), 30 fps, yuv420p, AAC 48 kHz. Master `-preset slow`.
 - Check before publishing: `ffprobe` each export for width, height and bitrate; look at one full-size still for soft text or blur.
+
+
+QA addition (2026-11-17): view one frame every 3 s side by side as a strip; check STYLE_SYSTEM editing standard 12 to 14 (clean text zone, variety, no flat dark grade) before publishing.
