@@ -1,4 +1,2 @@
-2026-11-17 16:50 UTC
-fit-r4-vo-j1 [voice]: voice ok
-fit-r3-vo-en-4 [voice]: voice ok
-fit-r3-vo-hi-3 [voice]: voice ok
+2026-11-17 16:54 UTC
+fit-r4-vo-j2 [voice]: voice ok
