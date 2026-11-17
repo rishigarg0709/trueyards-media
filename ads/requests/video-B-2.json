@@ -1,0 +1,20 @@
+{
+ "op": "add_video_ads",
+ "adset_key": "B",
+ "ads": [
+  {
+   "video": "ads/creatives/fit-reel-02-found-it.mp4",
+   "thumb": "ads/creatives/fit-reel-02-found-it-thumb.jpg",
+   "name": "B4 reel site footage",
+   "headline": "RERA-registered plots, Rohtak",
+   "text": "Real site, real roads: Forteasia Industrial Township at Kalanaur, Rohtak. Industrial, residential and SCO plots, RERA registered (HRERA-PKL-ROH-795-2025, 653-2025). Get the master plan on WhatsApp."
+  },
+  {
+   "video": "ads/creatives/fit-reel-01-land-for-my-factory.mp4",
+   "thumb": "ads/creatives/fit-reel-01-land-for-my-factory-thumb.jpg",
+   "name": "B5 reel land for my factory",
+   "headline": "Plots near IMT Rohtak",
+   "text": "A 138+ acre township 10 min from NH-152D and 25 min from IMT Rohtak. Plots from 90 sq yd (residential) to 4,000 sq yd (industrial). Message us on WhatsApp for sizes and the brochure."
+  }
+ ]
+}

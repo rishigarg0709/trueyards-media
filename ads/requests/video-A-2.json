@@ -1,0 +1,20 @@
+{
+ "op": "add_video_ads",
+ "adset_key": "A",
+ "ads": [
+  {
+   "video": "ads/creatives/fit-reel-01-land-for-my-factory.mp4",
+   "thumb": "ads/creatives/fit-reel-01-land-for-my-factory-thumb.jpg",
+   "name": "A4 reel land for my factory",
+   "headline": "Industrial plots in Rohtak",
+   "text": "Looking for land for your factory? FIT on Meham-Beri Road, Rohtak: industrial plots of 500 to 4,000 sq yd on 18 m and 24 m roads. RERA registered. Message us on WhatsApp for the plan and current rates."
+  },
+  {
+   "video": "ads/creatives/fit-reel-02-found-it.mp4",
+   "thumb": "ads/creatives/fit-reel-02-found-it-thumb.jpg",
+   "name": "A5 reel site footage",
+   "headline": "See the site: FIT, Rohtak",
+   "text": "Actual site footage from Forteasia Industrial Township, Kalanaur, Rohtak. 18 m and 24 m roads, 25 min to IMT Rohtak. HRERA-PKL-ROH-795-2025. Chat on WhatsApp to plan a site visit."
+  }
+ ]
+}

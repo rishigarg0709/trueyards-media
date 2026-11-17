@@ -599,8 +599,6 @@ def main():
         run(name, req)
         os.remove(f)
 
-if __name__ == "__main__":
-    main()
 
 # =====================================================================================
 # v1.1: tactics (warm-up, reminder, unreachable), planner budgets, creative tester, lead join from the Lambda
@@ -888,3 +886,7 @@ def op_add_video_ads(req):
     save_state(st)
     return {"status_used": status, "ads": out}
 OPS["add_video_ads"] = op_add_video_ads
+
+
+if __name__ == "__main__":
+    main()
