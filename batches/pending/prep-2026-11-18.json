@@ -1,0 +1,105 @@
+{
+ "batch": "batches/0peaf3n3s8iefvt1acxms5hjgggr7dmcd5pt",
+ "name": "prep-2026-11-18",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-17T17:02Z",
+ "images": [
+  {
+   "name": "2026-11-18-midday-1",
+   "prompt": "A cluster of three half-built concrete residential towers in a north Indian suburb at dusk, about 20 storeys, bare grey columns and slabs with no walls or windows on the upper floors, rusted rebar sticking up from the top slab, an idle tower crane, a dusty empty plot and a closed metal site gate in front, a few lit apartment blocks far in the background. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-midday-2",
+   "prompt": "A ring of three plain new door keys hanging from a single steel nail on a bare unplastered grey concrete wall inside an unfinished apartment, dust on the floor, dim blue dusk light from an empty window opening on the left. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-midday-3",
+   "prompt": "A small table in a modest rented Indian apartment at dusk: neat stacks of blank white envelopes and blank folded paper statements with no printing, a plain grey calculator, a steel cup of chai, a table lamp casting warm light, cool shadows around. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-midday-4",
+   "prompt": "A dark wooden judge's gavel resting on a tall stack of plain beige court files tied with red cloth tape, on a heavy wooden desk in a wood-panelled courtroom chamber, rows of empty leather chairs softly out of focus behind. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-midday-5",
+   "prompt": "A cluster of three completed residential towers in a north Indian suburb at blue hour, about 20 storeys, finished pale facades, many windows lit warm, landscaped entrance with a lit gate and young trees, a few parked cars, calm sky. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-midday-6",
+   "prompt": "On a raw concrete floor: a small low stack of plain silver coins on the left, and on the right a much taller stack of plain silver coins inside a clear glass box closed with a small steel padlock, blank coins with no markings, dusk light from the side. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-evening-1",
+   "prompt": "Hyper-realistic aerial photograph of Paris Haussmann rooftops, cream stone apartment blocks with grey zinc roofs and chimney pots stretching to the horizon, and impossibly, a cluster of five modern glass skyscrapers rising straight out of the middle of the old blocks, believable scale, reflections and shadows, looks like a real news photo, late afternoon light. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-evening-2",
+   "prompt": "Aerial photograph of Paris Haussmann rooftops from the same high viewpoint: cream stone apartment blocks with grey zinc roofs, chimney pots and mansard windows stretching to the horizon, uniform roofline, a few tree-lined boulevards cutting through, no tall buildings anywhere, late afternoon light. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-evening-3",
+   "prompt": "Editorial still life on a pale tabletop: a handmade architectural scale model of a few Paris Haussmann city blocks built from white museum board, all at the same roof height, a slim brass architect's scale rule standing upright beside them, and a thin taut green thread stretched horizontally exactly at the roofline across the whole model. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-evening-4",
+   "prompt": "Editorial still life: a tall slim glass and white architectural scale model of a pyramid-shaped tower rising among low white museum-board model blocks of Paris on a planning table, soft daylight from a window, crisp model edges. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-evening-5",
+   "prompt": "A simple wooden ballot box with a clear slot on a long council table, a neat pile of blank white paper ballots beside it, tall windows behind with soft daylight, a calm civic hall. Vertical 9:16 composition, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-carousel-1",
+   "prompt": "Editorial product photograph for a premium magazine, medium format camera, 90mm lens, f/8: a handmade architectural scale model of an eight-lane expressway built from white museum board, the road curving out of the distance toward the camera and off the right edge of the frame, one small matte black model car on it. Background: one seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper (#EFE9DF), evenly lit, no horizon line, no vignette, soft long shadow to the right. No text, no letters, no numbers, no signs, no people, no hands. Vertical 4:5 composition, subject large in the lower two thirds, empty backdrop above for a headline. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-carousel-2",
+   "prompt": "Editorial product photograph, medium format camera: one long continuous handmade architectural scale model of an eight-lane expressway built from white museum board, running left to right across the whole frame through miniature pale hills, small fields of fine green and ochre felt, a few tiny model trees and a white model bridge over a narrow blue-grey resin river. Background: one seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper (#EFE9DF), evenly lit, no horizon line, no vignette, soft long shadow to the right. No text, no letters, no numbers, no signs, no people, no hands. Wide 21:9 panorama, the subject runs unbroken from the left edge to the right edge so it can span three slides, generous empty backdrop above it. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-carousel-3",
+   "prompt": "Editorial product photograph, medium format camera: one long continuous handmade architectural scale model of an eight-lane expressway built from white museum board, entering from the left edge and running to the right, where it stops abruptly at an unfinished edge: a small heap of fine grey gravel, a tiny yellow model road roller, three tiny orange traffic cones and thin steel rods sticking out of the broken slab. Background: one seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper (#EFE9DF), evenly lit, no horizon line, no vignette, soft long shadow to the right. No text, no letters, no numbers, no signs, no people, no hands. Wide 21:9 panorama, the subject runs unbroken from the left edge to the right edge so it can span three slides, generous empty backdrop above it. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-carousel-4",
+   "prompt": "Editorial product photograph, medium format camera: five stacks of plain brass coins, smooth blank discs with no markings, rising in steps from short to tall, beside a short straight segment of a white museum-board expressway model. Background: one seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper (#EFE9DF), evenly lit, no horizon line, no vignette, soft long shadow to the right. No text, no letters, no numbers, no signs, no people, no hands. Vertical 4:5 composition, subject large in the lower two thirds, empty backdrop above for a headline. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-18-carousel-5",
+   "prompt": "Editorial product photograph, medium format camera: a brass magnifying glass with a glass lens resting on a folded blank paper map with no printing, a single red map pin pushed into it, soft daylight from the upper left. Background: one seamless warm bone-white paper backdrop and tabletop, colour of unbleached cotton paper (#EFE9DF), evenly lit, no horizon line, no vignette, soft long shadow to the right. No text, no letters, no numbers, no signs, no people, no hands. Vertical 4:5 composition, subject large in the lower two thirds, empty backdrop above for a headline. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}
