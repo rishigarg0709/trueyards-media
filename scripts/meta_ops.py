@@ -54,6 +54,39 @@ def op_test(req):
     out["instagram"] = call(CFG["ig_user_id"], {"fields": "username,followers_count,media_count"})
     return out
 
+def _metrics(obj_id, path, names, token):
+    """Ask for each metric on its own so one retired metric never hides the rest."""
+    got, errs = {}, {}
+    for n in names:
+        r = call(f"{obj_id}/{path}", {"metric": n}, token=token)
+        if "error" in r:
+            errs[n] = (r["error"] or {}).get("message", "")[:80]; continue
+        for d in r.get("data", []):
+            v = d.get("values") or [{}]
+            got[d["name"]] = v[0].get("value") if v else d.get("total_value", {}).get("value")
+    return got, errs
+
+def fb_posts(p, since):
+    """Per-post Facebook stats: reels (video insights) and photo/carousel posts (post insights)."""
+    tok, out = p["access_token"], []
+    reels = call(f"{p['id']}/video_reels", {"fields": "id,description,created_time,post_id,permalink_url", "since": since, "limit": 50}, token=tok)
+    for v in reels.get("data", []):
+        got, errs = _metrics(v["id"], "video_insights", ["blue_reels_play_count", "fb_reels_total_plays", "post_impressions_unique",
+                             "post_video_avg_time_watched", "post_video_social_actions", "post_video_followers", "post_video_likes_by_reaction_type"], tok)
+        out.append({"kind": "reel", "video_id": v["id"], "post_id": v.get("post_id"), "created_time": v.get("created_time"),
+                    "description": (v.get("description") or "")[:120], "permalink": v.get("permalink_url"), "insights": got, "unavailable_metrics": errs or None})
+    posts = call(f"{p['id']}/posts", {"fields": "id,message,created_time,permalink_url,shares,reactions.summary(true).limit(0),comments.summary(true).limit(0),attachments{media_type}",
+                 "since": since, "limit": 50}, token=tok)
+    for q in posts.get("data", []):
+        mt = ((q.get("attachments") or {}).get("data") or [{}])[0].get("media_type")
+        if mt == "video": continue  # reels are covered above
+        got, errs = _metrics(q["id"], "insights", ["post_impressions_unique", "post_media_view", "post_clicks", "post_reactions_by_type_total"], tok)
+        got.update({"reactions": (q.get("reactions") or {}).get("summary", {}).get("total_count"), "comments": (q.get("comments") or {}).get("summary", {}).get("total_count"),
+                    "shares": (q.get("shares") or {}).get("count", 0)})
+        out.append({"kind": mt or "post", "post_id": q["id"], "created_time": q.get("created_time"), "description": (q.get("message") or "")[:120],
+                    "permalink": q.get("permalink_url"), "insights": got, "unavailable_metrics": errs or None})
+    return out
+
 def op_insights(req):
     days = int(req.get("days", 30))
     ig = CFG["ig_user_id"]
@@ -102,6 +135,7 @@ def op_insights(req):
     if p:
         fb = {"page": call(p["id"], {"fields": "name,followers_count,fan_count"}, token=p["access_token"]),
               "insights": call(f"{p['id']}/insights", {"metric": "page_impressions_unique,page_post_engagements,page_daily_follows_unique", "period": "day", "date_preset": "last_28d"}, token=p["access_token"])}
+        fb["posts"] = fb_posts(p, since)
     return scrub({"instagram_media": media, "instagram_account": acct, "facebook": fb})
 
 def month_spend():
