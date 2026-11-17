@@ -38,3 +38,7 @@
 ## 2026-11-17 YouTube connected
 - Channel TrueYards @trueyards_in (UCWUQbt9Rh5Wpgbm3Am7r3tA), brand account under Rishi's Gmail. Logo, 4K banner (library/brand/yt-banner.jpg), description "Real Estate Explained." (@trueyards was taken by an unrelated channel.)
 - YT_REFRESH_TOKEN saved; yt_check confirms uploads go to TrueYards. Shorts cross-post (reel-yt.mp4, 4K) live from the next reel.
+
+## 2026-11-17 Backfill of 16 Nov reels (Rishi asked)
+- Delhi skyscrapers: YouTube Short XbfkwFvQwMc, Threads 17997462963112250, X 2122631935981924490
+- Noida twin towers: YouTube Short 8hBDGb49q8A, Threads 18125784509293403, X 2122632219831505220
