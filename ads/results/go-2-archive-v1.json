@@ -1,0 +1,10 @@
+{
+ "op": "archive_legacy",
+ "ran_at": "2026-11-17T18:49:11.626250Z",
+ "result": {
+  "campaign": "FIT CTWA v1",
+  "result": {
+   "success": true
+  }
+ }
+}

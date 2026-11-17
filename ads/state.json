@@ -12,14 +12,8 @@
   "B4 reel site footage": "120255643367720547",
   "B5 reel land for my factory": "120255643371210547",
   "B6 reel03 voiceover": "120255645200710547",
-  "P1 price-place: permanent address": "120255646207810547",
-  "P2 township: built for industry": "120255646207960547",
-  "P3 approvals: RERA registered": "120255646208070547",
-  "P4 reel hook: land for my factory": "120255646212390547",
-  "P5 reel proof: site footage": "120255646213890547",
-  "P6 reel voiceover EN: found it": "120255646217400547",
-  "P7 reel voiceover HI: mil gayi": "120255646220880547",
-  "P8 reel voiceover Hinglish: mil gaya": "120255646222840547"
+  "P8 reel voiceover Hinglish: mil gaya": "120255646885790547",
+  "P9 reel 3 things: planned industrial plot": "120255646891470547"
  },
  "adsets": {
   "A": "120255643066620547",
@@ -27,5 +21,6 @@
   "P": "120255645739620547"
  },
  "campaign_id": "120255645738970547",
- "last_creatives_added": "2026-11-17"
+ "last_creatives_added": "2026-11-18",
+ "launched_on": "2026-11-18"
 }
