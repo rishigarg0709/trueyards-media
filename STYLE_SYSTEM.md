@@ -4,6 +4,7 @@ Rishi (2026-11-16): try different reel styles, colour tones and 2 to 3 voices, a
 Each reel uses ONE look from start to end (Rishi's earlier rule: one theme per video). Rotate looks and voices across reels and log both in log.md so the analytics run can compare them. Logo rules never change: library/brand/trueyards-icon.png with "True" white and "Yards" #28c39d, never recoloured; every look keeps the top 300 px dark enough for it.
 
 ## Looks (pick the one that suits the story; do not repeat the same look twice in a row)
+Rishi (2026-11-17): two reels a day, and the midday and evening reels on the same day must look and sound clearly different: different look (palette, type, grade, music), different voice, and ideally a different story type. Neither may reuse a look from the previous 2 reels. Carousels stay separate (looks C, G, H and others).
 | Look | Palette | Image grade (put in the Gemini prompt) | Type | Music | Best for |
 |---|---|---|---|---|---|
 | A. Newsroom Red | near-black, white, one red #E63B2E | high-contrast documentary photo, cool shadows, slight film grain | Inter 900 caps headlines, mono kickers | tense percussion, 90 to 100 BPM | rules, scams, investigations, Twin Towers type stories |
