@@ -430,17 +430,13 @@
  ],
  "welcome_text": "Hi, thanks for your interest in Forteasia Industrial Township, Rohtak (HRERA-PKL-ROH-653-2025). What are you looking for?",
  "creative_opt_out": [
-  "standard_enhancements",
-  "image_uncrop",
-  "image_background_gen",
-  "text_translation",
-  "product_extensions",
-  "catalog_items",
-  "site_extensions",
-  "image_templates",
-  "video_auto_crop",
-  "3d_animation",
-  "generative_background",
-  "text_generation"
- ]
+  "product_browsing",
+  "product_metadata_automation",
+  "standard_enhancements_catalog",
+  "image_animation",
+  "text_overlay_translation",
+  "ig_video_native_subtitle",
+  "profile_card"
+ ],
+ "_creative_opt_out_note": "Meta accepts only these keys for CTWA image/video ads (Nov 2026). Generative backgrounds and image expansion are not offered for this ad type."
 }

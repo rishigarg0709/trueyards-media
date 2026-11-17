@@ -919,5 +919,20 @@ def op_add_video_ads(req):
 OPS["add_video_ads"] = op_add_video_ads
 
 
+def op_rebuild_ads(req):
+    """Delete and recreate the current campaign's ads (only while the campaign is PAUSED). Use after creative-spec changes."""
+    camp = find_campaign()
+    if not camp:
+        return {"error": "run setup first"}
+    if camp.get("status") != "PAUSED":
+        return {"blocked": "campaign is live; rebuild only applies to a paused campaign"}
+    gone = []
+    for a in ads_of(camp["id"]):
+        call(a["id"], {"status": "DELETED"}, "POST"); gone.append(a["name"])
+    st = load_state(); st["ads"] = {k: v for k, v in st.get("ads", {}).items() if k not in gone}; save_state(st)
+    return {"deleted": gone, "setup": op_setup(req)}
+OPS["rebuild_ads"] = op_rebuild_ads
+
+
 if __name__ == "__main__":
     main()
