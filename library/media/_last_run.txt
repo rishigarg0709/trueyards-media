@@ -1,6 +1,3 @@
-2026-11-17 14:57 UTC
-el-usage [usage]: usage ok
-fit-r3-vo-en-1 [voice]: voice ok
-fit-r3-vo-en-2 [voice]: voice ok
-fit-r3-vo-hi-1 [voice]: voice ok
-fit-r3-beat [music]: music ok 544644 bytes
+2026-11-17 15:45 UTC
+fit-r3-vo-en-3 [voice]: voice ok
+fit-r3-vo-hi-2 [voice]: voice ok
