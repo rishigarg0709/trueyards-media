@@ -46,4 +46,5 @@ Full rules: `strategy/CHANNEL_COORDINATION.md` in the Claude Project.
 - One lead record (Leads sheet, keyed by phone). Ads tag `ctwa` + ad id, the autopilot tags `wa_outbound` + cell.
 - Ad chatters who don't convert go to the autopilot's warm track. Autopilot cell learnings shape ad targeting and hooks.
 - Excluded from ads: Not Interested, opted out, Site Visit Planned and Visit Done (config `exclude_audience_names`, refreshed daily by the Claude run with `{"op":"audiences","lists":{"<name>":[sha256,...]}}`).
-- Only people who contacted FIT are uploaded to Meta, hashed. Never the scraped database.
+- Audiences (warm-up halves per cell, unreachable, exclusions) are built by the WhatsApp Lambda straight into Meta. No phone numbers or hashes in this public repo.
+- Joint wave: warm-up ads 4 days before the autopilot's first touch in a cell, reminder ads during follow-ups, 50/50 holdout per cell to measure lift.

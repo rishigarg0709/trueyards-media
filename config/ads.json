@@ -10,7 +10,8 @@
     "_note": "Rules agreed with Rishi 17 Nov 2026. See strategy/CHANNEL_COORDINATION.md in the Claude Project.",
     "budget_is_additional": "Ads money is new money. The WhatsApp autopilot keeps its own wallet and budget (INR 1,000/day). This agent never reads, lowers or reallocates it.",
     "shared_lead_record": "Leads sheet keyed by phone. Ads tag source=ctwa + ad id; WhatsApp tags source=wa_outbound + cell.",
-    "lists_uploaded": "Only people who contacted FIT (bot chatters, Leads sheet rows), hashed. Never the scraped database."
+    "lists_uploaded": "Rishi approved (17 Nov) hashed uploads of the scraped business database for targeting. Uploads run from the WhatsApp Lambda, never via this public repo (hashes of phone numbers are reversible).",
+    "joint_wave": "Warm-up ads to a cell's audience 4 days before the autopilot's first WhatsApp touch, reminder CTWA ads during follow-ups, 50/50 holdout per cell to measure lift. See strategy/CHANNEL_COORDINATION.md."
   },
   "budget_approved": false,
   "launch_approved": false,
