@@ -961,5 +961,17 @@ def op_archive_legacy(req):
 OPS["archive_legacy"] = op_archive_legacy
 
 
+def op_delete_paused(req):
+    """{"ids": [...]} Delete ad sets or ads by id, only if they are PAUSED (cleanup of duplicates)."""
+    out = {}
+    for i in req.get("ids", []):
+        o = call(i, {"fields": "name,status"})
+        if o.get("status") != "PAUSED":
+            out[i] = {"skipped": o}; continue
+        out[i] = {"name": o.get("name"), "result": call(i, {"status": "DELETED"}, "POST")}
+    return out
+OPS["delete_paused"] = op_delete_paused
+
+
 if __name__ == "__main__":
     main()
