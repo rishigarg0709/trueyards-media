@@ -1,0 +1,76 @@
+{
+ "op": "tactics_setup",
+ "ran_at": "2026-11-17T19:23:17.465582Z",
+ "result": {
+  "warm_campaign": "120255647260270547",
+  "R": {
+   "adset": {
+    "id": "120255647304890547"
+   },
+   "R8 reel voiceover Hinglish: mil gaya": {
+    "ad": {
+     "id": "120255647329510547"
+    },
+    "creative_id": "2616867042070997",
+    "video_id": "29239991018992574",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "R9 reel 3 things: planned industrial plot": {
+    "ad": {
+     "id": "120255647396230547"
+    },
+    "creative_id": "998675102739186",
+    "video_id": "29202092856084198",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "U": {
+   "adset": {
+    "id": "120255647397480547"
+   },
+   "U8 reel voiceover Hinglish: mil gaya": {
+    "ad": {
+     "id": "120255647432180547"
+    },
+    "creative_id": "1834682264236016",
+    "video_id": "1445641537746954",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "U9 reel 3 things: planned industrial plot": {
+    "ad": {
+     "id": "120255647446460547"
+    },
+    "creative_id": "2287095335200866",
+    "video_id": "1807547330492369",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "W": {
+   "adset": {
+    "id": "120255647446550547"
+   },
+   "W8 reel voiceover Hinglish: mil gaya": {
+    "id": "120255647453410547"
+   },
+   "W9 reel 3 things: planned industrial plot": {
+    "id": "120255647469950547"
+   }
+  }
+ }
+}
