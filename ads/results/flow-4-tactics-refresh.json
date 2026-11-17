@@ -1,0 +1,7 @@
+{
+ "op": "tactics_setup",
+ "ran_at": "2026-11-17T19:51:20.200308Z",
+ "result": {
+  "error": "RuntimeError: Meta lookup failed for 120255647260270547/ads: There have been too many calls from this ad account. Please wait a bit and try again."
+ }
+}
