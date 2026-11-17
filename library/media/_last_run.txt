@@ -1,6 +1,5 @@
-2026-11-17 06:55 UTC
-el-usage-2026-11-17-midday [usage]: usage ok
-jp-vo-1 [voice]: voice ok
-jp-vo-2 [voice]: voice ok
-jp-vo-trial [voice]: voice ok
-jp-beat [music]: music ok 720605 bytes
+2026-11-17 13:40 UTC
+el-usage-2026-11-17-evening [usage]: usage ok
+bk-vo-1 [voice]: voice ok
+bk-vo-2 [voice]: voice ok
+bk-beat [music]: music ok 720605 bytes
