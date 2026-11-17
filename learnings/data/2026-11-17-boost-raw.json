@@ -1,0 +1,30 @@
+{
+ "op": "boost_status",
+ "ran_at": "2026-11-17T05:08:43.552281Z",
+ "result": {
+  "month_spend_inr": 0.0,
+  "campaigns": {
+   "data": [
+    {
+     "id": "120255620965680547",
+     "name": "TrueYards Boost",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "daily_budget": "10000"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVERNZAjlxVzltcVVDQlI4aDNfVEZAmSW9aQVpZAZAzNXVHFlam1vamlfTlkxc0ZAveWZAEMXZAiRlZALZAFNHc0J6SUdWYkJIYl9GM3J2ZAzZAEbWVLREl6SmxuVDdR",
+     "after": "QVFIVERNZAjlxVzltcVVDQlI4aDNfVEZAmSW9aQVpZAZAzNXVHFlam1vamlfTlkxc0ZAveWZAEMXZAiRlZALZAFNHc0J6SUdWYkJIYl9GM3J2ZAzZAEbWVLREl6SmxuVDdR"
+    }
+   }
+  },
+  "ads": {
+   "data": []
+  },
+  "insights_7d": {
+   "data": []
+  }
+ }
+}
