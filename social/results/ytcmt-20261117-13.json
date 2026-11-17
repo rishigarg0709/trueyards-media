@@ -1,0 +1,10 @@
+{
+ "op": "yt_comments",
+ "ran_at": "2026-11-17T13:18:34.498823Z",
+ "result": {
+  "error": {
+   "error": "HTTP 403",
+   "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Request had insufficient authentication scopes.\",\n    \"errors\": [\n      {\n        \"message\": \"Insufficient Permission\",\n        \"domain\": \"global\",\n        \"reason\": \"insufficientPermissions\"\n      }\n    ],\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_SCOPE_INSUFFICIENT\",\n        \"domain\": \"googleapis.com\",\n        \"metadata\": {\n          \"method\": \"youtube.api.v3.V3DataCommentThreadService.List\",\n          \"service\": \"youtube.googleapis.co"
+  }
+ }
+}
