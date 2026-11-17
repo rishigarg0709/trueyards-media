@@ -826,3 +826,65 @@ def op_plan(req):
     import perf_planner
     return perf_planner.plan()
 OPS["plan"] = op_plan
+
+# ---------- video ads (Reels and Stories, 9:16) ----------
+RAW = "https://raw.githubusercontent.com/rishigarg0709/trueyards-media/main/"
+
+def upload_video(path, wait_s=300):
+    r = call(f"{ACT}/advideos", {"file_url": RAW + path, "name": os.path.basename(path)}, "POST")
+    if "id" not in r:
+        raise RuntimeError(f"video upload failed for {path}: {err(r)}")
+    vid, t0 = r["id"], time.time()
+    while time.time() - t0 < wait_s:
+        st = call(vid, {"fields": "status"}).get("status", {})
+        if st.get("video_status") == "ready":
+            return vid
+        if st.get("video_status") == "error":
+            raise RuntimeError(f"video processing failed: {st}")
+        time.sleep(10)
+    return vid  # still processing; Meta accepts the creative once it is ready
+
+def make_video_ad(page_id, adset_id, ad, status):
+    vid = upload_video(ad["video"])
+    thumb = upload_image(ad["thumb"])
+    vd = {"video_id": vid, "image_hash": thumb, "message": ad["text"], "title": ad["headline"],
+          "call_to_action": {"type": "WHATSAPP_MESSAGE", "value": {"app_destination": "WHATSAPP"}}}
+    spec = {"page_id": page_id, "video_data": vd}
+    if CFG.get("instagram_user_id"):
+        spec["instagram_user_id"] = CFG["instagram_user_id"]
+    welcome = json.dumps({"type": "VISUAL_EDITOR", "version": 2, "landing_screen_type": "welcome_message", "media_type": "text",
+                          "text_format": {"customer_action_type": "autofill_message",
+                                          "message": {"autofill_message": {"content": CFG["prefill_message"]}, "text": "Hi, thanks for your interest in FIT."}}})
+    errs, cr = [], {}
+    for v in ({**vd, "page_welcome_message": welcome}, vd):
+        cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad['name']}", "object_story_spec": {**spec, "video_data": v}}, "POST")
+        if "id" in cr:
+            break
+        errs.append(err(cr))
+    if "id" not in cr:
+        return {"error": errs}
+    a = call(f"{ACT}/ads", {"name": ad["name"], "adset_id": adset_id, "creative": {"creative_id": cr["id"]}, "status": status}, "POST")
+    return {"ad": a, "creative_id": cr["id"], "video_id": vid, "earlier_errors": errs}
+
+def op_add_video_ads(req):
+    """{"adset_key": "A", "ads": [{video, thumb, name, headline, text}]}. Paused unless the campaign is live and approved."""
+    camp, st = find_campaign(), load_state()
+    sid = st.get("adsets", {}).get(req["adset_key"])
+    if not camp or not sid:
+        return {"error": "campaign or ad set missing, run setup"}
+    have = {a["name"] for a in ads_of(camp["id"])}
+    status = "ACTIVE" if (live_ok() and camp.get("status") == "ACTIVE") else "PAUSED"
+    p, out = ty_page(), {}
+    for ad in req["ads"]:
+        if ad["name"] in have:
+            out[ad["name"]] = "exists"; continue
+        try:
+            r = make_video_ad(p["id"], sid, ad, status)
+        except Exception as e:
+            r = {"error": str(e)}
+        out[ad["name"]] = r
+        if "ad" in r and "id" in r["ad"]:
+            st["ads"][ad["name"]] = r["ad"]["id"]
+    save_state(st)
+    return {"status_used": status, "ads": out}
+OPS["add_video_ads"] = op_add_video_ads
