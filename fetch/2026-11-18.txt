@@ -1,6 +1,0 @@
-d1118-par-montparnasse https://images.unsplash.com/photo-1610871455594-5b2e7832d37d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
-d1118-par-rooftops-eiffel https://images.unsplash.com/photo-1707340727274-7c5f23369c5b?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
-d1118-par-tower-rooftops https://images.unsplash.com/photo-1546702830-d64bd442b73f?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
-d1118-par-ladefense https://images.unsplash.com/photo-1579469928155-700f5541abfc?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
-d1118-par-ladefense-water https://images.unsplash.com/photo-1662444032126-f1dc53bbb153?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
-d1118-par-louvre-aerial https://images.unsplash.com/photo-1742388485460-f03b932a3012?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2600
