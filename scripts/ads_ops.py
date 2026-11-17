@@ -99,7 +99,7 @@ def geo(cities):
         r = call("search", {"type": "adgeolocation", "q": c["q"], "location_types": json.dumps(["city"]), "country_code": "IN", "limit": 5})
         hit = next((x for x in r.get("data", []) if x.get("country_code") == "IN"), None)
         if hit:
-            out.append({"key": hit["key"], "radius": max(17, min(80, int(c.get("radius_km", 20)))),  # Meta allows 17 to 80 km around a city "distance_unit": "kilometer"})
+            out.append({"key": hit["key"], "radius": max(17, min(80, int(c.get("radius_km", 20)))), "distance_unit": "kilometer"})  # Meta allows 17 to 80 km
         else:
             missing.append(c["q"])
     return out, missing
