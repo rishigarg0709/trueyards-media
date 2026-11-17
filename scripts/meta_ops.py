@@ -71,7 +71,7 @@ def fb_posts(p, since):
     tok, out = p["access_token"], []
     reels = call(f"{p['id']}/video_reels", {"fields": "id,description,created_time,post_id,permalink_url", "since": since, "limit": 50}, token=tok)
     for v in reels.get("data", []):
-        got, errs = _metrics(v["id"], "video_insights", ["blue_reels_play_count", "fb_reels_total_plays", "post_impressions_unique",
+        got, errs = _metrics(v["id"], "video_insights", ["blue_reels_play_count", "fb_reels_total_plays",
                              "post_video_avg_time_watched", "post_video_social_actions", "post_video_followers", "post_video_likes_by_reaction_type"], tok)
         out.append({"kind": "reel", "video_id": v["id"], "post_id": v.get("post_id"), "created_time": v.get("created_time"),
                     "description": (v.get("description") or "")[:120], "permalink": v.get("permalink_url"), "insights": got, "unavailable_metrics": errs or None})
