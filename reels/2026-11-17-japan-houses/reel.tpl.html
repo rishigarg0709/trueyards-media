@@ -1,0 +1,244 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:600;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121212}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#121212;color:#fff;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#121212}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:600 104px/1.04 IN;letter-spacing:-.035em}
+.M{font:600 78px/1.1 IN;letter-spacing:-.03em}
+.B{font:500 46px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:800 300px/1 IN;letter-spacing:-.06em}
+.w{display:inline-block;white-space:pre}
+.c{color:#FF6B57}
+.hl{background:#FF6B57;color:#fff;padding:0 .14em;border-radius:6px}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.55)}
+.tag{display:inline-block;background:#FF6B57;color:#fff;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase}
+.tagw{display:inline-block;background:#fff;color:#121212;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase}
+.stamp{border:6px solid #FF6B57;color:#FF6B57;font:800 64px/1 IN;letter-spacing:.02em;padding:16px 28px 12px;border-radius:8px;background:rgba(18,18,18,.4)}
+.ptag{background:#FF6B57;color:#fff;font:800 96px/1 IN;letter-spacing:-.03em;padding:26px 44px 24px 92px;border-radius:14px 60px 60px 14px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.ptag:before{content:'';position:absolute;left:30px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:#121212;opacity:.85}
+#rl{position:absolute;left:70px;top:226px;width:940px;height:100px;z-index:20}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.6)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(0,0,0,.32) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<svg id="rl" viewBox="0 0 940 100"></svg>
+<div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<svg id="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .9 0"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[];
+const BODY=/*BODY*/15;
+const BEATS=/*BEATS*/[];
+window.RO=null;
+const S=document.getElementById('s');
+const CO='#FF6B57';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9'\-]/g,'').replace(/'$/,'');
+const find=(w,n,a,b)=>{let c=0;for(let i=a;i<b;i++){if(norm(WS[i][0])===w){c++;if(c===n)return WS[i][1]}}throw new Error('word '+w+' '+n)};
+const ath=(w,n=1)=>find(w,n,0,BODY), at=(w,n=1)=>find(w,n,BODY,WS.length);
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const ph=(p,src,css)=>{const e=document.createElement('img');e.src='img/'+src+'.jpg';e.className='ph';e.style.cssText=css||'';p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+const box=(p,src,ox,oy)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover';b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(14,14,14,.88) 0%,rgba(14,14,14,.55) 20%,rgba(14,14,14,0) 34%';
+// ---------- body times ----------
+const tHere=at("here's")-.1, tJap=at("japan's")-.1, tAfter=at('after')-.1, tAnd=at('and')-.1, tOnly=at('only')-.1, tWhy=at('why')-.1, tEq=at('earthquakes'), tSo=at('so')-.1, tMany=at('many')-.1, tReb=at('rebuilt')-.12, tSo2=at('so',2)-.1, tWhich=at('which')-.1, tWould=at('would')-.1;
+let HOOKEV, HOOKEV2=null;
+if(!TRIAL){
+// ===== 1. HOOK (main): 30-year-old house, price tag slams "≈ ¥0" on "house"
+const tNot=ath('not')-.1;HOOKEV=ath('house')-.02;
+add(0,sc=>{const b=box(sc,'m1',560,960);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 58%,rgba(14,14,14,.7) 74%,rgba(14,14,14,.9) 100%)');
+ const br=[];[[150,600,'border-left','border-top'],[930,600,'border-right','border-top'],[150,1190,'border-left','border-bottom'],[930,1190,'border-right','border-bottom']].forEach(([x,y,a,c])=>{const e=mk(sc,'',`left:${x-(a=='border-right'?56:0)}px;top:${y-(c=='border-bottom'?56:0)}px;width:56px;height:56px;${a}:6px solid #fff;${c}:6px solid #fff`);br.push(e)});
+ const k=mk(sc,'K ts','left:72px;top:1180px;color:#fff','<span class="c">●</span>&nbsp; Japan · housing');
+ const h=mk(sc,'H ts','left:70px;top:1228px;width:960px','30-year-old house.<br>Worth almost <span id="nh" style="padding:0 .12em;margin-left:-.12em;border-radius:8px">nothing.</span>');
+ const nh=h.querySelector('#nh');
+ const tg=mk(sc,'ptag','left:430px;top:820px;transform-origin:20% 50%','≈ ¥0');
+ const tN=ath('nothing');
+ return t=>{const sk=shake(t,HOOKEV);b.style.transform=`translate(${sk}px,${sk*.6}px) scale(${1.0+.055*eo(t/4.4)})`;
+  const g=cl((t-HOOKEV)/.5);b.im.style.filter=`grayscale(${g*.85}) brightness(${1-.18*g})`;
+  br.forEach((e,n)=>{const p=eo((t-n*.05)/.35);e.style.opacity=cl(p*1.4);e.style.transform=`scale(${1.5-.5*p})`;e.style.borderColor=t>=HOOKEV?CO:'#fff'});
+  if(t>=HOOKEV)slam(tg,t,HOOKEV,2.2,-6);else tg.style.opacity=0;
+  const q=cl((t-tN)/.12);nh.style.background=`rgba(255,107,87,${q})`;h.style.transform=`scale(${1+.03*(t>=tN?Math.exp(-(t-tN)/.2):0)})`;h.style.transformOrigin='0 50%'}});
+// ===== 2. Not the land. The house. (tilt from plot up to the house)
+add(tNot,sc=>{const b=box(sc,'m1',540,960);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 60%,rgba(14,14,14,.75) 78%,rgba(14,14,14,.92) 100%)');
+ const L=mk(b,'tagw','position:absolute;left:520px;top:1290px;font-size:34px','Land');const Hh=mk(b,'tag','position:absolute;left:430px;top:590px;font-size:34px','House');
+ const a=T(sc,'H ts','left:70px;top:1300px;width:960px',[['Not',ath('not')],['the',ath('the')],['land.',ath('land')]]);
+ const c=T(sc,'H ts','left:70px;top:1300px;width:960px',[['The',ath('the',2)],['house.',ath('house',2),'c',1]]);
+ const tU=ath('the',2)-.25-tNot;
+ return t=>{const p=eio((t-tU)/.7);b.style.transform=`translateY(${-330+590*p}px) scale(${1.36-.04*p})`;rv(a,t,ath('the',2)-.12);rv(c,t);
+  fade(L,t,ath('land')-tNot-.1,.2,12);L.style.opacity=cl((ath('land')-tNot-.1-t)/-.2)*(1-.6*p);fade(Hh,t,ath('house',2)-tNot-.05,.2,12)}},true);
+} else {
+// ===== 1T. TRIAL HOOK: split frame, pricey land vs house going to ~0
+HOOKEV=SN(ath('expensive'));HOOKEV2=ath('nothing')-.02;
+add(0,sc=>{const top=mk(sc,'','left:0;top:0;width:1080px;height:960px;overflow:hidden');const ti=document.createElement('img');ti.src='img/m3.jpg';ti.style.cssText='position:absolute;left:0;top:-420px;width:1080px;height:1920px;object-fit:cover;transform-origin:540px 900px';top.appendChild(ti);
+ const bot=mk(sc,'','left:0;top:960px;width:1080px;height:960px;overflow:hidden');const bi=document.createElement('img');bi.src='img/m1.jpg';bi.style.cssText='position:absolute;left:0;top:-520px;width:1080px;height:1920px;object-fit:cover;transform-origin:540px 1000px';bot.appendChild(bi);
+ const seam=mk(sc,'','left:0;top:956px;width:1080px;height:8px;background:#121212');
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 44%,rgba(14,14,14,.0) 60%,rgba(14,14,14,.6) 80%,rgba(14,14,14,.9) 100%)');
+ const lt=mk(sc,'tagw','left:72px;top:880px;z-index:2','Land');const ht=mk(sc,'tag','left:72px;top:990px;z-index:2','House');
+ const h=mk(sc,'H ts','left:70px;top:350px;width:960px;font-size:96px','Pricey land.<br>Houses worth <span id="nh" style="padding:0 .12em;margin-left:-.12em;border-radius:8px">≈ 0.</span>');const nh=h.querySelector('#nh');
+ const ar=mk(sc,'','left:620px;top:780px;font:800 120px/1 IN;color:#fff;letter-spacing:-.04em;text-shadow:0 4px 30px rgba(0,0,0,.6)','¥');
+ const tg=mk(sc,'ptag','left:430px;top:1260px;transform-origin:20% 50%','≈ ¥0');
+ const tH=ath('houses');
+ return t=>{ti.style.transform=`scale(${1.06+.06*eo(t/5)})`;
+  const r=eo((t-HOOKEV)/1.2);ar.textContent=t<HOOKEV?'¥':'¥'.repeat(1+Math.floor(r*3.99));ar.style.opacity=cl((t-HOOKEV+.1)/.15);ar.style.transform=`translateY(${-r*120}px)`;
+  const g=cl((t-tH)/.6);bi.style.filter=`grayscale(${g*.9}) brightness(${1-.25*g})`;const out=eio((t-HOOKEV2-.15)/.5);bi.style.transform=`translateY(${out*80}px) scale(${1.04+.04*eo(t/5)})`;
+  const sk=shake(t,HOOKEV2);bot.style.transform=`translate(${sk}px,0)`;
+  if(t>=HOOKEV2)slam(tg,t,HOOKEV2,2.2,-6);else tg.style.opacity=0;
+  const q=cl((t-HOOKEV2)/.12);nh.style.background=`rgba(255,107,87,${q})`}});
+}
+// ===== 3. Here's the strange part (real street, slow pan)
+add(tHere,sc=>{const b=ph(sc,'street','transform-origin:50% 50%');
+ const gr=mk(sc,'sh','background:linear-gradient(180deg,rgba(14,14,14,.85) 0%,rgba(14,14,14,.45) 24%,rgba(14,14,14,0) 40%,rgba(0,0,0,0) 62%,rgba(14,14,14,.7) 80%,rgba(14,14,14,.9) 100%)');
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px',[["Here's",at("here's")],['the',at('the')],['\n'],['strange',at('strange'),'c'],['part.',at('part')]]);
+ return t=>{b.style.transform=`scale(1.1) translateX(${-40+30*eio(t/1.8)}px)`;rv(h,t)}});
+// ===== 4. Tax rules: useful life of a wooden house = 22 years (scale still life, counter)
+add(tJap,sc=>{const b=box(sc,'m4',380,860);b.im.style.filter='brightness(.62) contrast(1.05)';
+ const gr=mk(sc,'sh','background:linear-gradient(180deg,rgba(14,14,14,.92) 0%,rgba(14,14,14,.6) 26%,rgba(14,14,14,0) 40%,rgba(0,0,0,0) 58%,rgba(14,14,14,.8) 72%,rgba(14,14,14,.95) 100%)');
+ const k=mk(sc,'K ts','left:72px;top:372px;color:#fff','<span class="c">●</span>&nbsp; Japan tax rules');
+ const h=T(sc,'M ts','left:70px;top:420px;width:960px',[['A',at('a')],['wooden',at('wooden'),'c'],['house\'s',at('house')],['\n'],['useful',at('useful')],['life:',at('life')]]);
+ const n=mk(sc,'N','left:62px;top:1150px;color:#fff','0');const y=mk(sc,'M','left:520px;top:1338px;color:#fff;font-size:84px','years');
+ const t22=at('twenty-two')-tJap,tK=at('tax')-tJap;
+ return t=>{b.style.transform=`scale(${1.06+.07*eio(t/5.5)})`;fade(k,t,tK-.2,.25,10);rv(h,t);
+  const p=eo((t-t22)/.75);n.textContent=Math.round(22*p);n.style.opacity=cl((t-t22+.25)/.12);n.style.color=p>=1?CO:'#fff';n.style.transform=`scale(${p>=1?1+.05*Math.exp(-(t-t22-.75)/.15):1})`;n.style.transformOrigin='0 70%';fade(y,t,t22+.2,.25,12)}},true);
+// ===== 5. After that, on paper... it's done (book value drains, stamp)
+add(tAfter,sc=>{const b=box(sc,'m4',330,840);b.im.style.filter='brightness(.55)';
+ const gr=mk(sc,'sh','background:linear-gradient(180deg,rgba(14,14,14,.9) 0%,rgba(14,14,14,.5) 26%,rgba(14,14,14,.1) 42%,rgba(14,14,14,.2) 56%,rgba(14,14,14,.85) 72%,rgba(14,14,14,.95) 100%)');
+ const h=T(sc,'M ts','left:70px;top:380px;width:960px',[['After',at('after')],['that,',at('that')],['on',at('on')],['paper...',at('paper'),'c']]);
+ const lab=mk(sc,'K','left:72px;top:1250px;color:#ddd','Building value, on paper');
+ const tr=mk(sc,'','left:72px;top:1300px;width:860px;height:44px;border:3px solid rgba(255,255,255,.7);border-radius:6px');
+ const fl=mk(sc,'','left:78px;top:1306px;width:848px;height:32px;background:#fff;border-radius:3px');
+ const pct=mk(sc,'M','left:72px;top:1300px;font-size:72px','100%');
+ const st=mk(sc,'stamp','left:470px;top:1370px;transform-origin:50% 50%',"It's done.");
+ const tP=at('after')-tAfter,tD=at('done')-tAfter;
+ return t=>{b.style.transform=`scale(${1.42-.12*eio(t/2.8)})`;rv(h,t);fade(lab,t,.15,.2,10);fade(tr,t,.15,.2,10);
+  const p=eio((t-tP-.2)/(tD-tP-.2));fl.style.width=(848*(1-p))+'px';fl.style.background=p>.6?CO:'#fff';fl.style.opacity=cl((t-.15)/.2);pct.textContent=Math.round(100*(1-p))+'%';fade(pct,t,.15,.2,10);pct.style.color=p>=1?CO:'#fff';
+  if(t>=tD)slam(st,t,tD,1.9,-4);else st.style.opacity=0}});
+// ===== 6. And buyers agree (aged house)
+add(tAnd,sc=>{const b=box(sc,'m6',520,1000);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 56%,rgba(14,14,14,.75) 74%,rgba(14,14,14,.92) 100%)');
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px',[['And',at('and')],['buyers',at('buyers'),'c'],['\n'],['agree.',at('agree')]]);
+ return t=>{b.style.transform=`scale(${1.04+.06*eo(t/2)})`;rv(h,t)}},true);
+// ===== 7. Only 1 in 7 homes sold is second-hand (icon grid)
+add(tOnly,sc=>{const b=ph(sc,'m6','filter:blur(10px) brightness(.36);transform:scale(1.4);object-position:30% 60%');
+ const k=mk(sc,'K ts','left:72px;top:372px;color:#fff','<span class="c">●</span>&nbsp; Homes sold in Japan');
+ const h=T(sc,'M ts','left:70px;top:420px;width:960px',[['Only',at('only')],['about',at('about')],['1 in 7',at('one'),'hl',1],['\n'],['is',at('is')],['second-hand.',at('second-hand')]]);
+ const h2=T(sc,'M ts','left:70px;top:420px;width:960px',[['Everyone',at('everyone')],['wants',at('wants')],['\n'],['new.',at('new'),'c',1]]);
+ const ic=[];const P='M10 46 L50 12 L90 46 L90 96 L10 96 Z';
+ for(let i=0;i<7;i++){const x=110+(i%4)*230,y=i<4?800:1060;const s=svg(sc,'',`<path d="${P}" transform="translate(${x+(i>=4?115:0)},${y}) scale(1.6)" fill="#fff" stroke="none"/>`);ic.push(s)}
+ const lb=[];for(let i=0;i<7;i++){const x=110+(i%4)*230+(i>=4?115:0),y=i<4?800:1060;lb.push(mk(sc,'K',`left:${x-20}px;width:200px;text-align:center;top:${y+170}px;color:#ccc;font-size:20px`,i==6?'second-hand':'new'))}
+ const t1=at('one')-tOnly,tS=at('second-hand')-tOnly,tE=at('everyone')-tOnly;
+ return t=>{rv(h,t,tE+tOnly-.12);rv(h2,t);ic.forEach((s,i)=>{const ti=t1-.4+i*.11;const p=eb((t-ti)/.3);s.style.opacity=cl((t-ti)/.08);s.style.transform=`scale(${.5+.5*p})`;s.style.transformOrigin=`${150+(i%4)*230+(i>=4?115:0)}px ${(i<4?880:1140)}px`;
+   const pa=s.querySelector('path');pa.setAttribute('fill',i==6&&t>=tS?CO:(t>=tE&&i<6?'#fff':'rgba(255,255,255,.85)'));
+   if(t>=tE&&i<6){const pu=Math.exp(-((t-tE-i*.06)%2)/.25);s.style.transform=`scale(${1+.07*(t-tE-i*.06>0?pu:0)})`}});
+  lb.forEach((l,i)=>{fade(l,t,(i==6?tS:tE-.1),.2,8);if(i==6)l.style.color=CO})}},true);
+// ===== 8. Why?
+add(tWhy,sc=>{const b=ph(sc,'slope','transform-origin:50% 60%');
+ const gr=mk(sc,'sh','background:linear-gradient(180deg,rgba(14,14,14,.85) 0%,rgba(14,14,14,.4) 24%,rgba(14,14,14,0) 40%,rgba(14,14,14,0) 60%,rgba(14,14,14,.75) 80%,rgba(14,14,14,.9) 100%)');
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px;font-size:180px',[['Why?',at('why'),'',1]]);
+ return t=>{b.style.transform=`scale(${1.1-.05*eio(t/1.4)})`;rv(h,t)}});
+// ===== 9. Earthquakes. Code got stricter in 1981 (shake, seismograph, stamp)
+add(tEq-.06,sc=>{const b=box(sc,'corner',540,1000);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 54%,rgba(14,14,14,.8) 72%,rgba(14,14,14,.94) 100%)');
+ let d='M-20 1000';for(let x=0;x<=1100;x+=10){const a=x>380&&x<700?Math.sin(x*.31)*(150*Math.sin((x-380)/320*Math.PI)):Math.sin(x*.5)*6;d+=` L${x} ${1000+a}`}
+ const sg=svg(sc,'',`<path id="sg" d="${d}" fill="none" stroke="${CO}" stroke-width="6" stroke-linejoin="round"/>`);const sp=sg.querySelector('#sg');const SL=4200;sp.style.strokeDasharray=SL;
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px',[['Earthquakes.',at('earthquakes'),'c',1]]);
+ const h2=T(sc,'M ts','left:70px;top:1290px;width:960px',[['The',at('the',2)],['building',at('building')],['code',at('code')],['\n'],['got',at('got')],['much',at('much')],['stricter.',at('stricter'),'c']]);
+ const st=mk(sc,'stamp','left:560px;top:520px;font-size:96px;transform-origin:50% 50%','1981');
+ const tB=at('the',2)-(tEq-.06),t81=at('1981')-(tEq-.06);
+ return t=>{const sk=shake(t,.06,14);b.style.transform=`translate(${sk}px,${sk*.5}px) scale(${1.0+.06*eo(t/4)})`;
+  const p=eo((t-.06)/.9);sp.style.strokeDashoffset=SL*(1-p);sg.style.opacity=1-cl((t-tB+.1)/.3);
+  rv(h,t,tB+tEq-.06-.12);rv(h2,t);if(t>=t81)slam(st,t,t81,2,-5);else st.style.opacity=0}},true);
+// ===== 10. So older homes feel risky (aged detail + vacancy mini-reveal)
+add(tSo,sc=>{const b=box(sc,'m6',300,880);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 54%,rgba(14,14,14,.8) 70%,rgba(14,14,14,.94) 100%)');
+ const tg=mk(sc,'tagw','left:72px;top:380px','Built before 1981');
+ const h=T(sc,'M ts','left:70px;top:1300px;width:960px',[['So',at('so')],['older',at('older')],['homes',at('homes',2)],['\n'],['feel',at('feel')],['risky.',at('risky'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.4-.05*eio(t/2)}) translateX(${t*8}px)`;fade(tg,t,.15,.25,10);rv(h,t)}},true);
+// ===== 11. Many get torn down (excavator, impact)
+const tTorn=at('torn');
+add(tMany,sc=>{const b=box(sc,'m2',560,1080);
+ const gr=mk(sc,'sh','background:linear-gradient(180deg,rgba(14,14,14,.9) 0%,rgba(14,14,14,.6) 22%,rgba(14,14,14,.0) 36%,rgba(0,0,0,0) 62%,rgba(14,14,14,.8) 76%,rgba(14,14,14,.94) 100%)');
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px',[['Many',at('many')],['get',at('get')],['\n'],['torn',at('torn'),'hl',1],['down.',at('down'),'hl',1]]);
+ const tt=tTorn-tMany;
+ return t=>{const sk=shake(t,tt,12);b.style.transform=`translate(${sk}px,${sk*.6}px) scale(${1.18+.08*eo(t/1.8)})`;rv(h,t)}});
+// ===== 12. ...and rebuilt -> demolition age bars (32 / 66 / 80)
+add(tReb,sc=>{const b=box(sc,'m5',620,700);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 56%,rgba(14,14,14,.75) 74%,rgba(14,14,14,.92) 100%)');
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px',[['And',at('and',2)],['rebuilt.',at('rebuilt'),'c',1]]);
+ const dk=mk(sc,'sh','background:rgba(14,14,14,.78);opacity:0');
+ const k=mk(sc,'K ts','left:72px;top:372px;color:#fff;opacity:0','<span class="c">●</span>&nbsp; Average age at demolition');
+ const h2=T(sc,'M ts','left:70px;top:420px;width:960px',[['Japanese',at('japanese')],['homes:',at('homes',3)],['\n'],['about',at('about',2)],['32',at('thirty-two'),'c',1],['years.',at('years',2)]]);
+ const base=1500,sc1=8.6;
+ const bar=(x,v,c,lab,tt)=>{const e=mk(sc,'',`left:${x}px;top:${base}px;width:230px;height:0;background:${c};border-radius:6px 6px 0 0`);const l=mk(sc,'',`left:${x}px;width:230px;text-align:center;top:${base}px;font:800 92px/1 IN;letter-spacing:-.04em;color:#fff`,'0');const s2=mk(sc,'K',`left:${x-20}px;width:270px;text-align:center;top:${base+26}px;color:#ddd;font-size:24px`,lab);return {e,l,s2,v,tt}};
+ const B=[bar(105,32,CO,'Japan',at('thirty-two')),bar(425,66,'#f2f0ec','USA',at('sixty-six')),bar(745,80,'#f2f0ec','UK',at('eighty'))];
+ const gl=mk(sc,'',`left:80px;top:${base}px;width:920px;height:4px;background:#fff;opacity:0`);
+ const tB=tSo2-tReb;
+ return t=>{const bl=cl((t-tB)/.4);b.style.transform=`translateY(${-60*eio(t/1.2)+60}px) scale(${1.12+.04*t/9})`;b.im.style.filter=`blur(${bl*9}px)`;dk.style.opacity=bl;rv(h,t,tB+tReb-.1);
+  k.style.opacity=cl((t-tB-.1)/.25);rv(h2,t);gl.style.opacity=cl((t-tB)/.3);
+  B.forEach(o=>{const s=o.tt-tReb-.25;const p=eo((t-s)/.8);const H=o.v*sc1*p;o.e.style.height=H+'px';o.e.style.top=(base-H)+'px';o.l.style.top=(base-H-104)+'px';o.l.textContent=Math.round(o.v*p);o.l.style.opacity=cl((t-s)/.15);o.s2.style.opacity=cl((t-s)/.2);if(o.v==32)o.l.style.color=p>=1?CO:'#fff'})}},true);
+// ===== 13. You're really buying the land (empty plot, boundary traces)
+add(tWhich,sc=>{const b=box(sc,'m3',540,1100);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(0,0,0,0) 56%,rgba(14,14,14,.75) 76%,rgba(14,14,14,.92) 100%)');
+ const o=svg(sc,'',`<path id="pl" d="M40,900 L1040,890 L1040,1250 L40,1020 Z" fill="rgba(255,107,87,0)" stroke="${CO}" stroke-width="7" stroke-dasharray="18 12" stroke-linejoin="round"/>`);
+ const pl=o.querySelector('#pl');const PL=3000;
+ const tg=mk(sc,'tag','left:430px;top:1030px;font-size:40px','Land');
+ const h=T(sc,'M ts','left:70px;top:1290px;width:960px',[['In',at('in',5)],['Japan,',at('japan')],["you're",at("you're")],['really',at('really')],['\n'],['buying',at('buying')],['the',at('the',3)],['land.',at('land'),'hl',1]]);
+ const tL=at('land')-tWhich;
+ return t=>{b.style.transform=`scale(${1.0+.05*eio(t/4.5)})`;const p=eo((t-.3)/(tL-.2));pl.setAttribute('stroke-dasharray',`${PL*p} ${PL}`);pl.setAttribute('fill',`rgba(255,107,87,${.22*cl((t-tL)/.3)})`);if(t>=tL)slam(tg,t,tL,1.6,0);else tg.style.opacity=0;rv(h,t)}},true);
+// ===== 14. Would you buy...? Loops back to frame 0
+add(tWould,sc=>{const b=box(sc,'m1',560,960);b.im.style.filter='grayscale(.85) brightness(.5)';
+ const h=T(sc,'H ts','left:70px;top:520px;width:960px;font-size:96px',[['Would',at('would')],['you',at('you')],['buy',at('buy')],['a',at('a',3)],['\n'],['house',at('house',2)],["that's",at("that's")],['worth',at('worth')],['\n'],['almost',at('almost')],['nothing',at('nothing'),'c'],['\n'],['in',at('in',6)],['30',at('thirty')],['years?',at('years',3),'',1]]);
+ const f=mk(sc,'B ts','left:72px;top:1240px;width:900px;color:#fff;opacity:.95','Send this to the friend who says<br>property <span class="c">always</span> goes up.');
+ const tY=at('years',3)-tWould;
+ const lp=box(sc,'m1',560,960);lp.style.opacity=0;
+ return t=>{b.style.transform=`scale(${1.08-.02*t})`;rv(h,t);fade(f,t,tY+.3);const q=cl((t-(END-tWould-.45))/.4);lp.style.opacity=q}});
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+// ---------- house-age ruler device (0 to 80 years) ----------
+const RL=document.getElementById('rl');const X=y=>20+y*11.25;
+const MK=[[22,'22 tax',at('twenty-two'),CO],[32,'32 JP',at('thirty-two'),CO],[66,'66 US',at('sixty-six'),'#fff'],[80,'80 UK',at('eighty'),'#fff']];
+let rh=`<text x="20" y="22" font-family="PM" font-size="19" letter-spacing="3" fill="#fff" opacity=".7">HOUSE AGE, YEARS</text><rect x="20" y="52" width="900" height="3" fill="#fff" opacity=".3"/><rect id="rf" x="20" y="51" width="0" height="5" fill="${CO}"/>`;
+for(let y=0;y<=80;y+=10)rh+=`<rect x="${X(y)-1}" y="46" width="2" height="15" fill="#fff" opacity=".35"/>`;
+MK.forEach((m,i)=>{rh+=`<circle id="rc${i}" cx="${X(m[0])}" cy="53.5" r="8" fill="#121212" stroke="#fff" stroke-width="3" opacity=".5"/><text id="rt${i}" x="${X(m[0])}" y="90" text-anchor="${i==3?'end':'middle'}" font-family="PM" font-size="19" fill="#fff" opacity="0">${m[1]}</text>`});
+RL.innerHTML=rh;
+const rlU=t=>{const on=t>=tJap&&t<tWhich;RL.style.opacity=on?cl((t-tJap)/.3)*(1-cl((t-tWhich+.25)/.25)):0;
+ let fx=0;MK.forEach((m,i)=>{const a=t>=m[2];const c=document.getElementById('rc'+i),tx=document.getElementById('rt'+i);c.setAttribute('fill',a?m[3]:'#121212');c.setAttribute('stroke',a?m[3]:'#fff');c.setAttribute('opacity',a?1:.5);c.setAttribute('r',a?8+6*Math.exp(-(t-m[2])/.2):8);tx.setAttribute('opacity',a?1:0);tx.setAttribute('fill',m[3]);if(a&&m[3]===CO)fx=X(m[0])-20});
+ document.getElementById('rf').setAttribute('width',fx)};
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+(TRIAL?' Tokyo land prices rank among the world\'s highest.':' Building value, not land. Illustrative.')],[tHere,'Photo: Leroy van den Berg / Unsplash.'],[tJap,'Statutory useful life (tax depreciation): wooden home 22 yrs, reinforced concrete 47 yrs. '+AIL],[tAnd,AIL+' Japan has 9.0 million vacant homes, 13.8% of all (Statistics Bureau, 2023).'],[tOnly,'New homes were 85.3% of residential sales in 2013 (MLIT).'],[tWhy,'Photo: eoryuuuu K / Unsplash.'],[tEq,'New seismic standard from June 1981. Photo: Leroy van den Berg / Unsplash.'],[tSo,AIL+' Pre-1981 homes face home-loan limits.'],[tMany,AIL],[tSo2,'Average age of demolished homes: Japan 32.1, US 66.6, UK 80.6 (MLIT, via e-housing.jp).'],[tWhich,AIL+' Educational content, not advice.'],[tWould,'']];
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ rlU(t);
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,HOOKEV2,tTorn,tEq].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<2?.5:.35)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+};
+</script></body></html>
