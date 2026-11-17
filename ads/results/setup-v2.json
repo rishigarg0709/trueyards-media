@@ -1,0 +1,150 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-17T17:20:42.187476Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {
+   "P": {
+    "result": {
+     "id": "120255645739620547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Small business (business and finance)",
+      "Manufacturing (industry)",
+      "Warehouse (industry)",
+      "Logistics (business and finance)",
+      "Entrepreneurship (business and finance)",
+      "industrial engineering (engineering)",
+      "Supply chain management (business and finance)",
+      "Factory (manufacturing)",
+      "Small business owners"
+     ]
+    },
+    "earlier_errors": []
+   }
+  },
+  "ads": {
+   "P1 price-place: permanent address": {
+    "ad": {
+     "id": "120255645742280547"
+    },
+    "creative_id": "2321708032006159",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P2 township: built for industry": {
+    "ad": {
+     "id": "120255645743640547"
+    },
+    "creative_id": "1678383170337897",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P3 approvals: RERA registered": {
+    "ad": {
+     "id": "120255645745070547"
+    },
+    "creative_id": "1661445169037142",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P4 reel hook: land for my factory": {
+    "ad": {
+     "id": "120255645748990547"
+    },
+    "creative_id": "1830037911661072",
+    "video_id": "2974277069612050",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P5 reel proof: site footage": {
+    "ad": {
+     "id": "120255645752660547"
+    },
+    "creative_id": "1501016489756605",
+    "video_id": "4376429815943743",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P6 reel voiceover EN: found it": {
+    "ad": {
+     "id": "120255645758320547"
+    },
+    "creative_id": "1967453864227251",
+    "video_id": "1665143498622264",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   },
+   "P7 reel voiceover HI: mil gayi": {
+    "ad": {
+     "id": "120255645763610547"
+    },
+    "creative_id": "1148952484536331",
+    "video_id": "1151894223894042",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": false
+    },
+    "earlier_errors": [
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\".",
+     "(#100) Param key 'catalog_items' in degrees_of_freedom_spec[creative_features_spec] must be one of {IG_VIDEO_NATIVE_SUBTITLE, IMAGE_ANIMATION, PRODUCT_BROWSING, PRODUCT_METADATA_AUTOMATION, PROFILE_CARD, STANDARD_ENHANCEMENTS_CATALOG, TEXT_OVERLAY_TRANSLATION} - got \"catalog_items\"."
+    ]
+   }
+  },
+  "campaign": {
+   "id": "120255645738970547"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}

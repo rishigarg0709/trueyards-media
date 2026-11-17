@@ -11,12 +11,20 @@
   "B3 permanent address": "120255643167440547",
   "B4 reel site footage": "120255643367720547",
   "B5 reel land for my factory": "120255643371210547",
-  "B6 reel03 voiceover": "120255645200710547"
+  "B6 reel03 voiceover": "120255645200710547",
+  "P1 price-place: permanent address": "120255645742280547",
+  "P2 township: built for industry": "120255645743640547",
+  "P3 approvals: RERA registered": "120255645745070547",
+  "P4 reel hook: land for my factory": "120255645748990547",
+  "P5 reel proof: site footage": "120255645752660547",
+  "P6 reel voiceover EN: found it": "120255645758320547",
+  "P7 reel voiceover HI: mil gayi": "120255645763610547"
  },
  "adsets": {
   "A": "120255643066620547",
-  "B": "120255643070240547"
+  "B": "120255643070240547",
+  "P": "120255645739620547"
  },
- "campaign_id": "120255642579300547",
+ "campaign_id": "120255645738970547",
  "last_creatives_added": "2026-11-17"
 }
