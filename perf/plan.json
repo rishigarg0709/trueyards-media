@@ -1,6 +1,40 @@
 {
  "date": "2026-11-17",
- "status": "awaiting_total",
+ "status": "ok",
  "product": "FIT",
- "note": "Rishi has not set total_daily_inr in config/perf.json. Nothing changes."
+ "total": 1500,
+ "wa_budget_inr": 1005,
+ "meta_budget_inr": 495,
+ "meta_tactics": {
+  "prospect_A": 322,
+  "prospect_B": 173,
+  "remind": 0,
+  "warm": 0,
+  "unreach": 0
+ },
+ "meta_shares": {
+  "prospect_A": 0.55,
+  "prospect_B": 0.35,
+  "remind": 0.0,
+  "warm": 0.0,
+  "unreach": 0.1
+ },
+ "warm": {
+  "cellsPerDay": 1,
+  "waveSize": 400,
+  "leadDays": 4
+ },
+ "evidence": {
+  "window_days": 14,
+  "channels": {},
+  "meta_spend": {},
+  "lift": null,
+  "summary": "unavailable"
+ },
+ "reasons": [
+  "First plan: WhatsApp 67% (proven), Meta 33% (test).",
+  "Not enough visits or qualified leads on both channels yet to compare; split unchanged.",
+  "No joint waves running; Meta goes to prospecting and the unreachable list.",
+  "Folded unreach into prospecting (under INR 100/day learns nothing)."
+ ]
 }

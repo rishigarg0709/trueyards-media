@@ -13,7 +13,7 @@
     "lists_uploaded": "Rishi approved (17 Nov) hashed uploads of the scraped business database for targeting. Uploads run from the WhatsApp Lambda, never via this public repo (hashes of phone numbers are reversible).",
     "joint_wave": "Warm-up ads to a cell's audience 4 days before the autopilot's first WhatsApp touch, reminder CTWA ads during follow-ups, 50/50 holdout per cell to measure lift. See strategy/CHANNEL_COORDINATION.md."
   },
-  "budget_approved": false,
+  "budget_approved": true,
   "launch_approved": false,
   "daily_cap_inr": 700,
   "monthly_cap_inr": 20000,
@@ -245,5 +245,6 @@
     "p_best_floor": 0.05,
     "min_active_ads": 2,
     "draws": 4000
-  }
+  },
+  "_budget_note": "Rishi 17 Nov: total INR 1,500/day across WhatsApp and Meta (config/perf.json). Meta share set weekly by the planner, never above daily_cap_inr / monthly_cap_inr. launch_approved stays false until Rishi reviews the paused ads."
 }
