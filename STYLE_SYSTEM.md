@@ -54,11 +54,9 @@ Model eleven_v3. Use v3 delivery tags sparingly ([pause], [whispers] on a secret
 - F Tokyo Neutral: "quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos"
 Composition for every image: vertical 9:16 at 2K, main subject in the middle third, empty calmer area in the lower third for captions, top 300 px darker for the logo. Ask for wide framing so 2 to 3 crops can be cut from one image.
 
-## Hero shot rule: impossible but real (Rishi, 2026-11-17)
-What made the Delhi and Noida reels work: a scene that cannot exist, shot as if it does. A glass skyscraper rising out of Lutyens Delhi; the Supertech twin towers squeezed between two real housing blocks. Unrealistic idea, hyper-realistic execution, plus a short catchy headline over it. Rishi's read: people like hyper-realistic images far more than animation or diagrams.
-- Every reel opens on an "impossible but real" hero shot: a photoreal image (or a real photo edited) where one element is surprising, impossible or exaggerated, lit and graded like a real photograph. It carries the hook headline (6 words or fewer).
-- At least one more impossible-but-real image at the payoff.
-- Most shots are photographic: real photos of the real place, or photoreal Gemini scenes. Diagrams, wireframes, cutaways, maps and line overlays are seasoning, at most about a quarter of the shots, and never the hero.
-- Looks are colour grades and type, not illustration styles: look E Blueprint keeps its ink-blue grade and cyan accents but uses photoreal images with only light dimension lines, not wireframe renders.
-- Gemini prompt for the hero: "hyper-realistic photograph, [real place] with [the impossible element], shot on a full-frame camera, natural light, believable scale and shadows, looks like a real news photo" plus the look's grade line.
-- Log the hero shot type for each reel (impossible-real, photo, render, diagram) so analytics can test this.
+## Hero shot idea: impossible but real (Rishi, 2026-11-17; a strong option, not a rule)
+What made the Delhi and Noida reels work: a scene that cannot exist, shot as if it does (a glass skyscraper rising out of Lutyens Delhi; the Supertech twin towers squeezed between two real housing blocks), with a short catchy headline. Rishi's read: people like hyper-realistic images more than animation or diagrams.
+- Use it wherever the story fits naturally: an impossible-but-real, photoreal hero image with a hook headline of 6 words or fewer. Do not force it; keep testing other openings and visual styles too, so the analytics can compare.
+- Lean photographic where it suits the story (real photos of the place, photoreal Gemini scenes); diagrams, cutaways and line overlays work best as seasoning, not the whole reel.
+- Gemini prompt idea for such a hero: "hyper-realistic photograph, [real place] with [the impossible element], shot on a full-frame camera, natural light, believable scale and shadows, looks like a real news photo" plus the look's grade line.
+- Log the opening shot type for each reel (impossible-real, photo, render, diagram) so analytics can test which wins.
