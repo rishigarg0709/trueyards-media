@@ -6,7 +6,7 @@ Re-ranked 2026-11-17 by the learning run: story-led topics with a famous place o
 
 - [x] 2026-11-16 | mystery | Why Delhi has no skyscrapers | contradiction + erase
 - [x] 2026-11-16 | story | Noida Twin Towers: built, fought over, blown up in seconds | "28 August 2022, 2:30 pm. Two towers taller than Qutub Minar. Gone in seconds." | hook 14 story cold open | send: anyone in NCR, anyone who bought from a builder | look A Newsroom Red, voice Tara
-- [~] 2026-11-17 midday | global | Why Japanese houses lose value like cars | "In Japan, a 30-year-old house can be worth almost nothing." | hook 25 counterintuitive economics | send: the friend who says property always goes up | look F Tokyo Neutral, voice Jessa
+- [x] 2026-11-17 (published midday, IG Df1cKzVjIJI) | global | Why Japanese houses lose value like cars | "In Japan, a 30-year-old house can be worth almost nothing." | hook 25 counterintuitive economics | send: the friend who says property always goes up | look F Tokyo Neutral, voice Jessa
 - [~] 2026-11-17 evening | marvel | How Burj Khalifa stands on sand | "The tallest building on Earth stands on sand." | hook 1 contradiction | send: social currency, anyone who has visited Dubai | look E Blueprint, voice George
 - [ ] story | Amrapali: tens of thousands of homebuyers waiting for homes they paid for | "They paid for homes that didn't arrive." | stakes
 - [ ] remix (Delhi, same hook new topic) | mystery | Why Paris has almost no skyscrapers inside the city (height cap since 1977, Tour Montparnasse backlash, La Defense outside the limits) | "Paris has one skyscraper inside the city. People hated it so much they banned more." | hook 1 contradiction | send: anyone who has been to Paris | verify height rules and 2023 PLU bioclimatique
