@@ -96,17 +96,17 @@
    "ads": [],
    "video_ads": [
     {
-     "video": "ads/creatives/fit-reel-03-vo-hg.mp4",
+     "video": "ads/creatives/fit-reel-03-vo-hg-hq.mp4",
      "thumb": "ads/creatives/fit-reel-03-vo-hg-thumb.jpg",
-     "name": "P8 reel voiceover Hinglish: mil gaya",
+     "name": "P10 reel Hinglish HQ: mil gaya",
      "headline": "Rohtak mein industrial plot",
      "text": "Factory ke liye land? Forteasia Industrial Township, Kalanaur, Rohtak. 500 se 4,000 sq yd ke plots, 18 m aur 24 m wide roads, NH-152D se 10 min. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Neeche button par click karke aur jaaniye.",
      "prefill": "Hi, FIT industrial plot ki details bhejiye."
     },
     {
-     "video": "ads/creatives/fit-reel-04-three-things.mp4",
+     "video": "ads/creatives/fit-reel-04-three-things-hq.mp4",
      "thumb": "ads/creatives/fit-reel-04-three-things-thumb.jpg",
-     "name": "P9 reel 3 things: planned industrial plot",
+     "name": "P11 reel 3 things HQ",
      "headline": "Industrial plots, Rohtak",
      "text": "For factory owners: 3 things a planned industrial plot gives you. Roads 18 m and 24 m wide, built for trucks. 10 min to NH-152D, 25 min to IMT Rohtak. HRERA registered with DTCP licences. Forteasia Industrial Township, Kalanaur, Rohtak: plots 500 to 4,000 sq yd. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Click the button below to know more.",
      "prefill": "Hi, I saw the FIT ad. Please share the industrial plot details."
@@ -377,23 +377,23 @@
  },
  "ice_breakers": [
   {
-   "title": "Industrial plot 500 to 1,000 sq yd",
-   "response": "Industrial plot 500 to 1,000 sq yd"
+   "title": "Show me FIT industrial plots",
+   "response": "Show me FIT industrial plots"
   },
   {
-   "title": "Industrial plot 1,000 to 4,000 sq yd",
-   "response": "Industrial plot 1,000 to 4,000 sq yd"
+   "title": "Plot sizes and prices",
+   "response": "Plot sizes and prices"
   },
   {
-   "title": "Residential or SCO plot",
-   "response": "Residential or SCO plot"
+   "title": "Book a free site visit",
+   "response": "Book a free site visit"
   },
   {
-   "title": "Book a site visit",
-   "response": "Book a site visit"
+   "title": "Send me the brochure",
+   "response": "Send me the brochure"
   }
  ],
- "welcome_text": "Hi, thanks for your interest in Forteasia Industrial Township, Rohtak (HRERA-PKL-ROH-653-2025). What are you looking for?",
+ "welcome_text": "Hi 👋 Welcome to Forteasia Industrial Township (FIT), Kalanaur, Rohtak. HRERA-PKL-ROH-653-2025. Tap an option below:",
  "creative_opt_out": [
   "product_browsing",
   "product_metadata_automation",
@@ -405,5 +405,6 @@
  ],
  "_creative_opt_out_note": "Meta accepts only these keys for CTWA image/video ads (Nov 2026). Generative backgrounds and image expansion are not offered for this ad type.",
  "_launch_note": "Rishi asked to run ads on reel 03 Hinglish and reel 04 (18 Nov 2026, 00:15 IST). Only those two ads live.",
- "_warm_note": "Rishi switched on the joint plan 18 Nov 2026 00:45 IST. Warm-up, reminder and unreachable tactics go live when their audiences exist, within the planner's Meta budget and the caps."
+ "_warm_note": "Rishi switched on the joint plan 18 Nov 2026 00:45 IST. Warm-up, reminder and unreachable tactics go live when their audiences exist, within the planner's Meta budget and the caps.",
+ "_ice_breakers_note": "Each tap triggers the bot's ad flow (Lambda ai66): carousel, plan, plot size, then visit / brochure / subsidies."
 }
