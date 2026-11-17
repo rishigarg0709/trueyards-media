@@ -333,7 +333,7 @@
    "campaign": "main",
    "kind": "ctwa",
    "audience_window": "remind",
-   "ads_from": "A",
+   "ads_from": "P",
    "_note": "Warm halves after their WhatsApp first touch (D0 to D0+10): CTWA reminders between follow-ups."
   },
   "U": {
@@ -343,7 +343,7 @@
    "audiences": [
     "FITU|unreachable"
    ],
-   "ads_from": "A",
+   "ads_from": "P",
    "_note": "Pool numbers WhatsApp cannot deliver to (131026)."
   },
   "W": {
@@ -351,7 +351,7 @@
    "campaign": "warm",
    "kind": "photo",
    "audience_window": "warm",
-   "ads_from": "A",
+   "ads_from": "P",
    "max_frequency_7d": 3,
    "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask."
   }

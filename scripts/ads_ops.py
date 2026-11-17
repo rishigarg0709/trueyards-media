@@ -705,29 +705,44 @@ def op_tactics_setup(req):
         if "id" not in warm:
             return {"warm_campaign_error": err(warm)}
     out["warm_campaign"] = warm["id"]
-    src_ads = {a["key"]: a["ads"] for a in CFG["adsets"]}
+    src_ads = {a["key"]: a["ads"] + a.get("video_ads", []) for a in CFG["adsets"]}
     existing = {s["name"]: s for s in adsets_of(camp["id"]) + adsets_of(warm["id"])}
     base_t = {"age_min": 25, "age_max": 65, "geo_locations": {"countries": ["IN"]}, "publisher_platforms": ["facebook", "instagram"],
               "targeting_automation": {"advantage_audience": 0}}
     for key, t in CFG["tactics"].items():
         if t["name"] in existing:
-            st["adsets"][key] = existing[t["name"]]["id"]; continue
-        if t["kind"] == "photo":
-            s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": warm["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
-                     "billing_event": "IMPRESSIONS", "optimization_goal": "REACH", "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t,
-                     "frequency_control_specs": [{"event": "IMPRESSIONS", "interval_days": 7, "max_frequency": t.get("max_frequency_7d", 3)}]}, "POST")
+            st["adsets"][key] = existing[t["name"]]["id"]
+            if not req.get("refresh_ads"):
+                continue
+            s = existing[t["name"]]; out[key] = {"adset": {"id": s["id"]}, "deleted": []}
+            for a in ads_of(warm["id"] if t["kind"] == "photo" else camp["id"]):
+                if a["adset_id"] == s["id"]:
+                    call(a["id"], {"status": "DELETED"}, "POST"); out[key]["deleted"].append(a["name"])
         else:
-            s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": camp["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
-                     "billing_event": "IMPRESSIONS", "optimization_goal": "CONVERSATIONS", "destination_type": "WHATSAPP",
-                     "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t, "promoted_object": {"page_id": p["id"]}}, "POST")
-        out[key] = {"adset": s}
-        if "id" not in s:
-            continue
+            if t["kind"] == "photo":
+                s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": warm["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
+                         "billing_event": "IMPRESSIONS", "optimization_goal": "REACH", "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t,
+                         "frequency_control_specs": [{"event": "IMPRESSIONS", "interval_days": 7, "max_frequency": t.get("max_frequency_7d", 3)}]}, "POST")
+            else:
+                s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": camp["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
+                         "billing_event": "IMPRESSIONS", "optimization_goal": "CONVERSATIONS", "destination_type": "WHATSAPP",
+                         "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t, "promoted_object": {"page_id": p["id"]}}, "POST")
+            out[key] = {"adset": s}
+            if "id" not in s:
+                continue
         st["adsets"][key] = s["id"]
         for ad in src_ads.get(t["ads_from"], []):
             ad2 = dict(ad, name=key + ad["name"][1:])
             try:
-                if t["kind"] == "photo":
+                if t["kind"] == "photo" and "video" in ad2:
+                    vid = upload_video(ad2["video"]); th = upload_image(ad2["thumb"])
+                    cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad2['name']}", "object_story_spec": {"page_id": p["id"], "instagram_user_id": CFG["instagram_user_id"],
+                              "video_data": {"video_id": vid, "image_hash": th, "message": ad2["text"], "title": ad2["headline"]}},
+                              **({"degrees_of_freedom_spec": opt_out_spec()} if opt_out_spec() else {})}, "POST")
+                    r = call(f"{ACT}/ads", {"name": ad2["name"], "adset_id": s["id"], "creative": {"creative_id": cr.get("id")}, "status": "PAUSED"}, "POST") if "id" in cr else {"error": err(cr)}
+                elif "video" in ad2:
+                    r = make_video_ad(p["id"], s["id"], ad2, "PAUSED")
+                elif t["kind"] == "photo":
                     h = upload_image(ad2["image"])
                     cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad2['name']}", "object_story_spec": {"page_id": p["id"], "instagram_user_id": CFG["instagram_user_id"],
                               "photo_data": {"image_hash": h, "caption": ad2["text"]}}}, "POST")
