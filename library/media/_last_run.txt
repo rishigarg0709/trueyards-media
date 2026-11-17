@@ -1,2 +1,5 @@
-2026-11-17 17:02 UTC
-prep-2026-11-18 [batch_submit]: batch submitted batches/0peaf3n3s8iefvt1acxms5hjgggr7dmcd5pt (16 images)
+2026-11-17 17:36 UTC
+fit-r4-vo-j3 [voice]: voice ok
+fit-r3-vo-en-5 [voice]: voice ok
+fit-r3-vo-hi-4 [voice]: voice ok
+fit-r3-vo-hg-1 [voice]: voice ok
