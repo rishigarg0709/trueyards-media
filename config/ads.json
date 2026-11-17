@@ -14,7 +14,7 @@
   "joint_wave": "Warm-up ads to a cell's audience 4 days before the autopilot's first WhatsApp touch, reminder CTWA ads during follow-ups, 50/50 holdout per cell to measure lift. See strategy/CHANNEL_COORDINATION.md."
  },
  "budget_approved": true,
- "launch_approved": false,
+ "launch_approved": true,
  "daily_cap_inr": 700,
  "monthly_cap_inr": 20000,
  "min_adset_daily_inr": 120,
@@ -93,59 +93,8 @@
     "Small business owners"
    ],
    "_note": "Advantage+ audience: location, min age 25 and exclusions are hard controls; age max and interests are suggestions. No language control.",
-   "ads": [
-    {
-     "image": "ads/creatives/fit-a-permanent-address.jpg",
-     "name": "P1 price-place: permanent address",
-     "headline": "Industrial plots in Rohtak",
-     "text": "A permanent address for your factory. Forteasia Industrial Township on Meham-Beri Road, Rohtak: plots of 500 to 4,000 sq yd on 18 m and 24 m roads built for trucks. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Message us on WhatsApp for the plan, plot sizes and current rates.",
-     "prefill": "Hi, I saw the FIT ad. Please share the industrial plot price list."
-    },
-    {
-     "image": "ads/creatives/fit-b-built-for-industry.jpg",
-     "name": "P2 township: built for industry",
-     "headline": "138+ acre industrial township",
-     "text": "A 138+ acre township planned for industry: wide roads, power, water, drainage and sewage treatment, with homes and shops for your staff. 25 min to IMT Rohtak, 10 min to NH-152D. Chat on WhatsApp to get the brochure. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in.",
-     "prefill": "Hi, I saw the FIT ad. Please share the industrial plot price list."
-    },
-    {
-     "image": "ads/creatives/fit-c-right-plot.jpg",
-     "name": "P3 approvals: RERA registered",
-     "headline": "RERA-registered plots, Rohtak",
-     "text": "Industrial, residential and SCO plots in one 138+ acre township at Kalanaur, Rohtak. RERA registered (HRERA-PKL-ROH-653-2025 (industrial), 795-2025 (residential)) with DTCP licences. Check the approvals and plot sizes on WhatsApp. Verify at www.haryanarera.gov.in.",
-     "prefill": "Hi, I saw the FIT ad. Please share the industrial plot price list."
-    }
-   ],
+   "ads": [],
    "video_ads": [
-    {
-     "video": "ads/creatives/fit-reel-01-land-for-my-factory.mp4",
-     "thumb": "ads/creatives/fit-reel-01-land-for-my-factory-thumb.jpg",
-     "name": "P4 reel hook: land for my factory",
-     "headline": "Industrial plots in Rohtak",
-     "text": "Looking for land for your factory? FIT on Meham-Beri Road, Rohtak: industrial plots of 500 to 4,000 sq yd on 18 m and 24 m roads. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Message us on WhatsApp for the plan and current rates."
-    },
-    {
-     "video": "ads/creatives/fit-reel-02-found-it.mp4",
-     "thumb": "ads/creatives/fit-reel-02-found-it-thumb.jpg",
-     "name": "P5 reel proof: site footage",
-     "headline": "See the site: FIT, Rohtak",
-     "text": "Actual site footage from Forteasia Industrial Township, Kalanaur, Rohtak. 18 m and 24 m roads, 25 min to IMT Rohtak. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Chat on WhatsApp to plan a site visit."
-    },
-    {
-     "video": "ads/creatives/fit-reel-03-vo-en.mp4",
-     "thumb": "ads/creatives/fit-reel-03-vo-en-thumb.jpg",
-     "name": "P6 reel voiceover EN: found it",
-     "headline": "Industrial plots, Rohtak",
-     "text": "For factory owners and MSMEs: Forteasia Industrial Township, Kalanaur, Rohtak. Plots 500 to 4,000 sq yd on 18 m and 24 m roads, 10 min to NH-152D, 25 min to IMT Rohtak. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Click the button below to know more."
-    },
-    {
-     "video": "ads/creatives/fit-reel-03-vo-hi.mp4",
-     "thumb": "ads/creatives/fit-reel-03-vo-hi-thumb.jpg",
-     "name": "P7 reel voiceover HI: mil gayi",
-     "headline": "Rohtak mein industrial plot",
-     "text": "Factory ke liye zameen? Forteasia Industrial Township, Kalanaur, Rohtak. 500 se 4,000 sq yd ke plot, 18 m aur 24 m sadkein, NH-152D se 10 min. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Neeche button dabakar aur jaaniye.",
-     "prefill": "Namaste, FIT industrial plot ki details bhejiye."
-    },
     {
      "video": "ads/creatives/fit-reel-03-vo-hg.mp4",
      "thumb": "ads/creatives/fit-reel-03-vo-hg-thumb.jpg",
@@ -153,6 +102,14 @@
      "headline": "Rohtak mein industrial plot",
      "text": "Factory ke liye land? Forteasia Industrial Township, Kalanaur, Rohtak. 500 se 4,000 sq yd ke plots, 18 m aur 24 m wide roads, NH-152D se 10 min. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Neeche button par click karke aur jaaniye.",
      "prefill": "Hi, FIT industrial plot ki details bhejiye."
+    },
+    {
+     "video": "ads/creatives/fit-reel-04-three-things.mp4",
+     "thumb": "ads/creatives/fit-reel-04-three-things-thumb.jpg",
+     "name": "P9 reel 3 things: planned industrial plot",
+     "headline": "Industrial plots, Rohtak",
+     "text": "For factory owners: 3 things a planned industrial plot gives you. Roads 18 m and 24 m wide, built for trucks. 10 min to NH-152D, 25 min to IMT Rohtak. HRERA registered with DTCP licences. Forteasia Industrial Township, Kalanaur, Rohtak: plots 500 to 4,000 sq yd. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Click the button below to know more.",
+     "prefill": "Hi, I saw the FIT ad. Please share the industrial plot details."
     }
    ]
   },
@@ -404,7 +361,7 @@
   "min_spend_inr": 800,
   "p_best_floor": 0.1,
   "posterior_spend_inr": 3000,
-  "min_active_ads": 4,
+  "min_active_ads": 1,
   "max_active_ads": 8,
   "draws": 4000,
   "_note": "Weekly batch (Monday). Pause at >= 2x target cost per qualified lead with zero qualified, or <10% chance of being best after INR 3,000. Daily: emergency pauses only."
@@ -446,5 +403,6 @@
   "ig_video_native_subtitle",
   "profile_card"
  ],
- "_creative_opt_out_note": "Meta accepts only these keys for CTWA image/video ads (Nov 2026). Generative backgrounds and image expansion are not offered for this ad type."
+ "_creative_opt_out_note": "Meta accepts only these keys for CTWA image/video ads (Nov 2026). Generative backgrounds and image expansion are not offered for this ad type.",
+ "_launch_note": "Rishi asked to run ads on reel 03 Hinglish and reel 04 (18 Nov 2026, 00:15 IST). Only those two ads live."
 }

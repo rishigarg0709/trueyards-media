@@ -934,5 +934,17 @@ def op_rebuild_ads(req):
 OPS["rebuild_ads"] = op_rebuild_ads
 
 
+def op_archive_legacy(req):
+    """Archive the old v1 campaign (paused, never launched) so only the current campaign remains."""
+    name = CFG.get("legacy_campaign_name")
+    c = find_campaign_named(name) if name else None
+    if not c:
+        return {"note": "no legacy campaign"}
+    if c.get("status") == "ACTIVE":
+        return {"blocked": "legacy campaign is active; pause it first"}
+    return {"campaign": name, "result": call(c["id"], {"status": "ARCHIVED"}, "POST")}
+OPS["archive_legacy"] = op_archive_legacy
+
+
 if __name__ == "__main__":
     main()
