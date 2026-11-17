@@ -1,0 +1,26 @@
+{
+ "op": "yt_reply",
+ "ran_at": "2026-11-17T14:21:53.519720Z",
+ "result": {
+  "kind": "youtube#comment",
+  "etag": "_QxxeKuvuZRkWCWGaXgRue7lNpI",
+  "id": "UgxvldSZxpXHXIEA4w14AaABAg.AdJLborb63iAdJdS8lOTCt",
+  "snippet": {
+   "channelId": "UCWUQbt9Rh5Wpgbm3Am7r3tA",
+   "textDisplay": "Thanks, that gap was the heart of it: about 9 m to the next tower when the rules needed 16 m. Should existing residents get a say before any new tower is approved?",
+   "textOriginal": "Thanks, that gap was the heart of it: about 9 m to the next tower when the rules needed 16 m. Should existing residents get a say before any new tower is approved?",
+   "parentId": "UgxvldSZxpXHXIEA4w14AaABAg",
+   "authorDisplayName": "@trueyards_in",
+   "authorProfileImageUrl": "https://yt3.ggpht.com/cxITRsNYQAjilqFoFay4GWM2LNNZcWDNQkYYQAORYseKs3umH2xbH_RA4m9BxNIg0wskzfmFHYQ=s48-c-k-c0x00ffffff-no-rj",
+   "authorChannelUrl": "http://www.youtube.com/@trueyards_in",
+   "authorChannelId": {
+    "value": "UCWUQbt9Rh5Wpgbm3Am7r3tA"
+   },
+   "canRate": true,
+   "viewerRating": "none",
+   "likeCount": 0,
+   "publishedAt": "2026-11-17T14:21:53Z",
+   "updatedAt": "2026-11-17T14:21:53Z"
+  }
+ }
+}
