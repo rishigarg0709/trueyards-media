@@ -52,7 +52,10 @@ def op_yt_short(req):
 
 def op_yt_check(req):
     tok, j = yt_token()
-    if not tok: return {"auth_error": j}
+    if not tok:
+        rt = E("YT_REFRESH_TOKEN") or ""; cid = E("YT_CLIENT_ID") or ""
+        return {"auth_error": j, "diag": {"refresh_token_looks_valid": rt.strip().startswith("1//"), "refresh_token_len": len(rt), "has_whitespace": rt != rt.strip(),
+                "client_id_project_prefix": cid.split("-")[0] if cid else None}}
     return http("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true", headers={"Authorization": f"Bearer {tok}"})
 
 def op_yt_stats(req):
