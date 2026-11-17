@@ -1,0 +1,199 @@
+{
+ "op": "platform_stats",
+ "ran_at": "2026-11-17T13:32:10.769457Z",
+ "result": {
+  "csv": "social/stats/2026-11-17-platforms.csv",
+  "ledger": {
+   "2026-11-16-aarav-pizza": {
+    "fb": "1161377287055094_122157044397349925",
+    "ig": "17969838036213337"
+   },
+   "2026-11-16-boldtype": {
+    "fb": "1161377287055094_122156988111349925",
+    "ig": "17919778947535616"
+   },
+   "2026-11-16-evening": {
+    "fb": "1448226957455937",
+    "ig": "18131037979847506"
+   },
+   "2026-11-17-carousel": {
+    "fb": "1161377287055094_122157230031349925",
+    "ig": "18196361215397123",
+    "threads": "18121356640785387",
+    "x": "2122659521772286162"
+   },
+   "2026-11-17-midday": {
+    "fb": "1696686628913310",
+    "ig": "18470143825186866",
+    "threads": "18131344582846787",
+    "x": "2122599524707471699",
+    "yt": "ovA-AJaIHe0"
+   },
+   "2026-11-16-delhi": {
+    "threads": "17997462963112250",
+    "x": "2122631935981924490",
+    "yt": "XbfkwFvQwMc"
+   },
+   "2026-11-16-noida": {
+    "threads": "18125784509293403",
+    "x": "2122632219831505220",
+    "yt": "8hBDGb49q8A"
+   }
+  },
+  "rows": [
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "threads",
+    "id": "17997462963112250",
+    "views": 10,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "x",
+    "id": "2122631935981924490",
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "yt",
+    "id": "XbfkwFvQwMc",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "threads",
+    "id": "18125784509293403",
+    "views": 3,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "x",
+    "id": "2122632219831505220",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "yt",
+    "id": "8hBDGb49q8A",
+    "views": 426,
+    "likes": 10,
+    "comments": 2,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-carousel",
+    "platform": "threads",
+    "id": "18121356640785387",
+    "views": 60,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-carousel",
+    "platform": "x",
+    "id": "2122659521772286162",
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "threads",
+    "id": "18131344582846787",
+    "views": 11,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "x",
+    "id": "2122599524707471699",
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "yt",
+    "id": "ovA-AJaIHe0",
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   }
+  ],
+  "accounts": {
+   "yt": {
+    "viewCount": "0",
+    "subscriberCount": "0",
+    "hiddenSubscriberCount": false,
+    "videoCount": "3"
+   },
+   "threads_followers": 9
+  },
+  "errors": {}
+ }
+}
