@@ -1,0 +1,236 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:700;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0C2340}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0C2340;color:#fff;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0C2340}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:700 100px/1.05 IN;letter-spacing:-.035em}
+.M{font:700 76px/1.1 IN;letter-spacing:-.03em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:800 290px/1 IN;letter-spacing:-.06em}
+.w{display:inline-block;white-space:pre}
+.c{color:#4FD1FF}
+.hl{background:#4FD1FF;color:#0C2340;padding:0 .14em;border-radius:6px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(4,12,26,.85),0 1px 3px rgba(4,12,26,.6)}
+.lab{font:500 24px/1 PM;letter-spacing:.16em;color:#fff;text-transform:uppercase;white-space:nowrap;text-shadow:0 2px 12px rgba(4,12,26,.9)}
+.labc{font:500 24px/1 PM;letter-spacing:.16em;color:#4FD1FF;text-transform:uppercase;white-space:nowrap;text-shadow:0 2px 12px rgba(4,12,26,.9)}
+.stamp{border:5px solid #4FD1FF;color:#4FD1FF;font:700 60px/1 IN;letter-spacing:.02em;padding:16px 26px 12px;border-radius:6px;background:rgba(12,35,64,.55)}
+#rl{position:absolute;left:70px;top:226px;width:940px;height:100px;z-index:20}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.62)}
+#flash{position:absolute;inset:0;background:#dff6ff;opacity:0;z-index:30}
+#grid{position:absolute;inset:0;z-index:23;opacity:.06;pointer-events:none}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.06;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,26,.36) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<svg id="rl" viewBox="0 0 940 100"></svg>
+<div id="fine"></div>
+<svg id="grid" viewBox="0 0 1080 1920"><defs><pattern id="gp" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#fff" stroke-width="1"/></pattern></defs><rect width="1080" height="1920" fill="url(#gp)"/></svg>
+<div id="vig"></div><div id="flash"></div>
+<svg id="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="11"/><feColorMatrix values="0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .9 0"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+</div>
+<script>
+const WS=/*WS*/[];
+const BEATS=/*BEATS*/[];
+const S=document.getElementById('s');
+const CO='#4FD1FF',INK='#0C2340';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9'\-]/g,'').replace(/'$/,'');
+// word start nearest to an approximate time (robust to repeated words)
+const W=(w,ap)=>{let best=null;WS.forEach(x=>{if(norm(x[0])===w&&(best==null||Math.abs(x[1]-ap)<Math.abs(best-ap)))best=x[1]});if(best==null)throw new Error('word '+w);return best};
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k==='\n'||k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-4)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+const box=(p,src,ox,oy,fit)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;'+(fit||'');b.appendChild(i);b.im=i;return b};
+// dimension line (blueprint): ends with ticks, label, draws on with p in 0..1
+const dim=(p,x1,y1,x2,y2,lab,lx,ly,anchor)=>{const s=svg(p,'',`<g id="g"><line id="l" x1="${x1}" y1="${y1}" x2="${x1}" y2="${y1}" stroke="${CO}" stroke-width="4"/><line id="a" stroke="${CO}" stroke-width="4"/><line id="b" stroke="${CO}" stroke-width="4"/><text id="tx" x="${lx}" y="${ly}" text-anchor="${anchor||'start'}" font-family="PM" font-size="40" letter-spacing="2" fill="${CO}" style="paint-order:stroke" stroke="${INK}" stroke-width="8" stroke-opacity=".55">${lab}</text></g>`);
+ const L=s.querySelector('#l'),A=s.querySelector('#a'),Bb=s.querySelector('#b'),TX=s.querySelector('#tx');const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy),nx=-dy/len*22,ny=dx/len*22;
+ A.setAttribute('x1',x1-nx);A.setAttribute('y1',y1-ny);A.setAttribute('x2',x1+nx);A.setAttribute('y2',y1+ny);Bb.setAttribute('x1',x2-nx);Bb.setAttribute('y1',y2-ny);Bb.setAttribute('x2',x2+nx);Bb.setAttribute('y2',y2+ny);
+ s.set=q=>{const e=eo(q);L.setAttribute('x2',x1+dx*e);L.setAttribute('y2',y1+dy*e);s.style.opacity=cl(q*6);Bb.style.opacity=cl((q-.85)*8);TX.style.opacity=cl((q-.6)*4)};s.set(0);return s};
+const GTOP='linear-gradient(180deg,rgba(9,24,46,.9) 0%,rgba(9,24,46,.55) 20%,rgba(9,24,46,0) 34%';
+const scrim=(p,a=56,b=74)=>mk(p,'sh',`background:${GTOP},rgba(9,24,46,0) ${a}%,rgba(9,24,46,.78) ${b}%,rgba(9,24,46,.94) 100%)`);
+const grade='saturate(.75) brightness(.82) contrast(1.06)';
+// ---------- key times ----------
+const tSand=W('sand',2.1),tEight=W('eight',2.9),tNo=W('no',5.1),tDig=W('dig',7),tLoose=W('loose',9.1),tSev=W('seventy',10.7),tSalty=W('salty',13.5),tTwo=W('two',15.5),tSo=W('so',17.1),tRock=W('rock',19),tThey=W('they',19.7),tGrip=W('grip',20.4),tOne=W('one',21),tNinety=W('ninety-two',22.2),tEach=W('each',23.9),tDriven=W('driven',26.3),tFifty=W('fifty',26.9),tHold=W('they',28.1),tFric=W('friction',29.6),tLike=W('like',30.4),tRice=W('rice',32.7),tOnTop=W('on',33.4),tRaft=W('raft',35.2),tThree=W('three',35.6),tAndS=W('and',37.5),tSalt=W('salt',38.3),tElec=W('electric',39.3),tSo2=W('so',42.3),tGripQ=W('gripping',44.7);
+const HOOKEV=tSand;
+// ===== 1. HOOK: real tower, dimension line "828 m"; on "sand" a scan line cuts the ground away into the blueprint section
+add(0,sc=>{const b=box(sc,'low',540,700);b.im.style.filter=grade;
+ const tint=mk(sc,'sh',`background:${INK};mix-blend-mode:multiply;opacity:.38`);
+ const cut=box(sc,'e1',540,900);cut.style.clipPath='inset(100% 0 0 0)';
+ const sl=mk(sc,'',`left:0;width:1080px;height:6px;background:${CO};box-shadow:0 0 30px ${CO},0 0 8px #fff;opacity:0`);
+ scrim(sc,50,70);
+ const d=dim(sc,150,330,150,1150,'828 m',184,760,'start');
+ const k=mk(sc,'K ts','left:72px;top:1190px;color:#fff','<span class="c">●</span>&nbsp; Burj Khalifa · Dubai');
+ const h=mk(sc,'H ts','left:70px;top:1238px;width:960px','828 m tower.<br>Built on <span id="nh" style="padding:0 .12em;margin-left:-.12em;border-radius:8px">sand.</span>');const nh=h.querySelector('#nh');
+ return t=>{const sk=shake(t,HOOKEV,10);b.style.transform=`translate(${sk}px,${-60+90*eio(t/2.6)}px) scale(${1.12-.03*eo(t/2.6)})`;
+  d.set((t+.15)/1.1);d.style.opacity=1-cl((t-HOOKEV)/.25);
+  const q=eio((t-HOOKEV+.05)/.42);cut.style.clipPath=`inset(${100-100*q}% 0 0 0)`;cut.style.transform=`translate(${sk}px,0) scale(${1.06-.03*eo((t-HOOKEV)/1)})`;
+  sl.style.top=(1920-1920*q-3)+'px';sl.style.opacity=t>=HOOKEV-.05&&q<1?1:cl(1-(t-HOOKEV-.4)/.2)*(q>=1?0:1);
+  const g=cl((t-HOOKEV)/.12);nh.style.background=`rgba(79,209,255,${g})`;nh.style.color=g>.5?INK:'#fff';nh.style.textShadow=g>.5?'none':'';
+  h.style.transformOrigin='0 50%';h.style.transform=`scale(${1+.035*(t>=HOOKEV?Math.exp(-(t-HOOKEV)/.2):0)})`}});
+// ===== 2. 828 m, no bedrock: full cutaway pulls out
+add(tEight-.08,sc=>{const b=box(sc,'e1',540,820);
+ scrim(sc,58,74);
+ const k=mk(sc,'K ts','left:72px;top:1190px;color:#fff','<span class="c">●</span>&nbsp; Height, tallest on Earth');
+ const n=mk(sc,'H ts','left:70px;top:1238px;width:960px;font-size:150px;letter-spacing:-.05em','0 m');
+ const h=T(sc,'H ts','left:70px;top:1238px;width:960px',[['No',tNo,'c',1],['solid',W('solid',5.4)],['\n'],['bedrock.',W('bedrock',5.7)]]);
+ const st=mk(sc,'stamp','left:560px;top:720px;transform-origin:50% 50%','NO BEDROCK');
+ const t0=tEight-.08,tc=W('twenty-eight',3.4)-t0,tn=tNo-t0;
+ return t=>{b.style.transform=`scale(${1.16-.12*eio(t/4.2)})`;
+  const p=eo((t-.05)/(tc+.3));n.textContent=Math.round(828*p)+' m';n.style.opacity=cl((t)/.12)*(1-cl((t-tn+.12)/.15));n.style.color=p>=1?CO:'#fff';fade(k,t,0,.2,8);k.style.opacity=1-cl((t-tn+.12)/.15);
+  rv(h,t);if(t>=W('bedrock',5.7)-t0)slam(st,t,W('bedrock',5.7)-t0,1.9,-4);else st.style.opacity=0}},true);
+// ===== 3. Dig under Burj Khalifa (real night photo)
+add(tDig-.08,sc=>{const b=box(sc,'night',540,900);b.im.style.filter='saturate(.85) brightness(.9)';
+ scrim(sc,56,74);
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px',[['Dig',tDig],['under',W('under',7.3)],['\n'],['Burj',W('burj',7.7),'c'],['Khalifa.',W('khalifa',7.9),'c']]);
+ return t=>{b.style.transform=`scale(${1.04+.07*eo(t/2.3)}) translateY(${-20*eio(t/2.3)}px)`;rv(h,t)}});
+// ===== 4. Loose sand, then ~70 m of weak sandstone: push into the ground layers, labels on the section
+add(tLoose-.12,sc=>{const b=box(sc,'e1',540,1000);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(9,24,46,0) 60%,rgba(9,24,46,.8) 76%,rgba(9,24,46,.94) 100%)');
+ const L1=mk(sc,'lab','left:640px;top:690px','— Loose sand');const L2=mk(sc,'labc','left:600px;top:1010px','— Weak sandstone');
+ const h=T(sc,'M ts','left:70px;top:1300px;width:960px',[['Loose',tLoose],['sand,',W('sand',9.5)],['then',W('then',10.2)],['\n'],['~70 m',tSev,'hl',1],['of',W('of',11.5)],['weak',W('weak',11.6)],['rock.',W('sandstone',12.5)]]);
+ const t0=tLoose-.12;
+ return t=>{b.style.transform=`translateY(${-160-200*eio(t/4)}px) scale(${1.32+.06*eio(t/4)})`;fade(L1,t,.1,.25,10);fade(L2,t,tSev-t0,.25,10);rv(h,t)}});
+// ===== 5. Salty water 2.5 m down (groundwater cutaway, pan)
+add(tSalty-.1,sc=>{const b=box(sc,'e5',540,620);
+ scrim(sc,58,74);
+ const wl=mk(sc,'labc','left:640px;top:560px','— Groundwater');
+ const h=T(sc,'M ts','left:70px;top:1290px;width:960px',[['Salty',tSalty,'c'],['water,',W('water',14.5)],['\n'],['just',W('just',15.3)],['2.5 m',tTwo,'hl',1],['down.',W('down',16.5)]]);
+ const t0=tSalty-.1;
+ return t=>{b.style.transform=`translateX(${-40+60*eio(t/3.6)}px) scale(${1.3-.06*eio(t/3.6)})`;fade(wl,t,.2,.25,10);rv(h,t)}},true);
+// ===== 6. So the engineers stopped looking for rock (rock layer, struck through)
+add(tSo-.08,sc=>{const b=box(sc,'e2',540,1000);b.im.style.filter='brightness(.75)';
+ scrim(sc,56,72);
+ const h=T(sc,'M ts','left:70px;top:1290px;width:960px',[['So',tSo],['the',W('the',17.6)],['engineers',W('engineers',17.8)],['\n'],['stopped',W('stopped',18.3)],['looking',W('looking',18.6)],['for',W('for',18.9)],['rock.',tRock,'c']]);
+ const ln=mk(sc,'',`left:0;height:8px;background:${CO};border-radius:4px;transform-origin:0 50%;box-shadow:0 0 18px rgba(79,209,255,.6)`);
+ const t0=tSo-.08;
+ return t=>{b.style.transform=`scale(${1.35+.06*eio(t/2.6)}) translateY(${-30*eio(t/2.6)}px)`;rv(h,t);
+  const sp=h.ts[h.ts.length-1];const p=eo((t-(tRock-t0)-.3)/.25);if(sp.offsetWidth){ln.style.left=(70+sp.offsetLeft-4)+'px';ln.style.top=(1290+sp.offsetTop+sp.offsetHeight*.55)+'px';ln.style.width=(sp.offsetWidth+8)+'px'}ln.style.transform=`scaleX(${p})`;ln.style.opacity=p>0?1:0}});
+// ===== 7. They used GRIP (beat drop, kinetic type on the blueprint)
+add(tThey-.06,sc=>{const b=box(sc,'e4',540,1000);b.im.style.filter='blur(6px) brightness(.38) saturate(.6)';
+ const o=mk(sc,'sh',`background:${INK};opacity:.45`);
+ const h=T(sc,'M ts','left:70px;top:620px;width:960px',[['Not',tThey],['rock.',W('used',20)]]);
+ const g=mk(sc,'','left:62px;top:760px;font:800 300px/1 IN;letter-spacing:-.06em;color:'+CO+';text-shadow:0 0 60px rgba(79,209,255,.35)','GRIP.');
+ const sub=mk(sc,'K ts','left:74px;top:1100px;color:#fff','Friction, not bedrock');
+ const t0=tThey-.06,tg=tGrip-t0;
+ return t=>{const sk=shake(t,tg,12);b.style.transform=`translate(${sk}px,0) scale(${1.1+.05*eo(t/2)})`;rv(h,t);if(t>=tg)slam(g,t,tg,1.7,0);else g.style.opacity=0;fade(sub,t,tg+.25,.25,10)}});
+// ===== 8. 192 concrete piles: top-down grid, rings pop on pile heads, counter
+const PX=[245,389,533,677,821],PY=[490,636,781,926,1071,1216];
+add(tOne-.08,sc=>{const b=box(sc,'e6',540,850);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(9,24,46,0) 62%,rgba(9,24,46,.8) 74%,rgba(9,24,46,.94) 100%)');
+ let rings='';PY.forEach((y,r)=>PX.forEach((x,c)=>{rings+=`<circle class="rg" data-i="${r*5+c}" cx="${x}" cy="${y}" r="40" fill="none" stroke="${CO}" stroke-width="5"/>`}));
+ const R=svg(sc,'',rings);const RS=[...R.querySelectorAll('.rg')];
+ const k=mk(sc,'K ts','left:72px;top:1290px;color:#fff','<span class="c">●</span>&nbsp; Bored concrete piles');
+ const n=mk(sc,'N ts','left:62px;top:1325px;color:#fff;font-size:250px','0');
+ const pl=mk(sc,'M ts','left:560px;top:1440px;font-size:84px','piles');
+ const t0=tOne-.08,t1=W('ninety-two',22.2)-t0+.35;
+ return t=>{const z=1.02+.08*eio(t/2.9);b.style.transform=`scale(${z})`;R.style.transform=`scale(${z})`;R.style.transformOrigin='540px 850px';
+  RS.forEach((c,i)=>{const ti=.1+i*.035;const p=eb((t-ti)/.25);c.style.opacity=cl((t-ti)/.06);c.setAttribute('r',40*(.3+.7*p))});
+  const p=eo((t-.05)/t1);n.textContent=Math.round(192*p);n.style.color=p>=1?CO:'#fff';fade(k,t,0,.2,8);fade(pl,t,.2,.25,10)}},true);
+// ===== 9. Each 1.5 m wide: close on pile heads, dimension across one head
+add(tEach-.08,sc=>{const b=box(sc,'e6',533,781);
+ scrim(sc,60,74);
+ const d=dim(sc,0,0,0,0,'Ø 1.5 m',0,0,'middle');sc.removeChild(d);
+ // pile head at (533,781) scaled 1.4 about itself; head ~58px -> ~82px
+ const D2=dim(sc,503,775,573,775,'',538,0,'middle');
+ const h=T(sc,'M ts','left:70px;top:1300px;width:960px',[['Each',tEach],['one',W('one',24.6)],['\n'],['1.5 m',W('half',25),'hl',1],['wide.',W('wide',25.6)]]);
+ const t0=tEach-.08;
+ return t=>{const z=1.18+.2*eio(t/2.4);b.style.transform=`scale(${z})`;D2.style.transform=`scale(${z})`;D2.style.transformOrigin='533px 781px';D2.set((t-(W('half',25)-t0)+.2)/.5);rv(h,t)}});
+// ===== 10. Driven ~50 m down: single pile, dimension draws down its length
+add(tDriven-.1,sc=>{const b=box(sc,'e2',540,700);
+ const gr=mk(sc,'sh','background:'+GTOP+',rgba(9,24,46,0) 64%,rgba(9,24,46,.8) 76%,rgba(9,24,46,.94) 100%)');
+ const d=dim(sc,700,250,700,1300,'≈ 50 m',740,800,'start');
+ const h=T(sc,'M ts','left:70px;top:1380px;width:960px',[['Driven',tDriven],['about',W('about',26.6)],['\n'],['50 m',tFifty,'hl',1],['down.',W('down',27.6)]]);
+ const t0=tDriven-.1;
+ return t=>{b.style.transform=`scale(${1.04+.04*eio(t/2)}) translateY(${-24*eio(t/2)}px)`;d.set((t-(tFifty-t0)+.4)/.8);rv(h,t)}});
+// ===== 11. They hold mostly by friction (sand against the concrete face)
+add(tHold-.08,sc=>{const b=box(sc,'e4',560,900);
+ scrim(sc,58,74);
+ let ar='';for(let i=0;i<5;i++){const x=300+i*130;ar+=`<g class="ar" transform="translate(${x},1040)"><path d="M0 0 L0 -90 M-18 -66 L0 -90 L18 -66" fill="none" stroke="${CO}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>`}
+ const A=svg(sc,'',ar);const AS=[...A.querySelectorAll('.ar')];
+ const h=T(sc,'M ts','left:70px;top:1290px;width:960px',[['They',tHold],['hold',W('hold',28.7)],['mostly',W('mostly',29.1)],['\n'],['by',W('by',29.5)],['friction.',tFric,'hl',1]]);
+ const t0=tHold-.08,tf=tFric-t0;
+ return t=>{b.style.transform=`scale(${1.06+.06*eio(t/2.4)})`;rv(h,t);AS.forEach((a,i)=>{const ti=tf-.1+i*.07;const p=eo((t-ti)/.3);a.style.opacity=cl((t-ti)/.1);a.setAttribute('transform',`translate(${300+i*130},${1060-30*p})`)})}});
+// ===== 12. Like a hand in a sack of rice (macro push-in on grains)
+add(tLike-.08,sc=>{const b=box(sc,'e4',540,1500);
+ scrim(sc,52,70);
+ const h=T(sc,'M ts','left:70px;top:1270px;width:960px',[['Like',tLike],['pushing',W('pushing',30.8)],['your',W('your',31.1)],['hand',W('hand',31.3),'c'],['\n'],['into',W('into',32)],['a',W('a',32.2)],['sack',W('sack',32.3)],['of',W('of',32.6)],['rice.',tRice,'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.12+.22*eio(t/2.9)})`;rv(h,t)}});
+// ===== 13. On top: a concrete raft (rebar mat), tonnage tag
+add(tOnTop-.08,sc=>{const b=box(sc,'e3',540,800);
+ scrim(sc,56,72);
+ const k=mk(sc,'K ts','left:72px;top:1210px;color:#fff','<span class="c">●</span>&nbsp; Foundations: ~110,000 t of concrete');
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px',[['On',tOnTop],['top:',W('top',34.1)],['\n'],['a',W('a',34.6)],['concrete',W('concrete',34.7)],['raft.',tRaft,'c']]);
+ return t=>{b.style.transform=`scale(${1.16-.08*eio(t/2.4)})`;fade(k,t,.3,.25,10);rv(h,t)}},true);
+// ===== 14. 3.7 m thick: raft edge in the section, vertical dimension + counter
+add(tThree-.12,sc=>{const b=box(sc,'e1',540,650);
+ scrim(sc,58,74);
+ const d=dim(sc,880,0,880,0,'',0,0);sc.removeChild(d);
+ const D3=dim(sc,330,584,330,664,'3.7 m',352,640,'start');
+ const n=mk(sc,'N ts','left:62px;top:1240px;color:#fff;font-size:250px','0.0');
+ const m=mk(sc,'M ts','left:445px;top:1350px;font-size:84px','m thick');
+ const t0=tThree-.12,te=W('thick',36.9)-t0;
+ return t=>{const z=1.3+.08*eio(t/1.8);b.style.transform=`scale(${z})`;D3.style.transform=`scale(${z})`;D3.style.transformOrigin='540px 650px';D3.set((t-.1)/.5);
+  const p=eo((t-.05)/te);n.textContent=(3.7*p).toFixed(1);n.style.color=p>=1?CO:'#fff';fade(m,t,.15,.25,10)}});
+// ===== 15. And the salt? An electric current protects the steel (current lines pulse under the raft)
+add(tAndS-.08,sc=>{const b=box(sc,'e5',540,760);
+ scrim(sc,56,72);
+ let pa='';for(let i=0;i<4;i++){const y=700+i*70;pa+=`<path class="cu" d="M60 ${y} C 300 ${y-30}, 520 ${y+30}, 760 ${y} S 1000 ${y-20}, 1080 ${y}" fill="none" stroke="${CO}" stroke-width="5" stroke-linecap="round"/>`}
+ const C=svg(sc,'filter:drop-shadow(0 0 12px rgba(79,209,255,.8))',pa);const CS=[...C.querySelectorAll('.cu')];
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px',[['And',tAndS],['the',W('the',38.2)],['salt?',tSalt,'c',1]]);
+ const h2=T(sc,'M ts','left:70px;top:1270px;width:960px',[['An',W('an',39)],['electric',tElec,'hl',1],['current',W('current',39.7)],['\n'],['protects',W('protecting',41.1)],['the',W('the',41.5)],['steel.',W('steel',41.6)]]);
+ const t0=tAndS-.08,te=tElec-t0;
+ return t=>{b.style.transform=`scale(${1.12+.1*eio(t/4.6)})`;rv(h,t,W('an',39)-.12);rv(h2,t);
+  CS.forEach((c,i)=>{c.style.strokeDasharray='60 40';c.style.strokeDashoffset=-(t*260+i*37);c.style.opacity=cl((t-te-i*.08)/.25)*(.6+.4*Math.abs(Math.sin(t*5+i)))})}});
+// ===== 16. So is it standing on sand... or gripping it? (real sunset skyline), loops to frame 0
+add(tSo2-.08,sc=>{const b=box(sc,'sunset',560,800);b.im.style.filter='saturate(.85) brightness(.82)';
+ scrim(sc,46,64);
+ const h=T(sc,'H ts','left:70px;top:1060px;width:960px;font-size:94px',[['Standing',W('standing',43.2)],['on',W('on',43.7)],['sand...',W('sand',43.9)],['\n'],['or',W('or',44.6)],['gripping',tGripQ,'hl',1],['it?',W('it',45.1)]]);
+ const f=mk(sc,'B ts','left:72px;top:1340px;width:900px;color:#fff;opacity:.95','Send this to the friend<br>who has been to <span class="c">Dubai</span>.');
+ const t0=tSo2-.08,tq=W('it',45.1)-t0;
+ const lp=box(sc,'low',540,700);lp.im.style.filter=grade;lp.style.opacity=0;const lt=mk(sc,'sh',`background:${INK};mix-blend-mode:multiply;opacity:0`);const ls=scrim(sc,50,70);const lk=mk(sc,'K ts','left:72px;top:1190px;color:#fff','<span class="c">●</span>&nbsp; Burj Khalifa · Dubai');const lh=mk(sc,'H ts','left:70px;top:1238px;width:960px','828 m tower.<br>Built on sand.');
+ return t=>{b.style.transform=`scale(${1.04+.05*eio(t/5)})`;rv(h,t);fade(f,t,tq+.3);const q=cl((t-(END-t0-.45))/.4);lp.style.opacity=q;lp.style.transform='translate(0,-60px) scale(1.12)';lt.style.opacity=.38*q;ls.style.opacity=lk.style.opacity=lh.style.opacity=q;h.style.opacity=f.style.opacity=1-q}});
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+// ---------- depth gauge device (0 to 75 m below ground) ----------
+const RL=document.getElementById('rl');const X=m=>20+m*12;
+const MK=[[2.5,'2.5 water',tTwo],[50,'50 piles',tFifty],[70,'70 weak rock',tSev]];
+let rh=`<text x="20" y="22" font-family="PM" font-size="19" letter-spacing="3" fill="#fff" opacity=".75">DEPTH BELOW GROUND, M</text><rect x="20" y="52" width="900" height="3" fill="#fff" opacity=".3"/><rect id="rf" x="20" y="51" width="0" height="5" fill="${CO}"/>`;
+for(let m=0;m<=75;m+=5)rh+=`<rect x="${X(m)-1}" y="${m%25?49:44}" width="2" height="${m%25?9:17}" fill="#fff" opacity=".4"/>`;
+MK.forEach((m,i)=>{rh+=`<circle id="rc${i}" cx="${X(m[0])}" cy="53.5" r="8" fill="${INK}" stroke="#fff" stroke-width="3" opacity=".5"/><text id="rt${i}" x="${X(m[0])}" y="90" text-anchor="${i==0?'start':(i==2?'end':'middle')}" font-family="PM" font-size="19" fill="${CO}" opacity="0">${m[1]}</text>`});
+RL.innerHTML=rh;
+const rOn=tLoose-.12,rOff=tOnTop-.08;
+const rlU=t=>{RL.style.opacity=t>=rOn&&t<rOff?cl((t-rOn)/.3)*(1-cl((t-rOff+.25)/.25)):0;
+ let fx=0;MK.forEach((m,i)=>{const a=t>=m[2];const c=document.getElementById('rc'+i),tx=document.getElementById('rt'+i);c.setAttribute('fill',a?CO:INK);c.setAttribute('stroke',a?CO:'#fff');c.setAttribute('opacity',a?1:.5);c.setAttribute('r',a?8+6*Math.exp(-(t-m[2])/.2):8);tx.setAttribute('opacity',a?1:0);if(a)fx=Math.max(fx,X(m[0])-20)});
+ document.getElementById('rf').setAttribute('width',fx)};
+const AIL='AI visualisation.';
+const FINE=[[0,'Photo: Pavlo Antonio / Unsplash. Height 828 m (Arabian Business).'],[HOOKEV,AIL+' Cutaway, not to scale.'],[tDig-.08,'Photo: Timo Volz / Unsplash.'],[tLoose-.12,AIL+' Ground profile: Poulos and Bunce foundation design (via TheConstructor).'],[tSalty-.1,AIL+' Groundwater about 2.5 m below ground level.'],[tSo-.08,AIL],[tOne-.08,AIL+' 192 bored piles, 1.5 m diameter, about 50 m deep (Bunce and Poulos, via GeoPrac).'],[tHold-.08,AIL+' Load carried mostly by skin friction along the pile shaft.'],[tOnTop-.08,AIL+' Raft 3.7 m thick; foundations used about 45,000 m³ of concrete, over 110,000 t (Arabian Business).'],[tAndS-.08,AIL+' Cathodic protection system under the raft (Arabian Business).'],[tSo2-.08,'Photo: Ahmed Aldaie / Unsplash. Educational content, not advice.']];
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ rlU(t);
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.12*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,tGrip].forEach((e,j)=>{if(t>=e)fl=Math.max(fl,(j<1?.45:.35)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+};
+</script></body></html>
