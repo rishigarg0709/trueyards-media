@@ -62,13 +62,13 @@ Device: a height ruler on the right edge (0 to 210 m) with the 37 m line drawn i
 | 0.0 | Impossible hero: Haussmann rooftops with a glass skyscraper cluster in the middle; on the beat at 1.4 s the towers wipe away (mask) to the flat rooftops of evening-2 | NEW 2026-11-18-evening-1 (crop A wide) into NEW 2026-11-18-evening-2 (crop A wide, same angle) | push-in 4%, mask wipe on "flat" |
 | 2.5 | Real Paris rooftops with the Eiffel Tower and Invalides | real photo library/stock/d1118-par-rooftops-eiffel.jpg (Martti Salmi / Unsplash) | slow pan right |
 | 4.5 | Real aerial over the Louvre and old blocks, taken from Montparnasse | real photo library/stock/d1118-par-louvre-aerial.jpg (Oscar Brouchot / Unsplash) | push-in |
-| 6.5 | "Blame one tower": real Montparnasse looming over rooftops | real photo library/stock/d1118-par-tower-rooftops.jpg (Adrien / Unsplash) | slow tilt up |
-| 9.0 | Montparnasse facade, counter to 210 m on the ruler | real photo library/stock/d1118-par-montparnasse.jpg (Ante Samarzija / Unsplash) | tilt up |
+| 6.5 | "Blame one tower": real Montparnasse, low angle, wide (sky and full height) | real photo library/stock/d1118-par-montparnasse.jpg (Ante Samarzija / Unsplash, crop A wide) | slow tilt up |
+| 9.0 | Montparnasse facade detail, counter to 210 m on the ruler | real photo library/stock/d1118-par-montparnasse.jpg (crop B: push-in on the dark glass grid) | push-in |
 | 11.5 | Impossible hero crop: the towers among rooftops, desaturating ("hated") | 2026-11-18-evening-1 (crop B: push-in on the tower cluster) | push-in |
 | 14.0 | Still life: white museum-board model of Haussmann blocks with a brass scale rule, a thin emerald thread at the roofline (37 m) | NEW 2026-11-18-evening-3 (crop A wide) | push-in |
 | 16.5 | Thread close-up across rooftops of the model | 2026-11-18-evening-3 (crop B detail) | pan right along the thread |
 | 19.0 | Flat rooftops, the emerald 37 m line drawn across the real skyline | 2026-11-18-evening-2 (crop B pan across rooftops) | pan left |
-| 21.5 | "The towers moved": real La Défense towers | real photo library/stock/d1118-par-ladefense.jpg (Mathias Reding / Unsplash) | push-in |
+| 21.5 | "The towers moved": real La Défense towers | real photo library/stock/d1118-par-ladefense.jpg (Mathias Reding / Unsplash; crop or blur the small red bank logo on the centre tower) | push-in |
 | 24.0 | La Défense across the water, map line "city limits" drawn on | real photo library/stock/d1118-par-ladefense-water.jpg (Julio Wolf / Unsplash) | slow pan |
 | 26.5 | Overhead map style: Paris ring and La Défense just outside (motion graphic over blurred 2026-11-18-evening-2 crop C) | motion graphic + evening-2 (crop C, top-down-ish blurred) | zoom out |
 | 29.0 | "2010: cap loosened": model blocks with a glass pyramid tower model rising among them | NEW 2026-11-18-evening-4 (crop A wide) | tilt up |
@@ -76,9 +76,9 @@ Device: a height ruler on the right edge (0 to 210 m) with the 37 m line drawn i
 | 34.5 | Real Paris rooftops again, ruler pinned at 37 m, "2023: cap is back" | real photo library/stock/d1118-par-rooftops-eiffel.jpg (crop on rooftops) | pull-out |
 | 37.0 | Wooden ballot box with blank paper ballots | NEW 2026-11-18-evening-5 (crop A wide) | push-in |
 | 39.0 | Ballot slot close | 2026-11-18-evening-5 (crop B detail) | pan |
-| 41.0 | "One tower made Paris flat": real Montparnasse vs flat rooftops split | d1118-par-tower-rooftops + evening-2 | split slide |
+| 41.0 | "One tower made Paris flat": zinc rooftops with chimney steam and the Eiffel Tower far off | real photo library/stock/d1118-par-tower-rooftops.jpg (Adrien / Unsplash; note: this photo shows rooftops and the Eiffel Tower, not Montparnasse) | slow push |
 | 44.0 | Back to evening-1 crop A (loop), question card | 2026-11-18-evening-1 (crop A) | push-in matching frame 0 |
-Real photos make up 7 of about 19 shots (more than a third), per editing standard 13.
+Real photos make up 8 of about 19 shots (more than a third), per editing standard 13.
 
 ## Images (batch prep-2026-11-18)
 - 2026-11-18-evening-1: impossible hero, Haussmann rooftops with glass skyscraper cluster in the centre (crops: wide hero; push-in on cluster; loop end frame)
@@ -101,7 +101,10 @@ In 2010 the cap was loosened to 180 m for offices. The 180 m Tour Triangle was v
 Send this to the friend who has been to Paris, or the one who says cities should build up.
 
 Sources: Euronews (Jun 2023), Planetizen, Dezeen, Paris.fr, Wikipedia (Tour Triangle, La Défense).
-Photos: Martti Salmi, Oscar Brouchot, Adrien, Ante Samarzija, Mathias Reding, Julio Wolf / Unsplash. Some visuals are AI visualisation.
+Photos: Ante Samarzija, Martti Salmi, Oscar Brouchot, Adrien, Mathias Reding, Julio Wolf / Unsplash. Some visuals are AI visualisation.
 Educational content, not advice.
 
 #paris #skyscrapers #urbanplanning #architecture #realestate
+
+## Real photo check (planner, 2026-11-17 22:35 IST)
+All 6 fetched (2600 px wide, 3545 to 4622 px tall). d1118-par-montparnasse is the real tower (low angle, sunset). d1118-par-tower-rooftops shows zinc rooftops and the Eiffel Tower, not Montparnasse (shot list adjusted). d1118-par-ladefense has a small bank logo on one tower: crop or blur it. d1118-par-ladefense-water shows La Défense across the Seine, good for the "just outside the city" beat.
