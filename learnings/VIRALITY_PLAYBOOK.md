@@ -80,7 +80,7 @@ Formats to rotate: how X works, map zoom (space to street), timeline, versus spl
 - These benchmarks are weak industry heuristics; our own rolling medians are the real bar.
 
 Breakout rule: at 6 h, reach at least 3x the 14-day median for that format and age, sends per reach at least 1%, hold at or above median. Then: reply to every comment, share to Stories, make it the boost candidate, and queue a follow-up (Part 2 or a deeper carousel) within 24 to 48 h. Never re-upload the same file.
-Winner remix: a post in our top 10% for sends gets 2 to 3 derivatives within 2 weeks (same topic new hook; same hook new topic; carousel deep-dive). Change at least the hook, first 3 s and voice.
+Winner remix: a post in our top 10% for sends gets 2 to 3 derivatives, the first no sooner than 14 days later and never on a day with a similar theme (Rishi, 2026-11-18: variety first) (same topic new hook; same hook new topic; carousel deep-dive). Change at least the hook, first 3 s and voice.
 
 - Funnel-stage diagnosis (adopted 16 Nov 2026 from the PostPlus skills review): diagnose the stage before prescribing a fix. Low reach for its format = distribution question (hook, cover, posting time, audio). Good reach but low hold, saves or sends = message or format question (payoff, structure, pacing). Good engagement but few follows or profile visits per reach = journey question (bio, grid consistency, series promise, end card). Each diagnosis is a hypothesis; name one alternative explanation.
 
