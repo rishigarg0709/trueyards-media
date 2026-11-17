@@ -1,0 +1,24 @@
+{
+ "op": "delete_paused",
+ "ran_at": "2026-11-17T19:25:46.832590Z",
+ "result": {
+  "120255647260530547": {
+   "name": "FIT R - Reminder after WhatsApp",
+   "result": {
+    "success": true
+   }
+  },
+  "120255647264920547": {
+   "name": "FIT U - Unreachable on WhatsApp",
+   "result": {
+    "success": true
+   }
+  },
+  "120255647268530547": {
+   "name": "FIT W - Warm-up before WhatsApp",
+   "result": {
+    "success": true
+   }
+  }
+ }
+}
