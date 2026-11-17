@@ -1,0 +1,87 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-17T14:00:08.665194Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {
+   "A": {
+    "result": {
+     "error": {
+      "message": "Invalid parameter",
+      "type": "OAuthException",
+      "code": 100,
+      "error_data": "{\"blame_field\":\"targeting\"}",
+      "error_subcode": 1487110,
+      "is_transient": false,
+      "error_user_title": "Target location can't be used",
+      "error_user_msg": "The geographical radius that you've selected isn't within the specified bounds.",
+      "fbtrace_id": "AZDkz6Gf6wUgZvELbpbBUo0"
+     }
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Small business (business and finance)",
+      "Manufacturing (industry)",
+      "Warehouse (industry)",
+      "Logistics (business and finance)",
+      "Entrepreneurship (business and finance)",
+      "industrial engineering (engineering)",
+      "Supply chain management (business and finance)",
+      "Factory (manufacturing)",
+      "Small business owners"
+     ]
+    },
+    "earlier_errors": [
+     "The geographical radius that you've selected isn't within the specified bounds.",
+     "The geographical radius that you've selected isn't within the specified bounds."
+    ]
+   },
+   "B": {
+    "result": {
+     "error": {
+      "message": "Invalid parameter",
+      "type": "OAuthException",
+      "code": 100,
+      "error_data": "{\"blame_field\":\"targeting\"}",
+      "error_subcode": 1487110,
+      "is_transient": false,
+      "error_user_title": "Target location can't be used",
+      "error_user_msg": "The geographical radius that you've selected isn't within the specified bounds.",
+      "fbtrace_id": "Ac2sgXUWJnafXBhJrm11ToC"
+     }
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [
+      "Real estate investing",
+      "Real estate"
+     ],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Property investing (investing)",
+      "Investment (business and finance)",
+      "commercial property (property)",
+      "Land"
+     ]
+    },
+    "earlier_errors": [
+     "The geographical radius that you've selected isn't within the specified bounds.",
+     "The geographical radius that you've selected isn't within the specified bounds."
+    ]
+   }
+  },
+  "ads": {},
+  "campaign": {
+   "id": "120255642579300547"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}
