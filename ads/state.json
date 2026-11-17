@@ -1,5 +1,12 @@
 {
- "ads": {},
+ "ads": {
+  "A1 permanent address": "120255643165860547",
+  "A2 built for industry": "120255643166300547",
+  "A3 right plot": "120255643166730547",
+  "B1 right plot": "120255643166850547",
+  "B2 built for industry": "120255643167270547",
+  "B3 permanent address": "120255643167440547"
+ },
  "adsets": {
   "A": "120255643066620547",
   "B": "120255643070240547"
