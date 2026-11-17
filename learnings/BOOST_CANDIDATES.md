@@ -1,6 +1,6 @@
 # Boost candidates (kept current by the daily learning run)
 
-Rule (Rishi, 2026-11-16): organic TrueYards posts 2 to 10 days old, top 10% for sends per reach and hold ratio (until shares appear widely, lowest skip plus best hold). Never Forteasia or FIT. At most 2 ads active, at most 1 new boost per day.
+Rule (Rishi, 2026-11-16, updated 2026-11-17: always-on, see BOOST_POLICY.md): organic TrueYards reels 1 to 10 days old, top 10% for sends per reach and hold ratio (until shares appear widely, lowest skip plus best hold). Never Forteasia or FIT. At most 2 ads active, at most 1 new boost per day.
 
 ## 2026-11-17 (pull 05:09 UTC)
 No post qualifies today, so no boost.
