@@ -52,3 +52,13 @@ Full rules: `strategy/CHANNEL_COORDINATION.md` in the Claude Project.
 - Excluded from ads: Not Interested, opted out, Site Visit Planned and Visit Done (config `exclude_audience_names`, refreshed daily by the Claude run with `{"op":"audiences","lists":{"<name>":[sha256,...]}}`).
 - Audiences (warm-up halves per cell, unreachable, exclusions) are built by the WhatsApp Lambda straight into Meta. No phone numbers or hashes in this public repo.
 - Joint wave: warm-up ads 4 days before the autopilot's first touch in a cell, reminder ads during follow-ups, 50/50 holdout per cell to measure lift.
+
+## v2 structure (17 Nov 2026, from the Meta ads research)
+Rules: strategy/META_ADS_PLAYBOOK.md in the Claude Project.
+- Campaign "FIT CTWA Leads v2": OUTCOME_LEADS, WhatsApp destination, lowest cost, Advantage+ placements. v1 (A/B, Engagement) stays paused and is never launched.
+- One ad set, P. Advantage+ audience; hard controls are the NCR and Haryana belts, min age 25 and the exclusion lists. Interests are only suggestions. No language control.
+- Ads P1 to P7 are distinct concepts (3 statics, 4 reels incl. EN and HI voiceovers). Keep 4 to 8 live.
+- Welcome message: 4 qualifying ice breakers, falling back to an angle-specific prefill.
+- Opt out of generative creative enhancements (creative_opt_out), falling back without the opt-outs if Meta rejects a key.
+- Daily run: caps, emergency pauses, under-delivery flag. Monday batch: tester pauses (2x target cost per qualified lead with zero qualified, or under 10% chance of being best after INR 3,000, floor 4 live ads) plus fresh concepts.
+- Every creative: HRERA number and www.haryanarera.gov.in top right; videos say the number aloud.
