@@ -45,6 +45,8 @@ All three must be yes.
 
 ## 4. Hook archetypes that work for property and money
 
+Visual rule for every archetype (Rishi, 2026-11-17): pair the hook line with an impossible-but-real hero image (a skyscraper in the middle of Lutyens Delhi; the twin towers between two real buildings). Hyper-realism beats animation and diagrams. See STYLE_SYSTEM.md "Hero shot rule".
+
 Pick one per reel. Rotate them across reels.
 
 1. **Contradiction.** Two true facts that seem impossible together. "India's capital. Almost no skyscrapers."
