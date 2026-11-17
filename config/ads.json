@@ -6,6 +6,12 @@
   "whatsapp_number": "+919220607264",
   "campaign_name": "FIT CTWA v1",
   "special_ad_categories": [],
+  "coordination": {
+    "_note": "Rules agreed with Rishi 17 Nov 2026. See strategy/CHANNEL_COORDINATION.md in the Claude Project.",
+    "budget_is_additional": "Ads money is new money. The WhatsApp autopilot keeps its own wallet and budget (INR 1,000/day). This agent never reads, lowers or reallocates it.",
+    "shared_lead_record": "Leads sheet keyed by phone. Ads tag source=ctwa + ad id; WhatsApp tags source=wa_outbound + cell.",
+    "lists_uploaded": "Only people who contacted FIT (bot chatters, Leads sheet rows), hashed. Never the scraped database."
+  },
   "budget_approved": false,
   "launch_approved": false,
   "daily_cap_inr": 700,
@@ -197,5 +203,9 @@
       ],
       "ads": []
     }
+  ],
+  "exclude_audience_names": [
+    "FIT exclude: not interested or opted out",
+    "FIT exclude: visit planned or done"
   ]
 }

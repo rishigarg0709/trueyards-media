@@ -129,11 +129,21 @@ def behaviors(names):
         (ids.append({"id": hit["id"], "name": hit["name"]}) if hit else missing.append(n))
     return ids, missing
 
+def audience_ids_by_name(names):
+    if not names:
+        return []
+    have = {a["name"]: a["id"] for a in call(f"{ACT}/customaudiences", {"fields": "id,name", "limit": 200}).get("data", [])}
+    return [have[n] for n in names if n in have]
+
 def targeting(aset, audience_ids=None):
     notes = {}
     t = {"age_min": aset["age_min"], "age_max": aset["age_max"],
          "publisher_platforms": ["facebook", "instagram"],
          "targeting_automation": {"advantage_audience": int(aset.get("advantage_audience", 0))}}
+    ex = audience_ids_by_name(CFG.get("exclude_audience_names", []))
+    if ex:
+        t["excluded_custom_audiences"] = [{"id": i} for i in ex]
+    notes["excluded_audiences"] = len(ex)
     if audience_ids:
         t["geo_locations"] = {"regions": [], "countries": ["IN"]}
         t["custom_audiences"] = [{"id": i} for i in audience_ids]
@@ -465,13 +475,18 @@ def op_audiences(req):
             out[name] = have[name]; continue
         out[name] = call(f"{ACT}/customaudiences", {"name": name, "rule": {"inclusions": {"operator": "or", "rules": [rule]}},
                          "prefill": "true"}, "POST")
-    hashed = req.get("phones_sha256") or []
-    if hashed:
-        name = "FIT WhatsApp chatters"
+    lists = dict(req.get("lists") or {})
+    if req.get("phones_sha256"):
+        lists["FIT WhatsApp chatters"] = req["phones_sha256"]
+    for name, hashed in lists.items():
+        if any(len(h) != 64 for h in hashed):
+            out[name] = {"error": "send SHA-256 hashes only, never plain numbers"}; continue
         a = have.get(name) or call(f"{ACT}/customaudiences", {"name": name, "subtype": "CUSTOM", "customer_file_source": "USER_PROVIDED_ONLY"}, "POST")
         out[name] = a
         if "id" in a:
-            out[name + " upload"] = call(f"{a['id']}/users", {"payload": {"schema": "PHONE_SHA256", "data": hashed}}, "POST")
+            # replace the list each time so people who moved stage drop out
+            out[name + " upload"] = call(f"{a['id']}/usersreplace", {"payload": {"schema": "PHONE_SHA256", "data": hashed},
+                                         "session": {"session_id": int(time.time()), "batch_seq": 1, "last_batch_flag": True}}, "POST")
     return out
 
 def op_enable_retargeting(req):

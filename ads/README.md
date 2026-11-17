@@ -39,3 +39,11 @@ North star: cost per site visit done, then cost per booking, against brokerage e
 
 ## Copy rules
 FIT facts only from `website/FIT_PAGE_BRIEF.md`. No return promises, no price claims until Rishi gives an approved rate line, no ownership claim until leasehold is ruled out. No em dashes.
+
+## Coordination with the WhatsApp autopilot (Rishi, 17 Nov 2026)
+Full rules: `strategy/CHANNEL_COORDINATION.md` in the Claude Project.
+- Ads money is additional. This agent never reads, lowers or reallocates the WhatsApp autopilot's budget or wallet. Moving money between channels is Rishi's call.
+- One lead record (Leads sheet, keyed by phone). Ads tag `ctwa` + ad id, the autopilot tags `wa_outbound` + cell.
+- Ad chatters who don't convert go to the autopilot's warm track. Autopilot cell learnings shape ad targeting and hooks.
+- Excluded from ads: Not Interested, opted out, Site Visit Planned and Visit Done (config `exclude_audience_names`, refreshed daily by the Claude run with `{"op":"audiences","lists":{"<name>":[sha256,...]}}`).
+- Only people who contacted FIT are uploaded to Meta, hashed. Never the scraped database.
