@@ -200,7 +200,7 @@ def live_ok():
     return bool(CFG.get("budget_approved")) and bool(CFG.get("launch_approved"))
 
 def month_guard(camp, daily_total_inr):
-    spent = spend(camp["id"], "this_month")
+    spent = fit_month_spend()  # both FIT campaigns (CTWA and warm-up) count against one monthly cap
     cap = float(CFG["monthly_cap_inr"])
     return spent, (spent + daily_total_inr) <= cap
 
@@ -348,8 +348,14 @@ def op_daily(req):
     d7 = insights(camp["id"], "ad", "last_7d")
     y = insights(camp["id"], "ad", "yesterday")
     s3 = insights(camp["id"], "adset", "last_3d")
+    summary = perf_summary()
     leads = lead_data(req)
-    rep["lead_data"] = "joined from Leads sheet" if leads is not None else "not available, rules use WhatsApp conversations only"
+    if leads is None and summary is not None:
+        leads = summary.get("ads") or {}
+    rep["lead_data"] = "joined from the bot's lead records (per ad id)" if leads is not None else "not available, rules use WhatsApp conversations only"
+    if summary:
+        rep["lift"] = (summary.get("lift") or {}).get("all", {}).get("all")
+        rep["waves"] = len(summary.get("schedule") or [])
     T_CPL, T_CPC, MULT = CFG["target_cost_per_qualified_lead_inr"], CFG["target_cost_per_conversation_inr"], CFG["pause_multiple"]
 
     rows = []
@@ -382,6 +388,17 @@ def op_daily(req):
         if W.get("frequency", 0) > 3 and not why:
             rep["flags"].append(f"{a['name']}: 7-day frequency {W['frequency']:.1f}, creative fatigue, replace it this week")
     rep["ads"] = rows
+
+    # 2b. tactics (warm-up, reminder, unreachable) and planner budgets, then the creative tester
+    try:
+        apply_tactics_and_plan(rep, summary, dry)
+    except Exception as e:
+        rep["flags"].append(f"Tactics step skipped: {type(e).__name__}: {e}")
+    try:
+        creative_tester(rep, life, leads, dry)
+    except Exception as e:
+        rep["flags"].append(f"Creative tester skipped: {type(e).__name__}: {e}")
+    sets = adsets_of(camp["id"])  # budgets may have changed above
 
     # 3. budget shift (once a day, within the same total)
     launched = st.get("launched_on")
@@ -424,6 +441,11 @@ def write_report(rep):
     for r in rep.get("ads", []):
         f = lambda v: "-" if v is None else v
         L.append(f"| {r['ad']} | {r['status']} | {r['spend_yday']:.0f} | {r['conv_yday']} | {r['spend_life']:.0f} | {r['conv_life']} | {f(r['cpc_life'])} | {f(r['qualified'])} | {f(r['visit_planned'])} | {f(r['visit_done'])} | {r['freq_7d']:.1f} |")
+    if rep.get("plan"):
+        L += ["", f"Planner: {rep['plan']}"]
+    if rep.get("lift"):
+        lf = rep["lift"]
+        L += [f"Warm-up lift so far: {lf['lift']} over {lf['waves']} waves ({lf['wl']} leads from {lf['wd']} warmed vs {lf['cl']} from {lf['cd']} control)."]
     L += ["", "## Actions"] + ([f"- {a}" for a in rep["actions"]] or ["- none"])
     L += ["", "## Flags"] + ([f"- {a}" for a in rep["flags"]] or ["- none"])
     open(f"ads/reports/{rep['date']}.md", "w").write("\n".join(L) + "\n")
@@ -579,3 +601,228 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# =====================================================================================
+# v1.1: tactics (warm-up, reminder, unreachable), planner budgets, creative tester, lead join from the Lambda
+# =====================================================================================
+import random, urllib.request
+
+def perf_summary():
+    """Aggregates from the WhatsApp Lambda (/perf/summary). Needs secrets PERF_URL and PERF_KEY. No phone numbers."""
+    url, key = os.environ.get("PERF_URL"), os.environ.get("PERF_KEY")
+    if not url or not key:
+        return None
+    try:
+        req = urllib.request.Request(f"{url}?days=28", headers={"x-perf-key": key})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read())
+    except Exception as e:
+        print("perf summary unavailable:", e)
+        return None
+
+def current_plan():
+    try:
+        p = json.load(open("perf/plan.json"))
+    except Exception:
+        return None
+    if p.get("status") != "ok" or (today() - datetime.date.fromisoformat(p["date"])).days > 8:
+        return None
+    return p
+
+def find_campaign_named(name):
+    r = call(f"{ACT}/campaigns", {"fields": "id,name,status,effective_status", "limit": 100})
+    return next((c for c in r.get("data", []) if c["name"] == name), None)
+
+def fit_month_spend():
+    tot = 0.0
+    for n in (CFG["campaign_name"], CFG.get("warm_campaign_name", "")):
+        c = find_campaign_named(n) if n else None
+        if c:
+            tot += spend(c["id"], "this_month")
+    return tot
+
+def tactic_audiences(key, summary, have):
+    """Audience ids a tactic should target today, from the joint-wave schedule and the nightly lists."""
+    t = CFG["tactics"][key]
+    names = list(t.get("audiences", []))
+    win = t.get("audience_window")
+    if win and summary:
+        lead = int((summary.get("perf") or {}).get("warm", {}).get("leadDays", 4))
+        remind = int((summary.get("perf") or {}).get("warm", {}).get("remindDays", 10))
+        for w in summary.get("schedule", []):
+            d0 = datetime.date.fromisoformat(w["d0"])
+            if win == "warm" and d0 - datetime.timedelta(days=lead) <= today() < d0:
+                names.append(w["audience"])
+            if win == "remind" and d0 <= today() < d0 + datetime.timedelta(days=remind):
+                names.append(w["audience"])
+    return [have[n] for n in names if n in have]
+
+def op_tactics_setup(req):
+    """Creates the reminder and unreachable ad sets (main campaign) and the warm-up campaign and ad set, all PAUSED."""
+    st = load_state()
+    p = ty_page()
+    camp = find_campaign()
+    if not camp:
+        return {"error": "run setup first"}
+    out = {}
+    warm = find_campaign_named(CFG["warm_campaign_name"])
+    if not warm:
+        warm = call(f"{ACT}/campaigns", {"name": CFG["warm_campaign_name"], "objective": "OUTCOME_AWARENESS", "status": "PAUSED",
+                    "special_ad_categories": CFG["special_ad_categories"], "is_adset_budget_sharing_enabled": "false",
+                    "spend_cap": paise(CFG["monthly_cap_inr"])}, "POST")
+        if "id" not in warm:
+            return {"warm_campaign_error": err(warm)}
+    out["warm_campaign"] = warm["id"]
+    src_ads = {a["key"]: a["ads"] for a in CFG["adsets"]}
+    existing = {s["name"]: s for s in adsets_of(camp["id"]) + adsets_of(warm["id"])}
+    base_t = {"age_min": 25, "age_max": 65, "geo_locations": {"countries": ["IN"]}, "publisher_platforms": ["facebook", "instagram"],
+              "targeting_automation": {"advantage_audience": 0}}
+    for key, t in CFG["tactics"].items():
+        if t["name"] in existing:
+            st["adsets"][key] = existing[t["name"]]["id"]; continue
+        if t["kind"] == "photo":
+            s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": warm["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
+                     "billing_event": "IMPRESSIONS", "optimization_goal": "REACH", "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t,
+                     "frequency_control_specs": [{"event": "IMPRESSIONS", "interval_days": 7, "max_frequency": t.get("max_frequency_7d", 3)}]}, "POST")
+        else:
+            s = call(f"{ACT}/adsets", {"name": t["name"], "campaign_id": camp["id"], "status": "PAUSED", "daily_budget": paise(CFG["min_adset_daily_inr"]),
+                     "billing_event": "IMPRESSIONS", "optimization_goal": "CONVERSATIONS", "destination_type": "WHATSAPP",
+                     "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": base_t, "promoted_object": {"page_id": p["id"]}}, "POST")
+        out[key] = {"adset": s}
+        if "id" not in s:
+            continue
+        st["adsets"][key] = s["id"]
+        for ad in src_ads.get(t["ads_from"], []):
+            ad2 = dict(ad, name=key + ad["name"][1:])
+            try:
+                if t["kind"] == "photo":
+                    h = upload_image(ad2["image"])
+                    cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad2['name']}", "object_story_spec": {"page_id": p["id"], "instagram_user_id": CFG["instagram_user_id"],
+                              "photo_data": {"image_hash": h, "caption": ad2["text"]}}}, "POST")
+                    r = call(f"{ACT}/ads", {"name": ad2["name"], "adset_id": s["id"], "creative": {"creative_id": cr.get("id")}, "status": "PAUSED"}, "POST") if "id" in cr else {"error": err(cr)}
+                else:
+                    r = make_ad(p["id"], s["id"], ad2, "PAUSED")
+            except Exception as e:
+                r = {"error": str(e)}
+            out[key][ad2["name"]] = r
+    save_state(st)
+    return out
+
+def apply_tactics_and_plan(rep, summary, dry):
+    """Daily: point each tactic at today's audiences (pause it when there are none) and set budgets from the planner.
+    The sum never exceeds daily_cap_inr; idle tactic money goes to prospecting; nothing goes live without approval."""
+    camp = find_campaign()
+    warm = find_campaign_named(CFG.get("warm_campaign_name", ""))
+    sets = {s["name"]: s for s in (adsets_of(camp["id"]) if camp else []) + (adsets_of(warm["id"]) if warm else [])}
+    have = {a["name"]: a["id"] for a in call(f"{ACT}/customaudiences", {"fields": "id,name", "limit": 500}).get("data", [])}
+    excl = [{"id": have[n]} for n in CFG.get("exclude_audience_names", []) if n in have]
+    live_main = live_ok() and camp and camp.get("status") == "ACTIVE"
+    live_warm = live_main and CFG.get("warm_launch_approved") and warm
+    active_tactics = {}
+    for key, t in CFG.get("tactics", {}).items():
+        s = sets.get(t["name"])
+        if not s:
+            continue
+        ids = tactic_audiences(key, summary, have)
+        allowed = live_warm if t["campaign"] == "warm" else live_main
+        if ids and allowed:
+            tg = {"age_min": 25, "age_max": 65, "geo_locations": {"countries": ["IN"]}, "publisher_platforms": ["facebook", "instagram"],
+                  "targeting_automation": {"advantage_audience": 0}, "custom_audiences": [{"id": i} for i in ids], "excluded_custom_audiences": excl}
+            active_tactics[key] = s
+            if not dry:
+                call(s["id"], {"targeting": tg, "status": "ACTIVE"}, "POST")
+                for a in ads_of(warm["id"] if t["campaign"] == "warm" else camp["id"]):
+                    if a["adset_id"] == s["id"] and a["status"] == "PAUSED" and a["name"] not in load_state().get("tester_paused", []):
+                        call(a["id"], {"status": "ACTIVE"}, "POST")
+            rep["actions"].append(f"{t['name']}: targeting {len(ids)} audience(s)")
+        elif s["status"] == "ACTIVE":
+            if not dry:
+                call(s["id"], {"status": "PAUSED"}, "POST")
+            rep["actions"].append(f"Paused {t['name']}: {'no audiences in its window today' if not ids else 'not approved'}")
+    plan = current_plan()
+    if not plan or not live_main:
+        rep["plan"] = "no current plan (planner awaiting total)" if not plan else "plan waiting for launch approval"
+        return
+    meta = min(float(plan["meta_budget_inr"]), float(CFG["daily_cap_inr"]))
+    tb = plan["meta_tactics"]
+    want = {k: float(tb.get({"W": "warm", "R": "remind", "U": "unreach"}[k], 0)) for k in active_tactics}
+    idle = sum(float(tb.get(x, 0)) for k, x in (("W", "warm"), ("R", "remind"), ("U", "unreach")) if k not in active_tactics)
+    prospect = max(0.0, meta - sum(want.values()))
+    pa = [sets[a["name"]] for a in CFG["adsets"] if a["key"] in ("A", "B") and a["name"] in sets and sets[a["name"]]["status"] == "ACTIVE"]
+    cur = sum(inr(s["daily_budget"]) for s in pa) or 1
+    for s in pa:
+        want[s["name"]] = prospect * inr(s["daily_budget"]) / cur
+    floor = CFG["min_adset_daily_inr"]
+    total = 0
+    for k, v in want.items():
+        s = active_tactics.get(k) or sets.get(k)
+        nb = max(floor, int(v))
+        total += nb
+        if abs(nb - inr(s.get("daily_budget", 0))) >= 10:
+            rep["actions"].append(f"Budget {s['name']}: INR {inr(s.get('daily_budget', 0)):.0f} -> {nb} (planner)")
+            if not dry and total <= CFG["daily_cap_inr"]:
+                call(s["id"], {"daily_budget": paise(nb)}, "POST")
+    rep["plan"] = f"planner {plan['date']}: Meta INR {meta:.0f}/day ({'idle tactics folded into prospecting: INR %d' % idle if idle else 'all tactics active'})"
+
+def creative_tester(rep, life, leads, dry):
+    """Thompson sampling per ad set: results per rupee (qualified leads when the join exists, else chats).
+    Pause an ad once it has had a fair spend and under 5% chance of being the best; keep at least one ad running."""
+    T = CFG.get("tester", {})
+    st = load_state()
+    paused = set(st.get("tester_paused", []))
+    by_set = {}
+    for camp_name in (CFG["campaign_name"], CFG.get("warm_campaign_name", "")):
+        c = find_campaign_named(camp_name) if camp_name else None
+        if c:
+            for a in ads_of(c["id"]):
+                if a["status"] == "ACTIVE":
+                    by_set.setdefault(a["adset_id"], []).append(a)
+    prior = float(CFG["target_cost_per_conversation_inr"]) if leads is None else float(CFG["target_cost_per_qualified_lead_inr"])
+    ledger = {}
+    for sid, ads in by_set.items():
+        rows = []
+        for a in ads:
+            L = life.get(a["id"], {})
+            res = ((leads or {}).get(a["id"], {}).get("qualified") or 0) if leads is not None else L.get("conversations", 0)
+            rows.append((a, L.get("spend", 0.0), res))
+            ledger[a["name"]] = {"spend": round(L.get("spend", 0.0)), "results": res, "metric": "qualified" if leads is not None else "chats"}
+        if len(rows) < 2:
+            continue
+        rng = random.Random(f"{today()}{sid}")
+        wins = {a["id"]: 0 for a, _, _ in rows}
+        for _ in range(int(T.get("draws", 4000))):
+            best = max(rows, key=lambda r: rng.gammavariate(r[2] + 1, 1.0 / (r[1] + prior)))
+            wins[best[0]["id"]] += 1
+        pb = {k: v / T.get("draws", 4000) for k, v in wins.items()}
+        done = {x.split(":")[0].replace("PAUSED ad ", "") for x in rep["actions"] if x.startswith("PAUSED ad ")}
+        for a, sp, res in sorted(rows, key=lambda r: pb[r[0]["id"]]):
+            ledger[a["name"]]["p_best"] = round(pb[a["id"]], 3)
+            if a["name"] in done:
+                a["status"] = "PAUSED"; continue
+            active_left = sum(1 for r in rows if r[0]["status"] == "ACTIVE")
+            if sp >= T.get("min_spend_inr", 600) and pb[a["id"]] < T.get("p_best_floor", 0.05) and active_left > 1:
+                rep["actions"].append(f"Tester paused {a['name']}: {pb[a['id']]:.0%} chance of being best after INR {sp:.0f} ({res} results)")
+                a["status"] = "PAUSED"; paused.add(a["name"])
+                if not dry:
+                    call(a["id"], {"status": "PAUSED"}, "POST")
+        if sum(1 for r in rows if r[0]["status"] == "ACTIVE") < T.get("min_active_ads", 2):
+            rep["flags"].append(f"Ad set {sid}: under {T.get('min_active_ads', 2)} active ads, make fresh creatives (angles that won: see perf/creatives.json)")
+    if not dry:
+        st["tester_paused"] = sorted(paused); save_state(st)
+        os.makedirs("perf", exist_ok=True)
+        hist = {}
+        try:
+            hist = json.load(open("perf/creatives.json"))
+        except Exception:
+            pass
+        hist.update({k: {**hist.get(k, {}), **v, "updated": str(today())} for k, v in ledger.items()})
+        json.dump(hist, open("perf/creatives.json", "w"), indent=1, sort_keys=True)
+    rep["tester"] = ledger
+
+OPS["tactics_setup"] = op_tactics_setup
+
+def op_plan(req):
+    """Run the media planner now (it also runs Mondays 06:30 IST)."""
+    import perf_planner
+    return perf_planner.plan()
+OPS["plan"] = op_plan

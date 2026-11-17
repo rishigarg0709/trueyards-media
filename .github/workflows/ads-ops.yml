@@ -1,11 +1,14 @@
 name: ads-ops
-# FIT Ads agent v1 (scripts/ads_ops.py). Requests in ads/requests, results in ads/results,
-# daily autopilot at 08:00 IST writes ads/reports/<date>.md. Caps live in config/ads.json.
+# Performance department: ads agent (scripts/ads_ops.py) and media planner (scripts/perf_planner.py).
+# Requests in ads/requests, results in ads/results. Daily autopilot 08:00 IST -> ads/reports/<date>.md.
+# Planner Mondays 06:30 IST -> perf/plan.json (read by the WhatsApp Lambda at 07:30 and by the ads agent).
+# Secrets: META_TOKEN; PERF_URL + PERF_KEY (Lambda /perf/summary, aggregates only).
 on:
   push:
     paths: ["ads/requests/*.json"]
   schedule:
     - cron: "30 2 * * *"
+    - cron: "0 1 * * 1"
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,23 +16,26 @@ concurrency: ads-ops
 jobs:
   run:
     runs-on: ubuntu-latest
+    env:
+      META_TOKEN: ${{ secrets.META_TOKEN }}
+      PERF_URL: ${{ secrets.PERF_URL }}
+      PERF_KEY: ${{ secrets.PERF_KEY }}
     steps:
       - uses: actions/checkout@v4
       - name: Use the latest main
         run: git pull --rebase -q origin main || true
+      - name: Weekly media plan
+        if: github.event.schedule == '0 1 * * 1'
+        run: python3 scripts/perf_planner.py
       - name: Daily autopilot
-        if: github.event_name == 'schedule'
-        env:
-          META_TOKEN: ${{ secrets.META_TOKEN }}
+        if: github.event.schedule == '30 2 * * *'
         run: python3 scripts/ads_ops.py --daily
       - name: Run ad requests
         if: github.event_name != 'schedule'
-        env:
-          META_TOKEN: ${{ secrets.META_TOKEN }}
         run: python3 scripts/ads_ops.py
       - name: Commit results
         run: |
           git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
-          git add -A ads
+          git add -A ads perf
           git commit -m "ads-ops results" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

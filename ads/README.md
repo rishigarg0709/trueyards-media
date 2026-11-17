@@ -25,6 +25,10 @@ North star: cost per site visit done, then cost per booking, against brokerage e
 | `pause_ad` / `pause_all` | FIT campaign only | stops spend |
 | `audiences` | builds TY page and Instagram engager audiences; optional `phones_sha256` list for WhatsApp chatters (hash before sending, never plain numbers: this repo is public) | no |
 | `enable_retargeting` | week 2: ad set C, funded by moving budget out of A and B (total unchanged) | within caps |
+| `tactics_setup` | creates "FIT R" (reminder) and "FIT U" (unreachable) ad sets and the "FIT Warm v1" campaign with "FIT W" (warm-up), all PAUSED | no |
+| `plan` | runs the media planner now (`perf/plan.json`) | no |
+
+Daily, after the waste rule: each tactic is pointed at today's audiences from the joint-wave schedule (warm-up: D0-4 to D0-1; reminder: D0 to D0+10; unreachable: always) and paused when it has none; budgets follow `perf/plan.json` (idle tactic money goes to prospecting; never above `daily_cap_inr`); the creative tester (Thompson sampling) pauses ads with under 5% chance of being best after INR 600. The warm-up campaign also needs `warm_launch_approved`. Lead counts per ad come from the Lambda's `/perf/summary` (secrets PERF_URL, PERF_KEY).
 
 ## Daily rules (in code)
 1. Hard caps: if month-to-date spend plus today's budget would pass `monthly_cap_inr`, pause the campaign. If ad set budgets add up to more than `daily_cap_inr`, scale them down. The campaign also has a lifetime spend cap equal to the monthly cap.

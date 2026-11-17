@@ -208,5 +208,42 @@
   "exclude_audience_names": [
     "FIT exclude: not interested or opted out",
     "FIT exclude: visit planned or done"
-  ]
+  ],
+  "warm_campaign_name": "FIT Warm v1",
+  "warm_launch_approved": false,
+  "tactics": {
+    "R": {
+      "name": "FIT R - Reminder after WhatsApp",
+      "campaign": "main",
+      "kind": "ctwa",
+      "audience_window": "remind",
+      "ads_from": "A",
+      "_note": "Warm halves after their WhatsApp first touch (D0 to D0+10): CTWA reminders between follow-ups."
+    },
+    "U": {
+      "name": "FIT U - Unreachable on WhatsApp",
+      "campaign": "main",
+      "kind": "ctwa",
+      "audiences": [
+        "FITU|unreachable"
+      ],
+      "ads_from": "A",
+      "_note": "Pool numbers WhatsApp cannot deliver to (131026)."
+    },
+    "W": {
+      "name": "FIT W - Warm-up before WhatsApp",
+      "campaign": "warm",
+      "kind": "photo",
+      "audience_window": "warm",
+      "ads_from": "A",
+      "max_frequency_7d": 3,
+      "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask."
+    }
+  },
+  "tester": {
+    "min_spend_inr": 600,
+    "p_best_floor": 0.05,
+    "min_active_ads": 2,
+    "draws": 4000
+  }
 }
