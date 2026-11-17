@@ -163,6 +163,44 @@ def targeting(aset, audience_ids=None):
     return t, notes
 
 # ---------- creatives ----------
+def welcome_variants(ad):
+    """Most qualifying first: ice breakers (taps map to qualification answers), then an angle-specific prefill, then none."""
+    out = []
+    ib = CFG.get("ice_breakers")
+    if ib:
+        out.append(json.dumps({"type": "VISUAL_EDITOR", "version": 2, "landing_screen_type": "welcome_message", "media_type": "text",
+                               "text_format": {"customer_action_type": "ice_breakers",
+                                               "message": {"ice_breakers": [{"title": b["title"], "response": b["response"]} for b in ib],
+                                                           "quick_replies": [], "text": CFG.get("welcome_text", "Hi, thanks for your interest in FIT.")}},
+                               "user_edit": False, "surface": "visual_editor_new"}))
+    out.append(json.dumps({"type": "VISUAL_EDITOR", "version": 2, "landing_screen_type": "welcome_message", "media_type": "text",
+                           "text_format": {"customer_action_type": "autofill_message",
+                                           "message": {"autofill_message": {"content": ad.get("prefill") or CFG["prefill_message"]},
+                                                       "text": CFG.get("welcome_text", "Hi, thanks for your interest in FIT.")}}}))
+    out.append(None)
+    return out
+
+def opt_out_spec():
+    feats = CFG.get("creative_opt_out") or []
+    return {"creative_features_spec": {f: {"enroll_status": "OPT_OUT"} for f in feats}} if feats else None
+
+def create_creative(name, spec, key, base):
+    """Try each welcome variant with the enhancement opt-outs, then without opt-outs. Returns (creative, errors, notes)."""
+    errs = []
+    for dof in (opt_out_spec(), None):
+        for w in welcome_variants(base):
+            data = dict(spec[key]); 
+            if w: data["page_welcome_message"] = w
+            body = {"name": name, "object_story_spec": {**spec, key: data}}
+            if dof: body["degrees_of_freedom_spec"] = dof
+            cr = call(f"{ACT}/adcreatives", body, "POST")
+            if "id" in cr:
+                return cr, errs, {"welcome": "ice_breakers" if w and "ice_breakers" in w else ("prefill" if w else "none"), "opt_outs": bool(dof)}
+            errs.append(err(cr))
+            if "instagram" in json.dumps(cr).lower() and "instagram_user_id" in spec:
+                spec = {k: v for k, v in spec.items() if k != "instagram_user_id"}
+    return {}, errs, {}
+
 def upload_image(path):
     b64 = base64.b64encode(open(path, "rb").read()).decode()
     r = call(f"{ACT}/adimages", {"bytes": b64}, "POST")
@@ -177,23 +215,11 @@ def make_ad(page_id, adset_id, ad, status):
     spec = {"page_id": page_id, "link_data": link}
     if CFG.get("instagram_user_id"):
         spec["instagram_user_id"] = CFG["instagram_user_id"]
-    welcome = json.dumps({"type": "VISUAL_EDITOR", "version": 2, "landing_screen_type": "welcome_message", "media_type": "text",
-                          "text_format": {"customer_action_type": "autofill_message",
-                                          "message": {"autofill_message": {"content": CFG["prefill_message"]}, "text": "Hi, thanks for your interest in FIT."}}})
-    tries = [dict(link_data={**link, "page_welcome_message": welcome}), dict(link_data=link)]
-    errs, cr = [], None
-    for t in tries:
-        s = {**spec, **t}
-        cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad['name']}", "object_story_spec": s}, "POST")
-        if "id" in cr:
-            break
-        errs.append(err(cr))
-        if "instagram" in json.dumps(cr).lower() and "instagram_user_id" in spec:
-            spec.pop("instagram_user_id")
+    cr, errs, notes = create_creative(f"FIT {ad['name']}", spec, "link_data", ad)
     if "id" not in cr:
         return {"error": errs}
     a = call(f"{ACT}/ads", {"name": ad["name"], "adset_id": adset_id, "creative": {"creative_id": cr["id"]}, "status": status}, "POST")
-    return {"ad": a, "creative_id": cr["id"], "earlier_errors": errs}
+    return {"ad": a, "creative_id": cr["id"], "creative_notes": notes, "earlier_errors": errs}
 
 # ---------- guards ----------
 def live_ok():
@@ -234,7 +260,7 @@ def op_setup(req):
     out = {"page": {"id": p["id"], "name": p["name"]}, "adsets": {}, "ads": {}}
     camp = find_campaign()
     if not camp:
-        camp = call(f"{ACT}/campaigns", {"name": CFG["campaign_name"], "objective": "OUTCOME_ENGAGEMENT", "status": "PAUSED",
+        camp = call(f"{ACT}/campaigns", {"name": CFG["campaign_name"], "objective": CFG.get("campaign_objective", "OUTCOME_ENGAGEMENT"), "status": "PAUSED",
                     "special_ad_categories": CFG["special_ad_categories"], "buying_type": "AUCTION",
                     "is_adset_budget_sharing_enabled": "false", "spend_cap": paise(CFG["monthly_cap_inr"])}, "POST")
         if "id" not in camp:
@@ -260,11 +286,11 @@ def op_setup(req):
             if "id" not in s:
                 continue
         st["adsets"][a["key"]] = s["id"]
-        for ad in a["ads"]:
+        for ad in a["ads"] + a.get("video_ads", []):
             if ad["name"] in existing_ads:
                 continue
             try:
-                r = make_ad(p["id"], s["id"], ad, "PAUSED")
+                r = (make_video_ad if "video" in ad else make_ad)(p["id"], s["id"], ad, "PAUSED")
             except Exception as e:
                 r = {"error": str(e)}
             out["ads"][ad["name"]] = r
@@ -372,7 +398,12 @@ def op_daily(req):
         if a["status"] != "ACTIVE":
             continue
         why = None
-        if q is not None:
+        batch_day = today().weekday() == CFG.get("tester", {}).get("batch_weekday", 0)
+        if not batch_day:
+            # weekdays: emergency pauses only (no conversation at all after 4x the target cost per qualified lead)
+            if sp >= 2 * MULT * T_CPL and cv == 0:
+                why = f"emergency: spent INR {sp:.0f} with no WhatsApp conversation"
+        elif q is not None:
             if sp >= MULT * T_CPL and q == 0:
                 why = f"spent INR {sp:.0f} (over {MULT}x the INR {T_CPL} target per qualified lead) with no qualified lead"
         else:
@@ -388,6 +419,9 @@ def op_daily(req):
         if W.get("frequency", 0) > 3 and not why:
             rep["flags"].append(f"{a['name']}: 7-day frequency {W['frequency']:.1f}, creative fatigue, replace it this week")
     rep["ads"] = rows
+    sy = rep["spend_yesterday_inr"] or 0
+    if live and total and sy < 0.5 * total:
+        rep["flags"].append(f"Under-delivery: spent INR {sy:.0f} of INR {total:.0f} yesterday. Check for rejected ads or a too-small audience.")
 
     # 2b. tactics (warm-up, reminder, unreachable) and planner budgets, then the creative tester
     try:
@@ -746,7 +780,7 @@ def apply_tactics_and_plan(rep, summary, dry):
     want = {k: float(tb.get({"W": "warm", "R": "remind", "U": "unreach"}[k], 0)) for k in active_tactics}
     idle = sum(float(tb.get(x, 0)) for k, x in (("W", "warm"), ("R", "remind"), ("U", "unreach")) if k not in active_tactics)
     prospect = max(0.0, meta - sum(want.values()))
-    pa = [sets[a["name"]] for a in CFG["adsets"] if a["key"] in ("A", "B") and a["name"] in sets and sets[a["name"]]["status"] == "ACTIVE"]
+    pa = [sets[a["name"]] for a in CFG["adsets"] if a["key"] in ("A", "B", "P") and a["name"] in sets and sets[a["name"]]["status"] == "ACTIVE"]
     cur = sum(inr(s["daily_budget"]) for s in pa) or 1
     for s in pa:
         want[s["name"]] = prospect * inr(s["daily_budget"]) / cur
@@ -766,6 +800,9 @@ def creative_tester(rep, life, leads, dry):
     """Thompson sampling per ad set: results per rupee (qualified leads when the join exists, else chats).
     Pause an ad once it has had a fair spend and under 5% chance of being the best; keep at least one ad running."""
     T = CFG.get("tester", {})
+    if today().weekday() != T.get("batch_weekday", 0) and not CFG.get("_tester_force"):
+        rep["tester"] = "waits for the weekly batch (Monday): edits reset Meta's learning"
+        return
     st = load_state()
     paused = set(st.get("tester_paused", []))
     by_set = {}
@@ -798,7 +835,9 @@ def creative_tester(rep, life, leads, dry):
             if a["name"] in done:
                 a["status"] = "PAUSED"; continue
             active_left = sum(1 for r in rows if r[0]["status"] == "ACTIVE")
-            if sp >= T.get("min_spend_inr", 600) and pb[a["id"]] < T.get("p_best_floor", 0.05) and active_left > 1:
+            zero_rule = leads is not None and sp >= T.get("min_spend_inr", 800) and res == 0
+            post_rule = sp >= T.get("posterior_spend_inr", 3000) and pb[a["id"]] < T.get("p_best_floor", 0.10)
+            if (zero_rule or post_rule) and active_left > T.get("min_active_ads", 4):
                 rep["actions"].append(f"Tester paused {a['name']}: {pb[a['id']]:.0%} chance of being best after INR {sp:.0f} ({res} results)")
                 a["status"] = "PAUSED"; paused.add(a["name"])
                 if not dry:
@@ -850,19 +889,11 @@ def make_video_ad(page_id, adset_id, ad, status):
     spec = {"page_id": page_id, "video_data": vd}
     if CFG.get("instagram_user_id"):
         spec["instagram_user_id"] = CFG["instagram_user_id"]
-    welcome = json.dumps({"type": "VISUAL_EDITOR", "version": 2, "landing_screen_type": "welcome_message", "media_type": "text",
-                          "text_format": {"customer_action_type": "autofill_message",
-                                          "message": {"autofill_message": {"content": CFG["prefill_message"]}, "text": "Hi, thanks for your interest in FIT."}}})
-    errs, cr = [], {}
-    for v in ({**vd, "page_welcome_message": welcome}, vd):
-        cr = call(f"{ACT}/adcreatives", {"name": f"FIT {ad['name']}", "object_story_spec": {**spec, "video_data": v}}, "POST")
-        if "id" in cr:
-            break
-        errs.append(err(cr))
+    cr, errs, notes = create_creative(f"FIT {ad['name']}", spec, "video_data", ad)
     if "id" not in cr:
         return {"error": errs}
     a = call(f"{ACT}/ads", {"name": ad["name"], "adset_id": adset_id, "creative": {"creative_id": cr["id"]}, "status": status}, "POST")
-    return {"ad": a, "creative_id": cr["id"], "video_id": vid, "earlier_errors": errs}
+    return {"ad": a, "creative_id": cr["id"], "video_id": vid, "creative_notes": notes, "earlier_errors": errs}
 
 def op_add_video_ads(req):
     """{"adset_key": "A", "ads": [{video, thumb, name, headline, text}]}. Paused unless the campaign is live and approved."""
