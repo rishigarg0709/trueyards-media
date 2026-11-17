@@ -1,0 +1,13 @@
+{
+ "op": "add_video_ads",
+ "adset_key": "B",
+ "ads": [
+  {
+   "video": "ads/creatives/fit-reel-03-vo-en.mp4",
+   "thumb": "ads/creatives/fit-reel-03-vo-en-thumb.jpg",
+   "name": "B6 reel03 voiceover",
+   "headline": "RERA-registered plots, Rohtak",
+   "text": "138+ acre township at Kalanaur, Rohtak, 25 min from IMT Rohtak. Plots from 500 sq yd, RERA registered (HRERA-PKL-ROH-795-2025). Get the plan and current rates on WhatsApp."
+  }
+ ]
+}
