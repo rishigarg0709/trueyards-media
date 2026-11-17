@@ -8,3 +8,4 @@ reels/*/still_*.jpg
 reels/*/reel.mp4
 reel-4k.mp4
 reels/*/*.mp4
+__pycache__/

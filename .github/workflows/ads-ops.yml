@@ -1,0 +1,35 @@
+name: ads-ops
+# FIT Ads agent v1 (scripts/ads_ops.py). Requests in ads/requests, results in ads/results,
+# daily autopilot at 08:00 IST writes ads/reports/<date>.md. Caps live in config/ads.json.
+on:
+  push:
+    paths: ["ads/requests/*.json"]
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: ads-ops
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use the latest main
+        run: git pull --rebase -q origin main || true
+      - name: Daily autopilot
+        if: github.event_name == 'schedule'
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python3 scripts/ads_ops.py --daily
+      - name: Run ad requests
+        if: github.event_name != 'schedule'
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python3 scripts/ads_ops.py
+      - name: Commit results
+        run: |
+          git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A ads
+          git commit -m "ads-ops results" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

@@ -1,0 +1,90 @@
+{
+  "_note": "FIT click-to-WhatsApp ads (Ads agent v1). Read by scripts/ads_ops.py. Caps here are hard limits enforced in code. Only Rishi changes caps, budget_approved or launch_approved.",
+  "ad_account_id": "act_1101758352688996",
+  "page_name_hint": "TrueYards",
+  "instagram_user_id": "17841429830946947",
+  "whatsapp_number": "+919220607264",
+  "campaign_name": "FIT CTWA v1",
+  "special_ad_categories": [],
+
+  "budget_approved": false,
+  "launch_approved": false,
+  "daily_cap_inr": 700,
+  "monthly_cap_inr": 20000,
+  "min_adset_daily_inr": 120,
+  "max_shift_pct_per_day": 20,
+
+  "target_cost_per_conversation_inr": 60,
+  "target_cost_per_qualified_lead_inr": 400,
+  "pause_multiple": 3,
+  "min_days_before_shift": 3,
+
+  "hrera": ["HRERA-PKL-ROH-795-2025", "HRERA-PKL-ROH-653-2025"],
+  "prefill_message": "Hi, I saw the FIT ad. Please share details of Forteasia Industrial Township, Rohtak.",
+
+  "adsets": [
+    {
+      "key": "A",
+      "name": "FIT A - Industry owners, Haryana and NCR",
+      "enabled": true,
+      "daily_budget_inr": 350,
+      "age_min": 28, "age_max": 60,
+      "cities": [
+        {"q": "Rohtak", "radius_km": 25}, {"q": "Bahadurgarh", "radius_km": 15}, {"q": "Sonipat", "radius_km": 20},
+        {"q": "Panipat", "radius_km": 20}, {"q": "Jhajjar", "radius_km": 15}, {"q": "Gurgaon", "radius_km": 25},
+        {"q": "Manesar", "radius_km": 15}, {"q": "Faridabad", "radius_km": 20}, {"q": "Bhiwani", "radius_km": 15},
+        {"q": "Hisar", "radius_km": 20}, {"q": "Kundli", "radius_km": 10}, {"q": "New Delhi", "radius_km": 25}
+      ],
+      "interests": ["Small business", "Manufacturing", "Warehouse", "Logistics", "Entrepreneurship", "Industrial engineering", "Supply chain management", "Factory"],
+      "behaviors": ["Small business owners"],
+      "advantage_audience": 0,
+      "ads": [
+        {"image": "ads/creatives/fit-a-permanent-address.jpg", "name": "A1 permanent address",
+         "headline": "Industrial plots in Rohtak",
+         "text": "A permanent address for your factory. Forteasia Industrial Township on Meham-Beri Road, Rohtak: plots of 500 to 4,000 sq yd on 18 m and 24 m roads built for trucks. RERA registered. Message us on WhatsApp for the plan, plot sizes and current rates."},
+        {"image": "ads/creatives/fit-b-built-for-industry.jpg", "name": "A2 built for industry",
+         "headline": "138+ acre industrial township",
+         "text": "A 138+ acre township planned for industry: wide roads, power, water, drainage and sewage treatment, with homes and shops for your staff. 25 min to IMT Rohtak, 10 min to NH-152D. Chat on WhatsApp to get the brochure."},
+        {"image": "ads/creatives/fit-c-right-plot.jpg", "name": "A3 right plot",
+         "headline": "Factory and warehouse plots",
+         "text": "Planning a new unit or warehouse? FIT, Rohtak has industrial plots from 500 to 4,000 sq yd for manufacturing, warehousing, logistics and MSMEs. HRERA-PKL-ROH-795-2025. Ask anything on WhatsApp, in Hindi or English."}
+      ]
+    },
+    {
+      "key": "B",
+      "name": "FIT B - Plot investors 28 to 55, Rohtak and NCR",
+      "enabled": true,
+      "daily_budget_inr": 350,
+      "age_min": 28, "age_max": 55,
+      "cities": [
+        {"q": "Rohtak", "radius_km": 25}, {"q": "New Delhi", "radius_km": 30}, {"q": "Gurgaon", "radius_km": 25},
+        {"q": "Faridabad", "radius_km": 20}, {"q": "Noida", "radius_km": 20}, {"q": "Ghaziabad", "radius_km": 15},
+        {"q": "Bahadurgarh", "radius_km": 15}, {"q": "Sonipat", "radius_km": 20}
+      ],
+      "interests": ["Real estate investing", "Real estate", "Investment", "Property", "Land banking", "Commercial property"],
+      "behaviors": [],
+      "advantage_audience": 0,
+      "ads": [
+        {"image": "ads/creatives/fit-c-right-plot.jpg", "name": "B1 right plot",
+         "headline": "RERA-registered plots, Rohtak",
+         "text": "Industrial, residential and SCO plots in one 138+ acre township at Kalanaur, Rohtak. RERA registered (HRERA-PKL-ROH-795-2025, 653-2025) with DTCP licences. Check the approvals and plot sizes on WhatsApp."},
+        {"image": "ads/creatives/fit-b-built-for-industry.jpg", "name": "B2 built for industry",
+         "headline": "A township near IMT Rohtak",
+         "text": "Forteasia Industrial Township sits 25 min from IMT Rohtak and 10 min from NH-152D, near IMT Jhajjar and Reliance MET City. Residential plots from 90 sq yd, industrial from 500 sq yd. Get the master plan on WhatsApp."},
+        {"image": "ads/creatives/fit-a-permanent-address.jpg", "name": "B3 permanent address",
+         "headline": "Plots by Forteasia, Rohtak",
+         "text": "Forteasia has delivered 5.33 million sq ft across Haryana. Its newest township, FIT on Meham-Beri Road, Rohtak, has RERA-registered industrial, residential and SCO plots. Message us for the brochure and a site visit."}
+      ]
+    },
+    {
+      "key": "C",
+      "name": "FIT C - Retargeting chatters and engagers",
+      "enabled": false,
+      "_note": "Week 2. Enable with op enable_retargeting after op audiences has built the audiences. Budget comes out of A and B so the daily total never rises.",
+      "daily_budget_inr": 140,
+      "age_min": 25, "age_max": 65,
+      "audience_names": ["TY page engagers 365d", "TY Instagram engagers 365d", "FIT WhatsApp chatters"],
+      "ads": []
+    }
+  ]
+}
