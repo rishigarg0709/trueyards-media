@@ -381,8 +381,16 @@ def op_brand(req):
             out["saved"] = "meta/brand/fb-cover.jpg"
     return out
 
+def op_set_budget(req):
+    """Rishi-only: sets the fixed campaign's daily budget to config boost_daily_budget_inr (change config in a reviewed commit, never from an automated run)."""
+    camp = find_campaign()
+    if not camp: return {"error": "no campaign"}
+    paise = int(CFG["boost_daily_budget_inr"]) * 100
+    r = call(camp["id"], {"daily_budget": paise}, "POST")
+    return {"result": r, "now": call(camp["id"], {"fields": "name,daily_budget,status"})}
+
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
-       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all,
+       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
        "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide, "brand": op_brand}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.

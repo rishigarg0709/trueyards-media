@@ -5,6 +5,6 @@
   "system_user_id": "61596412840489",
   "app_name": "TrueYards Autopilot",
   "token_secret": "META_TOKEN",
-  "boost_daily_budget_inr": 100,
+  "boost_daily_budget_inr": 200,
   "boost_monthly_cap_inr": 5000
 }
