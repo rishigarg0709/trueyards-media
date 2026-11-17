@@ -13,7 +13,7 @@ Hard rules enforced HERE, not in prompts (strategy/PERFORMANCE_MARKETING_BRIEF.m
 - No op touches billing, payment methods, account spend caps or any campaign other than FIT's.
 - Reports hold aggregates only. No phone numbers or names ever reach this (public) repo.
 """
-import json, os, sys, glob, time, base64, datetime
+import json, os, re, sys, glob, time, base64, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import meta_ops as M
 
@@ -109,7 +109,9 @@ def interests(names):
     for n in names:
         r = call("search", {"type": "adinterest", "q": n, "limit": 5})
         data = r.get("data", [])
-        hit = next((x for x in data if x["name"].lower() == n.lower()), data[0] if data else None)
+        base = lambda x: re.sub(r"\s*\(.*\)$", "", x["name"]).strip().lower()
+        good = [x for x in data if base(x) == n.lower() and "(band)" not in x["name"].lower() and "(film)" not in x["name"].lower()]
+        hit = max(good, key=lambda x: x.get("audience_size_upper_bound", 0) or 0) if good else None
         if hit and hit["id"] not in [i["id"] for i in ids]:
             ids.append({"id": hit["id"], "name": hit["name"]})
         elif not hit:
@@ -519,8 +521,8 @@ def op_check(req):
     for a in CFG["adsets"]:
         if a.get("cities"):
             t, notes = targeting(a)
-            out["targeting"][a["key"]] = {"cities_found": len(t["geo_locations"]["cities"]), **notes}
-            est = call(f"{ACT}/delivery_estimate", {"optimization_goal": "CONVERSATIONS", "targeting_spec": t})
+            out["targeting"][a["key"]] = {"interest_ids": [i["id"] for f in t.get("flexible_spec", []) for v in f.values() for i in v], "cities_found": len(t["geo_locations"]["cities"]), **notes}
+            est = call(f"{ACT}/delivery_estimate", {"optimization_goal": "REACH", "targeting_spec": t})
             d = (est.get("data") or [{}])[0]
             out["targeting"][a["key"]]["audience_estimate"] = [d.get("estimate_mau_lower_bound"), d.get("estimate_mau_upper_bound")] if d else err(est)
     out["creatives_present"] = {ad["image"]: os.path.exists(ad["image"]) for a in CFG["adsets"] for ad in a["ads"]}
