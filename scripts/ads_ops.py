@@ -64,11 +64,18 @@ def find_campaign():
             return c
     return None
 
+def _list(path, fields, limit):
+    r = call(path, {"fields": fields, "limit": limit})
+    if "data" not in r:
+        # never treat a failed lookup (rate limit, outage) as "nothing exists": that creates duplicates
+        raise RuntimeError(f"Meta lookup failed for {path}: {err(r)}")
+    return r["data"]
+
 def adsets_of(cid):
-    return call(f"{cid}/adsets", {"fields": "id,name,status,effective_status,daily_budget", "limit": 50}).get("data", [])
+    return _list(f"{cid}/adsets", "id,name,status,effective_status,daily_budget", 50)
 
 def ads_of(cid):
-    return call(f"{cid}/ads", {"fields": "id,name,status,effective_status,adset_id,created_time", "limit": 200}).get("data", [])
+    return _list(f"{cid}/ads", "id,name,status,effective_status,adset_id,created_time", 200)
 
 def spend(obj_id, preset):
     r = call(f"{obj_id}/insights", {"fields": "spend", "date_preset": preset})
