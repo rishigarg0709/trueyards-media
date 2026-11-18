@@ -1,0 +1,8 @@
+d1118e-jkt-street-towers https://images.unsplash.com/photo-1637253439266-b02d8d8f5fe3?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4000
+d1118e-jkt-traffic https://images.unsplash.com/photo-1637253440019-54fb615e6db2?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4000
+d1118e-jkt-aerial https://images.unsplash.com/photo-1711078291740-7023e75b77e5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=5000
+d1118e-jkt-46floor https://images.unsplash.com/photo-1562367072-fea5c7eb8748?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118e-jkt-flood https://images.unsplash.com/photo-1741081038901-f258dd2f5a1c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118e-jkt-distance https://images.unsplash.com/photo-1680244116826-467f252cf503?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+q-ikn https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Nusantara%20IKN%20Garuda%20palace&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url|size|extmetadata&format=json
+q-ikn2 https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=Ibu%20Kota%20Nusantara%202024&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url|size|extmetadata&format=json
