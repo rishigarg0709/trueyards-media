@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-18 14:21",
+ "checked_at": "2026-11-18 15:33",
  "checks": [
   {
    "id": "gemini",
@@ -20,22 +20,22 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 2495,
+   "left": 2441,
    "burn_per_day": 700,
-   "runway_days": 3.6,
-   "detail": "About INR 2495 left, spending about INR 700 a day"
+   "runway_days": 3.5,
+   "detail": "About INR 2441 left, spending about INR 700 a day"
   },
   {
    "id": "whatsapp",
    "name": "WhatsApp wallet (autopilot, broadcasts, alerts)",
    "unit": "INR",
-   "link": "https://business.facebook.com/billing_hub",
+   "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "check",
-   "left": -458,
+   "left": -580,
    "burn_per_day": 1005,
-   "runway_days": -0.5,
-   "detail": "Estimate is INR -458, below zero while sends still go through: enter the real balance in the inbox app"
+   "runway_days": -0.6,
+   "detail": "Estimate is INR -580, below zero while sends still go through: enter the real balance in the inbox app"
   },
   {
    "id": "elevenlabs",

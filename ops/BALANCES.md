@@ -1,11 +1,11 @@
-# Balances (checked 2026-11-18 14:21 IST, every 2 hours)
+# Balances (checked 2026-11-18 15:33 IST, every 2 hours)
 
 | Service | Status | Left | Per day | Days left | Detail | Fix |
 |---|---|---|---|---|---|---|
 | Gemini images | OUT | 0 INR |  |  | Google refuses every image: prepaid credits are depleted (HTTP 402) | Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets |
 | Cloudflare free images (backup) | OUT |  |  |  | Today's free allowance is used up; resets 05:30 IST | Nothing to pay: it resets at 05:30 IST. Upgrade to Workers Paid only if the backup is needed every day |
-| WhatsApp wallet (autopilot, broadcasts, alerts) | Check | -458 INR | 1005 | -0.5 | Estimate is INR -458, below zero while sends still go through: enter the real balance in the inbox app | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
-| Meta ad account (prepaid) | OK | 2,495 INR | 700 | 3.6 | About INR 2495 left, spending about INR 700 a day | Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it) |
+| WhatsApp wallet (autopilot, broadcasts, alerts) | Check | -580 INR | 1005 | -0.6 | Estimate is INR -580, below zero while sends still go through: enter the real balance in the inbox app | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
+| Meta ad account (prepaid) | OK | 2,441 INR | 700 | 3.5 | About INR 2441 left, spending about INR 700 a day | Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it) |
 | ElevenLabs voice and music | OK | 114,681 credits | 5000 | 22.9 | 114,681 credits left, resets 2026-12-16 11:59 IST | Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset |
 | Apify (trend scan) | OK | 1.61 USD |  |  | USD 3.39 used of USD 5.00 this month | Upgrade the Apify plan or skip the comment mining in the weekly scan until the month resets |
 
