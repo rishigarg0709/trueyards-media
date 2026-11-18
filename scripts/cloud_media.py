@@ -34,6 +34,13 @@ def voices(t):
     rows = [f"{v['voice_id']} | {v['name']} | {json.dumps(v.get('labels', {}))}" for v in j.get("voices", [])]
     open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} voices"
 
+def _spend(n, model, mode):
+    """Count paid Gemini images so scripts/balances.py can estimate credit left (ops/gemini_spend.jsonl)."""
+    if n <= 0: return
+    os.makedirs("ops", exist_ok=True)
+    with open("ops/gemini_spend.jsonl", "a") as f:
+        f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()), "n": n, "model": model, "mode": mode}) + "\n")
+
 def image(t):
     model = t.get("model", "gemini-3-pro-image")
     parts = [{"text": t["prompt"]}]
@@ -46,7 +53,7 @@ def image(t):
     for p in j["candidates"][0]["content"]["parts"]:
         d = p.get("inlineData") or p.get("inline_data")
         if d:
-            open(f"{OUT}/{t['name']}.png", "wb").write(base64.b64decode(d["data"])); return "image ok"
+            open(f"{OUT}/{t['name']}.png", "wb").write(base64.b64decode(d["data"])); _spend(1, model, "single"); return "image ok"
     return "no image: " + json.dumps(j)[:300]
 
 def _img_request(t):
@@ -103,7 +110,7 @@ def batch_poll():
                         if d and key:
                             open(f"{OUT}/{key}.png", "wb").write(base64.b64decode(d["data"])); got.append(key)
             rec["saved"] = got; rec["missing"] = [i["name"] for i in rec["images"] if i["name"] not in got]
-            rec["finished"] = time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime())
+            rec["finished"] = time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()); _spend(len(got), rec.get("model", ""), "batch")
             json.dump(rec, open(f"batches/done/{rec['name']}.json", "w"), indent=1); os.remove(f)
             log.append(f"{rec['name']}: batch done, {len(got)} saved, missing {rec['missing']}")
         elif any(x in state for x in ("FAILED", "CANCELLED", "EXPIRED")):
