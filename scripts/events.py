@@ -18,7 +18,7 @@ KEEP = 600
 REPO = "https://github.com/rishigarg0709/trueyards-media"
 
 # Commits that are routine machine output: the agent that caused them already shows up another way.
-SKIP = re.compile(r"^(events|balances)$|results$|^comments?:? fetch|^comment fetch|^comments? log|^follower check|fetch requests|run requests|^fetch[: ]|^Fetch stock photos|^Check boost status|^Verify boost|^boost_status|^jobs: |^cloud-media|^batch-poll|^merge ", re.I)
+SKIP = re.compile(r"^(events|balances|funds)$|results$|^comments?:? fetch|^comment fetch|^comments? log|^follower check|fetch requests|run requests|^fetch[: ]|^Fetch stock photos|^Check boost status|^Verify boost|^boost_status|^jobs: |^cloud-media|^batch-poll|^merge ", re.I)
 # Commit message or changed path -> (agent_id, agent name in the Agents tab)
 AGENTS = [
     (r"^cos|cos/|balance watch|^balances", ("cos", "Chief of Staff")),
@@ -131,6 +131,50 @@ def meta_events(state):
     return out
 
 
+# ---------- Campaign numbers for the SMX HQ Campaigns page ----------
+CAMPAIGNS = "ops/campaigns.json"
+
+
+def meta_campaigns():
+    """Every Meta campaign in the ad account with its status, daily budget, spend and results (lifetime and today).
+    Written to ops/campaigns.json; the Control Room sync merges it with the WhatsApp campaigns into the Campaigns tab."""
+    tok = os.environ.get("META_TOKEN", "")
+    if not tok:
+        return
+    acct = json.load(open("config/meta.json"))["ad_account_id"]
+    camps = graph(f"{acct}/campaigns?fields=name,effective_status,daily_budget,created_time,objective&limit=200", tok)
+    sets = graph(f"{acct}/adsets?fields=campaign_id,effective_status,daily_budget&limit=500", tok)
+    if "error" in camps or "error" in sets:
+        return
+
+    def insights(preset):
+        j = graph(f"{acct}/insights?level=campaign&fields=campaign_id,spend,impressions,reach,inline_link_clicks,actions&date_preset={preset}&limit=200", tok)
+        return {x["campaign_id"]: x for x in j.get("data", [])} if "error" not in j else {}
+
+    life, today = insights("maximum"), insights("today")
+
+    def chats(x):
+        return next((int(float(a["value"])) for a in (x or {}).get("actions", []) if "messaging_conversation_started" in a.get("action_type", "")), 0)
+
+    rows = []
+    for c in camps.get("data", []):
+        budget = int(c["daily_budget"]) if str(c.get("daily_budget") or "").isdigit() else sum(
+            int(a["daily_budget"]) for a in sets.get("data", [])
+            if a.get("campaign_id") == c["id"] and a.get("effective_status") == "ACTIVE" and str(a.get("daily_budget") or "").isdigit())
+        l, t = life.get(c["id"], {}), today.get(c["id"], {})
+        if c.get("effective_status") in ("DELETED", "ARCHIVED") and not l:
+            continue
+        rows.append({"id": c["id"], "name": c.get("name", ""), "status": c.get("effective_status", "").lower().replace("_", " "),
+                     "objective": c.get("objective", ""), "created": (c.get("created_time") or "")[:10], "budget_day_inr": budget // 100,
+                     "spend_inr": round(float(l.get("spend") or 0)), "spend_today_inr": round(float(t.get("spend") or 0)),
+                     "impressions": int(l.get("impressions") or 0), "reach": int(l.get("reach") or 0),
+                     "clicks": int(l.get("inline_link_clicks") or 0), "chats": chats(l), "chats_today": chats(t)})
+    rows.sort(key=lambda r: (r["status"] != "active", r["name"]))
+    prev = json.load(open(CAMPAIGNS)).get("rows") if os.path.exists(CAMPAIGNS) else None
+    if rows != prev:
+        json.dump({"at": ist(NOW), "rows": rows}, open(CAMPAIGNS, "w"), indent=1)
+
+
 # ---------- Failed workflow runs (automatic bug detection, 18 Nov review) ----------
 RUN_OWNER = {"meta-ops": ("bo.reel.publish", "Publisher and cross-poster"), "social-ops": ("bo.reel.publish", "Publisher and cross-poster"),
              "ads-ops": ("pf.ads", "FIT Meta ads agent"), "cloud-media": ("cs.img", "Image generator"), "batch-poll": ("cs.img", "Image generator"),
@@ -179,6 +223,10 @@ def main():
     state = json.load(open(STATE)) if os.path.exists(STATE) else {}
     meta_before = json.dumps(state.get("meta"), sort_keys=True)
     sha_before = state.get("last_sha")
+    try:
+        meta_campaigns()
+    except Exception as e:
+        print("campaign numbers skipped:", type(e).__name__)
     new = commit_events(state) + meta_events(state) + ci_events()
     lines = open(FEED).read().splitlines() if os.path.exists(FEED) else []
     seen = {json.loads(l)["id"] for l in lines if l.strip()}
