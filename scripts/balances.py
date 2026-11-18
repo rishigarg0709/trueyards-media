@@ -107,6 +107,16 @@ def gemini():
     return out
 
 
+def _active_daily_budgets():
+    """Sum of the daily budgets of everything live in the ad account (FIT, Jind, follow ads), from the event feed's
+    snapshot. 18 Nov review: the fixed INR 700 plan missed the Jind relaunch and the follow campaign."""
+    try:
+        meta = json.load(open("ops/events_state.json")).get("meta", {})
+    except Exception:
+        return 0
+    return sum(int(v["budget"]) for v in meta.values() if v.get("status") == "ACTIVE" and str(v.get("budget") or "").isdigit()) / 100
+
+
 # ---------- Meta ad account (FIT ads, Jind ads, TrueYards boost: one prepaid account) ----------
 def meta():
     c = CFG["meta"]
@@ -132,7 +142,7 @@ def meta():
     if m:
         left = round(float(m.group(1).replace(",", "")))
     # FIT ads are ramping (Rishi, 18 Nov): plan on today's planned daily spend, not last week's.
-    burn = max(burn, c.get("planned_daily_inr", 0))
+    burn = max(burn, c.get("planned_daily_inr", 0), _active_daily_budgets())
     runway = days(left, burn)
     status = "out" if a.get("account_status") not in (1, None) else grade(left, runway, c.get("warn_inr"), c.get("warn_days"))
     detail = f"About INR {left} left, spending about INR {round(burn)} a day" if left is not None else "Balance not reported by Meta"
