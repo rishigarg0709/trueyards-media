@@ -6,7 +6,7 @@ REPLANNED by Rishi's review at 01:55 IST (see midday plan note). This plan is a 
 - Queue line: "new | global | Jakarta is sinking, so Indonesia is building a new capital (Nusantara)" (marked [~] 2026-11-18 evening)
 - Pillar / story type: global / visual shock with a decision (different from midday's Indian street mystery, and from Delhi, Noida, Japan and Burj)
 - Hook archetype: 10 Visual shock. Hook line idea: "Parts of this city sink up to 25 cm a year." (only if verified; otherwise use the verified figure)
-- Look: B Emerald Doc (deep green-black, white, #28c39d; natural daylight, soft haze). Different from midday's C.
+- Look: T TrueYards Brand (teal #28c39d, deep green #0E6B50, white; bright natural daylight, high key). Rishi asked on 18 Nov to try the TY palette; also apply STYLE_SYSTEM editing standard 15 to 17 (bright readable hook, strong 'tell a friend' fact).
 - Voice: Jessa. Music per look B.
 - Hero shot idea (fits naturally): hyper-real photo of a Jakarta street or mosque with the sea at the doorstep, then the real abandoned coastal mosque (real photos if available).
 - Send test: the friend who follows climate news; anyone in Mumbai or Kolkata (coastal cities).
