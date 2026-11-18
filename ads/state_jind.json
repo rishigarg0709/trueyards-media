@@ -1,9 +1,11 @@
 {
  "ads": {
-  "J1 poster: business location already alive": "120255657868730547"
+  "J1 poster: business location already alive": "120255657868730547",
+  "R1 poster: your commercial plot in Flower Valley": "120255662370110547"
  },
  "adsets": {
-  "J": "120255657866720547"
+  "J": "120255657866720547",
+  "R": "120255662369290547"
  },
  "campaign_id": "120255657866010547",
  "last_creatives_added": "2026-11-18",
