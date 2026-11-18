@@ -1,0 +1,65 @@
+{
+ "last_sha": "c9f3b3f634f2fceef4eb3c53c2dce5941ca1f201",
+ "meta": {
+  "campaign:120255657866010547": {
+   "name": "FV Jind SCO CTWA",
+   "status": "PAUSED",
+   "budget": "",
+   "camp": ""
+  },
+  "campaign:120255647260270547": {
+   "name": "FIT Warm v1",
+   "status": "PAUSED",
+   "budget": "",
+   "camp": ""
+  },
+  "campaign:120255645738970547": {
+   "name": "FIT CTWA Leads v2",
+   "status": "ACTIVE",
+   "budget": "",
+   "camp": ""
+  },
+  "campaign:120255620965680547": {
+   "name": "TrueYards Boost",
+   "status": "ACTIVE",
+   "budget": "20000",
+   "camp": ""
+  },
+  "adset:120255657866720547": {
+   "name": "FV Jind J - Advantage+ Jind 30 km",
+   "status": "CAMPAIGN_PAUSED",
+   "budget": "50000",
+   "camp": "FV Jind SCO CTWA"
+  },
+  "adset:120255647446550547": {
+   "name": "FIT W - Warm-up before WhatsApp",
+   "status": "PAUSED",
+   "budget": "12000",
+   "camp": "FIT Warm v1"
+  },
+  "adset:120255647397480547": {
+   "name": "FIT U - Unreachable on WhatsApp",
+   "status": "PAUSED",
+   "budget": "12000",
+   "camp": "FIT CTWA Leads v2"
+  },
+  "adset:120255647304890547": {
+   "name": "FIT R - Reminder after WhatsApp",
+   "status": "PAUSED",
+   "budget": "12000",
+   "camp": "FIT CTWA Leads v2"
+  },
+  "adset:120255645739620547": {
+   "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+   "status": "ACTIVE",
+   "budget": "49500",
+   "camp": "FIT CTWA Leads v2"
+  },
+  "adset:120255620983010547": {
+   "name": "TrueYards Boost - India engagement",
+   "status": "ACTIVE",
+   "budget": "",
+   "camp": "TrueYards Boost"
+  }
+ }
+}
