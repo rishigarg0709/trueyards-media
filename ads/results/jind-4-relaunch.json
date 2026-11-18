@@ -1,0 +1,21 @@
+{
+ "op": "launch",
+ "ran_at": "2026-11-18T11:08:05.583637Z",
+ "result": {
+  "ads": [
+   {
+    "success": true,
+    "name": "J1 poster: business location already alive"
+   }
+  ],
+  "adsets": [
+   {
+    "success": true,
+    "name": "FV Jind J - Advantage+ Jind 30 km"
+   }
+  ],
+  "campaign": {
+   "success": true
+  }
+ }
+}
