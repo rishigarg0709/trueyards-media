@@ -5,14 +5,14 @@ Shared memory of the WhatsApp autopilot, the ads agent and the planner. Aggregat
 ## This week's split (total INR 1500/day before GST)
 - WhatsApp autopilot INR 1005, Meta INR 495 (prospect_A 322, prospect_B 173)
 - Not enough visits or qualified leads on both channels yet to compare; split unchanged.
-- No joint waves running; Meta goes to prospecting and the unreachable list.
+- Warm-up lift not measurable yet (needs 3 waves a week old); shares held.
 - Folded unreach into prospecting (under INR 100/day learns nothing).
 
 ## Cost by channel (last 14 days)
 | Channel | Spend | Leads | Qualified | Visits planned | Visits done | Per lead | Per qualified | Per visit |
 |---|---|---|---|---|---|---|---|---|
-| wa | 2884 | 120 | 18 | 14 | 0 | 24 | 160 | 206 |
-| meta | 0 | 0 | 0 | 0 | 0 | - | - | - |
+| wa | 2885 | 120 | 18 | 14 | 0 | 24 | 160 | 206 |
+| meta | 181 | 4 | 0 | 0 | 0 | 45 | - | - |
 
 ## Best WhatsApp cells (autopilot)
 - O.eng.mid: 2.56% lead rate, 220 delivered, 4 visits, 0 fresh left

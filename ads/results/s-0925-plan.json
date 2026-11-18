@@ -1,0 +1,75 @@
+{
+ "op": "plan",
+ "ran_at": "2026-11-18T03:43:14.288837Z",
+ "result": {
+  "date": "2026-11-18",
+  "status": "ok",
+  "product": "FIT",
+  "total": 1500,
+  "wa_budget_inr": 1005,
+  "meta_budget_inr": 495,
+  "meta_tactics": {
+   "prospect_A": 322,
+   "prospect_B": 173,
+   "remind": 0,
+   "warm": 0,
+   "unreach": 0
+  },
+  "meta_shares": {
+   "prospect_A": 0.55,
+   "prospect_B": 0.35,
+   "remind": 0.0,
+   "warm": 0.0,
+   "unreach": 0.1
+  },
+  "warm": {
+   "cellsPerDay": 1,
+   "waveSize": 400,
+   "leadDays": 4
+  },
+  "evidence": {
+   "window_days": 14,
+   "channels": {
+    "wa": {
+     "spend": 2885,
+     "leads": 120,
+     "qualified": 18,
+     "visit_planned": 14,
+     "visit_done": 0,
+     "booked": 0,
+     "per_visit": 206,
+     "per_qualified": 160,
+     "per_lead": 24
+    },
+    "meta": {
+     "spend": 181,
+     "leads": 4,
+     "qualified": 0,
+     "visit_planned": 0,
+     "visit_done": 0,
+     "booked": 0,
+     "per_visit": null,
+     "per_qualified": null,
+     "per_lead": 45
+    }
+   },
+   "meta_spend": {
+    "other": {
+     "spend": 181.37,
+     "chats": 6
+    }
+   },
+   "lift": {
+    "all": {},
+    "zone": {},
+    "industry": {}
+   },
+   "summary": "ok"
+  },
+  "reasons": [
+   "Not enough visits or qualified leads on both channels yet to compare; split unchanged.",
+   "Warm-up lift not measurable yet (needs 3 waves a week old); shares held.",
+   "Folded unreach into prospecting (under INR 100/day learns nothing)."
+  ]
+ }
+}
