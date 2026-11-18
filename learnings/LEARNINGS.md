@@ -62,7 +62,7 @@ Voices: Jessa (Delhi, Japan) and Tara (Noida) skip 43 to 50%; George (Burj) 63.8
 
 ## Running experiments
 - Hook tournament (weeks 1 to 4): number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this, plus 17 and 25 as tested. Standings above; review weekly (next 2026-11-23). Changes our mind: any archetype beating contradiction on median skip by 10 points over 3 or more reels.
-- Trial twins (midday): pair 1 Japan, contradiction (trial) beat counterintuitive economics (main): reach 363 vs 186, skip 47.7 vs 50.0%, hold 33 vs 29%. 1 of 5 pairs needed.
+- Trial twins (midday): trial beat main in 2 of 2 pairs. Japan: 391 vs 186 reach. Steel rods (18 Nov, 12 h): trial 1,543 reach, skip 34%, avg watch 22.6 s vs main 136 reach, skip 63.9%, 10.1 s. Body identical from 3.9 s, so the gap is hook plus audience. Reasons: (1) trial goes to non-followers only, and our 411 followers barely engage, so main reels get a weak first test and stall (mains were 1,300 to 1,560 on 16 Nov before twins began, then 136 to 249); (2) the twin posted in the same minute splits the first-hour signal; (3) steel rods trial opened bright on real rooftops with a question, the main opened on a dark silhouette. 18 Nov 20:07 IST Rishi deleted the main reels and shared the trial versions to the main grid.
 - Look: photoreal Newsroom vs Tokyo Neutral vs Blueprint (table above). Next: one global topic in the photoreal Newsroom look, to separate look from topic.
 - Geography: India vs global on IG (2,886 vs 717 reach across 2 posts each). Confounded with look; same fix as above.
 - Reel length: 35 to 45 s vs 46 to 55 s. All reels so far are 47 to 57 s; still need a 35 to 45 s reel.
