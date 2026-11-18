@@ -16,3 +16,8 @@
 - Keep at most 2 ads active and add at most 1 new ad per day. Rotate: pause an ad after 4 days or when a newer reel beats it.
 - Prepaid funds: about INR 847 usable (INR 1,000 incl. GST), so about 8 days. When funds run low, tell Rishi to top up; never touch billing.
 - Budget raised to INR 200/day by Rishi on 2026-11-17 (about INR 6,000 a month if it runs every day; the INR 5,000 monthly cap still applies).
+
+## Followers first (Rishi, 2026-11-18 16:33: "following is the goal", requirement 100k followers)
+- 18 Nov 16:45: new campaign "TrueYards Follow" (traffic objective, optimised for Instagram profile visits, Instagram placements only: feed, reels, explore home; CTA View Instagram profile), same INR 200/day. The old engagement campaign "TrueYards Boost" is paused (its day: INR 46, 2,578 reached, 280 likes, about 2 follows).
+- boost_post now adds ads to "TrueYards Follow" (config boost_campaign_name). Judge boosts on cost per new follower (follower change on boosted days vs organic days), then profile visits; likes do not count.
+- The INR 5,000 monthly cap covers both campaigns together.
