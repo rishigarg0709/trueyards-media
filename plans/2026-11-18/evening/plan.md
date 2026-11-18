@@ -12,3 +12,8 @@ REPLANNED by Rishi's review at 01:55 IST (see midday plan note). This plan is a 
 - Send test: the friend who follows climate news; anyone in Mumbai or Kolkata (coastal cities).
 - Length target: about 48 to 55 s.
 - Rules: education only, no politics beyond facts, verified numbers with dates, clean text zones and shot variety.
+
+## Done (evening run, 18 Nov 20:15 IST)
+- Researched and verified: BBC with ITB 2018 (up to 25 cm a year, 2.5 m in 10 years), UI microgravity study via Tempo (about 11 cm a year average, North Jakarta 2014 to 2018), ABC News 19 Oct 2026 (Nusantara: about USD 45 bn, 1.2 million planned by 2029, about 10,000 moved in, about 40% of Jakarta below sea level, almost 42 million in Greater Jakarta).
+- Tell a friend: the city sinks mainly because people pump groundwater from under their own floors, not because the sea rises.
+- Published: https://www.instagram.com/reel/Df4vbosiPnY/ (see log.md).
