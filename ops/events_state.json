@@ -1,5 +1,5 @@
 {
- "last_sha": "d74c308a4ebfff3a5e5c7c7d3f78f11d556443fa",
+ "last_sha": "daf1e9a4064da4e0e7588637ec447f5ab560e3c1",
  "meta": {
   "campaign:120255661706190547": {
    "name": "TrueYards Follow",
@@ -31,6 +31,12 @@
    "budget": "20000",
    "camp": ""
   },
+  "adset:120255662369290547": {
+   "name": "FV Jind R - customers and site visitors",
+   "status": "IN_PROCESS",
+   "budget": "15000",
+   "camp": "FV Jind SCO CTWA"
+  },
   "adset:120255661720970547": {
    "name": "TrueYards Follow - IG profile visits",
    "status": "ACTIVE",
@@ -40,7 +46,7 @@
   "adset:120255657866720547": {
    "name": "FV Jind J - Advantage+ Jind 30 km",
    "status": "ACTIVE",
-   "budget": "50000",
+   "budget": "15000",
    "camp": "FV Jind SCO CTWA"
   },
   "adset:120255647446550547": {
