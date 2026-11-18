@@ -1,12 +1,14 @@
-2026-11-18 06:58 UTC
-el-usage-1118m [usage]: usage ok
-rods-vo-1 [voice]: voice ok
-rods-vo-2 [voice]: voice ok
-rods-trial-vo-1 [voice]: voice ok
-rods-beat [music]: music ok 720605 bytes
-rods-1 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
-rods-2 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
-rods-3 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
-rods-4 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
-rods-5 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
-rods-6 [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
+2026-11-18 10:40 UTC
+cmp-models [models]: 6 image models
+cmp-pro-rods-1 [image]: image ok
+cmp-f25-rods-1 [image]: image ok
+cmp-f31-rods-1 [image]: image ok
+cmp-pro-rods-2 [image]: image ok
+cmp-f25-rods-2 [image]: image ok
+cmp-f31-rods-2 [image]: image ok
+cmp-pro-rods-4 [image]: image ok
+cmp-f25-rods-4 [image]: image ok
+cmp-f31-rods-4 [image]: image ok
+cmp-pro-rods-6 [image]: image ok
+cmp-f25-rods-6 [image]: image ok
+cmp-f31-rods-6 [image]: image ok
