@@ -1,6 +1,0 @@
-d1118-rooftops-overhead https://images.unsplash.com/photo-1772223884645-67c907e11d12?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
-d1118-dense-blue https://images.unsplash.com/photo-1768131482157-8feede7b8439?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
-d1118-roof-pigeons https://images.unsplash.com/photo-1772223552667-9316939571ac?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
-d1118-rebar-wall https://images.unsplash.com/photo-1770425343405-9b922f02f938?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3200
-d1118-rebar-brick https://images.unsplash.com/photo-1762680743653-0638e7fc9ec5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4000
-d1118-golden-roofs https://images.unsplash.com/photo-1794493150395-55d4656701ba?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
