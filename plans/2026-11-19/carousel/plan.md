@@ -1,5 +1,7 @@
 # 2026-11-19 carousel (17:13 IST): Property prices never fall? What the data says
 
+Batch status: prep-2026-11-19 submitted 2026-11-18 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-19-pro.json (3 Pro hook and cover images) and prep-2026-11-19.json (14 Flash images). The workflow's own push lost a race with the photo fetch, so the planner wrote the two pending records by hand with the batch ids from the run log. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+
 - Topic: myth vs data on "property never falls": US home prices fell 34% (2006 to 2012), China's new home prices are still falling in Oct 2026, and India's index rose 3.6% in a year while retail inflation was 4.38%. Lesson: check the index, not the brochure.
 - Why this topic (PLAYBOOK.md): no big news for tomorrow's slot; next pillar in rotation after 5 (infrastructure, 18 Nov) is 6 Myths and debates ("property never falls", official historical data), never covered yet. Different theme from both reels (Jaipur history; Mumbai rent law). Education only: no buy, sell or timing advice, no predictions.
 - Thursday note: PLAYBOOK says Thursday carousels are the look H "Explained to a beginner" series, but the CEO's newer canvas rule (17 Nov: one seamless canvas, 21:9 panorama, photoreal 3D models on 5 of 7 slides) cannot be met with look H illustrations, so this plan follows the canvas rule. Flagged in the run report.

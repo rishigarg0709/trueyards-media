@@ -1,5 +1,7 @@
 # 2026-11-19 evening reel (19:07 IST): The South Mumbai flat that rented for $23 a month
 
+Batch status: prep-2026-11-19 submitted 2026-11-18 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-19-pro.json (3 Pro hook and cover images) and prep-2026-11-19.json (14 Flash images). The workflow's own push lost a race with the photo fetch, so the planner wrote the two pending records by hand with the batch ids from the run log. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+
 - Topic: Mumbai's rent control: a 1947 law froze rents at 1940 levels, so some old South Mumbai flats rent for almost nothing, the buildings decay, and yet the tenant holds the real value.
 - Queue item: "Why some Kolkata and Mumbai tenants pay a few hundred rupees rent for prime flats (old rent control laws)". Marked [~] 2026-11-19 evening. Skipped on the way: "Follow ₹1 crore" (no verifiable cost split from primary sources tonight, and short money maths without a story is on the Do less list; left in the queue), "Mumbai seven islands" (history, same story type as today's midday Jaipur reel), "Dharavi" (redevelopment politics, needs more care), "Spite houses" (weird, too close to the 18 Nov roof rods story type), "Lavasa" (failed builder city, close to the Noida builder theme), "Steinway Tower" (engineering marvel, Burj on 17 Nov).
 - Story type: money maths (real case with a twist)

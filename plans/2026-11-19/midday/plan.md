@@ -1,6 +1,7 @@
 # 2026-11-19 midday reel (12:23 IST): Why Jaipur is pink
 
-Batch status: prep-2026-11-19 ordered by the nightly planner at about 22:45 IST on 18 Nov (see top of the evening plan for the submit check).
+Batch status: prep-2026-11-19 submitted 2026-11-18 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-19-pro.json (3 Pro hook and cover images) and prep-2026-11-19.json (14 Flash images). The workflow's own push lost a race with the photo fetch, so the planner wrote the two pending records by hand with the batch ids from the run log. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+
 
 - Topic: Why Jaipur's old city is pink: painted to welcome the Prince of Wales in 1876, and a law in 1877 is said to have made pink compulsory. Jaipur's founding day was 18 Nov (founded 18 Nov 1727), so it is timely.
 - Queue item: "Why Jaipur's Pink City is pink" (next unchecked topic after Campa Cola, which was skipped: it repeats the Noida "builder fails, court steps in" theme). Marked [~] 2026-11-19 midday.
