@@ -223,7 +223,12 @@ def alert(checks, prev):
     every = datetime.timedelta(hours=CFG.get("alert_every_hours", 12))
     old = {c["id"]: c.get("status") for c in prev.get("checks", [])}
     due = []
+    gem_out = any(c["id"] == "gemini" and c["status"] == "out" for c in checks)
     for c in checks:
+        # The free Cloudflare backup resets every morning: only worth a message when Gemini is down too (no image source left).
+        if c["id"] == "cloudflare" and not gem_out:
+            sent.pop(c["id"], None)
+            continue
         if c["status"] not in ("low", "out"):
             sent.pop(c["id"], None)
             continue
