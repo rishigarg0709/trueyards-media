@@ -1,6 +1,6 @@
 """Free 4K upscale for generated images (no API cost).
 Gemini makes images at 2K; this runs Real-ESRGAN (realesr-general-x4v3, CPU) on each new one and writes
-library/media/<name>-4k.jpg with the long edge at 2x the source (2K 9:16 -> about 3072x5504).
+library/media/<name>-4k.jpg: 2x for 2K Pro images, 4x for 1K Flash images (both end near 3072x5504).
 usage: python3 scripts/upscale.py [files...]   (no args: new or changed PNGs in library/media below 3000 px)"""
 import os, subprocess, sys, urllib.request
 import numpy as np, torch
@@ -43,7 +43,9 @@ def main():
     model = ModelLoader().load_from_file(W).eval().model
     for f in fs:
         im = Image.open(f).convert("RGB")
-        big = run(model, im).resize((im.width * 2, im.height * 2), Image.LANCZOS)
+        k = 4 if max(im.size) < 2000 else 2  # 1K Flash images get the full 4x, 2K Pro images 2x: same output size
+        big = run(model, im)
+        if k != 4: big = big.resize((im.width * k, im.height * k), Image.LANCZOS)
         o = f[:-4] + "-4k.jpg"; big.save(o, quality=95, subsampling=0)
         print(f"{f} {im.size} -> {o} {big.size}")
 

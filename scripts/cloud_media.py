@@ -1,7 +1,7 @@
 """Cloud media jobs: ElevenLabs voice (with word timings), ElevenLabs music, Gemini images.
 Each job file in jobs/*.json is a list of tasks; results land in library/media/<name>.*
 and a log in library/media/_last_run.txt. Keys come from GitHub secrets only."""
-import base64, glob, json, os, sys, time, urllib.request, urllib.error
+import base64, glob, json, os, re, sys, time, urllib.request, urllib.error
 
 OUT = "library/media"; os.makedirs(OUT, exist_ok=True)
 EL = os.environ.get("ELEVENLABS_API_KEY", ""); GM = os.environ.get("GEMINI_API_KEY", "")
@@ -34,6 +34,15 @@ def voices(t):
     rows = [f"{v['voice_id']} | {v['name']} | {json.dumps(v.get('labels', {}))}" for v in j.get("voices", [])]
     open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} voices"
 
+# Image models (Rishi, 18 Nov 2026 16:25: "use combination of pro and 3.1 flash"). Pro only for the image that has to
+# stop the scroll: the reel hook frame and the carousel cover (name ending -1, cover or hook, or "hero": true).
+# Everything else on 3.1 Flash at 1K (half the price; the free upscale then goes 4x, so the output size matches Pro).
+PRO, FLASH = "gemini-3-pro-image", "gemini-3.1-flash-image"
+
+def pick_model(i):
+    if i.get("model"): return i["model"]  # an explicit per-image model always wins
+    return PRO if i.get("hero") or re.search(r"(-1|cover|hook)$", str(i.get("name", ""))) else FLASH
+
 def _spend(n, model, mode):
     """Count paid Gemini images so scripts/balances.py can estimate credit left (ops/gemini_spend.jsonl)."""
     if n <= 0: return
@@ -42,7 +51,7 @@ def _spend(n, model, mode):
         f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()), "n": n, "model": model, "mode": mode}) + "\n")
 
 def image(t):
-    model = t.get("model", "gemini-3-pro-image")
+    model = pick_model(t)
     parts = [{"text": t["prompt"]}]
     for ip in t.get("inputs", []):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
@@ -58,8 +67,9 @@ def image(t):
 def _img_config(t, model):
     """Gemini 2.5 Flash Image has one output size (about 1K; the free 4K upscale runs after); newer models take imageSize."""
     cfg = {"aspectRatio": t.get("aspect", "9:16")}
-    if "2.5" not in model:
-        cfg["imageSize"] = t.get("size", "2K")
+    if "2.5" in model:
+        return cfg
+    cfg["imageSize"] = t.get("size", "2K") if "pro" in model or t.get("keep_size") else "1K"
     return cfg
 
 def _img_request(t, model="gemini-3-pro-image"):
@@ -70,17 +80,26 @@ def _img_request(t, model="gemini-3-pro-image"):
     return {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": _img_config(t, model)}}
 
 def batch_submit(t):
-    """Half-price Gemini images. t = {kind, name, model?, images:[{name, prompt, aspect?, size?, inputs?}]}.
-    Results are saved later by the batch-poll workflow into library/media/<image name>.png."""
-    model = t.get("model", "gemini-3-pro-image")
-    reqs = [{"request": _img_request(i, model), "metadata": {"key": i["name"]}} for i in t["images"]]
-    body = {"batch": {"display_name": t["name"], "input_config": {"requests": {"requests": reqs}}}}
-    j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchGenerateContent", body, {"x-goog-api-key": GM})
+    """Half-price Gemini images. t = {kind, name, images:[{name, prompt, aspect?, size?, inputs?, hero?, model?}]}.
+    Images are split by model (pick_model): hero images go in batch <name>-pro, the rest in <name>. A batch-level
+    "model" is ignored unless "force_model": true. Results are saved later by the batch-poll workflow into
+    library/media/<image name>.png."""
+    groups = {}
+    for i in t["images"]:
+        m = t["model"] if t.get("force_model") and t.get("model") else pick_model(i)
+        groups.setdefault(m, []).append(i)
+    msgs = []
     os.makedirs("batches/pending", exist_ok=True)
-    rec = {"batch": j.get("name"), "name": t["name"], "model": model, "submitted": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
-           "images": t["images"], "fallback_after_utc": t.get("fallback_after_utc")}
-    json.dump(rec, open(f"batches/pending/{t['name']}.json", "w"), indent=1)
-    return f"batch submitted {j.get('name')} ({len(reqs)} images)"
+    for model, imgs in groups.items():
+        name = t["name"] + ("-pro" if model == PRO and len(groups) > 1 else "")
+        reqs = [{"request": _img_request(i, model), "metadata": {"key": i["name"]}} for i in imgs]
+        body = {"batch": {"display_name": name, "input_config": {"requests": {"requests": reqs}}}}
+        j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchGenerateContent", body, {"x-goog-api-key": GM})
+        rec = {"batch": j.get("name"), "name": name, "model": model, "submitted": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
+               "images": imgs, "fallback_after_utc": t.get("fallback_after_utc")}
+        json.dump(rec, open(f"batches/pending/{name}.json", "w"), indent=1)
+        msgs.append(f"{name}: {model} {len(reqs)} images ({j.get('name')})")
+    return "batch submitted " + "; ".join(msgs)
 
 def _find(o, key):
     if isinstance(o, dict):

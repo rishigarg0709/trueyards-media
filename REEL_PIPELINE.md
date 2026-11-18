@@ -19,7 +19,7 @@ Before anything else, read REEL_HOOKS_PLAYBOOK.md (the rules) and look at the re
 4. **Cloud jobs** (push one JSON file to `jobs/`, the GitHub workflow runs it in 1 to 3 minutes; results land in `library/media/`, log in `library/media/_last_run.txt`):
    - voice: `{"kind":"voice","name":"<slug>-vo-1","voice_id":"yj30vwTGJxSHezdAGsv9","model":"eleven_v3","text":"...","settings":{"stability":0.5,"similarity_boost":0.8,"style":0.3,"use_speaker_boost":true}}`. Make 2 takes, pick the one whose hook word lands earliest.
    - music: `{"kind":"music","name":"<slug>-beat","prompt":"<style> instrumental at exactly 96 BPM in 4/4 ... starts immediately with the full beat, strong clear downbeats, no vocals","ms":62000}`. Vary style per reel (documentary hip-hop, cinematic trap, lo-fi house, tense orchestral-hybrid with drums), always a steady beat.
-   - images: `{"kind":"image","name":"<slug>-x","prompt":"Photorealistic ... vertical 9:16 ... no text, no logos, no people visible"}` (Gemini, about ₹11 each, keep to 6 or fewer per reel). For an edit of an existing image add `"inputs":["library/media/<file>.png"]`. Real photos of named real places: Unsplash or Wikimedia Commons via `fetch/*.txt` (see library/README.md), credited.
+   - images: `{"kind":"image","name":"<slug>-x","prompt":"Photorealistic ... vertical 9:16 ... no text, no logos, no people visible"}` (Gemini; the model is picked for you: the hook frame `<slug>-1`, any `-cover` or `-hook`, or `"hero": true` goes to Gemini 3 Pro at about ₹11, every other image to Gemini 3.1 Flash at about ₹5.70, half that in the nightly batch; do not set "model" unless you have a reason; keep to 6 or fewer per reel). For an edit of an existing image add `"inputs":["library/media/<file>.png"]`. Real photos of named real places: Unsplash or Wikimedia Commons via `fetch/*.txt` (see library/README.md), credited.
 5. **Build.** `cp -r reels/2026-11-16-delhi-skyscrapers reels/<date>-<slug>`, replace `img/` with this reel's images, then:
    - `python3 scripts/reel/vo_align.py library/media/<vo>.mp3 library/media/<vo>.align.json reels/<dir>` (vo.wav + words.json)
    - `python3 scripts/reel/beats.py library/media/<beat>.mp3 <hook_word_time> reels/<dir>/beats.json`
@@ -59,7 +59,7 @@ Everything is made at 4K-class resolution and each platform gets the highest ver
 | Reel | `reel-4k.mp4` 2160x3840, CRF 14 (local only) | `reel.mp4` 1440x2560, ≤24 Mbps | `reel-yt.mp4` 2160x3840 (plays in 4K) | `reel-x.mp4` 1068x1900 |
 | Reel cover | `cover.jpg` 2160x3840 | `cover-ig.jpg` 1440x2560 | `cover.jpg` | n/a |
 | Carousel slide | `master/*-slide-N.jpg` 2160x2700 | `*-slide-N.jpg` 1440x1800 | n/a | 1440x1800 |
-| AI images | Gemini at 2K, then free Real-ESRGAN upscale to `<name>-4k.jpg` (2x) | | | |
+| AI images | Hook and cover: Gemini 3 Pro at 2K, upscaled 2x. All others: Gemini 3.1 Flash at 1K, upscaled 4x. Both land as `<name>-4k.jpg` at about 3072x5504 | | | |
 
 Rules
 - Frames render at deviceScaleFactor 2 (1080 layout, 2160x3840 pixels). `SCALE=1` only for drafts, never for publishing.

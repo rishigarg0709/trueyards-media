@@ -67,7 +67,10 @@ def gemini():
                 spend.append(json.loads(line))
             except Exception:
                 pass
-    rate = lambda s: c["inr_per_batch_image"] if s.get("mode") == "batch" else c["inr_per_image"]
+    prices = c.get("inr_per_image_by_model", {})
+    def rate(s):  # per-model price; batch is half (Rishi, 18 Nov: Pro for hook and cover, 3.1 Flash for the rest)
+        full = prices.get(s.get("model") or "", c["inr_per_image"])
+        return full / 2 if s.get("mode") == "batch" else full
     week_ago = (NOW - datetime.timedelta(days=7)).strftime("%Y-%m-%dT%H:%MZ")
     burn = sum(s["n"] * rate(s) for s in spend if s["at"] >= week_ago) / 7
     tops = sorted(c.get("topups", []), key=lambda t: t["at"])
@@ -92,7 +95,14 @@ def gemini():
             detail = "Working. Credit left is unknown until a top-up amount is recorded in config/balances.json"
         else:
             detail = "Could not run the test call"
-    out.update(status=status, left=left, burn_per_day=round(burn), runway_days=runway, detail=detail)
+    # Daily image budget: a runaway job should not drain the credit unnoticed.
+    today = NOW.astimezone(IST).strftime("%Y-%m-%d")
+    spent_today = sum(s["n"] * rate(s) for s in spend
+                      if datetime.datetime.strptime(s["at"], "%Y-%m-%dT%H:%MZ").replace(tzinfo=datetime.timezone.utc).astimezone(IST).strftime("%Y-%m-%d") == today)
+    cap = c.get("daily_warn_inr")
+    if cap and spent_today > cap and status == "ok":
+        status, detail = "low", f"Spent about INR {round(spent_today)} on images today, above the INR {cap} daily budget. " + detail
+    out.update(status=status, left=left, burn_per_day=round(burn), runway_days=runway, detail=detail, spent_today=round(spent_today))
     return out
 
 
