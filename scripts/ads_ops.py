@@ -25,6 +25,16 @@ STATE_PATH = "ads/state.json"
 CONV = "onsite_conversion.messaging_conversation_started_7d"
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
+def use_product(product=None):
+    """Point the agent at another product's config and state (config/ads_<product>.json, ads/state_<product>.json)."""
+    global CFG, CFG_PATH, ACT, STATE_PATH
+    CFG_PATH = f"config/ads_{product}.json" if product else "config/ads.json"
+    STATE_PATH = f"ads/state_{product}.json" if product else "ads/state.json"
+    CFG = json.load(open(CFG_PATH)); ACT = CFG["ad_account_id"]
+
+def products():
+    return [os.path.basename(p)[4:-5] for p in sorted(glob.glob("config/ads_*.json"))]
+
 def today():
     return datetime.datetime.now(IST).date()
 
@@ -441,7 +451,8 @@ def op_daily(req):
 
     # 2b. tactics (warm-up, reminder, unreachable) and planner budgets, then the creative tester
     try:
-        apply_tactics_and_plan(rep, summary, dry)
+        if CFG.get("use_planner", True):
+            apply_tactics_and_plan(rep, summary, dry)
     except Exception as e:
         rep["flags"].append(f"Tactics step skipped: {type(e).__name__}: {e}")
     try:
@@ -498,7 +509,7 @@ def write_report(rep):
         L += [f"Warm-up lift so far: {lf['lift']} over {lf['waves']} waves ({lf['wl']} leads from {lf['wd']} warmed vs {lf['cl']} from {lf['cd']} control)."]
     L += ["", "## Actions"] + ([f"- {a}" for a in rep["actions"]] or ["- none"])
     L += ["", "## Flags"] + ([f"- {a}" for a in rep["flags"]] or ["- none"])
-    open(f"ads/reports/{rep['date']}.md", "w").write("\n".join(L) + "\n")
+    open(f"ads/reports/{CFG.get('report_prefix', '')}{rep['date']}.md", "w").write("\n".join(L) + "\n")
 
 def op_add_ads(req):
     """Add fresh creatives to an ad set. Live only when the campaign is already approved and running; never touches budget."""
@@ -620,6 +631,7 @@ OPS = {"check": op_check, "status": op_status, "setup": op_setup, "launch": op_l
 # Deliberately absent: any op that raises budgets or caps, touches billing, or edits non-FIT campaigns.
 
 def run(name, req):
+    use_product(req.get("product"))
     try:
         fn = OPS.get(req.get("op"))
         res = fn(req) if fn else {"error": f"unknown op {req.get('op')}"}
@@ -636,6 +648,10 @@ def main():
     os.makedirs("ads/processed", exist_ok=True)
     if "--daily" in sys.argv:
         run(f"daily-{today()}", {"op": "daily"})
+        for p in products():
+            if json.load(open(f"config/ads_{p}.json")).get("daily", True):
+                run(f"daily-{p}-{today()}", {"op": "daily", "product": p})
+        use_product()
         return
     for f in sorted(glob.glob("ads/requests/*.json")):
         name = os.path.basename(f)[:-5]
