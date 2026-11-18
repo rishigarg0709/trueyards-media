@@ -12,3 +12,4 @@
 {"at": "2026-11-18T10:40Z", "n": 1, "model": "gemini-3.1-flash-image-preview", "mode": "single"}
 {"at": "2026-11-18T11:17Z", "n": 1, "model": "gemini-3.1-flash-image", "mode": "single"}
 {"at": "2026-11-18T11:19Z", "n": 1, "model": "gemini-3.1-flash-image", "mode": "batch"}
+{"at": "2026-11-18T11:59Z", "n": 1, "model": "gemini-3-pro-image", "mode": "batch"}

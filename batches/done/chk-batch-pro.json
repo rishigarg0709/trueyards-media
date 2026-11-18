@@ -9,5 +9,10 @@
    "prompt": "Photograph of a newly built Indian commercial market street with shop shutters, bright daylight, photorealistic, vertical 9:16, no text, no logos, no people visible"
   }
  ],
- "fallback_after_utc": null
+ "fallback_after_utc": null,
+ "saved": [
+  "chk-batch-1"
+ ],
+ "missing": [],
+ "finished": "2026-11-18T11:59Z"
 }
