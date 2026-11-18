@@ -1,12 +1,12 @@
-# Balances (checked 2026-11-18 22:37 IST; runs about every 2 hours and after every image job)
+# Balances (checked 2026-11-18 22:51 IST; runs about every 2 hours and after every image job)
 
 | Service | Status | Left | Per day | Days left | Detail | Fix |
 |---|---|---|---|---|---|---|
 | Cloudflare free images (backup) | OUT |  |  |  | Today's free allowance is used up; resets 05:30 IST | Nothing to pay: it resets at 05:30 IST. Upgrade to Workers Paid only if the backup is needed every day |
-| WhatsApp wallet (autopilot, broadcasts, alerts) | LOW | 685 INR | 1005 | 0.7 | About INR 685 left at INR 1005 a day | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
 | elevenlabs | Check |  |  |  | check failed: TimeoutError |  |
 | Gemini images | OK | 1,865 INR | 300 | 6.2 | About INR 1865 left of the INR 2000 top-up on 2026-11-18 | Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets |
-| Meta ad account (prepaid) | OK | 2,107 INR | 995 | 2.1 | About INR 2107 left, spending about INR 995 a day | Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it) |
+| Meta ad account (prepaid) | OK | 2,097 INR | 995 | 2.1 | About INR 2097 left, spending about INR 995 a day | Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it) |
+| WhatsApp wallet (autopilot, broadcasts, alerts) | OK | 10,000 INR | 1005 | 10.0 | About INR 10000 left at INR 1005 a day | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
 | Apify (trend scan) | OK | 1.61 USD |  |  | USD 3.39 used of USD 5.00 this month | Upgrade the Apify plan or skip the comment mining in the weekly scan until the month resets |
 
 X API prepaid credit has no balance API: check developer.x.com when posts start failing.
