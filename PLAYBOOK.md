@@ -6,6 +6,7 @@ Owner: Rishi Garg. Goal he set: 1 million organic followers on Instagram within 
 - Instagram ranks on watch time, likes per reach and sends per reach. Sends (DM shares) matter most for reaching non-followers. Design every post so a viewer thinks "I must send this to X".
 - Originality: only original content gets recommended. Build every chart and slide from primary data. Never repost or screenshot other creators or news graphics.
 - Carousels: cover hook in 10 words or fewer; slide 2 must work as a standalone hook (Instagram re-serves unswiped carousels from slide 2); one idea per slide; 7 to 10 slides (Windsor allows at most 10); a recurring visual element that crosses slide edges to pull the swipe; end with a send prompt naming a specific person.
+- Rupees only (Rishi, 2026-11-18: the channel is India by soul): every money figure is in ₹ with lakh and crore, foreign figures converted at the source year's rate and marked approx. Full rule: STYLE_SYSTEM.md editing standard 18.
 - Hashtags: at most 5, specific. Put search keywords (city names, terms people type) in the first caption line and body.
 - High-arousal emotions (awe at a number, anxiety about a trap, with the fix) and practical utility drive sharing. Avoid tribal outrage.
 
