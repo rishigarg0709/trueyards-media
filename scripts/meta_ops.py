@@ -147,7 +147,9 @@ def op_boost_status(req):
     camps = call(f"{ACT}/campaigns", {"fields": "id,name,status,effective_status,daily_budget", "limit": 50})
     ads = call(f"{ACT}/ads", {"fields": "id,name,status,effective_status,creative{object_story_id,source_instagram_media_id}", "limit": 100})
     ins = call(f"{ACT}/insights", {"level": "ad", "fields": "ad_id,ad_name,spend,impressions,reach,actions,cost_per_action_type", "date_preset": "last_7d"})
-    return {"month_spend_inr": month_spend(), "campaigns": camps, "ads": ads, "insights_7d": ins}
+    today = call(f"{ACT}/insights", {"level": "ad", "fields": "ad_id,ad_name,spend,impressions,reach,actions", "date_preset": "today"})
+    sets = call(f"{ACT}/adsets", {"fields": "id,name,campaign{name},effective_status,daily_budget,learning_stage_info,optimization_goal,issues_info", "limit": 50})
+    return {"month_spend_inr": month_spend(), "campaigns": camps, "ads": ads, "insights_7d": ins, "insights_today": today, "adsets": sets}
 
 # ---------- spend ops (guarded) ----------
 BOOST_NAME = "TrueYards Boost"
