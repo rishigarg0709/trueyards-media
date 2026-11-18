@@ -1,9 +1,15 @@
 {
- "last_sha": "c9f3b3f634f2fceef4eb3c53c2dce5941ca1f201",
+ "last_sha": "5c7da54200a2df3b77f54e99cb9b166a2ca617cc",
  "meta": {
+  "campaign:120255661706190547": {
+   "name": "TrueYards Follow",
+   "status": "ACTIVE",
+   "budget": "20000",
+   "camp": ""
+  },
   "campaign:120255657866010547": {
    "name": "FV Jind SCO CTWA",
-   "status": "PAUSED",
+   "status": "ACTIVE",
    "budget": "",
    "camp": ""
   },
@@ -21,13 +27,19 @@
   },
   "campaign:120255620965680547": {
    "name": "TrueYards Boost",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "20000",
    "camp": ""
   },
+  "adset:120255661720970547": {
+   "name": "TrueYards Follow - IG profile visits",
+   "status": "ACTIVE",
+   "budget": "",
+   "camp": "TrueYards Follow"
+  },
   "adset:120255657866720547": {
    "name": "FV Jind J - Advantage+ Jind 30 km",
-   "status": "CAMPAIGN_PAUSED",
+   "status": "ACTIVE",
    "budget": "50000",
    "camp": "FV Jind SCO CTWA"
   },
@@ -57,7 +69,7 @@
   },
   "adset:120255620983010547": {
    "name": "TrueYards Boost - India engagement",
-   "status": "ACTIVE",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "",
    "camp": "TrueYards Boost"
   }
