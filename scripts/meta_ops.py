@@ -397,8 +397,13 @@ def op_set_budget(req):
     r = call(camp["id"], {"daily_budget": paise}, "POST")
     return {"result": r, "now": call(camp["id"], {"fields": "name,daily_budget,status"})}
 
+def op_ad_breakdown(req):
+    """{ad_id, date_preset?:'today'} -> spend, reach and actions by platform and placement."""
+    return call(f"{req['ad_id']}/insights", {"fields": "spend,impressions,reach,actions",
+                "breakdowns": "publisher_platform,platform_position", "date_preset": req.get("date_preset", "today")})
+
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
-       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget,
+       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget, "ad_breakdown": op_ad_breakdown,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
        "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide, "brand": op_brand}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
