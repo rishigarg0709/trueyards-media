@@ -26,7 +26,8 @@
       "gemini-2.5-flash-image": 3.3
     },
     "daily_warn_inr": 400,
-    "_note": "Prices: Pro 2K about USD 0.134, 3.1 Flash 1K about USD 0.067 (batch half). Pro only for hook frame and carousel cover (scripts/cloud_media.py pick_model)."
+    "_note": "Prices: Pro 2K about USD 0.134, 3.1 Flash 1K about USD 0.067 (batch half). Pro only for hook frame and carousel cover (scripts/cloud_media.py pick_model).",
+    "planned_daily_inr": 300
   },
   "meta": {
     "warn_inr": 1000,

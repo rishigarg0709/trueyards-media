@@ -73,6 +73,7 @@ def gemini():
         return full / 2 if s.get("mode") == "batch" else full
     week_ago = (NOW - datetime.timedelta(days=7)).strftime("%Y-%m-%dT%H:%MZ")
     burn = sum(s["n"] * rate(s) for s in spend if s["at"] >= week_ago) / 7
+    burn = max(burn, c.get("planned_daily_inr", 0))  # the spend log is young; plan on the expected daily spend
     tops = sorted(c.get("topups", []), key=lambda t: t["at"])
     left = None
     if tops:
