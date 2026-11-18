@@ -289,8 +289,9 @@ def op_setup(req):
     for a in enabled:
         s = existing.get(a["name"])
         if not s:
-            t, notes = targeting(a)
+            t, notes = targeting(a, a.get("custom_audience_ids"))
             base = {"name": a["name"], "campaign_id": camp["id"], "status": "PAUSED", "daily_budget": paise(a["daily_budget_inr"]),
+                    **({"start_time": a["start_time"]} if a.get("start_time") else {}),
                     "billing_event": "IMPRESSIONS", "optimization_goal": "CONVERSATIONS", "destination_type": "WHATSAPP",
                     "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": t}
             errs = []
@@ -1032,6 +1033,25 @@ def op_delete_paused(req):
         out[i] = {"name": o.get("name"), "result": call(i, {"status": "DELETED"}, "POST")}
     return out
 OPS["delete_paused"] = op_delete_paused
+
+
+def op_set_budget(req):
+    """Changes the daily budget of existing ad sets to match the config (adsets[].daily_budget_inr), within the daily cap.
+    Request: {"op": "set_budget", "product": "jind"}. Only lowers or raises to what the config already says."""
+    camp = find_campaign()
+    if not camp:
+        return {"error": "no campaign"}
+    enabled = [a for a in CFG["adsets"] if a.get("enabled")]
+    total = sum(a["daily_budget_inr"] for a in enabled)
+    if total > CFG["daily_cap_inr"]:
+        return {"blocked": f"budgets INR {total} above daily cap INR {CFG['daily_cap_inr']}"}
+    want = {a["name"]: a["daily_budget_inr"] for a in enabled}
+    out = {}
+    for s_ in adsets_of(camp["id"]):
+        if s_["name"] in want and inr(s_["daily_budget"]) != want[s_["name"]]:
+            out[s_["name"]] = call(s_["id"], {"daily_budget": paise(want[s_["name"]])}, "POST")
+    return out or {"note": "budgets already match the config"}
+OPS["set_budget"] = op_set_budget
 
 
 if __name__ == "__main__":

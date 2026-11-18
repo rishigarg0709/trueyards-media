@@ -70,7 +70,7 @@
       "key": "J",
       "name": "FV Jind J - Advantage+ Jind 30 km",
       "enabled": true,
-      "daily_budget_inr": 500,
+      "daily_budget_inr": 150,
       "age_min": 25,
       "age_max": 65,
       "advantage_audience": 1,
@@ -108,7 +108,31 @@
         }
       ],
       "video_ads": []
+    },
+    {
+      "key": "R",
+      "name": "FV Jind R - customers and site visitors",
+      "enabled": true,
+      "daily_budget_inr": 150,
+      "age_min": 18,
+      "age_max": 65,
+      "advantage_audience": 0,
+      "custom_audience_ids": [
+        "120255662324140547"
+      ],
+      "start_time": "2026-11-20T00:00:00+0530",
+      "ads": [
+        {
+          "name": "R1 poster: your commercial plot in Flower Valley",
+          "image": "ads/creatives/fv-jind-sco-poster.jpg",
+          "headline": "Commercial plots in Flower Valley, Jind",
+          "text": "Discover the commercial plots at Forteasia Flower Valley, Sector 26, Jind: SCO (G+3), double-storey shops and booths on the 24-metre-wide road, around a landscaped central plaza with parking. HRERA-PKL-JND-314-2022, www.haryanarera.gov.in. Tap below to book a site visit on WhatsApp.",
+          "prefill": "Hi, I want to visit the Flower Valley Jind commercial plots."
+        }
+      ],
+      "video_ads": []
     }
   ],
-  "note_launch": "Relaunched 18 Nov 16:25 IST on Rishi's go, with the v2 WhatsApp template and the commercial brochure."
+  "note_launch": "Relaunched 18 Nov 16:25 IST on Rishi's go, with the v2 WhatsApp template and the commercial brochure.",
+  "note_week": "Rishi 18 Nov 17:24: INR 500/day total for Jind for 7 days; Meta INR 300 (J new people 150, R customers and visitors 150 from 20 Nov), WhatsApp INR 200."
 }
