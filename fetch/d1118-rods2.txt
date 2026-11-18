@@ -1,0 +1,8 @@
+d1118-rebar-sunset-roofline https://images.unsplash.com/photo-1763407274568-95d3d8414290?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3200
+d1118-exposed-rebar-beams-sky https://images.unsplash.com/photo-1788722794464-54931b49bfe4?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118-reinforced-concrete-india https://images.unsplash.com/photo-1774531740905-02e4fbb80232?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118-sun-behind-rebar https://images.unsplash.com/photo-1770918040965-e994fc027266?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118-india-construction-kite https://images.unsplash.com/photo-1690947154906-c4755053be1f?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118-sparrows-on-rebar https://images.unsplash.com/photo-1761310713579-d549b4a8e348?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb
+d1118-rusty-rebar-bundle https://images.unsplash.com/photo-1763771420746-c75fefab51b5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4000
+d1118-torn-beams-steel https://images.unsplash.com/photo-1742448261230-16984ead64df?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3200
