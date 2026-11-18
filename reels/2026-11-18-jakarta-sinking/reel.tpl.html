@@ -1,0 +1,250 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[];
+const BEATS=/*BEATS*/[];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0F1A17';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+const HOOKEV=w(7);const DG="#0E6B50";
+// ================= HOOK =================
+// light gradients for look T: keep the logo zone readable, keep the frame bright
+const GTL='linear-gradient(180deg,rgba(15,26,23,.62) 0%,rgba(15,26,23,.25) 10%,rgba(15,26,23,0) 18%';
+const GL=(a)=>GTL+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.55) ${a+14}%,rgba(15,26,23,.8) ${a+26}%,rgba(15,26,23,.86) 100%)`;
+// 1. Bright coastal street, sea above the rooftops. "Parts of this city sink / 25 cm a year". City drops on "twenty-five"
+add(0,sc=>{const b=box(sc,'hero',540,900,'50% 40%');
+ mk(sc,'sh','background:'+GL(50));
+ const lv=svg(sc,'',`<line x1="0" y1="742" x2="1080" y2="742" stroke="#28c39d" stroke-width="6" stroke-dasharray="26 14"/>`);
+ const lt=mk(sc,'tagw','left:70px;top:676px','Street level, last year');
+ const k=mk(sc,'K ts','left:72px;top:1060px;color:#FFFFFF','<span class="c">●</span>&nbsp; Jakarta, Indonesia');
+ const h=mk(sc,'M ts','left:70px;top:1110px;width:960px;font-size:74px','Parts of this city sink');
+ const n=mk(sc,'ts','left:64px;top:1220px;font:800 220px/1 IN;letter-spacing:-.05em;transform-origin:0 50%','<span id="nm" style="padding:0 .08em;border-radius:14px">25 cm</span><span style="font-size:72px;letter-spacing:-.02em"> a year.</span>');const nm=n.querySelector('#nm');
+ return t=>{const sk=shake(t,HOOKEV,11);const dr=34*eio((t-HOOKEV+.05)/.45);
+  b.style.transform=`translate(${sk}px,${dr+sk*.4}px) scale(${1.06+.05*eo(t/3.3)})`;
+  lv.style.opacity=1;lt.style.opacity=1;k.style.opacity=1;
+  const q=cl((t-HOOKEV)/.1);nm.style.background=`rgba(40,195,157,${q})`;nm.style.color=q>.5?NV:IV;nm.style.textShadow=q>.5?'none':'';
+  n.style.transform=`scale(${1+.08*(t>=HOOKEV?Math.exp(-(t-HOOKEV)/.18):0)})`}});
+// 2. Drone along the sea wall. "Not the sea rising... the ground falling."
+add(w(11)-.08,sc=>{const b=box(sc,'wall',540,1100,'50% 55%');
+ mk(sc,'sh','background:'+GL(50));
+ const ar=svg(sc,'',`<g stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path id="a1" d="M250 360 L250 560 M200 410 L250 360 L300 410"/></g><g stroke="#28c39d" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"><path id="a2" d="M800 560 L800 860 M740 800 L800 860 L860 800"/></g>`);
+ const a1=ar.querySelector('#a1'),a2=ar.querySelector('#a2');
+ const t1=mk(sc,'tagw','left:150px;top:590px','Sea');const t2=mk(sc,'tag','left:715px;top:890px','Ground');
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:96px',[['Not',w(13)],['the',w(14)],['sea',w(15)],['\n'],['rising...',w(16),'dg']]);
+ const h2=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:96px',[['The',w(18)],['ground',w(19),'hl',1],['\n'],['is',w(19)],['falling.',w(20)]]);
+ const b0=w(11)-.08,tG=w(17)-b0;
+ return t=>{b.style.transform=`scale(${1.10-.04*eio(t/2.9)}) translateY(${t>tG?18*eio((t-tG)/.6):0}px)`;
+  a1.style.opacity=cl((t-.3)/.2)*(1-cl((t-tG)/.25));fade(t1,t,.3,.2,8);t1.style.opacity=cl((t-.3)/.2)*(1-cl((t-tG)/.25));
+  a2.style.opacity=cl((t-tG)/.2);a2.setAttribute('transform',`translate(0,${-60+60*eo((t-tG)/.4)})`);fade(t2,t,tG+.1,.2,8);
+  rv(h,t,w(17)-.12);rv(h2,t)}},true);
+// 3. Real aerial. "This is Jakarta."
+add(w(21)-.08,sc=>{const b=frm(sc,'aerial',0,1480,'50% 50%',600,700);
+ mk(sc,'sh','background:'+GL(46));
+ const k=mk(sc,'K ts','left:72px;top:1180px;color:#FFFFFF','<span class="c">●</span>&nbsp; Capital of Indonesia');
+ const h=T(sc,'H ts','left:70px;top:1230px;width:960px;font-size:110px',[['This',w(21)],['is',w(22)],['\n'],['Jakarta.',w(23),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.0+.07*eio(t/1.7)}) translateX(${-12*t}px)`;fade(k,t,.1,.25,10);rv(h,t)}});
+// 4. Real traffic. 42 million counter
+add(w(24)-.08,sc=>{const b=box(sc,'traffic',540,600,'50% 40%');
+ mk(sc,'sh','background:'+GL(44));
+ const k=mk(sc,'K ts','left:72px;top:1080px;color:#FFFFFF','<span class="c">●</span>&nbsp; Greater Jakarta');
+ const n=mk(sc,'ts','left:62px;top:1120px;font:800 210px/1 IN;letter-spacing:-.05em;color:#fff','0');
+ const h=T(sc,'M ts','left:70px;top:1350px;width:960px;font-size:70px',[['million',w(26)],['people.',w(27),'hl']]);
+ const b0=w(24)-.08,t0=w(25)-b0;
+ return t=>{b.style.transform=`scale(${1.10-.07*eio(t/2.4)})`;fade(k,t,.05,.2,8);const p=eo((t-t0+.1)/.9);n.textContent=Math.round(42*p);n.style.color=p>=1?'#28c39d':'#fff';rv(h,t)}},true);
+// 5. Real skyline, teal sea level rises over 40% of it
+add(w(28)-.08,sc=>{const b=frm(sc,'skyline',0,1520,'50% 50%',540,900);
+ mk(sc,'sh','background:'+GL(48));
+ const wt=mk(sc,'','left:0;top:0;width:1080px;height:1520px;background:linear-gradient(180deg,rgba(40,195,157,.62),rgba(14,107,80,.72));mix-blend-mode:multiply');
+ const wl=svg(sc,'',`<line x1="0" y1="0" x2="1080" y2="0" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="20 12"/>`);
+ const lb=mk(sc,'tagw','left:70px;top:0','Sea level');
+ const n=mk(sc,'ts','left:62px;top:1110px;font:800 200px/1 IN;letter-spacing:-.05em;color:#fff','0%');
+ const h=T(sc,'M ts','left:70px;top:1330px;width:960px;font-size:68px',[['already',w(35)],['below',w(37),'hl'],['sea',w(38),'hl'],['level.',w(39),'hl']]);
+ const b0=w(28)-.08,t0=w(30)-b0;
+ return t=>{b.im.style.transform=`scale(${1.04+.05*eio(t/3)})`;const p=eio((t-t0+.1)/1.4);const top=1520-1520*.4*p;
+  wt.style.top=top+'px';wt.style.height=(1520-top)+'px';wt.style.opacity=cl((t-t0+.1)/.2);
+  wl.style.transform=`translateY(${top}px)`;wl.style.opacity=cl((t-t0+.1)/.2);lb.style.top=(top-66)+'px';lb.style.opacity=cl((t-t0+.3)/.2);
+  n.textContent=Math.round(40*p)+'%';n.style.color=p>=1?'#28c39d':'#fff';rv(h,t)}},true);
+// 6. Real street. "Here's the part most people don't know."
+add(w(40)-.08,sc=>{const b=box(sc,'street',560,700,'40% 30%');
+ mk(sc,'sh','background:'+GL(46));
+ const k=mk(sc,'tag','left:72px;top:1130px','Tell a friend');
+ const h=T(sc,'H ts','left:70px;top:1210px;width:960px;font-size:96px',[['Most',w(43)],['people',w(44)],['\n'],["don't",w(45)],['know',w(46),'hl',1],['this.',w(46)]]);
+ return t=>{b.style.transform=`scale(${1.10-.06*eio(t/1.5)})`;fade(k,t,.05,.2,10);rv(h,t)}});
+// 7. Cutaway: the well under the house. "Pumping out its own foundations."
+add(w(47)-.08,sc=>{const b=box(sc,'cut',540,420,'50% 0%');
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.6) 0%,rgba(15,26,23,0) 14%,rgba(15,26,23,0) 50%,rgba(15,26,23,.9) 60%,rgba(15,26,23,.97) 64%,#0F1A17 100%)');
+ const tg=mk(sc,'tagw','left:600px;top:560px','Well pipe');
+ const h=T(sc,'H ts','left:70px;top:1210px;width:960px;font-size:90px',[['Pumping',w(49),'c'],['out',w(50)],['\n'],['its',w(51)],['own',w(52)],['\n'],['foundations.',w(53),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.11-.06*eio(t/3.2)})`;fade(tg,t,w(49)-w(47),.25,10);rv(h,t)}},true);
+// 8. Cutaway pans down the pipe; water flows up out of the ground
+add(w(54)-.08,sc=>{const b=box(sc,'cut',540,1300,'50% 100%');
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.6) 0%,rgba(15,26,23,0) 14%,rgba(15,26,23,0) 50%,rgba(15,26,23,.9) 60%,rgba(15,26,23,.97) 64%,#0F1A17 100%)');
+ let dr='';for(let i=0;i<9;i++)dr+=`<circle class="dp" cx="540" r="11" fill="#BFF5E4" data-o="${i*120}"/>`;
+ const g=svg(sc,'',dr);const DP=[...g.querySelectorAll('.dp')];
+ const tg=mk(sc,'tag','left:610px;top:900px','Water pumped up');
+ const h=T(sc,'M ts','left:70px;top:1250px;width:960px;font-size:72px',[['Homes',w(54)],['and',w(55)],['factories',w(56)],['\n'],['pull',w(57)],['water',w(58),'hl',1],['from',w(59)],['wells',w(60)],['\n'],['under',w(61)],['their',w(62)],['own',w(63)],['floors.',w(64)]]);
+ return t=>{b.style.transform=`scale(${1.06}) translateY(${-60+70*eio(t/4.3)}px)`;
+  DP.forEach(d=>{const y=1150-((+d.dataset.o+t*420)%1080);d.setAttribute('cy',y);d.setAttribute('cx',540+2*Math.sin(y/40));d.style.opacity=cl((t-.6)/.3)*cl((y-300)/120)*cl((1100-y)/80)});
+  fade(tg,t,w(58)-w(54),.25,10);rv(h,t)}},true);
+// 9. Real golden towers: the clay dries out... the city drops (photo drops under the old level line)
+add(w(65)-.08,sc=>{const b=box(sc,'gold',540,900,'50% 45%');
+ mk(sc,'sh','background:'+GL(48));
+ const lv=svg(sc,'',`<line x1="0" y1="700" x2="1080" y2="700" stroke="#28c39d" stroke-width="6" stroke-dasharray="26 14"/>`);
+ const lt=mk(sc,'tagw','left:690px;top:634px','Old level');
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:90px',[['The',w(65)],['clay',w(67),'hl'],['\n'],['dries',w(69)],['out...',w(70)]]);
+ const h2=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:90px',[['and',w(71)],['the',w(72)],['city',w(73)],['\n'],['drops.',w(74),'hl',1]]);
+ const b0=w(65)-.08,tD=w(74)-b0;
+ return t=>{const sk=shake(t,tD,10);const dr=70*eio((t-tD+.05)/.5);b.style.transform=`translate(${sk}px,${dr}px) scale(${1.0+.03*eo(t/3.6)})`;
+  lv.style.opacity=cl((t-.4)/.3);fade(lt,t,.5,.25,8);rv(h,t,w(71)-.12);rv(h2,t)}},true);
+// 10. Real flood photo + height ruler 0 to 2.5 m
+add(w(77)-.08,sc=>{const b=frm(sc,'flood',0,1100,'50% 50%',540,600);
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.6) 0%,rgba(15,26,23,0) 16%,rgba(15,26,23,0) 48%,rgba(15,26,23,.9) 61.5%,#0F1A17 100%)');
+ let tk='';for(let i=0;i<=5;i++){const y=1120-i*150;tk+=`<line x1="930" y1="${y}" x2="${i%2?975:995}" y2="${y}" stroke="#fff" stroke-width="4"/><text x="1005" y="${y+9}" fill="#fff" font-family="PM" font-size="24">${(i*.5).toFixed(1)}</text>`}
+ const g=svg(sc,'',`<line x1="930" y1="1120" x2="930" y2="370" stroke="#fff" stroke-width="4"/>${tk}<rect id="rf" x="900" y="1120" width="24" height="0" fill="#28c39d"/>`);const rf=g.querySelector('#rf');
+ const k=mk(sc,'K ts','left:72px;top:1180px;color:#FFFFFF','<span class="c">●</span>&nbsp; North Jakarta, some areas');
+ const n=mk(sc,'ts','left:62px;top:1225px;font:800 190px/1 IN;letter-spacing:-.05em;color:#fff','0.0 m');
+ const h=T(sc,'M ts','left:70px;top:1430px;width:960px;font-size:62px',[['sunk',w(81)],['in',w(87)],['just',w(88)],['10',w(89),'hl',1],['years.',w(90),'hl']]);
+ const b0=w(77)-.08,t0=w(82)-b0;
+ return t=>{b.im.style.transform=`scale(${1.0+.05*eio(t/4.6)}) translateX(${-6*t}px)`;fade(k,t,.1,.25,10);
+  const p=eo((t-t0+.15)/1.2);rf.setAttribute('y',1120-750*p);rf.setAttribute('height',750*p);n.textContent=(2.5*p).toFixed(1)+' m';n.style.color=p>=1?'#28c39d':'#fff';rv(h,t)}},true);
+// 11. Sea wall close: sea higher than the streets
+add(w(91)-.08,sc=>{const b=box(sc,'wallc',540,900,'50% 50%');
+ mk(sc,'sh','background:'+GL(50));
+ const lv=svg(sc,'',`<line x1="0" y1="610" x2="1080" y2="610" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="20 12"/>`);
+ const t1=mk(sc,'tagw','left:70px;top:540px','Sea level');const t2=mk(sc,'tag','left:720px;top:820px','Streets');
+ const h=T(sc,'H ts','left:70px;top:1190px;width:960px;font-size:92px',[['The',w(92)],['sea',w(93)],['stops',w(94)],['\n'],['at',w(95)],['a',w(96)],['wall.',w(97),'hl',1]]);
+ const h2=T(sc,'H ts','left:70px;top:1190px;width:960px;font-size:92px',[['Higher',w(98),'hl',1],['than',w(99)],['\n'],['the',w(100)],['streets.',w(101)]]);
+ const b0=w(91)-.08,tH=w(98)-b0;
+ return t=>{b.style.transform=`scale(${1.08-.06*eio(t/3.9)}) translateX(${-4*t}px)`;
+  lv.style.opacity=cl((t-tH)/.25);fade(t1,t,tH,.2,8);fade(t2,t,tH+.25,.2,8);rv(h,t,w(98)-.12);rv(h2,t)}},true);
+// 12. Boats and sea (hero, tight on the water). "So Indonesia's answer?"
+add(w(104)-.08,sc=>{const b=box(sc,'heroc',540,700,'50% 50%');
+ mk(sc,'sh','background:'+GL(44));
+ const h=T(sc,'H ts','left:70px;top:1220px;width:960px;font-size:104px',[["Indonesia's",w(105)],['\n'],['answer?',w(106),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.02+.06*eio(t/2)})`;rv(h,t)}});
+// 13. New city in the rainforest (AI). "Build a brand new capital."
+add(w(107)-.08,sc=>{const b=box(sc,'newcityc',540,900,'50% 50%');
+ mk(sc,'sh','background:'+GL(50));
+ const h=T(sc,'H ts','left:70px;top:1210px;width:960px;font-size:98px',[['Build',w(107)],['a',w(108)],['\n'],['new',w(110),'hl',1],['capital.',w(111),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.1-.1*eio(t/1.2)})`;rv(h,t)}},true);
+// 14. Schematic: Jakarta to Nusantara, 1,200+ km
+add(w(112)-.08,sc=>{mk(sc,'sh','background:radial-gradient(ellipse at 50% 40%,#13805F 0%,#0E6B50 45%,#0A4F3B 100%)');
+ const g=svg(sc,'',`<path id="rt" d="M300 1000 Q 420 560 780 520" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" stroke-linecap="round"/>
+  <circle cx="300" cy="1000" r="20" fill="#FFFFFF"/><circle id="nd" cx="780" cy="520" r="0" fill="#28c39d" stroke="#FFFFFF" stroke-width="5"/>`);
+ const rt=g.querySelector('#rt'),nd=g.querySelector('#nd');
+ const l1=mk(sc,'tagw','left:200px;top:1040px','Jakarta, Java');const l2=mk(sc,'tag','left:610px;top:420px','Nusantara, Borneo');
+ const n=mk(sc,'','left:62px;top:1150px;font:800 190px/1 IN;letter-spacing:-.05em;color:#fff','0 km');
+ const mt=mk(sc,'K','left:72px;top:1110px;color:#BFF5E4','<span style="color:#fff">●</span>&nbsp; More than');
+ const h=T(sc,'M','left:70px;top:1360px;width:960px;font-size:64px',[['in',w(113)],['Borneo.',w(114),'hl',1]]);
+ const b0=w(112)-.08,t0=w(115)-b0;
+ return t=>{const p=eio((t-.2)/(t0+.9));rt.setAttribute('stroke-dashoffset',1000*(1-p));nd.setAttribute('r',22*eb((t-.2-t0-.6)/.35));fade(l1,t,.05,.2,8);fade(l2,t,t0+.6,.25,8);
+  fade(mt,t,t0,.25,8);n.textContent=Math.round(1200*p).toLocaleString('en-IN')+(p>=1?'+':'')+' km';n.style.color=p>=1?'#BFF5E4':'#fff';rv(h,t)}},true);
+// 15. New city, push in. $45 billion plan, 1.2 million people
+add(w(121)-.08,sc=>{const b=box(sc,'newcityc2',540,820,'50% 50%');
+ mk(sc,'sh','background:'+GL(46));
+ const k=mk(sc,'K ts','left:72px;top:1100px;color:#FFFFFF','<span class="c">●</span>&nbsp; The plan');
+ const n=mk(sc,'ts','left:62px;top:1140px;font:800 190px/1 IN;letter-spacing:-.05em;color:#fff','$0 bn');
+ const h=T(sc,'M ts','left:70px;top:1350px;width:960px;font-size:64px',[['for',w(126)],['over',w(127)],['1',w(128)],['million',w(129),'hl'],['people.',w(130)]]);
+ const b0=w(121)-.08,t0=w(122)-b0;
+ return t=>{b.style.transform=`scale(${1.0+.06*eio(t/3.8)})`;fade(k,t,.05,.2,8);const p=eo((t-t0+.1)/.8);n.textContent='$'+Math.round(45*p)+' bn';n.style.color=p>=1?'#28c39d':'#fff';rv(h,t)}},true);
+// 16. Dot grid: 120 dots of 10,000 planned residents, one lights up
+add(w(131)-.08,sc=>{const b=box(sc,'newcity',540,900);b.im.style.filter='blur(18px) brightness(.45) saturate(.8)';b.style.transform='scale(1.2)';
+ let d='';for(let r=0;r<10;r++)for(let c=0;c<12;c++)d+=`<circle class="dt" cx="${188+c*64}" cy="${400+r*64}" r="20" fill="#FFFFFF" opacity=".28"/>`;
+ const g=svg(sc,'',d);const DT=[...g.querySelectorAll('.dt')];
+ const lb=mk(sc,'K ts','left:72px;top:1060px;color:#FFFFFF','1 dot = 10,000 people. Planned: 1.2 million');
+ const h=T(sc,'H ts','left:70px;top:1140px;width:960px;font-size:92px',[['So',w(131)],['far...',w(132)],['\n'],['about',w(133)],['10,000.',w(134),'hl',1]]);
+ const h2=T(sc,'M ts','left:70px;top:1360px;width:960px;font-size:60px',[['have',w(136)],['moved',w(137)],['in.',w(138)]]);
+ const b0=w(131)-.08,tT=w(134)-b0;
+ return t=>{DT.forEach((e,i)=>{e.setAttribute('opacity',(.28*cl((t-i*.004)/.3)).toFixed(3))});
+  if(t>=tT){DT[0].setAttribute('opacity',1);DT[0].setAttribute('fill','#28c39d');DT[0].setAttribute('r',20*(1+.6*Math.exp(-(t-tT)/.25)))}
+  fade(lb,t,.2,.25,8);rv(h,t);rv(h2,t)}},true);
+// 17. Split: fix the old city (top) or build new (bottom). Question, follow card, loop back to frame 0
+add(w(139)-.08,sc=>{const tp=frm(sc,'hero',0,950,'50% 62%',540,500);const bt=frm(sc,'newcity',970,950,'50% 55%',540,450);
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.6) 0%,rgba(15,26,23,0) 14%,rgba(15,26,23,0) 58%,rgba(15,26,23,.7) 72%,rgba(15,26,23,.85) 100%)');
+ const t1=mk(sc,'stamp','left:70px;top:740px;background:rgba(14,107,80,.55);color:#fff;border-color:#fff','Fix it?');
+ const t2=mk(sc,'stamp','left:70px;top:1010px;background:rgba(40,195,157,.85);color:#0F1A17;border-color:#28c39d','Build new?');
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:90px',[['Which',w(148)],['would',w(149)],['\n'],['you',w(150)],['pick?',w(151),'hl',1]]);
+ const lp=box(sc,'hero',540,900,'50% 40%');lp.style.opacity=0;lp.style.transform='scale(1.06)';const lg=mk(sc,'sh','background:'+GL(50));lg.style.opacity=0;
+ const b0=w(139)-.08,tF=w(139)-b0+.05,tB=w(144)-b0;
+ return t=>{tp.im.style.transform=`scale(${1.05+.04*eo(t/4)})`;bt.im.style.transform=`scale(${1.09-.05*eo(t/4)})`;
+  lp.style.opacity=cl((t-(END-b0-.6))/.15);lg.style.opacity=lp.style.opacity;
+  if(t>=tF)slam(t1,t,tF,1.6,-3);else t1.style.opacity=0;if(t>=tB)slam(t2,t,tB,1.6,3);else t2.style.opacity=0;rv(h,t)}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+' Up to 25 cm a year in parts of North Jakarta (BBC, 2018).'],[w(11)-.08,AIL],[w(21)-.08,'Photo: David Kristianto / Unsplash.'],[w(24)-.08,'Greater Jakarta, UN estimate via ABC News, Oct 2026. Photo: Yusron El Jihan / Unsplash.'],[w(28)-.08,'About 40% below sea level (ABC News, Oct 2026). Photo: Affan Fadhlan / Unsplash.'],[w(40)-.08,'Photo: Yusron El Jihan / Unsplash.'],[w(47)-.08,AIL+' Not to scale. Groundwater extraction is the main cause named by researchers.'],[w(65)-.08,'Illustration on a photo. Photo: Gints Gailis / Unsplash.'],[w(77)-.08,'2.5 m in 10 years in parts of North Jakarta (ITB research via BBC, 2018). Photo: Iqro Rinaldi / Unsplash.'],[w(91)-.08,AIL],[w(104)-.08,AIL],[w(112)-.08,'Schematic, not to scale. Nusantara is in East Kalimantan.'],[w(121)-.08,AIL+' Cost about USD 45 bn, 1.2 million people planned by 2029 (ABC News, Oct 2026).'],[w(131)-.08,'About 10,000 residents as of Oct 2026 (ABC News).'],[w(139)-.08,AIL+' Education only.']];
+// lazy images: only scenes near t keep their photos loaded (keeps the 4K sources fast to render)
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+const _setT=null;
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,w(19),w(74),w(134)].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.45:.3)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;
+};
+</script></body></html>
