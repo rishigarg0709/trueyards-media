@@ -1,0 +1,111 @@
+[
+ {
+  "kind": "batch_submit",
+  "name": "prep-2026-11-19",
+  "model": "gemini-3-pro-image",
+  "images": [
+   {
+    "name": "2026-11-19-midday-1",
+    "prompt": "Hyper-realistic photograph of a street in the old walled city of Jaipur in 1876, two- and three-storey haveli facades with jharokha balconies and arched shop fronts, the left half of the street still plain cream-white lime plaster, the right half freshly painted terracotta pink with thin white border motifs, the line between white and pink running down the middle of one building, bamboo ladders and brass buckets of pink paint resting against the wall, bright clear morning sun, believable scale and shadows, looks like a real news photo, no people. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-midday-2",
+    "prompt": "High aerial photograph looking down on the walled old city of Jaipur in morning light, a strict grid of wide straight bazaar streets crossing at right angles, rows of pink-terracotta rooftops and facades, the Aravalli hills with a hill fort ridge in the far background, wide framing. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-midday-3",
+    "prompt": "Period still life on a carved dark teak table in a palace room: a blank rolled parchment scroll with a red wax seal and silk cord (no writing on it), three small brass bowls of terracotta pink, ochre and white lime pigment powder, a wide traditional brush, warm window light from the left. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-midday-4",
+    "prompt": "Close-up of a weathered lime-plastered wall in the walled city of Jaipur being repainted: a wide brush and a bucket of fresh terracotta pink paint, the new pink glossy and even next to an older faded pink patch, thin white painted border motif along an arched window edge, bright daylight. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-midday-5",
+    "prompt": "A single wooden carved door set in a terracotta pink wall in an old Jaipur lane, a small square patch of sky-blue paint on the wall beside the door being covered by a paint roller loaded with pink (the roller resting on the wall, no hands or people), bright morning light, crisp detail. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-midday-6",
+    "prompt": "A wide bazaar street of the walled city of Jaipur in 1876 decorated for a royal welcome: marigold garlands strung between the pink facades, bright cloth banners without any text or symbols, rose petals on the swept street, a grand ornate arched gateway at the far end, bright clear morning light, no people, period-accurate details, no modern objects. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-1",
+    "prompt": "Hyper-realistic photograph of a grand 1920s Art Deco apartment building on a South Mumbai seafront road, cream facade with curved balconies and teak shutters, palm trees and the Arabian Sea glittering beside it, one third-floor balcony door wide open, bright clear morning sun, believable scale and shadows, looks like a real news photo, no people. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-2",
+    "prompt": "Interior of a vast empty old South Mumbai apartment: high ceiling with a slow ceiling fan, polished teak floor, tall arched windows with wooden shutters open to bright sea light, plain lime-washed walls, very spacious, crisp morning light, wide framing. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-3",
+    "prompt": "Still life on an old teak desk in bright daylight: a 1940s style rent receipt book with blank pages and no printing, a black fountain pen, a few old copper coins stacked low, a brass desk bell, warm wood and clean light. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-4",
+    "prompt": "Surreal but photoreal still life: an old blank paper wall calendar page and a small brass house key frozen inside a clear block of ice on a teak table, beads of melt water, bright natural daylight from a window, crisp detail, nothing written on the calendar. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-5",
+    "prompt": "Photograph of an old four-storey South Mumbai residential building with peeling paint and cracked plaster, wooden balconies held up by rows of diagonal wooden props and steel support beams, laundry-free empty balconies, bright daylight, blue sky, documentary look. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-evening-6",
+    "prompt": "Photograph of a modern glass residential tower rising in South Mumbai directly behind a small row of old low-rise colonial buildings, the tower catching bright sunlight, blue sky, the contrast of old and new in one frame, wide framing. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-carousel-1",
+    "prompt": "A white matte architectural scale-model house tipping off the top edge of a tall neat stack of gold coins, caught mid-fall at a slight angle, a few coins sliding, photoreal macro detail. Product still life photographed on one seamless matte off-white paper backdrop and floor of exactly #F4F7F5, soft even daylight from the upper left, gentle soft shadows, the backdrop colour flat and even to every edge so it blends into a slide of the same colour, generous empty space in the top third for headline text. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "4:5",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-carousel-2",
+    "prompt": "PANORAMA: one long continuous row of nine identical small white matte architectural model houses, each standing on its own neat stack of gold coins; from left to right the coin stacks rise steadily, then drop steeply over three houses, then stay low and almost flat to the right edge, like a physical line chart; all on one continuous surface, very wide 21:9 framing with empty backdrop above. Product still life photographed on one seamless matte off-white paper backdrop and floor of exactly #F4F7F5, soft even daylight from the upper left, gentle soft shadows, the backdrop colour flat and even to every edge so it blends into a slide of the same colour, the row in the lower half, generous empty space above for headline text. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "21:9",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-carousel-3",
+    "prompt": "A cluster of five unfinished grey concrete apartment tower scale models of different heights with bare floor slabs and two small yellow model tower cranes standing idle, photoreal miniature detail. Product still life photographed on one seamless matte off-white paper backdrop and floor of exactly #F4F7F5, soft even daylight from the upper left, gentle soft shadows, the backdrop colour flat and even to every edge so it blends into a slide of the same colour, generous empty space in the top third for headline text. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "4:5",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-carousel-4",
+    "prompt": "A white matte scale model of a mid-rise Indian apartment tower with small balconies standing beside a short stack of silver coins and a coiled teal tape measure, photoreal miniature detail. Product still life photographed on one seamless matte off-white paper backdrop and floor of exactly #F4F7F5, soft even daylight from the upper left, gentle soft shadows, the backdrop colour flat and even to every edge so it blends into a slide of the same colour, generous empty space in the top third for headline text. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "4:5",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-19-carousel-5",
+    "prompt": "A small brass balance scale perfectly level: a white matte model house on the left pan and a short stack of gold coins on the right pan, photoreal detail. Product still life photographed on one seamless matte off-white paper backdrop and floor of exactly #F4F7F5, soft even daylight from the upper left, gentle soft shadows, the backdrop colour flat and even to every edge so it blends into a slide of the same colour, generous empty space in the top third for headline text. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "4:5",
+    "size": "2K"
+   }
+  ]
+ }
+]
