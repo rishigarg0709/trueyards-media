@@ -430,7 +430,7 @@ def op_follow_setup(req):
         base = {"campaign_id": camp["id"], "status": "PAUSED", "billing_event": "IMPRESSIONS",
                 "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22,
                               "publisher_platforms": ["instagram"],
-                              "instagram_positions": ["stream", "reels", "explore", "explore_home"],
+                              "instagram_positions": ["stream", "reels", "explore_home"],
                               "targeting_automation": {"advantage_audience": 1}}}
         tries = [dict(name="TrueYards Follow - IG profile visits", optimization_goal="VISIT_INSTAGRAM_PROFILE", destination_type="INSTAGRAM_PROFILE"),
                  dict(name="TrueYards Follow - IG profile clicks", optimization_goal="LINK_CLICKS", destination_type="INSTAGRAM_PROFILE")]
