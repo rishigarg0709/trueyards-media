@@ -1,0 +1,63 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ },
+ {
+  "kind": "voice",
+  "name": "jakarta-vo-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Parts of this city sink up to twenty-five centimetres a year. [short pause] And it's not the sea rising... it's the ground falling. This is Jakarta. Almost forty-two million people... and about forty percent of the city already sits below sea level. So why is it sinking? [short pause] Here's the part most people don't know. Jakarta is pumping out its own foundations. Homes and factories pull water from wells under their own floors... the soft clay underneath dries out... and the city drops with it. Parts of North Jakarta sank two and a half metres in just ten years. Now the sea stops at a wall... higher than the streets behind it. So Indonesia's answer? [excited] Build a brand new capital. Nusantara... in Borneo, more than twelve hundred kilometres away. A forty-five billion dollar plan for over a million people. So far... about ten thousand have moved in. Fix the sinking city... or build a new one? Which would you pick?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "jakarta-vo-2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Parts of this city sink up to twenty-five centimetres a year. [short pause] And it's not the sea rising... it's the ground falling. This is Jakarta. Almost forty-two million people... and about forty percent of the city already sits below sea level. So why is it sinking? [short pause] Here's the part most people don't know. Jakarta is pumping out its own foundations. Homes and factories pull water from wells under their own floors... the soft clay underneath dries out... and the city drops with it. Parts of North Jakarta sank two and a half metres in just ten years. Now the sea stops at a wall... higher than the streets behind it. So Indonesia's answer? [excited] Build a brand new capital. Nusantara... in Borneo, more than twelve hundred kilometres away. A forty-five billion dollar plan for over a million people. So far... about ten thousand have moved in. Fix the sinking city... or build a new one? Which would you pick?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "jakarta-beat",
+  "prompt": "Upbeat modern documentary pulse instrumental at exactly 108 BPM in 4/4, punchy kick and claps, bright synth plucks, deep warm bass, catchy repeating hook motif, confident and curious, starts immediately with the full beat, strong clear downbeats, no vocals",
+  "ms": 45000
+ },
+ {
+  "kind": "image",
+  "name": "jakarta-1",
+  "prompt": "Hyper-realistic news photograph, a narrow street in a coastal neighbourhood of North Jakarta, Indonesia, lined with small colourful two-storey houses with tin roofs; the street ends at a massive grey concrete sea wall, and the sea behind the wall is clearly HIGHER than the street and the rooftops, with fishing boats floating above roof level against a bright blue sky; believable scale and shadows, looks like a real news photo, sunny midday. bright natural daylight, clean and crisp, true-to-life colours, high key with a clear well-lit subject, subtle teal and green tints in the grade, photorealistic, shot on a full-frame camera, natural lens, vertical 9:16, wide framing, main subject in the middle third, calmer area in the lower third, no text, no letters, no logos, no watermarks, no people visible"
+ },
+ {
+  "kind": "image",
+  "name": "jakarta-3",
+  "prompt": "Photorealistic cross-section cutaway of the ground under a small Indonesian house: a thin steel well pipe runs from the house down through thick layers of soft grey marine clay into a sandy water-bearing layer; the clay layers are visibly compressed and cracked and the house above has sunk and tilted slightly; above ground a bright sunny street and blue sky; clean educational museum-model look, crisp detail. bright natural daylight, clean and crisp, true-to-life colours, high key with a clear well-lit subject, subtle teal and green tints in the grade, photorealistic, shot on a full-frame camera, natural lens, vertical 9:16, wide framing, main subject in the middle third, calmer area in the lower third, no text, no letters, no logos, no watermarks, no people visible"
+ },
+ {
+  "kind": "image",
+  "name": "jakarta-4",
+  "prompt": "Photorealistic street photograph in North Jakarta: an old one-storey house whose front door is now half below the raised concrete road, the road surface built up to the window sills, a small step down into the doorway, potted plants, bright tropical daylight, colourful painted walls. bright natural daylight, clean and crisp, true-to-life colours, high key with a clear well-lit subject, subtle teal and green tints in the grade, photorealistic, shot on a full-frame camera, natural lens, vertical 9:16, wide framing, main subject in the middle third, calmer area in the lower third, no text, no letters, no logos, no watermarks, no people visible"
+ },
+ {
+  "kind": "image",
+  "name": "jakarta-5",
+  "prompt": "Photorealistic drone photograph looking along a long concrete coastal sea wall in North Jakarta: on the left the calm blue-green sea is higher than the land, on the right dense low-rise houses with red and blue roofs sit below the wall, a port and city towers in the hazy distance, bright sunny day. bright natural daylight, clean and crisp, true-to-life colours, high key with a clear well-lit subject, subtle teal and green tints in the grade, photorealistic, shot on a full-frame camera, natural lens, vertical 9:16, wide framing, main subject in the middle third, calmer area in the lower third, no text, no letters, no logos, no watermarks, no people visible"
+ },
+ {
+  "kind": "image",
+  "name": "jakarta-6",
+  "prompt": "Photorealistic aerial photograph of a brand new planned capital city under construction in the green rainforest hills of Borneo: wide empty boulevards, a few new modern government buildings, cranes, red earth plots, lush green hills all around, bright clear day with white clouds. bright natural daylight, clean and crisp, true-to-life colours, high key with a clear well-lit subject, subtle teal and green tints in the grade, photorealistic, shot on a full-frame camera, natural lens, vertical 9:16, wide framing, main subject in the middle third, calmer area in the lower third, no text, no letters, no logos, no watermarks, no people visible"
+ }
+]
