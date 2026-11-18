@@ -2,7 +2,7 @@
 """TrueYards Meta autopilot. Reads meta/requests/*.json, writes meta/results/<name>.json.
 The token comes from the META_TOKEN secret and is never written or printed.
 Spend rules (learnings/BOOST_POLICY.md) are enforced here, not just in prompts."""
-import json, os, sys, glob, time, urllib.request, urllib.parse, urllib.error, datetime
+import json, os, sys, glob, time, urllib.request, urllib.parse, urllib.error, datetime, re
 
 V = "v23.0"
 G = f"https://graph.facebook.com/{V}"
@@ -15,8 +15,11 @@ def scrub(o):
         return {k: scrub(v) for k, v in o.items() if k != "access_token"}
     if isinstance(o, list):
         return [scrub(x) for x in o]
-    if isinstance(o, str) and TOKEN and TOKEN in o:
-        return o.replace(TOKEN, "***")
+    if isinstance(o, str):
+        if TOKEN and TOKEN in o:
+            o = o.replace(TOKEN, "***")
+        # Page tokens ride inside Graph paging URLs ("next": "...&access_token=<page token>"): never write any token to the repo.
+        return re.sub(r"(access_token=)[^&\s\"']+", r"\1***", o)
     return o
 
 def call(path, params=None, method="GET", token=None):
