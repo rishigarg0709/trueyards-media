@@ -9,50 +9,69 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 - Compare each post with the account's rolling median, not with absolute numbers. Call something a pattern only when it holds across at least 3 posts.
 
 ## Current findings
-Data: learnings/data/2026-11-17-media.csv (pull 05:09 UTC 17 Nov, 9 TrueYards posts plus 1 excluded Forteasia reel). No post is final yet at 72 h; nothing has been boosted (campaign paused, 0 ads), so all numbers are organic. Followers 408 (404 at 10:37 UTC 16 Nov, so +4). Account reach on 16 Nov: 2,871 (previous best day 142); 7-day reach 3,099, of which only 14 from followers, so reels are reaching non-followers as designed.
-- The 16 Nov reels are a step change. Delhi skyscrapers (20 h): reach 1,545, skip 43.9%, hold 34% (19.6 s of 57 s), 2 sends (0.13%), 1 save, likes 1.0%, views/reach 1.12. Noida twin towers (15 h): reach 1,301, skip 43.8%, hold 38% (20.6 s of 54.6 s), 0 sends, 4 saves (0.31%, our best), likes 0.9%, views/reach 1.16. Older reels: untitled 15 Nov reel 142 reach, skip 71.8%; home loan reel (14 Nov, 24 s) 42 reach, skip 87%, hold 24%.
-- Both 16 Nov reels pass the reach half of the breakout rule (more than 10x the median of our other reels) but fail the sends half (under 1%). Funnel diagnosis: distribution solved for now (hook plus first frame), message stage is the bottleneck: viewers watch but do not send or like. Alternative explanation: a brand-new account with 408 followers gets little social proof, so likes and sends lag regardless of payoff.
-- Likes per reach on the big reels (0.9 to 1.0%) are under the 2% weak line. Hold 34 to 38% is just under the 40% good line for 55 s reels.
-- Carousels reach only 6 or 7 accounts each (all four of 14 to 16 Nov), with 3 likes each and 0 saves. They are not being distributed beyond a handful of followers; judge them on saves and follows only once reach is meaningful.
-- Skip rate at the first 16 Nov pull was 25% on Delhi; it settled to 43.9% as reach widened. Expect skip to rise as a reel reaches colder audiences; compare at equal ages.
-- Follows and profile visits per reel are still not returned by the API; use daily account follower change.
+Data: learnings/data/2026-11-18-media.csv, -cross.csv, -facebook.csv, -platforms.csv (pull 05:11 UTC 18 Nov, 13 TrueYards posts plus 1 excluded Forteasia reel). Still no post final at 72 h except the 14 Nov carousels and home loan reel. No TrueYards ad had run before this pull, so every number below is organic. Noida is boosted from 05:14 UTC 18 Nov: from tomorrow its numbers are tagged boosted and kept out of organic scoring.
+- Followers: IG 408 (0 change on 17 Nov despite 1,749 account reach), FB page 4, YouTube 1 subscriber, Threads 10, X not returned. 30-day account reach 4,694, only 17 from followers.
+- Reels plateau after about 24 h. Delhi 1,545 to 1,560 and Noida 1,301 to 1,326 in the last 24 h (+1% and +2%). Judge reels at 24 h for distribution; the 72 h mark mostly confirms.
+- Japan houses (17 Nov midday, 21 h): main 186 reach, skip 50.0%, hold 29% (15.6 s of 53.1 s), 1 save. Trial twin 363 reach, skip 47.7%, hold 33% (17.4 s), 0 saves. First trial pair: the contradiction hook (trial) beat counterintuitive economics (main) on reach (2x), skip (2.3 points) and hold (4 points). One pair, early sign.
+- Burj Khalifa on sand (17 Nov evening, 15 h): reach 168, skip 63.8%, hold 20% (9.7 s of 47.6 s), likes 2.4%. Weakest new-rule reel on Instagram. Hook diagnosis: low hold plus normal views/reach (1.20) = hook and first seconds lost people. Changed vs Delhi and Noida: look E Blueprint (dark navy line art instead of a photoreal event), voice George, global topic, shorter 47.6 s. Alternative explanation: 15 h is early, and the evening slot after a midday reel plus trial twin may have split distribution.
+- Engagement is the bottleneck everywhere. Best IG likes per reach on a big reel is 1.0 to 1.6% (weak line is 2%); sends per reach 0 to 0.13% across all reels; 0 comments on any IG post. Follows per 1,000 reach about 1 (5 follows on 16 Nov from 2,880 reach, 0 on 17 Nov from 1,749). Funnel: distribution works for photoreal India stories, message and journey stages do not.
+- Carousels still reach 6 to 9 accounts on Instagram (stamp duty 6). Not distributed; keep judging them on Threads and saves.
 
-### Hook tournament standings (reels, organic, early sign: no arm has 8 posts)
+### Hook tournament standings (IG reels, organic; early sign, no arm has 8 posts)
 | Archetype | Posts | Reach | Median skip | Median hold | Sends/reach |
 |---|---|---|---|---|---|
-| 1 Contradiction (Delhi forbidden/contradiction; Noida contradiction + stakes) | 2 | 2,846 | 43.9% | 36% | 0.07% |
-| 2 Number slam (home loan reel, archetype inferred, 24 s) | 1 | 42 | 87% | 24% | 0% |
-| Unlogged (untitled 15 Nov reel) | 1 | 142 | 71.8% | n/a | 0% |
-| Myth bust, stakes, story cold open, visual shock, versus, why does X look like this | 0 | | | | |
-Leader so far: contradiction (early sign). Next: test the other six archetypes at the same 45 to 55 s motion-graphic format before calling anything.
+| 1 Contradiction (Delhi, Noida, Japan trial twin, Burj) | 4 | 3,417 | 45.8% | 33.5% | 0.06% |
+| 25 Counterintuitive economics (Japan main) | 1 | 186 | 50.0% | 29% | 0% |
+| 2 Number slam (home loan, 24 s, old rules) | 1 | 44 | 87.5% | 23% | 0% |
+| Unlogged (15 Nov reel) | 1 | 144 | 72.0% | n/a | 0% |
+| Myth bust, stakes, story cold open, visual shock, versus, why does X look like this, hidden in plain sight | 0 | | | | |
+Leader so far: contradiction (4 posts, 3,417 reach; it also won the first head-to-head twin). Today's queued reels test 17 hidden in plain sight (midday) and 10 visual shock (evening).
 
 ### Story types (early sign)
-- Familiar Indian anchor plus a puzzle (Delhi: "why no skyscrapers") and a real case with a dramatic event (Noida: towers demolished) both won reach. Money maths (home loan cost) lost badly, though it was also a 24 s reel with old hook rules, so format and hook are confounded.
-- Saves came from the story with a buyer lesson (Noida: 4 saves); sends came from the city puzzle (Delhi: 2 sends).
+- Famous Indian place or case with a dramatic event (Delhi 1,560, Noida 1,326) beats global stories (Japan 186 plus 363 twin, Burj 168) on Instagram reach by about 4x so far. Two posts each side; topic, look and voice are confounded.
+- Saves come from a real case with a buyer lesson (Noida 4 saves, Japan 1); sends only from the city puzzle (Delhi 2).
+- Money maths without a story is last (home loan 44 reach).
+
+### Looks and voices (early sign, 1 to 2 reels each)
+| Look | Reels | Reach | Skip | Hold |
+|---|---|---|---|---|
+| Newsroom red, photoreal event (Delhi, Noida) | 2 | 2,886 | 43.5 to 43.9% | 34 to 38% |
+| F Tokyo Neutral (Japan main + twin) | 2 | 549 | 47.7 to 50% | 29 to 33% |
+| E Blueprint line art (Burj) | 1 | 168 | 63.8% | 20% |
+Voices: Jessa (Delhi, Japan) and Tara (Noida) skip 43 to 50%; George (Burj) 63.8%, one reel, confounded with the Blueprint look.
+
+## Platform fit (compare within a platform only)
+- YouTube Shorts: Noida twin towers is the channel's top Short by far: 633 views, 11 likes, 3 comments (engagement per view 2.2%, top on YT) vs Japan 74, Delhi 50, Burj 4. On Instagram Noida was second. Early sign: YouTube rewards the dramatic real-case story with a clear event (court order, demolition) and title-style hook. Rule for the reel runs: YouTube Short titles name the event and stakes plainly ("Why India's Supreme Court ordered two towers blown up"), not the IG puzzle wording.
+- Threads: the stamp duty carousel got 148 views vs 5 to 15 for every reel cross-post. On Instagram it reached 6. Early sign: Threads prefers text-first money facts (number plus named cities) over video. Rule for the carousel runs: post every carousel to Threads with a 2 to 3 line text hook that states the number and the cities; reels on Threads stay low priority.
+- Facebook: Burj Khalifa got 220 plays (avg 4.6 s), the only FB reel above 10; Noida 1, Japan 5. Burj was our weakest reel on Instagram. Early sign: Facebook favours global marvel or engineering topics; one post.
+- X: 1 to 8 views per post, no engagement. Not a growth channel yet; keep cross-posting text only (cheap) and do not spend effort on X-specific edits.
+- Underperformed on IG but top elsewhere: Burj (IG 168 reach, top on FB), stamp duty carousel (IG 6, top on Threads). Reverse: Delhi (top on IG, 50 views on YT, 10 on Threads).
 
 ## Do more
-- Frame-0 built event plus on-screen number plus beat drop on the hook word (Delhi, Noida: skip 44% vs 72 to 87% on older reels). Early sign across 2 reels; confirm over 8.
-- Story-driven topics with a famous Indian place or case (Delhi, Noida: 1,545 and 1,301 reach vs 42 to 142 for others).
-- 45 to 57 s length is holding 20 s of watch; keep mini-reveals every 5 to 8 s and work on the second half to push hold past 40%.
-- Make the payoff sendable: end with a line a viewer would forward to a specific person (an NCR flat buyer, a Delhi friend). Sends are the gap (0.13% and 0%).
-- Add a buyer-lesson beat (what to check) to stories; Noida's 4 saves suggest people keep practical takeaways.
+- Contradiction hook with a photoreal built event on frame 0 and the hook number on screen (Delhi, Noida, Japan trial twin: skip 43.5 to 47.7%). It also won the first trial pair (363 vs 186 reach). 4 posts, early sign; keep testing other archetypes against it.
+- Famous Indian place or real case with a dramatic event (Delhi 1,560 and Noida 1,326 reach vs 168 to 363 for global topics). Two posts each side, early sign.
+- Photoreal imagery for the first 3 s, not line art or neutral flat looks (Newsroom red skip 44% vs Blueprint 64%).
+- Sendable and followable endings: one line naming the person to send it to, then a series promise ("Part 2: how to check your own builder") to turn reach into follows. Follows per 1,000 reach are about 1.
+- Carousels: write them so the Threads text works on its own (stamp duty: 148 Threads views).
 
 ## Do less
 - Rishi disliked and deleted the 2026-11-16 carousel "Your EMI didn't change. Your loan did." (dark green, text-heavy, hourglass and house model, RBI repo explainer). Why (Rishi): unlike the first carousels it lacked the big Gemini 3D models and still-life objects on nearly every slide, crossing slide edges; the middle slides were text-only. See PLAYBOOK.md visual richness rules.
-- Short money-maths reels without a story (home loan reel: 24 s, skip 87%, reach 42). One post, so early sign only.
-- Posting a reel without a log.md entry (the 15 Nov reel DfxHQD6vKff has no caption and no log line, so it cannot be scored against hooks or story types). Every post needs its log line.
+- Line-art or diagram-first openings (Burj Blueprint: skip 63.8%, hold 20%). One reel, early sign; if a blueprint look is used again, open on the photoreal subject and bring the line work in after 3 s.
+- Short money-maths reels without a story (home loan reel: 24 s, skip 87.5%, reach 44).
+- Posting without a log.md entry (15 Nov reel DfxHQD6vKff still cannot be scored).
 
 ## Running experiments
-- Hook tournament (weeks 1 to 4): number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this; tag each in log.md. Standings above; review weekly (next 2026-11-23). Changes our mind: any archetype beating contradiction on median skip by 10 points over 3 or more reels.
-- Reel length: 35 to 45 s vs 46 to 55 s. Both current winners are 54 to 57 s; need 35 to 45 s reels with the new hook rules to compare.
-- Topics: no quotas (Rishi). Story-first across the whole real estate scope; story types tracked above.
-- Carousels: slide 2 as a second hook; judge on saves and follows. Blocked by distribution (6 to 7 reach each); try music on carousels if the route allows.
-- Accent colour: red vs green vs amber. Both winners used red; no green or amber reels yet.
-- Trial twins (daily, midday reel): main hook vs trial hook on the same body, shown to non-followers. No pairs logged yet.
-- Posting slot: midday vs evening. Delhi (midday) 1,545 reach in 20 h; Noida (evening) 1,301 in 15 h. Roughly equal per hour; 1 post each.
-- Voice: Jessa (Delhi) vs Tara (Noida) roughly tied on skip (43.9 vs 43.8) and hold (34 vs 38%). George untested with new hook rules.
-- Delhi remix (top post for sends): Lutyens' Delhi cold open, Paris skyscraper contradiction, Delhi height-rules carousel queued in queue/reel-topics.md.
+- Hook tournament (weeks 1 to 4): number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this, plus 17 and 25 as tested. Standings above; review weekly (next 2026-11-23). Changes our mind: any archetype beating contradiction on median skip by 10 points over 3 or more reels.
+- Trial twins (midday): pair 1 Japan, contradiction (trial) beat counterintuitive economics (main): reach 363 vs 186, skip 47.7 vs 50.0%, hold 33 vs 29%. 1 of 5 pairs needed.
+- Look: photoreal Newsroom vs Tokyo Neutral vs Blueprint (table above). Next: one global topic in the photoreal Newsroom look, to separate look from topic.
+- Geography: India vs global on IG (2,886 vs 717 reach across 2 posts each). Confounded with look; same fix as above.
+- Reel length: 35 to 45 s vs 46 to 55 s. All reels so far are 47 to 57 s; still need a 35 to 45 s reel.
+- Platform titles: plain event plus stakes titles on YouTube (from Noida); text-first number hooks on Threads (from stamp duty). Review 2026-11-21 with 6 more posts.
+- Boost (from 18 Nov): Noida twin towers boosted at INR 200/day. Measure cost per follow from daily IG follower change; organic baseline about 1 follow per 1,000 reach.
+- Posting slot: midday vs evening. Midday Delhi 1,560, Japan 186 plus twin 363; evening Noida 1,326, Burj 168. No difference yet.
+- Delhi remix topics stay queued (Lutyens cold open, Paris contradiction, Delhi height-rules carousel), first no sooner than 14 days after Delhi.
 
 ## History
 - 2026-11-16: file created.
 - 2026-11-17: first daily learning run. Delhi and Noida reels reached 1,545 and 1,301 (skip 44%) vs 42 to 142 before; sends are the bottleneck (0.13% and 0%); carousels stuck at 6 to 7 reach; contradiction leads the hook tournament (early sign, 2 reels); no boost (no eligible post 2 to 10 days old), campaign kept paused.
+- 2026-11-18: reels plateau after 24 h (Delhi 1,560, Noida 1,326); first trial pair won by contradiction (Japan twin 363 vs main 186 reach); Burj weakest on IG (skip 63.8%) but top on Facebook (220 plays); Noida top on YouTube (633 views), stamp duty carousel top on Threads (148); followers flat at 408; first boost live (Noida, INR 200/day).
