@@ -34,7 +34,7 @@
   "campaign_name": "FV Jind SCO CTWA",
   "campaign_objective": "OUTCOME_LEADS",
   "budget_approved": true,
-  "launch_approved": false,
+  "launch_approved": true,
   "use_planner": false,
   "report_prefix": "jind-",
   "daily": true,
@@ -110,5 +110,5 @@
       "video_ads": []
     }
   ],
-  "note_hold": "Paused 18 Nov 13:45 IST: Rishi wants to approve the creative and flow before anything goes out."
+  "note_launch": "Relaunched 18 Nov 16:25 IST on Rishi's go, with the v2 WhatsApp template and the commercial brochure."
 }
