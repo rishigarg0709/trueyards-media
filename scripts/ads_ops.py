@@ -7,7 +7,7 @@ Token: META_TOKEN secret, never written or printed (scrubbed through meta_ops.sc
 Hard rules enforced HERE, not in prompts (strategy/PERFORMANCE_MARKETING_BRIEF.md):
 - Everything is created PAUSED. Nothing goes live until config/ads.json has budget_approved and
   launch_approved set to true (only Rishi flips those) and a `launch` request runs.
-- Sum of ad set daily budgets never exceeds daily_cap_inr. Code only ever lowers or moves budget,
+- Sum of ad set daily budgets never exceeds daily_cap_inr. Code only lowers or moves budget, except the meta_ramp Rishi approved,
   never raises the total. The campaign carries a lifetime spend_cap equal to monthly_cap_inr.
 - If month-to-date spend plus today's budget would pass monthly_cap_inr, the campaign is paused.
 - No op touches billing, payment methods, account spend caps or any campaign other than FIT's.
@@ -360,6 +360,13 @@ def op_daily(req):
     rep["spend_yesterday_inr"] = spend(camp["id"], "yesterday")
     rep["daily_budget_total_inr"] = total
     rep["monthly_cap_inr"] = CFG["monthly_cap_inr"]
+    try:
+        cur_cap = inr(call(camp["id"], {"fields": "spend_cap"}).get("spend_cap") or 0)
+        if not dry and cur_cap and cur_cap < CFG["monthly_cap_inr"]:
+            call(camp["id"], {"spend_cap": paise(CFG["monthly_cap_inr"])}, "POST")
+            rep["actions"].append(f"Campaign spend cap INR {cur_cap:.0f} -> {CFG['monthly_cap_inr']} (config)")
+    except Exception as e:
+        rep["flags"].append(f"spend cap check failed: {e}")
 
     # 1. hard caps
     if live and not ok:
@@ -426,6 +433,8 @@ def op_daily(req):
         if W.get("frequency", 0) > 3 and not why:
             rep["flags"].append(f"{a['name']}: 7-day frequency {W['frequency']:.1f}, creative fatigue, replace it this week")
     rep["ads"] = rows
+    sp_l = sum(r.get("spend_life") or 0 for r in rows); cv_l = sum(r.get("conv_life") or 0 for r in rows)
+    rep["meta_cost_per_chat"] = round(sp_l / cv_l) if cv_l else None
     sy = rep["spend_yesterday_inr"] or 0
     if live and total and sy < 0.5 * total:
         rep["flags"].append(f"Under-delivery: spent INR {sy:.0f} of INR {total:.0f} yesterday. Check for rejected ads or a too-small audience.")
@@ -762,6 +771,35 @@ def op_tactics_setup(req):
     save_state(st)
     return out
 
+def meta_ramp(rep, base, dry):
+    """Extra Meta budget on top of the planner's share, stepped toward target_inr (Rishi's go-ahead, 18 Nov 2026).
+    One step of step_pct every min_days, only while lifetime cost per chat <= max_cost_per_chat_inr and yesterday's
+    delivery was at least min_delivery of budget. Never steps down by itself; a bad week is the tester's and planner's job."""
+    R = CFG.get("meta_ramp")
+    if not R:
+        return 0.0
+    st = load_state(); r = st.get("meta_ramp") or {"level": base, "at": None}
+    level = float(r.get("level") or base)
+    why = "held"
+    if str(today()) >= R.get("start_on", "") and level < R["target_inr"]:
+        days = (today() - datetime.date.fromisoformat(r["at"])).days if r.get("at") else 99
+        cpc = rep.get("meta_cost_per_chat")
+        deliv = (rep.get("spend_yesterday_inr") or 0) / max(1.0, rep.get("daily_budget_total_inr") or 1)
+        if days < R["min_days"]:
+            why = f"next step after {R['min_days'] - days} more day(s)"
+        elif cpc is None or cpc > R["max_cost_per_chat_inr"]:
+            why = f"held: cost per chat INR {cpc} above INR {R['max_cost_per_chat_inr']}" if cpc else "held: no chats yet"
+        elif deliv < R["min_delivery"]:
+            why = f"held: delivery {deliv:.0%} of budget"
+        else:
+            new = min(R["target_inr"], round(level * (1 + R["step_pct"] / 100)))
+            rep["actions"].append(f"Meta ramp: INR {level:.0f} -> {new}/day (cost per chat INR {cpc}, delivery {deliv:.0%})")
+            level = new; why = "stepped"
+            if not dry:
+                st["meta_ramp"] = {"level": level, "at": str(today())}; save_state(st)
+    rep["meta_ramp"] = f"Meta ramp: INR {level:.0f}/day toward {R['target_inr']} ({why})"
+    return max(0.0, level - base)
+
 def apply_tactics_and_plan(rep, summary, dry):
     """Daily: point each tactic at today's audiences (pause it when there are none) and set budgets from the planner.
     The sum never exceeds daily_cap_inr; idle tactic money goes to prospecting; nothing goes live without approval."""
@@ -797,7 +835,7 @@ def apply_tactics_and_plan(rep, summary, dry):
     if not plan or not live_main:
         rep["plan"] = "no current plan (planner awaiting total)" if not plan else "plan waiting for launch approval"
         return
-    meta = min(float(plan["meta_budget_inr"]), float(CFG["daily_cap_inr"]))
+    meta = min(float(plan["meta_budget_inr"]) + meta_ramp(rep, float(plan["meta_budget_inr"]), dry), float(CFG["daily_cap_inr"]))
     tb = plan["meta_tactics"]
     want = {k: float(tb.get({"W": "warm", "R": "remind", "U": "unreach"}[k], 0)) for k in active_tactics}
     idle = sum(float(tb.get(x, 0)) for k, x in (("W", "warm"), ("R", "remind"), ("U", "unreach")) if k not in active_tactics)
