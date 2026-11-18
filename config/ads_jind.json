@@ -1,113 +1,114 @@
 {
- "ad_account_id": "act_1101758352688996",
- "page_name_hint": "TrueYards",
- "instagram_user_id": "17841429830946947",
- "whatsapp_number": "+919220607264",
- "special_ad_categories": [],
- "min_adset_daily_inr": 120,
- "pause_multiple": 2,
- "creative_opt_out": [
-  "product_browsing",
-  "product_metadata_automation",
-  "standard_enhancements_catalog",
-  "image_animation",
-  "text_overlay_translation",
-  "ig_video_native_subtitle",
-  "profile_card"
- ],
- "tester": {
-  "batch_weekday": 0,
-  "min_spend_inr": 800,
-  "p_best_floor": 0.1,
-  "posterior_spend_inr": 3000,
-  "min_active_ads": 1,
-  "max_active_ads": 8,
-  "draws": 4000,
-  "_note": "Weekly batch (Monday). Pause at >= 2x target cost per qualified lead with zero qualified, or <10% chance of being best after INR 3,000. Daily: emergency pauses only."
- },
- "scale": {
-  "step_pct": 15,
-  "min_days_between": 4,
-  "_note": "Budget steps only via the planner, at most +15% every 4 days."
- },
- "_note": "Flower Valley Jind commercial plots (DSS, SCO, booths). Rishi, 18 Nov 2026 13:31: run ads from today with the poster and a WhatsApp CTA. Separate from FIT: no planner, own caps.",
- "campaign_name": "FV Jind SCO CTWA",
- "campaign_objective": "OUTCOME_LEADS",
- "budget_approved": true,
- "launch_approved": true,
- "use_planner": false,
- "report_prefix": "jind-",
- "daily": true,
- "daily_cap_inr": 600,
- "monthly_cap_inr": 15000,
- "target_cost_per_conversation_inr": 60,
- "target_cost_per_qualified_lead_inr": 400,
- "hrera": "HRERA-PKL-JND-314-2022",
- "prefill_message": "Hi, please share the Flower Valley Jind commercial plot price list.",
- "ice_breakers": [
-  {
-   "title": "Jind SCO price list",
-   "response": "Jind SCO price list"
+  "ad_account_id": "act_1101758352688996",
+  "page_name_hint": "TrueYards",
+  "instagram_user_id": "17841429830946947",
+  "whatsapp_number": "+919220607264",
+  "special_ad_categories": [],
+  "min_adset_daily_inr": 120,
+  "pause_multiple": 2,
+  "creative_opt_out": [
+    "product_browsing",
+    "product_metadata_automation",
+    "standard_enhancements_catalog",
+    "image_animation",
+    "text_overlay_translation",
+    "ig_video_native_subtitle",
+    "profile_card"
+  ],
+  "tester": {
+    "batch_weekday": 0,
+    "min_spend_inr": 800,
+    "p_best_floor": 0.1,
+    "posterior_spend_inr": 3000,
+    "min_active_ads": 1,
+    "max_active_ads": 8,
+    "draws": 4000,
+    "_note": "Weekly batch (Monday). Pause at >= 2x target cost per qualified lead with zero qualified, or <10% chance of being best after INR 3,000. Daily: emergency pauses only."
   },
-  {
-   "title": "Jind shop and booth sizes",
-   "response": "Jind shop and booth sizes"
+  "scale": {
+    "step_pct": 15,
+    "min_days_between": 4,
+    "_note": "Budget steps only via the planner, at most +15% every 4 days."
   },
-  {
-   "title": "Visit Flower Valley Jind",
-   "response": "Visit Flower Valley Jind"
-  },
-  {
-   "title": "Send Jind brochure",
-   "response": "Send Jind brochure"
-  }
- ],
- "welcome_text": "Namaste 👋 Forteasia Flower Valley, Sector 26, Jind: commercial plots (DSS, SCO, booths). HRERA-PKL-JND-314-2022. Tap an option below:",
- "exclude_audience_names": [],
- "tactics": {},
- "adsets": [
-  {
-   "key": "J",
-   "name": "FV Jind J - Advantage+ Jind 30 km",
-   "enabled": true,
-   "daily_budget_inr": 500,
-   "age_min": 25,
-   "age_max": 65,
-   "advantage_audience": 1,
-   "cities": [
+  "_note": "Flower Valley Jind commercial plots (DSS, SCO, booths). Rishi, 18 Nov 2026 13:31: run ads from today with the poster and a WhatsApp CTA. Separate from FIT: no planner, own caps.",
+  "campaign_name": "FV Jind SCO CTWA",
+  "campaign_objective": "OUTCOME_LEADS",
+  "budget_approved": true,
+  "launch_approved": false,
+  "use_planner": false,
+  "report_prefix": "jind-",
+  "daily": true,
+  "daily_cap_inr": 600,
+  "monthly_cap_inr": 15000,
+  "target_cost_per_conversation_inr": 60,
+  "target_cost_per_qualified_lead_inr": 400,
+  "hrera": "HRERA-PKL-JND-314-2022",
+  "prefill_message": "Hi, please share the Flower Valley Jind commercial plot price list.",
+  "ice_breakers": [
     {
-     "q": "Jind",
-     "radius_km": 30
+      "title": "Jind SCO price list",
+      "response": "Jind SCO price list"
     },
     {
-     "q": "Narwana",
-     "radius_km": 17
+      "title": "Jind shop and booth sizes",
+      "response": "Jind shop and booth sizes"
     },
     {
-     "q": "Safidon",
-     "radius_km": 17
-    }
-   ],
-   "interests": [
-    "Small business",
-    "Entrepreneurship",
-    "Retail",
-    "Investment",
-    "Real estate"
-   ],
-   "behaviors": [
-    "Small business owners"
-   ],
-   "ads": [
+      "title": "Visit Flower Valley Jind",
+      "response": "Visit Flower Valley Jind"
+    },
     {
-     "name": "J1 poster: business location already alive",
-     "image": "ads/creatives/fv-jind-sco-poster.jpg",
-     "headline": "Commercial plots in Jind",
-     "text": "Commercial plots now open at Forteasia Flower Valley, Sector 26, Jind: DSS, SCO and booths on a 24-metre-wide road with frontage parking, inside an established residential township behind PGI Jind. HRERA-PKL-JND-314-2022, www.haryanarera.gov.in. Tap below to get the price list on WhatsApp.",
-     "prefill": "Hi, please share the Flower Valley Jind commercial plot price list."
+      "title": "Send Jind brochure",
+      "response": "Send Jind brochure"
     }
-   ],
-   "video_ads": []
-  }
- ]
+  ],
+  "welcome_text": "Namaste 👋 Forteasia Flower Valley, Sector 26, Jind: commercial plots (DSS, SCO, booths). HRERA-PKL-JND-314-2022. Tap an option below:",
+  "exclude_audience_names": [],
+  "tactics": {},
+  "adsets": [
+    {
+      "key": "J",
+      "name": "FV Jind J - Advantage+ Jind 30 km",
+      "enabled": true,
+      "daily_budget_inr": 500,
+      "age_min": 25,
+      "age_max": 65,
+      "advantage_audience": 1,
+      "cities": [
+        {
+          "q": "Jind",
+          "radius_km": 30
+        },
+        {
+          "q": "Narwana",
+          "radius_km": 17
+        },
+        {
+          "q": "Safidon",
+          "radius_km": 17
+        }
+      ],
+      "interests": [
+        "Small business",
+        "Entrepreneurship",
+        "Retail",
+        "Investment",
+        "Real estate"
+      ],
+      "behaviors": [
+        "Small business owners"
+      ],
+      "ads": [
+        {
+          "name": "J1 poster: business location already alive",
+          "image": "ads/creatives/fv-jind-sco-poster.jpg",
+          "headline": "Commercial plots in Jind",
+          "text": "Commercial plots now open at Forteasia Flower Valley, Sector 26, Jind: DSS, SCO and booths on a 24-metre-wide road with frontage parking, inside an established residential township behind PGI Jind. HRERA-PKL-JND-314-2022, www.haryanarera.gov.in. Tap below to get the price list on WhatsApp.",
+          "prefill": "Hi, please share the Flower Valley Jind commercial plot price list."
+        }
+      ],
+      "video_ads": []
+    }
+  ],
+  "note_hold": "Paused 18 Nov 13:45 IST: Rishi wants to approve the creative and flow before anything goes out."
 }
