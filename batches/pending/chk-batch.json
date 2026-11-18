@@ -1,0 +1,13 @@
+{
+ "batch": "batches/b2dbnuxfp6s51vwt5vnz909vc7kfpklkhkkr",
+ "name": "chk-batch",
+ "model": "gemini-3.1-flash-image",
+ "submitted": "2026-11-18T11:17Z",
+ "images": [
+  {
+   "name": "chk-batch-2",
+   "prompt": "Photograph of an empty industrial plot with a boundary wall and a wide approach road in Haryana, bright daylight, photorealistic, vertical 9:16, no text, no logos, no people visible"
+  }
+ ],
+ "fallback_after_utc": null
+}
