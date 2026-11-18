@@ -7,7 +7,7 @@ Batch status: prep-2026-11-19 submitted 2026-11-18 16:59 UTC (22:29 IST): batche
 - Queue item: "Why Jaipur's Pink City is pink" (next unchecked topic after Campa Cola, which was skipped: it repeats the Noida "builder fails, court steps in" theme). Marked [~] 2026-11-19 midday.
 - Story type: history (with a "your wall, not your colour" property twist)
 - Hook archetype: 14 story cold open ("1876. A British prince is coming. The whole city turns pink."). Untested in the hook tournament.
-- Trial twin hook (midday slot): 24 why does X look like this ("Why is an entire Indian city one colour?" over the Hawa Mahal photo, stamp "By law?" on "colour").
+- Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation; no twin cut). See REEL_PIPELINE step 8.
 - Look: B Emerald Doc (deep green-black, white, accent #28c39d; Inter 800, Fraunces only for the year numerals). Different from the previous reel (T, Jakarta) and from 18 Nov midday (C). Keep frame 0 bright (D1): the hook image is full morning sun.
 - Voice: George (warm British documentary; history). Rotation: Jessa (last), Tara (evening today).
 - Hero shot: impossible-but-real (AI): one 1876 street, half white lime, half freshly pink, ladders and paint buckets. Headline "1876. Paint it pink."

@@ -1,5 +1,7 @@
 # 2026-11-19 evening reel (19:07 IST): The South Mumbai flat that rented for about ₹1,300 a month
 
+- Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8.
+
 Batch status: prep-2026-11-19 submitted 2026-11-18 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-19-pro.json (3 Pro hook and cover images) and prep-2026-11-19.json (14 Flash images). The workflow's own push lost a race with the photo fetch, so the planner wrote the two pending records by hand with the batch ids from the run log. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 
 - Topic: Mumbai's rent control: a 1947 law froze rents at 1940 levels, so some old South Mumbai flats rent for almost nothing, the buildings decay, and yet the tenant holds the real value.

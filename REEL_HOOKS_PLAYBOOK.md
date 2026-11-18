@@ -104,8 +104,7 @@ End with a **send prompt that's a question with a side to pick**: "Would you liv
 
 ## 9. Testing (Trial Reels)
 
-- Use Trial Reels (shown to non-followers only for about 72 h) to A/B test two hooks on the same body.
-- Change only the first 3 seconds between variants.
+- Every reel is a Trial Reel (trial first, REEL_PIPELINE step 8). Compare hooks across different reels, trial against trial, using the rolling median of the last 10 trials. Never post two cuts of the same video to Instagram.
 - The winner is the variant with the lower skip rate and higher sends per reach, not the one with more likes.
 - Log results in `drafts/<reel>/results.md` and promote the winning hook pattern in this file.
 

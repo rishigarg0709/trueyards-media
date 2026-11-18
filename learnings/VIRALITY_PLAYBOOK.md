@@ -89,8 +89,8 @@ Winner remix: a post in our top 10% for sends gets 2 to 3 derivatives, the first
 - Weeks 1 to 4, hook tournament: fixed format (motion-graphic explainer, 35 to 50 s). Rotate 8 archetypes: number slam, contradiction, stakes, myth bust, story cold open, visual shock, versus, why does X look like this. Primary: hold ratio and skip; secondary: sends.
 - Weeks 5 to 8: topic x geography x language. Primary: sends per reach and follows per 1,000 reach.
 - Week 9 on: 70% proven winners, 20% adjacent variations, 10% wild experiments. Retire an archetype after 4 weeks in the bottom quartile. Re-test winners every 6 to 8 weeks.
-- Trust a pattern only after 8 or more posts and 3,000 or more cumulative reach per arm (or 70% wins in paired Trial Reel twins). Watch-time differences settle after 5 to 6 pairs.
-- Trial Reels (non-followers only, available in the publishing API): once eligible, post twin cuts with the same body and two different first 3 seconds.
+- Trust a pattern only after 8 or more posts and 3,000 or more cumulative reach per arm (twins ended 18 Nov 2026). Watch-time differences settle after 5 to 6 pairs.
+- Trial first (Rishi, 18 Nov 2026): every reel goes out once as a Trial Reel with automatic graduation; no twin cuts of the same video. Compare trials only with trials (rolling median of the last 10). Flag for Rishi any trial at 24 h with skip rate under 35%, average watch at least 45% of length and either sends or follows per 1,000 reach at 2 or more that has not graduated.
 
 ## 8. Boosts
 Only boost organic winners (top 10% sends and hold). Measure on cost per follow. Keep boosted posts out of organic learning data.

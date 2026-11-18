@@ -266,7 +266,7 @@ def op_ig_reel(req):
          "share_to_feed": "true" if req.get("share_to_feed", True) else "false"}
     if req.get("cover_url"): p["cover_url"] = req["cover_url"]
     if req.get("trial"):
-        p["trial_params"] = {"graduation_strategy": req.get("trial_strategy", "MANUAL")}
+        p["trial_params"] = {"graduation_strategy": req.get("trial_strategy", "SS_PERFORMANCE")}
         p.pop("share_to_feed", None)
     c = call(f"{IG}/media", p, "POST")
     if "id" not in c: return {"container_error": c}
