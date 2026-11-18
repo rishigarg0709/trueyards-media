@@ -116,7 +116,9 @@ def split_meta(meta, summary, spend, ev, prev, cfg=CFG):
         sh = dict(cfg["meta_tactics_without_waves"])
         reasons.append("No joint waves running; Meta goes to prospecting and the unreachable list.")
     else:
-        sh = dict((prev or {}).get("meta_shares") or cfg["meta_tactics_start"])
+        prev_sh = (prev or {}).get("meta_shares") or {}
+        # coming from the no-waves split (warm-up and reminders at 0): start the wave tactics from the starting shares
+        sh = dict(prev_sh) if prev_sh.get("warm", 0) > 0 or prev_sh.get("remind", 0) > 0 else dict(cfg["meta_tactics_start"])
         lift = ((summary or {}).get("lift") or {}).get("all", {}).get("all")
         if lift and lift["waves"] >= cfg["warm_min_waves_to_judge"] and lift["wd"] and lift["cd"]:
             extra = lift["wl"] - lift["wd"] * (lift["cl"] / lift["cd"])

@@ -1,37 +1,38 @@
 {
-  "_note": "Media planner settings. Rishi sets product and total_daily_inr (spend before GST). Everything else is Claude's to tune within the rules in strategy/CHANNEL_COORDINATION.md.",
-  "product": "FIT",
-  "total_daily_inr": 1500,
-  "start_share": {
-    "wa": 0.67,
-    "meta": 0.33
-  },
-  "floor_of_start": 0.3,
-  "max_shift_share": 0.2,
-  "min_test_days": 14,
-  "window_days": 14,
-  "min_visits_to_compare": 3,
-  "min_qualified_to_compare": 5,
-  "meta_tactics_start": {
-    "prospect_A": 0.35,
-    "prospect_B": 0.2,
-    "warm": 0.25,
-    "remind": 0.12,
-    "unreach": 0.08
-  },
-  "meta_tactics_without_waves": {
-    "prospect_A": 0.55,
-    "prospect_B": 0.35,
-    "remind": 0.0,
-    "warm": 0.0,
-    "unreach": 0.1
-  },
-  "min_tactic_inr": 100,
-  "warm_min_waves_to_judge": 3,
-  "warm": {
-    "cellsPerDay": 1,
-    "waveSize": 400,
-    "leadDays": 4
-  },
-  "_set_by_rishi": "17 Nov 2026: FIT, INR 1,500/day total; ads from the TrueYards Facebook page and Instagram."
+ "_note": "Media planner settings. Rishi sets product and total_daily_inr (spend before GST). Everything else is Claude's to tune within the rules in strategy/CHANNEL_COORDINATION.md.",
+ "product": "FIT",
+ "total_daily_inr": 1500,
+ "start_share": {
+  "wa": 0.67,
+  "meta": 0.33
+ },
+ "floor_of_start": 0.3,
+ "max_shift_share": 0.2,
+ "min_test_days": 14,
+ "window_days": 14,
+ "min_visits_to_compare": 3,
+ "min_qualified_to_compare": 5,
+ "meta_tactics_start": {
+  "prospect_A": 0.5,
+  "prospect_B": 0.0,
+  "warm": 0.25,
+  "remind": 0.25,
+  "unreach": 0.0
+ },
+ "meta_tactics_without_waves": {
+  "prospect_A": 0.55,
+  "prospect_B": 0.35,
+  "remind": 0.0,
+  "warm": 0.0,
+  "unreach": 0.1
+ },
+ "min_tactic_inr": 100,
+ "warm_min_waves_to_judge": 3,
+ "warm": {
+  "cellsPerDay": 1,
+  "waveSize": 400,
+  "leadDays": 4
+ },
+ "_set_by_rishi": "17 Nov 2026: FIT, INR 1,500/day total; ads from the TrueYards Facebook page and Instagram.",
+ "_tactics_note": "18 Nov: one prospecting ad set (P). Tactic budgets with no live audience flow back to prospecting in the daily run."
 }
