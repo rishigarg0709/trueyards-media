@@ -1,0 +1,13 @@
+{
+ "op": "ig_reel",
+ "ran_at": "2026-11-18T18:24:38.402090Z",
+ "result": {
+  "container": "18120022126994365",
+  "status": {
+   "id": "18120022126994365",
+   "status": "Finished: Media has been uploaded and it is ready to be published.",
+   "status_code": "FINISHED"
+  },
+  "note": "dry run, not published"
+ }
+}
