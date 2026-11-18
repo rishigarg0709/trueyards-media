@@ -1,0 +1,81 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage-1118m"
+ },
+ {
+  "kind": "voice",
+  "name": "rods-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Every Indian street has this... and it's not an accident. [short pause] Steel rods, sticking out of the roof. They're the tops of the columns... left there on purpose. Because most Indian homes are built the way money comes in. One floor now... the next one when the family grows. [short pause] Here's the logic. A new floor's columns have to lock into the old ones. Leave the rods out... and that joint is ready. Cut them off... and later, someone has to drill into the columns and glue new bars in. [short pause] But there's a catch. Bare steel rusts. And rust can swell up to six times bigger than the steel it eats. Rain runs down the rods... into the column... and the concrete can crack from the inside. So... is it a plan, or a slow problem? Rods on your roof: future floor... or future crack?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "rods-vo-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Every Indian street has this... and it's not an accident. [short pause] Steel rods, sticking out of the roof. They're the tops of the columns... left there on purpose. Because most Indian homes are built the way money comes in. One floor now... the next one when the family grows. [short pause] Here's the logic. A new floor's columns have to lock into the old ones. Leave the rods out... and that joint is ready. Cut them off... and later, someone has to drill into the columns and glue new bars in. [short pause] But there's a catch. Bare steel rusts. And rust can swell up to six times bigger than the steel it eats. Rain runs down the rods... into the column... and the concrete can crack from the inside. So... is it a plan, or a slow problem? Rods on your roof: future floor... or future crack?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "rods-trial-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Why do so many Indian homes look half built... forever? [short pause] Steel rods, sticking out of the roof.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "rods-beat",
+  "prompt": "Catchy warm cinematic hybrid beat, punchy hip-hop drums with deep 808 bass, bright plucked melodic hook with a subtle Indian flavour (santoor-like pluck), warm synth brass stabs, confident and curious mood, instrumental at exactly 104 BPM in 4/4, starts immediately with the full beat, strong clear downbeats, no vocals",
+  "ms": 45000
+ },
+ {
+  "kind": "image",
+  "name": "rods-1",
+  "prompt": "Hyper-realistic wide photograph of a dense Indian residential street lane of two and three storey concrete houses, every flat rooftop bristling with clusters of vertical steel reinforcement rods sticking up from the column tops, water tanks and clotheslines on roofs, one rooftop in the centre catches warm amber light on its rods, looks like a real news photo, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ },
+ {
+  "kind": "image",
+  "name": "rods-2",
+  "prompt": "Close-up photograph of a cluster of four rusty vertical steel reinforcement bars sticking up out of the top of a square concrete column on a flat Indian rooftop, orange rust streaks running down the grey concrete, rooftop parapet and neighbouring rooftops softly out of focus behind, warm light from a stairwell door, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ },
+ {
+  "kind": "image",
+  "name": "rods-3",
+  "prompt": "Photograph of a single modest two storey Indian concrete house on a residential street, ground and first floor windows lit warm amber, an empty flat roof on top with steel reinforcement rods sticking up from every column corner, a potted plant and water tank on the roof, waiting for a future floor, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ },
+ {
+  "kind": "image",
+  "name": "rods-4",
+  "prompt": "Photograph of a new floor under construction on top of an existing Indian house: new concrete columns rising inside plywood formwork tied onto the old protruding steel rods, bamboo props, a bright construction work lamp, cement bags, no workers present, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ },
+ {
+  "kind": "image",
+  "name": "rods-5",
+  "prompt": "Macro photograph of the top of an old concrete column where the concrete cover has cracked and spalled off, exposing swollen rusted steel bars, rust bleeding down in orange streaks, rain-wet surface glistening, raindrops running down the rods into the column, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ },
+ {
+  "kind": "image",
+  "name": "rods-6",
+  "prompt": "Low angle photograph looking up at a three storey Indian house built in stages, each floor a slightly different colour and finish, the top roof still bristling with steel rods against the deep navy sky, a crescent moon, warm lit windows below, photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos, no people visible. Vertical 9:16, main subject in the middle third, calmer darker area in the lower third for captions, top area darker sky, wide framing so it can be cropped."
+ }
+]
