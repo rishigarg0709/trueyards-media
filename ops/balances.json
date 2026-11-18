@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-18 20:51",
+ "checked_at": "2026-11-18 20:54",
  "checks": [
   {
    "id": "gemini",
@@ -40,15 +40,14 @@
   },
   {
    "id": "elevenlabs",
-   "name": "ElevenLabs voice and music",
-   "unit": "credits",
-   "link": "https://elevenlabs.io/app/subscription",
-   "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
+   "name": "elevenlabs",
    "status": "check",
    "left": null,
    "burn_per_day": null,
    "runway_days": null,
-   "detail": "ElevenLabs answered HTTP 500"
+   "detail": "check failed: TimeoutError",
+   "action": "",
+   "link": ""
   },
   {
    "id": "apify",
