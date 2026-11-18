@@ -139,7 +139,13 @@ def op_insights(req):
     return scrub({"instagram_media": media, "instagram_account": acct, "facebook": fb})
 
 def month_spend():
-    r = call(f"{ACT}/insights", {"fields": "spend", "date_preset": "this_month"})
+    """This month's spend of the TrueYards Boost campaign only (the ad account is shared with FIT ads,
+    which have their own budget in the ads agent; they must not eat the boost cap). Falls back to the
+    whole account if the campaign cannot be found, which is the safe direction for a cap."""
+    r = call(f"{ACT}/campaigns", {"fields": "id,name", "limit": 50})
+    camp = next((c for c in r.get("data", []) if c.get("name") == "TrueYards Boost"), None)
+    path = f"{camp['id']}/insights" if camp else f"{ACT}/insights"
+    r = call(path, {"fields": "spend", "date_preset": "this_month"})
     d = r.get("data", [])
     return float(d[0]["spend"]) if d else 0.0
 
