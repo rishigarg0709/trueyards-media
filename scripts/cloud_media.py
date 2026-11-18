@@ -47,8 +47,7 @@ def image(t):
     for ip in t.get("inputs", []):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
         parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
-    body = {"contents": [{"parts": parts}],
-            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
+    body = {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": _img_config(t, model)}}
     j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body, {"x-goog-api-key": GM})
     for p in j["candidates"][0]["content"]["parts"]:
         d = p.get("inlineData") or p.get("inline_data")
@@ -56,19 +55,25 @@ def image(t):
             open(f"{OUT}/{t['name']}.png", "wb").write(base64.b64decode(d["data"])); _spend(1, model, "single"); return "image ok"
     return "no image: " + json.dumps(j)[:300]
 
-def _img_request(t):
+def _img_config(t, model):
+    """Gemini 2.5 Flash Image has one output size (about 1K; the free 4K upscale runs after); newer models take imageSize."""
+    cfg = {"aspectRatio": t.get("aspect", "9:16")}
+    if "2.5" not in model:
+        cfg["imageSize"] = t.get("size", "2K")
+    return cfg
+
+def _img_request(t, model="gemini-3-pro-image"):
     parts = [{"text": t["prompt"]}]
     for ip in t.get("inputs", []):
         mt = "image/png" if ip.endswith(".png") else "image/jpeg"
         parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
-    return {"contents": [{"parts": parts}],
-            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": t.get("aspect", "9:16"), "imageSize": t.get("size", "2K")}}}
+    return {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": _img_config(t, model)}}
 
 def batch_submit(t):
     """Half-price Gemini images. t = {kind, name, model?, images:[{name, prompt, aspect?, size?, inputs?}]}.
     Results are saved later by the batch-poll workflow into library/media/<image name>.png."""
     model = t.get("model", "gemini-3-pro-image")
-    reqs = [{"request": _img_request(i), "metadata": {"key": i["name"]}} for i in t["images"]]
+    reqs = [{"request": _img_request(i, model), "metadata": {"key": i["name"]}} for i in t["images"]]
     body = {"batch": {"display_name": t["name"], "input_config": {"requests": {"requests": reqs}}}}
     j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchGenerateContent", body, {"x-goog-api-key": GM})
     os.makedirs("batches/pending", exist_ok=True)
