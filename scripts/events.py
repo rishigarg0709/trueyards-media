@@ -18,11 +18,12 @@ KEEP = 600
 REPO = "https://github.com/rishigarg0709/trueyards-media"
 
 # Commits that are routine machine output: the agent that caused them already shows up another way.
-SKIP = re.compile(r"^(events|balances)$|results$|^comments?:? fetch|^comment fetch|fetch requests|run requests|^fetch[: ]|^Fetch stock photos|^Check boost status|^Verify boost|^boost_status|^jobs: |^cloud-media|^batch-poll|^merge ", re.I)
+SKIP = re.compile(r"^(events|balances)$|results$|^comments?:? fetch|^comment fetch|^comments? log|^follower check|fetch requests|run requests|^fetch[: ]|^Fetch stock photos|^Check boost status|^Verify boost|^boost_status|^jobs: |^cloud-media|^batch-poll|^merge ", re.I)
 # Commit message or changed path -> (agent_id, agent name in the Agents tab)
 AGENTS = [
     (r"^cos|cos/|balance watch|^balances", ("cos", "Chief of Staff")),
     (r"^ads: |^ads/|config/ads", ("pf.ads", "FIT Meta ads agent")),
+    (r"^images?:|image model|^balances:", ("cs.img", "Image generator")),
     (r"learning run|^learn", ("bo.learn", "Analytics and learning")),
     (r"boost", ("pf.boost", "Boost manager")),
     (r"^perf|perf/", ("pf.plan", "Budget planner")),
@@ -113,7 +114,7 @@ def meta_events(state):
                 continue
             was = old.get(key)
             label = f"Meta {kind} '{cur['name']}'" + (f" in '{cur['camp']}'" if cur["camp"] else "")
-            who = ("pf.boost", "Boost manager") if "boost" in (cur["name"] + cur["camp"]).lower() else ("pf.ads", "FIT Meta ads agent")
+            who = ("pf.boost", "Boost manager") if re.search("boost|follow", (cur["name"] + cur["camp"]).lower()) else ("pf.ads", "FIT Meta ads agent")
             ev = detail = None
             if not was:
                 ev, detail = "created", f"{label} created, {cur['status'].lower().replace('_', ' ')}" + (f", {inr(cur['budget'])} a day" if cur["budget"] else "")
