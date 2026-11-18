@@ -195,7 +195,7 @@ def cloudflare():
 def whatsapp():
     c = CFG["whatsapp"]
     url, key = os.environ.get("PERF_URL", ""), os.environ.get("PERF_KEY", "")
-    out = {"id": "whatsapp", "name": "WhatsApp wallet (autopilot, broadcasts, alerts)", "unit": "INR", "link": "https://business.facebook.com/billing_hub",
+    out = {"id": "whatsapp", "name": "WhatsApp wallet (autopilot, broadcasts, alerts)", "unit": "INR", "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
            "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)"}
     code, j = http(f"{url}?days=7", headers={"x-perf-key": key}) if url and key else (0, {})
     if code != 200:
