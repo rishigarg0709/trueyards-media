@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-18 22:54",
+ "checked_at": "2026-11-18 22:59",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "ok",
-   "left": 1865,
+   "left": 1808,
    "burn_per_day": 300,
-   "runway_days": 6.2,
-   "detail": "About INR 1865 left of the INR 2000 top-up on 2026-11-18",
-   "spent_today": 135
+   "runway_days": 6.0,
+   "detail": "About INR 1808 left of the INR 2000 top-up on 2026-11-18",
+   "spent_today": 192
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 2097,
+   "left": 2088,
    "burn_per_day": 995,
    "runway_days": 2.1,
-   "detail": "About INR 2097 left, spending about INR 995 a day"
+   "detail": "About INR 2088 left, spending about INR 995 a day"
   },
   {
    "id": "whatsapp",
@@ -33,22 +33,21 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "ok",
-   "left": 10000,
+   "left": 9999,
    "burn_per_day": 1005,
-   "runway_days": 10.0,
-   "detail": "About INR 10000 left at INR 1005 a day"
+   "runway_days": 9.9,
+   "detail": "About INR 9999 left at INR 1005 a day"
   },
   {
    "id": "elevenlabs",
-   "name": "ElevenLabs voice and music",
-   "unit": "credits",
-   "link": "https://elevenlabs.io/app/subscription",
-   "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
+   "name": "elevenlabs",
    "status": "check",
    "left": null,
    "burn_per_day": null,
    "runway_days": null,
-   "detail": "ElevenLabs answered HTTP 500"
+   "detail": "check failed: TimeoutError",
+   "action": "",
+   "link": ""
   },
   {
    "id": "apify",
