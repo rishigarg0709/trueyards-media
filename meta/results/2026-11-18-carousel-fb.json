@@ -1,0 +1,10 @@
+{
+ "op": "fb_photos",
+ "ran_at": "2026-11-18T11:58:21.566625Z",
+ "result": {
+  "post": {
+   "id": "1161377287055094_122157521799349925",
+   "post_supports_client_mutation_id": true
+  }
+ }
+}
