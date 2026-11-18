@@ -1,7 +1,10 @@
 name: batch-poll
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/20 * * * *"   # GitHub often skips or delays this, so the job also runs after every agent workflow
+  workflow_run:
+    workflows: [meta-ops, social-ops, ads-ops]
+    types: [completed]
   workflow_dispatch:
 permissions:
   contents: write

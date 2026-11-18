@@ -3,10 +3,14 @@ name: events
 # ops/events.jsonl; the Control Room sync copies them into the Activity tab (Rishi, 18 Nov 2026).
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/15 * * * *"   # GitHub often skips or delays this, so the job also runs after every agent workflow
+  workflow_run:
+    workflows: [meta-ops, social-ops, ads-ops, cloud-media]
+    types: [completed]
   workflow_dispatch:
 permissions:
   contents: write
+  actions: read
 concurrency: events
 jobs:
   feed:
@@ -19,6 +23,9 @@ jobs:
       - name: Record events
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
         run: python3 scripts/events.py
       - name: Commit when something changed
         run: |

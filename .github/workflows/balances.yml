@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "23 */2 * * *"
   workflow_run:
-    workflows: [cloud-media, batch-poll, generate-images]
+    workflows: [cloud-media, batch-poll, generate-images, meta-ops, social-ops, ads-ops]
     types: [completed]
   workflow_dispatch:
 permissions:
@@ -26,6 +26,7 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           PERF_URL: ${{ secrets.PERF_URL }}
           PERF_KEY: ${{ secrets.PERF_KEY }}
+          SOFT: ${{ (github.event_name == 'workflow_run' && contains(fromJSON('["meta-ops","social-ops","ads-ops"]'), github.event.workflow_run.name)) && '1' || '0' }}
         run: python3 scripts/balances.py
       - name: Commit when something changed
         run: |

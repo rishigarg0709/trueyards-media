@@ -258,8 +258,20 @@ def alert(checks, prev):
     return sent, [c["id"] for c in due] if code == 200 else []
 
 
+def _age_min(prev):
+    try:
+        t = datetime.datetime.strptime(prev["checked_at"], "%Y-%m-%d %H:%M").replace(tzinfo=IST)
+        return (NOW - t).total_seconds() / 60
+    except Exception:
+        return 1e9
+
+
 def main():
     prev = json.load(open(OUT_JSON)) if os.path.exists(OUT_JSON) else {}
+    # GitHub's own schedule proved unreliable (18 Nov review: no scheduled run fired in 8 hours), so this job is also
+    # started after every meta-ops, social-ops and ads-ops run. Those "soft" starts skip when the last check is fresh.
+    if os.environ.get("SOFT") == "1" and _age_min(prev) < 90:
+        open("ops/.unchanged", "w").write("1"); print("fresh, skipped"); return
     checks = []
     for f in (gemini, meta, whatsapp, elevenlabs, apify, cloudflare):
         try:
@@ -272,14 +284,14 @@ def main():
     same = {k: v for k, v in prev.items() if k != "checked_at"} == {k: v for k, v in body.items() if k != "checked_at"}
     json.dump(body, open(OUT_JSON, "w"), indent=1, ensure_ascii=False)
     icon = {"ok": "OK", "check": "Check", "low": "LOW", "out": "OUT"}
-    md = [f"# Balances (checked {body['checked_at']} IST, every 2 hours)", "", "| Service | Status | Left | Per day | Days left | Detail | Fix |", "|---|---|---|---|---|---|---|"]
+    md = [f"# Balances (checked {body['checked_at']} IST; runs about every 2 hours and after every image job)", "", "| Service | Status | Left | Per day | Days left | Detail | Fix |", "|---|---|---|---|---|---|---|"]
     for c in sorted(checks, key=lambda c: -RANK.get(c["status"], 0)):
         left = "" if c.get("left") is None else f"{c['left']:,} {c['unit']}"
         md.append(f"| {c['name']} | {icon.get(c['status'], c['status'])} | {left} | {c.get('burn_per_day') or ''} | {c.get('runway_days') if c.get('runway_days') is not None else ''} | {c['detail']} | {c['action']} |")
     md += ["", "X API prepaid credit has no balance API: check developer.x.com when posts start failing.", "Thresholds and Gemini top-ups: config/balances.json."]
     open(OUT_MD, "w").write("\n".join(md) + "\n")
     print(json.dumps({"same_as_before": same, "alerted": now_sent, "status": {c["id"]: c["status"] for c in checks}}))
-    if same:
+    if same and _age_min(prev) < 180:  # still commit a heartbeat every 3 hours so a stopped watch is visible
         open("ops/.unchanged", "w").write("1")
 
 
