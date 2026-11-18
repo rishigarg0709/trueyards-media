@@ -1,0 +1,50 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-18T08:09:12.915822Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {
+   "J": {
+    "result": {
+     "id": "120255657866720547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [
+      "Real estate"
+     ],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Small business (business and finance)",
+      "Entrepreneurship (business and finance)",
+      "Retail (industry)",
+      "Investment (business and finance)",
+      "Small business owners"
+     ]
+    },
+    "earlier_errors": []
+   }
+  },
+  "ads": {
+   "J1 poster: business location already alive": {
+    "ad": {
+     "id": "120255657868730547"
+    },
+    "creative_id": "1652132623033513",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "campaign": {
+   "id": "120255657866010547"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}
