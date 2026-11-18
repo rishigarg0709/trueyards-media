@@ -1,5 +1,5 @@
 {
- "last_sha": "daf1e9a4064da4e0e7588637ec447f5ab560e3c1",
+ "last_sha": "7ff4d052a1560b75622b2ff71ced8557fc040e92",
  "meta": {
   "campaign:120255661706190547": {
    "name": "TrueYards Follow",
@@ -33,7 +33,7 @@
   },
   "adset:120255662369290547": {
    "name": "FV Jind R - customers and site visitors",
-   "status": "IN_PROCESS",
+   "status": "ACTIVE",
    "budget": "15000",
    "camp": "FV Jind SCO CTWA"
   },
