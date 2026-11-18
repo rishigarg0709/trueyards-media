@@ -1,8 +1,0 @@
-d1119-hawa-mahal-sky https://images.unsplash.com/photo-1781372132706-93e982ed58c6?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119-hawa-mahal-facade https://images.unsplash.com/photo-1650530777057-3a7dbc24bf6c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119-hawa-mahal-street https://images.unsplash.com/photo-1776966892089-1847f0dc096d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119-jaipur-pink-rooftops https://images.unsplash.com/photo-1663616092907-52c7d0995d17?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119-albert-hall https://images.unsplash.com/photo-1705861144570-00ede2bc7e7f?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3600
-d1119e-mumbai-old-facade https://images.unsplash.com/photo-1763927694877-5d2125472dc4?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119e-mumbai-street-towers https://images.unsplash.com/photo-1706961121517-a4d78c3ce3cc?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1119e-mumbai-old-building https://images.unsplash.com/photo-1629090326653-3a40e615312a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
