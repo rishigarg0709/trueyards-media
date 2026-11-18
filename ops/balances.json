@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-18 16:49",
+ "checked_at": "2026-11-18 16:51",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "ok",
-   "left": 1913,
-   "burn_per_day": 12,
-   "runway_days": 154.1,
-   "detail": "About INR 1913 left of the INR 2000 top-up on 2026-11-18",
-   "spent_today": 87
+   "left": 1910,
+   "burn_per_day": 13,
+   "runway_days": 149.0,
+   "detail": "About INR 1910 left of the INR 2000 top-up on 2026-11-18",
+   "spent_today": 90
   },
   {
    "id": "meta",
