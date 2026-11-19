@@ -1,0 +1,38 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ },
+ {
+  "kind": "voice",
+  "name": "jaipur-vo-1",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "Eighteen seventy-six. A British prince is on his way to Jaipur... [short pause] and the Maharaja orders the whole old city painted pink.\nBut Jaipur was already special. Founded in seventeen twenty-seven by Sawai Jai Singh the Second... laid out on a grid... one of India's earliest planned cities.\nThe pink came about a hundred and fifty years later. Sawai Ram Singh the Second chose it... a colour of welcome... for Albert Edward, the Prince of Wales.\nThen the twist. In eighteen seventy-seven, a law reportedly made pink compulsory in the old city. [pause] Your house. Your wall. Not your colour.\nAnd the colour outlived the Raj. In twenty seventeen, Jaipur's smart city plan set aside about fourteen point six crore rupees to restore bazaar facades in the original shade. And in twenty nineteen, UNESCO listed the walled city as a World Heritage Site.\nSo... would you let your city choose your paint? Because in Jaipur... it all started in eighteen seventy-six.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "jaipur-vo-2",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "Eighteen seventy-six. A British prince is on his way to Jaipur... [short pause] and the Maharaja orders the whole old city painted pink.\nBut Jaipur was already special. Founded in seventeen twenty-seven by Sawai Jai Singh the Second... laid out on a grid... one of India's earliest planned cities.\nThe pink came about a hundred and fifty years later. Sawai Ram Singh the Second chose it... a colour of welcome... for Albert Edward, the Prince of Wales.\nThen the twist. In eighteen seventy-seven, a law reportedly made pink compulsory in the old city. [pause] Your house. Your wall. Not your colour.\nAnd the colour outlived the Raj. In twenty seventeen, Jaipur's smart city plan set aside about fourteen point six crore rupees to restore bazaar facades in the original shade. And in twenty nineteen, UNESCO listed the walled city as a World Heritage Site.\nSo... would you let your city choose your paint? Because in Jaipur... it all started in eighteen seventy-six.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "jaipur-beat",
+  "prompt": "Catchy cinematic desi documentary beat instrumental at exactly 100 BPM in 4/4: punchy hip-hop drums with tabla accents, bright plucked strings and a santoor-style riff, warm low strings pad, uplifting and curious, starts immediately with the full beat, strong clear downbeats, no vocals",
+  "ms": 45000
+ }
+]
