@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-19 18:47",
+ "checked_at": "2026-11-19 19:01",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "ok",
-   "left": 1808,
+   "left": 1774,
    "burn_per_day": 300,
-   "runway_days": 6.0,
-   "detail": "About INR 1808 left of the INR 2000 top-up on 2026-11-18",
-   "spent_today": 0
+   "runway_days": 5.9,
+   "detail": "About INR 1774 left of the INR 2000 top-up on 2026-11-18",
+   "spent_today": 34
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 11343,
+   "left": 11336,
    "burn_per_day": 995,
    "runway_days": 11.4,
-   "detail": "About INR 11343 left, spending about INR 995 a day"
+   "detail": "About INR 11336 left, spending about INR 995 a day"
   },
   {
    "id": "whatsapp",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 111773,
+   "left": 110829,
    "burn_per_day": 5000,
-   "runway_days": 22.4,
-   "detail": "111,773 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 22.2,
+   "detail": "110,829 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
