@@ -22,7 +22,7 @@ Active: Noida follow ad (120255661722430547, since 18 Nov 16:45 IST; pause on 22
 
 | Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
 |---|---|---|---|---|---|---|---|
-| Steel rods trial (18508881529100400) | 21 h | 1,635 | 34.8% | 42.5% | 1.2 | FB top 624 plays, YT 640 | BOOST at 13:25 IST 19 Nov (best on every metric; on the grid). No follow card (posted before D9) |
+| Steel rods trial (18508881529100400) | 21 h | 1,635 | 34.8% | 42.5% | 1.2 | FB top 624 plays, YT 640 | BOOSTED 13:26 IST 19 Nov (ad 120255678724950547). No follow card (posted before D9). Pause after 4 days (23 Nov) |
 | Noida twin towers (18131037979847506) | 63 h | 1,331 | 43.7% | 37.4% | 0 (4 saves) | YT top 728 | ACTIVE in TrueYards Follow; pause 22 Nov or when beaten |
 | Why Delhi has no skyscrapers (18341456980274380) | 69 h | 1,562 | 44.0% | 34.0% | 1.3 | YT 53 | Next in line if an ad slot opens (eligible to 26 Nov) |
 | Japan houses trial (18086326760340689) | 45 h | 400 | 46.9% | 31.8% | 0 | YT 89 | Behind Delhi |
