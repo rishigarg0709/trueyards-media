@@ -26,3 +26,5 @@
 {"at": "2026-11-19T13:27Z", "n": 1, "model": "gemini-3.1-flash-image", "mode": "single"}
 {"at": "2026-11-19T13:27Z", "n": 1, "model": "gemini-3.1-flash-image", "mode": "single"}
 {"at": "2026-11-19T13:27Z", "n": 1, "model": "gemini-3.1-flash-image", "mode": "single"}
+{"at": "2026-11-19T17:19Z", "n": 2, "model": "gemini-3-pro-image", "mode": "batch"}
+{"at": "2026-11-19T17:19Z", "n": 8, "model": "gemini-3.1-flash-image", "mode": "batch"}
