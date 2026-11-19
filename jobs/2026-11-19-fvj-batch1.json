@@ -1,0 +1,116 @@
+[
+ {
+  "kind": "voice",
+  "name": "fvj-a-vo-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "जींद में अपनी दुकान? [short pause] सामने चौबीस metre चौड़ी सड़क, और दुकान के आगे parking। बीच में खुला green plaza। दस S C O, ground plus तीन, और उनतीस booths। Total चालीस units। और ये बसी हुई Flower Valley township के अंदर है, P G I जींद के पीछे। Size और site visit के लिए WhatsApp पे tap कीजिए। H-RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj-a-vo-2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "जींद में अपनी दुकान? [short pause] सामने चौबीस metre चौड़ी सड़क, और दुकान के आगे parking। बीच में खुला green plaza। दस S C O, ground plus तीन, और उनतीस booths। Total चालीस units। और ये बसी हुई Flower Valley township के अंदर है, P G I जींद के पीछे। Size और site visit के लिए WhatsApp पे tap कीजिए। H-RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj-a-vo-3",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "जींद में अपनी दुकान? [short pause] सामने चौबीस metre चौड़ी सड़क, और दुकान के आगे parking। बीच में खुला green plaza। दस S C O, ground plus तीन, और उनतीस booths। Total चालीस units। और ये बसी हुई Flower Valley township के अंदर है, P G I जींद के पीछे। Size और site visit के लिए WhatsApp पे tap कीजिए। H-RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj-b-tag-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Flower Valley, Sector छब्बीस, जींद। Site visit के लिए WhatsApp पे tap कीजिए। H-RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj-b-tag-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Flower Valley, Sector छब्बीस, जींद। Site visit के लिए WhatsApp पे tap कीजिए। H-RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "fvj-beat",
+  "prompt": "Warm, optimistic modern Indian commercial instrumental at exactly 100 BPM in 4/4: plucked strings, soft claps and light percussion, a gentle uplifting melody, starts immediately with the full beat, strong clear downbeats, clean ending, no vocals",
+  "ms": 26000
+ },
+ {
+  "kind": "image",
+  "name": "fvj-a-1",
+  "inputs": [
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "prompt": "Use the attached architectural render as the exact reference for the building design, colours, materials and landscaping; do not invent a different project. Low camera at road level, a few metres back, looking straight at the row of two-storey glass-fronted shops with rolling shutters half open, the landscaped green with palms and flower beds in front of them, the wide clean road in the foreground. Replace the stone sign in the middle with a low bed of flowers. Photorealistic, bright clear morning daylight, blue sky, vertical 9:16. Every shop signboard is a plain blank coloured panel with no words. No text, no letters, no logos, no watermarks and no people anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fvj-a-2",
+  "inputs": [
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/plan-plaza.jpg"
+  ],
+  "prompt": "Use the attached architectural render as the exact reference for the building design, colours, materials and landscaping; do not invent a different project. The second image is the plan of the same place. Side-on view along the wide 24 metre road that runs in front of the shops: marked parking bays with a few parked cars directly in front of the shop row, a wide footpath, the road stretching into the distance, young trees along the edge. Photorealistic, bright clear morning daylight, blue sky, vertical 9:16. Every shop signboard is a plain blank coloured panel with no words. No text, no letters, no logos, no watermarks and no people anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fvj-a-3",
+  "inputs": [
+   "ads/creatives/flower-valley-jind-sco/batch1/src/plan-plaza.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "prompt": "The first image is the plan and the second is a render of the same commercial plaza; follow both exactly and do not invent a different project. Aerial three-quarter view from above of the central oval green plaza: lawn, flower beds, paved paths and palms in the middle, parking bays on both sides, rows of two-storey shops on three sides and the wide road along the front. Photorealistic, bright clear morning daylight, blue sky, vertical 9:16. Every shop signboard is a plain blank coloured panel with no words. No text, no letters, no logos, no watermarks and no people anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fvj-a-4",
+  "inputs": [
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-homes-greens.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-aerial.jpg"
+  ],
+  "prompt": "Use the attached architectural render as the exact reference for the building design, colours, materials and landscaping; do not invent a different project. Both images show the same township. Eye-level view down the long central green of the township, with the low-rise homes on both sides, trees, benches and flower beds, a calm lived-in residential feel. Photorealistic, bright clear morning daylight, blue sky, vertical 9:16. Every shop signboard is a plain blank coloured panel with no words. No text, no letters, no logos, no watermarks and no people anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fvj-a-5",
+  "inputs": [
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-park.jpg"
+  ],
+  "prompt": "Extend this exact render to a vertical 9:16 frame without changing anything that is already in it: add more sky above and more lawn and curved path below, in the same style, light and colours. Photorealistic, vertical 9:16. No text, no letters, no logos, no watermarks and no people anywhere in the image."
+ }
+]
