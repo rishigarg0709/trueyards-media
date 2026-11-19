@@ -2,7 +2,7 @@
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8.
 
-Batch status: see the line added after submission below (planner run 19 Nov night).
+Batch status: prep-2026-11-20 submitted 2026-11-19 16:54 UTC (22:24 IST): batches/pending/prep-2026-11-20-pro.json (2 Pro hook images, midday-1 and evening-1) and prep-2026-11-20.json (8 Flash images). Real photos are in library/stock/ (d1120*, fetched 22:27 IST); the landscape ones (hk-green-city, hk-saikung, kl-aerial-houses, kl-aerial-town) are 2400 x 1350 to 1800, so run scripts/upscale.py on them and use them as slow pans. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 
 - Topic: about 2.2 lakh people in Hong Kong live in subdivided flats whose typical size is smaller than a parking space, yet only about 7% of Hong Kong's land has homes on it, and Delhi is more crowded per sq km. A new law (in force since 1 March 2026) now sets a minimum of 8 sq m.
 - Queue item: "global | Hong Kong's coffin homes | People here live in a space the size of a bed. | visual shock". Marked [~] 2026-11-20 midday. Reframed from "coffin homes" (no reliable current figures found tonight) to subdivided units, which have government numbers. Skipped on the way: Lavasa (failed private city, close to builder-fails and to tonight's evening theme of empty homes), Mumbai seven islands (history, same story type as Jaipur 19 Nov), Dharavi (redevelopment, close to the 19 Nov rent control reel), Steinway Tower (engineering marvel, Burj on 17 Nov), Kowloon Walled City (density theme, would sit next to this one), Pudong and Chandigarh (history), Shani Shingnapur and spite houses (weird, steel rods 18 Nov).

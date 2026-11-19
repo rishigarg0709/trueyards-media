@@ -2,7 +2,7 @@
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8.
 
-Batch status: see the line added after submission below (planner run 19 Nov night).
+Batch status: prep-2026-11-20 submitted 2026-11-19 16:54 UTC (22:24 IST): batches/pending/prep-2026-11-20-pro.json (2 Pro hook images, midday-1 and evening-1) and prep-2026-11-20.json (8 Flash images). Real photos are in library/stock/ (d1120*, fetched 22:27 IST); the landscape ones (hk-green-city, hk-saikung, kl-aerial-houses, kl-aerial-town) are 2400 x 1350 to 1800, so run scripts/upscale.py on them and use them as slow pans. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 
 - Topic: the 2011 Census counted about 11.9 lakh vacant houses in Kerala, about one in ten, many of them big; much of Kerala's home building runs on money earned abroad by about 22 lakh emigrants, and the families who would live in them have often moved away too. The state proposed a tax on locked houses in 2023 and dropped it within a month.
 - Queue item: "weird | Why Kerala has lakhs of locked, empty houses (Gulf migration money, owners abroad...)". Marked [~] 2026-11-20 evening. Told as a mystery (clues first, cause second), not as a "weird habit" story, so it does not repeat the steel rods story type.
