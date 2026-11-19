@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "*/15 * * * *"   # GitHub often skips or delays this, so the job also runs after every agent workflow
   workflow_run:
-    workflows: [meta-ops, social-ops, ads-ops, cloud-media]
+    workflows: [meta-ops, social-ops, ads-ops, cloud-media, wa-ops]
     types: [completed]
   workflow_dispatch:
 permissions:
