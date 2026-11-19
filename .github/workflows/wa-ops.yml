@@ -25,6 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Only the two small folders this job needs: a full checkout of this 2 GB repo took about 3 minutes a run.
+          sparse-checkout: |
+            scripts
+            wa
       - name: Use the latest main (skip requests another run already answered)
         run: git pull --rebase -q origin main || true
       - name: Run
