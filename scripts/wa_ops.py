@@ -19,6 +19,7 @@ import datetime, glob, json, os, re, sys, urllib.error, urllib.request
 BASE = os.environ.get("PERF_URL", "").split("/perf/")[0].rstrip("/")
 KEY = os.environ.get("PERF_KEY", "")
 PHONE = re.compile(r"(?<!\d)(?:\+?91[\s-]?)?[6-9]\d{9}(?!\d)")
+META_ID = re.compile(r"(?<!\d)\d{15,17}(?!\d)")  # Meta account, app and template ids: not secret, but no reason to publish them
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
 
@@ -28,7 +29,7 @@ def now():
 
 def mask(v):
     if isinstance(v, str):
-        return PHONE.sub("[number]", v)
+        return META_ID.sub("[id]", PHONE.sub("[number]", v))
     if isinstance(v, bool) or v is None:
         return v
     if isinstance(v, (int, float)):

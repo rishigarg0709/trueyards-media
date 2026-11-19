@@ -8,7 +8,7 @@
    "changes": false,
    "result": {
     "waba": {
-     "id": "1088176977434603",
+     "id": "[id]",
      "name": "Forteasia",
      "account_review_status": "APPROVED",
      "business_verification_status": "verified",
@@ -17,17 +17,17 @@
       "entities": [
        {
         "entity_type": "WABA",
-        "id": "1088176977434603",
+        "id": "[id]",
         "can_send_message": "AVAILABLE"
        },
        {
         "entity_type": "BUSINESS",
-        "id": "814542504426974",
+        "id": "[id]",
         "can_send_message": "AVAILABLE"
        },
        {
         "entity_type": "APP",
-        "id": "1414284130248644",
+        "id": "[id]",
         "can_send_message": "AVAILABLE"
        }
       ]
@@ -35,7 +35,7 @@
     },
     "usage": {
      "app": null,
-     "business": "{\"1088176977434603\":[{\"type\":\"whatsapp_business_management\",\"call_count\":1,\"total_cputime\":1,\"total_time\":1,\"estimated_time_to_regain_access\":0}]}",
+     "business": "{\"[id]\":[{\"type\":\"whatsapp_business_management\",\"call_count\":1,\"total_cputime\":1,\"total_time\":1,\"estimated_time_to_regain_access\":0}]}",
      "waba": null
     }
    },
