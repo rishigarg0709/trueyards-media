@@ -108,6 +108,7 @@ def main():
         print("RESULT", json.dumps(r, ensure_ascii=False, indent=1))
         sys.exit(0 if all(x.get("ok") for x in r["results"]) else 1)
     done = 0
+    os.makedirs("wa/results", exist_ok=True)
     for path in sorted(glob.glob("wa/requests/*.json")):
         res = os.path.join("wa/results", os.path.basename(path))
         if os.path.exists(res):
