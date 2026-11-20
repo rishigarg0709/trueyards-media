@@ -1,7 +1,0 @@
-{
- "op": "daily",
- "ran_at": "2026-11-20T05:46:46.465146Z",
- "result": {
-  "error": "KeyError: 'min_days_before_shift'"
- }
-}

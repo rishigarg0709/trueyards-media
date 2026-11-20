@@ -462,11 +462,12 @@ def op_daily(req):
         rep["flags"].append(f"Creative tester skipped: {type(e).__name__}: {e}")
     sets = adsets_of(camp["id"])  # budgets may have changed above
 
-    # 3. budget shift (once a day, within the same total)
+    # 3. budget shift (once a day, within the same total). A product whose config has no max_shift_pct_per_day
+    # (Jind: Rishi fixed the J and R budgets, Directive D12) is never shifted.
     launched = st.get("launched_on")
     days_live = (today() - datetime.date.fromisoformat(launched)).days if launched else 0
     act = [s for s in sets if s["status"] == "ACTIVE"]
-    if live and len(act) >= 2 and days_live >= CFG["min_days_before_shift"] and st.get("last_shift") != str(today()):
+    if live and len(act) >= 2 and days_live >= CFG.get("min_days_before_shift", 3) and st.get("last_shift") != str(today()):
         def score(s):
             d = s3.get(s["id"], {})
             res = sum(((leads or {}).get(a["id"], {}).get("qualified") or 0) for a in ads if a["adset_id"] == s["id"]) if leads is not None else d.get("conversations", 0)
@@ -476,7 +477,7 @@ def op_daily(req):
         bs, ws = score(best), score(worst)
         if best["id"] != worst["id"] and bs[0] < ws[0] and ws[1] >= T_CPC:
             wb, bb = inr(worst["daily_budget"]), inr(best["daily_budget"])
-            amt = int(min(wb * CFG["max_shift_pct_per_day"] / 100, wb - CFG["min_adset_daily_inr"]))
+            amt = int(min(wb * CFG.get("max_shift_pct_per_day", 0) / 100, wb - CFG["min_adset_daily_inr"]))
             if amt >= 10:
                 rep["actions"].append(f"Moved INR {amt}/day from {worst['name']} (INR {ws[0] if ws[0] != float('inf') else 'n/a'} per result) to {best['name']} (INR {bs[0]:.0f} per result). Daily total unchanged.")
                 if not dry:
