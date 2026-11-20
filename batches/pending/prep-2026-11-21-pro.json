@@ -1,0 +1,23 @@
+{
+ "batch": "batches/x5q6febsf1yqd0o8fd8uh1az7onxjye5077b",
+ "name": "prep-2026-11-21-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-20T16:58Z",
+ "images": [
+  {
+   "name": "2026-11-21-evening-1",
+   "prompt": "Bright top-down view straight down into the open courtyard of a traditional two-storey Rajasthani sandstone haveli at midday: a small deep square courtyard about 3 m wide, warm honey sandstone walls with carved balconies and jharokha windows ringing it, a thin projecting stone sunshade along the upper terrace edge, one crisp square of sunlight on the stone courtyard floor and the rest in clean shade, a brass water pot and a tulsi planter on the floor, real architectural photograph from a drone, sharp detail, believable scale. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  },
+  {
+   "name": "2026-11-21-carousel-1",
+   "prompt": "Photorealistic still life: a slender miniature white and glass apartment tower model, about 30 cm tall, standing on top of a tall neat stack of plain unmarked gold coins on a cream surface, the tower and stack in the lower two thirds and slightly right of centre, generous empty cream space in the top third for headline text, crisp miniature detail. Vertical 4:5 composition. The backdrop is a seamless flat warm cream colour #F3EEE4, even to every edge so it blends into a slide of the same colour, soft even daylight from the upper left, gentle soft shadows, no people. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K",
+   "hero": true
+  }
+ ],
+ "fallback_after_utc": null
+}
