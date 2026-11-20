@@ -1,4 +1,4 @@
-2026-11-20 06:59 UTC
-el-usage [usage]: usage ok
-sc-loans-vo-1 [voice]: voice ok
-sc-loans-vo-2 [voice]: voice ok
+2026-11-20 09:47 UTC
+fvj3-a-vo-jessa-jeend-roman [voice]: voice ok
+fvj3-a-vo-jessa-jeend-devanagari [voice]: voice ok
+fvj3-a-vo-jessa-jeend-mixed [voice]: voice ok
