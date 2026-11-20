@@ -1,0 +1,38 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage-2026-11-20-evening"
+ },
+ {
+  "kind": "voice",
+  "name": "kerala-vo-1",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "Lakhs of big houses in Kerala. [short pause] Nobody lives in them.\nShutters down. Gates chained. Courtyards still swept... by someone who doesn't live there.\nThe 2011 Census counted about 11.9 lakh empty houses in Kerala. About one in every ten. Over three lakh had four rooms or more.\nSo where did everyone go? [pause] Abroad.\nAbout 22 lakh Keralites live overseas, most in the Gulf. In 2023 they sent home over 2 lakh crore rupees.\nAnd much of Kerala's home building runs on that money... a big house back home, to stay rooted.\nBut the children move away too. In Pathanamthitta alone, officials count over 61,000 closed homes.\nIn 2023 the state even proposed a tax on locked houses... and dropped it within a month.\nSo who are these houses really for? [pause] Lakhs of big houses...",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "kerala-vo-2",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "Lakhs of big houses in Kerala. [short pause] Nobody lives in them.\nShutters down. Gates chained. Courtyards still swept... by someone who doesn't live there.\nThe 2011 Census counted about 11.9 lakh empty houses in Kerala. About one in every ten. Over three lakh had four rooms or more.\nSo where did everyone go? [pause] Abroad.\nAbout 22 lakh Keralites live overseas, most in the Gulf. In 2023 they sent home over 2 lakh crore rupees.\nAnd much of Kerala's home building runs on that money... a big house back home, to stay rooted.\nBut the children move away too. In Pathanamthitta alone, officials count over 61,000 closed homes.\nIn 2023 the state even proposed a tax on locked houses... and dropped it within a month.\nSo who are these houses really for? [pause] Lakhs of big houses...",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "kerala-beat",
+  "prompt": "Upbeat modern pulse instrumental at exactly 104 BPM in 4/4, bright clean electronic drums, warm sub bass, crisp claps on 2 and 4, a soft curious mystery motif on marimba and plucked strings with a light South Indian flavour, catchy and positive, starts immediately with the full beat, strong clear downbeats, no vocals",
+  "ms": 45000
+ }
+]
