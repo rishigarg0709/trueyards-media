@@ -29,3 +29,10 @@ The script is exactly the one in the brief, with no unit counts. The RERA line i
 
 ## Still needed from Rishi's side (in the brief)
 The hi-res renders (JIND-COM-HIRES, JIND-COM-STREET, JIND-AIRIAL-HIRES, JIND-GATE-HIRES, JIND-PARK-UP-HIRES) and the Jind drone video are over the connector's 10 MB limit, so they must be saved into the Forteasia folder on his Mac. Not done by this order.
+
+## New voice takes for the Jeend pronunciation (20 Nov 15:20, ordered by the SMX chat at Rishi's word)
+Same Reel A script and settings as fvj3-a-vo-jessa (Jessa, eleven_v3), with the city spelled three ways. Check each by ear: the J must be the J of Jaipur, never Z.
+- library/media/fvj3-a-vo-jessa-jeend-roman.mp3 (16.6 s): whole script in Roman Hinglish, "Jeend"
+- library/media/fvj3-a-vo-jessa-jeend-devanagari.mp3 (16.4 s): Hindi script, जीन्द
+- library/media/fvj3-a-vo-jessa-jeend-mixed.mp3 (17.8 s): Hindi script with "Jeend" in Roman letters inside it
+Each has a matching .align.json (word timings). Copies are on Rishi's Mac in creative/jind-sco-v3/voice-jeend.
