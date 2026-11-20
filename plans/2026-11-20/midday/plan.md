@@ -1,93 +1,94 @@
-# 2026-11-20 midday reel (12:23 IST): Hong Kong homes smaller than a parking space
+NEWS
 
-- Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8.
+# 2026-11-20 midday reel (12:23 IST): Paying EMIs for a flat that never came? The Supreme Court stepped in twice
 
-Batch status: prep-2026-11-20 submitted 2026-11-19 16:54 UTC (22:24 IST): batches/pending/prep-2026-11-20-pro.json (2 Pro hook images, midday-1 and evening-1) and prep-2026-11-20.json (8 Flash images). Real photos are in library/stock/ (d1120*, fetched 22:27 IST); the landscape ones (hk-green-city, hk-saikung, kl-aerial-houses, kl-aerial-town) are 2400 x 1350 to 1800, so run scripts/upscale.py on them and use them as slow pans. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+- Written by the news desk, 2026-11-20 08:43 IST run. Score 12 of 15 (money 3, fresh 2, India/NCR 3, explain 2, verify 2). Displaced the nightly Hong Kong plan: plans/2026-11-20/midday/displaced-plan.md (its images 2026-11-20-midday-1..5 stay in library/media; topic back at the top of queue/reel-topics.md).
+- Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Quick takes already queued on Threads and X (social/requests/2026-11-20-news-sc-stalled-loans-*.json), so the reel cross-posts to Threads and X go out as normal reel posts (video), not as a repeat of the text take.
+- Topic: on Thu 19 Nov 2026 the same Supreme Court bench (CJI Surya Kant, Justices Joymalya Bagchi and V Mohana) passed two orders protecting homebuyers of stalled projects from loan recovery. Sonipat (Krishna Housing Scheme, Sector 14, Haryana, NCR): no coercive recovery by SBI until the Saket commercial court checks whether the bank released the loan to the builder as the tripartite agreement said and whether the buyers were actually in default. Bengaluru: no coercive measures against about 4,500 buyers of a stalled project in insolvency till they get possession; they were told to go to the Karnataka High Court or NCLT Bengaluru.
+- Story type: news explained (what changed + what it costs you). New theme: loan rights when a project stalls; differs from the last 6 reels (Japan depreciation, Burj foundations, roof rods, Jakarta, Jaipur, Mumbai rent) and from tonight's evening reel (Kerala empty houses).
+- Hook archetype: "what changed + what it costs you" (NEWS_DESK). Line: "Paying EMIs... for a flat that never came?"
+- Look: A Newsroom Red (near-black, white, one red #E63B2E; Inter 900 caps, mono kickers). Not B or T (the previous 2 reels); A last used 16 Nov. D1 overrides the look's dusk grade for the hook: frame 0 to 2 s in bright clear daylight, YAVG at least 90. Keep the red for label bars only.
+- Voice: Jessa (rotation after George and Tara; evening is George).
+- Music: tense percussion, about 96 BPM, steady beat, light.
+- Hero shot: photoreal (AI) stalled half-built apartment tower in bright sun, idle crane (2026-11-20-midday-6, Pro).
+- Send test: anyone paying EMI on an under-construction flat; anyone in NCR who bought under a subvention or pre-EMI plan.
+- Tell-a-friend fact: in a three-way (tripartite) home loan, the bank is supposed to release your loan to the builder in stages as the building rises, and the Supreme Court said a court must first check whether the bank did that before recovery from buyers (lands about 50 to 58%).
+- Names: do not name either builder or the Bengaluru project on screen or in VO. SBI may be named once in fine print and caption as the lender in the Sonipat case, stated as a fact of the order, with no opinion. Do not repeat the court's remark about how SBI disbursed (keep it out; it is an observation, not a finding).
+- No advice: no "stop paying", no "you can", no legal steps. Close with the pick-a-side question.
 
-- Topic: about 2.2 lakh people in Hong Kong live in subdivided flats whose typical size is smaller than a parking space, yet only about 7% of Hong Kong's land has homes on it, and Delhi is more crowded per sq km. A new law (in force since 1 March 2026) now sets a minimum of 8 sq m.
-- Queue item: "global | Hong Kong's coffin homes | People here live in a space the size of a bed. | visual shock". Marked [~] 2026-11-20 midday. Reframed from "coffin homes" (no reliable current figures found tonight) to subdivided units, which have government numbers. Skipped on the way: Lavasa (failed private city, close to builder-fails and to tonight's evening theme of empty homes), Mumbai seven islands (history, same story type as Jaipur 19 Nov), Dharavi (redevelopment, close to the 19 Nov rent control reel), Steinway Tower (engineering marvel, Burj on 17 Nov), Kowloon Walled City (density theme, would sit next to this one), Pudong and Chandigarh (history), Shani Shingnapur and spite houses (weird, steel rods 18 Nov).
-- Story type: global comparison (Hong Kong vs a parking space vs Delhi's density). Also the geography test the learning run asked for: one global topic as a midday trial with a bright photo opening.
-- Hook archetype: 16 Versus ("Parking space: 135 sq ft. Home: 110 sq ft."). Untested arm in the hook tournament.
-- Look: F Tokyo Neutral (off-black, white, one soft coral #FF6B57; Inter 600, generous spacing; quiet minimal photography, soft even light). Not B or T (the previous 2 reels); F last used 17 Nov. Keep it bright: soft even daylight on every shot, no dark grade (D1).
-- Voice: Jessa (rotation after George and Tara; suits global stories).
-- Music: lo-fi house beat, about 100 BPM, light and steady.
-- Hero shot: impossible-but-real: a whole tiny home fitted inside the yellow lines of one parking bay, a car in the next bay (2026-11-20-midday-1).
-- Send test: the friend who complains that Mumbai or Bengaluru flats are tiny; anyone who has been to Hong Kong.
-- Tell-a-friend fact: Hong Kong is not short of land: only about 7% of it has homes and about 40% is protected country park, and Delhi packs more people into each sq km than Hong Kong does. Lands at about 55 to 60% of the reel.
-- Theme differs from the last 6 reels: the question is "how small can a home get, and why", not house depreciation (Japan), foundations (Burj), construction habits (rods), a sinking city (Jakarta), a city's colour (Jaipur) or a rent law (Mumbai). Different from tonight's evening reel (empty houses in Kerala, mystery, look T).
-
-## Verified facts
-1. About 110,000 subdivided units (SDUs) in residential buildings, with about 220,000 residents (HK Government press release, 3 Oct 2025).
-2. Median SDU floor area about 10 sq m (about 110 sq ft); about a quarter are under 8 sq m (AP, 14 Feb 2025, "Why some Hong Kongers live in homes smaller than a parking space, by the numbers").
-3. A standard Hong Kong parking space is 12.5 sq m (about 135 sq ft) (AP, same).
-4. Median SDU rent HK$5,000 a month (AP, same). Shown in rupees only: about ₹55,000 a month (approx., Feb 2025 rate of about ₹11.1 per HK$). Never say HK$ in VO, cards or caption.
-5. Residential land is 79 of 1,117 sq km, about 7% (Planning Department, Land Utilization in Hong Kong 2021); woodland, shrubland, grassland and wetland about 65%.
-6. Country parks and special areas cover 44,312 hectares, about 40% of the land area (AFCD Annual Report 2018).
-7. Hong Kong population about 75 lakh (mid-2024, AP), so about 6,700 people per sq km (our calculation, approx.). Delhi (NCT): 1,67,87,941 people on 1,483 sq km, 11,320 per sq km (Census 2011). Say "Delhi packs more people into each square kilometre"; fine print: "Delhi Census 2011; Hong Kong 2024, approx."
-8. Basic Housing Units Ordinance in force 1 March 2026; registration of existing SDUs until 28 Feb 2027; letting an unregistered or unrecognised unit becomes an offence from 1 March 2027; 36-month grace period to Feb 2030 (HK Government press release, 3 Oct 2025). Minimum standards include 8 sq m floor area, at least one window, ceiling height at least 2.3 m (The Standard, 17 Oct 2024).
-Dropped: cage and coffin home counts (only older advocacy figures), any Mumbai rent comparison (no reliable current source tonight).
+## Verified facts (each from at least 2 reputable sources)
+1. Date and bench: Thursday 19 Nov 2026, CJI Surya Kant, Justice Joymalya Bagchi, Justice V Mohana (Business Standard, Bar and Bench; PTI via Verdictum, ETV Bharat).
+2. Sonipat: homebuyers of the Krishna Housing Scheme, Sector 14, Sonipat had a tripartite arrangement with the builder and SBI under which the loan was to be released in stages tied to construction progress; the developer is in insolvency before the NCLT; buyers say they got neither possession nor the refunds promised in that process (Business Standard 19 Nov; Bar and Bench 19 Nov).
+3. Sonipat order: no coercive recovery against the buyers until the commercial court at Saket, Delhi, determines whether they were actually in default; that court must first examine whether the bank disbursed the loan to the builder strictly in terms of the tripartite agreement (Business Standard; Bar and Bench).
+4. The CJI questioned buyers coming straight to the Supreme Court under Article 32: "Every dispute against a builder, every failed project, will end up here." and told them to raise objections in the pending commercial suit (Business Standard; Bar and Bench).
+5. Bengaluru: about 4,500 homebuyers who had paid about 95% of the price (petitioners' figures); developer in insolvency before the NCLT; tripartite and pre-EMI arrangements with banks; the court said "there shall be no coercive measures against them till the possession of their flats is given" and that buyers should approach the Karnataka High Court or NCLT Bengaluru; petition disposed of (PTI via ETV Bharat and Verdictum, 19 Nov; Deccan Herald headline 19 Nov: "Relief for 4,500 Bengaluru homebuyers: Supreme Court bars coercive action till flat possession").
+Not verified, do not use: any EMI waiver or pause (not ordered), any CIBIL or credit score relief, loan amounts, years of delay as a court finding, the name of any bank in the Bengaluru case.
 
 ## Sources
-- HK Government press release, Basic Housing Units Ordinance to come into effect on March 1, 2026 (3 Oct 2025): https://www.info.gov.hk/gia/general/202510/03/P2025100200765.htm
-- AP via Yahoo News (14 Feb 2025), Why some Hong Kongers live in homes smaller than a parking space, by the numbers: https://www.yahoo.com/news/why-hong-kongers-live-homes-013921565.html (date from https://www.theweek.in/wire-updates/international/2025/02/14/fes9-hong-kong-housing.html)
-- The Standard (17 Oct 2024), More standards for Basic Housing Units revealed: https://www.thestandard.com.hk/news/article/221655/More-standards-for-Basic-Housing-Units-revealed
-- Planning Department, Land Utilization in Hong Kong 2021: https://www.pland.gov.hk/pland_en/resources/info_serv/statistic/landu.html
-- AFCD Annual Report 2018, Country and Marine Parks: https://www.afcd.gov.hk/misc/download/annualreport2018/eng/country.html
-- Census 2011, NCT of Delhi: https://www.censusindia2011.com/nct-of-delhi-population.html
+- Business Standard, 19 Nov 2026, "SC questions use of Article 32 by homebuyers in stalled housing projects": https://www.business-standard.com/india-news/sc-questions-use-of-article-32-by-homebuyers-in-stalled-housing-projects-126111901213_1.html
+- Bar and Bench, 19 Nov 2026, "Supreme Court questions homebuyers approaching it directly over builder disputes": https://www.barandbench.com/news/litigation/supreme-court-questions-homebuyers-approaching-it-directly-over-builder-disputes
+- PTI via ETV Bharat, 19 Nov 2026: https://www.etvbharat.com/en/bharat/no-coercive-action-against-nearly-4500-homebuyers-of-stalled-bengaluru-project-supreme-cout-enn26111905107
+- PTI via Verdictum, 19 Nov 2026: https://www.verdictum.in/supreme-court/no-coercive-action-4500-homebuyers-stalled-bengaluru-project-1626050
+- Deccan Herald, 19 Nov 2026: https://www.deccanherald.com/india/karnataka/bengaluru/relief-for-4500-bengaluru-homebuyers-supreme-court-bars-coercive-action-till-flat-possession-4224227
 
-## Voiceover script (Jessa, about 118 words, about 49 s at 2.4 wps)
-This is a parking space in Hong Kong. [short pause] And this... is a home. The home is smaller.
-About two lakh twenty thousand people here live in subdivided flats. One old apartment... cut into tiny rooms.
-The typical room? About 110 square feet. A parking space is 135.
-And the rent... about fifty-five thousand rupees a month.
-So Hong Kong must be out of land, right? [pause] Not really.
-Only about 7% of its land has homes on it. Around 40% is protected country park.
-And Delhi packs more people into every square kilometre than Hong Kong does.
-Now a new law says a rented room must be at least 86 square feet... with a window.
-Would you live in a home smaller than a parking space? [pause] This is a parking space...
-(Loop: "This is a parking space" lands back on frame 0.)
+## Voiceover script (Jessa, about 135 words, about 50 s at 2.6 wps)
+Paying EMIs... for a flat that never came? [short pause] On Thursday, the Supreme Court stepped in. Twice.
+First, Sonipat. Buyers signed a three-way loan deal: buyer, builder, bank.
+The project stalled. The builder went into insolvency. And the bank came after the buyers.
+The court said: no coercive recovery... until a court checks two things.
+Did the buyers really default?
+And did the bank pay the builder the way the deal said?
+Because in a three-way loan, the money is meant to go in stages... as the building rises. Not all at once.
+Same day, Bengaluru. About 4,500 buyers who had paid about 95% of the price.
+The order: no coercive measures... till they get their flats.
+But the court also warned: not every failed project belongs in the Supreme Court. Go to the High Court or the tribunal first.
+So when a project stalls... who should carry the risk? The buyer, or the bank?
 
-On-screen cards: "Parking: 135 sq ft / Home: 110 sq ft" (frame 0, coral label bars) / "2.2 lakh people" / "1 flat, cut into rooms" / "~110 sq ft" / "Rent: ~₹55,000 a month" (fine print: approx., Feb 2025 rate) / "Out of land?" / "Homes: 7% of the land" / "Country parks: ~40%" / "Delhi: 11,320 per sq km. Hong Kong: ~6,700" / "New minimum: 86 sq ft + a window" / "Smaller than a parking space?" Follow card last 1.5 s (D9): "Follow for one real estate story a day", logo, @trueyards.in.
+On-screen cards: "EMI on. Flat: none." (frame 0, red label bar on "none") / kicker "SUPREME COURT · 19 NOV 2026" / "Sonipat, Haryana" / "Buyer + Builder + Bank" (three blocks snap together) / "Project stalled. Builder in insolvency." / "No coercive recovery... until:" / "1. Did buyers default?" / "2. Did the bank pay as agreed?" / stage bar: loan released floor by floor (5 ticks rise with the building) / "Bengaluru: ~4,500 buyers" / "~95% paid" / "No coercive measures till possession" / "Go to the High Court or NCLT first" / "Who carries the risk? Buyer or bank?" Follow card last 1.75 s (D9): "Follow for real estate news, explained", logo, @trueyards.in.
+Fine print: "Supreme Court orders, 19 Nov 2026, as reported by Business Standard, Bar and Bench, PTI. Lender in the Sonipat case: SBI. Buyer count and payment share are the petitioners' figures. Some scenes are AI visualisation. Education only, not legal or financial advice."
 
 ## Caption draft
-Hong Kong homes smaller than a parking space
+Paying EMIs for a flat that never came? The Supreme Court stepped in twice on 19 Nov 2026.
 
-About 2.2 lakh people in Hong Kong live in subdivided flats: one old apartment cut into tiny rooms. The typical room is about 110 sq ft, smaller than a 135 sq ft parking space, and rents for about ₹55,000 a month. Yet only about 7% of Hong Kong's land has homes on it and about 40% is protected country park. Delhi is more crowded per sq km. Since March 2026 a new law sets a minimum of 8 sq m (about 86 sq ft) and a window for rented rooms.
+Sonipat: buyers had a three-way loan deal with the builder and the bank. The project stalled and the builder went into insolvency. The court said there can be no coercive recovery from the buyers until the commercial court checks whether they really defaulted and whether the bank released the loan to the builder as the agreement said.
 
-Send this to the friend who says their flat is tiny.
-Follow TrueYards for one real estate story a day: cities, rules and money, explained.
+Bengaluru: about 4,500 buyers of a stalled project in insolvency, who had paid about 95% of the price, get no coercive measures till they receive their flats. The court said such buyers should go to the High Court or NCLT first.
 
-Sources: HK Government (2025); AP (Feb 2025); Planning Department (2021); AFCD (2018); Census 2011. Rupee figures converted at the Feb 2025 rate, approx. Photos: Meriç Dağlı, Roméo A., Raymond Yeung, Clars Puk / Unsplash. Some scenes are AI visualisation. Educational content, not advice.
-#HongKong #TinyHomes #HousingCrisis #RealEstate #TrueYards
+Who should carry the risk when a project stalls: the buyer or the bank?
 
-YouTube title (plain event plus stakes): "Why 2 lakh people in Hong Kong live in homes smaller than a parking space"
+Send this to anyone paying EMI on an under-construction flat.
+Follow TrueYards for real estate news, explained the same day.
 
-## Shot list (about 49 s)
+Sources: Business Standard, Bar and Bench, PTI, Deccan Herald (19 Nov 2026). Some scenes are AI visualisation. Education only, not legal or financial advice.
+#SupremeCourt #HomeBuyers #HomeLoan #RealEstateNews #TrueYards
+
+YouTube title: "Supreme Court shields homebuyers of stalled projects from loan recovery (19 Nov 2026)"
+
+## Shot list (about 50 s)
 | # | Time | Shot | Source | Move |
 |---|---|---|---|---|
-| 1 | 0 to 2.5 | HOOK: tiny home inside a parking bay, white car next to it; "Parking: 135 sq ft / Home: 110 sq ft" label bars snap onto each bay on "home" | new 2026-11-20-midday-1 (Pro) | crop A wide, push-in 4% |
-| 2 | 2.5 to 5 | Same, the bed and shelves inside the yellow lines | 2026-11-20-midday-1 | crop B, slow pan right |
-| 3 | 5 to 8 | Real dense colourful towers, "2.2 lakh people" counter | library/stock/d1120-hk-dense-colour.jpg | tilt up |
-| 4 | 8 to 11 | Model flat split into six rooms, partition lines draw on | new 2026-11-20-midday-3 | crop A, push-in |
-| 5 | 11 to 13.5 | One room of the model, "~110 sq ft" | 2026-11-20-midday-3 | crop B, push-in |
-| 6 | 13.5 to 16 | Real red and white blocks | library/stock/d1120-hk-red-white.jpg | pan up |
-| 7 | 16 to 19 | The real-looking room, bed to stove, "Rent: ~₹55,000 a month" slams | new 2026-11-20-midday-2 | crop A wide, pull-out |
-| 8 | 19 to 21 | Stove and sink beside the bed | 2026-11-20-midday-2 | crop B, push-in |
-| 9 | 21 to 23.5 | Real balconies building, "Out of land?" | library/stock/d1120-hk-balconies.jpg | slow push |
-| 10 | 23.5 to 27 | Aerial: green ridges, thin strip of towers; coral outline traces the tower strip, "Homes: 7% of the land" | new 2026-11-20-midday-4 | crop A full, push-in |
-| 11 | 27 to 29.5 | Real green hills meeting the city, "Country parks: ~40%" | library/stock/d1120-hk-green-city.jpg | pan left |
-| 12 | 29.5 to 33 | Real Sai Kung coast and hills; split card "Delhi 11,320 / Hong Kong ~6,700 per sq km" bars grow | library/stock/d1120-hk-saikung.jpg | slow push |
-| 13 | 33 to 35.5 | Aerial tower strip close | 2026-11-20-midday-4 | crop C, pan |
-| 14 | 35.5 to 39.5 | The new legal room, "New minimum: 86 sq ft + a window" | new 2026-11-20-midday-5 | crop A wide, push-in on the window (crop B) |
-| 15 | 39.5 to 42 | Toilet door and fan detail, "Rules from March 2026" | 2026-11-20-midday-5 | crop C |
-| 16 | 42 to 45.5 | Back to the room, question "Smaller than a parking space?" | 2026-11-20-midday-2 | crop C bed edge |
-| 17 | 45.5 to 49 | Loop: parking bay hero matching frame 0, follow card | 2026-11-20-midday-1 | crop C yellow line, then wide |
-Real photos: 5 of 17 shots (about a third of runtime); never more than 2 AI renders in a row. Frame 0 is evenly lit daylight (D1, YAVG at least 90).
+| 1 | 0 to 2.5 | HOOK: stalled half-built tower in bright sun, idle crane; "EMI on. Flat: none." red bar snaps on "never" | new 2026-11-20-midday-6 (Pro) | crop A wide, push-in 4% |
+| 2 | 2.5 to 5 | Real photo: Supreme Court of India building, daylight; kicker "SUPREME COURT · 19 NOV 2026" | Wikimedia Commons (fetch at build, credit) | slow push |
+| 3 | 5 to 8.5 | Three blocks labelled Buyer, Builder, Bank snap together over the model building | new 2026-11-20-midday-7 | crop A, push-in |
+| 4 | 8.5 to 12 | Hero tower, rusting rebar close; "Project stalled. Builder in insolvency." | 2026-11-20-midday-6 | crop B, pan up |
+| 5 | 12 to 15 | Empty bare-concrete flat, a house key on the floor in sunlight | new 2026-11-20-midday-9 | crop A wide |
+| 6 | 15 to 18 | Gavel beside a small house model; "No coercive recovery... until:" | new 2026-11-20-midday-10 | crop A, push-in |
+| 7 | 18 to 21 | Same, close on the house model; "1. Did buyers default?" | 2026-11-20-midday-10 | crop B |
+| 8 | 21 to 24 | Model building with coin stacks at each floor; "2. Did the bank pay as agreed?" | 2026-11-20-midday-7 | crop B |
+| 9 | 24 to 29 | Stage bar device: building rises floor by floor, one coin stack per floor (tell-a-friend fact) | 2026-11-20-midday-7 | crop C, tilt up, red ticks |
+| 10 | 29 to 32 | Three towers: one finished with plants on balconies, two bare shells; "Bengaluru: ~4,500 buyers" | new 2026-11-20-midday-8 | crop A wide |
+| 11 | 32 to 35 | Close on the bare shells; "~95% paid" counter | 2026-11-20-midday-8 | crop B, push-in |
+| 12 | 35 to 38.5 | Real photo: Bengaluru skyline or apartment blocks, daylight; "No coercive measures till possession" | Unsplash (fetch at build, credit) | slow pan |
+| 13 | 38.5 to 42.5 | Supreme Court photo again, darker red wipe; "Go to the High Court or NCLT first" | Wikimedia Commons | push |
+| 14 | 42.5 to 47.5 | Split: key on empty floor vs coin stacks; "Who carries the risk? Buyer or bank?" | 2026-11-20-midday-9 and -7 | crop B, split |
+| 15 | 47.5 to 50 | Loop to hero tower matching frame 0, follow card | 2026-11-20-midday-6 | crop C, then wide |
+Real photos: 3 of 15 shots. Never more than 2 AI renders in a row. Frame 0 evenly lit daylight (D1).
 
-## Images (batch prep-2026-11-20)
-- 2026-11-20-midday-1 (Pro, hook): impossible-real tiny home inside a parking bay, car in the next bay. Crops: A wide both bays, B bed and shelves, C yellow line close for the loop.
-- 2026-11-20-midday-2: typical 10 sq m subdivided room, bed to stove. Crops: A wide from the door, B stove and sink, C bed edge.
-- 2026-11-20-midday-3: scale model of one flat cut into six rooms. Crops: A whole flat, B one room, C partition wall.
-- 2026-11-20-midday-4: aerial, green ridges and a thin tower strip. Crops: A full, B ridges, C tower strip.
-- 2026-11-20-midday-5: renovated legal 8 sq m room with a window. Crops: A wide, B window, C toilet door and fan.
-Real photos (fetch/2026-11-20.txt): d1120-hk-dense-colour and d1120-hk-red-white (Meriç Dağlı), d1120-hk-balconies (Roméo A.), d1120-hk-green-city (Raymond Yeung), d1120-hk-saikung (Clars Puk). All Unsplash. Look F prompt line from STYLE_SYSTEM appended to every prompt.
+## Images (same-day image job jobs/2026-11-20-midday-news.json, ordered 08:5x IST by the news desk)
+Named -6 to -10 so the displaced plan's images (-1 to -5) are not overwritten. -6 is the hook (hero: true, Pro); the rest Flash.
+- 2026-11-20-midday-6 (Pro, hook): stalled half-built Indian apartment tower, bright sun. Crops: A wide, B rebar close, C top floor for the loop.
+- 2026-11-20-midday-7: architectural model with coin stacks per floor. Crops: A whole, B coins close, C model base to top.
+- 2026-11-20-midday-8: three towers, one finished two bare. Crops: A wide, B shells, C finished tower.
+- 2026-11-20-midday-9: bare flat with a key on the floor. Crops: A wide, B key close.
+- 2026-11-20-midday-10: gavel and house model. Crops: A wide, B house close.
+If any is missing at build time (check library/media/_last_run.txt), regenerate only that one, or use a real photo.
