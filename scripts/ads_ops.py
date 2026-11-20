@@ -791,30 +791,48 @@ def op_tactics_setup(req):
 
 def meta_ramp(rep, base, dry):
     """Extra Meta budget on top of the planner's share, stepped toward target_inr (Rishi's go-ahead, 18 Nov 2026).
-    One step of step_pct every min_days, only while lifetime cost per chat <= max_cost_per_chat_inr and yesterday's
-    delivery was at least min_delivery of budget. Never steps down by itself; a bad week is the tester's and planner's job."""
+    No fixed cost threshold (Rishi, 20 Nov 2026: "don't add checks like that, do what is optimal"). The ramp follows
+    returns instead: it measures cost per qualified lead (cost per chat until there are qualified leads) and compares it
+    with the value it had at the last step. Step up step_pct every min_days while that cost has not risen by more than
+    25% (more money is still buying leads at about the same price) and Meta spent at least min_delivery of the budget;
+    step back step_pct (never below the planner's share) when it has risen by more than 50%; otherwise hold.
+    The daily and monthly caps still apply above this."""
     R = CFG.get("meta_ramp")
     if not R:
         return 0.0
     st = load_state(); r = st.get("meta_ramp") or {"level": base, "at": None}
     level = float(r.get("level") or base)
+    ads = rep.get("ads") or []
+    sp = sum(a.get("spend_life") or 0 for a in ads); q = sum(a.get("qualified") or 0 for a in ads)
+    ch = sum(a.get("conv_life") or 0 for a in ads)
+    metric, cost = ("qualified lead", round(sp / q)) if q else (("chat", round(sp / ch)) if ch else (None, None))
+    ref = r.get("ref") if r.get("ref_metric") == metric else None
     why = "held"
-    if str(today()) >= R.get("start_on", "") and level < R["target_inr"]:
+    if str(today()) >= R.get("start_on", ""):
         days = (today() - datetime.date.fromisoformat(r["at"])).days if r.get("at") else 99
-        cpc = rep.get("meta_cost_per_chat")
         deliv = (rep.get("spend_yesterday_inr") or 0) / max(1.0, rep.get("daily_budget_total_inr") or 1)
-        if days < R["min_days"]:
-            why = f"next step after {R['min_days'] - days} more day(s)"
-        elif cpc is None or cpc > R["max_cost_per_chat_inr"]:
-            why = f"held: cost per chat INR {cpc} above INR {R['max_cost_per_chat_inr']}" if cpc else "held: no chats yet"
+        new = level
+        if cost is None:
+            why = "held: no chats yet"
+        elif days < R["min_days"]:
+            why = f"next review after {R['min_days'] - days} more day(s)"
+        elif ref and cost > ref * 1.5 and level > base:
+            new = max(base, round(level / (1 + R["step_pct"] / 100))); why = f"stepped back: cost per {metric} INR {cost}, was INR {ref} at the last step"
+        elif level >= R["target_inr"]:
+            why = "at target"
         elif deliv < R["min_delivery"]:
-            why = f"held: delivery {deliv:.0%} of budget"
+            why = f"held: Meta spent only {deliv:.0%} of the budget"
+        elif ref and cost > ref * 1.25:
+            why = f"held: cost per {metric} INR {cost}, up from INR {ref} at the last step"
         else:
-            new = min(R["target_inr"], round(level * (1 + R["step_pct"] / 100)))
-            rep["actions"].append(f"Meta ramp: INR {level:.0f} -> {new}/day (cost per chat INR {cpc}, delivery {deliv:.0%})")
-            level = new; why = "stepped"
+            new = min(R["target_inr"], round(level * (1 + R["step_pct"] / 100))); why = "stepped up"
+        if new != level:
+            rep["actions"].append(f"Meta ramp: INR {level:.0f} -> {new}/day (cost per {metric} INR {cost}" + (f", INR {ref} at the last step" if ref else "") + f", delivery {deliv:.0%})")
+            level = new
             if not dry:
-                st["meta_ramp"] = {"level": level, "at": str(today())}; save_state(st)
+                st["meta_ramp"] = {"level": level, "at": str(today()), "ref": cost, "ref_metric": metric}; save_state(st)
+        elif not dry and cost is not None and not ref:
+            st["meta_ramp"] = {**r, "level": level, "ref": cost, "ref_metric": metric}; save_state(st)
     rep["meta_ramp"] = f"Meta ramp: INR {level:.0f}/day toward {R['target_inr']} ({why})"
     return max(0.0, level - base)
 
