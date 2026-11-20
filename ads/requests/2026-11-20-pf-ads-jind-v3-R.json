@@ -1,0 +1,21 @@
+{
+ "op": "add_ads",
+ "product": "jind",
+ "adset_key": "R",
+ "ads": [
+  {
+   "name": "R-v3 dark: your shop on Jind's 24 m road",
+   "image": "ads/creatives/flower-valley-jind-sco/v3/final/FVJ-v3-dark-feed-4x5-2880x3600.jpg",
+   "headline": "Your shop on Jind's 24 m road",
+   "text": "SCO (G+3) and booths at Forteasia Flower Valley, Sector 26, Jind: on the 24-metre-wide road with parking in front, around a central green plaza, inside an established township behind PGI Jind. HRERA-PKL-JND-314-2022, www.haryanarera.gov.in. Tap below to get the details on WhatsApp.",
+   "prefill": "Hi, please share the Flower Valley Jind commercial plot details."
+  },
+  {
+   "name": "R-v3 light: the right address for your SCO in Jind",
+   "image": "ads/creatives/flower-valley-jind-sco/v3/final/FVJ-v3-light-feed-4x5-2880x3600.jpg",
+   "headline": "The right address for your SCO in Jind",
+   "text": "Forteasia Flower Valley, Sector 26, Jind: SCO (G+3) and booths around a central green plaza, on the 24-metre-wide road with parking in front, inside an established township behind PGI Jind. HRERA-PKL-JND-314-2022, www.haryanarera.gov.in. Tap below to book a site visit on WhatsApp.",
+   "prefill": "Hi, I want to visit the Flower Valley Jind commercial plots."
+  }
+ ]
+}
