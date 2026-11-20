@@ -2,6 +2,9 @@ name: ads-ops
 # Performance department: ads agent (scripts/ads_ops.py) and media planner (scripts/perf_planner.py).
 # Requests in ads/requests, results in ads/results. Daily autopilot 08:00 IST -> ads/reports/<date>.md.
 # Planner Mondays 06:30 IST -> perf/plan.json (read by the WhatsApp Lambda at 07:30 and by the ads agent).
+# GitHub's own timer barely fires in this repo (no daily run from 19 to 20 Nov 2026), so the check also starts after
+# other agent workflows: the first one after 08:00 IST that finds no daily result for today runs it, once a day; the
+# planner runs when perf/plan.json is 7 or more days old. Pending ad requests are processed on every run.
 # Secrets: META_TOKEN; PERF_URL + PERF_KEY (Lambda /perf/summary, aggregates only).
 on:
   push:
@@ -9,6 +12,9 @@ on:
   schedule:
     - cron: "30 2 * * *"
     - cron: "0 1 * * 1"
+  workflow_run:
+    workflows: [meta-ops, social-ops, cloud-media, wa-ops]
+    types: [completed]
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,11 +30,22 @@ jobs:
       - uses: actions/checkout@v4
       - name: Use the latest main
         run: git pull --rebase -q origin main || true
+      - name: What is due
+        id: due
+        run: |
+          D=$(TZ=Asia/Kolkata date +%F); H=$(TZ=Asia/Kolkata date +%-H)
+          daily=0; plan=0
+          if [ ! -f "ads/results/daily-$D.json" ] && { [ "${{ github.event.schedule }}" = "30 2 * * *" ] || [ "$H" -ge 8 ]; }; then daily=1; fi
+          PD=$(python3 -c "import json;print(json.load(open('perf/plan.json')).get('date',''))" 2>/dev/null || true)
+          AGE=999; [ -n "$PD" ] && AGE=$(( ( $(date -d "$D" +%s) - $(date -d "$PD" +%s) ) / 86400 ))
+          if [ "${{ github.event.schedule }}" = "0 1 * * 1" ] || { [ "$AGE" -ge 7 ] && [ "$H" -ge 6 ]; }; then plan=1; fi
+          echo "daily=$daily plan=$plan (IST $D $H:00, plan age $AGE days)"
+          echo "daily=$daily" >> "$GITHUB_OUTPUT"; echo "plan=$plan" >> "$GITHUB_OUTPUT"
       - name: Weekly media plan
-        if: github.event.schedule == '0 1 * * 1'
+        if: steps.due.outputs.plan == '1'
         run: python3 scripts/perf_planner.py
       - name: Daily autopilot
-        if: github.event.schedule == '30 2 * * *'
+        if: steps.due.outputs.daily == '1'
         run: python3 scripts/ads_ops.py --daily
       - name: Run ad requests
         if: github.event_name != 'schedule'
