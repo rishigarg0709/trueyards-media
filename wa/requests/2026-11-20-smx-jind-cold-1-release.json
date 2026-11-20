@@ -1,0 +1,4 @@
+{"by": "Chief of Staff", "ops": [
+ {"op": "gogate.set", "args": {"on": false}},
+ {"op": "broadcast.release", "args": {"id": "C#2026-11-20T09:38:22.160Z#459a05"}}
+]}
