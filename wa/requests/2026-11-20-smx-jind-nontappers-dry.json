@@ -1,0 +1,1 @@
+{"by": "SMX chat", "ops": [{"op": "audiences"}, {"op": "audience.fromBroadcasts", "args": {"match": "FV Jind SCO v2", "leadTag": "FV Jind SCO", "dry": true}}]}
