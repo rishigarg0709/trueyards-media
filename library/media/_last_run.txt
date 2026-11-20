@@ -1,4 +1,4 @@
-2026-11-20 09:47 UTC
-fvj3-a-vo-jessa-jeend-roman [voice]: voice ok
-fvj3-a-vo-jessa-jeend-devanagari [voice]: voice ok
-fvj3-a-vo-jessa-jeend-mixed [voice]: voice ok
+2026-11-20 11:48 UTC
+2026-11-20-carousel-1 [image]: image ok
+2026-11-20-carousel-2 [image]: image ok
+2026-11-20-carousel-3 [image]: image ok
