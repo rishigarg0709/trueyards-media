@@ -53,5 +53,17 @@
    "size": "2K"
   }
  ],
- "fallback_after_utc": null
+ "fallback_after_utc": null,
+ "saved": [
+  "2026-11-21-evening-2",
+  "2026-11-21-evening-3",
+  "2026-11-21-evening-4",
+  "2026-11-21-evening-5",
+  "2026-11-21-evening-6",
+  "2026-11-21-carousel-2",
+  "2026-11-21-carousel-3",
+  "2026-11-21-carousel-4"
+ ],
+ "missing": [],
+ "finished": "2026-11-20T17:02Z"
 }
