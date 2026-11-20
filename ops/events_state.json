@@ -1,5 +1,5 @@
 {
- "last_sha": "026c241d0620fd02e96cce300dee832dd929f683",
+ "last_sha": "1d58ebb9d657dd06494fa6d6e9872044e03d87af",
  "meta": {
   "campaign:120255661706190547": {
    "name": "TrueYards Follow",
@@ -51,13 +51,13 @@
   },
   "adset:120255647446550547": {
    "name": "FIT W - Warm-up before WhatsApp",
-   "status": "PAUSED",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "12000",
    "camp": "FIT Warm v1"
   },
   "adset:120255647397480547": {
    "name": "FIT U - Unreachable on WhatsApp",
-   "status": "PAUSED",
+   "status": "ACTIVE",
    "budget": "12000",
    "camp": "FIT CTWA Leads v2"
   },
@@ -70,7 +70,7 @@
   "adset:120255645739620547": {
    "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
    "status": "ACTIVE",
-   "budget": "49500",
+   "budget": "47000",
    "camp": "FIT CTWA Leads v2"
   },
   "adset:120255620983010547": {
