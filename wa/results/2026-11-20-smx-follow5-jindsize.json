@@ -1,0 +1,342 @@
+{
+ "at": "2026-11-20 15:04",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.config",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "cfg": {
+     "on": true,
+     "budgetInr": 1005,
+     "costPerDelivered": 1.02,
+     "maxLeadsPerDay": 25,
+     "minRelValue": 0.3,
+     "followShare": 0.25,
+     "firstOnly": true,
+     "coldRetry": true,
+     "retryMaxShare": 0.3,
+     "coldFollow": "learn",
+     "followLearn": {
+      "floor": 0.05,
+      "max": 0.05,
+      "minDelivered": 300,
+      "minLeads": 15,
+      "lowRatio": 0.3
+     },
+     "maxRetries": 3,
+     "retryGapDays": [
+      4,
+      6,
+      8
+     ],
+     "retryShare": 0.1,
+     "retryPrior": {
+      "ratio": 0.9,
+      "strength": 400,
+      "deliver": 0.4
+     },
+     "explore": 0.2,
+     "maxCellShare": 0.35,
+     "testCellSends": 120,
+     "maxTestCells": 20,
+     "provenTouches": 5,
+     "testTouches": 2,
+     "hotScore": 75,
+     "hotTouches": 4,
+     "slots": [
+      "08:15",
+      "10:00",
+      "11:45",
+      "13:30",
+      "15:15",
+      "17:00",
+      "20:30",
+      "21:15"
+     ],
+     "minSlotShare": 0.08,
+     "slotPrior": {
+      "08:15": [
+       4,
+       550
+      ],
+      "10:00": [
+       8,
+       380
+      ],
+      "11:45": [
+       8,
+       380
+      ],
+      "13:30": [
+       4,
+       550
+      ],
+      "15:15": [
+       4,
+       550
+      ],
+      "17:00": [
+       6,
+       440
+      ],
+      "18:45": [
+       5,
+       470
+      ],
+      "20:30": [
+       5,
+       470
+      ],
+      "21:15": [
+       5,
+       470
+      ]
+     },
+     "sequence": [
+      "fit_industry",
+      "fit_industry_carousel",
+      "fit_video_nudge",
+      "fit_subsidy_nudge"
+     ],
+     "firstTemplates": [
+      "fit_industry",
+      "fit_video_nudge"
+     ],
+     "learnFirst": true,
+     "followTemplates": [
+      "fit_video_nudge",
+      "fit_industry_carousel",
+      "fit_subsidy_nudge",
+      "fit_industry"
+     ],
+     "videoTemplates": [
+      "fit_video_nudge",
+      "fit_walkthrough_video"
+     ],
+     "points": {
+      "lead": 1,
+      "fu": 4,
+      "sv": 10,
+      "vdone": 25,
+      "stop": -3
+     },
+     "festivalDays": [],
+     "festivalShare": 0.5,
+     "pausedCells": [],
+     "planAt": "07:30",
+     "reportTo": [
+      "[number]"
+     ],
+     "warm": {
+      "on": true,
+      "reengage": {
+       "gapDays": 3,
+       "max": 8,
+       "rotation": [
+        "fit_industry",
+        "fit_industry_carousel",
+        "fit_video_nudge",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_walkthrough_video",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "visit": {
+       "gapDays": 4,
+       "max": 6,
+       "rotation": [
+        "fit_fact_card",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "quietDays": 2,
+      "stopAfterUnread": 3
+     },
+     "reportTemplate": "fit_autopilot_daily"
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-20T09:34:48.525Z"
+  },
+  {
+   "ok": true,
+   "op": "audience.size",
+   "changes": false,
+   "result": {
+    "ok": true,
+    "db": {
+     "rows": 408000,
+     "built": "2026-11-11"
+    },
+    "scanned": 408000,
+    "matched": 2588,
+    "optedOutLeftOut": 0,
+    "byGroup": {
+     "Retail shops & stores": 1017,
+     "Other businesses": 284,
+     "Traders, wholesalers & suppliers": 175,
+     "Food & agro processing": 131,
+     "Electrical & electronics": 125,
+     "Engineering & metal": 123,
+     "Other manufacturing": 103,
+     "Auto dealers & garages": 79,
+     "Pharma & chemicals": 76,
+     "Hotels, restaurants & banquets": 74,
+     "Building materials": 56,
+     "Agro, poultry & farm businesses": 51,
+     "Professionals (CA, lawyers, consultants)": 51,
+     "Real estate agents & builders": 41,
+     "Warehousing & logistics": 33,
+     "Auto & auto components": 29,
+     "Schools, colleges & coaching": 28,
+     "Furniture & wood": 24,
+     "Plastics, rubber & packaging": 20,
+     "Doctors, hospitals & clinics": 20,
+     "Textile & apparel": 17,
+     "Gyms, salons & wellness": 10,
+     "Government & public": 8,
+     "Machine shops & job work": 4,
+     "Footwear & leather": 3
+    },
+    "byDistance": {
+     "20-30 km": 474,
+     "10-20 km": 389,
+     "5-10 km": 116,
+     "<5 km": 1609
+    },
+    "topCategories": {
+     "Hardware store": 117,
+     "Electronics store": 98,
+     "Petrol Pump": 97,
+     "Manufacturer": 86,
+     "Wholesaler": 46,
+     "Store": 46,
+     "Battery Store": 40,
+     "Clothing store": 39,
+     "Grocery store": 37,
+     "Paint store": 34,
+     "Pharmacy": 33,
+     "Building materials supplier": 31,
+     "Furniture store": 30,
+     "Poultry farm": 29,
+     "Solar energy equipment supplier": 29,
+     "Dairy farm": 29,
+     "Dairy store": 28,
+     "Electronics repair shop": 27,
+     "Tailor": 26,
+     "Solar Energy Company": 23,
+     "Cosmetics store": 22,
+     "Bakery and Cake Shop": 20,
+     "Print shop": 20,
+     "Agricultural Seed Store": 20,
+     "Bicycle Shop": 19,
+     "Animal feed store": 17,
+     "Computer store": 17,
+     "Transportation service": 17,
+     "Tractor dealer": 17,
+     "Building materials store": 16
+    },
+    "selected": 200,
+    "imported": 0,
+    "tag": ""
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-20T09:34:54.810Z"
+  },
+  {
+   "ok": true,
+   "op": "audience.size",
+   "changes": false,
+   "result": {
+    "ok": true,
+    "db": {
+     "rows": 408000,
+     "built": "2026-11-11"
+    },
+    "scanned": 408000,
+    "matched": 1589,
+    "optedOutLeftOut": 0,
+    "byGroup": {
+     "Retail shops & stores": 630,
+     "Other businesses": 176,
+     "Traders, wholesalers & suppliers": 95,
+     "Engineering & metal": 75,
+     "Electrical & electronics": 74,
+     "Other manufacturing": 61,
+     "Hotels, restaurants & banquets": 54,
+     "Food & agro processing": 53,
+     "Pharma & chemicals": 49,
+     "Auto dealers & garages": 46,
+     "Industrial (govt / association list)": 41,
+     "Professionals (CA, lawyers, consultants)": 38,
+     "Real estate agents & builders": 30,
+     "Schools, colleges & coaching": 25,
+     "Building materials": 23,
+     "Agro, poultry & farm businesses": 17,
+     "Auto & auto components": 17,
+     "Warehousing & logistics": 14,
+     "Textile & apparel": 13,
+     "Furniture & wood": 12,
+     "Doctors, hospitals & clinics": 12,
+     "Plastics, rubber & packaging": 11,
+     "Gyms, salons & wellness": 9,
+     "Government & public": 5,
+     "Machine shops & job work": 3
+    },
+    "byDistance": {
+     "20-30 km": 158,
+     "10-20 km": 66,
+     "<5 km": 1280,
+     "5-10 km": 44,
+     "no location": 41
+    },
+    "topCategories": {
+     "Electronics store": 66,
+     "Hardware store": 65,
+     "Petrol Pump": 44,
+     "Manufacturer": 43,
+     "Store": 33,
+     "C: association member": 32,
+     "Wholesaler": 25,
+     "Clothing store": 25,
+     "Pharmacy": 24,
+     "Grocery store": 22,
+     "Electronics repair shop": 21,
+     "Tailor": 20,
+     "Furniture store": 19,
+     "Paint store": 19,
+     "Solar energy equipment supplier": 18,
+     "Battery Store": 18,
+     "Dairy store": 17,
+     "Bakery and Cake Shop": 17,
+     "Building materials supplier": 16,
+     "Print shop": 15,
+     "Cosmetics store": 15,
+     "Dairy farm": 13,
+     "Computer store": 13,
+     "Solar Energy Company": 12,
+     "Furniture Manufacturer": 12,
+     "Bicycle Shop": 11,
+     "General store": 10,
+     "Tile store": 10,
+     "Taxi service": 10,
+     "Poultry farm": 9
+    },
+    "selected": 200,
+    "imported": 0,
+    "tag": ""
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-20T09:34:57.653Z"
+  }
+ ]
+}
