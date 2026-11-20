@@ -1,0 +1,36 @@
+{
+ "at": "2026-11-20 09:06",
+ "by": "SMX chat",
+ "results": [
+  {
+   "ok": true,
+   "op": "audience.fromBroadcasts",
+   "changes": true,
+   "result": {
+    "broadcasts": 2,
+    "broadcastNames": [
+     "FV Jind SCO v2: site visitors",
+     "FV Jind SCO v2: customers"
+    ],
+    "reached": 562,
+    "delivered": 383,
+    "tappedOrReplied": 46,
+    "skipped": {
+     "test": 0,
+     "optedOut": 0,
+     "alreadyLead": 0,
+     "gotJindVideo": 0,
+     "repliedElsewhere": 0,
+     "salesStatus": 0,
+     "dealerOrPartner": 0,
+     "otherTag": 0
+    },
+    "eligible": 337,
+    "tagged": 0,
+    "dry": true
+   },
+   "by": "SMX chat",
+   "at": "2026-11-20T03:36:33.043Z"
+  }
+ ]
+}
