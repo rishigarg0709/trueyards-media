@@ -1,6 +1,6 @@
 # 2026-11-21 carousel (17:13 IST): How much of a family's income goes to the home loan EMI, city by city
 
-- Batch status: images ordered in batch prep-2026-11-21 (4 images below: 1 Pro cover + 3 Flash, 2 of them 21:9 panoramas). If any is missing at build time, check batches/failed/ and generate only the missing ones.
+- Batch status: CONFIRMED submitted 2026-11-20 16:58 UTC (22:28 IST): batches/pending/prep-2026-11-21-pro.json (2 Pro: evening-1, carousel-1) and prep-2026-11-21.json (8 Flash). Images ordered in batch prep-2026-11-21 (4 images below: 1 Pro cover + 3 Flash, 2 of them 21:9 panoramas). If any is missing at build time, check batches/failed/ and generate only the missing ones.
 
 ## Choice
 - Topic: Knight Frank's India Affordability Index, H1 2026 (published 3 July 2026): the share of an average household's income that the home loan EMI takes in 8 cities. MMR 69% and NCR 67% are above the 50% line where banks rarely lend; Ahmedabad 23% is the most affordable. NCR climbed from 43% (2021) to 67%, the steepest rise of the 8.

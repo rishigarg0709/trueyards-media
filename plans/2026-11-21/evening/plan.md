@@ -1,7 +1,7 @@
 # 2026-11-21 evening reel (19:07 IST): The hole in the middle of old Indian houses (aangan) that cooled them without AC
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice.
-- Batch status: images ordered in batch prep-2026-11-21 (6 images below, 1 Pro hook + 5 Flash). Real photos listed in fetch/2026-11-21.txt land in library/stock/ as d1121e-*. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+- Batch status: CONFIRMED submitted 2026-11-20 16:58 UTC (22:28 IST): batches/pending/prep-2026-11-21-pro.json (2 Pro: evening-1, carousel-1) and prep-2026-11-21.json (8 Flash). Images ordered in batch prep-2026-11-21 (6 images below, 1 Pro hook + 5 Flash). Real photos listed in fetch/2026-11-21.txt land in library/stock/ as d1121e-*. If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 
 ## Choice
 - Topic: why so many old Indian homes were built around an open courtyard (aangan), and what one measured haveli shows: on a 45°C June day in Bikaner the courtyard itself hit 43°C, but the bedroom beside it never went above 30°C, with no AC.
@@ -88,4 +88,4 @@ All prompts end with the look T grade line used on 19 and 20 Nov (STYLE_SYSTEM l
 - 2026-11-21-evening-4: photoreal architectural scale model of a haveli cut in half. Crops: A whole model, B sunshade and courtyard mouth, C wall section.
 - 2026-11-21-evening-5: same kind of courtyard from above at soft dusk, warm lamps. Crops: A wide, B lit doorway, C sky square.
 - 2026-11-21-evening-6 (impossible-real): modern glass apartment tower with an open courtyard void through its middle. Crops: A wide, B the void with trees, C top floors.
-Real photos (fetch/2026-11-21.txt): d1121e-courtyard-up (Tracy Tauro), d1121e-sandstone-street (ViRaL Patel), d1121e-patwon-haveli (Satyam Arora), d1121e-flats-balconies (Abhijit M), d1121e-highrise-low (Omkar Jadhav). All Unsplash, no people.
+Real photos (fetch/2026-11-21.txt, downloaded 22:27 IST into library/stock): d1121e-courtyard-up (Tracy Tauro), d1121e-sandstone-street (ViRaL Patel), d1121e-patwon-haveli (Satyam Arora), d1121e-flats-balconies (Abhijit M), d1121e-highrise-low (Omkar Jadhav). All Unsplash, no people.
