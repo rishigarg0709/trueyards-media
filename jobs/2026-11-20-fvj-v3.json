@@ -1,0 +1,131 @@
+[
+ {
+  "kind": "image",
+  "name": "fvj3-h1-dark-45",
+  "prompt": "Photorealistic studio product photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. The model sits on a cut square block of earth with visible soil and rock layers on two sides, floating above a deep forest green to black studio background with a soft shadow below. Three-quarter aerial view from the front left, model in the right two thirds of the frame, empty dark space on the left for text. Soft key light from upper left, realistic materials, shallow depth of field, premium architectural photography. No text, no logos, no people, no watermark.",
+  "aspect": "4:5",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h2-light-45",
+  "prompt": "Photorealistic photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. The model rises out of a large printed architectural site plan (the attached plan, line drawing in navy ink) on a warm cream architect's table, daylight from a window on the left, soft long shadows, a pencil and scale ruler in the far corner, out of focus. Three-quarter view from the front right, model on the right half, calm cream space on the left for text. Realistic materials, premium architectural photography. No text, no logos, no people, no watermark.",
+  "aspect": "4:5",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h1-dark-169",
+  "prompt": "Photorealistic studio product photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. The model sits on a cut square block of earth with visible soil and rock layers on two sides, floating above a deep forest green to black studio background with a soft shadow below. Three-quarter aerial view from the front left, model in the right two thirds of the frame, empty dark space on the left for text. Soft key light from upper left, realistic materials, shallow depth of field, premium architectural photography. No text, no logos, no people, no watermark.",
+  "aspect": "16:9",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h2-light-169",
+  "prompt": "Photorealistic photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. The model rises out of a large printed architectural site plan (the attached plan, line drawing in navy ink) on a warm cream architect's table, daylight from a window on the left, soft long shadows, a pencil and scale ruler in the far corner, out of focus. Three-quarter view from the front right, model on the right half, calm cream space on the left for text. Realistic materials, premium architectural photography. No text, no logos, no people, no watermark.",
+  "aspect": "16:9",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h3-top-916",
+  "prompt": "Photorealistic photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. Camera straight above, looking down on the whole model, the oval plaza in the centre of the frame. The model sits on a cut square block of earth with soil and rock layers, against a deep forest green to black studio background, soft key light from upper left, realistic materials, shallow depth of field, premium architectural photography, vertical 9:16. No text, no logos, no people, no watermark.",
+  "aspect": "9:16",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h4-road-916",
+  "prompt": "Photorealistic photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. Low camera at the level of the tiny cars on the front road, looking along the road with the shops rising beside it. The model sits on a cut square block of earth with soil and rock layers, against a deep forest green to black studio background, soft key light from upper left, realistic materials, shallow depth of field, premium architectural photography, vertical 9:16. No text, no logos, no people, no watermark.",
+  "aspect": "9:16",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "image",
+  "name": "fvj3-h5-plaza-916",
+  "prompt": "Photorealistic photograph of an architect's scale model of a small commercial market, built exactly from the attached site plan: a long row of narrow two-storey shops along the back, a short column of shops on the right side, and on the front left and front right two short rows of slim four-storey shop-office buildings, all facing a long oval landscaped green plaza in the centre with palms, lawns and flower beds; small parking bays beside the plaza; a wide road with white dashed lines along the open front edge with three tiny cars. Cream stone and glass facades as in the attached render, warm interior lights, blank signboards. Close view on the oval green plaza with the shop rows behind it, slightly above eye level of the model. The model sits on a cut square block of earth with soil and rock layers, against a deep forest green to black studio background, soft key light from upper left, realistic materials, shallow depth of field, premium architectural photography, vertical 9:16. No text, no logos, no people, no watermark.",
+  "aspect": "9:16",
+  "inputs": [
+   "ads/creatives/fv-jind-commercial-layout.jpg",
+   "ads/creatives/flower-valley-jind-sco/batch1/src/render-frontage.jpg"
+  ],
+  "hero": true
+ },
+ {
+  "kind": "voice",
+  "name": "fvj3-a-vo-jessa",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "जींद में अपनी दुकान? [short pause] सामने चौबीस metre चौड़ी सड़क, और दुकान के आगे parking। बीच में खुला green plaza। और ये बसी हुई Flower Valley township के अंदर है, P G I जींद के पीछे। Site visit के लिए WhatsApp पे tap कीजिए।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj3-a-vo-tara",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "जींद में अपनी दुकान? [short pause] सामने चौबीस metre चौड़ी सड़क, और दुकान के आगे parking। बीच में खुला green plaza। और ये बसी हुई Flower Valley township के अंदर है, P G I जींद के पीछे। Site visit के लिए WhatsApp पे tap कीजिए।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj3-rera-jessa",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "H RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fvj3-rera-tara",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "H RERA P K L, J N D, three one four of twenty twenty-two।",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
