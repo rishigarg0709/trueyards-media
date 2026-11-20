@@ -1,0 +1,3 @@
+d1120m-sc-a https://commons.wikimedia.org/wiki/Special:FilePath/Building_of_The_Supreme_Court_of_India.jpg
+d1120m-sc-b https://commons.wikimedia.org/wiki/Special:FilePath/Supreme_Court_of_India_front_view_02.jpg
+d1120m-sc-c https://commons.wikimedia.org/wiki/Special:FilePath/Supreme_Court_of_India_front_view_05.jpg
