@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-20 22:30",
+ "checked_at": "2026-11-20 22:39",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "ok",
-   "left": 1604,
+   "left": 1570,
    "burn_per_day": 300,
-   "runway_days": 5.3,
-   "detail": "About INR 1604 left of the INR 2000 top-up on 2026-11-18",
-   "spent_today": 136
+   "runway_days": 5.2,
+   "detail": "About INR 1570 left of the INR 2000 top-up on 2026-11-18",
+   "spent_today": 170
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 10025,
+   "left": 10013,
    "burn_per_day": 1090,
    "runway_days": 9.2,
-   "detail": "About INR 10025 left, spending about INR 1090 a day"
+   "detail": "About INR 10013 left, spending about INR 1090 a day"
   },
   {
    "id": "whatsapp",
