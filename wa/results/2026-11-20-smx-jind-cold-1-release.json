@@ -1,0 +1,29 @@
+{
+ "at": "2026-11-20 15:42",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "gogate.set",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "on": false
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-20T10:12:25.063Z"
+  },
+  {
+   "ok": true,
+   "op": "broadcast.release",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "released": true,
+    "total": 200
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-20T10:12:25.635Z"
+  }
+ ]
+}
