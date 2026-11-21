@@ -1,0 +1,20 @@
+{
+ "at": "2026-11-21 12:10",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.syncstatus",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "sync": {
+     "rows": 299,
+     "changed": 85
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-21T06:41:02.571Z"
+  }
+ ]
+}
