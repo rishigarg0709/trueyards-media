@@ -1,5 +1,5 @@
 {
- "last_sha": "47e214adf5633c681a51a665c89b19a447c392a9",
+ "last_sha": "0ebae8d811f858e359e95f37adca053fd7d46dd6",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -46,13 +46,13 @@
   "adset:120255721016990547": {
    "name": "FIT Meet W - reached on WhatsApp (warm)",
    "status": "ACTIVE",
-   "budget": "12000",
+   "budget": "15000",
    "camp": "FIT Business Meet 29 Nov"
   },
   "adset:120255721015440547": {
    "name": "FIT Meet L - industry owners from our database",
    "status": "ACTIVE",
-   "budget": "26000",
+   "budget": "35000",
    "camp": "FIT Business Meet 29 Nov"
   },
   "adset:120255720341420547": {
@@ -63,7 +63,7 @@
   },
   "adset:120255720335410547": {
    "name": "FIT Meet M1 - industry, Rohtak and Haryana belt",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "12000",
    "camp": "FIT Business Meet 29 Nov"
   },
