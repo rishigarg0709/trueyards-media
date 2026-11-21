@@ -22,3 +22,11 @@
 - 18 Nov 16:45: new campaign "TrueYards Follow" (traffic objective, optimised for Instagram profile visits, Instagram placements only: feed, reels, explore home; CTA View Instagram profile), same INR 200/day. The old engagement campaign "TrueYards Boost" is paused (its day: INR 46, 2,578 reached, 280 likes, about 2 follows).
 - boost_post now adds ads to "TrueYards Follow" (config boost_campaign_name). Judge boosts on cost per new follower (follower change on boosted days vs organic days), then profile visits; likes do not count.
 - The INR 5,000 monthly cap covers both campaigns together.
+
+## Spread across reels (Rishi, 21 Nov 2026 12:14, Directive D40; replaces the single shared ad set of D28)
+"I see only one video being boosted and getting views. It creates an artificial view that a video is being boosted, distribute the ads."
+- Campaign "TrueYards Follow - spread" (no campaign budget): one ad set per reel with its own daily budget, so Meta cannot pour everything into one reel. The old "TrueYards Follow" (single ad set, Noida got about all of it) was paused on 21 Nov 12:20.
+- Meta refuses a profile-visit ad set under about INR 95 a day, so the INR 200 funds 2 reels at INR 100 each.
+- Rotation, every daily run: each reel gets paid exposure for 2 days, then hands over. Pick the 2 eligible reels (24 h to 10 days old, organic TrueYards, not project content) with the LEAST paid spend so far, breaking ties by the better skip rate; skip a reel whose organic skip rate is over 75% (money wasted on a hook that loses viewers). Prefer reels on the grid over trials that have not graduated. Run it with meta_ops op follow_spread {"media_ids": [id1, id2]}: it creates or keeps those 2 ad sets and pauses the others.
+- Already had their paid turn before 21 Nov: Noida twin towers (about INR 600), Steel rods (about INR 0), Delhi skyscrapers (about INR 0). Steel rods and Delhi may get a 2-day turn like any reel.
+- Judge on new followers per INR as before; log each run in BOOST_LOG.md.
