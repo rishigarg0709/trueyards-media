@@ -31,7 +31,7 @@ Re-ranked 2026-11-21 by the learning run: national everyday-India 'why does X lo
 - [ ] new | marvel | Steinway Tower, New York: the world's skinniest skyscraper (about 24:1) | "This tower is 24 times taller than it is wide." | hook 23 scale awe | send: anyone into architecture | verify ratio and height
 - [ ] new | history | Pudong, Shanghai: farmland in 1990, a skyline by 2010 | "This was farmland in 1990." | hook 6 time jump | send: anyone who says India builds slowly | verify dates and Lujiazui figures; convert any money to rupees (D14)
 - [ ] builders | How Dubai built islands in the sea (Palm Jumeirah) | "These islands didn't exist. They were sprayed into the sea." | awe
-- [~] 2026-11-21 midday | global | Hong Kong homes smaller than a parking space (subdivided flats, 8 sq m minimum law) | displaced by news 2026-11-20 | plan and images ready: plans/2026-11-20/midday/displaced-plan.md (images 2026-11-20-midday-1..5 already in library/media)
+- [x] 2026-11-21 midday | global | Hong Kong homes smaller than a parking space (subdivided flats, 8 sq m minimum law) | displaced by news 2026-11-20 | plan and images ready: plans/2026-11-20/midday/displaced-plan.md (images 2026-11-20-midday-1..5 already in library/media)
 - [ ] rules | Carpet vs built-up vs super built-up area | "You're paying for space you'll never stand in." | stakes for viewer
 - [ ] mystery | Why Mumbai flats are so small and so expensive | "Mumbai's biggest problem is the sea." | myth bust
 - [ ] history | How Gurgaon went from farmland to a skyline | "Gurgaon had almost no towers a few decades ago." | time jump | check drafts/gurgaon-on-credit-reel first: may already be the untitled 15 Nov reel
