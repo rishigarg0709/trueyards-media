@@ -1,5 +1,5 @@
 {
- "last_sha": "69fc506bc07c021642576043cdd6d3cf7f6b2aa1",
+ "last_sha": "3be903b1a9ac025798eacc4980213952715ab298",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -43,16 +43,22 @@
    "budget": "20000",
    "camp": ""
   },
+  "adset:120255721015440547": {
+   "name": "FIT Meet L - industry owners from our database",
+   "status": "IN_PROCESS",
+   "budget": "26000",
+   "camp": "FIT Business Meet 29 Nov"
+  },
   "adset:120255720341420547": {
    "name": "FIT Meet M2 - industry, Delhi NCR",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "20000",
    "camp": "FIT Business Meet 29 Nov"
   },
   "adset:120255720335410547": {
    "name": "FIT Meet M1 - industry, Rohtak and Haryana belt",
    "status": "ACTIVE",
-   "budget": "30000",
+   "budget": "12000",
    "camp": "FIT Business Meet 29 Nov"
   },
   "adset:120255718190600547": {
