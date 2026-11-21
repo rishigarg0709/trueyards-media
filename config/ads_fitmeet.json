@@ -66,7 +66,7 @@
       "key": "M1",
       "name": "FIT Meet M1 - industry, Rohtak and Haryana belt",
       "enabled": true,
-      "daily_budget_inr": 300,
+      "daily_budget_inr": 120,
       "age_min": 25,
       "age_max": 65,
       "advantage_audience": 1,
@@ -151,7 +151,7 @@
     {
       "key": "M2",
       "name": "FIT Meet M2 - industry, Delhi NCR",
-      "enabled": true,
+      "enabled": false,
       "daily_budget_inr": 200,
       "age_min": 25,
       "age_max": 65,
@@ -216,7 +216,85 @@
           "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov.",
           "name": "M2-V1 video soft piano"
         }
-      ]
+      ],
+      "_note": "Paused 21 Nov 17:10 (D45): generic Delhi interest targeting; replaced by the scraped industry-owner list (L)."
+    },
+    {
+      "key": "L",
+      "name": "FIT Meet L - industry owners from our database",
+      "enabled": true,
+      "daily_budget_inr": 260,
+      "age_min": 22,
+      "age_max": 65,
+      "advantage_audience": 0,
+      "custom_audience_ids": [
+        "120255720910620547"
+      ],
+      "end_time": "2026-11-29T12:00:00+0530",
+      "ads": [
+        {
+          "name": "L-1 invite feed",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-feed-4x5.jpg",
+          "headline": "Industrial Business Meet, 29 Nov",
+          "text": "You are invited to the Forteasia Industrial Business Meet at FIT, Kalanaur, Rohtak on Sunday 29 November, 10 am to 6 pm, followed by hi-tea. Walk the industrial plots, get every question answered on site and meet our team face to face. Free entry. Tap below to register on WhatsApp and choose your time. HRERA-PKL-ROH-653-2025, HRERA-PKL-ROH-795-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        },
+        {
+          "name": "L-2 see FIT in person feed",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-feed-4x5.jpg",
+          "headline": "See FIT before you decide",
+          "text": "Planning a factory or warehouse? See Forteasia Industrial Township on Meham-Beri Road, Rohtak in person at our Industrial Business Meet, Sunday 29 November, 10 am to 6 pm. Plot sizes, roads, power and approvals explained on site by our team. Free entry. Tap below to register on WhatsApp. HRERA-PKL-ROH-653-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        },
+        {
+          "name": "L-6 square bigger title and date",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-square-1x1-v4.jpg",
+          "headline": "Industrial Business Meet, 29 Nov",
+          "text": "You are invited to the Forteasia Industrial Business Meet at FIT, Kalanaur, Rohtak on Sunday 29 November, 10 am to 6 pm, followed by hi-tea. Walk the industrial plots, get every question answered on site and meet our team face to face. Free entry. Tap below to register on WhatsApp and choose your time. HRERA-PKL-ROH-653-2025, HRERA-PKL-ROH-795-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        }
+      ],
+      "video_ads": [],
+      "_note": "1,78,120 industry owners from the master database, hashed on the bot server (D45)."
+    },
+    {
+      "key": "W",
+      "name": "FIT Meet W - reached on WhatsApp (warm)",
+      "enabled": true,
+      "daily_budget_inr": 120,
+      "age_min": 22,
+      "age_max": 65,
+      "advantage_audience": 0,
+      "custom_audience_ids": [
+        "120255720914130547"
+      ],
+      "end_time": "2026-11-29T12:00:00+0530",
+      "ads": [
+        {
+          "name": "W-1 invite feed",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-feed-4x5.jpg",
+          "headline": "Industrial Business Meet, 29 Nov",
+          "text": "You are invited to the Forteasia Industrial Business Meet at FIT, Kalanaur, Rohtak on Sunday 29 November, 10 am to 6 pm, followed by hi-tea. Walk the industrial plots, get every question answered on site and meet our team face to face. Free entry. Tap below to register on WhatsApp and choose your time. HRERA-PKL-ROH-653-2025, HRERA-PKL-ROH-795-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        },
+        {
+          "name": "W-2 see FIT in person feed",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-feed-4x5.jpg",
+          "headline": "See FIT before you decide",
+          "text": "Planning a factory or warehouse? See Forteasia Industrial Township on Meham-Beri Road, Rohtak in person at our Industrial Business Meet, Sunday 29 November, 10 am to 6 pm. Plot sizes, roads, power and approvals explained on site by our team. Free entry. Tap below to register on WhatsApp. HRERA-PKL-ROH-653-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        },
+        {
+          "name": "W-6 square bigger title and date",
+          "image": "ads/creatives/fit-meet/final/FIT-meet-ad-square-1x1-v4.jpg",
+          "headline": "Industrial Business Meet, 29 Nov",
+          "text": "You are invited to the Forteasia Industrial Business Meet at FIT, Kalanaur, Rohtak on Sunday 29 November, 10 am to 6 pm, followed by hi-tea. Walk the industrial plots, get every question answered on site and meet our team face to face. Free entry. Tap below to register on WhatsApp and choose your time. HRERA-PKL-ROH-653-2025, HRERA-PKL-ROH-795-2025.",
+          "prefill": "Hi, I want to register for the Industrial Business Meet on 29 Nov."
+        }
+      ],
+      "video_ads": [],
+      "_note": "17,109 industry contacts our WhatsApp already reached (autopilot, FIT blasts, industry leads)."
     }
-  ]
+  ],
+  "note_d45": "Rishi 21 Nov 16:59: switch Meta to our scraped industry-owner lists. INR 500/day: L 260, W 120, M1 120, M2 paused."
 }

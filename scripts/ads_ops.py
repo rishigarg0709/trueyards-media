@@ -1073,6 +1073,19 @@ def op_set_budget(req):
     return out or {"note": "budgets already match the config"}
 OPS["set_budget"] = op_set_budget
 
+def op_pause_adset(req):
+    """Pause one ad set of this product's campaign by name or key (no other campaign is touched)."""
+    camp = find_campaign()
+    if not camp:
+        return {"error": "no campaign"}
+    name = req.get("name") or next((a["name"] for a in CFG["adsets"] if a["key"] == req.get("adset_key")), None)
+    s_ = next((x for x in adsets_of(camp["id"]) if x["name"] == name), None)
+    if not s_:
+        return {"error": f"ad set {name} not in this campaign"}
+    return call(s_["id"], {"status": "PAUSED"}, "POST") | {"name": name}
+OPS["pause_adset"] = op_pause_adset
+
+
 
 if __name__ == "__main__":
     main()
