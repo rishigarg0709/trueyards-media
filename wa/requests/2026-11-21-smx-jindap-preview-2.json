@@ -1,0 +1,1 @@
+{"by": "Chief of Staff", "ops": [{"op": "jindap.config", "args": {"cfg": {"on": false, "budgetInr": 200}}}, {"op": "jindap.preview"}]}
