@@ -1,0 +1,45 @@
+{
+ "op": "launch",
+ "ran_at": "2026-11-21T11:06:15.869780Z",
+ "result": {
+  "ads": [
+   {
+    "success": true,
+    "name": "M1-3 invite square"
+   },
+   {
+    "success": true,
+    "name": "M2-3 invite square"
+   },
+   {
+    "success": true,
+    "name": "M2-2 see FIT in person feed"
+   },
+   {
+    "success": true,
+    "name": "M1-1 invite feed"
+   },
+   {
+    "success": true,
+    "name": "M2-1 invite feed"
+   },
+   {
+    "success": true,
+    "name": "M1-2 see FIT in person feed"
+   }
+  ],
+  "adsets": [
+   {
+    "success": true,
+    "name": "FIT Meet M2 - industry, Delhi NCR"
+   },
+   {
+    "success": true,
+    "name": "FIT Meet M1 - industry, Rohtak and Haryana belt"
+   }
+  ],
+  "campaign": {
+   "success": true
+  }
+ }
+}
