@@ -1,0 +1,1 @@
+{"by": "Chief of Staff", "ops": [{"op": "jindap.config", "args": {"cfg": {"on": true, "budgetInr": 200, "warm": {"gapDays": 3, "max": 3, "rotation": ["fv_jind_video_v2", "fv_jind_visit_invite", "fv_jind_sco_v2"]}}}}, {"op": "jindap.preview"}]}
