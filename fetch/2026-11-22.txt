@@ -1,7 +1,0 @@
-d1122m-maha-village-bari https://images.unsplash.com/photo-1701240068416-2c276d1531f8?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122m-junnar-aerial https://images.unsplash.com/photo-1774697443203-0f54409d1613?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122c-tower-balconies https://images.unsplash.com/photo-1779976955617-23056bd0f82e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122c-white-building https://images.unsplash.com/photo-1785783320183-4e661e33391c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122c-old-tower https://images.unsplash.com/photo-1784748197527-24f095a3902c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122e-sarakkai-lake https://images.unsplash.com/photo-1560091122-78031dafa9b9?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
-d1122e-blr-tree-road https://images.unsplash.com/photo-1708782259696-de32e310df14?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400
