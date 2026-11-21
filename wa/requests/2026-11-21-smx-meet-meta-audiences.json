@@ -1,0 +1,5 @@
+{"by": "Chief of Staff", "ops": [
+ {"op": "perf.masteraudience", "args": {"name": "FIT meet: industry owners (master DB)", "description": "D45: industry owners only, for the FIT Business Meet 29 Nov",
+   "q": {"groups": ["manufactur", "Engineering & metal", "Pharma & chemicals", "Electrical & electronics", "Food & agro processing", "Plastics, rubber & packaging", "Warehousing & logistics", "Textile & apparel", "Furniture & wood", "Auto & auto components", "Industrial", "Footwear & leather", "Toys, sports & consumer goods"]}}},
+ {"op": "perf.tagaudience", "args": {"name": "FIT meet: reached on WhatsApp", "tags": ["Autopilot", "FIT blast A - promo", "FIT blast B - carousel", "FIT promo top1000 10Nov", "Resend 2 Nov promo", "Resend 2 Nov carousel", "Industry lead"]}}
+]}
