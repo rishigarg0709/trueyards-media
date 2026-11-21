@@ -1,9 +1,15 @@
 {
- "last_sha": "b6dbae27858f18c4ba10718ce66e926ea13ce136",
+ "last_sha": "87dee689885fb1c94ca1daa2ae44fa5db66bd571",
  "meta": {
+  "campaign:120255718171540547": {
+   "name": "TrueYards Follow - spread",
+   "status": "ACTIVE",
+   "budget": "",
+   "camp": ""
+  },
   "campaign:120255661706190547": {
    "name": "TrueYards Follow",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "20000",
    "camp": ""
   },
@@ -39,7 +45,7 @@
   },
   "adset:120255661720970547": {
    "name": "TrueYards Follow - IG profile visits",
-   "status": "ACTIVE",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "",
    "camp": "TrueYards Follow"
   },
