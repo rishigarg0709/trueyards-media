@@ -292,6 +292,7 @@ def op_setup(req):
             t, notes = targeting(a, a.get("custom_audience_ids"))
             base = {"name": a["name"], "campaign_id": camp["id"], "status": "PAUSED", "daily_budget": paise(a["daily_budget_inr"]),
                     **({"start_time": a["start_time"]} if a.get("start_time") else {}),
+                    **({"end_time": a["end_time"]} if a.get("end_time") else {}),
                     "billing_event": "IMPRESSIONS", "optimization_goal": "CONVERSATIONS", "destination_type": "WHATSAPP",
                     "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "targeting": t}
             errs = []
