@@ -47,3 +47,20 @@ Active after this run: Noida follow ad (since 18 Nov 16:45 IST; pause 22 Nov at 
 | Mumbai rent trial (18228143677338500) | 15 h | 94 | 81.7% | 10.7% | 0 | FB 200, YT 134 | Eligible from 20:08 IST 20 Nov; dud signal |
 | Carousels | | 2 to 11 | | | 0 | | Reels only |
 | Forteasia project reel | | | | | | | Never boost |
+
+## 2026-11-21 (pull 05:14 UTC)
+Active ads (3, one TrueYards Follow ad set): Noida (120255661722430547, since 18 Nov 16:45), Steel rods (120255678724950547, since 19 Nov 13:26), Delhi (120255699197080547, since 20 Nov 10:49). No new ad today: 3 is the D28 maximum and no ad meets a pause rule yet (Noida reaches 4 days on 22 Nov 16:45, so the 23 Nov run pauses it and adds the next candidate).
+
+| Post | Age | Reach | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Steel rods trial (18508881529100400) | 70 h | 1,662 | 34.9% | 42.5% | 1.2 | FB 780 plays (top), YT 674 (77% avg view) | AD ACTIVE (Meta gives it about INR 0.03 a day); on the grid |
+| Delhi skyscrapers (18341456980274380) | 117 h | 1,569 | 43.9% | 34.0% | 1.3 | YT 52, Threads 11 | AD ACTIVE (INR 0.18 in a day); eligible to 26 Nov |
+| Noida twin towers (18131037979847506) | 111 h | 1,340 | 43.8% | 37.2% | 0 (4 saves) | YT 735 (top) | AD ACTIVE, takes almost all spend; pause in the 23 Nov run (4 days) |
+| Japan houses trial (18086326760340689) | 93 h | 407 | 47.5% | 31.1% | 0 | YT 91 | Next in line once an ad slot opens (eligible to 27 Nov) |
+| Burj Khalifa (18455422555132731) | 87 h | 309 | 59.4% | 23.8% | 0 | FB 231 (p93) | Weak on IG |
+| Jakarta (17995953015110577) | 63 h | 188 | 55.3% | 16.4% | 0 | FB 219, YT 218 (88% avg view) | Weak on IG; follow card yes |
+| Jaipur trial (18178380412407784) | 45 h | 134 | 64.0% | 16.5% | 0 | FB 204, 1 FB follow | Dud on IG |
+| SC stalled loans trial (17915522373487439) | 21 h | 115 | 80.7% | 9.0% | 0 | FB 74 | Under 24 h; dud signal |
+| Mumbai rent trial (18228143677338500) | 39 h | 95 | 81.7% | 10.7% | 0 | FB 201, Threads 17 | Dud on IG |
+| Kerala empty houses trial (18615292321064108) | 15 h | 104 | 79.0% | 11.8% | 0 | Threads 66 (p93), FB 217 | Under 24 h; dud signal on IG |
+| Forteasia project reel (18099738566652487) | | | | | | | Never boost (Forteasia) |
