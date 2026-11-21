@@ -1,4 +1,3 @@
-2026-11-21 07:54 UTC
-fitmeet-hero-aerial [image]: image ok
-fitmeet-hero-gate [image]: image ok
-fitmeet-hero-street [image]: image ok
+2026-11-21 08:59 UTC
+fitmeet-realgate-golden [image]: image ok
+fitmeet-realgate-day [image]: image ok
