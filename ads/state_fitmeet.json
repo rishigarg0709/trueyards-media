@@ -6,6 +6,9 @@
   "L-S1 invite feed, sign-up button": "120255721151070547",
   "L-S2 see FIT feed, sign-up button": "120255721151170547",
   "L-S3 square, sign-up button": "120255721151330547",
+  "L-T1 invite feed, sign-up v2": "120255721398350547",
+  "L-T2 see FIT feed, sign-up v2": "120255721398560547",
+  "L-T3 square, sign-up v2": "120255721398660547",
   "M1-1 invite feed": "120255720337920547",
   "M1-2 see FIT in person feed": "120255720338670547",
   "M1-3 invite square": "120255720340510547",
@@ -15,6 +18,9 @@
   "M1-S1 invite feed, sign-up button": "120255721150690547",
   "M1-S2 see FIT feed, sign-up button": "120255721150800547",
   "M1-S3 square, sign-up button": "120255721150970547",
+  "M1-T1 invite feed, sign-up v2": "120255721396300547",
+  "M1-T2 see FIT feed, sign-up v2": "120255721396850547",
+  "M1-T3 square, sign-up v2": "120255721397770547",
   "M1-V1 video soft piano": "120255721015330547",
   "M2-1 invite feed": "120255720342500547",
   "M2-2 see FIT in person feed": "120255720343850547",
@@ -27,7 +33,10 @@
   "W-6 square bigger title and date": "120255721018370547",
   "W-S1 invite feed, sign-up button": "120255721151780547",
   "W-S2 see FIT feed, sign-up button": "120255721152030547",
-  "W-S3 square, sign-up button": "120255721152600547"
+  "W-S3 square, sign-up button": "120255721152600547",
+  "W-T1 invite feed, sign-up v2": "120255721399280547",
+  "W-T2 see FIT feed, sign-up v2": "120255721400770547",
+  "W-T3 square, sign-up v2": "120255721401240547"
  },
  "adsets": {
   "L": "120255721015440547",
