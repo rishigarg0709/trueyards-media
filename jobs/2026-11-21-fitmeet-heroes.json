@@ -1,0 +1,35 @@
+[
+ {
+  "kind": "image",
+  "name": "fitmeet-hero-aerial",
+  "hero": true,
+  "aspect": "16:9",
+  "size": "4K",
+  "inputs": [
+   "ads/creatives/fit-meet/ref-industry.jpg"
+  ],
+  "prompt": "Low aerial drone photograph of a brand new, well-planned industrial township in Haryana, India: a wide straight 24-metre boulevard with a landscaped green median and street lights runs from the foreground into the distance, lined on both sides by rows of modern single-storey factory sheds and warehouses in white and blue-grey cladding with loading docks, a few trucks and containers parked at the docks, neat compound walls, young trees, everything new and orderly. Keep the building style and colours of the reference render (white and blue factory units, boundary walls) but make it look like a real photograph. Ultra high quality architectural photograph, shot on a full-frame camera with a 24mm tilt-shift lens, golden hour just after sunrise, warm amber and soft cream light, light morning haze over the flat farmland of Haryana, rich natural colours, crisp detail, premium real-estate advertising quality, realistic materials, no text, no letters, no signage words, no logos, no watermarks, no people's faces."
+ },
+ {
+  "kind": "image",
+  "name": "fitmeet-hero-gate",
+  "hero": true,
+  "aspect": "16:9",
+  "size": "4K",
+  "inputs": [
+   "ads/creatives/fit-meet/ref-entrance.jpg"
+  ],
+  "prompt": "Photograph of the grand entrance gate of an industrial township, matching the reference image's gate design exactly (a wide flat white canopy on two slatted pillars, a sculpture in a round landscaped island in front, a wide multi-lane road through the gate), but now at golden hour with warm sunlight, and beyond the gate the road leads to rows of modern factory sheds and warehouses with trucks, clearly showing it is an industrial township. Keep the gate's sign area blank. Ultra high quality architectural photograph, shot on a full-frame camera with a 24mm tilt-shift lens, golden hour just after sunrise, warm amber and soft cream light, light morning haze over the flat farmland of Haryana, rich natural colours, crisp detail, premium real-estate advertising quality, realistic materials, no text, no letters, no signage words, no logos, no watermarks, no people's faces."
+ },
+ {
+  "kind": "image",
+  "name": "fitmeet-hero-street",
+  "hero": true,
+  "aspect": "16:9",
+  "size": "4K",
+  "inputs": [
+   "ads/creatives/fit-meet/ref-industry.jpg"
+  ],
+  "prompt": "Eye-level photograph along a wide new industrial road inside a planned industrial township in Haryana: modern factory units with tall loading doors, clean fa\u00e7ades in white and blue-grey, a container truck pulling into a loading bay, landscaped verges with young trees, street lights, the road vanishing toward the horizon, sense of scale and opportunity. Ultra high quality architectural photograph, shot on a full-frame camera with a 24mm tilt-shift lens, golden hour just after sunrise, warm amber and soft cream light, light morning haze over the flat farmland of Haryana, rich natural colours, crisp detail, premium real-estate advertising quality, realistic materials, no text, no letters, no signage words, no logos, no watermarks, no people's faces."
+ }
+]
