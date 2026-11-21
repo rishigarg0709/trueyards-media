@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-21 19:19",
+ "checked_at": "2026-11-21 19:24",
  "checks": [
   {
    "id": "gemini",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "ok",
-   "left": 6654,
+   "left": 6640,
    "burn_per_day": 1005,
    "runway_days": 6.6,
-   "detail": "About INR 6654 left at INR 1005 a day"
+   "detail": "About INR 6640 left at INR 1005 a day"
   },
   {
    "id": "elevenlabs",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 105271,
+   "left": 103944,
    "burn_per_day": 5000,
-   "runway_days": 21.1,
-   "detail": "105,271 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 20.8,
+   "detail": "103,944 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
