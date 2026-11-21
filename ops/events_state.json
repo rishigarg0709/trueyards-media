@@ -1,5 +1,5 @@
 {
- "last_sha": "369748dffd1ec165b642d5824780b32247339473",
+ "last_sha": "e237aeaf7fe96eeecd1fe7bfbe5d67cdd2959f6b",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -43,9 +43,15 @@
    "budget": "20000",
    "camp": ""
   },
+  "adset:120255721016990547": {
+   "name": "FIT Meet W - reached on WhatsApp (warm)",
+   "status": "PAUSED",
+   "budget": "12000",
+   "camp": "FIT Business Meet 29 Nov"
+  },
   "adset:120255721015440547": {
    "name": "FIT Meet L - industry owners from our database",
-   "status": "IN_PROCESS",
+   "status": "PAUSED",
    "budget": "26000",
    "camp": "FIT Business Meet 29 Nov"
   },
