@@ -1,0 +1,27 @@
+{
+ "batch": "batches/wmwnms76pviauo5ndwi6ml8vsgx8hiy8s1aj",
+ "name": "prep-2026-11-22-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-21T17:12Z",
+ "images": [
+  {
+   "name": "2026-11-22-midday-1",
+   "prompt": "Bright midday street in a small Maharashtra village: a row of simple whitewashed and ochre houses with tiled roofs, every front entrance is an empty wooden door frame with no door at all, the nearest doorway in the centre opens straight into a sunlit room with a steel cupboard and brass pots visible inside, clear blue sky, hard sun, sharp short shadows, looks like a real news photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-22-carousel-1",
+   "prompt": "Empty bright new Indian apartment living room with white walls, light vitrified tile floor and a big window, a yellow tape measure stretched across the whole floor from wall to wall, sharp and clear, soft daylight, minimal, real interior photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-22-evening-1",
+   "prompt": "Bright daytime elevated view over a huge busy Indian city bus terminus: long rows of red, white and blue public buses parked in bays under a curved concrete canopy, sunlit open platforms, city buildings behind, clear blue sky, plain buses with no logos or lettering, looks like a real news photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}
