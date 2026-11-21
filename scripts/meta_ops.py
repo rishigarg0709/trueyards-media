@@ -480,12 +480,15 @@ def op_follow_spread(req):
     one reel. Ad sets of reels not in the list are paused. The old single-ad-set 'TrueYards Follow' is paused.
     Total daily spend never exceeds boost_daily_budget_inr; the monthly cap guard still applies."""
     guard()
-    ids = [str(m) for m in (req.get("media_ids") or [])][:4]
-    if not ids:
-        return {"error": "media_ids required (1 to 4 reels)"}
     total = int(CFG["boost_daily_budget_inr"])
-    each = max(40, total // len(ids)) if len(ids) * 40 <= total else total // len(ids)
-    out = {"each_inr": each, "reels": ids}
+    # Meta refuses a profile-visit ad set under about INR 95 a day (21 Nov 2026), so INR 200 funds 2 reels at a time;
+    # the daily boost run rotates which reels they are, so every reel gets its turn.
+    MIN_EACH = 100
+    ids = [str(m) for m in (req.get("media_ids") or [])][:max(1, total // MIN_EACH)]
+    if not ids:
+        return {"error": "media_ids required"}
+    each = total // len(ids)
+    out = {"each_inr": each, "reels": ids, "dropped": [str(m) for m in (req.get("media_ids") or [])][len(ids):]}
     r = call(f"{ACT}/campaigns", {"fields": "id,name,status", "limit": 50})
     camp = next((c for c in r.get("data", []) if c.get("name") == SPREAD_NAME), None)
     if not camp:
