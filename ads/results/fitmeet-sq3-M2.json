@@ -1,0 +1,20 @@
+{
+ "op": "add_ads",
+ "ran_at": "2026-11-21T11:24:17.753064Z",
+ "result": {
+  "status_used": "ACTIVE",
+  "ads": {
+   "M2-5 square full gate, one-line title": {
+    "ad": {
+     "id": "120255720830660547"
+    },
+    "creative_id": "1140960888889189",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  }
+ }
+}
