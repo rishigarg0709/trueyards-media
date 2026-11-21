@@ -1,0 +1,56 @@
+{
+ "at": "2026-11-21 18:36",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "meet",
+   "changes": false,
+   "result": {
+    "cfg": {
+     "on": true,
+     "key": "2026-11-29",
+     "title": "Forteasia Industrial Business Meet",
+     "whenText": "Sunday 29 Nov 2026, 10 am to 6 pm",
+     "place": "FIT, Meham-Beri Road, Village Anwal, Kalanaur, Rohtak",
+     "map": "https://maps.app.goo.gl/z73Ae28WbyHb8gKg6",
+     "slots": {
+      "s10": "10 am to 12 noon",
+      "s12": "12 noon to 3 pm",
+      "s15": "3 pm to 6 pm"
+     },
+     "pickups": [],
+     "offer": "",
+     "tag": "FIT Meet 29 Nov",
+     "closed": false,
+     "reminderTemplate": "fit_meet_reminder",
+     "reminders": [
+      {
+       "id": "r1",
+       "at": "2026-11-27T18:00"
+      },
+      {
+       "id": "r2",
+       "at": "2026-11-28T18:00"
+      },
+      {
+       "id": "r3",
+       "at": "2026-11-29T08:30"
+      }
+     ]
+    },
+    "stats": {
+     "registered": 0,
+     "saidNo": 0,
+     "confirmed": 0,
+     "peopleExpected": 0,
+     "bySlot": {},
+     "pickups": {}
+    },
+    "remindersSent": {}
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-21T13:06:53.590Z"
+  }
+ ]
+}
