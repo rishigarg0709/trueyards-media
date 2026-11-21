@@ -228,11 +228,16 @@ def upload_image(path):
 def make_ad(page_id, adset_id, ad, status):
     h = upload_image(ad["image"])
     link = {"image_hash": h, "link": "https://api.whatsapp.com/send", "message": ad["text"], "name": ad["headline"],
-            "call_to_action": {"type": "WHATSAPP_MESSAGE", "value": {"app_destination": "WHATSAPP"}}}
+            "call_to_action": {"type": ad.get("cta", "WHATSAPP_MESSAGE"), "value": {"app_destination": "WHATSAPP"}}}
     spec = {"page_id": page_id, "link_data": link}
     if CFG.get("instagram_user_id"):
         spec["instagram_user_id"] = CFG["instagram_user_id"]
     cr, errs, notes = create_creative(f"FIT {ad['name']}", spec, "link_data", ad)
+    if "id" not in cr and ad.get("cta"):
+        # Meta refused that button label for a WhatsApp ad: fall back to the standard WhatsApp button
+        link["call_to_action"] = {"type": "WHATSAPP_MESSAGE", "value": {"app_destination": "WHATSAPP"}}
+        cr, errs2, notes = create_creative(f"FIT {ad['name']}", spec, "link_data", ad)
+        errs = errs + errs2; notes = dict(notes or {}, cta_fallback=True)
     if "id" not in cr:
         return {"error": errs}
     a = call(f"{ACT}/ads", {"name": ad["name"], "adset_id": adset_id, "creative": {"creative_id": cr["id"]}, "status": status}, "POST")
@@ -1084,6 +1089,20 @@ def op_pause_adset(req):
         return {"error": f"ad set {name} not in this campaign"}
     return call(s_["id"], {"status": "PAUSED"}, "POST") | {"name": name}
 OPS["pause_adset"] = op_pause_adset
+
+def op_archive_stale(req):
+    """Archive every ad in this product's campaign whose name is not in the config any more (so launch cannot revive it)."""
+    camp = find_campaign()
+    if not camp:
+        return {"error": "no campaign"}
+    keep = {ad["name"] for a in CFG["adsets"] for ad in a.get("ads", []) + a.get("video_ads", [])}
+    out = {}
+    for a in ads_of(camp["id"]):
+        if a["name"] not in keep and a["status"] != "ARCHIVED":
+            out[a["name"]] = call(a["id"], {"status": "ARCHIVED"}, "POST")
+    return out or {"note": "nothing to archive"}
+OPS["archive_stale"] = op_archive_stale
+
 
 
 
