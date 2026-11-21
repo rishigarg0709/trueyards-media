@@ -70,7 +70,7 @@
       "key": "J",
       "name": "FV Jind J - Advantage+ Jind 30 km",
       "enabled": true,
-      "daily_budget_inr": 150,
+      "daily_budget_inr": 300,
       "age_min": 25,
       "age_max": 65,
       "advantage_audience": 1,
@@ -126,7 +126,7 @@
     {
       "key": "R",
       "name": "FV Jind R - customers and site visitors",
-      "enabled": true,
+      "enabled": false,
       "daily_budget_inr": 150,
       "age_min": 18,
       "age_max": 65,
@@ -158,10 +158,12 @@
           "prefill": "Hi, I want to visit the Flower Valley Jind commercial plots."
         }
       ],
-      "video_ads": []
+      "video_ads": [],
+      "paused_note": "Rishi 21 Nov 18:33: paused, INR 178 for 1 chat; budget moved to J"
     }
   ],
   "note_launch": "Relaunched 18 Nov 16:25 IST on Rishi's go, with the v2 WhatsApp template and the commercial brochure.",
   "note_week": "Rishi 18 Nov 17:24: INR 500/day total for Jind for 7 days; Meta INR 300 (J new people 150, R customers and visitors 150 from 20 Nov), WhatsApp INR 200.",
-  "note_v3": "Rishi 20 Nov 12:12: Jind v3 dark and light statics approved for Facebook and Instagram; added to ad sets J and R. Light creative updated by the Creative agent at 12:17; first light ads paused and replaced."
+  "note_v3": "Rishi 20 Nov 12:12: Jind v3 dark and light statics approved for Facebook and Instagram; added to ad sets J and R. Light creative updated by the Creative agent at 12:17; first light ads paused and replaced.",
+  "note_budget_21nov": "Rishi 21 Nov 18:33: R paused, J raised to INR 300/day (total unchanged)."
 }
