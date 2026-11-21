@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "image",
+  "name": "fitmeet-gate-vertical",
+  "hero": true,
+  "aspect": "9:16",
+  "size": "4K",
+  "inputs": [
+   "library/media/fitmeet-realgate-v2-golden.png",
+   "ads/creatives/fit-meet/ref-real-gate.jpg"
+  ],
+  "prompt": "Recompose the first reference image as a tall vertical 9:16 photograph of the SAME gate of Forteasia Industrial Township: the whole gate must be visible in the frame, with both slatted grey pillars, the white flat canopy and the full lettering 'FORTEASIA INDUSTRIAL TOWNSHIP' readable across the top third, the FIT logo on the left pillar and the round blue Forteasia logo with red FORTEASIA letters on the right pillar, exactly as in the reference. Camera: low eye-level, standing further back on the centre of the approach road, slight upward angle, so the gate is centred and fills the width, with warm golden-hour sky above it and the clean asphalt road with the zebra crossing, lane arrows, red-and-white boom barriers, bollards, flower beds, palms and red gulmohar trees in the lower half leading the eye to the gate. Photorealistic, premium architectural photograph, warm soft sunrise light, crisp detail, high dynamic range. No people, no vehicles, no extra text or signage, do not change the architecture, logos or lettering."
+ },
+ {
+  "kind": "image",
+  "name": "fitmeet-gate-vertical-b",
+  "hero": true,
+  "aspect": "9:16",
+  "size": "4K",
+  "inputs": [
+   "library/media/fitmeet-realgate-v2-golden.png",
+   "ads/creatives/fit-meet/ref-real-gate.jpg"
+  ],
+  "prompt": "Recompose the first reference image as a tall vertical 9:16 photograph of the SAME gate of Forteasia Industrial Township: the whole gate must be visible in the frame, with both slatted grey pillars, the white flat canopy and the full lettering 'FORTEASIA INDUSTRIAL TOWNSHIP' readable across the top third, the FIT logo on the left pillar and the round blue Forteasia logo with red FORTEASIA letters on the right pillar, exactly as in the reference. Camera: low eye-level, standing further back on the centre of the approach road, slight upward angle, so the gate is centred and fills the width, with warm golden-hour sky above it and the clean asphalt road with the zebra crossing, lane arrows, red-and-white boom barriers, bollards, flower beds, palms and red gulmohar trees in the lower half leading the eye to the gate. Photorealistic, premium architectural photograph, warm soft sunrise light, crisp detail, high dynamic range. No people, no vehicles, no extra text or signage, do not change the architecture, logos or lettering. Slightly wider view showing more of the tree-lined road in front."
+ }
+]
