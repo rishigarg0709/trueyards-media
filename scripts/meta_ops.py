@@ -166,7 +166,7 @@ def op_boost_status(req):
     return {"month_spend_inr": month_spend(), "campaigns": camps, "ads": ads, "insights_7d": ins, "insights_today": today, "adsets": sets}
 
 # ---------- spend ops (guarded) ----------
-GROWTH_CAMPAIGNS = ("TrueYards Boost", "TrueYards Follow")
+GROWTH_CAMPAIGNS = ("TrueYards Boost", "TrueYards Follow", "TrueYards Follow - spread")
 BOOST_NAME = CFG.get("boost_campaign_name", "TrueYards Boost")
 
 def guard():
@@ -471,8 +471,62 @@ def op_follow_setup(req):
         out["old_engagement_campaign_paused"] = call(old["id"], {"status": "PAUSED"}, "POST")
     return out
 
+
+SPREAD_NAME = "TrueYards Follow - spread"
+def op_follow_spread(req):
+    """Rishi, 21 Nov 2026: one boosted reel with all the views looks artificial, so spread the growth money.
+    {media_ids:[up to 4 reel ids]} -> campaign 'TrueYards Follow - spread' with NO campaign budget and one ad set per
+    reel, each at an equal share of config boost_daily_budget_inr (INR 200 / 4 = 50), so Meta cannot pour it all into
+    one reel. Ad sets of reels not in the list are paused. The old single-ad-set 'TrueYards Follow' is paused.
+    Total daily spend never exceeds boost_daily_budget_inr; the monthly cap guard still applies."""
+    guard()
+    ids = [str(m) for m in (req.get("media_ids") or [])][:4]
+    if not ids:
+        return {"error": "media_ids required (1 to 4 reels)"}
+    total = int(CFG["boost_daily_budget_inr"])
+    each = max(40, total // len(ids)) if len(ids) * 40 <= total else total // len(ids)
+    out = {"each_inr": each, "reels": ids}
+    r = call(f"{ACT}/campaigns", {"fields": "id,name,status", "limit": 50})
+    camp = next((c for c in r.get("data", []) if c.get("name") == SPREAD_NAME), None)
+    if not camp:
+        camp = call(f"{ACT}/campaigns", {"name": SPREAD_NAME, "objective": "OUTCOME_TRAFFIC", "status": "PAUSED",
+                    "special_ad_categories": [], "is_adset_budget_sharing_enabled": False}, "POST")
+        if "error" in camp:
+            return {"campaign_error": camp}
+    out["campaign"] = camp.get("id")
+    sets = call(f"{camp['id']}/adsets", {"fields": "id,name,status", "limit": 50}).get("data", [])
+    by = {s["name"].split(" ")[-1]: s for s in sets}
+    p = page()
+    out["adsets"] = {}
+    for mid in ids:
+        if mid in by:
+            out["adsets"][mid] = {"kept": call(by[mid]["id"], {"status": "ACTIVE", "daily_budget": each * 100}, "POST")}
+            continue
+        a = call(f"{ACT}/adsets", {"campaign_id": camp["id"], "name": f"TY reel {mid}", "status": "ACTIVE",
+                 "daily_budget": each * 100, "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "billing_event": "IMPRESSIONS",
+                 "optimization_goal": "VISIT_INSTAGRAM_PROFILE", "destination_type": "INSTAGRAM_PROFILE",
+                 "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "publisher_platforms": ["instagram"],
+                               "instagram_positions": ["stream", "reels"], "targeting_automation": {"advantage_audience": 1}}}, "POST")
+        if "id" not in a:
+            out["adsets"][mid] = {"adset_error": a}; continue
+        cr = {"name": f"follow {mid}", "object_id": p["id"], "instagram_user_id": CFG["ig_user_id"], "source_instagram_media_id": mid}
+        creative = call(f"{ACT}/adcreatives", {**cr, "call_to_action": {"type": "VIEW_INSTAGRAM_PROFILE", "value": {"link": "https://www.instagram.com/trueyards.in/"}}}, "POST")
+        if "error" in creative:
+            creative = call(f"{ACT}/adcreatives", cr, "POST")
+        if "error" in creative:
+            out["adsets"][mid] = {"adset": a["id"], "creative_error": creative}
+            call(a["id"], {"status": "PAUSED"}, "POST"); continue
+        ad = call(f"{ACT}/ads", {"name": f"follow {mid}", "adset_id": a["id"], "creative": {"creative_id": creative["id"]}, "status": "ACTIVE"}, "POST")
+        out["adsets"][mid] = {"adset": a["id"], "ad": ad}
+    out["paused_other_reels"] = {k: call(v["id"], {"status": "PAUSED"}, "POST") for k, v in by.items() if k not in ids and v.get("status") != "PAUSED"}
+    out["campaign_on"] = call(camp["id"], {"status": "ACTIVE"}, "POST")
+    old = next((c for c in r.get("data", []) if c.get("name") == "TrueYards Follow" and c.get("status") == "ACTIVE"), None)
+    if old:
+        out["old_follow_paused"] = call(old["id"], {"status": "PAUSED"}, "POST")
+    return out
+
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
-       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget, "ad_breakdown": op_ad_breakdown, "follow_setup": op_follow_setup,
+       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget, "ad_breakdown": op_ad_breakdown, "follow_setup": op_follow_setup, "follow_spread": op_follow_spread,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
        "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide, "brand": op_brand}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
