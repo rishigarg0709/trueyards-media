@@ -1,0 +1,120 @@
+{
+ "at": "2026-11-21 12:12",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "jindap.config",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "cfg": {
+     "on": true,
+     "budgetInr": 200,
+     "maxBudgetInr": 500,
+     "costPerDelivered": 1.02,
+     "planAt": "08:00",
+     "slots": [
+      "10:15",
+      "12:30",
+      "16:45",
+      "19:15"
+     ],
+     "retryMaxShare": 0.3,
+     "retryGapsDays": [
+      4,
+      6,
+      8
+     ],
+     "followShare": {
+      "start": 0.05,
+      "min": 0.05,
+      "max": 0.25,
+      "evidence": {
+       "delivered": 300,
+       "leads": 15
+      }
+     },
+     "followGapDays": 4,
+     "followMax": 4,
+     "followTemplates": [
+      "fv_jind_sco_v2",
+      "fv_jind_video_v2"
+     ],
+     "firstTemplate": "fv_jind_sco_v2",
+     "warm": {
+      "gapDays": 3,
+      "max": 3,
+      "rotation": [
+       "fv_jind_video_v2",
+       "fv_jind_visit_invite",
+       "fv_jind_sco_v2"
+      ]
+     },
+     "radii": [
+      10,
+      25,
+      40
+     ],
+     "center": {
+      "lat": 29.3159,
+      "lng": 76.315
+     },
+     "groups": "Retail shops|Traders|Hotels, restaurants|Auto dealers|Professionals|Doctors|Building materials|Electrical & electronics|Pharma|Furniture|Gyms, salons",
+     "notGroups": "Real estate|Government|Schools"
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-21T06:42:33.407Z"
+  },
+  {
+   "ok": true,
+   "op": "jindap.preview",
+   "changes": false,
+   "result": {
+    "ok": true,
+    "report": {
+     "day": "2026-11-21",
+     "budgetInr": 200,
+     "capacity": 196,
+     "counts": {
+      "warm": 0,
+      "retry": 0,
+      "follow": 0,
+      "new": 196
+     },
+     "followShare": {
+      "share": 0.05,
+      "fd": 0,
+      "fl": 0,
+      "why": "learning"
+     },
+     "slotShares": {
+      "10:15": 0.25,
+      "12:30": 0.25,
+      "16:45": 0.25,
+      "19:15": 0.25
+     },
+     "expectedCost": 190,
+     "radius": 10,
+     "freshMatched": 600,
+     "freshError": "",
+     "headersNeeded": true,
+     "dry": true,
+     "yesterday": {
+      "date": "2026-11-20",
+      "sent": 199,
+      "delivered": 105,
+      "read": 58,
+      "leads": 4,
+      "optouts": 0,
+      "cost": 107,
+      "costPerLead": 27
+     }
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-21T06:42:46.225Z"
+  }
+ ]
+}
