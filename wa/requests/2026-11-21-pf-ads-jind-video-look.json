@@ -1,0 +1,7 @@
+{"by": "Paid Media Buyer", "ops": [
+ {"op": "audiences"},
+ {"op": "templates", "args": {"name": "fv_jind_video"}},
+ {"op": "switches"},
+ {"op": "broadcasts", "args": {"days": 7, "name": "Jind"}},
+ {"op": "audience.fromBroadcasts", "args": {"match": "FV Jind SCO v2:", "leadTag": "FV Jind SCO", "tag": "FV Jind v2 non-tappers", "dry": true}}
+]}
