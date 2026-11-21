@@ -1,0 +1,61 @@
+{
+ "op": "launch",
+ "ran_at": "2026-11-21T12:57:50.666465Z",
+ "result": {
+  "ads": [
+   {
+    "success": true,
+    "name": "W-T2 see FIT feed, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "M1-T2 see FIT feed, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "L-T2 see FIT feed, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "M1-T3 square, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "W-T3 square, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "W-T1 invite feed, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "L-T3 square, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "L-T1 invite feed, sign-up v2"
+   },
+   {
+    "success": true,
+    "name": "M1-T1 invite feed, sign-up v2"
+   }
+  ],
+  "adsets": [
+   {
+    "success": true,
+    "name": "FIT Meet W - reached on WhatsApp (warm)"
+   },
+   {
+    "success": true,
+    "name": "FIT Meet L - industry owners from our database"
+   },
+   {
+    "success": true,
+    "name": "FIT Meet M1 - industry, Rohtak and Haryana belt"
+   }
+  ],
+  "campaign": {
+   "success": true
+  }
+ }
+}
