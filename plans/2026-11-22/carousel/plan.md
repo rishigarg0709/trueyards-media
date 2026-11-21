@@ -2,7 +2,7 @@
 
 - IMPORTANT for the 17:13 run: Directive D41 (Rishi, 21 Nov 12:41, ACTIVE to 28 Nov) says no daily carousel for 7 days; the freed carousel slot carries reels made from the 3 best carousel topics (stamp duty by buyer, super built-up area, RERA CC OC) in the D41 opening style. So this slot is planned as a 9:16 REEL: build it with the reel pipeline (REEL_PIPELINE.md), publish trial first like any reel (one Instagram copy as a Trial Reel), and log it in log.md as "REEL (carousel slot, D41)". The carousel canvas rules do not apply while D41 is active. If the 17:13 task cannot build a reel, it should skip the slot and say so, not publish a carousel.
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice.
-- Batch status: BATCH_STATUS
+- Batch status: CONFIRMED submitted 2026-11-21 17:12 UTC (22:42 IST): batches/pending/prep-2026-11-22-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-22.json (13 Flash). First push of the job failed (job file was an object, not a list) and was fixed in commit 83c86d9; nothing was generated twice. Real photos in fetch/2026-11-22.txt are in library/stock/ (all 7 arrived). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 - Opening (D41): frame 0 is full-frame motion (a tape measure snapping across a bright empty flat), the contradiction line SPOKEN from 0 s, no text card or bare number on screen before 1.5 s; the number on screen (1,200 vs about 920) lands at 3 to 5 s.
 
 ## Choice

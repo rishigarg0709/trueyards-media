@@ -1,7 +1,7 @@
 # 2026-11-22 evening reel (19:07 IST): Bengaluru's biggest bus station used to be a lake
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice.
-- Batch status: BATCH_STATUS
+- Batch status: CONFIRMED submitted 2026-11-21 17:12 UTC (22:42 IST): batches/pending/prep-2026-11-22-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-22.json (13 Flash). First push of the job failed (job file was an object, not a list) and was fixed in commit 83c86d9; nothing was generated twice. Real photos in fetch/2026-11-22.txt are in library/stock/ (all 7 arrived). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 - Opening (D41): frame 0 is full-frame motion of a famous Indian place (elevated push-in over the busy bus terminus), the contradiction line SPOKEN from 0 s, no text before 1.5 s; at about 1.5 to 2.5 s the terminus dissolves into the lake from the same viewpoint (match cut, the pattern interrupt); the first number (261 lakes) lands later, the year 1969 at about 4 s.
 
 ## Choice

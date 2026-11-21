@@ -1,7 +1,7 @@
 # 2026-11-22 midday reel (12:23 IST): Shani Shingnapur, the village where houses have no front doors
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice.
-- Batch status: BATCH_STATUS
+- Batch status: CONFIRMED submitted 2026-11-21 17:12 UTC (22:42 IST): batches/pending/prep-2026-11-22-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-22.json (13 Flash). First push of the job failed (job file was an object, not a list) and was fixed in commit 83c86d9; nothing was generated twice. Real photos in fetch/2026-11-22.txt are in library/stock/ (all 7 arrived). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 - Opening (Directive D41, Rishi 21 Nov 12:41, active to 28 Nov): frame 0 is full-frame motion of the real-looking village street (push-in through the empty door frame), the why line SPOKEN from 0 s, no text card, label bar or bare number before 1.5 s; the first number (35 km) lands at 3 to 5 s. This is one of the 80% D41 reels, logged under test X14 (full-frame motion opening).
 
 ## Choice
