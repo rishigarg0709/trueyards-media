@@ -95,5 +95,24 @@
    "size": "2K"
   }
  ],
- "fallback_after_utc": "2026-11-23T05:30Z"
+ "fallback_after_utc": "2026-11-23T05:30Z",
+ "saved": [
+  "2026-11-23-midday-2",
+  "2026-11-23-midday-3",
+  "2026-11-23-midday-4",
+  "2026-11-23-midday-5",
+  "2026-11-23-midday-6",
+  "2026-11-23-carousel-2",
+  "2026-11-23-carousel-3",
+  "2026-11-23-carousel-4",
+  "2026-11-23-carousel-5",
+  "2026-11-23-carousel-6",
+  "2026-11-23-evening-2",
+  "2026-11-23-evening-3",
+  "2026-11-23-evening-4",
+  "2026-11-23-evening-5",
+  "2026-11-23-evening-6"
+ ],
+ "missing": [],
+ "finished": "2026-11-22T17:20Z"
 }
