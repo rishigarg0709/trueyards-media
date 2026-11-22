@@ -81,3 +81,5 @@ Hook and story check (Rishi, 2026-11-18): before publishing, measure the first 2
 Image failures (2026-11-18): if any image job returns a billing or credit error (HTTP 402, quota, prepayment depleted), do not quietly fall back. Add or update a NeedsRishi row in the Control Room (top up Gemini credits in Google AI Studio) and say so in the final phone line; then build with real photos as the fallback.
 
 Follow prompt (2026-11-18, boost reached 2,500 people with 280 likes but only about 2 new follows): every reel ends with a short follow card in the last 1.5 s ("Follow for one real estate story a day", logo, @trueyards.in) that does not break the loop, and every caption ends with one line giving a reason to follow (what they get daily). Boosted posts especially need it.
+Voiced follow outro (Rishi, 22 Nov 2026, test X15): alternate reels end with the ~6 s voiced, animated outro in reels/_outro (narrator says like and follow, the card taps the heart and Follow, seven day boxes fill), the others keep the silent 1.5 s follow card; compare follows per 1,000 reach after a week before making it the default.
+
