@@ -64,3 +64,20 @@ Active ads (3, one TrueYards Follow ad set): Noida (120255661722430547, since 18
 | Mumbai rent trial (18228143677338500) | 39 h | 95 | 81.7% | 10.7% | 0 | FB 201, Threads 17 | Dud on IG |
 | Kerala empty houses trial (18615292321064108) | 15 h | 104 | 79.0% | 11.8% | 0 | Threads 66 (p93), FB 217 | Under 24 h; dud signal on IG |
 | Forteasia project reel (18099738566652487) | | | | | | | Never boost (Forteasia) |
+
+## 2026-11-22 (pull 05:20 UTC)
+Rule now D40 (Rishi, 21 Nov 12:14): campaign "TrueYards Follow - spread", one ad set per reel at INR 100 a day, 2 reels at a time, each reel a 2-day turn, least paid first, skip reels with organic skip over 75%, grid reels before trials. Running: Burj and Jakarta (turn started 21 Nov 12:20, ends about 23 Nov 12:20). Per-reel follows are still not returned by the API, so ranking uses account follower change on ad days, then skip, hold and sends.
+
+| Post | Age | Reach (organic) | Skip | Hold | Paid so far (INR) | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Steel rods trial, on grid (18508881529100400) | 94 h | 1,666 | 34.9% | 42.4% | 0.11 | FB 780 plays (p100), YT 676 (p92) | NEXT TURN 23 Nov (best eligible reel, almost no paid spend; eligible to 28 Nov) |
+| Why Delhi has no skyscrapers (18341456980274380) | 141 h | 1,569 | 43.9% | 34.0% | 0.18 | YT 52 | NEXT TURN 23 Nov with Steel rods (ages out 26 Nov) |
+| Japan houses trial (18086326760340689) | 117 h | 408 | 47.6% | 31.1% | 0 | YT 91 | After Steel rods and Delhi (25 Nov) |
+| Hong Kong tiny homes trial (17940674607125722) | 21 h | 125 | 48.5% | 21.2% | 0 | YT 341 (p83), X 9 (p94) | Eligible from 13:36 IST 22 Nov; trial, not on grid yet |
+| Aangan courtyard trial (18140554237642623) | 15 h | 224 | 48.9% | 23.1% | 0 | YT 315 (13 engagements), X 10 (p100) | Eligible from 19:58 IST 22 Nov; trial, not on grid yet |
+| Jakarta sinking (17995953015110577) | 87 h | 190 | 55.0% | 16.7% | 47.27 + today | FB 219, YT 219 | RUNNING (spread), day 2 of 2 |
+| Burj Khalifa on sand (18455422555132731) | 111 h | 310 | 59.5% | 23.7% | 46.55 + today | FB 232 | RUNNING (spread), day 2 of 2 |
+| Noida twin towers (18131037979847506) | 135 h | 1,344 | 43.7% | 37.0% | about 634 | YT 735 (p100) | Had its turn (most paid); ages out 26 Nov |
+| Jaipur pink trial (18178380412407784) | 69 h | 134 | 64.0% | 16.5% | 0 | FB 206 | Last in line |
+| Mumbai rent, SC stalled loans, Kerala trials | 39 to 63 h | 95 to 117 | 79 to 82% | 9 to 12% | 0 | Kerala FB 249, Threads 104 | Not eligible (skip over 75%) |
+| Forteasia project reel (18099738566652487) | | | | | | | Never boost |
