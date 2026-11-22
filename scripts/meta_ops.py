@@ -472,6 +472,64 @@ def op_follow_setup(req):
     return out
 
 
+WARM_PREFIX = "TY warm: "
+def warm_audiences():
+    """Custom audiences whose name starts with 'TY warm: ' (made by op follow_warm). Empty list = all of India."""
+    r = call(f"{ACT}/customaudiences", {"fields": "id,name", "limit": 200})
+    return [{"id": a["id"], "name": a["name"]} for a in r.get("data", []) if a.get("name", "").startswith(WARM_PREFIX)]
+
+def spread_targeting(warm):
+    """Targeting for a 'TrueYards Follow - spread' ad set. With warm audiences (Rishi, 22 Nov 2026, N50) Meta starts from
+    people who already engaged with @trueyards.in; Advantage audience stays on so it can go wider when the warm group is
+    used up and the full daily budget is still spent (D29)."""
+    t = {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "publisher_platforms": ["instagram"],
+         "instagram_positions": ["stream", "reels"], "targeting_automation": {"advantage_audience": 1}}
+    if warm:
+        t["custom_audiences"] = [{"id": a["id"]} for a in warm]
+    return t
+
+def op_follow_warm(req):
+    """Rishi, 22 Nov 2026 (N50): point the growth ads at a warm audience. Creates (once) the engagement audiences
+    'TY warm: IG engagers 30d' (visited the profile or engaged with any post or ad) and 'TY warm: reel viewers 30d'
+    (watched 3 s of a recent reel), then sets them on every ad set of 'TrueYards Follow - spread'. No budget, bid or
+    status is changed. Instagram followers cannot be excluded through the API. {dry:true} only reports."""
+    out = {}
+    have = {a["name"]: a for a in warm_audiences()}
+    ig = CFG["ig_user_id"]
+    n1 = WARM_PREFIX + "IG engagers 30d"
+    if n1 not in have and not req.get("dry"):
+        rule = {"inclusions": {"operator": "or", "rules": [{"event_sources": [{"id": ig, "type": "ig_business"}],
+                "retention_seconds": 2592000, "filter": {"operator": "and", "filters": [
+                    {"field": "event", "operator": "eq", "value": "ig_business_profile_all"}]}}]}}
+        out["create_engagers"] = call(f"{ACT}/customaudiences", {"name": n1, "rule": rule, "prefill": 1,
+                                      "description": "Visited @trueyards.in or engaged with its posts or ads, last 30 days"}, "POST")
+    n2 = WARM_PREFIX + "reel viewers 30d"
+    if n2 not in have and not req.get("dry"):
+        m = call(f"{ig}/media", {"fields": "id,media_type,media_product_type", "limit": 50})
+        vids = [x["id"] for x in m.get("data", []) if x.get("media_type") == "VIDEO"][:40]
+        if vids:
+            out["create_viewers"] = call(f"{ACT}/customaudiences", {"name": n2, "subtype": "ENGAGEMENT", "prefill": 1,
+                                         "retention_days": 30, "description": "Watched 3 s of a TrueYards reel, last 30 days",
+                                         "rule": [{"object_id": v, "event_name": "video_watched"} for v in vids]}, "POST")
+            out["viewer_videos"] = len(vids)
+    warm = warm_audiences()
+    out["warm_audiences"] = [call(a["id"], {"fields": "id,name,approximate_count_lower_bound,approximate_count_upper_bound,operation_status,delivery_status"}) for a in warm]
+    if not warm:
+        out["note"] = "no warm audience exists, ad sets left on all of India"
+        return out
+    r = call(f"{ACT}/campaigns", {"fields": "id,name,status", "limit": 50})
+    camp = next((c for c in r.get("data", []) if c.get("name") == SPREAD_NAME), None)
+    if not camp:
+        out["note"] = "spread campaign not found"; return out
+    sets = call(f"{camp['id']}/adsets", {"fields": "id,name,status,daily_budget", "limit": 50}).get("data", [])
+    out["adsets"] = {}
+    for s_ in sets:
+        if req.get("dry"):
+            out["adsets"][s_["name"]] = {"status": s_.get("status"), "would_set": True}; continue
+        out["adsets"][s_["name"]] = {"status": s_.get("status"), "daily_budget": s_.get("daily_budget"),
+                                     "set": call(s_["id"], {"targeting": spread_targeting(warm)}, "POST")}
+    return out
+
 SPREAD_NAME = "TrueYards Follow - spread"
 def op_follow_spread(req):
     """Rishi, 21 Nov 2026: one boosted reel with all the views looks artificial, so spread the growth money.
@@ -500,6 +558,8 @@ def op_follow_spread(req):
     sets = call(f"{camp['id']}/adsets", {"fields": "id,name,status", "limit": 50}).get("data", [])
     by = {s["name"].split(" ")[-1]: s for s in sets}
     p = page()
+    warm = warm_audiences()
+    out["warm_audiences"] = warm
     out["adsets"] = {}
     for mid in ids:
         if mid in by:
@@ -508,8 +568,7 @@ def op_follow_spread(req):
         a = call(f"{ACT}/adsets", {"campaign_id": camp["id"], "name": f"TY reel {mid}", "status": "ACTIVE",
                  "daily_budget": each * 100, "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "billing_event": "IMPRESSIONS",
                  "optimization_goal": "VISIT_INSTAGRAM_PROFILE", "destination_type": "INSTAGRAM_PROFILE",
-                 "targeting": {"geo_locations": {"countries": ["IN"]}, "age_min": 22, "publisher_platforms": ["instagram"],
-                               "instagram_positions": ["stream", "reels"], "targeting_automation": {"advantage_audience": 1}}}, "POST")
+                 "targeting": spread_targeting(warm)}, "POST")
         if "id" not in a:
             out["adsets"][mid] = {"adset_error": a}; continue
         cr = {"name": f"follow {mid}", "object_id": p["id"], "instagram_user_id": CFG["ig_user_id"], "source_instagram_media_id": mid}
@@ -529,7 +588,7 @@ def op_follow_spread(req):
     return out
 
 OPS = {"test": op_test, "insights": op_insights, "boost_status": op_boost_status,
-       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget, "ad_breakdown": op_ad_breakdown, "follow_setup": op_follow_setup, "follow_spread": op_follow_spread,
+       "boost_setup": op_boost_setup, "boost_post": op_boost_post, "pause_ad": op_pause_ad, "pause_all": op_pause_all, "set_budget": op_set_budget, "ad_breakdown": op_ad_breakdown, "follow_setup": op_follow_setup, "follow_spread": op_follow_spread, "follow_warm": op_follow_warm,
        "ig_reel": op_ig_reel, "ig_carousel": op_ig_carousel, "ig_story": op_ig_story, "fb_reel": op_fb_reel, "fb_photos": op_fb_photos,
        "comments": op_comments, "fb_posts": op_fb_posts, "fb_delete": op_fb_delete, "reply": op_reply, "hide": op_hide, "brand": op_brand}
 # Deliberately absent: any op that changes budget, billing or creates other campaigns.
