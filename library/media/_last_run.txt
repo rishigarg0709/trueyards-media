@@ -1,5 +1,3 @@
-2026-11-22 07:01 UTC
-el-usage [usage]: usage ok
-shani-vo-1 [voice]: voice ok
-shani-vo-2 [voice]: voice ok
-shani-beat [music]: music ok 720605 bytes
+2026-11-22 12:02 UTC
+carpet-vo-1 [voice]: voice ok
+carpet-vo-2 [voice]: voice ok
