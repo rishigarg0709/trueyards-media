@@ -1,0 +1,121 @@
+[
+ {
+  "kind": "batch_submit",
+  "name": "prep-2026-11-23",
+  "model": "gemini-3-pro-image",
+  "fallback_after_utc": "2026-11-23T05:30Z",
+  "images": [
+   {
+    "name": "2026-11-23-midday-1",
+    "prompt": "Front wall of an ordinary two-storey Indian residential house on a quiet residential street, plastered boundary wall painted pale cream with a black iron gate, a freshly whitewashed blank rectangular panel at eye level on the wall ready for hand-painted lettering, a small tin of red paint and a flat brush resting on the wall ledge, potted plant by the gate, real documentary photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-23-midday-2",
+    "prompt": "An old single-storey Kerala house with a sloping red clay tiled roof, empty for years: closed wooden front door with a heavy padlock, dry leaves piled on the veranda, dust on the steps, a few weeds in the courtyard, coconut palms behind, real documentary photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-midday-3",
+    "prompt": "A sub-registrar office counter in India seen from the public side, no people: a wooden desk with sheets of green-bordered stamp paper, a thick cloth-bound register open, a purple ink pad for thumbprints, a wooden rubber stamp, old steel cupboards and files behind, tube light, real documentary photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-midday-4",
+    "prompt": "A municipal property tax receipt slip lying on a wooden table beside a single old brass house key and a basic calculator, a cup of tea at the edge, soft window light, the receipt printing is blurred and unreadable, real documentary photograph, close tabletop view. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-midday-5",
+    "prompt": "An empty vacant residential plot in an Indian suburb, boundary of low brick wall with a padlocked iron gate, tall dry grass and weeds inside, a plain blank white metal signboard on two poles at the front, neighbouring finished houses on both sides, real documentary photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-midday-6",
+    "prompt": "Stacks of Indian land record files in a government record room, buff-coloured folders tied with red cotton tape, an encumbrance certificate style document with a round official seal on top (text blurred, unreadable), steel racks behind, real documentary photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour (bright overcast daylight, not dusk). photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-carousel-1",
+    "prompt": "A sunlit desk by a large window in a Delhi apartment, a property sale deed on green-bordered Indian stamp paper in sharp focus (text blurred, unreadable), a brass-handled rubber stamp held just above it about to come down, a fountain pen and a set of new house keys beside it, apartment blocks softly visible outside the window, real photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-23-carousel-2",
+    "prompt": "Hyper-realistic photograph of two completely identical apartment front doors side by side in a bright, clean residential corridor, same wood, same brass handles, same doormats, perfectly symmetrical, blank brass name plates, looks like a real interior photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-carousel-3",
+    "prompt": "A traditional brass balance scale on a clean white table in soft daylight, neat bundles of Indian rupee notes on both pans, one pan clearly lower than the other, real photograph, close tabletop view, currency details soft and not readable. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-carousel-4",
+    "prompt": "Modern residential towers of Gurugram, Haryana, in bright daylight with a clear blue sky, green trees and a wide road in the foreground, real architectural photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-carousel-5",
+    "prompt": "Sea-facing residential high-rise towers along the Mumbai coastline in bright daylight, Arabian Sea and rocks in the foreground, clear sky, real architectural photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-carousel-6",
+    "prompt": "A new apartment front door in bright daylight with a set of house keys in the lock and a plain blank brass name plate on the wall beside it, marigold toran garland above the door, real photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-evening-1",
+    "prompt": "Hyper-realistic photograph, an extremely slender pencil-thin skyscraper about 24 times taller than it is wide, terracotta and bronze striped facade with glass, rising straight up from the far end of a green Indian cricket ground, the 22-yard pitch in the foreground leading the eye to the tower's base which is just narrower than the pitch is long, clear blue sky, believable scale and shadows, looks like a real news photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-23-evening-2",
+    "prompt": "Hyper-realistic photograph of six copies of Delhi's Qutub Minar stacked one on top of another into one tall column of red sandstone, standing beside an extremely slender modern skyscraper of the same total height, on a New York street, clear daylight, believable scale and shadows. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-evening-3",
+    "prompt": "The top of an extremely slender skyscraper with a tapering terracotta and bronze crown among fast-moving white clouds in bright daylight, slight motion blur in the clouds suggesting strong wind, seen from a helicopter at the same height, real photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-evening-4",
+    "prompt": "Engineering cutaway render of the top floors of an extremely slender skyscraper, revealing a huge rectangular block of stacked steel plates hanging on cables inside the tower above the highest apartments (a tuned mass damper), bright daylight through the cut section, people-free. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-evening-5",
+    "prompt": "Engineering cutaway render of the base of an extremely slender skyscraper: two thick concrete shear walls running up the spine, and many steel rock anchors drilled deep into grey bedrock below the foundation, a historic 1920s stone building at street level in front, bright clean light. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-23-evening-6",
+    "prompt": "A luxury living room very high up in a skyscraper, floor-to-ceiling windows looking down on a large green city park and a dense city in bright daylight, minimal furniture, polished floor, no people, real interior photograph. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   }
+  ]
+ }
+]
