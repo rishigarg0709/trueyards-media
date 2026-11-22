@@ -1,0 +1,227 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:600;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#111112}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#111112;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#111112}
+.sc>*{position:absolute}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:600 108px/1.04 IN;letter-spacing:-.035em}
+.M{font:600 70px/1.12 IN;letter-spacing:-.025em}
+.K{font:500 25px/1.2 PM;letter-spacing:.22em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.c{color:#FF6B57}
+.ink{color:#141416}
+.ink2{color:#3a3a3e}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(17,17,18,.9);color:#fff;font-family:IN}
+.hl{background:#FF6B57;color:#141416;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.55)}
+.tag{display:inline-block;background:#FF6B57;color:#141416;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.18em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.72)}
+#flash{position:absolute;inset:0;background:#FFFFFF;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.05;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 62%,rgba(0,0,0,.22) 100%)}
+#tp{position:absolute;left:72px;top:1500px;width:936px;height:12px;border-radius:6px;z-index:21;opacity:0}
+#tpf{position:absolute;left:0;top:0;height:12px;width:936px;border-radius:6px;background:#FF6B57 repeating-linear-gradient(90deg,rgba(20,20,22,.35) 0 2px,transparent 2px 46.8px)}
+#tpl{position:absolute;top:1450px;width:300px;text-align:right;font:500 26px/1.2 PM;letter-spacing:.08em;z-index:21;opacity:0}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:600 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one<br>real estate story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FF6B57">@trueyards.in</div></div><div id="tp"><div id="tpf"></div></div><div id="tpl"></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=false;
+
+%%WS%%
+%%BEATS%%
+const S=document.getElementById('s');
+const CO='#FF6B57',IV='#FFFFFF';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+const CR='#FF6B57',INK='#141416',OB='#111112';
+const inr=n=>n.toLocaleString('en-IN');
+const GTOPF='linear-gradient(180deg,rgba(17,17,18,.74) 0%,rgba(17,17,18,.5) 9%,rgba(17,17,18,.18) 14%,rgba(17,17,18,0) 19%';
+const GL=(a)=>GTOPF+`,rgba(17,17,18,0) ${a}%,rgba(17,17,18,.55) ${a+14}%,rgba(17,17,18,.8) ${a+26}%,rgba(17,17,18,.88) 100%)`;
+const LF=(a)=>GTOPF+`,rgba(244,242,238,0) ${a}%,rgba(244,242,238,.72) ${a+12}%,rgba(244,242,238,.9) ${a+24}%,rgba(244,242,238,.94) 100%)`;
+const lit=(e,t,a)=>{const q=cl((t-a)/.1);e.style.background=`rgba(255,107,87,${q})`;e.style.color=q>.5?INK:''};
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const bar=(p,x,y,wd,h,col)=>{const g=mk(p,'',`left:${x}px;top:${y}px;width:${wd}px;height:${h}px;border-radius:${h/2}px;background:rgba(20,20,22,.10)`);const f=mk(p,'',`left:${x}px;top:${y}px;width:0;height:${h}px;border-radius:${h/2}px;background:${col}`);return {g,f}};
+const LIGHT=[];
+const cab=(br)=>{br.forEach(e=>{e.style.position='absolute'});return br};
+const MISS=[];const cw=s=>s.toLowerCase().replace(/[’]/g,"'").replace(/[^a-z0-9'%,-]/g,'').replace(/[,]$/,'');
+const ws=(s,k=1)=>{let n=0;for(const x of WS){const c=cw(x[0]).replace(/,/g,'');if(c===s){n++;if(n===k)return x[1]}}MISS.push(s+'#'+k);return null};
+const HOOKEV=ws('walk');
+// TAPE device (recurring): coral tape line at the bottom reading the area named on screen
+const TP0=ws('grab')-.08,TPS=ws('nine',2),TP1=ws('now')-.1;
+const tapeFrame=(sc)=>{const b=box(sc,'room',420,1120,'50% 50%');b.im.style.filter='brightness(1.03) saturate(1.05)';
+ mk(sc,'sh','background:'+GTOPF+',rgba(244,242,238,0) 100%)');
+ const L=svg(sc,'','<path id="tl" d="M118 1336 L688 872" stroke="#FF6B57" stroke-width="11" stroke-linecap="round" fill="none" stroke-dasharray="760" stroke-dashoffset="760"/><circle id="td" cx="688" cy="872" r="16" fill="#FF6B57" opacity="0"/>');
+ return {b,L,tl:L.querySelector('#tl'),td:L.querySelector('#td')}};
+// 1. HOOK: bright empty flat, tape across the floor, full-frame push-in; no text until 1.5 s; numbers from about 3 s
+add(0,sc=>{const f=tapeFrame(sc);
+ const shade=mk(sc,'sh','opacity:0;background:'+LF(56));
+ const tW=Math.max(3.0,ws('why'));
+ const h=T(sc,'H ink','left:70px;top:1270px;width:960px;font-size:96px',[['Paid',tW],['for',tW+.08],['1,200',tW+.16],['sq',tW+.24],['ft.',tW+.3],['\n'],['Walk',Math.max(tW+.5,ws('walk'))],['on',Math.max(tW+.6,ws('on'))],['~920?',Math.max(tW+.75,ws('nine')),'hb']]);
+ const hb=[...h.querySelectorAll('.hb')];
+ return t=>{const sk=shake(t,HOOKEV,7);
+  f.b.style.transform=`translate(${sk}px,${sk*.4}px) scale(${1.0+.12*eio(t/3.6)})`;
+  const p=eo((t-.15)/1.3);f.tl.setAttribute('stroke-dashoffset',760*(1-p));f.td.setAttribute('opacity',p>.98?1:0);
+  f.L.style.transform=f.b.style.transform;f.L.style.transformOrigin='420px 1120px';
+  shade.style.opacity=cl((t-tW+.3)/.4);rv(h,t);hb.forEach(e=>lit(e,t,Math.max(tW+.75,ws('nine'))))}});
+LIGHT.push([0,1]);
+// 2. Low along the tape. "Grab a tape... that's your carpet area."
+add(ws('grab')-.08,sc=>{const f=tapeFrame(sc);f.tl.setAttribute('stroke-dashoffset',0);f.td.setAttribute('opacity',1);
+ mk(sc,'sh','background:'+LF(52));
+ const k=T(sc,'K ink2','left:72px;top:1150px',[['●',ws('wall'),'c'],['Wall',ws('wall')],['to',ws('to')],['wall',ws('wall',2)]]);
+ const h=T(sc,'H ink','left:70px;top:1196px;width:960px;font-size:120px',[['Room',ws('room')],['by',ws('by')],['\n'],['room.',ws('room',2)]]);
+ return t=>{const s=1.42-.1*eio(t/3.2);f.b.style.transform=`scale(${s}) translate(${60-50*eio(t/3.2)}px,${-60}px)`;f.L.style.transform=f.b.style.transform;f.L.style.transformOrigin='420px 1120px';rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('grab')-.08,1]);
+// 2b. Wide: the whole floor outlined in coral. "that's your carpet area."
+add(ws("that's")-.08,sc=>{const f=tapeFrame(sc);f.tl.setAttribute('stroke-dashoffset',0);f.td.setAttribute('opacity',1);
+ const o=svg(sc,'','<polygon id="fp" points="214,860 986,860 1080,975 1080,1920 0,1920 0,985" fill="rgba(255,107,87,.10)" stroke="#FF6B57" stroke-width="9" stroke-linejoin="round" stroke-dasharray="4200" stroke-dashoffset="4200"/>');const fp=o.querySelector('#fp');
+ mk(sc,'sh','background:'+LF(58));
+ const h=T(sc,'H ink','left:70px;top:1250px;width:960px;font-size:120px',[['Carpet',ws('carpet'),'hl',1],['area.',ws('area')]]);
+ return t=>{const tr=`scale(${1.0+.05*eio(t/3)})`;f.b.style.transform=tr;f.L.style.transform=tr;f.L.style.transformOrigin='420px 1120px';o.style.transform=tr;o.style.transformOrigin='420px 1120px';fp.setAttribute('stroke-dashoffset',4200*(1-eo(t/1.1)));rv(h,t)}},true);
+// 3. Real tower, tilt up. "The brochure uses a bigger number. Super built-up area."
+add(ws('brochure')-.3,sc=>{const b=box(sc,'brick',540,960,'50% 40%');b.im.style.filter='brightness(1.06)';
+ mk(sc,'sh','background:'+GL(40));
+ const k=T(sc,'K ts','left:72px;top:1040px;color:#fff',[['●',ws('brochure'),'c'],['The',ws('brochure')],['brochure',ws('brochure')],['number',ws('number')]]);
+ const h=T(sc,'H ts','left:70px;top:1090px;width:960px;font-size:112px',[['Super',ws('super')],['\n'],['built-up',ws('super')+.18,'hl',1],['\n'],['area.',ws('area',2)]]);
+ return t=>{b.style.transform=`scale(1.14) translateY(${-80+120*eio(t/3.2)}px)`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('brochure')-.3,0]);
+// 4. Floor-plate model: your flat in coral. "It adds your walls... plus your share of"
+add(ws('adds')-.25,sc=>{const b=box(sc,'model',800,980,'50% 50%');
+ const br=cab(corners(b,560,740,1075,1220,56,7));mk(sc,'sh','background:'+LF(50));
+ const k=T(sc,'K ink2','left:72px;top:1240px',[['●',ws('adds'),'c'],['Super',ws('adds')],['built-up',ws('adds')],['adds',ws('adds')]]);
+ const h=T(sc,'H ink','left:70px;top:1284px;width:960px;font-size:84px',[['+',ws('walls')],['walls',ws('walls')],['\n'],['+',ws('share')],['your',ws('share')],['share',ws('share'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${.9+.06*eio(t/3.5)}) translate(-40px,${-230}px)`;crn(br,t,.2);rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('adds')-.25,1]);
+// 5. Lobby: + lobby + lifts + stairs
+add(ws('lobby')-.12,sc=>{const b=box(sc,'lobby',540,800,'50% 50%');
+ mk(sc,'sh','background:'+LF(48));
+ const k=T(sc,'K ink2','left:72px;top:1170px',[['●',ws('lobby'),'c'],['Your',ws('lobby')],['share',ws('lobby')],['of',ws('lobby')]]);
+ const h=T(sc,'H ink','left:70px;top:1214px;width:960px;font-size:92px',[['+',ws('lobby')],['lobby',ws('lobby'),'hl',1],['\n'],['+',ws('lifts')],['lifts',ws('lifts')],['+',ws('stairs')],['stairs',ws('stairs')]]);
+ return t=>{b.style.transform=`scale(${1.04+.1*eio(t/3.4)})`;rv(k,t);rv(h,t)}},true);
+// 6. Rooftop pool. "even the clubhouse pool"
+add(ws('even')-.08,sc=>{const b=box(sc,'pool',700,900,'50% 50%');
+ mk(sc,'sh','background:'+LF(52));
+ const h=T(sc,'H ink','left:70px;top:1240px;width:960px;font-size:92px',[['+',ws('clubhouse')],['clubhouse',ws('clubhouse')],['\n'],['pool',ws('pool'),'hl',1]]);
+ const k=T(sc,'K ink2','left:72px;top:1196px',[['●',ws('even'),'c'],['Even',ws('even')]]);
+ return t=>{b.style.transform=`scale(1.12) translateX(${40-80*eio(t/2.6)}px)`;rv(k,t);rv(h,t)}},true);
+// 7. Model, cores and corridor. "That extra is called loading. Often around thirty percent."
+add(ws('that')-.08,sc=>{const b=box(sc,'model',470,900,'50% 50%');
+ mk(sc,'sh','background:'+LF(56));
+ const k=T(sc,'K ink2','left:72px;top:1180px',[['●',ws('that'),'c'],['That',ws('that')],['extra',ws('extra')],['is',ws('is')],['called',ws('called')]]);
+ const h=T(sc,'H ink','left:70px;top:1224px;width:960px;font-size:112px',[['Loading',ws('loading'),'hl',1]]);
+ const n=mk(sc,'','left:640px;top:1224px;width:370px;text-align:right;font:600 112px/1.04 IN;letter-spacing:-.035em;color:#E0503D;opacity:0','~0%');
+ const B=bar(sc,72,1380,936,26,CR);
+ const b0=ws('that')-.08,t0=ws('thirty')-b0;
+ return t=>{b.style.transform=`scale(${1.55+.08*eio(t/3.6)}) translate(${30-30*eio(t/3.6)}px,-40px)`;rv(k,t);rv(h,t);const p=cnt(n,t,t0,.6,p=>'~'+Math.round(30*p)+'%');B.f.style.width=(936*.3*p)+'px';B.g.style.opacity=cl((t-t0+.2)/.2)}},true);
+// 8. Plan on the table: 1,200 -> ~920 (tape shrinks)
+add(ws('so',2)-.08,sc=>{const b=box(sc,'plan',540,700,'50% 50%');
+ mk(sc,'sh','background:'+LF(46));
+ const k=T(sc,'K ink2','left:72px;top:1130px',[['●',ws('so',2),'c'],['Example,',ws('so',2)],['30%',ws('thirty',2)],['loading',ws('loading',2)]]);
+ const a=mk(sc,'M ink','left:70px;top:1178px;font-size:84px;opacity:0','1,200 sq ft');
+ const st=mk(sc,'','left:66px;top:1226px;height:7px;width:0;background:#141416');
+ const n=mk(sc,'H','left:70px;top:1276px;font-size:128px;color:#E0503D;opacity:0','→ ~0');
+ const h=T(sc,'K ink2','left:72px;top:1420px',[['you',ws('you',3)],['can',ws('can',2)],['actually',ws('actually')],['stand',ws('stand'),'c'],['on',ws('on',2),'c']]);
+ const b0=ws('so',2)-.08,tA=ws('twelve',2)-b0,tB=ws('nine',2)-b0;
+ return t=>{b.style.transform=`scale(${1.08+.1*eio(t/4)})`;rv(k,t);fade(a,t,tA,.2,12);st.style.width=(380*eo((t-tB)/.35))+'px';
+  cnt(n,t,tB,.7,p=>'→ ~'+Math.round(1200-277*p));rv(h,t)}},true);
+LIGHT.push([ws('so',2)-.08,1]);
+// 9. Real white building. "At one crore, about ₹8,333 a foot on paper"
+add(ws('now')-.08,sc=>{const b=box(sc,'white',540,1000,'50% 50%');b.im.style.filter='brightness(1.05)';
+ mk(sc,'sh','background:'+GL(38));
+ const k=T(sc,'K ts','left:72px;top:1040px;color:#fff',[['●',ws('now'),'c'],['At',ws('crore')],['₹1',ws('crore')],['crore',ws('crore')]]);
+ const n=mk(sc,'ts','left:60px;top:1088px;font:600 190px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0','₹0');
+ const h=T(sc,'M ts','left:70px;top:1296px;width:960px',[['per',ws('foot')],['sq',ws('foot')],['ft',ws('foot')],['on',ws('on',3)],['paper',ws('paper'),'hl',1]]);
+ const b0=ws('now')-.08,t0=Math.max(ws('crore')+.35,(ws('eighty-three')||ws('eighty')||ws('crore')+.5))-b0;
+ return t=>{b.style.transform=`scale(${1.1-.06*eio(t/3.6)})`;rv(k,t);cnt(n,t,t0,.9,p=>'₹'+inr(Math.round(8333*p)));rv(h,t)}},true);
+LIGHT.push([ws('now')-.08,0]);
+// 10. Reveal: back in the flat, the share you never stand on greys out. ~₹10,834 per sq ft you live on
+add(ws('nearly')-.3,sc=>{const f=tapeFrame(sc);f.tl.setAttribute('stroke-dashoffset',0);f.td.setAttribute('opacity',1);
+ const g=svg(sc,'opacity:0','<polygon points="214,860 986,860 1080,975 1080,1060 0,1060 0,985" fill="rgba(17,17,18,.55)"/><line x1="0" y1="1060" x2="1080" y2="1060" stroke="#FF6B57" stroke-width="6" stroke-dasharray="22 14"/>');
+ const gl=mk(sc,'K','left:560px;top:1008px;color:#fff;opacity:0','not floor you live on');
+ mk(sc,'sh','background:'+LF(58));
+ const k=T(sc,'K ink2','left:72px;top:1220px',[['●',ws('nearly'),'c'],['Floor',ws('floor')],['you',ws('you',4)],['live',ws('live')],['on',ws('on',4)]]);
+ const n=mk(sc,'','left:60px;top:1266px;font:600 176px/1 IN;letter-spacing:-.04em;color:#141416;opacity:0','₹0');
+ const u=T(sc,'M ink','left:70px;top:1450px;font-size:56px',[['per',ws('foot',2)],['sq',ws('foot',2)],['ft',ws('foot',2)]]);
+ const b0=ws('nearly')-.3,t0=ws('eleven')-b0;
+ return t=>{f.b.style.transform=`scale(${1.06+.05*eio(t/4)})`;f.L.style.transform=f.b.style.transform;f.L.style.transformOrigin='420px 1120px';
+  const q=cl((t-t0+.1)/.35);g.style.opacity=q;gl.style.opacity=q;rv(k,t);const p=cnt(n,t,t0,.8,p=>'₹'+inr(Math.round(10834*p)));n.style.color=p>=1?'#E0503D':'#141416';rv(u,t)}},true);
+LIGHT.push([ws('nearly')-.3,1]);
+// 11. Ruler and calculator. "Under RERA, carpet area is the legal measure."
+add(ws('under')-.08,sc=>{const b=box(sc,'plan',820,1150,'50% 50%');
+ mk(sc,'sh','background:'+LF(50));
+ const tg=mk(sc,'tag','left:72px;top:1150px','Under RERA 2016');
+ const h=T(sc,'H ink','left:70px;top:1224px;width:960px;font-size:92px',[['Carpet',ws('carpet',2),'hl',1],['area',ws('area',3),'hl',1],['=',ws('is',3)],['\n'],['the',ws('legal')-.12],['legal',ws('legal')],['measure.',ws('measure')]]);
+ return t=>{b.style.transform=`scale(${1.7+.08*eio(t/3)}) translate(-150px,-120px)`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+// 12. Real older tower, tilt down. "So ask one question first: what's the carpet area?"
+add(ws('so',3)-.08,sc=>{const b=box(sc,'oldtower',540,700,'50% 35%');b.im.style.filter='brightness(1.08)';
+ mk(sc,'sh','background:'+GL(40));
+ const k=T(sc,'K ts','left:72px;top:1060px;color:#fff',[['●',ws('ask'),'c'],['Ask',ws('ask')],['this',ws('one')],['first',ws('first')]]);
+ const h=T(sc,'H ts','left:70px;top:1110px;width:960px;font-size:112px',[["What's",ws("what's")],['the',ws("what's")+.14],['\n'],['carpet',ws('carpet',3),'hl',1],['area?',ws('area',4),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.14) translateY(${60-100*eio(t/3)}px)`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('so',3)-.08,0]);
+// 13. Split: lobby above, living room below. The question
+add(ws('would')-.08,sc=>{sc.style.background=OB;const a=frm(sc,'lobby',0,956,'50% 40%',540,480);const c=frm(sc,'room',964,956,'50% 62%',540,480);
+ const h1=T(sc,'H','left:70px;top:700px;width:960px;font-size:96px',[['The',ws('lobby',2)-.14],['lobby',ws('lobby',2),'hl',1],['...',ws('lobby',2)]]);
+ const h2=T(sc,'H','left:70px;top:1050px;width:960px;font-size:96px',[['or',ws('or')],['your',ws('living')-.14],['\n'],['living',ws('living'),'hl',1],['room?',ws('room',3),'hl',1]]);
+ h1.style.color='#fff';h1.classList.add('ts');h2.style.color='#141416';
+ const k=T(sc,'K ts','left:72px;top:640px;color:#fff',[['Would',ws('would')],['you',ws('would')],['rather',ws('rather')],['pay',ws('pay')],['for...',ws('pay')]]);
+ return t=>{a.im.style.transform=`scale(${1.05+.06*eio(t/3)}) translateX(${-20*t}px)`;c.im.style.transform=`scale(${1.12-.06*eio(t/3)})`;rv(k,t);rv(h1,t);rv(h2,t)}},true);
+LIGHT.push([ws('would')-.08,1]);
+// 14. Loop: the hook frame with the tape (no text), easing back to frame 0; silent follow card on top (X15: this reel uses the silent card)
+add(WS[WS.length-1][2]+.1,sc=>{const f=tapeFrame(sc);
+ return t=>{f.b.style.transform=`scale(${1.08-.08*eo(t/2.2)})`;f.L.style.transform=f.b.style.transform;f.L.style.transformOrigin='420px 1120px';f.tl.setAttribute('stroke-dashoffset',760*eo(t/1.6));f.td.setAttribute('opacity',t<.2?1:0)}},true);
+LIGHT.push([WS[WS.length-1][2]+.1,1]);
+
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+' Example: 30% loading; loading varies by project.'],[ws('grab')-.08,AIL+' Carpet area: RERA Act 2016, section 2(k).'],[ws("that's")-.08,AIL+' Carpet area: net usable floor area, RERA Act 2016.'],[ws('brochure')-.3,'Photo: Vaibhav Surana / Unsplash. Common areas: Business Standard, 11 Jun 2026.'],[ws('adds')-.25,AIL+' Model.'],[ws('lobby')-.12,AIL],[ws('even')-.08,AIL],[ws('that')-.08,AIL+' Model. Loading about 30 to 35%: Housing.com; factor 1.30: ICICI Bank.'],[ws('so',2)-.08,AIL+' Example: 1,200 / 1.30 = about 923 sq ft carpet.'],[ws('now')-.08,'Photo: Harsh Khandelwal / Unsplash. Example: ₹1 crore / 1,200 sq ft.'],[ws('nearly')-.3,AIL+' Example: ₹1 crore / 923 sq ft carpet. Loading varies by project (about 20 to 35%).'],[ws('under')-.08,AIL+' RERA Act 2016 via Housing.com; UP RERA via Business Standard, 11 Jun 2026.'],[ws('so',3)-.08,'Photo: Harsh Khandelwal / Unsplash. Educational content, not advice.'],[ws('would')-.08,AIL],[WS[WS.length-1][2]+.1,AIL]];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const TPE=document.getElementById('tp'),TPF=document.getElementById('tpf'),TPL=document.getElementById('tpl');
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;let lg=0;LIGHT.forEach(([tt,v])=>{if(t>=tt)lg=v});fe.style.color=lg?'rgba(20,20,22,.62)':'rgba(255,255,255,.72)';fe.style.textShadow=lg?'none':'0 1px 6px rgba(0,0,0,.6)';
+ // tape device
+ const vis=cl((t-TP0)/.3)*(1-cl((t-TP1)/.25));TPE.style.opacity=vis;TPL.style.opacity=vis;
+ const v=1200-277*eio((t-TPS)/.8);TPF.style.width=(936*v/1200)+'px';TPL.textContent=(v>1199?'1,200':'~'+Math.round(v))+' sq ft';
+ TPL.style.left=(72+936*v/1200-300)+'px';TPL.style.color=lg?'#141416':'#fff';TPL.style.textShadow=lg?'none':'0 1px 6px rgba(0,0,0,.6)';TPE.style.background=lg?'rgba(20,20,22,.12)':'rgba(255,255,255,.2)';
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,ws('nine',2),ws('eleven')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.3)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;
+};
+if(MISS.length)console.log('ERR missing words',MISS.join(','));
+</script></body></html>
