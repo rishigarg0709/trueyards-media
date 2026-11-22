@@ -1,7 +1,7 @@
 # 2026-11-23 evening reel (19:07 IST): Steinway Tower, the skyscraper 24 times taller than it is wide
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice. Platform texts fresh per platform (D53).
-- Batch status: see the line at the top added after submit (batch prep-2026-11-23).
+- Batch status: CONFIRMED submitted 2026-11-22 17:09 UTC (22:39 IST): batches/pending/prep-2026-11-23-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-23.json (15 Flash). Real photos in fetch/2026-11-23.txt are in library/stock/ (all 6 arrived, 2400 px wide). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 - Opening (D41): frame 0 is full-frame motion: an impossible-but-real, bright daylight shot of a pencil-thin tower rising from the far end of a cricket pitch, the camera tilting up from the pitch to the top; the line is SPOKEN from 0 s; no text card before 1.5 s; the numbers (435 m, 18 m) land at about 3 to 4 s.
 - Outro: SILENT follow card (X15 alternation: the carousel-slot reel today is voiced).
 

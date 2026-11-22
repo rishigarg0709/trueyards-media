@@ -1,7 +1,7 @@
 # 2026-11-23 midday reel (12:23 IST): why Indian walls say "This property is NOT for sale"
 
 - Publishing: trial first (one Instagram copy, as a Trial Reel with automatic graduation). See REEL_PIPELINE step 8. Never publish twice. Platform texts written fresh per platform (D53, PLATFORM_VOICE.md).
-- Batch status: see the line added at the top by the nightly planner after submit (batch prep-2026-11-23). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
+- Batch status: CONFIRMED submitted 2026-11-22 17:09 UTC (22:39 IST): batches/pending/prep-2026-11-23-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-23.json (15 Flash). Real photos in fetch/2026-11-23.txt are in library/stock/ (all 6 arrived, 2400 px wide). If any image is missing at build time, check batches/failed/ and generate only the missing ones.
 - Opening (D41, X14 motion side): frame 0 is full-frame motion: a slow push-in on a bright, sunlit house wall while the words "THIS PROPERTY IS NOT FOR SALE" are hand-painted onto the whitewashed panel stroke by stroke (animated brush reveal in the edit, the image itself has no text). The line is SPOKEN from 0 s. No text card or label bar before 1.5 s; the first number (₹1.5 crore) lands later, never in frame 0.
 - Outro: SILENT follow card (X15 alternation: the 22 Nov evening reel was voiced).
 
@@ -75,7 +75,7 @@ Threads first line (number and place first): "₹1.5 crore, Thiruvananthapuram: 
 | 5 | 11 to 13.5 | Same house, close on the padlock and dust; "Owner: in the USA" | 2026-11-23-midday-2 | crop B padlock, rack-style punch-in |
 | 6 | 13.5 to 17 | Sub-registrar desk: stamp papers, register, ink pad, rubber stamp; "Fake owner signs the deed" (stamp comes down on a beat) | new 2026-11-23-midday-3 | crop A desk, push; crop B rubber stamp for the hit |
 | 7 | 17 to 20 | Same desk, register close; "Sold: ₹1.5 crore" counter | 2026-11-23-midday-3 | crop C register, pull-out |
-| 8 | 20 to 23 | Real old door with posters, Indian lane; bridge shot | real: library/stock/d1123m-old-door.jpg (Subhro Vision / Unsplash) | slow push |
+| 8 | 20 to 23 | Real old door with posters, Indian lane; bridge shot | real: library/stock/d1123m-old-door.jpg (Subhro Vision / Unsplash): padlocked old wooden door; crop to the door and padlock, keep the illustrated wall poster (a face) out of frame | slow push |
 | 9 | 23 to 27 | Property tax receipt beside a house key and a calculator; "Caught by a tax receipt" (reveal, 0.4 s hold) | new 2026-11-23-midday-4 | crop A, push-in to receipt |
 | 10 | 27 to 30.5 | Empty fenced plot, weeds, padlocked gate, blank signboard; "Empty homes = easy target" | new 2026-11-23-midday-5 | crop A wide, pan right |
 | 11 | 30.5 to 34 | Back to the wall, panel now fully painted (edit overlay); "I'm here. Not selling." | 2026-11-23-midday-1 | crop C wall and gate, pull-out |
