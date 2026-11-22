@@ -1,0 +1,103 @@
+{
+ "at": "2026-11-22 12:57",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "audience.size",
+   "changes": false,
+   "result": {
+    "ok": true,
+    "db": {
+     "rows": 408000,
+     "built": "2026-11-11"
+    },
+    "scanned": 408000,
+    "matched": 407964,
+    "optedOutLeftOut": 36,
+    "byGroup": {
+     "Retail shops & stores": 100467,
+     "Other businesses": 36857,
+     "Traders, wholesalers & suppliers": 33069,
+     "Other manufacturing": 32215,
+     "Engineering & metal": 30815,
+     "Pharma & chemicals": 20257,
+     "Electrical & electronics": 20240,
+     "Real estate agents & builders": 15692,
+     "Food & agro processing": 14573,
+     "Plastics, rubber & packaging": 13005,
+     "Warehousing & logistics": 10732,
+     "Textile & apparel": 9420,
+     "Hotels, restaurants & banquets": 9416,
+     "Furniture & wood": 9276,
+     "Auto & auto components": 8170,
+     "Auto dealers & garages": 7283,
+     "Building materials": 6868,
+     "Doctors, hospitals & clinics": 6161,
+     "Professionals (CA, lawyers, consultants)": 4962,
+     "Industrial (govt / association list)": 4190,
+     "Schools, colleges & coaching": 2728,
+     "Toys, sports & consumer goods": 2573,
+     "Agro, poultry & farm businesses": 1952,
+     "Government & public": 1794,
+     "Footwear & leather": 1564
+    },
+    "byDistance": {
+     "no location": 407964
+    },
+    "topCategories": {
+     "Manufacturer": 31954,
+     "Hardware store": 9377,
+     "Electronics store": 6781,
+     "Wholesaler": 5768,
+     "Transportation service": 5737,
+     "Corporate office": 5402,
+     "Pharmaceutical company": 5025,
+     "Print shop": 4903,
+     "Real estate consultant": 4456,
+     "Petrol Pump": 3716,
+     "Real Estate Builders & Construction Company": 3672,
+     "Bakery and Cake Shop": 3616,
+     "Software company": 3481,
+     "Furniture Manufacturer": 3460,
+     "Battery Store": 3426,
+     "Packaging company": 3232,
+     "Electrical supply store": 3164,
+     "Clothing store": 3010,
+     "Auto parts store": 3006,
+     "Paint store": 2817,
+     "Dairy store": 2816,
+     "C: association member": 2793,
+     "Medical supply store": 2755,
+     "Furniture store": 2623,
+     "Pharmacy": 2449,
+     "Real estate agency": 2303,
+     "Solar Energy Company": 2269,
+     "Logistics service": 2244,
+     "Industrial equipment supplier": 2157,
+     "Electrician": 2112
+    },
+    "selected": 200,
+    "imported": 0,
+    "tag": ""
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-22T07:27:43.812Z"
+  },
+  {
+   "ok": true,
+   "op": "broadcast.create",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "id": "C#2026-11-22T07:27:44.440Z#22f24d",
+    "total": 322,
+    "held": false,
+    "note": "",
+    "askedOwner": false
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-22T07:27:44.472Z"
+  }
+ ]
+}
