@@ -176,8 +176,12 @@ def op_ig_scan(req):
 
 # ---------- LinkedIn company page (Community Management API) ----------
 LI_ORG = "urn:li:organization:128124088"
+def li_tok():
+    # A pasted secret can carry a stray space, newline or quote; LinkedIn answers 401 AUTHENTICATION_FAILED to that.
+    return (E("LI_TOKEN") or "").strip().strip('"').strip("'").strip()
+
 def li_h(extra=None):
-    h = {"Authorization": f"Bearer {E('LI_TOKEN')}", "LinkedIn-Version": "202510", "X-Restli-Protocol-Version": "2.0.0"}
+    h = {"Authorization": f"Bearer {li_tok()}", "LinkedIn-Version": "202510", "X-Restli-Protocol-Version": "2.0.0"}
     h.update(extra or {}); return h
 
 def li_upload(kind, blob):
@@ -186,7 +190,7 @@ def li_upload(kind, blob):
         j = http("https://api.linkedin.com/rest/images?action=initializeUpload", {"initializeUploadRequest": {"owner": LI_ORG}}, li_h())
         v = j.get("value") or {}
         if not v.get("uploadUrl"): return None, j
-        http(v["uploadUrl"], blob, {"Authorization": f"Bearer {E('LI_TOKEN')}", "Content-Type": "application/octet-stream"}, method="PUT")
+        http(v["uploadUrl"], blob, {"Authorization": f"Bearer {li_tok()}", "Content-Type": "application/octet-stream"}, method="PUT")
         return v["image"], None
     j = http("https://api.linkedin.com/rest/videos?action=initializeUpload",
              {"initializeUploadRequest": {"owner": LI_ORG, "fileSizeBytes": len(blob), "uploadCaptions": False, "uploadThumbnail": False}}, li_h())
