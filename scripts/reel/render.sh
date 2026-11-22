@@ -7,7 +7,8 @@
 #   reel-x.mp4    1068x1900  X (caps portrait video at 1200x1900)
 # All: H.264 High, closed GOP, 30 fps, yuv420p, AAC 48 kHz. Set SCALE=1 for a fast 1080p draft.
 set -e; D=$(cd "$1" && pwd); S=$(cd "$(dirname "$0")" && pwd)
-END=$(python3 -c "import json;w=json.load(open('$D/words.json'));print(round(w[-1][2]+2.3,3))")
+# END env overrides the length (for example a reel with the voiced follow outro, reels/_outro)
+END=${END:-$(python3 -c "import json;w=json.load(open('$D/words.json'));print(round(w[-1][2]+2.3,3))")}
 rm -rf "$D/frames"; mkdir -p "$D/frames"
 STEP=$(python3 -c "print(round($END/5+0.034,3))")
 for i in 0 1 2 3 4; do A=$(python3 -c "print(round($i*$STEP,3))"); B=$(python3 -c "print(min(round(($i+1)*$STEP,3),$END))"); node "$S/shot.cjs" "$D" $A $B 2>&1 | grep ERR & done; wait || true

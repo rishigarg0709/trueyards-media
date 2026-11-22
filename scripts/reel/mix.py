@@ -1,5 +1,5 @@
 """Mix narration + beat-aligned music + hits. usage: python3 mix.py <reel_dir> <music.mp3> [duration]
-Reads <dir>/vo.wav, <dir>/beats.json (offset), optional <dir>/hits.json [{"t":2.08,"type":"boom"|"whoosh"|"riser"}].
+Reads <dir>/vo.wav, <dir>/beats.json (offset), optional <dir>/hits.json [{"t":2.08,"type":"boom"|"whoosh"|"riser"|"pop"|"tap"}] (pop and tap: voiced outro like and follow).
 Music is ducked ~9 dB under the voice. Writes <dir>/audio.wav."""
 import json, subprocess, sys, os, numpy as np, soundfile as sf
 d, mus = sys.argv[1], sys.argv[2]
@@ -22,6 +22,8 @@ for h in hits:
     t = h['t']
     if h['type'] == 'boom': x = tt(.7); add(t, np.sin(2 * np.pi * (52 + 40 * np.exp(-x * 16)) * x) * .5 * np.exp(-x * 5))
     elif h['type'] == 'whoosh': x = tt(.45); add(t - .2, np.convolve(R.standard_normal(len(x)), np.ones(30) / 30, 'same') * np.sin(np.pi * x / .45) * .2)
+    elif h['type'] == 'pop': x = tt(.12); add(t, np.sin(2 * np.pi * (900 - 2500 * x) * x) * .35 * np.exp(-x * 40))
+    elif h['type'] == 'tap': x = tt(.06); add(t, np.convolve(R.standard_normal(len(x)), np.ones(4) / 4, 'same') * .3 * np.exp(-x * 90))
     elif h['type'] == 'riser': x = tt(1.2); add(t - 1.2, np.convolve(R.standard_normal(len(x)), np.ones(40) / 40, 'same') * .22 * (x / 1.2) ** 2)
 fo = int(1.0 * sr); mix[-fo:] *= np.linspace(1, 0, fo); mix /= max(1, np.abs(mix).max() / .95)
 sf.write(f'{d}/audio.wav', mix, sr); print('audio', round(D, 2), 's')

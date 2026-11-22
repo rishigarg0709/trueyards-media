@@ -1,0 +1,224 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0B1A15}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0B1A15;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0B1A15}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0B1A15;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0B1A15;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0B1A15;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[["Why", 0.0, 0.148], ["do", 0.173, 0.222], ["the", 0.259, 0.37], ["houses", 0.423, 0.741], ["in", 0.766, 0.815], ["this", 0.844, 0.963], ["village", 1.009, 1.333], ["have", 1.378, 1.556], ["no", 1.605, 1.704], ["front", 1.753, 2.0], ["doors?", 2.074, 2.519], ["Not", 2.819, 3.152], ["broken.", 3.226, 3.746], ["Never", 4.046, 4.354], ["fitted.", 4.418, 4.858], ["Shani", 5.158, 6.022], ["Shingnapur,", 6.071, 6.821], ["Maharashtra.", 7.047, 7.8], ["Thirty-five", 7.927, 8.911], ["kilometres", 8.965, 9.503], ["from", 9.533, 9.652], ["Ahmednagar.", 9.726, 10.541], ["Walk", 10.748, 11.578], ["down", 11.622, 11.8], ["the", 11.818, 11.874], ["street...", 11.927, 12.347], ["and", 12.633, 12.689], ["you", 12.726, 12.837], ["see", 12.874, 12.985], ["door", 13.044, 13.281], ["frames.", 13.345, 13.865], ["Just", 13.992, 14.466], ["frames.", 14.551, 15.133], ["Families", 15.248, 16.17], ["here", 16.215, 16.392], ["believe", 16.429, 16.689], ["the", 16.726, 16.837], ["god", 16.892, 17.059], ["Shani", 17.133, 17.578], ["guards", 17.62, 17.874], ["the", 17.892, 17.948], ["village...", 17.994, 18.434], ["so", 18.734, 18.833], ["doors", 18.895, 19.204], ["and", 19.222, 19.278], ["locks", 19.34, 19.648], ["were", 19.663, 19.722], ["never", 19.759, 19.944], ["needed.", 19.997, 20.407], ["At", 20.707, 21.3], ["night,", 21.349, 21.749], ["some", 21.937, 22.115], ["lean", 22.174, 22.411], ["a", 22.448, 22.485], ["loose", 22.534, 22.781], ["plank", 22.83, 23.078], ["across...", 23.152, 23.682], ["only", 23.937, 24.115], ["to", 24.164, 24.263], ["keep", 24.292, 24.411], ["animals", 24.466, 24.855], ["out.", 24.948, 25.3], ["Then,", 25.522, 26.582], ["in", 26.682, 26.781], ["January", 26.837, 27.226], ["twenty", 27.278, 27.596], ["eleven...", 27.639, 28.059], ["a", 28.3, 28.337], ["bank", 28.396, 28.633], ["arrived.", 28.689, 29.219], ["UCO", 29.519, 30.259], ["Bank", 30.319, 30.556], ["opened", 30.608, 30.926], ["a", 30.963, 31.0], ["branch", 31.053, 31.37], ["here...", 31.43, 31.75], ["with", 32.05, 32.168], ["a", 32.205, 32.242], ["glass", 32.304, 32.613], ["front", 32.662, 32.909], ["door", 32.953, 33.131], ["that", 33.161, 33.279], ["is", 33.328, 33.428], ["never", 33.465, 33.65], ["locked.", 33.714, 34.164], ["But", 34.372, 34.983], ["here's", 35.013, 35.205], ["the", 35.224, 35.279], ["part", 35.339, 35.576], ["most", 35.62, 35.798], ["people", 35.829, 36.02], ["miss.", 36.094, 36.465], ["The", 36.765, 36.783], ["cash", 36.872, 37.228], ["still", 37.29, 37.598], ["sleeps", 37.651, 37.968], ["in", 37.993, 38.042], ["a", 38.079, 38.116], ["strongroom.", 38.169, 38.783], ["And", 38.987, 39.598], ["the", 39.616, 39.672], ["first", 39.721, 39.968], ["theft", 40.017, 40.265], ["case", 40.324, 40.561], ["on", 40.586, 40.635], ["record?", 40.709, 41.199], ["October", 41.499, 42.05], ["twenty", 42.093, 42.346], ["ten.", 42.439, 42.859], ["A", 43.159, 43.492], ["visitor", 43.538, 43.863], ["lost", 43.922, 44.159], ["about", 44.208, 44.455], ["thirty-five", 44.498, 45.048], ["thousand", 45.097, 45.492], ["rupees.", 45.566, 46.146], ["So...", 46.446, 47.216], ["could", 47.421, 47.606], ["you", 47.643, 47.755], ["live", 47.799, 47.977], ["without", 48.005, 48.199], ["a", 48.273, 48.347], ["front", 48.396, 48.643], ["door?", 48.703, 49.063]];
+const BEATS=/*BEATS*/[0.374, 1.001, 1.605, 2.232, 2.836, 3.463, 4.09, 4.693, 5.32, 5.947, 6.551, 7.178, 7.805, 8.408, 9.035, 9.662, 10.266, 10.893, 11.497, 12.124, 12.751, 13.354, 13.981, 14.608, 15.212, 15.839, 16.466, 17.069, 17.696, 18.3, 18.927, 19.554, 20.158, 20.785, 21.412, 22.015, 22.642, 23.269, 23.873, 24.5, 25.127, 25.731, 26.357, 26.961, 27.588, 28.215, 28.819, 29.446, 30.073, 30.676, 31.303, 31.93, 32.534, 33.161, 33.765, 34.392, 35.019, 35.622, 36.249, 36.876, 37.48, 38.107, 38.734, 39.337, 39.941, 40.568, 41.195, 41.799, 42.426, 43.053, 43.656, 44.283, 44.91, 45.514, 46.141, 46.745, 47.372, 47.998, 48.602, 49.229, 49.856, 50.46, 51.087, 51.714, 52.317, 52.944, 53.548, 54.175, 54.802, 55.406, 56.033, 56.66, 57.263, 57.89, 58.517, 59.121];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0B1A15';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const OST=WS[WS.length-1][2]+0.85;const END=OST+6.1;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(11,26,21,.9) 0%,rgba(11,26,21,.55) 17%,rgba(11,26,21,0) 30%';
+const GB=(a)=>GTOP+`,rgba(11,26,21,0) ${a}%,rgba(11,26,21,.82) ${a+16}%,rgba(11,26,21,.96) ${a+28}%,#0B1A15 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+const HOOKEV=wt('no');
+// ================= SCENES (look B Emerald Doc: deep green-black, white, one teal accent, Fraunces year numerals) =================
+const BG='#0B1A15';
+// feathered photo panel (keeps 1.5+ source px per layout px for landscape photos)
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(11,26,21,0) ${y+120}px,rgba(11,26,21,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};
+// door outline device: a thin teal rectangle that traces an empty door frame (layout px)
+const door=(p,x,y,wd,ht,th=6)=>{const s=svg(p,'',`<path d="M${x} ${y+ht} L${x} ${y} L${x+wd} ${y} L${x+wd} ${y+ht}" fill="none" stroke="#28c39d" stroke-width="${th}" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 10px rgba(40,195,157,.6))"/>`);const e=s.querySelector('path');const L=e.getTotalLength();e.style.strokeDasharray=L;e.style.strokeDashoffset=L;s.draw=p=>{e.style.strokeDashoffset=L*(1-cl(p))};return s};
+// hook layout, reused by the loop scene
+const hookFrame=sc=>{const b=box(sc,'m1',552,1010,'50% 50%');const dr=door(b,456,850,196,322,5);
+ const g=mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1235px;width:960px;font-size:118px',[['No',HOOKEV,'',1],['front',wt('front'),'hl'],['\n'],['doors.',wt('doors'),'hl']]);
+ return {b,dr,g,h}};
+// 1. HOOK: full-frame push-in down the bright street toward the empty doorway; outline traces the frame; no text before 1.5 s (D41)
+add(0,sc=>{const f=hookFrame(sc);
+ const k=T(sc,'K ts','left:72px;top:1500px;color:#BFF5E4',[['Not',wt('not')],['broken.',wt('broken')],['Never',wt('never')],['fitted.',wt('fitted')]]);
+ const z=mk(sc,'ts','left:680px;top:1180px;font:800 190px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','0');
+ const zl=mk(sc,'K ts','left:684px;top:1375px;color:#fff;opacity:0','doors fitted');
+ return t=>{const sk=shake(t,HOOKEV,7);f.b.style.transform=`translate(${sk}px,${sk*.4}px) scale(${1.0+.2*eio(t/5)})`;f.dr.draw((t-.25)/1.1);
+  f.g.style.opacity=cl((t-1.35)/.3);rv(f.h,t);rv(k,t);const tz=wt('never');if(t>=tz-.05){slam(z,t,tz-.05,1.6,0);z.style.color=t>tz+.25?'#28c39d':'#fff';zl.style.opacity=cl((t-tz)/.2)}else{z.style.opacity=0;zl.style.opacity=0}}});
+// 2. Real Maharashtra village under the hills (for illustration). "Shani Shingnapur, Maharashtra."
+add(wt('shani')-.1,sc=>{const b=panel(sc,'vill',220,840,'30% 50%',300,420);
+ const k=T(sc,'K ts','left:72px;top:1100px;color:#FFFFFF',[['●',wt('maharashtra'),'c'],['Maharashtra',wt('maharashtra')]]);
+ const h=T(sc,'H ts','left:70px;top:1150px;width:960px;font-size:112px',[['Shani',wt('shani')],['\n'],['Shingnapur.',wt('shingnapur'),'hl']]);
+ return t=>{b.im.style.transform=`scale(${1.06+.04*eio(t/3)}) translateX(${-10*t}px)`;rv(k,t);rv(h,t)}},true);
+// 3. Same village, other side, slow pan. "35 km from Ahmednagar"
+add(wt('thirty-five')-.25,sc=>{const b=panel(sc,'vill',220,840,'85% 50%',780,420);
+ const n=mk(sc,'ts','left:58px;top:1100px;font:800 230px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','35 km');
+ const h=T(sc,'M ts','left:70px;top:1340px;width:960px;font-size:70px',[['from',wt('from')],['Ahmednagar.',wt('ahmednagar'),'hl']]);
+ const t0=.25;
+ return t=>{b.im.style.transform=`scale(${1.06+.05*eio(t/3)}) translateX(${10*t}px)`;slam(n,t,t0,1.4,0);if(t<t0)n.style.opacity=0;n.style.color=t>t0+.3?'#28c39d':'#fff';rv(h,t)}},true);
+// 4. AI street: push through the centre doorway. "Walk down the street... door frames."
+add(wt('walk')-.1,sc=>{const b=box(sc,'m1',554,1010,'50% 50%');mk(sc,'sh','background:'+GB(52));const dr=door(b,456,850,196,322,5);
+ const k=T(sc,'K ts','left:72px;top:1210px;color:#FFFFFF',[['●',wt('walk'),'c'],['Walk',wt('walk')],['down',wt('down')],['the',wt('street')-.05],['street',wt('street')]]);
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:116px',[['Door',wt('door')],['frames.',wt('frames'),'hl']]);
+ return t=>{b.style.transform=`scale(${1.35+.6*eio(t/3.4)})`;dr.draw(1);rv(k,t);rv(h,t)}},true);
+// 5. AI carved frame, curtain blowing through: "Just frames." outline traces the opening
+add(wt('just')-.15,sc=>{const b=box(sc,'m2',540,900,'50% 50%');mk(sc,'sh','background:'+GB(56));const dr=door(b,232,384,616,1112,7);
+ const h=T(sc,'H ts','left:70px;top:1330px;width:960px;font-size:140px',[['Just',wt('just')],['frames.',wt('frames',2),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.08-.06*eio(t/1.6)})`;dr.draw((t-.05)/.6);rv(h,t)}},true);
+// 6. Frame detail, tilt down the carved post. "Families here believe the god Shani guards the village"
+add(wt('families')-.1,sc=>{const b=box(sc,'m2',120,700,'50% 50%');mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1160px;color:#FFFFFF',[['●',wt('families'),'c'],['Families',wt('families')],['believe',wt('believe')]]);
+ const h=T(sc,'H ts','left:70px;top:1210px;width:960px;font-size:104px',[['Shani',wt('shani',2),'hl'],['guards',wt('guards')],['\n'],['the',wt('village',2)-.1],['village.',wt('village',2)]]);
+ return t=>{b.style.transform=`scale(1.9) translateY(${40-60*eio(t/3.6)}px)`;rv(k,t);rv(h,t)}},true);
+// 7. AI steel almirah, nothing locked (crop keeps the wall frame out). "...so doors and locks were never needed."
+add(wt('so')-.1,sc=>{const b=box(sc,'m4',100,820,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:110px',[['Locks?',wt('locks')],['\n'],['Never',wt('never',2)],['needed.',wt('needed'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.45+.06*eio(t/2)})`;rv(h,t)}},true);
+// 8. AI mud house at golden hour, plank across the doorway (window keeps the image seam out). "At night, some lean a loose plank across..."
+add(wt('at')-.1,sc=>{const b=panel(sc,'m5',180,1000,'20% 40%',100,500);
+ const k=T(sc,'K ts','left:72px;top:1130px;color:#FFFFFF',[['●',wt('night'),'c'],['At',wt('at')],['night',wt('night')]]);
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:110px',[['A',wt('loose')-.1],['loose',wt('loose')],['\n'],['plank.',wt('plank'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.55+.07*eio(t/3)})`;rv(k,t);rv(h,t)}},true);
+// 9. Same house, pull out. "...only to keep animals out."
+add(wt('only')-.1,sc=>{const b=panel(sc,'m5',180,1000,'20% 40%',80,520);
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:110px',[['Only',wt('only')],['for',wt('keep')],['\n'],['animals.',wt('animals'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.75-.12*eio(t/1.6)})`;rv(h,t)}},true);
+// 10. Real Maharashtra town from above (for illustration). "Then, in January 2011... a bank arrived."
+add(wt('then')-.1,sc=>{const b=panel(sc,'town',240,820,'50% 50%',540,410);
+ const k=T(sc,'K ts','left:72px;top:1120px;color:#FFFFFF',[['●',wt('january'),'c'],['January',wt('january')]]);
+ const y=mk(sc,'Y ts','left:60px;top:1160px;opacity:0','2011');
+ const h=T(sc,'M ts','left:70px;top:1400px;width:960px;font-size:76px',[['A',wt('bank')-.1],['bank',wt('bank'),'hl'],['arrived.',wt('arrived')]]);
+ const b0=wt('then')-.1,t0=wt('twenty')-b0;
+ return t=>{b.im.style.transform=`scale(${1.04+.08*eio(t/3.6)})`;rv(k,t);slam(y,t,t0,1.4,0);if(t<t0)y.style.opacity=0;y.style.color=t>t0+.3?'#28c39d':'#fff';rv(h,t)}},true);
+// 11. AI bank branch, wide, push toward the door. "UCO Bank opened a branch here..."
+add(wt('uco')-.1,sc=>{const b=box(sc,'m3',595,1000,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts','left:72px;top:1260px;color:#FFFFFF',[['●',wt('uco'),'c'],['Jan',wt('uco')],['2011',wt('uco')]]);
+ const h=T(sc,'H ts','left:70px;top:1310px;width:960px;font-size:110px',[['UCO',wt('uco')],['Bank.',wt('bank',2),'hl']]);
+ return t=>{b.style.transform=`scale(${1.0+.14*eio(t/2.6)})`;rv(k,t);rv(h,t)}},true);
+// 12. Glass door detail, outline traces it, stamp. "...with a glass front door that is never locked."
+add(wt('with')-.1,sc=>{const b=box(sc,'m3',595,990,'50% 50%');mk(sc,'sh','background:'+GB(60));const dr=door(b,462,800,270,400,4);
+ const h=T(sc,'H ts','left:70px;top:1330px;width:960px;font-size:100px',[['Glass',wt('glass')],['front',wt('front',2)],['door.',wt('door',2)]]);
+ const st=mk(sc,'stamp','left:70px;top:1450px;font-size:70px;background:rgba(14,107,80,.6);color:#fff','NEVER LOCKED');
+ const b0=wt('with')-.1,t0=wt('never',3)-b0;
+ return t=>{b.style.transform=`scale(${1.9+.12*eio(t/2.2)})`;dr.draw((t-.3)/.7);rv(h,t);if(t>=t0)slam(st,t,t0,1.8,-4);else st.style.opacity=0}},true);
+// 13. Tease: "But here's the part most people miss."
+add(wt('but')-.1,sc=>{const b=box(sc,'m3',595,1000,'50% 50%');mk(sc,'sh','background:'+GB(48)+';');mk(sc,'sh','background:rgba(11,26,21,.35)');
+ const tg=mk(sc,'tag','left:72px;top:1130px;opacity:0','Tell a friend');
+ const h=T(sc,'H ts','left:70px;top:1200px;width:960px;font-size:104px',[['The',wt('part')-.1],['part',wt('part')],['\n'],['most',wt('most')],['people',wt('people')],['\n'],['miss.',wt('miss'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.9+.1*eio(t/2.4)})`;fade(tg,t,.1,.2,10);rv(h,t)}},true);
+// 14. REVEAL: inside the doorway, the teal frame closes into a strongroom door. "The cash still sleeps in a strongroom."
+add(wt('cash')-.15,sc=>{const b=box(sc,'m3',600,960,'50% 50%');mk(sc,'sh','background:rgba(11,26,21,.55)');mk(sc,'sh','background:'+GB(55));
+ const v=svg(sc,'',`<g transform="translate(540 700)" style="filter:drop-shadow(0 0 16px rgba(40,195,157,.55))"><g id="vd"><circle r="300" fill="rgba(11,26,21,.55)" stroke="#28c39d" stroke-width="10"/><circle r="250" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="4"/><circle r="70" fill="none" stroke="#28c39d" stroke-width="10"/>${[0,60,120,180,240,300].map(a=>`<line x1="0" y1="-70" x2="0" y2="-200" stroke="#28c39d" stroke-width="12" stroke-linecap="round" transform="rotate(${a})"/><circle cy="-210" r="16" fill="#28c39d" transform="rotate(${a})"/>`).join('')}${[0,90,180,270].map(a=>`<rect x="-14" y="-296" width="28" height="40" rx="4" fill="#fff" transform="rotate(${a+45})"/>`).join('')}</g></g>`);
+ const vd=v.querySelector('#vd');
+ const k=T(sc,'K ts','left:72px;top:1150px;color:#FFFFFF',[['●',wt('cash'),'c'],['The',wt('cash')-.05],['cash',wt('cash')],['still',wt('still')],['sleeps',wt('sleeps')]]);
+ const h=T(sc,'H ts','left:70px;top:1200px;width:960px;font-size:112px',[['In',wt('strongroom')-.1],['a',wt('strongroom')-.05],['\n'],['strongroom.',wt('strongroom'),'hl',1]]);
+ const b0=wt('cash')-.15,t0=wt('sleeps')-b0,t1=wt('strongroom')-b0;
+ b.im.style.filter='blur(5px)';return t=>{b.style.transform=`scale(${2.0+.1*eio(t/2.2)})`;const p=eb((t-t0)/.45);v.style.opacity=cl((t-t0)/.15);vd.setAttribute('transform',`scale(${(.4+.6*p).toFixed(3)}) rotate(${(-90+90*eio((t-t1)/.5)).toFixed(1)})`);rv(k,t);rv(h,t)}},true);
+// 15. Almirah key slot close. "And the first theft case on record? October 2010."
+add(wt('and',3)-.1,sc=>{const b=box(sc,'m4',490,1030,'50% 50%');mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1130px;color:#FFFFFF',[['●',wt('first'),'c'],['First',wt('first')],['theft',wt('theft')],['case',wt('case')],['on',wt('record')],['record',wt('record')]]);
+ const m=mk(sc,'ts','left:66px;top:1180px;font:800 110px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0','October');
+ const y=mk(sc,'Y ts','left:60px;top:1300px;opacity:0','2010');
+ const b0=wt('and',3)-.1,t0=wt('october')-b0,t1=wt('twenty',2)-b0;
+ return t=>{b.style.transform=`scale(${1.95+.12*eio(t/4)})`;rv(k,t);fade(m,t,t0,.22,16);if(t<t0)m.style.opacity=0;slam(y,t,t1,1.4,0);if(t<t1)y.style.opacity=0;y.style.color=t>t1+.3?'#28c39d':'#fff'}},true);
+// 16. Curtain in the frame, softer; rupee counter. "A visitor lost about thirty-five thousand rupees."
+add(wt('visitor')-.35,sc=>{const b=box(sc,'m2',560,760,'50% 50%');mk(sc,'sh','background:'+GB(48));
+ const k=T(sc,'K ts','left:72px;top:1120px;color:#FFFFFF',[['●',wt('visitor'),'c'],['A',wt('visitor')-.1],['visitor',wt('visitor')],['lost',wt('lost')],['about',wt('about')]]);
+ const n=mk(sc,'ts','left:58px;top:1170px;font:800 210px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','₹0');
+ const b0=wt('visitor')-.35,t0=wt('thirty-five',2)-b0,t1=wt('rupees')-b0;
+ const s=T(sc,'K ts','left:72px;top:1410px;color:#BFF5E4',[['Valuables,',wt('rupees')+.15],['as',wt('rupees')+.2],['reported',wt('rupees')+.25]]);
+ return t=>{b.style.transform=`scale(${1.7+.08*eio(t/3)})`;rv(k,t);n.style.opacity=cl((t-t0+.1)/.12);const p=eo((t-t0)/(t1-t0+.3));n.textContent='₹'+Math.round(35000*p).toLocaleString('en-IN');n.style.color=p>=1?'#28c39d':'#fff';rv(s,t)}},true);
+// 17. Street wide again, slow pull-out. "So... could you live without a front door?"
+add(wt('so',2)-.1,sc=>{const b=box(sc,'m1',800,1000,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const h=T(sc,'H ts','left:70px;top:1230px;width:960px;font-size:100px',[['Could',wt('could')],['you',wt('you',2)],['live',wt('live')],['\n'],['without',wt('without')],['a',wt('a',WS.filter(x=>nz(x[0])==='a').length)],['\n'],['front',wt('front',3),'hl'],['door?',wt('door',3),'hl']]);
+ return t=>{b.style.transform=`scale(${1.35-.15*eio(t/2.8)})`;rv(h,t)}},true);
+// 18. Loop beat: back to the hook frame with the outline lit
+add(WS[WS.length-1][2]+.05,sc=>{const f=hookFrame(sc);f.dr.draw(1);f.g.style.opacity=1;f.h.ts.forEach(s=>{s.style.opacity=1});
+ return t=>{f.b.style.transform=`scale(${1.12-.12*eo(t/.8)})`}},true);
+// 19. Voiced follow outro (test X15, reels/_outro): George says like and follow; the card taps the heart and Follow; seven day boxes fill
+const OT={like:.35+1.207,follow:.35+1.608,story:.35+3.931,every:.35+4.451,end:.35+5.125};
+add(OST,sc=>{sc.style.zIndex=1;
+ const bg=mk(sc,'',`left:-40px;top:-40px;width:1160px;height:2000px;background:url(img/m1.jpg) center/cover`);const sh=mk(sc,'sh','background:linear-gradient(180deg,rgba(11,26,21,.35),rgba(11,26,21,.82));opacity:0');
+ const card=mk(sc,'',`left:90px;width:900px;top:560px;background:#fff;border-radius:44px;padding:56px 56px 52px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0B1A15;font-family:IN`,
+ `<div style="display:flex;align-items:center;gap:34px"><div style="width:168px;height:168px;border-radius:50%;background:#fff;border:6px solid #28c39d;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/logo.png" style="width:120px;height:120px;object-fit:contain;border-radius:22px"></div><div><div style="font:800 60px/1.1 IN;display:flex;align-items:center;gap:14px">TrueYards <span style="width:46px;height:46px;border-radius:50%;background:#3897f0;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span></div><div style="font:500 36px/1.2 IN;color:#6b7a75;margin-top:6px">@trueyards.in</div></div></div><div style="font:500 40px/1.3 IN;margin:34px 0 40px">Real estate, explained. One story a day.</div><div style="display:flex;gap:24px"><div class="ofb" style="flex:1;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;font:800 46px/1 IN;position:relative;overflow:hidden;background:#28c39d;color:#fff"><span class="oft">Follow</span><div class="orp" style="position:absolute;border-radius:50%;background:rgba(255,255,255,.55);width:40px;height:40px;left:50%;top:50%;transform:translate(-50%,-50%) scale(0)"></div></div><div class="olb" style="flex:0 0 120px;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:#EEF2F1"><svg class="oht" viewBox="0 0 24 24" style="width:62px;height:62px"><path class="ohp" fill="none" stroke="#0B1A15" stroke-width="2" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg></div></div>`);
+ const line=mk(sc,'',`left:0;width:1080px;top:1230px;text-align:center;color:#fff;font:800 78px/1.2 IN;letter-spacing:-.01em;opacity:0`,'Like. <b style="background:#28c39d;padding:0 18px;border-radius:10px;color:#0B1A15">Follow.</b> Learn.');
+ const dots=mk(sc,'',`left:0;width:1080px;top:1370px;display:flex;justify-content:center;gap:26px`);const DS=['M','T','W','T','F','S','S'].map(d=>mk(dots,'',`position:relative;width:70px;height:70px;border-radius:18px;border:4px solid rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;color:#fff;font:500 24px/1 IN;opacity:0`,d));
+ const hp=[];for(let i=0;i<7;i++){hp.push(svg(sc,'width:56px;height:56px;opacity:0','<path fill="#ff3b5c" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/>'));hp[i].setAttribute('viewBox','0 0 24 24')}
+ const hand=svg(sc,'width:150px;height:150px;opacity:0','<path fill="#fff" stroke="#0B1A15" stroke-width="2.2" stroke-linejoin="round" d="M24 30V10a4 4 0 0 1 8 0v16l2-.3a4 4 0 0 1 4.5 3.2l.2 1 1.5-.3a4 4 0 0 1 4.6 3.1l.2.9 1.4-.2a4 4 0 0 1 4.6 3.4l1.3 9.2c.8 6-3 11.5-9 12.7L36 60c-4.2.8-8.4-.9-10.9-4.3L14 40.5a4 4 0 0 1 6.3-5L24 40z"/>');hand.setAttribute('viewBox','0 0 64 64');
+ const fb=card.querySelector('.ofb'),ft=card.querySelector('.oft'),rp=card.querySelector('.orp'),lb=card.querySelector('.olb'),ht=card.querySelector('.oht'),hpp=card.querySelector('.ohp');
+ const E=(t,a,b)=>cl((t-a)/(b-a));
+ return t=>{const T=OT;const bgp=eo(E(t,0,.6));bg.style.filter=`blur(${bgp*26}px) brightness(${1-bgp*.25})`;bg.style.transform=`scale(${1.0+.03*t/6})`;sh.style.opacity=bgp;
+  const c=eb(E(t,.15,.75));card.style.opacity=E(t,.15,.4);card.style.transform=`translateY(${(1-c)*160}px) scale(${.94+.06*c})`;
+  const on=t>=T.like;hpp.setAttribute('fill',on?'#ff3b5c':'none');hpp.setAttribute('stroke',on?'#ff3b5c':'#0B1A15');ht.style.transform=`scale(${on?1+.45*Math.sin(Math.PI*E(t,T.like,T.like+.35)):1})`;
+  const L=lb.getBoundingClientRect(),FB=fb.getBoundingClientRect();
+  hp.forEach((h,i)=>{const p=E(t,T.like+i*.05,T.like+.9+i*.05);const ang=-90+(i-3)*22;const r=p*(220+i*12);h.style.left=(L.left+L.width/2-28+Math.cos(ang*Math.PI/180)*r*.6)+'px';h.style.top=(L.top+L.height/2-28+Math.sin(ang*Math.PI/180)*r)+'px';h.style.opacity=p>0&&p<1?1-p:0;h.style.transform=`scale(${.6+p*.8}) rotate(${(i-3)*12}deg)`});
+  const p1=eo(E(t,T.like-.55,T.like-.05)),p2=eo(E(t,T.like+.3,T.follow-.05));const x0=880,y0=1500,xl=L.left+L.width/2-40,yl=L.top+L.height/2-20,xf=FB.left+FB.width/2-40,yf=FB.top+FB.height/2-20;
+  let hx=x0+(xl-x0)*p1,hy=y0+(yl-y0)*p1;hx+=(xf-xl)*p2;hy+=(yf-yl)*p2;const pr=Math.max(0,1-Math.abs(t-T.like)/.12)+Math.max(0,1-Math.abs(t-T.follow)/.12);
+  hand.style.left=hx+'px';hand.style.top=hy+'px';hand.style.transform=`scale(${1-.12*pr})`;hand.style.opacity=E(t,T.like-.6,T.like-.35)*(1-E(t,T.follow+.5,T.follow+.8));
+  const fo=t>=T.follow;fb.style.background=fo?'#EEF2F1':'#28c39d';fb.style.color=fo?'#0B1A15':'#fff';ft.textContent=fo?'Following ✓':'Follow';const r2=E(t,T.follow,T.follow+.5);rp.style.transform=`translate(-50%,-50%) scale(${r2*22})`;rp.style.opacity=r2>0?1-r2:0;fb.style.transform=`scale(${1-.05*Math.max(0,1-Math.abs(t-T.follow)/.15)})`;
+  const l=eo(E(t,T.follow+.4,T.follow+.9));line.style.opacity=l;line.style.transform=`translateY(${(1-l)*30}px)`;
+  DS.forEach((d,i)=>{const a=T.story-.1+i*((T.end-.3-T.story)/7);d.style.opacity=eo(E(t,T.story-.5,T.story-.1));const f=t>=a;d.style.background=f?'#28c39d':'none';d.style.borderColor=f?'#28c39d':'rgba(255,255,255,.65)';d.style.transform=`scale(${f?1+.18*Math.max(0,1-(t-a)/.2):1})`})}},false);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';const SRC='As reported: Deccan Herald / IANS 2011, Daily FT 2011, Taipei Times 2015. Local belief described, not endorsed.';
+const FINE=[[0,AIL],[SC[1].t0,'Maharashtra village, for illustration. Photo: Arundhati Pathak / Unsplash.'],[SC[3].t0,AIL],[SC[5].t0,AIL+' Local belief described, not endorsed.'],[SC[6].t0,AIL],[SC[9].t0,'Maharashtra town, for illustration. Photo: Zoshua Colah / Unsplash.'],[SC[10].t0,AIL+' UCO Bank branch, opened Jan 2011 (Deccan Herald, Daily FT).'],[SC[13].t0,AIL+' Cash kept in a strongroom (Taipei Times, 2015).'],[SC[14].t0,AIL+' Case recorded by Sonai police, 25 Oct 2010 (Deccan Herald, 2011).'],[SC[16].t0,AIL+' '+SRC],[SC[17].t0,'Education only, not advice.'],[OST,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;fe.style.color='rgba(246,241,230,.62)';
+ document.getElementById('brand').style.opacity=t>=OST?1-cl((t-OST)/.3):1;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,wt('never'),wt('thirty-five'),wt('twenty'),wt('never',3),wt('strongroom')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ document.getElementById('fol').style.opacity=0;
+};
+</script></body></html>
