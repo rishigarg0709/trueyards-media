@@ -32,7 +32,7 @@ Re-ranked 2026-11-22 by the learning run: the two full-frame motion openings (Ho
 - [ ] story | Lavasa: India's private hill city that turned into a ghost town | "India built a whole city. Then everyone left." | story
 - [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands. Then someone filled in the sea." | hook 6 time jump | send: every Mumbaikar | look D Archive Sepia, voice George | check drafts/mumbai-10-pounds-reel first: may already be the untitled 15 Nov reel
 - [x] 2026-11-21 midday | global | Hong Kong homes smaller than a parking space (subdivided flats, 8 sq m minimum law) | displaced by news 2026-11-20 | plan and images ready: plans/2026-11-20/midday/displaced-plan.md (images 2026-11-20-midday-1..5 already in library/media)
-- [~] 2026-11-22 carousel (D41 reel) | rules | Carpet vs built-up vs super built-up area | "You're paying for space you'll never stand in." | stakes for viewer
+- [x] 2026-11-22 carousel slot (D41 reel, published) | rules | Carpet vs built-up vs super built-up area | "You're paying for space you'll never stand in." | stakes for viewer
 - [ ] history | Chandigarh: India's planned city designed by Le Corbusier | "A Swiss-French architect designed an Indian city from scratch." | story
 - [ ] new | marvel | Steinway Tower, New York: the world's skinniest skyscraper (about 24:1) | "This tower is 24 times taller than it is wide." | hook 23 scale awe | send: anyone into architecture | verify ratio and height
 - [ ] new | history | Pudong, Shanghai: farmland in 1990, a skyline by 2010 | "This was farmland in 1990." | hook 6 time jump | send: anyone who says India builds slowly | verify dates and Lujiazui figures; convert any money to rupees (D14)
