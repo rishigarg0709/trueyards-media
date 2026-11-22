@@ -1,6 +1,6 @@
 # Platform voice: one creative, a different post on every platform
 
-Rishi, 22 Nov 2026 14:52 (Directive D52): "post the content according to that platform's theme and audience. Creatives can be the same, but still post according to the platform's personalisation."
+Rishi, 22 Nov 2026 14:52 (Directive D53): "post the content according to that platform's theme and audience. Creatives can be the same, but still post according to the platform's personalisation."
 
 The video or carousel file can be the same everywhere. Everything around it is written fresh for each platform: the words, the opening line, the title, the hashtags, the question, the length. Never paste the Instagram caption anywhere else, and never just trim it.
 
