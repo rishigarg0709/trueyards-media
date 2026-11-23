@@ -1,0 +1,32 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ },
+ {
+  "kind": "voice",
+  "name": "stw-vo-1",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "This tower is four hundred and thirty-five metres tall... and only eighteen metres wide. Steinway Tower, New York. About twenty-four times taller than it is wide. Stack six Qutub Minars... and you're there. Its width? Less than the length of a cricket pitch. So how does a pencil stand up in the wind? [pause] It doesn't stand still. In a storm, the top can sway up to about a metre. Up near the top hangs the secret: a tuned mass damper. Heavy steel plates that swing against the wind... and calm the whole tower. Two huge concrete walls run up its spine. About two hundred rock anchors pin it to the bedrock. At its feet, a piano hall from the nineteen-twenties. Sixty homes up there, each worth about one hundred and forty to five hundred and twenty crore rupees. All of it... balanced on less than a cricket pitch.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "stw-vo-2",
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "model": "eleven_v3",
+  "text": "This tower is four hundred and thirty-five metres tall... and only eighteen metres wide. Steinway Tower, New York. About twenty-four times taller than it is wide. Stack six Qutub Minars... and you're there. Its width? Less than the length of a cricket pitch. So how does a pencil stand up in the wind? [pause] It doesn't stand still. In a storm, the top can sway up to about a metre. Up near the top hangs the secret: a tuned mass damper. Heavy steel plates that swing against the wind... and calm the whole tower. Two huge concrete walls run up its spine. About two hundred rock anchors pin it to the bedrock. At its feet, a piano hall from the nineteen-twenties. Sixty homes up there, each worth about one hundred and forty to five hundred and twenty crore rupees. All of it... balanced on less than a cricket pitch.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
