@@ -1,0 +1,32 @@
+[
+ {
+  "kind": "voice",
+  "name": "nfs-vo-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Why would anyone paint this... on their own house? \"This property is not for sale.\" It's not for the neighbours. It's for buyers. Because some people selling property... don't own it. Thiruvananthapuram. A house that had stood empty for years. Its owner? Living in the United States. A seventy-six-year-old woman walked into the sub-registrar's office... and signed as the owner. The house was sold... for one and a half crore rupees. [pause] How did it come out? The caretaker went to pay the property tax... and someone had already paid it. Empty homes are the easiest target. So owners paint the wall: I'm here... and I'm not selling. But the real lock is on paper: mutation, tax receipts, the encumbrance record. Next time you see this wall... you'll know why.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "nfs-vo-2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Why would anyone paint this... on their own house? \"This property is not for sale.\" It's not for the neighbours. It's for buyers. Because some people selling property... don't own it. Thiruvananthapuram. A house that had stood empty for years. Its owner? Living in the United States. A seventy-six-year-old woman walked into the sub-registrar's office... and signed as the owner. The house was sold... for one and a half crore rupees. [pause] How did it come out? The caretaker went to pay the property tax... and someone had already paid it. Empty homes are the easiest target. So owners paint the wall: I'm here... and I'm not selling. But the real lock is on paper: mutation, tax receipts, the encumbrance record. Next time you see this wall... you'll know why.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ }
+]
