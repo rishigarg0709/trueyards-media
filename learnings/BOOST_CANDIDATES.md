@@ -81,3 +81,21 @@ Rule now D40 (Rishi, 21 Nov 12:14): campaign "TrueYards Follow - spread", one ad
 | Jaipur pink trial (18178380412407784) | 69 h | 134 | 64.0% | 16.5% | 0 | FB 206 | Last in line |
 | Mumbai rent, SC stalled loans, Kerala trials | 39 to 63 h | 95 to 117 | 79 to 82% | 9 to 12% | 0 | Kerala FB 249, Threads 104 | Not eligible (skip over 75%) |
 | Forteasia project reel (18099738566652487) | | | | | | | Never boost |
+
+## 2026-11-23 (pull 05:14 UTC)
+Active (Follow - spread, D40): Burj Khalifa and Jakarta, day 3, INR 100 a day each. Rotation not run this morning (see BOOST_LOG). Ranked for the next turn (least paid first, then follows proxy, skip, hold, other platforms; skip over 75% excluded):
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Paid so far | Other platforms | Status |
+|---|---|---|---|---|---|---|---|---|
+| Bengaluru bus station was a lake (17920086021259928) | 14 h | 1,126 | 49.4% | 16.0% | 0 | 0 | top 20% on FB, Threads, X | Best next candidate once 24 h old (about 20:15 IST 23 Nov); breakout reach, voiced outro |
+| Steel rods trial (18508881529100400) | 117 h | 1,668 | 34.9% | 42.3% | 1.8 | about INR 0 | FB 780, YT 679 | Next turn (planned 23 Nov); eligible to 28 Nov |
+| Why Delhi has no skyscrapers (18341456980274380) | 165 h | 1,571 | 43.9% | 34.0% | 1.3 | about INR 0 | YT 52 | Planned turn 23 Nov; ages out 26 Nov |
+| Japan houses trial (18086326760340689) | 141 h | 409 | 47.8% | 30.9% | 0 | 0 | YT 91 | Behind the three above |
+| Aangan courtyard trial (18140554237642623) | 39 h | 252 | 50.0% | 22.9% | 0 | 0 | YT 446 (p86) | Eligible |
+| Hong Kong trial (17940674607125722) | 45 h | 134 | 49.6% | 21.6% | 0 | 0 | YT 420 (p79) | Eligible |
+| Shani Shingnapur trial (17954408460050031) | 21 h | 111 | 52.7% | 17.1% | 0 | 0 | X p85 | Eligible from about 13:30 IST 23 Nov |
+| Carpet vs super built-up trial (18131749264842833) | 16 h | 157 | 61.3% | 16.8% | 0 | 0 | X 11 | Weak |
+| Burj Khalifa (18455422555132731) | 135 h | 313 | 59.6% | 23.4% | 0 | about INR 180 | FB 232 | ACTIVE, day 3 |
+| Jakarta (17995953015110577) | 111 h | 192 | 54.7% | 16.5% | 0 | about INR 195 | FB 221 | ACTIVE, day 3 |
+| Noida twin towers (18131037979847506) | 159 h | 1,346 | 43.7% | 37.2% | 0 | about INR 600 | YT 736 | Had its turn |
+| Kerala, SC, Mumbai rent trials | | 95 to 117 | 79 to 82% | | 0 | 0 | | Excluded (skip over 75%) |
