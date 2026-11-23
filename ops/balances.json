@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-23 21:05",
+ "checked_at": "2026-11-23 21:09",
  "checks": [
   {
    "id": "gemini",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 5821,
+   "left": 5807,
    "burn_per_day": 887,
-   "runway_days": 6.6,
-   "detail": "About INR 5821 left, spending about INR 887 a day"
+   "runway_days": 6.5,
+   "detail": "About INR 5807 left, spending about INR 887 a day"
   },
   {
    "id": "whatsapp",
