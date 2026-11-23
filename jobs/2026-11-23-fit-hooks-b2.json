@@ -1,0 +1,6 @@
+[
+ {"kind": "voice", "name": "fit-b2-hook-warehouse", "voice_id": "yj30vwTGJxSHezdAGsv9", "model": "eleven_v3", "text": "Warehouse के लिए land ढूंढ रहे हैं?", "settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": true}},
+ {"kind": "voice", "name": "fit-b2-hook-ncr", "voice_id": "yj30vwTGJxSHezdAGsv9", "model": "eleven_v3", "text": "NCR में factory के लिए land चाहिए?", "settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": true}},
+ {"kind": "voice", "name": "fit-b2-hook-1000yd", "voice_id": "yj30vwTGJxSHezdAGsv9", "model": "eleven_v3", "text": "एक हज़ार square yard का industrial plot चाहिए?", "settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": true}},
+ {"kind": "voice", "name": "fit-b2-hook-auto", "voice_id": "yj30vwTGJxSHezdAGsv9", "model": "eleven_v3", "text": "Auto parts unit के लिए land ढूंढ रहे हैं?", "settings": {"stability": 0.5, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": true}}
+]
