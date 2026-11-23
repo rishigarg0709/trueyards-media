@@ -1,5 +1,5 @@
 {
- "at": "2026-11-23 12:50",
+ "at": "2026-11-23 12:51",
  "rows": [
   {
    "id": "120255645738970547",
@@ -8,9 +8,9 @@
    "objective": "OUTCOME_LEADS",
    "created": "2026-11-17",
    "budget_day_inr": 487,
-   "spend_inr": 2390,
+   "spend_inr": 2391,
    "spend_today_inr": 78,
-   "impressions": 14597,
+   "impressions": 14600,
    "reach": 7006,
    "clicks": 73,
    "chats": 35,
