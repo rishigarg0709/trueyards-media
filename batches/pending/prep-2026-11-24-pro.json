@@ -1,0 +1,30 @@
+{
+ "batch": "batches/jrez7r2n33nh6o5baxe8uidcvd7zmq4ak9n2",
+ "name": "prep-2026-11-24-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-23T17:16Z",
+ "images": [
+  {
+   "name": "2026-11-24-midday-1",
+   "prompt": "Hyper-realistic aerial drone photograph looking straight down at a 1950s modernist planned Indian city: a perfect grid of large rectangular sectors, each a leafy neighbourhood of low white and brick houses with green parks, separated by wide straight tree-lined roads and roundabouts, Shivalik foothills faint on the horizon, mid-morning sun. In the middle of the grid ONE rectangle is completely empty: bare brown earth, no houses, no trees, a clean gap in the pattern, as if a sector is missing. Believable scale and shadows, looks like a real news aerial photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  },
+  {
+   "name": "2026-11-24-carousel-1",
+   "prompt": "Bright overcast daylight, low angle looking up at a tall slim 34-storey residential tower in central Mumbai: the lower half lived-in with plants, clothes lines and open windows, the top half clearly empty and sealed, bare windows with no curtains, closed balconies, an empty silent look; older low-rise buildings and a few palms at its base; documentary news photo, believable scale. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  },
+  {
+   "name": "2026-11-24-evening-1",
+   "prompt": "Bright midday sun, low angle up the facade of a typical five-storey Indian apartment building on a busy city street: every single balcony and window enclosed floor to ceiling by painted iron grills, like a stack of cages, colourful laundry, potted tulsi and money plants and a water can behind the bars, satellite dishes, a clear blue sky; real everyday India, sharp detail. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  }
+ ],
+ "fallback_after_utc": null
+}
