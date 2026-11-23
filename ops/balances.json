@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-23 19:33",
+ "checked_at": "2026-11-23 19:37",
  "checks": [
   {
    "id": "gemini",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 98284,
+   "left": 96945,
    "burn_per_day": 5000,
-   "runway_days": 19.7,
-   "detail": "98,284 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 19.4,
+   "detail": "96,945 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
