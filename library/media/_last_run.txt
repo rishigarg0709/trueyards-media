@@ -1,2 +1,17 @@
-2026-11-23 11:52 UTC
-2026-11-23-carousel-pano [image]: image ok
+2026-11-23 13:55 UTC
+fitc-1 [image]: image ok
+fitc-2 [image]: image ok
+fitc-3 [image]: image ok
+fitc-4 [image]: image ok
+fitc-5 [image]: image ok
+fitc-6 [image]: image ok
+fitc-r-hook [voice]: voice ok
+fitc-r-pain [voice]: voice ok
+fitc-r-turn [voice]: voice ok
+fitc-r-facts [voice]: voice ok
+fitc-r-cta [voice]: voice ok
+fitc-j-hook [voice]: voice ok
+fitc-j-pain [voice]: voice ok
+fitc-j-turn [voice]: voice ok
+fitc-j-facts [voice]: voice ok
+fitc-j-cta [voice]: voice ok
