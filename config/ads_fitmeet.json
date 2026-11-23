@@ -37,7 +37,7 @@
   "launch_approved": true,
   "use_planner": false,
   "report_prefix": "fitmeet-",
-  "daily": true,
+  "daily": false,
   "daily_cap_inr": 500,
   "monthly_cap_inr": 5000,
   "target_cost_per_conversation_inr": 60,
@@ -261,5 +261,6 @@
   "note_d45": "Rishi 21 Nov 16:59: switch Meta to our scraped industry-owner lists. INR 500/day: L 260, W 120, M1 120, M2 paused.",
   "note_cta": "Rishi 21 Nov 17:16: button on FB/Instagram like 'RSVP on WhatsApp'. Meta has no RSVP label for WhatsApp ads; Sign up (opens WhatsApp) is the closest. Video ads held until Rishi picks a hook.",
   "note_welcome": "Rishi 21 Nov 17:55: no 'Namaste' and no 'free entry' in the WhatsApp welcome; free entry also removed from the ad text.",
-  "note_trim": "Rishi 21 Nov 18:29: cut to 2 ads. L industry-owner list INR 350, W warm INR 150, one ad each (feed invite); M1 and M2 paused."
+  "note_trim": "Rishi 21 Nov 18:29: cut to 2 ads. L industry-owner list INR 350, W warm INR 150, one ad each (feed invite); M1 and M2 paused.",
+  "paused_note": "Paused by Rishi 23 Nov 2026 10:58; daily check off until he resumes"
 }
