@@ -1,5 +1,6 @@
 # 2026-11-24 evening reel (19:07 IST): every Indian balcony is a cage, on purpose (and why fire officers worry)
 
+- BATCH CHECK (2026-11-23 22:37 IST, nightly planner): jobs/prep-2026-11-24.json pushed 22:33 IST; the 6 real photos ARE in library/stock/ (d1124m-*, d1124c-*, d1124e-*, fetched 22:37 IST); the cloud-media batch-submit run was still in progress when this run ended, so the batch submit is NOT confirmed. At run time: if batches/pending/ or batches/done/ has prep-2026-11-24.json and prep-2026-11-24-pro.json, use those images; if neither exists (or batches/failed/ has them), generate the listed images the normal way (image job).
 - Publishing: main grid (D54): one Instagram copy as a normal reel, "share_to_feed": true, never "trial". Platform texts fresh per platform (D53).
 - Batch status: prep-2026-11-24 ordered by the nightly planner on 2026-11-23 (see the status line added below after the submit check). If any image is missing at run time, generate only the missing ones with the normal image job.
 - Opening (D41, motion): frame 0 is a bright, full-frame low-angle push up a real-looking Indian apartment facade with every balcony grilled; the line is SPOKEN from 0 s; no text card before 1.5 s.
