@@ -1,0 +1,2328 @@
+{
+ "op": "boost_status",
+ "ran_at": "2026-11-23T14:56:32.012303Z",
+ "result": {
+  "month_spend_inr": 1060.97,
+  "campaigns": {
+   "data": [
+    {
+     "id": "120255720333370547",
+     "name": "FIT Business Meet 29 Nov",
+     "status": "PAUSED",
+     "effective_status": "PAUSED"
+    },
+    {
+     "id": "120255718171540547",
+     "name": "TrueYards Follow - spread",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE"
+    },
+    {
+     "id": "120255661706190547",
+     "name": "TrueYards Follow",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "daily_budget": "20000"
+    },
+    {
+     "id": "120255657866010547",
+     "name": "FV Jind SCO CTWA",
+     "status": "PAUSED",
+     "effective_status": "PAUSED"
+    },
+    {
+     "id": "120255647260270547",
+     "name": "FIT Warm v1",
+     "status": "PAUSED",
+     "effective_status": "PAUSED"
+    },
+    {
+     "id": "120255645738970547",
+     "name": "FIT CTWA Leads v2",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE"
+    },
+    {
+     "id": "120255620965680547",
+     "name": "TrueYards Boost",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "daily_budget": "20000"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVHNncG5nLVZAPRERVZAWpPaEYxZAFhwd211RjFwMHp1dmU0b2J2eGdhUEJMVlNDdWhKX2cxUkZA1ZA1UxV2pCUzNJaEVqY3MtS1hfNXdQbXloWnMwUEZABanBR",
+     "after": "QVFIVERNZAjlxVzltcVVDQlI4aDNfVEZAmSW9aQVpZAZAzNXVHFlam1vamlfTlkxc0ZAveWZAEMXZAiRlZALZAFNHc0J6SUdWYkJIYl9GM3J2ZAzZAEbWVLREl6SmxuVDdR"
+    }
+   }
+  },
+  "ads": {
+   "data": [
+    {
+     "id": "120255753611660547",
+     "name": "boost 17920086021259928",
+     "status": "ACTIVE",
+     "effective_status": "IN_PROCESS",
+     "creative": {
+      "source_instagram_media_id": "17920086021259928",
+      "id": "1093894980345672"
+     }
+    },
+    {
+     "id": "120255661722430547",
+     "name": "follow 18131037979847506",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "source_instagram_media_id": "18131037979847506",
+      "id": "1137328585367135"
+     }
+    },
+    {
+     "id": "120255648190400547",
+     "name": "W11 reel 3 things HQ",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "4468499586734312"
+     }
+    },
+    {
+     "id": "120255648185680547",
+     "name": "W10 reel Hinglish HQ: mil gaya",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "1465451985517339"
+     }
+    },
+    {
+     "id": "120255648167890547",
+     "name": "R10 reel Hinglish HQ: mil gaya",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "39789698107340046"
+     }
+    },
+    {
+     "id": "120255648171070547",
+     "name": "R11 reel 3 things HQ",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1128236759849772"
+     }
+    },
+    {
+     "id": "120255648181560547",
+     "name": "U11 reel 3 things HQ",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1029852163465280"
+     }
+    },
+    {
+     "id": "120255648175050547",
+     "name": "U10 reel Hinglish HQ: mil gaya",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1471833118209762"
+     }
+    },
+    {
+     "id": "120255721398350547",
+     "name": "L-T1 invite feed, sign-up v2",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1471319648274277"
+     }
+    },
+    {
+     "id": "120255718190540547",
+     "name": "follow 18455422555132731",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "18455422555132731",
+      "id": "1591207133040368"
+     }
+    },
+    {
+     "id": "120255718190890547",
+     "name": "follow 17995953015110577",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "17995953015110577",
+      "id": "1024743760683913"
+     }
+    },
+    {
+     "id": "120255721396300547",
+     "name": "M1-T1 invite feed, sign-up v2",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "1471319648274277"
+     }
+    },
+    {
+     "id": "120255721399280547",
+     "name": "W-T1 invite feed, sign-up v2",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "1471319648274277"
+     }
+    },
+    {
+     "id": "120255721397770547",
+     "name": "M1-T3 square, sign-up v2",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "2477722492977105"
+     }
+    },
+    {
+     "id": "120255721396850547",
+     "name": "M1-T2 see FIT feed, sign-up v2",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "1839933813930031"
+     }
+    },
+    {
+     "id": "120255700485000547",
+     "name": "R-v3b light: the right address for your SCO in Jind",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "1779073563198461"
+     }
+    },
+    {
+     "id": "120255700484620547",
+     "name": "J-v3b light: the right address for your SCO in Jind",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "1779073563198461"
+     }
+    },
+    {
+     "id": "120255700446350547",
+     "name": "J-v3 dark: your shop on Jind's 24 m road",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "2144276816211527"
+     }
+    },
+    {
+     "id": "120255700449200547",
+     "name": "R-v3 dark: your shop on Jind's 24 m road",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "2144276816211527"
+     }
+    },
+    {
+     "id": "120255700450110547",
+     "name": "R-v3 light: the right address for your SCO in Jind",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "4785335898457684"
+     }
+    },
+    {
+     "id": "120255700448090547",
+     "name": "J-v3 light: the right address for your SCO in Jind",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "4785335898457684"
+     }
+    },
+    {
+     "id": "120255699197080547",
+     "name": "boost 18341456980274380",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "18341456980274380",
+      "id": "1700724878087910"
+     }
+    },
+    {
+     "id": "120255678724950547",
+     "name": "boost 18508881529100400",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "18508881529100400",
+      "id": "1690628775914763"
+     }
+    },
+    {
+     "id": "120255662370110547",
+     "name": "R1 poster: your commercial plot in Flower Valley",
+     "status": "ACTIVE",
+     "effective_status": "ADSET_PAUSED",
+     "creative": {
+      "id": "1848465859686602"
+     }
+    },
+    {
+     "id": "120255657868730547",
+     "name": "J1 poster: business location already alive",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "id": "1652132623033513"
+     }
+    },
+    {
+     "id": "120255654404860547",
+     "name": "boost 18131037979847506",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "source_instagram_media_id": "18131037979847506",
+      "id": "2288856808342422"
+     }
+    },
+    {
+     "id": "120255647744560547",
+     "name": "P11 reel 3 things HQ",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "2312384199553977"
+     }
+    },
+    {
+     "id": "120255647736550547",
+     "name": "P10 reel Hinglish HQ: mil gaya",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1828448095073129"
+     }
+    },
+    {
+     "id": "120255646891470547",
+     "name": "P9 reel 3 things: planned industrial plot",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1127209029905990"
+     }
+    },
+    {
+     "id": "120255646885790547",
+     "name": "P8 reel voiceover Hinglish: mil gaya",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "2338372330231229"
+     }
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVGFBWk93OHltakUwMFBMSGF4ODBLRjVUbmJqc1RjWUwyYlJOYlkzWVlIVkt0OGlyWXgwMl9KaDZAFcF9jX3JCMFRCT2ZAWSzNHYTVyRDRqc3dhQWlWZAHd3",
+     "after": "QVFIVERvb2FsNWlzcjZAKdjZAKajZApZAzhncnBTTW50X3RwZATRzY01mWVZAnendodWdncWZAacjJITk9VTU9WWUg2M0VoZA2I2SG0wTmVOdk0zT1EwV0syQW1vUUtR"
+    }
+   }
+  },
+  "insights_7d": {
+   "data": [
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "4"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.8275"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "3.31"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "1.655"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.472857"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "3.31"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "1.655"
+      },
+      {
+       "action_type": "link_click",
+       "value": "1.103333"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.472857"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "3.31"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "24",
+     "reach": "23",
+     "spend": "3.31",
+     "ad_id": "120255646885790547",
+     "ad_name": "P8 reel voiceover Hinglish: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "4"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.84"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "0.84"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.21"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "0.84"
+      },
+      {
+       "action_type": "link_click",
+       "value": "0.28"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.21"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "0.84"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "4",
+     "reach": "4",
+     "spend": "0.84",
+     "ad_id": "120255646891470547",
+     "ad_name": "P9 reel 3 things: planned industrial plot"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "63"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "18"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "31"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "2004"
+      },
+      {
+       "action_type": "like",
+       "value": "1"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "27"
+      },
+      {
+       "action_type": "comment",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2005"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "27"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "22"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "30"
+      },
+      {
+       "action_type": "post",
+       "value": "5"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_comment",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "22"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "18"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "30"
+      },
+      {
+       "action_type": "video_view",
+       "value": "1914"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "1.154107"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "73.632"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "100.407273"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1.102275"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "71.256774"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "100.407273"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "81.813333"
+      },
+      {
+       "action_type": "link_click",
+       "value": "35.062857"
+      },
+      {
+       "action_type": "like",
+       "value": "2208.96"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1.101726"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "73.632"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "13475",
+     "reach": "6778",
+     "spend": "2208.96",
+     "ad_id": "120255647736550547",
+     "ad_name": "P10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "3"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "85"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "85"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "3"
+      },
+      {
+       "action_type": "video_view",
+       "value": "81"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "1.219012"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "32.913333"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "98.74"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1.161647"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "32.913333"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "98.74"
+      },
+      {
+       "action_type": "link_click",
+       "value": "24.685"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1.161647"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "32.913333"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "743",
+     "reach": "530",
+     "spend": "98.74",
+     "ad_id": "120255647744560547",
+     "ad_name": "P11 reel 3 things HQ"
+    },
+    {
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "1",
+     "reach": "1",
+     "spend": "0.3",
+     "ad_id": "120255648171070547",
+     "ad_name": "R11 reel 3 things HQ"
+    },
+    {
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "1",
+     "reach": "1",
+     "spend": "0.76",
+     "ad_id": "120255648181560547",
+     "ad_name": "U11 reel 3 things HQ"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_reaction",
+       "value": "317"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "5"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "625"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "317"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "625"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "312"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "312"
+      },
+      {
+       "action_type": "video_view",
+       "value": "308"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.153052"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.075424"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "0.148707"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.075424"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "2929",
+     "reach": "2893",
+     "spend": "47.14",
+     "ad_id": "120255654404860547",
+     "ad_name": "boost 18131037979847506"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "55"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "6"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "13"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "3"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "62"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "7"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "62"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "9"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "13"
+      },
+      {
+       "action_type": "post",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "9"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "13"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "36.392308"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "52.566667"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "7.630645"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "36.392308"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "52.566667"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "67.585714"
+      },
+      {
+       "action_type": "link_click",
+       "value": "8.601818"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "7.630645"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "36.392308"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "7975",
+     "reach": "3626",
+     "spend": "473.1",
+     "ad_id": "120255657868730547",
+     "ad_name": "J1 poster: business location already alive"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1071"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "62"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "15"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "6478"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "68"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "6478"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "53"
+      },
+      {
+       "action_type": "post",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "47"
+      },
+      {
+       "action_type": "video_view",
+       "value": "5339"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.100757"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.083041"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "7.910882"
+      },
+      {
+       "action_type": "link_click",
+       "value": "0.502278"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.083041"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "21546",
+     "reach": "18475",
+     "spend": "537.94",
+     "ad_id": "120255661722430547",
+     "ad_name": "follow 18131037979847506"
+    },
+    {
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "315",
+     "reach": "79",
+     "spend": "127.16",
+     "ad_id": "120255662370110547",
+     "ad_name": "R1 poster: your commercial plot in Flower Valley"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "2"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.055"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.036667"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "0.11"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.036667"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "9",
+     "reach": "9",
+     "spend": "0.11",
+     "ad_id": "120255678724950547",
+     "ad_name": "boost 18508881529100400"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_engagement",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.18"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.18"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.18"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "7",
+     "reach": "7",
+     "spend": "0.18",
+     "ad_id": "120255699197080547",
+     "ad_name": "boost 18341456980274380"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "2"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "7.106667"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "21.32"
+      },
+      {
+       "action_type": "link_click",
+       "value": "10.66"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "7.106667"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "474",
+     "reach": "307",
+     "spend": "21.32",
+     "ad_id": "120255700446350547",
+     "ad_name": "J-v3 dark: your shop on Jind's 24 m road"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "44.78"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "22.39"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "44.78"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "44.78"
+      },
+      {
+       "action_type": "link_click",
+       "value": "44.78"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "22.39"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "44.78"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "181",
+     "reach": "67",
+     "spend": "44.78",
+     "ad_id": "120255700449200547",
+     "ad_name": "R-v3 dark: your shop on Jind's 24 m road"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "104"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "10"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "24"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "118"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "14"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "118"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "14"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "18"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "24"
+      },
+      {
+       "action_type": "post",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "17"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "10"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "24"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "22.437917"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "29.917222"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "4.563644"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "22.437917"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "31.677059"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "38.465"
+      },
+      {
+       "action_type": "link_click",
+       "value": "5.177981"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "4.563644"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "22.437917"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "10338",
+     "reach": "4752",
+     "spend": "538.51",
+     "ad_id": "120255700484620547",
+     "ad_name": "J-v3b light: the right address for your SCO in Jind"
+    },
+    {
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "79",
+     "reach": "38",
+     "spend": "14.69",
+     "ad_id": "120255700485000547",
+     "ad_name": "R-v3b light: the right address for your SCO in Jind"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "105"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "13"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_block",
+       "value": "13"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "598"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "15"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "598"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "13"
+      },
+      {
+       "action_type": "post",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "11"
+      },
+      {
+       "action_type": "video_view",
+       "value": "478"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.279226"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.223194"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "8.898"
+      },
+      {
+       "action_type": "link_click",
+       "value": "1.271143"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.223194"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "2702",
+     "reach": "2499",
+     "spend": "133.47",
+     "ad_id": "120255718190540547",
+     "ad_name": "follow 18455422555132731"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "120"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "11"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_block",
+       "value": "15"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "5"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "624"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "13"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "624"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "8"
+      },
+      {
+       "action_type": "post",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "6"
+      },
+      {
+       "action_type": "video_view",
+       "value": "491"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.300183"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.236202"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "11.337692"
+      },
+      {
+       "action_type": "link_click",
+       "value": "1.22825"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.236202"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "3417",
+     "reach": "3317",
+     "spend": "147.39",
+     "ad_id": "120255718190890547",
+     "ad_name": "follow 17995953015110577"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "3"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "3"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "5.61"
+      },
+      {
+       "action_type": "link_click",
+       "value": "5.61"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "5.61"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "174",
+     "reach": "148",
+     "spend": "16.83",
+     "ad_id": "120255720337920547",
+     "ad_name": "M1-1 invite feed"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "1.71"
+      },
+      {
+       "action_type": "link_click",
+       "value": "1.71"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1.71"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "25",
+     "reach": "23",
+     "spend": "1.71",
+     "ad_id": "120255720338670547",
+     "ad_name": "M1-2 see FIT in person feed"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "0.38"
+      },
+      {
+       "action_type": "link_click",
+       "value": "0.38"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.38"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "6",
+     "reach": "6",
+     "spend": "0.38",
+     "ad_id": "120255720340510547",
+     "ad_name": "M1-3 invite square"
+    },
+    {
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "24",
+     "reach": "23",
+     "spend": "1.56",
+     "ad_id": "120255720858530547",
+     "ad_name": "M1-6 square bigger title and date"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "19"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "3"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "22"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "3"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "22"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "3"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "30.004091"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "220.03"
+      },
+      {
+       "action_type": "link_click",
+       "value": "34.741579"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "30.004091"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "2601",
+     "reach": "1684",
+     "spend": "660.09",
+     "ad_id": "120255721398350547",
+     "ad_name": "L-T1 invite feed, sign-up v2"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "5"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "0"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "0"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "post_engagement",
+       "value": "35.455714"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "124.095"
+      },
+      {
+       "action_type": "link_click",
+       "value": "49.638"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "35.455714"
+      }
+     ],
+     "date_start": "2026-11-16",
+     "date_stop": "2026-11-22",
+     "impressions": "1023",
+     "reach": "518",
+     "spend": "248.19",
+     "ad_id": "120255721399280547",
+     "ad_name": "W-T1 invite feed, sign-up v2"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "MAZDZD",
+     "after": "MjMZD"
+    }
+   }
+  },
+  "insights_today": {
+   "data": [
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "5"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "4"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "164"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "164"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "4"
+      },
+      {
+       "action_type": "video_view",
+       "value": "158"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "934",
+     "reach": "695",
+     "spend": "222.48",
+     "ad_id": "120255647736550547",
+     "ad_name": "P10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_engagement",
+       "value": "21"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "21"
+      },
+      {
+       "action_type": "video_view",
+       "value": "21"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "157",
+     "reach": "125",
+     "spend": "21.23",
+     "ad_id": "120255647744560547",
+     "ad_name": "P11 reel 3 things HQ"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "video_view",
+       "value": "2"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "13",
+     "reach": "5",
+     "spend": "4.75",
+     "ad_id": "120255648167890547",
+     "ad_name": "R10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "3",
+     "reach": "2",
+     "spend": "0.5",
+     "ad_id": "120255648171070547",
+     "ad_name": "R11 reel 3 things HQ"
+    },
+    {
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "4",
+     "reach": "4",
+     "spend": "0.42",
+     "ad_id": "120255648175050547",
+     "ad_name": "U10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "5"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "5"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "5"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "2"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "360",
+     "reach": "272",
+     "spend": "24.44",
+     "ad_id": "120255657868730547",
+     "ad_name": "J1 poster: business location already alive"
+    },
+    {
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "14",
+     "reach": "14",
+     "spend": "0.28",
+     "ad_id": "120255700446350547",
+     "ad_name": "J-v3 dark: your shop on Jind's 24 m road"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "6"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "6"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "6"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "1217",
+     "reach": "1018",
+     "spend": "57.76",
+     "ad_id": "120255700484620547",
+     "ad_name": "J-v3b light: the right address for your SCO in Jind"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "73"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_block",
+       "value": "21"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "250"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "8"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "250"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "6"
+      },
+      {
+       "action_type": "video_view",
+       "value": "169"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "1408",
+     "reach": "1307",
+     "spend": "98.2",
+     "ad_id": "120255718190540547",
+     "ad_name": "follow 18455422555132731"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "75"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "5"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_block",
+       "value": "15"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "263"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "6"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "263"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "3"
+      },
+      {
+       "action_type": "video_view",
+       "value": "182"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "1543",
+     "reach": "1446",
+     "spend": "96.22",
+     "ad_id": "120255718190890547",
+     "ad_name": "follow 17995953015110577"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "1"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "611",
+     "reach": "471",
+     "spend": "154.17",
+     "ad_id": "120255721398350547",
+     "ad_name": "L-T1 invite feed, sign-up v2"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2"
+      }
+     ],
+     "date_start": "2026-11-23",
+     "date_stop": "2026-11-23",
+     "impressions": "301",
+     "reach": "212",
+     "spend": "48.86",
+     "ad_id": "120255721399280547",
+     "ad_name": "W-T1 invite feed, sign-up v2"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "MAZDZD",
+     "after": "MTEZD"
+    }
+   }
+  },
+  "adsets": {
+   "data": [
+    {
+     "id": "120255721016990547",
+     "name": "FIT Meet W - reached on WhatsApp (warm)",
+     "campaign": {
+      "name": "FIT Business Meet 29 Nov",
+      "id": "120255720333370547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "daily_budget": "15000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255721015440547",
+     "name": "FIT Meet L - industry owners from our database",
+     "campaign": {
+      "name": "FIT Business Meet 29 Nov",
+      "id": "120255720333370547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "daily_budget": "35000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255720341420547",
+     "name": "FIT Meet M2 - industry, Delhi NCR",
+     "campaign": {
+      "name": "FIT Business Meet 29 Nov",
+      "id": "120255720333370547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "20000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255720335410547",
+     "name": "FIT Meet M1 - industry, Rohtak and Haryana belt",
+     "campaign": {
+      "name": "FIT Business Meet 29 Nov",
+      "id": "120255720333370547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "12000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255718190600547",
+     "name": "TY reel 17995953015110577",
+     "campaign": {
+      "name": "TrueYards Follow - spread",
+      "id": "120255718171540547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "10000",
+     "optimization_goal": "VISIT_INSTAGRAM_PROFILE"
+    },
+    {
+     "id": "120255718190170547",
+     "name": "TY reel 18455422555132731",
+     "campaign": {
+      "name": "TrueYards Follow - spread",
+      "id": "120255718171540547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "10000",
+     "optimization_goal": "VISIT_INSTAGRAM_PROFILE"
+    },
+    {
+     "id": "120255662369290547",
+     "name": "FV Jind R - customers and site visitors",
+     "campaign": {
+      "name": "FV Jind SCO CTWA",
+      "id": "120255657866010547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "15000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255661720970547",
+     "name": "TrueYards Follow - IG profile visits",
+     "campaign": {
+      "name": "TrueYards Follow",
+      "id": "120255661706190547"
+     },
+     "effective_status": "ACTIVE",
+     "optimization_goal": "VISIT_INSTAGRAM_PROFILE"
+    },
+    {
+     "id": "120255657866720547",
+     "name": "FV Jind J - Advantage+ Jind 30 km",
+     "campaign": {
+      "name": "FV Jind SCO CTWA",
+      "id": "120255657866010547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "daily_budget": "30000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255647446550547",
+     "name": "FIT W - Warm-up before WhatsApp",
+     "campaign": {
+      "name": "FIT Warm v1",
+      "id": "120255647260270547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "daily_budget": "12000",
+     "optimization_goal": "REACH"
+    },
+    {
+     "id": "120255647397480547",
+     "name": "FIT U - Unreachable on WhatsApp",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "12000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255647304890547",
+     "name": "FIT R - Reminder after WhatsApp",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "12000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255645739620547",
+     "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "24700",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255620983010547",
+     "name": "TrueYards Boost - India engagement",
+     "campaign": {
+      "name": "TrueYards Boost",
+      "id": "120255620965680547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "optimization_goal": "POST_ENGAGEMENT"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVF9YU3hvdDVhbGV2TVNiVEI4aDl0bHBjZAEJ4R0NzWHFWSkZApaS1GRk5oQUNPSGZAuTW9sRnlqNi03Vl90ZAWYxRF9ubWVHOHVxNDZA1VE1lWHljVFo2N0tR",
+     "after": "QVFIVFlpNFdCSFFiVXVtc0dNblJhYzRpaEFfY3RTT2YwMXZABUC1yOVhpT3hoSWxzZA0tPUHluYTgwTmpKQzFwNTNiaHM1WVFMTFhvTjNCWnpveGNfSHc2MTl3"
+    }
+   }
+  }
+ }
+}
