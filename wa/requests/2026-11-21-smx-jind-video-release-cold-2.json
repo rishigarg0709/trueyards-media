@@ -1,7 +1,0 @@
-{"by": "Chief of Staff", "ops": [
- {"op": "broadcast.release", "args": {"id": "C#2026-11-21T04:34:03.186Z#80fd89"}},
- {"op": "audience.build", "args": {"tag": "FV Jind cold shops 2", "q": {"lat": 29.3159, "lng": 76.3150, "maxKm": 10, "limit": 200,
-   "groups": "Retail shops|Traders|Hotels, restaurants|Auto dealers|Professionals|Doctors|Building materials|Electrical & electronics|Pharma|Furniture|Gyms, salons",
-   "notGroups": "Real estate|Government|Schools", "exclude": ["FV Jind"], "fresh": true}}},
- {"op": "broadcast.create", "args": {"name": "FV Jind SCO cold 2: shop owners within 10 km", "template": "fv_jind_sco_v2", "language": "en", "audience": "FV Jind cold shops 2"}}
-]}

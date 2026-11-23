@@ -1,6 +1,0 @@
-{"by": "Paid Media Buyer", "ops": [
- {"op": "audience.fromBroadcasts", "args": {"match": "FV Jind SCO v2:", "leadTag": "FV Jind SCO", "tag": "FV Jind v2 non-tappers", "dry": false}},
- {"op": "gogate.set", "args": {"on": true}},
- {"op": "broadcast.create", "args": {"name": "FV Jind SCO video: non-tappers (Sat 21 Nov)", "template": "fv_jind_video_v2", "language": "en", "audience": "FV Jind v2 non-tappers", "params": {}}},
- {"op": "gogate.set", "args": {"on": false}}
-]}

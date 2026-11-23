@@ -1,7 +1,0 @@
-{"by": "Chief of Staff", "ops": [
- {"op": "audience.size", "args": {"q": {"maxKm": 150, "limit": 0}}},
- {"op": "audience.size", "args": {"q": {"maxKm": 150, "fresh": true, "limit": 0}}},
- {"op": "audiences"},
- {"op": "autopilot.summary"},
- {"op": "broadcasts", "args": {"days": 30}}
-]}

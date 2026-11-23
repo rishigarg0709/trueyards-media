@@ -1,7 +1,0 @@
-{
- "op": "launch",
- "ran_at": "2026-11-21T11:46:53.382666Z",
- "result": {
-  "error": "RuntimeError: Meta lookup failed for 120255720333370547/adsets: There have been too many calls from this ad account. Please wait a bit and try again."
- }
-}

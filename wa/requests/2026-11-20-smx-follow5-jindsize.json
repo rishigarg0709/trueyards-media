@@ -1,5 +1,0 @@
-{"by": "Chief of Staff", "ops": [
- {"op": "autopilot.config", "args": {"cfg": {"followLearn": {"floor": 0.05, "max": 0.05, "minDelivered": 300, "minLeads": 15, "lowRatio": 0.3}}}},
- {"op": "audience.size", "args": {"q": {"lat": 29.3159, "lng": 76.3150, "maxKm": 25}}},
- {"op": "audience.size", "args": {"q": {"lat": 29.3159, "lng": 76.3150, "maxKm": 25, "geoOnly": false, "towns": "jind|jeend|julana|safidon|narwana|uchana"}}}
-]}

@@ -1,4 +1,0 @@
-{"by": "Chief of Staff", "ops": [
- {"op": "audience.build", "args": {"tag": "FIT Meet cold 1", "q": {"lat": 28.84, "lng": 76.38, "maxKm": 80, "fresh": true, "groups": ["manufactur", "Engineering & metal", "Pharma & chemicals", "Electrical & electronics", "Food & agro processing", "Plastics, rubber & packaging", "Warehousing & logistics", "Textile & apparel", "Furniture & wood", "Auto & auto components", "Industrial \\(govt", "Footwear & leather"], "limit": 490}}},
- {"op": "broadcast.create", "args": {"name": "FIT Meet invite: cold industry owners 1 (nearest)", "template": "fit_meet_invite_v2", "language": "en", "audience": "FIT Meet cold 1", "params": {"headerUrl": "https://raw.githubusercontent.com/rishigarg0709/trueyards-media/main/ads/creatives/fit-meet/final/FIT-meet-whatsapp-header.jpg"}}}
-]}

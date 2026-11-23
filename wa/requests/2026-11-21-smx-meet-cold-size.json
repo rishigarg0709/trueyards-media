@@ -1,4 +1,0 @@
-{"by": "Chief of Staff", "ops": [
- {"op": "audience.size", "args": {"q": {"lat": 28.84, "lng": 76.38, "maxKm": 80, "fresh": true, "groups": ["manufactur", "Engineering & metal", "Pharma & chemicals", "Electrical & electronics", "Food & agro processing", "Plastics, rubber & packaging", "Warehousing & logistics", "Textile & apparel", "Furniture & wood", "Auto & auto components", "Industrial \\(govt", "Footwear & leather"], "limit": 0}}},
- {"op": "broadcasts", "args": {"days": 1, "name": "meet"}}
-]}
