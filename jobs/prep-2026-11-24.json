@@ -1,100 +1,102 @@
-{
- "kind": "batch_submit",
- "name": "prep-2026-11-24",
- "model": "gemini-3-pro-image",
- "images": [
-  {
-   "name": "2026-11-24-midday-1",
-   "prompt": "Hyper-realistic aerial drone photograph looking straight down at a 1950s modernist planned Indian city: a perfect grid of large rectangular sectors, each a leafy neighbourhood of low white and brick houses with green parks, separated by wide straight tree-lined roads and roundabouts, Shivalik foothills faint on the horizon, mid-morning sun. In the middle of the grid ONE rectangle is completely empty: bare brown earth, no houses, no trees, a clean gap in the pattern, as if a sector is missing. Believable scale and shadows, looks like a real news aerial photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
-   "aspect": "9:16",
-   "size": "2K",
-   "hero": true
-  },
-  {
-   "name": "2026-11-24-midday-2",
-   "prompt": "A 1950s architect's drafting table seen from above at a slight angle in bright daylight from a large window: a big hand-drawn city master plan on cream paper showing a grid of rectangular blocks in pencil and ink with green watercolour wash for parks, T-square, set squares, compass, pencils, an eraser, a brass paperweight; the blocks carry only small unreadable pencil marks, no legible words or numbers. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-midday-3",
-   "prompt": "An old north Indian walled town at the edge of a modern planned city: a weathered lime-plastered gateway with a pointed arch and small domed kiosks on top, a narrow lane behind it with old two-storey houses, wooden balconies and potted plants, washed with warm morning sun; a wide modern road with trees in the foreground leading towards it. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-midday-4",
-   "prompt": "A wide straight avenue in a modernist Indian city: six lanes, broad green verges with tall shady trees in rows, a grass roundabout ahead, raw concrete brutalist buildings with deep sun-shades behind the trees, clear blue sky, very few cars, clean and calm, early morning light. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-midday-5",
-   "prompt": "A plain cast-concrete roadside sector marker post at the corner of a tree-lined avenue in a planned Indian city, its smooth flat white face completely blank with no writing, a neat footpath and a hedge behind it, bright morning sun and soft shadows; space on the blank face for a number to be added later. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-carousel-1",
-   "prompt": "Bright overcast daylight, low angle looking up at a tall slim 34-storey residential tower in central Mumbai: the lower half lived-in with plants, clothes lines and open windows, the top half clearly empty and sealed, bare windows with no curtains, closed balconies, an empty silent look; older low-rise buildings and a few palms at its base; documentary news photo, believable scale. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K",
-   "hero": true
-  },
-  {
-   "name": "2026-11-24-carousel-2",
-   "prompt": "Close-up on a polished wooden table near a window in bright daylight: a bunch of new flat keys on a ring with a plastic tag lying on a printed possession letter and a folded agreement, a pen beside it; the paper has no readable words, just blurred printed lines. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-carousel-3",
-   "prompt": "Inside an Indian municipal records office in daylight: tall steel racks of tied cloth file bundles, one file open on a desk in front showing a single official certificate with an embossed round seal and a signature line, no readable text, a tube light and a ceiling fan. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-carousel-4",
-   "prompt": "The compound of an older Mumbai housing society in bright overcast light: a blue water meter and brass valves on a painted pipe at the foot of a building, a concrete underground water tank lid, wet floor after rain, a row of parked scooters out of focus. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-carousel-5",
-   "prompt": "An empty apartment in a Mumbai high-rise in daylight: sealed cardboard moving boxes stacked by the front door, a rolled mattress, a bare floor, a big window with the city skyline outside, the flat being vacated; no people. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-evening-1",
-   "prompt": "Bright midday sun, low angle up the facade of a typical five-storey Indian apartment building on a busy city street: every single balcony and window enclosed floor to ceiling by painted iron grills, like a stack of cages, colourful laundry, potted tulsi and money plants and a water can behind the bars, satellite dishes, a clear blue sky; real everyday India, sharp detail. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K",
-   "hero": true
-  },
-  {
-   "name": "2026-11-24-evening-2",
-   "prompt": "Hyper-realistic photograph: an ordinary Indian four-storey apartment building standing inside one giant ornate iron birdcage, the cage bars rising from the street around it and curving into a dome above the roof, a quiet residential lane in bright daylight, trees and parked scooters at ground level; believable scale and shadows, looks like a real news photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-evening-3",
-   "prompt": "Close-up of an Indian balcony iron grill painted white with a small hinged door built into it, closed with a simple padlock, potted plants behind, bright daylight and crisp shadows of the bars on the wall. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-evening-4",
-   "prompt": "View from inside a fully grilled Indian balcony looking out: iron bars filling the frame from floor to ceiling, a plastic chair and a clothes stand inside, the bright street and the building opposite visible through the bars, sunny afternoon. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  },
-  {
-   "name": "2026-11-24-evening-5",
-   "prompt": "A red fire brigade aerial ladder reaching up to the fourth floor of an Indian apartment building whose balconies are fully enclosed by iron grills, bright daylight, no fire, no smoke, no people visible, the ladder basket stopped right at the grill. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
-   "aspect": "9:16",
-   "size": "2K"
-  }
- ]
-}
+[
+ {
+  "kind": "batch_submit",
+  "name": "prep-2026-11-24",
+  "model": "gemini-3-pro-image",
+  "images": [
+   {
+    "name": "2026-11-24-midday-1",
+    "prompt": "Hyper-realistic aerial drone photograph looking straight down at a 1950s modernist planned Indian city: a perfect grid of large rectangular sectors, each a leafy neighbourhood of low white and brick houses with green parks, separated by wide straight tree-lined roads and roundabouts, Shivalik foothills faint on the horizon, mid-morning sun. In the middle of the grid ONE rectangle is completely empty: bare brown earth, no houses, no trees, a clean gap in the pattern, as if a sector is missing. Believable scale and shadows, looks like a real news aerial photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-24-midday-2",
+    "prompt": "A 1950s architect's drafting table seen from above at a slight angle in bright daylight from a large window: a big hand-drawn city master plan on cream paper showing a grid of rectangular blocks in pencil and ink with green watercolour wash for parks, T-square, set squares, compass, pencils, an eraser, a brass paperweight; the blocks carry only small unreadable pencil marks, no legible words or numbers. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-midday-3",
+    "prompt": "An old north Indian walled town at the edge of a modern planned city: a weathered lime-plastered gateway with a pointed arch and small domed kiosks on top, a narrow lane behind it with old two-storey houses, wooden balconies and potted plants, washed with warm morning sun; a wide modern road with trees in the foreground leading towards it. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-midday-4",
+    "prompt": "A wide straight avenue in a modernist Indian city: six lanes, broad green verges with tall shady trees in rows, a grass roundabout ahead, raw concrete brutalist buildings with deep sun-shades behind the trees, clear blue sky, very few cars, clean and calm, early morning light. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-midday-5",
+    "prompt": "A plain cast-concrete roadside sector marker post at the corner of a tree-lined avenue in a planned Indian city, its smooth flat white face completely blank with no writing, a neat footpath and a hedge behind it, bright morning sun and soft shadows; space on the blank face for a number to be added later. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-carousel-1",
+    "prompt": "Bright overcast daylight, low angle looking up at a tall slim 34-storey residential tower in central Mumbai: the lower half lived-in with plants, clothes lines and open windows, the top half clearly empty and sealed, bare windows with no curtains, closed balconies, an empty silent look; older low-rise buildings and a few palms at its base; documentary news photo, believable scale. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-24-carousel-2",
+    "prompt": "Close-up on a polished wooden table near a window in bright daylight: a bunch of new flat keys on a ring with a plastic tag lying on a printed possession letter and a folded agreement, a pen beside it; the paper has no readable words, just blurred printed lines. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-carousel-3",
+    "prompt": "Inside an Indian municipal records office in daylight: tall steel racks of tied cloth file bundles, one file open on a desk in front showing a single official certificate with an embossed round seal and a signature line, no readable text, a tube light and a ceiling fan. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-carousel-4",
+    "prompt": "The compound of an older Mumbai housing society in bright overcast light: a blue water meter and brass valves on a painted pipe at the foot of a building, a concrete underground water tank lid, wet floor after rain, a row of parked scooters out of focus. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-carousel-5",
+    "prompt": "An empty apartment in a Mumbai high-rise in daylight: sealed cardboard moving boxes stacked by the front door, a rolled mattress, a bare floor, a big window with the city skyline outside, the flat being vacated; no people. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-evening-1",
+    "prompt": "Bright midday sun, low angle up the facade of a typical five-storey Indian apartment building on a busy city street: every single balcony and window enclosed floor to ceiling by painted iron grills, like a stack of cages, colourful laundry, potted tulsi and money plants and a water can behind the bars, satellite dishes, a clear blue sky; real everyday India, sharp detail. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K",
+    "hero": true
+   },
+   {
+    "name": "2026-11-24-evening-2",
+    "prompt": "Hyper-realistic photograph: an ordinary Indian four-storey apartment building standing inside one giant ornate iron birdcage, the cage bars rising from the street around it and curving into a dome above the roof, a quiet residential lane in bright daylight, trees and parked scooters at ground level; believable scale and shadows, looks like a real news photo. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-evening-3",
+    "prompt": "Close-up of an Indian balcony iron grill painted white with a small hinged door built into it, closed with a simple padlock, potted plants behind, bright daylight and crisp shadows of the bars on the wall. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-evening-4",
+    "prompt": "View from inside a fully grilled Indian balcony looking out: iron bars filling the frame from floor to ceiling, a plastic chair and a clothes stand inside, the bright street and the building opposite visible through the bars, sunny afternoon. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   },
+   {
+    "name": "2026-11-24-evening-5",
+    "prompt": "A red fire brigade aerial ladder reaching up to the fourth floor of an Indian apartment building whose balconies are fully enclosed by iron grills, bright daylight, no fire, no smoke, no people visible, the ladder basket stopped right at the grill. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+    "aspect": "9:16",
+    "size": "2K"
+   }
+  ]
+ }
+]
