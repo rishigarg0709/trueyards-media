@@ -1,0 +1,118 @@
+{
+ "op": "daily",
+ "ran_at": "2026-11-23T04:37:17.804166Z",
+ "result": {
+  "date": "2026-11-23",
+  "dry_run": false,
+  "actions": [
+   "PAUSED ad L-T1 invite feed, sign-up v2: spent INR 801 (over 2x the INR 400 target per qualified lead) with no qualified lead"
+  ],
+  "flags": [],
+  "campaign_status": "ACTIVE",
+  "spend_month_inr": 1108.97,
+  "spend_yesterday_inr": 798.76,
+  "daily_budget_total_inr": 500.0,
+  "monthly_cap_inr": 5000,
+  "lead_data": "joined from the bot's lead records (per ad id)",
+  "lift": null,
+  "waves": 5,
+  "ads": [
+   {
+    "ad": "M1-T1 invite feed, sign-up v2",
+    "status": "ADSET_PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "L-T1 invite feed, sign-up v2",
+    "status": "PAUSED (today)",
+    "spend_yday": 583.02,
+    "conv_yday": 0,
+    "spend_life": 801.46,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.543943,
+    "ctr_7d": 1.038462
+   },
+   {
+    "ad": "W-T1 invite feed, sign-up v2",
+    "status": "ACTIVE",
+    "spend_yday": 215.74,
+    "conv_yday": 0,
+    "spend_life": 287.03,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.974903,
+    "ctr_7d": 0.782014
+   },
+   {
+    "ad": "M1-T3 square, sign-up v2",
+    "status": "ADSET_PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "M1-T2 see FIT feed, sign-up v2",
+    "status": "ADSET_PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   }
+  ],
+  "meta_cost_per_chat": null,
+  "tester": {
+   "M1-T1 invite feed, sign-up v2": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.333
+   },
+   "M1-T3 square, sign-up v2": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.344
+   },
+   "M1-T2 see FIT feed, sign-up v2": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.324
+   },
+   "W-T1 invite feed, sign-up v2": {
+    "spend": 287,
+    "results": 0,
+    "metric": "qualified"
+   }
+  }
+ }
+}

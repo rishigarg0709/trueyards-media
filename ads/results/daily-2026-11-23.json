@@ -1,0 +1,189 @@
+{
+ "op": "daily",
+ "ran_at": "2026-11-23T04:37:07.924253Z",
+ "result": {
+  "date": "2026-11-23",
+  "dry_run": false,
+  "actions": [
+   "FIT R - Reminder after WhatsApp: targeting 2 audience(s)",
+   "FIT U - Unreachable on WhatsApp: targeting 1 audience(s)",
+   "FIT W - Warm-up before WhatsApp: targeting 3 audience(s)"
+  ],
+  "flags": [],
+  "campaign_status": "ACTIVE",
+  "spend_month_inr": 2359.27,
+  "spend_yesterday_inr": 328.4,
+  "daily_budget_total_inr": 487.0,
+  "monthly_cap_inr": 30000,
+  "lead_data": "joined from the bot's lead records (per ad id)",
+  "lift": null,
+  "waves": 5,
+  "ads": [
+   {
+    "ad": "R11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 0.3,
+    "conv_yday": 0,
+    "spend_life": 0.3,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "R10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "U10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "U11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 0.76,
+    "conv_yday": 0,
+    "spend_life": 0.76,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 6.38,
+    "conv_yday": 2,
+    "spend_life": 100.65,
+    "conv_life": 3,
+    "cpc_life": 34,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.401887,
+    "ctr_7d": 1.211306
+   },
+   {
+    "ad": "P10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 320.96,
+    "conv_yday": 3,
+    "spend_life": 2253.41,
+    "conv_life": 30,
+    "cpc_life": 75,
+    "qualified": 17,
+    "visit_planned": 2,
+    "visit_done": 0,
+    "freq_7d": 1.98805,
+    "ctr_7d": 1.328386
+   },
+   {
+    "ad": "P9 reel 3 things: planned industrial plot",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.84,
+    "conv_life": 1,
+    "cpc_life": 1,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.0,
+    "ctr_7d": 75.0
+   },
+   {
+    "ad": "P8 reel voiceover Hinglish: mil gaya",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 3.31,
+    "conv_life": 1,
+    "cpc_life": 3,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.043478,
+    "ctr_7d": 12.5
+   }
+  ],
+  "meta_cost_per_chat": 67,
+  "meta_ramp": "Meta ramp: INR 495/day toward 1000 (held: Meta spent only 67% of the budget)",
+  "plan": "planner 2026-11-18: Meta INR 495/day (all tactics active)",
+  "tester": {
+   "R11 reel 3 things HQ": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.498
+   },
+   "R10 reel Hinglish HQ: mil gaya": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.502
+   },
+   "U10 reel Hinglish HQ: mil gaya": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.509
+   },
+   "U11 reel 3 things HQ": {
+    "spend": 1,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.491
+   },
+   "P11 reel 3 things HQ": {
+    "spend": 101,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.046
+   },
+   "P10 reel Hinglish HQ: mil gaya": {
+    "spend": 2253,
+    "results": 17,
+    "metric": "qualified",
+    "p_best": 0.954
+   },
+   "W11 reel 3 things HQ": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.492
+   },
+   "W10 reel Hinglish HQ: mil gaya": {
+    "spend": 0,
+    "results": 0,
+    "metric": "qualified",
+    "p_best": 0.508
+   }
+  }
+ }
+}

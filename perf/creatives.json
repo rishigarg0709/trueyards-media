@@ -18,5 +18,88 @@
   "results": 8,
   "spend": 1000,
   "updated": "2026-11-17"
+ },
+ "M1-T1 invite feed, sign-up v2": {
+  "metric": "qualified",
+  "p_best": 0.333,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "M1-T2 see FIT feed, sign-up v2": {
+  "metric": "qualified",
+  "p_best": 0.324,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "M1-T3 square, sign-up v2": {
+  "metric": "qualified",
+  "p_best": 0.344,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "P10 reel Hinglish HQ: mil gaya": {
+  "metric": "qualified",
+  "p_best": 0.954,
+  "results": 17,
+  "spend": 2253,
+  "updated": "2026-11-23"
+ },
+ "P11 reel 3 things HQ": {
+  "metric": "qualified",
+  "p_best": 0.046,
+  "results": 0,
+  "spend": 101,
+  "updated": "2026-11-23"
+ },
+ "R10 reel Hinglish HQ: mil gaya": {
+  "metric": "qualified",
+  "p_best": 0.502,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "R11 reel 3 things HQ": {
+  "metric": "qualified",
+  "p_best": 0.498,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "U10 reel Hinglish HQ: mil gaya": {
+  "metric": "qualified",
+  "p_best": 0.509,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "U11 reel 3 things HQ": {
+  "metric": "qualified",
+  "p_best": 0.491,
+  "results": 0,
+  "spend": 1,
+  "updated": "2026-11-23"
+ },
+ "W-T1 invite feed, sign-up v2": {
+  "metric": "qualified",
+  "results": 0,
+  "spend": 287,
+  "updated": "2026-11-23"
+ },
+ "W10 reel Hinglish HQ: mil gaya": {
+  "metric": "qualified",
+  "p_best": 0.508,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
+ },
+ "W11 reel 3 things HQ": {
+  "metric": "qualified",
+  "p_best": 0.492,
+  "results": 0,
+  "spend": 0,
+  "updated": "2026-11-23"
  }
 }
