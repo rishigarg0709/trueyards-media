@@ -1,0 +1,49 @@
+{
+ "at": "2026-11-23 10:21",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "broadcast.autoretry",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "on": false
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-23T04:51:05.323Z"
+  },
+  {
+   "ok": true,
+   "op": "broadcast.run",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "broadcast": {
+     "id": "C#2026-11-23T04:50:28.836Z#d24297",
+     "name": "FIT Meet invite: cold industry owners 2026-11-23-1",
+     "audience": "FIT Meet cold 2026-11-23-1",
+     "template": "fit_meet_invite_v2",
+     "language": "en",
+     "state": "running",
+     "total": 950,
+     "cursor": 25,
+     "sent": 25,
+     "delivered": 11,
+     "read": 0,
+     "failed": 0,
+     "failedLater": 6,
+     "createdAt": "2026-11-23T04:50:28.853Z",
+     "lastRunAt": "2026-11-23T04:51:27.761Z",
+     "nextAt": "2026-11-23T04:54:27.760Z",
+     "note": "Next batch at 10:24 am (paced to avoid Meta limits)",
+     "autoRetry": false,
+     "by": "Agent: Chief of Staff",
+     "waitMs": 179977
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-23T04:51:27.822Z"
+  }
+ ]
+}
