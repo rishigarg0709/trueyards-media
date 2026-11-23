@@ -1,0 +1,8 @@
+{"by": "cos", "ops": [
+  {"op": "jindap", "args": {}},
+  {"op": "jindap.config", "args": {"cfg": {"on": false}}},
+  {"op": "jindvideo.set", "args": {"on": false, "template": "fv_jind_video_v2"}},
+  {"op": "meet", "args": {}},
+  {"op": "meet.config", "args": {"cfg": {"reminders": []}}},
+  {"op": "broadcasts", "args": {}}
+]}
