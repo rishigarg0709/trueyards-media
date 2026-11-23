@@ -1,0 +1,4 @@
+{"by": "cos", "ops": [
+  {"op": "broadcast.stop", "args": {"id": "C#2026-11-23T04:50:28.836Z#d24297"}},
+  {"op": "broadcasts", "args": {"days": 1}}
+]}
