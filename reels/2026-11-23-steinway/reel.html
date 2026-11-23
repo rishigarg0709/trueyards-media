@@ -1,0 +1,199 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[["This", 0.0, 0.139], ["tower", 0.197, 0.487], ["is", 0.557, 0.696], ["four", 0.723, 0.835], ["hundred", 0.87, 1.113], ["and", 1.165, 1.322], ["thirty-five", 1.351, 1.739], ["metres", 1.789, 2.087], ["tall...", 2.17, 2.588], ["and", 2.814, 2.918], ["only", 2.96, 3.127], ["eighteen", 3.165, 3.475], ["metres", 3.524, 3.823], ["wide.", 3.906, 4.332], ["Steinway", 4.553, 5.562], ["Tower,", 5.608, 5.91], ["New", 5.927, 5.979], ["York.", 6.063, 6.445], ["About", 6.671, 6.903], ["twenty-four", 6.943, 7.39], ["times", 7.449, 7.738], ["taller", 7.788, 8.086], ["than", 8.128, 8.295], ["it", 8.341, 8.434], ["is", 8.48, 8.573], ["wide.", 8.67, 9.13], ["Stack", 9.338, 10.382], ["six", 10.451, 10.66], ["Qutub", 10.73, 11.077], ["Minars...", 11.13, 11.677], ["and", 11.86, 11.912], ["you're", 11.947, 12.121], ["there.", 12.167, 12.538], ["Its", 12.712, 13.234], ["width?", 13.292, 13.544], ["Less", 13.763, 14.208], ["than", 14.236, 14.347], ["the", 14.364, 14.417], ["length", 14.457, 14.695], ["of", 14.718, 14.764], ["a", 14.799, 14.834], ["cricket", 14.877, 15.182], ["pitch.", 15.24, 15.599], ["So", 15.825, 16.428], ["how", 16.463, 16.567], ["does", 16.595, 16.706], ["a", 16.776, 16.845], ["pencil", 16.895, 17.193], ["stand", 17.239, 17.471], ["up", 17.541, 17.68], ["in", 17.703, 17.75], ["the", 17.767, 17.819], ["wind?", 17.889, 18.237], ["It", 18.463, 18.486], ["doesn't", 18.521, 18.764], ["stand", 18.823, 19.112], ["still.", 19.182, 19.608], ["In", 19.834, 20.043], ["a", 20.077, 20.112], ["storm,", 20.182, 20.634], ["the", 20.756, 20.808], ["top", 20.86, 21.017], ["can", 21.069, 21.225], ["sway", 21.295, 21.573], ["up", 21.619, 21.712], ["to", 21.758, 21.851], ["about", 21.886, 22.06], ["a", 22.095, 22.13], ["metre.", 22.199, 22.634], ["Up", 22.86, 23.162], ["near", 23.203, 23.37], ["the", 23.388, 23.44], ["top", 23.527, 23.788], ["hangs", 23.834, 24.066], ["the", 24.083, 24.136], ["secret:", 24.205, 24.97], ["a", 25.04, 25.11], ["tuned", 25.179, 25.527], ["mass", 25.583, 25.805], ["damper.", 25.875, 26.362], ["Heavy", 26.501, 27.197], ["steel", 27.255, 27.544], ["plates", 27.604, 27.962], ["that", 27.99, 28.101], ["swing", 28.147, 28.379], ["against", 28.423, 28.727], ["the", 28.744, 28.797], ["wind...", 28.866, 29.214], ["and", 29.44, 29.544], ["calm", 29.614, 29.892], ["the", 29.927, 30.031], ["whole", 30.066, 30.24], ["tower.", 30.298, 30.727], ["Two", 30.953, 31.683], ["huge", 31.753, 32.031], ["concrete", 32.085, 32.518], ["walls", 32.577, 32.866], ["run", 32.918, 33.075], ["up", 33.121, 33.214], ["its", 33.249, 33.353], ["spine.", 33.434, 33.91], ["About", 34.037, 34.675], ["two", 34.727, 34.883], ["hundred", 34.918, 35.162], ["rock", 35.217, 35.44], ["anchors", 35.492, 35.857], ["pin", 35.91, 36.066], ["it", 36.112, 36.205], ["to", 36.229, 36.275], ["the", 36.292, 36.344], ["bedrock.", 36.414, 36.901], ["At", 37.127, 37.683], ["its", 37.736, 37.892], ["feet,", 37.948, 38.252], ["a", 38.414, 38.449], ["piano", 38.518, 38.866], ["hall", 38.922, 39.144], ["from", 39.172, 39.283], ["the", 39.301, 39.353], ["nineteen-twenties.", 39.391, 40.313], ["Sixty", 40.539, 41.339], ["homes", 41.397, 41.687], ["up", 41.733, 41.826], ["there,", 41.872, 42.203], ["each", 42.429, 42.651], ["worth", 42.686, 42.86], ["about", 42.906, 43.138], ["one", 43.173, 43.277], ["hundred", 43.312, 43.556], ["and", 43.608, 43.764], ["forty", 43.81, 44.043], ["to", 44.182, 44.46], ["five", 44.488, 44.599], ["hundred", 44.634, 44.877], ["and", 44.93, 45.086], ["twenty", 45.126, 45.364], ["crore", 45.434, 45.782], ["rupees.", 45.851, 46.469], ["All", 46.695, 47.373], ["of", 47.419, 47.512], ["it...", 47.558, 47.723], ["balanced", 47.95, 48.259], ["on", 48.305, 48.398], ["less", 48.44, 48.607], ["than", 48.635, 48.746], ["a", 48.816, 48.885], ["cricket", 48.92, 49.163], ["pitch.", 49.222, 49.604]];
+const BEATS=/*BEATS*/[0.498, 1.055, 1.613, 2.17, 2.704, 3.261, 3.819, 4.376, 4.933, 5.49, 6.048, 6.605, 7.162, 7.72, 8.277, 8.834, 9.391, 9.949, 10.483, 11.04, 11.597, 12.155, 12.712, 13.269, 13.826, 14.384, 14.941, 15.498, 16.056, 16.613, 17.17, 17.727, 18.285, 18.842, 19.399, 19.956, 20.491, 21.048, 21.605, 22.162, 22.72, 23.277, 23.834, 24.391, 24.949, 25.506, 26.04, 26.597, 27.155, 27.712, 28.269, 28.827, 29.384, 29.941, 30.498, 31.056, 31.613, 32.17, 32.704, 33.262, 33.819, 34.399, 34.957, 35.514, 36.048, 36.605, 37.162, 37.72, 38.277, 38.834, 39.392, 39.949, 40.506, 41.063, 41.621, 42.178, 42.712, 43.269, 43.827, 44.384, 44.941, 45.498, 46.056, 46.613, 47.17, 47.728, 48.285, 48.842, 49.399, 49.957, 50.514, 51.071, 51.605, 52.163, 52.72, 53.277, 53.834, 54.392, 54.949, 55.506, 56.04, 56.598, 57.155];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0F1A17';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+// ================= SCENES (look T TrueYards Brand: ink, white, teal #28c39d label bars, deep green #0E6B50, Inter 800 + Plex Mono) =================
+const BG='#0F1A17';
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(15,26,23,0) ${y+120}px,rgba(15,26,23,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};
+// recurring device: thin teal height ruler on the right edge (x 930, y 330 to 1500), fills 0 to 435 m
+const ruler=(sc,lab)=>{const g=mk(sc,'',`left:928px;top:330px;width:6px;height:1170px;background:rgba(255,255,255,.28);border-radius:3px`);
+ const f=mk(sc,'',`left:928px;top:330px;width:6px;height:1170px;background:#28c39d;border-radius:3px;transform-origin:50% 100%;transform:scaleY(0);box-shadow:0 0 14px rgba(40,195,157,.8)`);
+ const tk=[];for(let i=0;i<=6;i++)tk.push(mk(sc,'',`left:914px;top:${330+1170*i/6-2}px;width:34px;height:4px;background:#fff;opacity:.55`));
+ const l=mk(sc,'K ts',`left:770px;top:280px;width:200px;text-align:right;color:#fff;opacity:0`,lab||'');
+ return {g,f,tk,l,set:(q,x=0)=>{f.style.transform=`translateX(${x}px) scaleY(${cl(q)})`;g.style.transform=`translateX(${x}px)`}}};
+const HOOKEV=wt('tall');
+// 1. HOOK: bright day, the thin tower at the end of a cricket pitch; tilt up from the pitch to the top, line spoken from 0 s; no text before 1.5 s
+const hookImg=sc=>box(sc,'m1',540,960,'50% 50%');
+add(0,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.08) saturate(1.05)';const g=mk(sc,'sh','background:'+GB(50)+';opacity:0');
+ const r=ruler(sc,'');
+ const n=mk(sc,'ts','left:62px;top:1150px;font:800 230px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','0 m');
+ const h1=T(sc,'M ts','left:70px;top:1395px;width:820px',[['tall.',HOOKEV,'hl',1]]);
+ const h2=T(sc,'M ts','left:70px;top:1490px;width:820px',[['Only',wt('only')],['18',wt('eighteen'),'hl',1],['m',wt('metres',2)],['wide.',wt('wide')]]);
+ const t0=Math.max(1.55,wt('four')),t1=HOOKEV;
+ return t=>{const s=1.32,ty=-(s-1)*960+2*(s-1)*960*eio(t/4.6);const sk=shake(t,HOOKEV,6);b.style.transform=`translate(${sk}px,${ty+sk*.4}px) scale(${s})`;
+  g.style.opacity=cl((t-1.4)/.3);const q=eo((t-t0)/(t1-t0+.15));r.set(q);
+  n.style.opacity=cl((t-t0)/.15);n.textContent=Math.round(435*q)+' m';n.style.color=q>=1?CO:'#fff';if(t<t0)n.style.opacity=0;rv(h1,t);rv(h2,t)}});
+// 2. Real Steinway Tower above Midtown, push-in. "Steinway Tower, New York."
+add(wt('steinway')-.1,sc=>{const b=box(sc,'r1',560,700,'50% 40%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts','left:72px;top:1230px;color:#BFF5E4',[['●',wt('steinway'),'c'],['111',wt('steinway')],['West',wt('steinway')],['57th',wt('steinway')],['St',wt('steinway')]]);
+ const h=T(sc,'H ts','left:70px;top:1280px;width:960px;font-size:112px',[['Steinway',wt('steinway'),'hl'],['\n'],['Tower,',wt('tower',2)],['NYC.',wt('york')]]);
+ return t=>{b.style.transform=`scale(${1.05+.07*eio(t/2.6)})`;rv(k,t);rv(h,t)}},true);
+// 3. Real profile, tilt down; slenderness ratio slams. "About twenty-four times taller than it is wide."
+add(wt('about')-.1,sc=>{const b=box(sc,'r2',540,700,'50% 30%');mk(sc,'sh','background:'+GB(50));
+ const n=mk(sc,'ts','left:58px;top:1130px;font:800 250px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','~24:1');
+ const h=T(sc,'M ts','left:70px;top:1400px;width:960px',[['taller',wt('taller'),'hl'],['than',wt('than')],['wide.',wt('wide',2)]]);
+ const b0=wt('about')-.1,t0=wt('twenty-four')-b0;
+ return t=>{b.style.transform=`scale(${1.18}) translateY(${40-60*eio(t/3)}px)`;if(t>=t0){slam(n,t,t0,1.5,0);n.style.color=t>t0+.3?CO:'#fff'}else n.style.opacity=0;rv(h,t)}},true);
+// 4. AI: Qutub Minar in front, the thin tower behind; ruler stacks six Qutub heights. "Stack six Qutub Minars... and you're there."
+add(wt('stack')-.1,sc=>{const b=box(sc,'m2',540,700,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const r=ruler(sc,'');
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#BFF5E4',[['●',wt('qutub'),'c'],['Qutub',wt('qutub')],['Minar',wt('minars')],['·',wt('minars')],['72.5',wt('minars')],['m',wt('minars')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:860px;font-size:116px',[['×',wt('six'),'c'],['6',wt('six'),'hl',1],['=',wt("you're")],['435',wt('there'),'hl'],['m.',wt('there')]]);
+ const b0=wt('stack')-.1,t0=wt('six')-b0,t1=wt('there')-b0;
+ return t=>{b.style.transform=`scale(${1.08+.06*eio(t/3.2)}) translateY(${-14*t}px)`;const q=cl((t-t0)/(t1-t0));const st=Math.floor(q*6+.0001);r.set(st/6);r.tk.forEach((e,i)=>{e.style.opacity=i<=st?1:.4;e.style.background=i<=st&&i>0?'#28c39d':'#fff'});rv(k,t);rv(h,t)}},true);
+// 5. Hook image, push to the pitch and the tower's foot. "Its width? Less than the length of a cricket pitch."
+add(wt('its')-.1,sc=>{const b=box(sc,'m1',540,1290,'50% 50%');b.im.style.filter='brightness(1.06)';mk(sc,'sh','background:'+GB(58));
+ const k=T(sc,'K ts','left:72px;top:1330px;color:#BFF5E4',[['●',wt('width'),'c'],['Width',wt('width')],['18',wt('width')],['m',wt('width')]]);
+ const h=T(sc,'H ts','left:70px;top:1380px;width:960px;font-size:104px',[['<',wt('less'),'c'],['1',wt('length'),'hl'],['cricket',wt('cricket'),'hl'],['pitch.',wt('pitch'),'hl',1]]);
+ const p=mk(sc,'K ts','left:72px;top:1500px;color:#fff;opacity:0','Pitch = 22 yards = 20.12 m');
+ const b0=wt('its')-.1,tp=wt('pitch')-b0;
+ return t=>{b.style.transform=`scale(${1.75-.25*eio(t/3.6)})`;rv(k,t);rv(h,t);fade(p,t,tp+.15,.25,12);if(t<tp+.15)p.style.opacity=0}},true);
+// 6. AI: the crown in fast clouds (window crop above the seam), gentle sway. "So how does a pencil stand up in the wind?"
+add(wt('so')-.1,sc=>{const b=panel(sc,'m3',200,960,'50% 0%',540,960);
+ const tg=mk(sc,'tag','left:72px;top:1180px;opacity:0','The question');
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:108px',[['How',wt('how')],['does',wt('does')],['a',wt('pencil')-.08],['\n'],['pencil',wt('pencil'),'hl'],['stand',wt('stand')],['up?',wt('up'),'',1]]);
+ return t=>{b.im.style.transform=`scale(${1.04+.05*eio(t/3.4)}) rotate(${Math.sin(t*1.6)*.5}deg)`;fade(tg,t,.1,.2,10);rv(h,t)}},true);
+// 7. Crown tighter, sway grows; ruler shows the sway tick. "It doesn't stand still. In a storm, the top can sway up to about a metre."
+add(wt("doesn't")-.1,sc=>{const b=panel(sc,'m3',200,960,'50% 0%',540,330);
+ const r=ruler(sc,'');r.set(1);
+ const h=T(sc,'H ts','left:70px;top:1220px;width:860px;font-size:108px',[["Doesn't",wt("doesn't")],['stand',wt('stand',2)],['\n'],['still.',wt('still'),'hl',1]]);
+ const s=mk(sc,'ts','left:66px;top:1470px;font:800 96px/1 IN;letter-spacing:-.03em;opacity:0','Sways up to <span class="hl">~1 m</span>');
+ const b0=wt("doesn't")-.1,ts=wt('sway')-b0;
+ return t=>{const A=t<ts?.4:.4+1.4*eo((t-ts)/.6);const sw=Math.sin(t*2.4);b.im.style.transform=`scale(${1.45+.05*eio(t/4)}) translateX(${sw*A*10}px) rotate(${sw*A*.55}deg)`;r.set(1,sw*A*6);rv(h,t);fade(s,t,ts,.25,20);if(t<ts)s.style.opacity=0}},true);
+// 8. REVEAL: AI cutaway of the top floors, the damper inside; pendulum line swings opposite. "Up near the top hangs the secret: a tuned mass damper."
+const pend=(sc,cx,cy,L)=>{const s=svg(sc,'',`<g id="pd"><line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy+L}" stroke="#28c39d" stroke-width="6" stroke-linecap="round" style="filter:drop-shadow(0 0 10px rgba(40,195,157,.8))"/><circle cx="${cx}" cy="${cy+L}" r="20" fill="#28c39d"/></g>`);s.g=s.querySelector('#pd');s.g.style.transformOrigin=`${cx}px ${cy}px`;return s};
+add(wt('up',3)-.1,sc=>{const b=box(sc,'m4',540,560,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const tg=mk(sc,'tag','left:72px;top:1230px;opacity:0','Tell a friend');
+ const k=T(sc,'K ts','left:72px;top:1300px;color:#BFF5E4',[['●',wt('secret'),'c'],['The',wt('secret')-.05],['secret',wt('secret')]]);
+ const h=T(sc,'H ts','left:70px;top:1350px;width:960px;font-size:104px',[['Tuned',wt('tuned'),'hl'],['mass',wt('mass'),'hl'],['\n'],['damper.',wt('damper'),'hl',1]]);
+ const b0=wt('up',3)-.1,tt=wt('tuned')-b0;
+ return t=>{b.style.transform=`scale(${1.12+.18*eio(t/4.4)})`;fade(tg,t,.15,.2,10);rv(k,t);rv(h,t)}},true);
+// 9. Damper close, it swings against the sway; pendulum device. "Heavy steel plates that swing against the wind... and calm the whole tower."
+add(wt('heavy')-.1,sc=>{const b=box(sc,'m4',530,1010,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const pd=pend(sc,880,420,520);
+ const k=T(sc,'K ts','left:72px;top:1260px;color:#BFF5E4',[['●',wt('heavy'),'c'],['Heavy',wt('heavy')],['steel',wt('steel')],['plates',wt('plates')]]);
+ const h=T(sc,'H ts','left:70px;top:1310px;width:960px;font-size:104px',[['Swings',wt('swing'),'hl'],['against',wt('against')],['\n'],['the',wt('wind',2)-.05],['wind.',wt('wind',2),'',1]]);
+ const c=mk(sc,'K ts','left:72px;top:1555px;color:#fff;opacity:0','Calms the whole tower');
+ const b0=wt('heavy')-.1,tc=wt('calm')-b0;
+ return t=>{b.style.transform=`scale(${1.8+.08*eio(t/4)}) translateX(${Math.sin(t*2.4)*-6}px)`;const amp=t<tc?14:14*Math.exp(-(t-tc)*1.2);pd.g.style.transform=`rotate(${-Math.sin(t*2.4)*amp}deg)`;rv(k,t);rv(h,t);fade(c,t,tc,.25,12);if(t<tc)c.style.opacity=0}},true);
+// 10. Real profile again, push on the slab faces. "Two huge concrete walls run up its spine."
+add(wt('two')-.1,sc=>{const b=box(sc,'r2',560,900,'50% 30%');mk(sc,'sh','background:'+GB(52));
+ const ln=svg(sc,'',`<line x1="575" y1="330" x2="575" y2="1180" stroke="#28c39d" stroke-width="7" stroke-linecap="round" style="filter:drop-shadow(0 0 10px rgba(40,195,157,.8))"/><line x1="655" y1="330" x2="655" y2="1180" stroke="#28c39d" stroke-width="7" stroke-linecap="round" style="filter:drop-shadow(0 0 10px rgba(40,195,157,.8))"/>`);const ls=[...ln.querySelectorAll('line')];ls.forEach(l=>{l.style.strokeDasharray=850;l.style.strokeDashoffset=850});
+ const k=T(sc,'K ts','left:72px;top:1260px;color:#BFF5E4',[['●',wt('concrete'),'c'],['Concrete',wt('concrete')],['shear',wt('walls')],['walls',wt('walls')]]);
+ const h=T(sc,'H ts','left:70px;top:1310px;width:960px;font-size:108px',[['2',wt('two'),'hl'],['walls',wt('walls')],['\n'],['up',wt('up',4)],['its',wt('its',2)],['spine.',wt('spine'),'hl',1]]);
+ const b0=wt('two')-.1,tw=wt('walls')-b0;
+ return t=>{b.style.transform=`scale(${1.35+.06*eio(t/2.6)})`;ls.forEach((l,i)=>l.style.strokeDashoffset=850*(1-eo((t-tw-i*.1)/.8)));ln.style.opacity=.9;rv(k,t);rv(h,t)}},true);
+// 11. AI cutaway of the foot: anchors into bedrock, framed window (no lines behind the text). "About two hundred rock anchors pin it to the bedrock."
+add(wt('about',3)-.1,sc=>{const b=panel(sc,'m5',230,900,'50% 100%',540,700);
+ const n=mk(sc,'ts','left:58px;top:1130px;font:800 230px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','~0');
+ const h=T(sc,'M ts','left:70px;top:1370px;width:960px',[['rock',wt('rock'),'hl'],['anchors',wt('anchors'),'hl'],['\n'],['into',wt('pin')],['the',wt('bedrock')-.05],['bedrock.',wt('bedrock'),'',1]]);
+ const b0=wt('about',3)-.1,t0=wt('two',2)-b0,t1=wt('hundred',2)-b0+.3;
+ return t=>{b.im.style.transform=`scale(${1.04+.08*eio(t/3.4)}) translateY(${-10*t}px)`;n.style.opacity=cl((t-t0+.1)/.12);const p=eo((t-t0)/(t1-t0));n.textContent='~'+Math.round(200*p);n.style.color=p>=1?CO:'#fff';rv(h,t)}},true);
+// 12. Real photo, low on the base, push. "At its feet, a piano hall from the 1920s."
+add(wt('at')-.1,sc=>{const b=panel(sc,'m5',230,900,'50% 40%',540,560);
+ const k=T(sc,'K ts','left:72px;top:1160px;color:#BFF5E4',[['●',wt('feet'),'c'],['At',wt('at')],['its',wt('its',3)],['feet',wt('feet')]]);
+ const h=T(sc,'H ts','left:70px;top:1210px;width:960px;font-size:108px',[['Steinway',wt('piano'),'hl'],['Hall.',wt('hall'),'hl',1]]);
+ const y=mk(sc,'ts','left:66px;top:1360px;font:800 170px/1 IN;letter-spacing:-.05em;color:#fff;opacity:0','1920s');
+ const b0=wt('at')-.1,ty=WS[F('hall')+3][1]-b0;
+ return t=>{b.im.style.transform=`scale(${1.06+.08*eio(t/3)})`;rv(k,t);rv(h,t);if(t>=ty){slam(y,t,ty,1.4,0);y.style.color=t>ty+.3?CO:'#fff'}else y.style.opacity=0}},true);
+// 13. AI sky-high living room over a park, push to the window. "Sixty homes up there, each worth about 140 to 520 crore rupees."
+add(wt('sixty')-.1,sc=>{const b=box(sc,'m6',540,900,'50% 50%');mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1130px;color:#BFF5E4',[['●',wt('sixty'),'c'],['60',wt('sixty')],['homes',wt('homes')],['·',wt('worth')],['each',wt('each')]]);
+ const n=mk(sc,'ts','left:62px;top:1180px;font:800 150px/1.02 IN;letter-spacing:-.045em;color:#fff;opacity:0','');
+ const c=T(sc,'M ts','left:70px;top:1500px;width:960px',[['crore',wt('crore'),'hl'],['each.',wt('rupees')]]);
+ const b0=wt('sixty')-.1,t0=wt('one')-b0,t1=wt('forty')-b0,t2=wt('five')-b0,t3=wt('twenty')-b0;
+ return t=>{b.style.transform=`scale(${1.06+.1*eio(t/5)})`;rv(k,t);n.style.opacity=cl((t-t0+.05)/.12);
+  const a=Math.round(140*eo((t-t0)/(t1-t0+.2))),z=t<t2?0:Math.round(520*eo((t-t2)/(t3-t2+.2)));n.innerHTML='₹'+a+(t>=t2?'<br>to ₹'+z:'');n.style.color='#fff';rv(c,t)}},true);
+// 14. Back to frame 0: the pitch at the tower's foot (loop). "All of it... balanced on less than a cricket pitch."
+add(wt('all')-.1,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.08) saturate(1.05)';mk(sc,'sh','background:'+GB(52));
+ const r=ruler(sc,'');r.set(1);
+ const h=T(sc,'H ts','left:70px;top:1260px;width:860px;font-size:104px',[['Balanced',wt('balanced')],['on',wt('on')],['\n'],['less',wt('less',2)],['than',wt('than',3)],['a',wt('cricket',2)-.05],['\n'],['pitch.',wt('pitch',2),'hl',1]]);
+ return t=>{const s=1.32;b.style.transform=`translateY(${(s-1)*960-(s-1)*960*2*eio(t/3.6)}px) scale(${s})`;rv(h,t)}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+' Not the actual site. Steinway Tower: 435 m tall, about 18 m wide (HowStuffWorks; KSL, Aug 2022).'],[SC[1].t0,'Steinway Tower, New York. Photo: Brett Wharton / Unsplash.'],[SC[2].t0,'Ratio about 24:1 (HowStuffWorks; Architectural Record, May 2021). Photo: Parrish Freeman / Unsplash.'],[SC[3].t0,AIL+' Qutub Minar about 72.5 m; 6 × 72.5 m is about 435 m (our arithmetic).'],[SC[4].t0,AIL+' Cricket pitch 22 yards (20.12 m) long; comparison is our arithmetic.'],[SC[5].t0,AIL],[SC[6].t0,AIL+' Sway up to about 0.9 m in high winds (HowStuffWorks).'],[SC[7].t0,AIL+' Tuned mass damper above the highest floor (Architectural Record, May 2021).'],[SC[9].t0,'Shear walls on the east and west (Architectural Record). Photo: Parrish Freeman / Unsplash.'],[SC[10].t0,AIL+' About 200 rock anchors into the bedrock (KSL, Aug 2022).'],[SC[11].t0,AIL+' Base: Steinway Hall, 1920s (Architectural Record; KSL).'],[SC[12].t0,AIL+' 2022 sale prices per home (KSL, Aug 2022) converted at about ₹78.6 per US dollar (2022, approx.).'],[SC[13].t0,AIL+' Education only, not advice.']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const FLASH=[HOOKEV,wt('twenty-four'),wt('six'),wt('damper'),wt('two',2)];
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ FLASH.forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;scenes[scenes.length-1].sc.style.opacity=1-cl(fo*1.4);document.getElementById('brand').style.opacity=1-fo;
+};
+</script></body></html>
