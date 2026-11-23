@@ -1,0 +1,140 @@
+{
+ "op": "daily",
+ "ran_at": "2026-11-18T06:49:07.798792Z",
+ "result": {
+  "date": "2026-11-18",
+  "dry_run": false,
+  "actions": [
+   "Campaign spend cap INR 20000 -> 30000 (config)"
+  ],
+  "flags": [
+   "Under-delivery: spent INR 0 of INR 495 yesterday. Check for rejected ads or a too-small audience."
+  ],
+  "campaign_status": "ACTIVE",
+  "spend_month_inr": 350.11,
+  "spend_yesterday_inr": 0.0,
+  "daily_budget_total_inr": 495.0,
+  "monthly_cap_inr": 30000,
+  "lead_data": "joined from the bot's lead records (per ad id)",
+  "lift": null,
+  "waves": 1,
+  "ads": [
+   {
+    "ad": "U11 reel 3 things HQ",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "U10 reel Hinglish HQ: mil gaya",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "R11 reel 3 things HQ",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "R10 reel Hinglish HQ: mil gaya",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.0,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 48.74,
+    "conv_life": 1,
+    "cpc_life": 49,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 297.22,
+    "conv_life": 7,
+    "cpc_life": 42,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P9 reel 3 things: planned industrial plot",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.84,
+    "conv_life": 1,
+    "cpc_life": 1,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P8 reel voiceover Hinglish: mil gaya",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 3.31,
+    "conv_life": 1,
+    "cpc_life": 3,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   }
+  ],
+  "meta_cost_per_chat": 35,
+  "meta_ramp": "Meta ramp: INR 495/day toward 1000 (held)",
+  "plan": "planner 2026-11-18: Meta INR 495/day (idle tactics folded into prospecting: INR 248)",
+  "tester": "waits for the weekly batch (Monday): edits reset Meta's learning"
+ }
+}

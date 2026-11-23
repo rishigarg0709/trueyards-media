@@ -1,0 +1,2 @@
+# Append-only logs: when two workflows add lines at the same time, keep both sides instead of failing the run (19 Nov batch-poll failure).
+*.jsonl merge=union

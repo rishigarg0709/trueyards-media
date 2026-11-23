@@ -1,0 +1,1070 @@
+{
+ "op": "boost_status",
+ "ran_at": "2026-11-20T05:10:27.448244Z",
+ "result": {
+  "month_spend_inr": 336.59,
+  "campaigns": {
+   "data": [
+    {
+     "id": "120255661706190547",
+     "name": "TrueYards Follow",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "daily_budget": "20000"
+    },
+    {
+     "id": "120255657866010547",
+     "name": "FV Jind SCO CTWA",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE"
+    },
+    {
+     "id": "120255647260270547",
+     "name": "FIT Warm v1",
+     "status": "PAUSED",
+     "effective_status": "PAUSED"
+    },
+    {
+     "id": "120255645738970547",
+     "name": "FIT CTWA Leads v2",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE"
+    },
+    {
+     "id": "120255620965680547",
+     "name": "TrueYards Boost",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "daily_budget": "20000"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVGk2UlJ5Y1lMbTFqTGhFaXlWUU9JbUpTNWxKZAFplTk1SaFA3MnBBMEdUNFA1VmtCMzBzejdUQm5OUlVFVzVTMVA2N0ZAjYlRfclhrRlAyTmJiekJEaHlB",
+     "after": "QVFIVERNZAjlxVzltcVVDQlI4aDNfVEZAmSW9aQVpZAZAzNXVHFlam1vamlfTlkxc0ZAveWZAEMXZAiRlZALZAFNHc0J6SUdWYkJIYl9GM3J2ZAzZAEbWVLREl6SmxuVDdR"
+    }
+   }
+  },
+  "ads": {
+   "data": [
+    {
+     "id": "120255678724950547",
+     "name": "boost 18508881529100400",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "18508881529100400",
+      "id": "1690628775914763"
+     }
+    },
+    {
+     "id": "120255662370110547",
+     "name": "R1 poster: your commercial plot in Flower Valley",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1848465859686602"
+     }
+    },
+    {
+     "id": "120255657868730547",
+     "name": "J1 poster: business location already alive",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1652132623033513"
+     }
+    },
+    {
+     "id": "120255661722430547",
+     "name": "follow 18131037979847506",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "source_instagram_media_id": "18131037979847506",
+      "id": "1137328585367135"
+     }
+    },
+    {
+     "id": "120255654404860547",
+     "name": "boost 18131037979847506",
+     "status": "ACTIVE",
+     "effective_status": "CAMPAIGN_PAUSED",
+     "creative": {
+      "source_instagram_media_id": "18131037979847506",
+      "id": "2288856808342422"
+     }
+    },
+    {
+     "id": "120255648190400547",
+     "name": "W11 reel 3 things HQ",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "4468499586734312"
+     }
+    },
+    {
+     "id": "120255648181560547",
+     "name": "U11 reel 3 things HQ",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1029852163465280"
+     }
+    },
+    {
+     "id": "120255648185680547",
+     "name": "W10 reel Hinglish HQ: mil gaya",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1465451985517339"
+     }
+    },
+    {
+     "id": "120255648175050547",
+     "name": "U10 reel Hinglish HQ: mil gaya",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1471833118209762"
+     }
+    },
+    {
+     "id": "120255648171070547",
+     "name": "R11 reel 3 things HQ",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1128236759849772"
+     }
+    },
+    {
+     "id": "120255648167890547",
+     "name": "R10 reel Hinglish HQ: mil gaya",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "39789698107340046"
+     }
+    },
+    {
+     "id": "120255647744560547",
+     "name": "P11 reel 3 things HQ",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "2312384199553977"
+     }
+    },
+    {
+     "id": "120255647736550547",
+     "name": "P10 reel Hinglish HQ: mil gaya",
+     "status": "ACTIVE",
+     "effective_status": "ACTIVE",
+     "creative": {
+      "id": "1828448095073129"
+     }
+    },
+    {
+     "id": "120255646891470547",
+     "name": "P9 reel 3 things: planned industrial plot",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "1127209029905990"
+     }
+    },
+    {
+     "id": "120255646885790547",
+     "name": "P8 reel voiceover Hinglish: mil gaya",
+     "status": "PAUSED",
+     "effective_status": "PAUSED",
+     "creative": {
+      "id": "2338372330231229"
+     }
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVF9NMGkwbXVvQUJMTEN4NG5pMVNfYzFMVmxUTi1oWVJuN3g5U0RYQ25lZAzdRZA2p4LThiV0FsTTkwRkZAvTW1jT2RNT0ZAMODVaUjBhTldqeTRhZAnVSZAlNB",
+     "after": "QVFIVERvb2FsNWlzcjZAKdjZAKajZApZAzhncnBTTW50X3RwZATRzY01mWVZAnendodWdncWZAacjJITk9VTU9WWUg2M0VoZA2I2SG0wTmVOdk0zT1EwV0syQW1vUUtR"
+    }
+   }
+  },
+  "insights_7d": {
+   "data": [
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "4"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.8275"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "3.31"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "1.655"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.472857"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "3.31"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "1.655"
+      },
+      {
+       "action_type": "link_click",
+       "value": "1.103333"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.472857"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "3.31"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "24",
+     "reach": "23",
+     "spend": "3.31",
+     "ad_id": "120255646885790547",
+     "ad_name": "P8 reel voiceover Hinglish: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "4"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "4"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "1"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.84"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "0.84"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.21"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "0.84"
+      },
+      {
+       "action_type": "link_click",
+       "value": "0.28"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.21"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "0.84"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "4",
+     "reach": "4",
+     "spend": "0.84",
+     "ad_id": "120255646891470547",
+     "ad_name": "P9 reel 3 things: planned industrial plot"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "34"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "9"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "18"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "997"
+      },
+      {
+       "action_type": "like",
+       "value": "1"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "12"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "998"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "12"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "14"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "18"
+      },
+      {
+       "action_type": "post",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "13"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "9"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "18"
+      },
+      {
+       "action_type": "video_view",
+       "value": "951"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "1.140946"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "60.28"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "77.502857"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1.088305"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "60.28"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "83.464615"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "90.42"
+      },
+      {
+       "action_type": "link_click",
+       "value": "31.912941"
+      },
+      {
+       "action_type": "like",
+       "value": "1085.04"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1.087214"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "60.28"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "8155",
+     "reach": "4899",
+     "spend": "1085.04",
+     "ad_id": "120255647736550547",
+     "ad_name": "P10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "58"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "58"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      },
+      {
+       "action_type": "video_view",
+       "value": "57"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "1.385965"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "79"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "1.362069"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "79"
+      },
+      {
+       "action_type": "link_click",
+       "value": "79"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "1.362069"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "79"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "559",
+     "reach": "438",
+     "spend": "79",
+     "ad_id": "120255647744560547",
+     "ad_name": "P11 reel 3 things HQ"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_reaction",
+       "value": "317"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "5"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "625"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "317"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "625"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "312"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "312"
+      },
+      {
+       "action_type": "video_view",
+       "value": "308"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.153052"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.075424"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "0.148707"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.075424"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "2929",
+     "reach": "2893",
+     "spend": "47.14",
+     "ad_id": "120255654404860547",
+     "ad_name": "boost 18131037979847506"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "30"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "9"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "32"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "32"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "9"
+      },
+      {
+       "action_type": "post",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "7"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "9"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "28.665556"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_2_message_send",
+       "value": "36.855714"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "8.062188"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "28.665556"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_user_depth_3_message_send",
+       "value": "36.855714"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "128.995"
+      },
+      {
+       "action_type": "link_click",
+       "value": "8.599667"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "8.062188"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "28.665556"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "4193",
+     "reach": "2390",
+     "spend": "257.99",
+     "ad_id": "120255657868730547",
+     "ad_name": "J1 poster: business location already alive"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "583"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "28"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "7"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "3258"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "32"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "3258"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "25"
+      },
+      {
+       "action_type": "post",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_save",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_save",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "21"
+      },
+      {
+       "action_type": "video_view",
+       "value": "2643"
+      }
+     ],
+     "cost_per_action_type": [
+      {
+       "action_type": "video_view",
+       "value": "0.100515"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "0.081541"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "8.301875"
+      },
+      {
+       "action_type": "link_click",
+       "value": "0.455678"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "0.081541"
+      }
+     ],
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "11390",
+     "reach": "10554",
+     "spend": "265.66",
+     "ad_id": "120255661722430547",
+     "ad_name": "follow 18131037979847506"
+    },
+    {
+     "date_start": "2026-11-13",
+     "date_stop": "2026-11-19",
+     "impressions": "2",
+     "reach": "2",
+     "spend": "0.07",
+     "ad_id": "120255678724950547",
+     "ad_name": "boost 18508881529100400"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "MAZDZD",
+     "after": "NwZDZD"
+    }
+   }
+  },
+  "insights_today": {
+   "data": [
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "2"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "2"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "49"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "49"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "2"
+      },
+      {
+       "action_type": "video_view",
+       "value": "45"
+      }
+     ],
+     "date_start": "2026-11-20",
+     "date_stop": "2026-11-20",
+     "impressions": "420",
+     "reach": "333",
+     "spend": "81.03",
+     "ad_id": "120255647736550547",
+     "ad_name": "P10 reel Hinglish HQ: mil gaya"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "post_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "3"
+      },
+      {
+       "action_type": "video_view",
+       "value": "3"
+      }
+     ],
+     "date_start": "2026-11-20",
+     "date_stop": "2026-11-20",
+     "impressions": "8",
+     "reach": "8",
+     "spend": "3.38",
+     "ad_id": "120255647744560547",
+     "ad_name": "P11 reel 3 things HQ"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.total_messaging_connection",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_first_reply",
+       "value": "1"
+      },
+      {
+       "action_type": "onsite_conversion.messaging_conversation_started_7d",
+       "value": "1"
+      }
+     ],
+     "date_start": "2026-11-20",
+     "date_stop": "2026-11-20",
+     "impressions": "623",
+     "reach": "526",
+     "spend": "30.59",
+     "ad_id": "120255657868730547",
+     "ad_name": "J1 poster: business location already alive"
+    },
+    {
+     "actions": [
+      {
+       "action_type": "link_click",
+       "value": "37"
+      },
+      {
+       "action_type": "post_reaction",
+       "value": "3"
+      },
+      {
+       "action_type": "onsite_conversion.post_unlike",
+       "value": "1"
+      },
+      {
+       "action_type": "post_engagement",
+       "value": "288"
+      },
+      {
+       "action_type": "post_interaction_gross",
+       "value": "3"
+      },
+      {
+       "action_type": "page_engagement",
+       "value": "288"
+      },
+      {
+       "action_type": "post_interaction_net",
+       "value": "2"
+      },
+      {
+       "action_type": "onsite_conversion.post_net_like",
+       "value": "2"
+      },
+      {
+       "action_type": "video_view",
+       "value": "248"
+      }
+     ],
+     "date_start": "2026-11-20",
+     "date_stop": "2026-11-20",
+     "impressions": "1060",
+     "reach": "1029",
+     "spend": "23.72",
+     "ad_id": "120255661722430547",
+     "ad_name": "follow 18131037979847506"
+    },
+    {
+     "date_start": "2026-11-20",
+     "date_stop": "2026-11-20",
+     "impressions": "10",
+     "reach": "7",
+     "spend": "3.25",
+     "ad_id": "120255662370110547",
+     "ad_name": "R1 poster: your commercial plot in Flower Valley"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "MAZDZD",
+     "after": "NAZDZD"
+    }
+   }
+  },
+  "adsets": {
+   "data": [
+    {
+     "id": "120255662369290547",
+     "name": "FV Jind R - customers and site visitors",
+     "campaign": {
+      "name": "FV Jind SCO CTWA",
+      "id": "120255657866010547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "15000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255661720970547",
+     "name": "TrueYards Follow - IG profile visits",
+     "campaign": {
+      "name": "TrueYards Follow",
+      "id": "120255661706190547"
+     },
+     "effective_status": "ACTIVE",
+     "optimization_goal": "VISIT_INSTAGRAM_PROFILE"
+    },
+    {
+     "id": "120255657866720547",
+     "name": "FV Jind J - Advantage+ Jind 30 km",
+     "campaign": {
+      "name": "FV Jind SCO CTWA",
+      "id": "120255657866010547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "15000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255647446550547",
+     "name": "FIT W - Warm-up before WhatsApp",
+     "campaign": {
+      "name": "FIT Warm v1",
+      "id": "120255647260270547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "12000",
+     "optimization_goal": "REACH"
+    },
+    {
+     "id": "120255647397480547",
+     "name": "FIT U - Unreachable on WhatsApp",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "12000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255647304890547",
+     "name": "FIT R - Reminder after WhatsApp",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "PAUSED",
+     "daily_budget": "12000",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255645739620547",
+     "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+     "campaign": {
+      "name": "FIT CTWA Leads v2",
+      "id": "120255645738970547"
+     },
+     "effective_status": "ACTIVE",
+     "daily_budget": "49500",
+     "optimization_goal": "CONVERSATIONS"
+    },
+    {
+     "id": "120255620983010547",
+     "name": "TrueYards Boost - India engagement",
+     "campaign": {
+      "name": "TrueYards Boost",
+      "id": "120255620965680547"
+     },
+     "effective_status": "CAMPAIGN_PAUSED",
+     "optimization_goal": "POST_ENGAGEMENT"
+    }
+   ],
+   "paging": {
+    "cursors": {
+     "before": "QVFIVC10OWV5SEozdEo0M2ZAjbWppVmRoN2NULTM4Y24zbXJNb25NUFRIRDEzRzI3RzdZASmxTbEZAaX1RVczBWTHFWU09zZAnBPUV9BSllyMERvOVdjRHJzbGtn",
+     "after": "QVFIVFlpNFdCSFFiVXVtc0dNblJhYzRpaEFfY3RTT2YwMXZABUC1yOVhpT3hoSWxzZA0tPUHluYTgwTmpKQzFwNTNiaHM1WVFMTFhvTjNCWnpveGNfSHc2MTl3"
+    }
+   }
+  }
+ }
+}

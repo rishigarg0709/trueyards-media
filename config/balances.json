@@ -1,0 +1,49 @@
+{
+  "_note": "Balance watch settings (scripts/balances.py). After a Gemini top-up, add {\"inr\": amount, \"at\": \"YYYY-MM-DDTHH:MMZ\"} to gemini.topups so credit left can be estimated.",
+  "alert_every_hours": 12,
+  "gemini": {
+    "topups": [
+      {
+        "at": "2026-11-18T10:30Z",
+        "inr": 2000,
+        "by": "Rishi, 18 Nov 16:00 IST"
+      }
+    ],
+    "inr_per_image": 11,
+    "inr_per_batch_image": 5.5,
+    "warn_inr": 300,
+    "warn_days": 2,
+    "probe_models": [
+      "gemini-flash-lite-latest",
+      "gemini-2.5-flash-lite",
+      "gemini-flash-latest"
+    ],
+    "inr_per_image_by_model": {
+      "gemini-3-pro-image": 11.3,
+      "gemini-3-pro-image-preview": 11.3,
+      "gemini-3.1-flash-image": 5.7,
+      "gemini-3.1-flash-image-preview": 5.7,
+      "gemini-2.5-flash-image": 3.3
+    },
+    "daily_warn_inr": 400,
+    "_note": "Prices: Pro 2K about USD 0.134, 3.1 Flash 1K about USD 0.067 (batch half). Pro only for hook frame and carousel cover (scripts/cloud_media.py pick_model).",
+    "planned_daily_inr": 300
+  },
+  "meta": {
+    "warn_inr": 1000,
+    "warn_days": 2,
+    "planned_daily_inr": 700
+  },
+  "whatsapp": {
+    "warn_inr": 1000,
+    "warn_days": 2,
+    "daily_inr": 1000
+  },
+  "elevenlabs": {
+    "warn_credits": 8000,
+    "credits_per_day": 5000
+  },
+  "apify": {
+    "warn_share": 0.8
+  }
+}

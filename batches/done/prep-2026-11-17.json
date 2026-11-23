@@ -1,0 +1,132 @@
+{
+ "batch": "batches/sdcgtajeqoeglg7ytiu9h22vzv1gj3oczabe",
+ "name": "prep-2026-11-17",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-16T16:51Z",
+ "images": [
+  {
+   "name": "2026-11-17-midday-1",
+   "prompt": "A lone two-storey Japanese wooden house with pale grey siding and a dark tiled roof on a small suburban plot, overcast sky, a narrow strip of bare ground in front, quiet street edge visible. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-midday-2",
+   "prompt": "A small yellow excavator demolishing a two-storey Japanese wooden house, splintered timber and siding falling, dust in soft daylight, neighbouring houses at the edges, viewed from across the street. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-midday-3",
+   "prompt": "An empty cleared residential plot in a Japanese suburb after demolition, neat grey gravel, low concrete kerb outlining the boundary, small houses on both sides, overcast calm light. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-midday-4",
+   "prompt": "Still life on a pale grey tabletop: a small handmade wooden scale model of a Japanese house on one pan of a simple brass balance scale, a small heap of dark garden soil on the other pan, the soil side lower. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-midday-5",
+   "prompt": "A new light timber frame of a two-storey house being raised on a small Japanese suburban plot, fresh pale wood beams, scaffolding wrapped in plain white mesh, soft morning light, no workers. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-midday-6",
+   "prompt": "An aged thirty-year-old Japanese wooden house, faded weathered siding, rusted rain gutter, vines and tall grass creeping over a closed shutter, quiet empty street, overcast light. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-1",
+   "prompt": "Cutaway cross-section of the base of a supertall glass skyscraper: above ground the tower base rises out of frame, below ground a thick concrete raft sits on a dense forest of long vertical concrete piles reaching deep into horizontal layers of pale loose sand and darker weak sandstone, a thin groundwater line near the surface, deep ink-blue background. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-2",
+   "prompt": "Cutaway of a single long bored concrete pile buried in layered sand and weak sandstone, the pile cut open to show its steel rebar cage, sand grains pressed tightly against its rough shaft along its full length, ink-blue background. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-3",
+   "prompt": "Aerial view at dawn of a vast dense steel rebar mat for a huge foundation raft in a deep desert excavation, concrete pump booms at the edges, long shadows, no workers. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-4",
+   "prompt": "Extreme close cutaway of the contact zone where rough grey concrete meets tightly packed pale sand grains, individual grains visible, shallow depth of field, ink-blue background. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-5",
+   "prompt": "Underground cutaway showing a salty groundwater layer just below desert ground level, white salt crystals forming on exposed steel rebar beside a concrete slab, thin cyan glowing lines running beneath the slab like an electric current, ink-blue background. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-evening-6",
+   "prompt": "Top-down view into a deep square desert excavation showing a regular grid of round concrete pile heads with protruding steel bars, before the raft is poured, clean shadows, no people. Vertical 9:16 composition, wide framing so two or three crops can be cut from it, main subject in the middle third, calmer empty area in the lower third, top of frame darker, no people visible. photorealistic engineering cutaway render, clean studio light, technical section view, subtle cyan accent light, high detail, no text labels",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-carousel-1",
+   "prompt": "A heavy brass rubber stamp with a polished dark wooden handle hovering just above a blank cream sheet of thick legal paper, the stamp face clean and blank, placed in the lower two thirds of the frame. Vertical 4:5 still life, seamless deep navy paper backdrop and tabletop, warm amber light from the upper left with a soft long shadow, generous empty navy space for text, no people, no hands, no writing on any object. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-carousel-2",
+   "prompt": "Two identical white museum-board architectural scale models of a slim apartment tower standing side by side, the right one raised on a short stack of plain blank brass coins so it stands taller, wide composition with both models spread across the frame. Vertical 4:5 still life, seamless deep navy paper backdrop and tabletop, warm amber light from the upper left with a soft long shadow, generous empty navy space for text, no people, no hands, no writing on any object. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-carousel-3",
+   "prompt": "A neat stack of blank cream legal papers with deckled edges, a black fountain pen lying across them and a single brass house key beside, placed in the lower right of the frame. Vertical 4:5 still life, seamless deep navy paper backdrop and tabletop, warm amber light from the upper left with a soft long shadow, generous empty navy space for text, no people, no hands, no writing on any object. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-carousel-4",
+   "prompt": "A polished brass balance scale, a small white museum-board house model on the left pan and a few plain blank brass coins on the right pan, the scale nearly level, placed in the lower half of the frame. Vertical 4:5 still life, seamless deep navy paper backdrop and tabletop, warm amber light from the upper left with a soft long shadow, generous empty navy space for text, no people, no hands, no writing on any object. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-17-carousel-5",
+   "prompt": "Two brass house keys on a single brass ring resting on a folded blank cream deed, placed in the lower left of the frame. Vertical 4:5 still life, seamless deep navy paper backdrop and tabletop, warm amber light from the upper left with a soft long shadow, generous empty navy space for text, no people, no hands, no writing on any object. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null,
+ "saved": [
+  "2026-11-17-midday-1",
+  "2026-11-17-midday-2",
+  "2026-11-17-midday-3",
+  "2026-11-17-midday-4",
+  "2026-11-17-midday-5",
+  "2026-11-17-midday-6",
+  "2026-11-17-evening-1",
+  "2026-11-17-evening-2",
+  "2026-11-17-evening-3",
+  "2026-11-17-evening-4",
+  "2026-11-17-evening-5",
+  "2026-11-17-evening-6",
+  "2026-11-17-carousel-1",
+  "2026-11-17-carousel-2",
+  "2026-11-17-carousel-3",
+  "2026-11-17-carousel-4",
+  "2026-11-17-carousel-5"
+ ],
+ "missing": [],
+ "finished": "2026-11-17T06:25Z"
+}

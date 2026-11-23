@@ -1,0 +1,20 @@
+{
+ "batch": "batches/l45v5qnuso1524r5jmoj59445ojbttp4fott",
+ "name": "batch-test-1",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-16T11:31Z",
+ "images": [
+  {
+   "name": "bt-skyline",
+   "prompt": "Photorealistic documentary photograph, blue hour skyline of a modern Indian city seen from across a river, warm practical lights, glossy towers, subtle film grain, vertical 9:16 composition, no text, no people in focus",
+   "aspect": "9:16",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null,
+ "saved": [
+  "bt-skyline"
+ ],
+ "missing": [],
+ "finished": "2026-11-16T11:35Z"
+}

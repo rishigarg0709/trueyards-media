@@ -1,0 +1,41 @@
+name: fetch-images
+on:
+  push:
+    paths:
+      - 'fetch/*.txt'
+permissions:
+  contents: write
+concurrency: fetch-images
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download listed photos
+        run: |
+          mkdir -p library/stock
+          for f in fetch/*.txt; do
+            [ -f "$f" ] || continue
+            while read -r name url; do
+              [ -z "$name" ] && continue
+              ext=jpg
+              case "$url" in
+                https://images.unsplash.com/*) ;;
+                https://upload.wikimedia.org/*|https://commons.wikimedia.org/wiki/Special:FilePath/*) ;;
+                https://commons.wikimedia.org/w/api.php*) ext=json ;;
+                *) echo "skip $url"; continue ;;
+              esac
+              safe=$(echo "$name" | tr -cd 'A-Za-z0-9_-')
+              curl -fsSL --max-time 120 -A "TrueYardsMediaBot/1.0 (github.com/rishigarg0709/trueyards-media)" -o "library/stock/$safe.$ext" "$url" || echo "failed $name"
+            done < "$f"
+            git rm -q --cached "$f" 2>/dev/null || true
+            rm -f "$f"
+          done
+      - name: Commit
+        run: |
+          git config user.name "trueyards-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A library/stock fetch
+          git diff --cached --quiet || git commit -m "Fetch stock photos"
+          git pull --rebase -q
+          git push

@@ -1,0 +1,33 @@
+{
+ "op": "archive_stale",
+ "ran_at": "2026-11-21T12:53:23.819070Z",
+ "result": {
+  "M1-S3 square, sign-up button": {
+   "success": true
+  },
+  "M1-S1 invite feed, sign-up button": {
+   "success": true
+  },
+  "W-S3 square, sign-up button": {
+   "success": true
+  },
+  "L-S3 square, sign-up button": {
+   "success": true
+  },
+  "W-S1 invite feed, sign-up button": {
+   "success": true
+  },
+  "W-S2 see FIT feed, sign-up button": {
+   "success": true
+  },
+  "L-S2 see FIT feed, sign-up button": {
+   "success": true
+  },
+  "M1-S2 see FIT feed, sign-up button": {
+   "success": true
+  },
+  "L-S1 invite feed, sign-up button": {
+   "success": true
+  }
+ }
+}

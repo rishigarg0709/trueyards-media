@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:FR;font-weight:600;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;font-style:italic;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-italic.woff2)}
+@font-face{font-family:FR;font-weight:800;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/fraunces/files/fraunces-latin-800-normal.woff2)}
+@font-face{font-family:SG;font-weight:500;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2)}
+@font-face{font-family:SG;font-weight:700;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+@font-face{font-family:RS;font-weight:700;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-ext-700-normal.woff2);unicode-range:U+20B9}
+@font-face{font-family:RS;font-weight:700;src:url(/home/claude/trueyards-media/engine/node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0e0e0d}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0e0e0d;color:#f3ecdc}
+.sc{position:absolute;inset:0;overflow:hidden}
+.sc>*{position:absolute}
+.bg{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.shade{left:0;top:0;width:1080px;height:1920px}
+.say{font:500 78px/1.12 SG,RS;letter-spacing:-.01em;color:#f3ecdc}
+.big{font:800 230px/.92 FR,RS;letter-spacing:-.02em;color:#f3ecdc}
+.ser{font:600 96px/1.04 FR,RS;letter-spacing:-.01em}
+.mono{font:500 26px/1.3 PM;letter-spacing:.14em;text-transform:uppercase;color:#a49e8e}
+.sf{color:#ffb000}
+.hi{background:#ffb000;color:#0e0e0d;padding:0 .16em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.L{left:90px;width:900px}
+.w{display:inline-block;white-space:pre}
+.card{background:#f3ecdc;color:#141412;border-radius:10px;box-shadow:0 40px 80px rgba(0,0,0,.55)}
+.card .rule{position:absolute;left:0;right:0;height:2px;background:rgba(20,20,18,.12)}
+#yr{position:absolute;left:0;top:210px;width:1080px;display:flex;justify-content:center;align-items:center;gap:22px;z-index:20}
+#yr .lab{font:500 24px/1 PM;letter-spacing:.24em;color:#a49e8e}
+#yr .od{display:flex;background:#161614;border:2px solid #2e2c27;border-radius:8px;padding:6px 10px}
+#yr .dg{width:46px;height:64px;overflow:hidden;text-align:center;font:600 54px/64px PM;color:#ffb000}
+#yr .dg i{display:block;font-style:normal}
+#flash{position:absolute;inset:0;background:#fff3d6;opacity:0;z-index:30}
+#grain{position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:.16;mix-blend-mode:overlay;z-index:25;pointer-events:none}
+#brand{position:absolute;left:90px;top:132px;font:700 30px/1 SG;letter-spacing:-.01em;z-index:20}
+#brand b{color:#2fbf8a;font-weight:700}
+#fine{position:absolute;left:90px;width:900px;top:1640px;font:500 20px/1.35 PM;letter-spacing:.06em;color:rgba(243,236,220,.45);z-index:21}
+</style></head><body><div id="s">
+<div id="brand">True<b>Yards</b></div>
+<div id="yr"><span class="lab">YEAR</span><div class="od" id="od"></div></div>
+<svg id="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/></filter><rect width="1080" height="1920" filter="url(#n)"/></svg>
+<div id="flash"></div><div id="fine"></div>
+</div>
+<script>
+const S=document.getElementById('s');
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const H=2.416,BT=H/4;
+const mk=(p,cls,css,html)=>{const e=document.createElement(html&&html.startsWith&&html.startsWith('<img')?'div':'div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const im=(p,src,css)=>{const e=document.createElement('img');e.src=src;e.className='bg';e.style.cssText=css||'';p.appendChild(e);return e};
+// words: wrap each word for reveal; supports <span class=..> groups via [[cls|text]]
+const W=(p,cls,css,txt)=>{const e=mk(p,cls,css);e.ws=[];txt.split('\n').forEach((line,li)=>{if(li)e.appendChild(document.createElement('br'));line.replace(/\[\[(\w+)\|([^\]]+)\]\]|(\S+)/g,(m,c,g,w)=>{const s=document.createElement('span');s.className='w'+(c?' '+c:'');s.textContent=(g||w);e.appendChild(s);e.appendChild(document.createTextNode(' '));e.ws.push(s)})});return e};
+const rv=(e,t,at,rate=.055,du=.24)=>{e.ws.forEach((s,i)=>{const p=eo((t-at-i*rate)/du);s.style.opacity=cl((t-at-i*rate)/(du*.5));s.style.transform=`translateY(${(1-p)*38}px)`;s.style.filter=p<1?`blur(${(1-p)*8}px)`:'none'})};
+const fade=(e,t,at,du=.3,dy=30)=>{const p=eo((t-at)/du);e.style.opacity=cl((t-at)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const SC=[];const T=[];let acc=0;const add=(halves,fn)=>{T.push(acc);acc+=halves*H;SC.push(fn)};
+let YEAR=[];// [time, year]
+// S0 HOOK: price slam
+add((1.5+2*H)/H,sc=>{const f=im(sc,'img/farm.jpg');const c=im(sc,'img/sunset.jpg','object-position:50% 35%');
+ const g=mk(sc,'shade','');g.style.background='linear-gradient(180deg,rgba(14,14,13,.55) 0%,rgba(14,14,13,.25) 30%,rgba(14,14,13,.35) 50%,rgba(14,14,13,.92) 70%)';
+ const lab=mk(sc,'mono','left:0;width:1080px;text-align:center;top:470px;font-size:30px;color:#f3ecdc','1 acre · Gurgaon');
+ const pr=mk(sc,'','left:0;width:1080px;text-align:center;top:540px;font:800 200px/1 FR,RS;letter-spacing:-.03em;color:#ffb000;text-shadow:0 10px 40px rgba(0,0,0,.6)','₹50,000');
+ const sub=mk(sc,'','left:0;width:1080px;text-align:center;top:770px;font:600 italic 64px/1 FR;color:#f3ecdc;text-shadow:0 4px 20px rgba(0,0,0,.7)','in 1980.');
+ const a=W(sc,'say L','top:1130px;font-size:78px','And the whole city');const b2=W(sc,'ser L','top:1235px;font-size:138px','was bought\n[[hi|on credit.]]');
+ const D=1.5,fmt=v=>'₹'+Math.round(v).toLocaleString('en-IN');
+ return t=>{const pre=t<D;f.style.display=pre?'block':'none';c.style.display=pre?'none':'block';
+  f.style.filter='grayscale(1) contrast(1.15)';f.style.transform=`scale(${1.15+.35*Math.pow(cl(t/D),2)}) translate(${Math.sin(t*40)*Math.max(0,t-1)*6}px,0)`;
+  c.style.transform=`scale(${1.35-.25*eo((t-D)/1.2)})`;
+  if(t<.3){pr.textContent='₹50,000';pr.style.fontSize='200px';pr.style.transform=`scale(${1.12-.12*eo(t/.2)})`;pr.style.filter='none'}
+  else if(pre){const q=Math.pow(cl((t-.3)/(D-.3)),2.2);const v=50000*Math.pow(17600,q);pr.textContent=fmt(v);pr.style.fontSize=Math.min(200,980/(pr.textContent.length*.62))+'px';const sp=cl(1-Math.abs(q-.5)*2)*10;pr.style.filter=`blur(${sp*.25}px)`;pr.style.transform=`translateY(${Math.sin(t*90)*sp}px) scale(1)`}
+  else{pr.textContent='₹88 crore';pr.style.fontSize='200px';pr.style.filter='none';const p=t-D;const sh=Math.max(0,1-p/.35)*18;pr.style.transform=`scale(${1+.45*Math.exp(-p/.09)}) translate(${Math.sin(p*80)*sh}px,${Math.cos(p*67)*sh}px)`}
+  sub.textContent=pre?'in 1980.':'the same acre, 2026.';sub.style.opacity=pre?cl(t/.15):cl((t-D-.15)/.2);
+  lab.style.opacity=1;rv(a,t,2.3,.05,.25);rv(b2,t,2.55,.07,.25)}});
+// S3 no loan
+add(1,sc=>{const a=W(sc,'ser L','top:700px;font-size:120px',"Banks wouldn't\nlend for it.");
+ const st=mk(sc,'','left:190px;top:1080px;width:700px;height:210px;border:12px solid #ffb000;border-radius:14px;color:#ffb000;white-space:nowrap;font:700 120px/186px SG;text-align:center;letter-spacing:.04em','NO LOAN');
+ return t=>{rv(a,t,0,.07);const p=(t-.75);st.style.opacity=p>0?1:0;const s=p>0?1+1.6*Math.max(0,1-p/.12):1;st.style.transform=`rotate(-8deg) scale(${s})`}});
+// S4 one man
+add(2,sc=>{const b=im(sc,'img/farm.jpg','object-position:40% 70%');const g=mk(sc,'shade','');g.style.background='rgba(14,14,13,.62)';
+ const a=W(sc,'ser L','top:640px;font-size:112px','So one man went\n[[sf|farm to farm.]]');
+ const tag=mk(sc,'','left:90px;top:1000px;padding:18px 26px;border:2px solid #f3ecdc;font:500 40px/1 PM;letter-spacing:.12em','K.P. SINGH · DLF');
+ const s=W(sc,'say L','top:1130px;font-size:56px;color:#cfc8b6','He had taken over a nearly\nshut company in 1979.');
+ return t=>{b.style.transform=`scale(${1.5+.08*t/(2*H)}) translateY(-120px)`;b.style.filter='grayscale(1) contrast(1.1)';rv(a,t,0,.07);
+  const n=Math.floor(cl((t-.9)/.6)*16);tag.textContent='K.P. SINGH · DLF'.slice(0,n)+(n<16&&t>.9?'▌':'');tag.style.opacity=t>.85?1:0;rv(s,t,1.7,.05)}});
+// S5 plots grid
+add(1,sc=>{const a=W(sc,'say L','top:460px','Most families owned\njust [[sf|4 to 5 acres.]]');
+ const g=mk(sc,'','left:140px;top:820px;width:800px;height:640px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px');const cells=[];
+ for(let i=0;i<48;i++){const c=mk(g,'','position:relative;border:2px solid #3a372f;border-radius:4px');cells.push(c)}
+ sc.cells=cells;return t=>{rv(a,t,0,.07);cells.forEach((c,i)=>{const on=t>.7+i*.004&&i==19;c.style.background=on?'#ffb000':'transparent';c.style.borderColor=on?'#ffb000':'#3a372f';c.style.opacity=cl((t-.1-i*.008)/.2)})}});
+// S6 ledger trick
+add(2,sc=>{const b=im(sc,'img/ledger.jpg');const g=mk(sc,'shade','');g.style.background='linear-gradient(180deg,rgba(14,14,13,.55),rgba(14,14,13,.9) 60%)';
+ const a=W(sc,'ser L','top:640px;font-size:108px','He paid a farmer\nfor his land.');
+ const c=W(sc,'ser L','top:1000px;font-size:108px','Then [[hi|borrowed]]\n[[sf|the money back.]]');
+ return t=>{b.style.transform=`scale(${1.08+.05*t/(2*H)})`;rv(a,t,0,.07);rv(c,t,H-.1,.08)}});
+// S7 next farm + grid fill
+add(1,sc=>{const a=W(sc,'say L','top:460px','And used it to buy\n[[sf|the next farm.]]');
+ const g=mk(sc,'','left:140px;top:820px;width:800px;height:640px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px');const cells=[];
+ for(let i=0;i<48;i++){cells.push(mk(g,'','border:2px solid #3a372f;border-radius:4px'))}
+ const ord=[...Array(48).keys()].sort((x,y)=>((x*37)%48)-((y*37)%48));
+ return t=>{rv(a,t,0,.07);const n=Math.floor(cl((t-.4)/1.7)*48);cells.forEach((c,i)=>{const on=ord.indexOf(i)<n||i==19;c.style.background=on?'#ffb000':'transparent';c.style.borderColor=on?'#ffb000':'#3a372f'})}});
+// S8 acres counter
+add(2,sc=>{const l=mk(sc,'mono','left:90px;top:560px;font-size:30px','Land DLF gathered this way');
+ const n=mk(sc,'big','left:70px;top:660px;font-size:270px;color:#ffb000','0');const u=mk(sc,'ser','left:90px;top:960px;font-size:110px','acres.');
+ const s=W(sc,'say L','top:1160px;font-size:66px','Farmers were often paid\nonly after homes sold.');
+ return t=>{fade(l,t,0);const v=Math.round(3500*eio(t/1.6)/50)*50;n.textContent=v.toLocaleString('en-IN')+(t>1.6?'+':'');fade(u,t,.2);rv(s,t,2.2,.06)}});
+// S9 homes alone
+add(1,sc=>{const a=W(sc,'ser L','top:780px;font-size:124px','But homes alone\n[[sf|don\'t make]]\n[[sf|a city.]]');return t=>{rv(a,t,0,.08)}});
+// S10 GE cards
+add(2,sc=>{const mkc=(top,yr,txt)=>{const k=mk(sc,'card',`left:110px;top:${top}px;width:860px;height:330px`);mk(k,'mono',`position:absolute;left:46px;top:40px;color:#6e6858`,'Business news');
+  mk(k,'',`position:absolute;right:46px;top:30px;font:700 52px/1 PM;color:#c98600`,yr);mk(k,'rule','top:100px');mk(k,'',`position:absolute;left:46px;top:130px;width:770px;font:600 64px/1.1 FR;color:#141412`,txt);return k};
+ const a=mkc(520,'1989','He gets GE chief Jack Welch to visit India.');const b=mkc(900,'1997','GE opens a back office in Gurgaon.');
+ return t=>{const p=eb(t/.4);a.style.transform=`translateX(${(1-p)*-900}px) rotate(-2deg)`;const q=eb((t-H+.1)/.4);b.style.transform=`translateX(${(1-q)*900}px) rotate(1.5deg)`;b.style.opacity=t>H-.15?1:0}});
+// S11 everyone followed
+add(1,sc=>{const b=im(sc,'img/night.jpg');const g=mk(sc,'shade','');g.style.background='linear-gradient(180deg,rgba(14,14,13,0) 40%,rgba(14,14,13,.85) 80%)';
+ const a=W(sc,'ser L','top:1270px;font-size:124px','Then [[sf|everyone]]\nfollowed.');
+ return t=>{b.style.transform=`translateX(${-200+160*t/H}px) scale(1.3)`;rv(a,t,.05,.08)}});
+// S13 multiple
+add(1,sc=>{const a=W(sc,'say L','top:620px','That is');const n=mk(sc,'big','left:80px;top:740px;font-size:236px;color:#ffb000','17,600x');const s=W(sc,'say L','top:1060px;font-size:66px','what the same acre\nis now worth.');
+ return t=>{rv(a,t,0);const p=eb((t-.2)/.35);n.style.transform=`scale(${.7+.3*p})`;n.style.opacity=cl((t-.2)/.1);n.style.transformOrigin='0 50%';rv(s,t,.8,.06)}});
+// S14 end
+add(2,sc=>{const a=W(sc,'ser L','top:560px;font-size:124px','A city built on\n[[sf|a handshake.]]');
+ const c=W(sc,'say L','top:1000px;font-size:62px','Send this to someone\nfrom Gurgaon.');
+ const f=mk(sc,'','left:90px;top:1240px;padding:22px 34px;background:#ffb000;color:#0e0e0d;font:700 40px/1 SG;border-radius:60px','Follow for more city stories');
+ return t=>{rv(a,t,0,.08);rv(c,t,1.2,.07);fade(f,t,H+.2)}});
+const scenes=SC.map((b,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));const u=b(sc);return{sc,u,t0:T[i],t1:i+1<T.length?T[i+1]:acc}});
+window.DUR=acc;
+// year odometer
+const G=1.5+2*H;const YRS=[[0,1980,0],[.3,2026,1.2],[G,1981,.5],[G+4*H,1985,.5],[G+10*H,1989,.5],[G+11*H,1997,.5],[G+12*H,2005,.5],[G+13*H,2026,.5]];
+const od=document.getElementById('od');const dgs=[];for(let k=0;k<4;k++){const d=mk(od,'dg','');let h='';for(let n=0;n<10;n++)h+=`<i>${n}</i>`;d.innerHTML=h+h;dgs.push(d)}
+const FINE=[[0,'AI-generated farm image · Photo: Unsplash'],[2.4,''],[G+13*H,'Sources: K.P. Singh interviews (Business Standard 2005, India Empire 2012); GE office opened 1997; Godrej Properties deal, 2026. Photos: Unsplash.'],[G+14*H,'Sources: K.P. Singh interviews; GE 1997; Godrej Properties 2026 filing. Farm image AI-generated. Photos: Unsplash. Education only, not investment advice.']];
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1+(i==scenes.length-1?1:0);s.sc.style.display=on?'block':'none';if(on){const lt=t-s.t0;
+   const p=eo(lt/.18);const bp=((t-1.5)%BT+BT)%BT;const pul=t>1.5?Math.exp(-bp/.09)*.012:0;s.sc.style.transform=i?`scale(${1+.09*(1-p)+pul})`:'none';s.sc.style.filter=i&&p<1?`blur(${(1-p)*10}px)`:'none';s.u(lt)}});
+ // year
+ let cur=YRS[0][1],prev=cur,ct=0,du=.6;YRS.forEach(([tt,y,d])=>{if(t>=tt){prev=cur;cur=y;ct=tt;du=d||.6}});const p=du?eio((t-ct)/du):1;
+ String(cur).split('').forEach((c,k)=>{const a=+String(prev)[k],b=+c;let d=b-a;if(d<0)d+=10;if(du>1)d+=10*(3-k);const pos=a+d*p;dgs[k].firstChild&&([...dgs[k].children].forEach(x=>x.style.transform=`translateY(${-(pos%10)*64}px)`))});
+ let fl=0;T.forEach(x=>{if(t>=x&&x>0)fl=Math.max(fl,.12*Math.exp(-(t-x)/.07))});if(t>=1.5)fl=Math.max(fl,.8*Math.exp(-(t-1.5)/.08));document.getElementById('flash').style.opacity=fl;
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ document.getElementById('grain').querySelector('feTurbulence').setAttribute('seed',Math.floor(t*12)%50);
+};
+</script></body></html>

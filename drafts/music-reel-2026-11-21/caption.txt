@@ -1,0 +1,9 @@
+Why does this building start one floor up? It's a stilt floor.
+Many Indian cities don't count it in FSI, so it becomes parking. Delhi allows four floors plus stilt.
+The catch: in the 2001 Bhuj earthquake, 100+ open ground floor buildings fell in Ahmedabad, 225 km away.
+Now the code asks for stilt columns designed for 2.5x the force.
+Follow @trueyards.in for one real estate story a day.
+
+Sources: Housing.com (Delhi bye-laws, stilt parking), Brigade Group, IITK-BMTPC Earthquake Tip 21 (IIT Kanpur), IS 1893 (Part 1) 2002. FSI rules vary by city. AI visualisation. Education only, not advice.
+
+#realestate #stiltparking #delhi #architecture #earthquake

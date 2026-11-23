@@ -1,0 +1,11 @@
+{
+  "business_id": "2074702256794650",
+  "ad_account_id": "act_1101758352688996",
+  "ig_user_id": "17841429830946947",
+  "system_user_id": "61596412840489",
+  "app_name": "TrueYards Autopilot",
+  "token_secret": "META_TOKEN",
+  "boost_daily_budget_inr": 200,
+  "boost_monthly_cap_inr": 6200,
+  "boost_campaign_name": "TrueYards Follow"
+}

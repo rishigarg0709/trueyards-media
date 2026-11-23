@@ -1,0 +1,37 @@
+name: events
+# SMX HQ event feed: every 15 minutes records Meta campaign and ad set changes and meaningful repo commits in
+# ops/events.jsonl; the Control Room sync copies them into the Activity tab (Rishi, 18 Nov 2026).
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # GitHub often skips or delays this, so the job also runs after every agent workflow
+  workflow_run:
+    workflows: [meta-ops, social-ops, ads-ops, cloud-media, wa-ops]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency: events
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 300 }
+      - name: Use the latest main
+        run: git pull --rebase -q origin main || true
+      - name: Record events
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+        run: python3 scripts/events.py
+      - name: Commit when something changed
+        run: |
+          rm -f ops/.events-unchanged
+          git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
+          git add ops/events.jsonl ops/events_state.json ops/campaigns.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -q -m "events"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

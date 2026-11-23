@@ -1,0 +1,33 @@
+name: signal
+# Ad signal: the bot tells Meta which ad chats became leads, planned a site visit or booked, so ads can be judged and
+# optimised on visits and bookings instead of chats (Directive D21). This workflow shows the status or switches it,
+# fully in the cloud. Only ad click ids go to Meta, never phone numbers.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "status, on or off"
+        default: "status"
+      by:
+        description: "Who asked"
+        default: "Rishi"
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ad signal
+        env:
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+          ACT: ${{ inputs.action }}
+          BY: ${{ inputs.by }}
+        run: |
+          BASE="${PERF_URL%%/perf/*}"
+          SHOW='import json,sys;d=json.load(sys.stdin);print({k:d.get(k) for k in ("on","dataset","last_run","due","sent_last_run","sent_total","last_sent","error")});sys.exit(1 if d.get("error") and d.get("on") else 0)'
+          case "$ACT" in
+            status) curl -sS -m 60 "$BASE/smx/signal" -H "x-smx-key: $PERF_KEY" | python3 -c "$SHOW" ;;
+            on|off)
+              BODY=$(python3 -c 'import json,os;print(json.dumps({"on": os.environ["ACT"]=="on", "run": os.environ["ACT"]=="on", "by": os.environ["BY"][:40]}))')
+              curl -sS -m 120 -X POST "$BASE/smx/signal" -H "x-smx-key: $PERF_KEY" -H "content-type: application/json" -d "$BODY" | python3 -c "$SHOW" ;;
+            *) echo "action must be status, on or off"; exit 1 ;;
+          esac

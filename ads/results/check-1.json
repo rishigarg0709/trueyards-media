@@ -1,0 +1,69 @@
+{
+ "op": "check",
+ "ran_at": "2026-11-17T12:45:13.258529Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards",
+   "whatsapp_number_on_page": null,
+   "lookup_error": null
+  },
+  "account": {
+   "id": "act_1101758352688996",
+   "currency": "INR",
+   "disable_reason": 0,
+   "account_status": 1,
+   "name": "TrueYards Ads",
+   "timezone_name": "Asia/Kolkata"
+  },
+  "whatsapp_linked_to_expected_number": false,
+  "targeting": {
+   "A": {
+    "cities_found": 11,
+    "cities_not_found": [
+     "Kundli"
+    ],
+    "interests_not_found": [],
+    "behaviors_not_found": [],
+    "interests_used": [
+     "Small business (business and finance)",
+     "Manufacturing (industry)",
+     "Warehouse (industry)",
+     "Logistics (business and finance)",
+     "Entrepreneurship (business and finance)",
+     "industrial engineering (engineering)",
+     "Supply chain management (business and finance)",
+     "Factory (manufacturing)",
+     "Small business owners"
+    ],
+    "audience_estimate": [
+     0,
+     0
+    ]
+   },
+   "B": {
+    "cities_found": 8,
+    "cities_not_found": [],
+    "interests_not_found": [],
+    "behaviors_not_found": [],
+    "interests_used": [
+     "Property investing (investing)",
+     "Real Estate (band)",
+     "Investment (business and finance)",
+     "Property (industry)",
+     "Banks and financial services (banking)",
+     "commercial property (property)"
+    ],
+    "audience_estimate": [
+     0,
+     0
+    ]
+   }
+  },
+  "creatives_present": {
+   "ads/creatives/fit-a-permanent-address.jpg": true,
+   "ads/creatives/fit-b-built-for-industry.jpg": true,
+   "ads/creatives/fit-c-right-plot.jpg": true
+  }
+ }
+}

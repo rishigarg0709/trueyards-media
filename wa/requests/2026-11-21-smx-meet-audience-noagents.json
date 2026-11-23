@@ -1,0 +1,3 @@
+{"by": "Chief of Staff", "ops": [
+ {"op": "perf.masteraudience", "args": {"name": "FIT meet: industry owners (master DB)", "q": {"groups": ["manufactur", "Engineering & metal", "Pharma & chemicals", "Electrical & electronics", "Food & agro processing", "Plastics, rubber & packaging", "Warehousing & logistics", "Textile & apparel", "Furniture & wood", "Auto & auto components", "Industrial", "Footwear & leather", "Toys, sports & consumer goods"], "notGroups": ["agent", "channel partner"]}}}
+]}

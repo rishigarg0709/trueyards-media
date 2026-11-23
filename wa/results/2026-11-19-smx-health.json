@@ -1,0 +1,46 @@
+{
+ "at": "2026-11-19 14:13",
+ "by": "SMX chat",
+ "results": [
+  {
+   "ok": true,
+   "op": "health",
+   "changes": false,
+   "result": {
+    "waba": {
+     "id": "[id]",
+     "name": "Forteasia",
+     "account_review_status": "APPROVED",
+     "business_verification_status": "verified",
+     "health_status": {
+      "can_send_message": "AVAILABLE",
+      "entities": [
+       {
+        "entity_type": "WABA",
+        "id": "[id]",
+        "can_send_message": "AVAILABLE"
+       },
+       {
+        "entity_type": "BUSINESS",
+        "id": "[id]",
+        "can_send_message": "AVAILABLE"
+       },
+       {
+        "entity_type": "APP",
+        "id": "[id]",
+        "can_send_message": "AVAILABLE"
+       }
+      ]
+     }
+    },
+    "usage": {
+     "app": null,
+     "business": "{\"[id]\":[{\"type\":\"whatsapp_business_management\",\"call_count\":1,\"total_cputime\":1,\"total_time\":1,\"estimated_time_to_regain_access\":0}]}",
+     "waba": null
+    }
+   },
+   "by": "SMX chat",
+   "at": "2026-11-19T08:43:05.731Z"
+  }
+ ]
+}

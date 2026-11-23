@@ -1,0 +1,16 @@
+{
+ "op": "yt_check",
+ "ran_at": "2026-11-17T09:58:19.688277Z",
+ "result": {
+  "auth_error": {
+   "error": "HTTP 400",
+   "body": "{\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Bad Request\"\n}"
+  },
+  "diag": {
+   "refresh_token_looks_valid": false,
+   "refresh_token_len": 73,
+   "has_whitespace": false,
+   "client_id_project_prefix": "579857920147"
+  }
+ }
+}

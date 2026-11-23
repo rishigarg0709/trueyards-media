@@ -1,0 +1,79 @@
+{
+ "checked_at": "2026-11-23 08:26",
+ "checks": [
+  {
+   "id": "gemini",
+   "name": "Gemini images",
+   "unit": "INR",
+   "link": "https://ai.studio/projects",
+   "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
+   "status": "ok",
+   "left": 1315,
+   "burn_per_day": 300,
+   "runway_days": 4.4,
+   "detail": "About INR 1315 left of the INR 2000 top-up on 2026-11-18",
+   "spent_today": 0
+  },
+  {
+   "id": "meta",
+   "name": "Meta ad account (prepaid)",
+   "unit": "INR",
+   "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
+   "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
+   "status": "ok",
+   "left": 6375,
+   "burn_per_day": 1487,
+   "runway_days": 4.3,
+   "detail": "About INR 6375 left, spending about INR 1487 a day"
+  },
+  {
+   "id": "whatsapp",
+   "name": "WhatsApp wallet (autopilot, broadcasts, alerts)",
+   "unit": "INR",
+   "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
+   "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
+   "status": "ok",
+   "left": 4411,
+   "burn_per_day": 1005,
+   "runway_days": 4.4,
+   "detail": "About INR 4411 left at INR 1005 a day"
+  },
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs voice and music",
+   "unit": "credits",
+   "link": "https://elevenlabs.io/app/subscription",
+   "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
+   "status": "ok",
+   "left": 100480,
+   "burn_per_day": 5000,
+   "runway_days": 20.1,
+   "detail": "100,480 credits left, resets 2026-12-16 11:59 IST"
+  },
+  {
+   "id": "apify",
+   "name": "Apify (trend scan)",
+   "unit": "USD",
+   "link": "https://console.apify.com/billing",
+   "action": "Upgrade the Apify plan or skip the comment mining in the weekly scan until the month resets",
+   "status": "ok",
+   "left": 1.61,
+   "burn_per_day": null,
+   "runway_days": null,
+   "detail": "USD 3.39 used of USD 5.00 this month"
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare free images (backup)",
+   "unit": "neurons per day",
+   "link": "https://dash.cloudflare.com",
+   "action": "Nothing to pay: it resets at 05:30 IST. Upgrade to Workers Paid only if the backup is needed every day",
+   "status": "ok",
+   "left": null,
+   "burn_per_day": null,
+   "runway_days": null,
+   "detail": "Free allowance available"
+  }
+ ],
+ "alerted": {}
+}

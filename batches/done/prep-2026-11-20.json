@@ -1,0 +1,69 @@
+{
+ "batch": "batches/cenw2ih3y23xfegkc4753fuezp0vil95j4cc",
+ "name": "prep-2026-11-20",
+ "model": "gemini-3.1-flash-image",
+ "submitted": "2026-11-19T16:54Z",
+ "images": [
+  {
+   "name": "2026-11-20-midday-2",
+   "prompt": "Photorealistic interior of a tiny subdivided flat in an old Hong Kong building, about 10 square metres: a single bed fills most of the floor, a two-ring stove and a small sink within arm's reach of the bed, a narrow toilet door, shelves up to the ceiling, clothes on hangers along one wall, one small window letting in soft daylight, clean and tidy, wide-angle view from the doorway. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-midday-3",
+   "prompt": "Photorealistic architectural scale model on a white table, seen from above at an angle: one old Hong Kong apartment of about 50 square metres divided by thin white partition walls into six tiny rooms, each room with a miniature single bed and a tiny shelf, a narrow shared corridor down the middle, soft studio daylight, crisp miniature detail. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-midday-4",
+   "prompt": "Photorealistic aerial photograph of Hong Kong Island and Kowloon seen from high above: steep green forested mountains and country park ridges fill most of the frame, while dense rows of tall residential towers are squeezed into a thin strip along the harbour shore at the bottom, clear bright day, blue water. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-midday-5",
+   "prompt": "Photorealistic interior of a small but legal rented room in Hong Kong after renovation, about 8 square metres: freshly painted white walls, one clear window with daylight, a single bed, a compact kitchen counter, a separate small toilet with a door and an exhaust fan, a ceiling about 2.3 metres high, tidy and bright, wide-angle view from the doorway. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-evening-2",
+   "prompt": "Photorealistic drone photograph over a Kerala village road in bright daylight: a long row of big modern two- and three-storey houses with colourful walls and tiled roofs among dense coconut palms, most windows shuttered, empty driveways with no cars, swept courtyards, clear blue sky, a village temple or church roof in the distance. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-evening-3",
+   "prompt": "Photorealistic interior of a large empty Kerala living room in bright daylight: sofas, dining table and chairs covered with white dust sheets, polished granite floor, tall wooden windows half open letting in sunbeams, a teak staircase in the background, calm and clean, no photographs on the walls. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-evening-4",
+   "prompt": "Photorealistic still life on a polished teak table by a front door: a blank passport cover with no writing, a blank boarding pass with no text, a bunch of brass house keys and a rolled-up hand towel, a packed hard-shell suitcase standing beside the table, bright morning window light. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-evening-5",
+   "prompt": "Photorealistic still life on an office desk in bright daylight: a blank official file folder tied with red tape, a heavy brass padlock with its key, a rubber stamp and an ink pad, a fountain pen, nothing written anywhere. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null,
+ "saved": [
+  "2026-11-20-midday-2",
+  "2026-11-20-midday-3",
+  "2026-11-20-midday-4",
+  "2026-11-20-midday-5",
+  "2026-11-20-evening-2",
+  "2026-11-20-evening-3",
+  "2026-11-20-evening-4",
+  "2026-11-20-evening-5"
+ ],
+ "missing": [],
+ "finished": "2026-11-19T17:19Z"
+}

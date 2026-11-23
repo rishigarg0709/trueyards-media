@@ -1,0 +1,119 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-21T11:46:52.970557Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {
+   "L": {
+    "result": {
+     "id": "120255721015440547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0
+    },
+    "earlier_errors": []
+   },
+   "W": {
+    "result": {
+     "id": "120255721016990547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0
+    },
+    "earlier_errors": []
+   }
+  },
+  "ads": {
+   "M1-V1 video soft piano": {
+    "ad": {
+     "id": "120255721015330547"
+    },
+    "creative_id": "2395434187955117",
+    "video_id": "1827625555107649",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "L-1 invite feed": {
+    "ad": {
+     "id": "120255721016100547"
+    },
+    "creative_id": "1137814975508567",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "L-2 see FIT in person feed": {
+    "ad": {
+     "id": "120255721016440547"
+    },
+    "creative_id": "1076992065363783",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "L-6 square bigger title and date": {
+    "ad": {
+     "id": "120255721016860547"
+    },
+    "creative_id": "2319901225473946",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "W-1 invite feed": {
+    "ad": {
+     "id": "120255721017490547"
+    },
+    "creative_id": "1137814975508567",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "W-2 see FIT in person feed": {
+    "ad": {
+     "id": "120255721017760547"
+    },
+    "creative_id": "1076992065363783",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "W-6 square bigger title and date": {
+    "ad": {
+     "id": "120255721018370547"
+    },
+    "creative_id": "2319901225473946",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "campaign": {
+   "id": "120255720333370547",
+   "name": "FIT Business Meet 29 Nov",
+   "status": "ACTIVE",
+   "effective_status": "ACTIVE",
+   "spend_cap": "500000",
+   "created_time": "2026-11-21T16:21:14+0530"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}

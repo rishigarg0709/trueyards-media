@@ -1,0 +1,215 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0C0C0D}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0C0C0D;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0C0C0D}
+.sc>*{position:absolute}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 96px/1.02 IN;letter-spacing:-.03em;text-transform:uppercase}
+.M{font:900 68px/1.06 IN;letter-spacing:-.025em;text-transform:uppercase}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.c{color:#E63B2E}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(12,12,13,.9);color:#fff;font-family:IN}
+.hl{background:#E63B2E;color:#FFFFFF;padding:0 .12em;border-radius:6px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.6)}
+.tag{display:inline-block;background:#E63B2E;color:#FFFFFF;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0C0C0D;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #E63B2E;color:#fff;font:900 64px/1 IN;letter-spacing:-.01em;text-transform:uppercase;padding:16px 28px 12px;border-radius:8px;background:rgba(230,59,46,.85);white-space:nowrap}
+.blk{width:280px;height:120px;border:5px solid #fff;border-radius:10px;background:rgba(12,12,13,.55);display:flex;align-items:center;justify-content:center;font:900 46px/1 IN;text-transform:uppercase;letter-spacing:-.01em}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.66)}
+#flash{position:absolute;inset:0;background:#FFFFFF;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(0,0,0,.34) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for real estate<br>news, explained</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FFB4AC">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=false;
+const WS=[["Paying", 0.0, 0.278], ["EMIs...", 0.394, 1.22], ["for", 1.463, 1.568], ["a", 1.603, 1.637], ["flat", 1.693, 1.916], ["that", 1.93, 1.985], ["never", 2.02, 2.194], ["came?", 2.25, 2.611], ["On", 2.855, 2.866], ["Thursday,", 2.92, 3.423], ["the", 3.44, 3.492], ["Supreme", 3.544, 3.91], ["Court", 3.968, 4.257], ["stepped", 4.292, 4.536], ["in.", 4.605, 4.814], ["Twice.", 5.057, 5.477], ["First,", 5.721, 6.051], ["Sonipat.", 6.173, 6.756], ["Buyers", 6.999, 7.224], ["signed", 7.254, 7.433], ["a", 7.503, 7.572], ["three-way", 7.763, 7.99], ["loan", 8.031, 8.198], ["deal:", 8.254, 8.636], ["buyer,", 8.88, 9.228], ["builder,", 9.309, 9.656], ["bank.", 9.726, 10.074], ["The", 10.143, 10.352], ["project", 10.526, 10.77], ["stalled.", 10.822, 11.256], ["The", 11.326, 11.535], ["builder", 11.587, 11.952], ["went", 12.008, 12.23], ["into", 12.258, 12.37], ["insolvency.", 12.456, 13.178], ["And", 13.422, 13.63], ["the", 13.648, 13.7], ["bank", 13.783, 14.117], ["came", 14.187, 14.465], ["after", 14.511, 14.743], ["the", 14.761, 14.813], ["buyers.", 14.883, 15.439], ["The", 15.561, 15.926], ["court", 15.972, 16.204], ["said:", 16.26, 16.552], ["no", 16.796, 17.033], ["coercive", 17.103, 17.52], ["recovery...", 17.574, 18.096], ["until", 18.25, 18.424], ["a", 18.494, 18.563], ["court", 18.598, 18.772], ["checks", 18.832, 19.19], ["two", 19.242, 19.398], ["things.", 19.468, 20.007], ["Did", 20.094, 20.303], ["the", 20.32, 20.372], ["buyers", 20.432, 20.79], ["really", 20.839, 21.137], ["default?", 21.198, 21.694], ["And", 21.833, 22.25], ["did", 22.285, 22.39], ["the", 22.407, 22.459], ["bank", 22.529, 22.807], ["pay", 22.876, 23.085], ["the", 23.103, 23.155], ["builder", 23.198, 23.503], ["the", 23.555, 23.711], ["way", 23.746, 23.85], ["the", 23.868, 23.92], ["deal", 23.976, 24.198], ["said?", 24.268, 24.633], ["Because", 24.876, 25.137], ["in", 25.183, 25.276], ["a", 25.346, 25.416], ["three-way", 25.45, 25.763], ["loan,", 25.847, 26.29], ["the", 26.355, 26.459], ["money", 26.494, 26.668], ["is", 26.737, 26.876], ["meant", 26.9, 27.016], ["to", 27.062, 27.155], ["go", 27.201, 27.294], ["in", 27.363, 27.503], ["stages...", 27.602, 28.306], ["as", 28.43, 28.476], ["the", 28.511, 28.616], ["building", 28.647, 28.894], ["rises.", 28.963, 29.52], ["Not", 29.624, 29.937], ["all", 29.972, 30.076], ["at", 30.123, 30.216], ["once.", 30.313, 30.772], ["Same", 31.016, 31.202], ["day,", 31.271, 31.619], ["Bengaluru.", 31.738, 32.245], ["About", 32.489, 32.674], ["four", 32.716, 32.883], ["thousand", 32.921, 33.23], ["five", 33.3, 33.578], ["hundred", 33.604, 33.787], ["buyers,", 33.856, 34.343], ["who", 34.413, 34.622], ["had", 34.656, 34.761], ["paid", 34.803, 34.97], ["about", 35.004, 35.178], ["ninety-five", 35.238, 35.725], ["percent", 35.778, 36.083], ["of", 36.129, 36.222], ["the", 36.239, 36.291], ["price.", 36.387, 36.839], ["The", 36.952, 37.265], ["order:", 37.323, 37.683], ["no", 37.926, 38.163], ["coercive", 38.233, 38.72], ["measures...", 38.774, 39.304], ["till", 39.443, 39.555], ["they", 39.583, 39.694], ["get", 39.729, 39.833], ["their", 39.856, 39.972], ["flats.", 40.065, 40.598], ["But", 40.755, 41.224], ["the", 41.259, 41.363], ["court", 41.41, 41.642], ["also", 41.725, 42.059], ["warned:", 42.119, 42.546], ["not", 42.79, 42.963], ["every", 43.022, 43.311], ["failed", 43.351, 43.59], ["project", 43.798, 44.076], ["belongs", 44.216, 44.494], ["in", 44.517, 44.563], ["the", 44.581, 44.633], ["Supreme", 44.676, 44.981], ["Court.", 45.039, 45.387], ["Go", 45.63, 45.697], ["to", 45.743, 45.836], ["the", 45.854, 45.906], ["High", 45.948, 46.115], ["Court", 46.173, 46.463], ["or", 46.509, 46.602], ["the", 46.619, 46.671], ["tribunal", 46.725, 47.158], ["first.", 47.251, 47.738], ["So", 47.982, 48.069], ["when", 48.11, 48.277], ["a", 48.312, 48.347], ["project", 48.399, 48.764], ["stalls...", 48.854, 49.454], ["who", 49.697, 49.802], ["should", 49.831, 50.01], ["carry", 50.056, 50.289], ["the", 50.306, 50.358], ["risk?", 50.442, 50.876], ["The", 51.002, 51.263], ["buyer,", 51.332, 51.75], ["or", 51.912, 52.236], ["the", 52.254, 52.306], ["bank?", 52.376, 52.723]];
+const BEATS=[0.139, 0.766, 1.393, 2.02, 2.647, 3.274, 3.878, 4.505, 5.131, 5.758, 6.385, 7.012, 7.639, 8.266, 8.893, 9.52, 10.147, 10.751, 11.378, 12.005, 12.632, 13.258, 13.885, 14.512, 15.139, 15.766, 16.393, 17.02, 17.647, 18.274, 18.901, 19.505, 20.132, 20.759, 21.385, 22.012, 22.639, 23.266, 23.893, 24.52, 25.147, 25.774, 26.401, 27.005, 27.655, 28.282, 28.909, 29.512, 30.139, 30.766, 31.393, 32.02, 32.647, 33.228, 33.855, 34.481, 35.108, 35.735, 36.362, 36.966, 37.593, 38.22, 38.847, 39.474, 40.101, 40.728, 41.355, 41.982, 42.608, 43.235, 43.862, 44.489, 45.116, 45.72, 46.347, 46.974, 47.601, 48.228, 48.855, 49.482, 50.109, 50.735, 51.362, 51.966, 52.593, 53.22, 53.847, 54.474, 55.101, 55.728, 56.355, 56.982, 57.609, 58.236, 58.862];
+const S=document.getElementById('s');
+const CO='#E63B2E',IV='#FFFFFF';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+const HOOKEV=w(6);const RD='#E63B2E',NV='#0C0C0D';
+// ================= SCENES (look A Newsroom Red, bright daylight images, red label bars only) =================
+const GTL='linear-gradient(180deg,rgba(12,12,13,.62) 0%,rgba(12,12,13,.22) 10%,rgba(12,12,13,0) 18%';
+const GL=(a)=>GTL+`,rgba(12,12,13,0) ${a}%,rgba(12,12,13,.6) ${a+14}%,rgba(12,12,13,.84) ${a+26}%,rgba(12,12,13,.9) 100%)`;
+const inr=n=>n.toLocaleString('en-IN');
+const lit=(e,t,a)=>{const q=cl((t-a)/.1);e.style.background=`rgba(230,59,46,${q})`;e.style.textShadow=q>.5?'none':''};
+// hook layout, reused by the loop scene so the last frame flows into frame 0
+const hookFrame=(sc)=>{const b=box(sc,'hero',540,700,'50% 40%');b.im.style.filter='brightness(1.12) saturate(1.06)';
+ mk(sc,'sh','background:'+GTL+',rgba(12,12,13,0) 52%,rgba(12,12,13,.45) 62%,rgba(12,12,13,.66) 74%,rgba(12,12,13,.72) 100%)');
+ const k=mk(sc,'K ts','left:72px;top:1040px;color:#FFFFFF','<span class="c">●</span>&nbsp; Under-construction flat');
+ const h=mk(sc,'H ts','left:70px;top:1092px;width:960px;font-size:120px','EMI: on.');
+ const n=mk(sc,'H ts','left:70px;top:1222px;width:960px;font-size:120px;transform-origin:0 50%','Flat: <span id="nm" style="padding:0 .1em;border-radius:8px">none.</span>');
+ const nm=n.querySelector('#nm');return {b,n,nm,k,h}};
+// 1. HOOK: stalled tower in bright sun. "none." gets the red bar on "never"
+add(0,sc=>{const f=hookFrame(sc);
+ return t=>{const sk=shake(t,HOOKEV,10);
+  f.b.style.transform=`translate(${sk}px,${sk*.4}px) scale(${1.03+.06*eo(t/2.9)})`;
+  lit(f.nm,t,HOOKEV);f.n.style.transform=`scale(${1+.08*(t>=HOOKEV?Math.exp(-(t-HOOKEV)/.18):0)})`}});
+// 2. Supreme Court, real photo. "On Thursday, the Supreme Court stepped in. Twice."
+add(w(8)-.08,sc=>{const b=frm(sc,'sc',230,840,'50% 50%',540,520);
+ mk(sc,'sh','background:linear-gradient(180deg,#0C0C0D 0%,#0C0C0D 11%,rgba(12,12,13,0) 17%,rgba(12,12,13,0) 49%,#0C0C0D 56%,#0C0C0D 100%)');
+ const k=mk(sc,'tag','left:72px;top:1090px','Supreme Court · 19 Nov 2026');
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px',[['Stepped',w(13)],['in.',w(14)]]);
+ const s=mk(sc,'stamp','left:70px;top:1300px','Twice.');
+ const b0=w(8)-.08,tS=w(15)-b0;
+ return t=>{b.im.style.transform=`scale(${1.0+.06*eio(t/2.9)})`;fade(k,t,.05,.2,10);rv(h,t);if(t>=tS)slam(s,t,tS,1.6,-3);else s.style.opacity=0}},true);
+// 3. Sonipat: the three-way loan deal over the model building
+add(w(16)-.08,sc=>{const b=box(sc,'model',540,620,'50% 40%');
+ mk(sc,'sh','background:'+GL(40));
+ const k=T(sc,'K ts','left:72px;top:960px;color:#FFFFFF',[['●',w(16),'c'],['Case',w(16)],['1:',w(16)],['Sonipat,',w(17)],['Haryana',w(17)]]);
+ const h=T(sc,'M ts','left:70px;top:1010px;width:960px',[['A',w(20)],['three-way',w(21),'hl'],['loan',w(22)],['deal',w(23)]]);
+ const bl=[['Buyer',w(24)],['Builder',w(25)],['Bank',w(26)]].map(([s,tt],i)=>{const e=mk(sc,'blk ts',`left:${70+i*320-(i==1?20:0)}px;top:1190px;width:${i==1?320:280}px;opacity:0`,s);e.tt=tt;return e});
+ const b0=w(16)-.08;
+ return t=>{b.style.transform=`scale(${1.08-.05*eio(t/4.4)})`;rv(k,t);rv(h,t);
+  bl.forEach((e,i)=>{const a=e.tt-b0;const p=eo((t-a)/.22);e.style.opacity=cl((t-a)/.08);e.style.transform=`translateX(${(i-1)*-120*(1-p)}px) scale(${1.25-.25*p})`;
+   e.style.borderColor=t>w(26)-b0+.15?RD:'#fff'})}},true);
+// 4. Rebar close on the stalled tower. "Project stalled. Builder in insolvency."
+add(w(27)-.08,sc=>{const b=box(sc,'hero',300,520,'50% 40%');
+ mk(sc,'sh','background:'+GL(46));
+ const h=T(sc,'H ts','left:70px;top:1110px;width:960px',[['Project',w(28)],['stalled.',w(29)]]);
+ const h2=T(sc,'M ts','left:70px;top:1330px;width:960px',[['Builder',w(31)],['in',w(32)],['insolvency.',w(34),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.9) translateY(${40-60*eio(t/3.3)}px)`;rv(h,t);rv(h2,t)}},true);
+// 5. Empty flat, key on the floor. "And the bank came after the buyers."
+add(w(35)-.08,sc=>{const b=box(sc,'flat',560,1250,'50% 50%');
+ mk(sc,'sh','background:'+GL(46));
+ const h=T(sc,'H ts','left:70px;top:1110px;width:960px',[['The',w(36)],['bank',w(37)],['\n'],['came',w(38)],['after',w(39)],['\n'],['the',w(40)],['buyers.',w(41),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.0+.06*eio(t/2.1)})`;rv(h,t)}},true);
+// 6. Gavel and house. "The court said: no coercive recovery... until a court checks two things."
+add(w(42)-.08,sc=>{const b=box(sc,'gavel',620,820,'50% 50%');
+ mk(sc,'sh','background:'+GL(44));
+ const k=T(sc,'K ts','left:72px;top:1020px;color:#FFFFFF',[['●',w(42),'c'],['The',w(42)],['court',w(43)],['said',w(44)]]);
+ const h=T(sc,'H ts','left:70px;top:1070px;width:960px',[['No',w(45),'hl',1],['coercive',w(46)],['\n'],['recovery',w(47)]]);
+ const h2=T(sc,'M ts','left:70px;top:1290px;width:960px',[['until',w(48)],['a',w(49)],['court',w(50)],['checks',w(51),'c'],['two',w(52),'c'],['things.',w(53),'c']]);
+ return t=>{b.style.transform=`scale(${1.04+.07*eio(t/4.4)})`;rv(k,t);rv(h,t);rv(h2,t)}},true);
+// 7. House model close. "1. Did the buyers really default?"
+add(w(54)-.08,sc=>{const b=box(sc,'gavel',300,1150,'50% 50%');
+ mk(sc,'sh','background:'+GL(44));
+ const n=mk(sc,'ts','left:62px;top:1010px;font:900 170px/1 IN;color:#E63B2E;opacity:0','1');
+ const h=T(sc,'H ts','left:70px;top:1190px;width:960px',[['Did',w(54)],['buyers',w(56)],['\n'],['really',w(57)],['default?',w(58),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.75+.06*eio(t/1.8)})`;slam(n,t,.02,1.6,0);rv(h,t)}},true);
+// 8. Coin stacks beside the model. "2. Did the bank pay the builder the way the deal said?"
+add(w(59)-.08,sc=>{const b=box(sc,'model',800,1350,'50% 50%');
+ mk(sc,'sh','background:'+GL(42));
+ const n=mk(sc,'ts','left:62px;top:960px;font:900 170px/1 IN;color:#E63B2E;opacity:0','2');
+ const h=T(sc,'H ts','left:70px;top:1140px;width:960px',[['Did',w(60)],['the',w(61)],['bank',w(62),'hl',1],['\n'],['pay',w(63)],['as',w(66)],['agreed?',w(69)]]);
+ return t=>{b.style.transform=`scale(${1.7-.06*eio(t/3)}) translateX(${-8*t}px)`;slam(n,t,w(60)-w(59),1.6,0);if(t<w(60)-w(59))n.style.opacity=0;rv(h,t)}},true);
+// 9. Tell a friend: the loan goes in stages as the building rises (floor ticks climb the model)
+add(w(71)-.08,sc=>{const b=box(sc,'model',540,700,'50% 40%');
+ mk(sc,'sh','background:'+GL(44));
+ const tg=mk(sc,'tag','left:72px;top:1040px','Tell a friend');
+ const h=T(sc,'M ts','left:70px;top:1115px;width:960px',[['Your',w(73)],['loan',w(75)],['is',w(78)],['paid',w(79)],['\n'],['in',w(82)],['stages',w(83),'hl',1]]);
+ const h2=T(sc,'M ts','left:70px;top:1275px;width:960px;color:#fff',[['as',w(84)],['the',w(85)],['building',w(86)],['rises.',w(87),'c']]);
+ const st=[0,1,2,3,4].map(i=>{const e=mk(sc,'',`left:880px;top:${880-i*150}px;width:130px;height:12px;background:#E63B2E;border-radius:3px;opacity:0;box-shadow:0 2px 12px rgba(0,0,0,.5)`);const l=mk(sc,'K ts',`left:880px;top:${840-i*150}px;color:#fff;opacity:0;letter-spacing:.12em`,'₹ '+(i+1));return [e,l]});
+ const b0=w(71)-.08,t0=w(83)-b0,t1=w(87)-b0+.3;
+ return t=>{b.style.transform=`scale(1.18) translateY(${30-90*eio(t/4.6)}px)`;fade(tg,t,.05,.2,10);rv(h,t);rv(h2,t);
+  st.forEach(([e,l],i)=>{const a=t0+(t1-t0)*i/4;const p=eo((t-a)/.2);e.style.opacity=l.style.opacity=cl((t-a)/.1);e.style.width=(130*p)+'px'})}},true);
+// 10. Top floor of the stalled tower. "Not all at once."
+add(w(88)-.08,sc=>{const b=box(sc,'hero',520,330,'50% 40%');
+ mk(sc,'sh','background:'+GL(44));
+ const h=T(sc,'H ts','left:70px;top:1150px;width:960px;font-size:118px',[['Not',w(88)],['all',w(89)],['\n'],['at',w(90)],['once.',w(91),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.6-.08*eio(t/1.4)})`;rv(h,t)}},true);
+// 11. Bengaluru: two bare shells and one finished tower. 4,500 counter
+add(w(92)-.08,sc=>{const b=frm(sc,'towers',0,1500,'50% 22%',540,500);
+ mk(sc,'sh','background:'+GL(42));
+ const k=T(sc,'K ts','left:72px;top:1020px;color:#FFFFFF',[['●',w(92),'c'],['Same',w(92)],['day:',w(93)],['Bengaluru',w(94)]]);
+ const n=mk(sc,'ts','left:58px;top:1068px;font:900 210px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0','~0');
+ const h=T(sc,'M ts','left:70px;top:1300px;width:960px',[['buyers',w(100),'hl',1]]);
+ const b0=w(92)-.08,t0=w(95)-b0,t1=w(99)-b0;
+ return t=>{b.im.style.transform=`scale(${1.02+.07*eio(t/3.4)})`;rv(k,t);n.style.opacity=cl((t-t0+.1)/.15);const p=eo((t-t0)/(t1-t0+.1));n.textContent='~'+inr(Math.round(4500*p/50)*50);n.style.color=p>=1?RD:'#fff';rv(h,t)}},true);
+// 12. Bare shells close. "~95% paid" with a bar filling
+add(w(101)-.08,sc=>{const b=frm(sc,'towers',0,1500,'30% 25%',300,400);
+ mk(sc,'sh','background:'+GL(42));
+ const k=T(sc,'K ts','left:72px;top:1020px;color:#FFFFFF',[['●',w(101),'c'],['They',w(101)],['had',w(102)],['paid',w(103)]]);
+ const n=mk(sc,'ts','left:58px;top:1068px;font:900 210px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0','~0%');
+ const bg=mk(sc,'','left:72px;top:1310px;width:936px;height:34px;border:3px solid rgba(255,255,255,.85);border-radius:6px');
+ const bf=mk(sc,'','left:72px;top:1310px;width:0;height:34px;background:#E63B2E;border-radius:6px');
+ const h=T(sc,'M ts','left:70px;top:1375px;width:960px;font-size:56px',[['of',w(107)],['the',w(108)],['price.',w(109)]]);
+ const b0=w(101)-.08,t0=w(104)-b0;
+ return t=>{b.im.style.transform=`scale(${1.5+.06*eio(t/2.6)})`;rv(k,t);n.style.opacity=cl((t-t0+.1)/.15);const p=eo((t-t0)/.7);n.textContent='~'+Math.round(95*p)+'%';n.style.color=p>=1?RD:'#fff';bf.style.width=(936*.95*p)+'px';rv(h,t)}},true);
+// 13. Real Bengaluru homes. "The order: no coercive measures... till they get their flats."
+add(w(110)-.08,sc=>{const b=frm(sc,'blr',0,1330,'50% 62%',540,700);
+ mk(sc,'sh','background:'+GL(42));
+ const k=T(sc,'K ts','left:72px;top:1020px;color:#FFFFFF',[['●',w(110),'c'],['The',w(110)],['order',w(111)]]);
+ const h=T(sc,'H ts','left:70px;top:1070px;width:960px',[['No',w(112),'hl',1],['coercive',w(113)],['\n'],['measures',w(114)]]);
+ const h2=T(sc,'M ts','left:70px;top:1290px;width:960px',[['till',w(115)],['they',w(116)],['get',w(117)],['their',w(118)],['flats.',w(119),'c']]);
+ return t=>{b.im.style.transform=`scale(${1.06-.05*eio(t/3.2)}) translateX(${-5*t}px)`;rv(k,t);rv(h,t);rv(h2,t)}},true);
+// 14. Supreme Court again, closer. "Not every failed project belongs in the Supreme Court."
+add(w(120)-.08,sc=>{const b=frm(sc,'sc2',230,840,'50% 50%',300,420);
+ mk(sc,'sh','background:linear-gradient(180deg,#0C0C0D 0%,#0C0C0D 11%,rgba(12,12,13,0) 17%,rgba(12,12,13,0) 49%,#0C0C0D 56%,#0C0C0D 100%)');
+ const k=T(sc,'K ts','left:72px;top:1090px;color:#FFFFFF',[['●',w(120),'c'],['But',w(120)],['the',w(121)],['court',w(122)],['also',w(123)],['warned',w(124)]]);
+ const h=T(sc,'M ts','left:70px;top:1140px;width:960px;font-size:72px',[['Not',w(125)],['every',w(126)],['failed',w(127),'hl',1],['\n'],['project',w(128)],['belongs',w(129)],['\n'],['in',w(130)],['the',w(131)],['Supreme',w(132)],['Court.',w(133)]]);
+ return t=>{b.im.style.transform=`scale(${1.06-.05*eio(t/2.9)}) translateX(${4*t}px)`;rv(k,t);rv(h,t)}},true);
+// 15. Gavel wide. "Go to the High Court or the tribunal first."
+add(w(134)-.08,sc=>{const b=box(sc,'gavel',800,760,'50% 50%');
+ mk(sc,'sh','background:'+GL(44));
+ const k=T(sc,'K ts','left:72px;top:1060px;color:#FFFFFF',[['●',w(134),'c'],['Go',w(134)],['to',w(135)]]);
+ const h=T(sc,'H ts','left:70px;top:1110px;width:960px',[['High',w(137)],['Court',w(138)],['\n'],['or',w(139)],['NCLT',w(141),'hl',1],['\n'],['first.',w(142)]]);
+ return t=>{b.style.transform=`scale(${1.3-.07*eio(t/2.4)})`;rv(k,t);rv(h,t)}},true);
+// 16. Split: key on the empty floor (top) vs coin stacks (bottom). The question
+add(w(143)-.08,sc=>{const tp=frm(sc,'flat',0,950,'50% 72%',540,500);const bt=frm(sc,'model',970,950,'50% 78%',540,450);
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(12,12,13,.6) 0%,rgba(12,12,13,0) 14%,rgba(12,12,13,0) 60%,rgba(12,12,13,.72) 72%,rgba(12,12,13,.86) 100%)');
+ const h=T(sc,'M ts','left:70px;top:330px;width:960px;font-size:76px',[['Who',w(148)],['carries',w(150)],['\n'],['the',w(151)],['risk?',w(152),'hl',1]]);
+ const t1=mk(sc,'stamp','left:70px;top:760px;background:rgba(12,12,13,.72);border-color:#fff','The buyer?');
+ const t2=mk(sc,'stamp','left:70px;top:1030px','The bank?');
+ const b0=w(143)-.08,tA=w(154)-b0,tB=w(157)-b0;
+ return t=>{tp.im.style.transform=`scale(${1.05+.04*eo(t/5)})`;bt.im.style.transform=`scale(${1.09-.05*eo(t/5)})`;rv(h,t);
+  if(t>=tA)slam(t1,t,tA,1.5,-3);else t1.style.opacity=0;if(t>=tB)slam(t2,t,tB,1.5,2);else t2.style.opacity=0}},true);
+// 17. Loop: back to the hook frame (bar already lit), follow card on top for the last 1.75 s
+add(w(157)+.55,sc=>{const f=hookFrame(sc);f.nm.style.background=RD;f.nm.style.textShadow='none';
+ return t=>{f.b.style.transform=`scale(${1.1-.07*eo(t/1.4)})`}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL],[w(8)-.08,'Supreme Court of India, orders of 19 Nov 2026 (Business Standard, Bar and Bench, PTI). Photo: Pinakpani / Wikimedia Commons, CC BY-SA 4.0.'],[w(16)-.08,AIL+' Sonipat order: Business Standard, Bar and Bench, 19 Nov 2026. Lender in the Sonipat case: SBI.'],[w(27)-.08,AIL],[w(42)-.08,AIL+' Recovery paused until the commercial court at Saket decides.'],[w(71)-.08,AIL+' Stage-wise release as per the tripartite agreement in this case.'],[w(88)-.08,AIL],[w(92)-.08,AIL+' Buyer count and payment share are the petitioners\' figures (PTI, 19 Nov 2026).'],[w(110)-.08,'Bengaluru. Photo: Julius Zetzsche / Unsplash. PTI via ETV Bharat and Verdictum, 19 Nov 2026.'],[w(120)-.08,'Supreme Court of India. Photo: Pinakpani / Wikimedia Commons, CC BY-SA 4.0.'],[w(134)-.08,AIL+' NCLT: National Company Law Tribunal.'],[w(143)-.08,AIL+' Education only, not legal or financial advice.'],[w(157)+.55,AIL]];
+// lazy images: only scenes near t keep their photos loaded (keeps the 4K sources fast to render)
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+const _setT=null;
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,w(15),w(45),w(83),w(105),w(152)].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.45:.3)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;
+};
+</script></body></html>
+

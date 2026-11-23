@@ -1,0 +1,25 @@
+{
+ "op": "launch",
+ "ran_at": "2026-11-17T18:49:21.544490Z",
+ "result": {
+  "ads": [
+   {
+    "success": true,
+    "name": "P9 reel 3 things: planned industrial plot"
+   },
+   {
+    "success": true,
+    "name": "P8 reel voiceover Hinglish: mil gaya"
+   }
+  ],
+  "adsets": [
+   {
+    "success": true,
+    "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts"
+   }
+  ],
+  "campaign": {
+   "success": true
+  }
+ }
+}

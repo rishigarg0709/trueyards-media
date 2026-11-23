@@ -1,0 +1,37 @@
+name: balances
+# Balance watch: every 2 hours and right after every image job. Alerts Rishi through the bot when anything is low or out.
+on:
+  schedule:
+    - cron: "23 */2 * * *"
+  workflow_run:
+    workflows: [cloud-media, batch-poll, generate-images, meta-ops, social-ops, ads-ops]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: balances
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 30 }
+      - name: Use the latest main
+        run: git pull --rebase -q origin main || true
+      - name: Check balances
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+          SOFT: ${{ (github.event_name == 'workflow_run' && contains(fromJSON('["meta-ops","social-ops","ads-ops"]'), github.event.workflow_run.name)) && '1' || '0' }}
+        run: python3 scripts/balances.py
+      - name: Commit when something changed
+        run: |
+          if [ -f ops/.unchanged ]; then rm ops/.unchanged; git checkout -- ops 2>/dev/null || true; echo "no change"; exit 0; fi
+          git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
+          git add ops/balances.json ops/BALANCES.md
+          git commit -m "balances" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

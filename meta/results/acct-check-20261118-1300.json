@@ -1,0 +1,134 @@
+{
+ "op": "test",
+ "ran_at": "2026-11-18T07:32:06.796904Z",
+ "result": {
+  "me": {
+   "id": "122103609045547094",
+   "name": "trueyards-bot"
+  },
+  "permissions": {
+   "data": [
+    {
+     "permission": "read_insights",
+     "status": "granted"
+    },
+    {
+     "permission": "catalog_management",
+     "status": "granted"
+    },
+    {
+     "permission": "threads_business_basic",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_show_list",
+     "status": "granted"
+    },
+    {
+     "permission": "ads_management",
+     "status": "granted"
+    },
+    {
+     "permission": "ads_read",
+     "status": "granted"
+    },
+    {
+     "permission": "business_management",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_basic",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_manage_comments",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_manage_insights",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_content_publish",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_manage_messages",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_read_engagement",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_metadata",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_read_user_content",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_ads",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_posts",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_engagement",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_shopping_tag_products",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_branded_content_brand",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_branded_content_ads_brand",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_manage_contents",
+     "status": "granted"
+    },
+    {
+     "permission": "facebook_branded_content_ads_brand",
+     "status": "granted"
+    },
+    {
+     "permission": "public_profile",
+     "status": "granted"
+    }
+   ]
+  },
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards",
+   "instagram_business_account": {
+    "id": "17841429830946947"
+   }
+  },
+  "ad_account": {
+   "id": "act_1101758352688996",
+   "currency": "INR",
+   "disable_reason": 0,
+   "spend_cap": "254237",
+   "account_status": 1,
+   "name": "TrueYards Ads",
+   "timezone_name": "Asia/Kolkata",
+   "amount_spent": "36648",
+   "balance": "36878"
+  },
+  "instagram": {
+   "id": "17841429830946947",
+   "followers_count": 409,
+   "media_count": 13,
+   "username": "trueyards.in"
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "op": "daily",
+ "ran_at": "2026-11-20T05:49:37.660688Z",
+ "result": {
+  "date": "2026-11-20",
+  "dry_run": false,
+  "actions": [],
+  "flags": [],
+  "campaign_status": "ACTIVE",
+  "spend_month_inr": 297.92,
+  "spend_yesterday_inr": 204.42,
+  "daily_budget_total_inr": 300.0,
+  "monthly_cap_inr": 15000,
+  "lead_data": "joined from the bot's lead records (per ad id)",
+  "lift": null,
+  "waves": 2,
+  "ads": [
+   {
+    "ad": "R1 poster: your commercial plot in Flower Valley",
+    "status": "ACTIVE",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 3.25,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 0.0,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "J1 poster: business location already alive",
+    "status": "ACTIVE",
+    "spend_yday": 204.42,
+    "conv_yday": 8,
+    "spend_life": 295.09,
+    "conv_life": 11,
+    "cpc_life": 27,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.753344,
+    "ctr_7d": 1.502146
+   }
+  ],
+  "meta_cost_per_chat": 27,
+  "tester": "waits for the weekly batch (Monday): edits reset Meta's learning"
+ }
+}

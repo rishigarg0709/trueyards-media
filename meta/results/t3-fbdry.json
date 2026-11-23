@@ -1,0 +1,12 @@
+{
+ "op": "fb_reel",
+ "ran_at": "2026-11-16T11:41:27.934042Z",
+ "result": {
+  "video_id": "2535972573480384",
+  "upload": {
+   "success": true,
+   "message": "Upload Successful. To check the status of the video, please follow the instructions listed at https://developers.facebook.com/docs/video-api/guides/reels-publishing#get-the-upload-status."
+  },
+  "note": "dry run, not published"
+ }
+}

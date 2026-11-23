@@ -1,0 +1,12 @@
+{
+ "op": "set_budget",
+ "ran_at": "2026-11-21T13:02:50.430797Z",
+ "result": {
+  "FIT Meet W - reached on WhatsApp (warm)": {
+   "success": true
+  },
+  "FIT Meet L - industry owners from our database": {
+   "success": true
+  }
+ }
+}

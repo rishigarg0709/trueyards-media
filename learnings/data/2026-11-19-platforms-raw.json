@@ -1,0 +1,369 @@
+{
+ "op": "platform_stats",
+ "ran_at": "2026-11-19T05:10:39.519431Z",
+ "result": {
+  "csv": "social/stats/2026-11-19-platforms.csv",
+  "ledger": {
+   "2026-11-16-aarav-pizza": {
+    "fb": "1161377287055094_122157044397349925",
+    "ig": "17969838036213337"
+   },
+   "2026-11-16-boldtype": {
+    "fb": "1161377287055094_122156988111349925",
+    "ig": "17919778947535616"
+   },
+   "2026-11-16-evening": {
+    "fb": "1448226957455937",
+    "ig": "18131037979847506"
+   },
+   "2026-11-17-carousel": {
+    "fb": "1161377287055094_122157230031349925",
+    "ig": "18196361215397123",
+    "threads": "18121356640785387",
+    "x": "2122659521772286162"
+   },
+   "2026-11-17-evening": {
+    "fb": "1232404849346612",
+    "ig": "18455422555132731",
+    "threads": "18132640645842465",
+    "x": "2122696475448660133",
+    "yt": "hUWDFtDTbH8"
+   },
+   "2026-11-17-midday": {
+    "fb": "1696686628913310",
+    "ig": "18470143825186866",
+    "threads": "18131344582846787",
+    "x": "2122599524707471699",
+    "yt": "ovA-AJaIHe0"
+   },
+   "2026-11-18-carousel": {
+    "fb": "1161377287055094_122157521799349925",
+    "ig": "18120271354823510",
+    "threads": "18110481428339849",
+    "x": "2123023810215756078"
+   },
+   "2026-11-18-evening": {
+    "fb": "1524383239744756",
+    "ig": "17995953015110577",
+    "threads": "18070668401789764",
+    "x": "2123064801471717786",
+    "yt": "jHS9fCc_Fa8"
+   },
+   "2026-11-18-midday": {
+    "fb": "2178058146129952",
+    "ig": "18153796516552988",
+    "threads": "17900018637458671",
+    "x": "2122960795067887925",
+    "yt": "UfJeb_Bizg0"
+   },
+   "2026-11-16-delhi": {
+    "threads": "17997462963112250",
+    "x": "2122631935981924490",
+    "yt": "XbfkwFvQwMc"
+   },
+   "2026-11-16-noida": {
+    "threads": "18125784509293403",
+    "x": "2122632219831505220",
+    "yt": "8hBDGb49q8A"
+   }
+  },
+  "rows": [
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "threads",
+    "id": "17997462963112250",
+    "views": 10,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "x",
+    "id": "2122631935981924490",
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-delhi",
+    "platform": "yt",
+    "id": "XbfkwFvQwMc",
+    "views": 53,
+    "likes": 2,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "threads",
+    "id": "18125784509293403",
+    "views": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "x",
+    "id": "2122632219831505220",
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-16-noida",
+    "platform": "yt",
+    "id": "8hBDGb49q8A",
+    "views": 728,
+    "likes": 11,
+    "comments": 3,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-carousel",
+    "platform": "threads",
+    "id": "18121356640785387",
+    "views": 174,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-carousel",
+    "platform": "x",
+    "id": "2122659521772286162",
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-evening",
+    "platform": "threads",
+    "id": "18132640645842465",
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-evening",
+    "platform": "x",
+    "id": "2122696475448660133",
+    "views": 3,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-evening",
+    "platform": "yt",
+    "id": "hUWDFtDTbH8",
+    "views": 5,
+    "likes": 0,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "threads",
+    "id": "18131344582846787",
+    "views": 15,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "x",
+    "id": "2122599524707471699",
+    "views": 8,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-17-midday",
+    "platform": "yt",
+    "id": "ovA-AJaIHe0",
+    "views": 89,
+    "likes": 1,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-carousel",
+    "platform": "threads",
+    "id": "18110481428339849",
+    "views": 7,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-carousel",
+    "platform": "x",
+    "id": "2123023810215756078",
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-evening",
+    "platform": "threads",
+    "id": "18070668401789764",
+    "views": 10,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-evening",
+    "platform": "x",
+    "id": "2123064801471717786",
+    "views": 2,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-evening",
+    "platform": "yt",
+    "id": "jHS9fCc_Fa8",
+    "views": 203,
+    "likes": 5,
+    "comments": 0,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-midday",
+    "platform": "threads",
+    "id": "17900018637458671",
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-midday",
+    "platform": "x",
+    "id": "2122960795067887925",
+    "views": 1,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   },
+   {
+    "post": "2026-11-18-midday",
+    "platform": "yt",
+    "id": "UfJeb_Bizg0",
+    "views": 640,
+    "likes": 12,
+    "comments": 2,
+    "shares": null,
+    "saves": null,
+    "avg_view_s": null,
+    "avg_view_pct": null,
+    "follows": null
+   }
+  ],
+  "accounts": {
+   "yt": {
+    "viewCount": "0",
+    "subscriberCount": "1",
+    "hiddenSubscriberCount": false,
+    "videoCount": "6"
+   },
+   "threads_followers": 10
+  },
+  "errors": {}
+ }
+}

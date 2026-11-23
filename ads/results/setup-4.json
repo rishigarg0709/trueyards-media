@@ -1,0 +1,64 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-17T14:32:15.845872Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {},
+  "ads": {
+   "A1 permanent address": {
+    "ad": {
+     "id": "120255643165860547"
+    },
+    "creative_id": "1845501173266365",
+    "earlier_errors": []
+   },
+   "A2 built for industry": {
+    "ad": {
+     "id": "120255643166300547"
+    },
+    "creative_id": "4512302872365181",
+    "earlier_errors": []
+   },
+   "A3 right plot": {
+    "ad": {
+     "id": "120255643166730547"
+    },
+    "creative_id": "1146565971103785",
+    "earlier_errors": []
+   },
+   "B1 right plot": {
+    "ad": {
+     "id": "120255643166850547"
+    },
+    "creative_id": "2256337965315019",
+    "earlier_errors": []
+   },
+   "B2 built for industry": {
+    "ad": {
+     "id": "120255643167270547"
+    },
+    "creative_id": "1818862512498060",
+    "earlier_errors": []
+   },
+   "B3 permanent address": {
+    "ad": {
+     "id": "120255643167440547"
+    },
+    "creative_id": "2794706660926039",
+    "earlier_errors": []
+   }
+  },
+  "campaign": {
+   "id": "120255642579300547",
+   "name": "FIT CTWA v1",
+   "status": "PAUSED",
+   "effective_status": "PAUSED",
+   "spend_cap": "2000000",
+   "created_time": "2026-11-17T19:29:51+0530"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}

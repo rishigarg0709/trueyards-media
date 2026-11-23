@@ -1,0 +1,46 @@
+name: wa-check
+# Read-only health check of the WhatsApp autopilot: is it on, what did it plan today (new, follow-up, retry), what did
+# each run send and deliver, is the warm-lead track sending, are the joint waves with Meta running. Counts only: this
+# repo is public, so nothing about any person is printed.
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Autopilot check
+        env:
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+        run: |
+          BASE="${PERF_URL%%/perf/*}"
+          curl -sS -m 120 "$BASE/perf/summary" -H "x-perf-key: $PERF_KEY" -o sum.json
+          curl -sS -m 120 "$BASE/smx/campaigns?days=3" -H "x-smx-key: $PERF_KEY" -o camps.json
+          python3 - <<'PY'
+          import json, collections
+          s = json.load(open("sum.json")); c = json.load(open("camps.json"))
+          wa = s.get("wa", {})
+          print("AUTOPILOT", {"on": wa.get("on"), "budgetInr": wa.get("budgetInr"), "fundsLeft": wa.get("fundsLeft"), "hold": wa.get("hold")})
+          plan = collections.Counter()
+          for cell in wa.get("cells", []):
+              for k, v in (cell.get("today") or {}).items(): plan[k] += v or 0
+          print("PLAN_TODAY", dict(plan), "cells", len(wa.get("cells", [])), "fresh_left", sum(x.get("freshLeft", 0) for x in wa.get("cells", [])))
+          for d in sorted(wa.get("days", {}))[-4:]: print("DAY", d, wa["days"][d])
+          p = s.get("perf", {})
+          print("JOINT", {k: (p.get(k) or {}).get("on") for k in ("warm", "audiences", "capi", "planIntake")}, "waves", len(s.get("waves", [])), "schedule", len(s.get("schedule", [])))
+          last = s.get("last") or {}
+          print("PERF_LAST", {k: (str(v)[:160] if not isinstance(v, (int, float, bool)) else v) for k, v in last.items() if k not in ("pk", "sk")})
+          print("LEADS_BY_SOURCE", s.get("leads_by_source"))
+          grp = collections.defaultdict(lambda: collections.Counter())
+          for r in c.get("rows", []):
+              n = r.get("name", ""); day = (r.get("createdAt") or "")[:10]
+              kind = "warm" if n.startswith("AP-W") else "autopilot" if n.startswith("AP ") else "manual"
+              g = grp[(day, kind)]; g["runs"] += 1
+              for k in ("total", "sent", "delivered", "read", "failed"): g[k] += r.get(k, 0) or 0
+              g["state_" + (r.get("state") or "?")] += 1
+          for k in sorted(grp): print("RUNS", k, dict(grp[k]))
+          today = max((r.get("createdAt") or "")[:10] for r in c.get("rows", [])) if c.get("rows") else ""
+          for r in c.get("rows", []):
+              if (r.get("createdAt") or "")[:10] == today or r.get("state") in ("running", "paused", "ready"):
+                  print("RUN", r.get("name"), "|", r.get("template"), "|", r.get("state"), "| total", r.get("total"), "sent", r.get("sent"), "delivered", r.get("delivered"), "read", r.get("read"), "failed", r.get("failed"), "|", (r.get("note") or "")[:120])
+          PY

@@ -1,0 +1,28 @@
+name: funds
+# Enters the real WhatsApp wallet balance into the bot (Meta has no API for it). Runs fully in the cloud, so it
+# works when Rishi's laptop is off: any project chat starts it with the figure Rishi gives.
+on:
+  workflow_dispatch:
+    inputs:
+      balance:
+        description: "WhatsApp wallet balance in rupees"
+        required: true
+      by:
+        description: "Who gave the figure"
+        default: "Rishi"
+jobs:
+  enter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enter the balance
+        env:
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+          BAL: ${{ inputs.balance }}
+          BY: ${{ inputs.by }}
+        run: |
+          case "$BAL" in ''|*[!0-9.]*) echo "balance must be a number"; exit 1;; esac
+          BASE="${PERF_URL%%/perf/*}"
+          BODY=$(python3 -c 'import json,os;print(json.dumps({"balance": float(os.environ["BAL"]), "by": os.environ["BY"][:40]}))')
+          OUT=$(curl -sS -m 30 -X POST "$BASE/smx/funds" -H "x-smx-key: $PERF_KEY" -H "content-type: application/json" -d "$BODY")
+          echo "$OUT" | python3 -c 'import json,sys;d=json.load(sys.stdin);print("balance",d.get("balance"),"left",d.get("left"),"by",d.get("by"),"at",d.get("at"));sys.exit(0 if d.get("set") else 1)'

@@ -1,0 +1,22 @@
+CwhRBWXzGAHq8TQ4Fs17 | Roger - Laid-Back, Casual, Resonant | {"accent": "american", "gender": "male", "use_case": "conversational", "language": "en", "descriptive": "classy", "age": "middle_aged"}
+EXAVITQu4vr4xnSDxMaL | Sarah - Mature, Reassuring, Confident | {"accent": "american", "gender": "female", "use_case": "entertainment_tv", "language": "en", "descriptive": "professional", "age": "young"}
+FGY2WhTYpPnrIDTdsKH5 | Laura - Enthusiast, Quirky Attitude | {"accent": "american", "gender": "female", "use_case": "social_media", "language": "en", "descriptive": "sassy", "age": "young"}
+IKne3meq5aSn9XLyUdCD | Charlie - Deep, Confident, Energetic | {"accent": "australian", "gender": "male", "use_case": "conversational", "language": "en", "descriptive": "hyped", "age": "young"}
+JBFqnCBsd6RMkjVDRZzb | George - Warm, Captivating Storyteller | {"accent": "british", "gender": "male", "use_case": "narrative_story", "language": "en", "descriptive": "mature", "age": "middle_aged"}
+N2lVS1w4EtoT3dr4eOWO | Callum - Husky Trickster | {"gender": "male", "accent": "american", "use_case": "characters_animation", "language": "en", "age": "middle_aged"}
+SAz9YHcvj6GT2YYXdXww | River - Relaxed, Neutral, Informative | {"accent": "american", "gender": "neutral", "use_case": "conversational", "language": "en", "descriptive": "calm", "age": "middle_aged"}
+SOYHLrjzK2X1ezoPC6cr | Harry - Fierce Warrior | {"accent": "american", "gender": "male", "use_case": "characters_animation", "language": "en", "descriptive": "rough", "age": "young"}
+TX3LPaxmHKxFdv7VOQHJ | Liam - Energetic, Social Media Creator | {"accent": "american", "gender": "male", "use_case": "social_media", "language": "en", "descriptive": "confident", "age": "young"}
+Xb7hH8MSUJpSbSDYk0k2 | Alice - Clear, Engaging Educator | {"accent": "british", "gender": "female", "use_case": "informative_educational", "language": "en", "descriptive": "professional", "age": "middle_aged"}
+XrExE9yKIg1WjnnlVkGX | Matilda - Knowledgable, Professional | {"accent": "american", "gender": "female", "use_case": "informative_educational", "language": "en", "descriptive": "upbeat", "age": "middle_aged"}
+bIHbv24MWmeRgasZH58o | Will - Relaxed Optimist | {"accent": "american", "gender": "male", "use_case": "conversational", "language": "en", "descriptive": "chill", "age": "young"}
+cgSgspJ2msm6clMCkdW9 | Jessica - Playful, Bright, Warm | {"accent": "american", "gender": "female", "use_case": "conversational", "language": "en", "descriptive": "cute", "age": "young"}
+cjVigY5qzO86Huf0OWal | Eric - Smooth, Trustworthy | {"accent": "american", "gender": "male", "use_case": "conversational", "language": "en", "descriptive": "classy", "age": "middle_aged"}
+hpp4J3VqNfWAUOO0d1Us | Bella - Professional, Bright, Warm | {"accent": "american", "gender": "female", "use_case": "informative_educational", "language": "en", "descriptive": "professional", "age": "middle_aged"}
+iP95p4xoKVk53GoZ742B | Chris - Charming, Down-to-Earth | {"accent": "american", "gender": "male", "use_case": "conversational", "language": "en", "descriptive": "casual", "age": "middle_aged"}
+nPczCjzI2devNBz1zQrb | Brian - Deep, Resonant and Comforting | {"accent": "american", "gender": "male", "use_case": "social_media", "language": "en", "descriptive": "classy", "age": "middle_aged"}
+onwK4e9ZLuTAKqWW03F9 | Daniel - Steady Broadcaster | {"accent": "british", "gender": "male", "use_case": "informative_educational", "language": "en", "descriptive": "formal", "age": "middle_aged"}
+pFZP5JQG7iQjIQuC4Bku | Lily - Velvety Actress | {"accent": "british", "gender": "female", "use_case": "informative_educational", "language": "en", "descriptive": "confident", "age": "middle_aged"}
+pNInz6obpgDQGcFmaJgB | Adam - Dominant, Firm | {"gender": "male", "accent": "american", "use_case": "social_media", "language": "en", "age": "middle_aged"}
+pqHfZKP75CvOlQylNhV4 | Bill - Wise, Mature, Balanced | {"accent": "american", "gender": "male", "use_case": "advertisement", "language": "en", "descriptive": "crisp", "age": "old"}
+jdKpAe6rxAe99tFGbsAc | Daniel - Corporate Narration | {"use_case": "narrative_story", "age": "middle_aged", "accent": "standard", "language": "de", "descriptive": "calm", "gender": "male"}

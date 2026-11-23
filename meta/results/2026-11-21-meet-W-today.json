@@ -1,0 +1,23 @@
+{
+ "op": "ad_breakdown",
+ "ran_at": "2026-11-21T16:47:42.770438Z",
+ "result": {
+  "data": [
+   {
+    "date_start": "2026-11-21",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "facebook",
+    "platform_position": "feed",
+    "impressions": "22",
+    "reach": "20",
+    "spend": "16.21"
+   }
+  ],
+  "paging": {
+   "cursors": {
+    "before": "MAZDZD",
+    "after": "MAZDZD"
+   }
+  }
+ }
+}

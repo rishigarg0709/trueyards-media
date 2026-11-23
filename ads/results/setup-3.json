@@ -1,0 +1,103 @@
+{
+ "op": "setup",
+ "ran_at": "2026-11-17T14:23:21.824813Z",
+ "result": {
+  "page": {
+   "id": "1161377287055094",
+   "name": "TrueYards"
+  },
+  "adsets": {
+   "A": {
+    "result": {
+     "id": "120255643066620547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Small business (business and finance)",
+      "Manufacturing (industry)",
+      "Warehouse (industry)",
+      "Logistics (business and finance)",
+      "Entrepreneurship (business and finance)",
+      "industrial engineering (engineering)",
+      "Supply chain management (business and finance)",
+      "Factory (manufacturing)",
+      "Small business owners"
+     ]
+    },
+    "earlier_errors": []
+   },
+   "B": {
+    "result": {
+     "id": "120255643070240547"
+    },
+    "targeting_notes": {
+     "excluded_audiences": 0,
+     "cities_not_found": [],
+     "interests_not_found": [
+      "Real estate investing",
+      "Real estate"
+     ],
+     "behaviors_not_found": [],
+     "interests_used": [
+      "Property investing (investing)",
+      "Investment (business and finance)",
+      "commercial property (property)",
+      "Land"
+     ]
+    },
+    "earlier_errors": []
+   }
+  },
+  "ads": {
+   "A1 permanent address": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   },
+   "A2 built for industry": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   },
+   "A3 right plot": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   },
+   "B1 right plot": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   },
+   "B2 built for industry": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   },
+   "B3 permanent address": {
+    "error": [
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad.",
+     "Ads creative post was created by an app that is in development mode. It must be in public to create this ad."
+    ]
+   }
+  },
+  "campaign": {
+   "id": "120255642579300547",
+   "name": "FIT CTWA v1",
+   "status": "PAUSED",
+   "effective_status": "PAUSED",
+   "spend_cap": "2000000",
+   "created_time": "2026-11-17T19:29:51+0530"
+  },
+  "next": "Everything is PAUSED. Rishi reviews in Ads Manager, sets budget_approved and launch_approved in config/ads.json, then a launch request turns it on."
+ }
+}

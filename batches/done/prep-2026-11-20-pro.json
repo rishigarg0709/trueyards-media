@@ -1,0 +1,27 @@
+{
+ "batch": "batches/04zgixl9nvxybq6c4hl1z9hkf334tnf91x2m",
+ "name": "prep-2026-11-20-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-19T16:54Z",
+ "images": [
+  {
+   "name": "2026-11-20-midday-1",
+   "prompt": "Hyper-realistic photograph, impossible but real: inside a bright, clean, daylight-lit multi-storey car park in Hong Kong with painted yellow parking-bay lines, one empty parking bay holds a complete tiny home that fits inside the yellow lines: a single bed with a neatly folded blanket, a narrow shelf of jars and books, a small fridge with a rice cooker on top, a folding stool and a wall fan on a thin partition; the next bay holds an ordinary white hatchback car for scale, so the bay is visibly larger than the room. Shot on a full-frame camera, natural light, believable scale and shadows, looks like a real news photo, bright and evenly lit, nothing dark in the frame. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-20-evening-1",
+   "prompt": "Hyper-realistic photograph of a large new two-storey Kerala house in strong bright midday sunlight: white walls, wide pillared verandah, sloped terracotta tile roofs, every window and door shuttered, a heavy padlock and chain on an ornate steel front gate, a few dry coconut leaves on a clean paved courtyard, tall coconut palms and blue sky, crisp and high key, looks like a real news photo, subject fully lit with no shadows on the facade. Vertical 9:16 composition at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null,
+ "saved": [
+  "2026-11-20-midday-1",
+  "2026-11-20-evening-1"
+ ],
+ "missing": [],
+ "finished": "2026-11-19T17:19Z"
+}

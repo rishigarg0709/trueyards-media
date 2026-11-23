@@ -1,0 +1,68 @@
+{
+ "op": "ad_breakdown",
+ "ran_at": "2026-11-21T13:01:36.530240Z",
+ "result": {
+  "data": [
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "facebook",
+    "platform_position": "facebook_reels",
+    "impressions": "28",
+    "reach": "18",
+    "spend": "3.990321"
+   },
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "facebook",
+    "platform_position": "facebook_stories",
+    "impressions": "1",
+    "reach": "1",
+    "spend": "1.420114"
+   },
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "facebook",
+    "platform_position": "feed",
+    "impressions": "102",
+    "reach": "35",
+    "spend": "47.063784"
+   },
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "instagram",
+    "platform_position": "feed",
+    "impressions": "80",
+    "reach": "32",
+    "spend": "53.864331"
+   },
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_reels",
+    "impressions": "79",
+    "reach": "36",
+    "spend": "16.561332"
+   },
+   {
+    "date_start": "2026-11-18",
+    "date_stop": "2026-11-21",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_stories",
+    "impressions": "14",
+    "reach": "11",
+    "spend": "1.480119"
+   }
+  ],
+  "paging": {
+   "cursors": {
+    "before": "MAZDZD",
+    "after": "NQZDZD"
+   }
+  }
+ }
+}

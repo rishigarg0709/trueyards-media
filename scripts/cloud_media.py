@@ -1,0 +1,183 @@
+"""Cloud media jobs: ElevenLabs voice (with word timings), ElevenLabs music, Gemini images.
+Each job file in jobs/*.json is a list of tasks; results land in library/media/<name>.*
+and a log in library/media/_last_run.txt. Keys come from GitHub secrets only."""
+import base64, glob, json, os, re, sys, time, urllib.request, urllib.error
+
+OUT = "library/media"; os.makedirs(OUT, exist_ok=True)
+EL = os.environ.get("ELEVENLABS_API_KEY", ""); GM = os.environ.get("GEMINI_API_KEY", "")
+log = []
+
+def req(url, body=None, headers=None, method="POST", raw=False):
+    data = json.dumps(body).encode() if body is not None else None
+    r = urllib.request.Request(url, data=data, method=method, headers={"Content-Type": "application/json", **(headers or {})})
+    with urllib.request.urlopen(r, timeout=300) as resp:
+        b = resp.read()
+        return b if raw else json.loads(b)
+
+def voice(t):
+    vid = t.get("voice_id", "21m00Tcm4TlvDq8ikWAM")
+    body = {"text": t["text"], "model_id": t.get("model", "eleven_multilingual_v2"),
+            "voice_settings": t.get("settings", {"stability": 0.45, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True})}
+    j = req(f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps?output_format=mp3_44100_128", body, {"xi-api-key": EL})
+    open(f"{OUT}/{t['name']}.mp3", "wb").write(base64.b64decode(j["audio_base64"]))
+    json.dump(j.get("alignment"), open(f"{OUT}/{t['name']}.align.json", "w"))
+    return "voice ok"
+
+def music(t):
+    body = {"prompt": t["prompt"], "music_length_ms": int(t.get("ms", 45000)), "model_id": t.get("model", "music_v1")}
+    if t.get("instrumental", True): body["force_instrumental"] = True
+    b = req("https://api.elevenlabs.io/v1/music?output_format=mp3_44100_128", body, {"xi-api-key": EL}, raw=True)
+    open(f"{OUT}/{t['name']}.mp3", "wb").write(b); return f"music ok {len(b)} bytes"
+
+def voices(t):
+    j = req("https://api.elevenlabs.io/v1/voices", None, {"xi-api-key": EL}, method="GET")
+    rows = [f"{v['voice_id']} | {v['name']} | {json.dumps(v.get('labels', {}))}" for v in j.get("voices", [])]
+    open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} voices"
+
+# Image models (Rishi, 18 Nov 2026 16:25: "use combination of pro and 3.1 flash"). Pro only for the image that has to
+# stop the scroll: the reel hook frame and the carousel cover (name ending -1, cover or hook, or "hero": true).
+# Everything else on 3.1 Flash at 1K (half the price; the free upscale then goes 4x, so the output size matches Pro).
+PRO, FLASH = "gemini-3-pro-image", "gemini-3.1-flash-image"
+
+def pick_model(i):
+    if i.get("model"): return i["model"]  # an explicit per-image model always wins
+    return PRO if i.get("hero") or re.search(r"(-1|cover|hook)$", str(i.get("name", ""))) else FLASH
+
+def _spend(n, model, mode):
+    """Count paid Gemini images so scripts/balances.py can estimate credit left (ops/gemini_spend.jsonl)."""
+    if n <= 0: return
+    os.makedirs("ops", exist_ok=True)
+    with open("ops/gemini_spend.jsonl", "a") as f:
+        f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()), "n": n, "model": model, "mode": mode}) + "\n")
+
+def image(t):
+    model = pick_model(t)
+    parts = [{"text": t["prompt"]}]
+    for ip in t.get("inputs", []):
+        mt = "image/png" if ip.endswith(".png") else "image/jpeg"
+        parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
+    body = {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": _img_config(t, model)}}
+    j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body, {"x-goog-api-key": GM})
+    for p in j["candidates"][0]["content"]["parts"]:
+        d = p.get("inlineData") or p.get("inline_data")
+        if d:
+            open(f"{OUT}/{t['name']}.png", "wb").write(base64.b64decode(d["data"])); _spend(1, model, "single"); return "image ok"
+    return "no image: " + json.dumps(j)[:300]
+
+def _img_config(t, model):
+    """Gemini 2.5 Flash Image has one output size (about 1K; the free 4K upscale runs after); newer models take imageSize."""
+    cfg = {"aspectRatio": t.get("aspect", "9:16")}
+    if "2.5" in model:
+        return cfg
+    cfg["imageSize"] = t.get("size", "2K") if "pro" in model or t.get("keep_size") else "1K"
+    return cfg
+
+def _img_request(t, model="gemini-3-pro-image"):
+    parts = [{"text": t["prompt"]}]
+    for ip in t.get("inputs", []):
+        mt = "image/png" if ip.endswith(".png") else "image/jpeg"
+        parts.append({"inline_data": {"mime_type": mt, "data": base64.b64encode(open(ip, "rb").read()).decode()}})
+    return {"contents": [{"parts": parts}], "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": _img_config(t, model)}}
+
+def batch_submit(t):
+    """Half-price Gemini images. t = {kind, name, images:[{name, prompt, aspect?, size?, inputs?, hero?, model?}]}.
+    Images are split by model (pick_model): hero images go in batch <name>-pro, the rest in <name>. A batch-level
+    "model" is ignored unless "force_model": true. Results are saved later by the batch-poll workflow into
+    library/media/<image name>.png."""
+    groups = {}
+    for i in t["images"]:
+        m = t["model"] if t.get("force_model") and t.get("model") else pick_model(i)
+        groups.setdefault(m, []).append(i)
+    msgs = []
+    os.makedirs("batches/pending", exist_ok=True)
+    for model, imgs in groups.items():
+        name = t["name"] + ("-pro" if model == PRO and len(groups) > 1 else "")
+        reqs = [{"request": _img_request(i, model), "metadata": {"key": i["name"]}} for i in imgs]
+        body = {"batch": {"display_name": name, "input_config": {"requests": {"requests": reqs}}}}
+        j = req(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:batchGenerateContent", body, {"x-goog-api-key": GM})
+        rec = {"batch": j.get("name"), "name": name, "model": model, "submitted": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()),
+               "images": imgs, "fallback_after_utc": t.get("fallback_after_utc")}
+        json.dump(rec, open(f"batches/pending/{name}.json", "w"), indent=1)
+        msgs.append(f"{name}: {model} {len(reqs)} images ({j.get('name')})")
+    return "batch submitted " + "; ".join(msgs)
+
+def _find(o, key):
+    if isinstance(o, dict):
+        if key in o: return o[key]
+        for v in o.values():
+            r = _find(v, key)
+            if r is not None: return r
+    if isinstance(o, list):
+        for v in o:
+            r = _find(v, key)
+            if r is not None: return r
+    return None
+
+def batch_poll():
+    os.makedirs("batches/done", exist_ok=True); os.makedirs("batches/failed", exist_ok=True)
+    for f in sorted(glob.glob("batches/pending/*.json")):
+        rec = json.load(open(f))
+        try:
+            j = req(f"https://generativelanguage.googleapis.com/v1beta/{rec['batch']}", None, {"x-goog-api-key": GM}, method="GET")
+        except Exception as e:
+            log.append(f"{rec['name']} poll error {e!r}"[:200]); continue
+        state = _find(j, "state") or ""
+        if "SUCCEEDED" in state:
+            items = _find(j, "inlinedResponses")
+            if isinstance(items, dict): items = items.get("inlinedResponses", [])
+            got = []
+            for it in items or []:
+                key = (it.get("metadata") or {}).get("key")
+                for c in (it.get("response") or {}).get("candidates", []):
+                    for p in c.get("content", {}).get("parts", []):
+                        d = p.get("inlineData") or p.get("inline_data")
+                        if d and key:
+                            open(f"{OUT}/{key}.png", "wb").write(base64.b64decode(d["data"])); got.append(key)
+            rec["saved"] = got; rec["missing"] = [i["name"] for i in rec["images"] if i["name"] not in got]
+            rec["finished"] = time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()); _spend(len(got), rec.get("model", ""), "batch")
+            json.dump(rec, open(f"batches/done/{rec['name']}.json", "w"), indent=1); os.remove(f)
+            log.append(f"{rec['name']}: batch done, {len(got)} saved, missing {rec['missing']}")
+        elif any(x in state for x in ("FAILED", "CANCELLED", "EXPIRED")):
+            rec["state"] = state; json.dump(rec, open(f"batches/failed/{rec['name']}.json", "w"), indent=1); os.remove(f)
+            log.append(f"{rec['name']}: batch {state}; post runs must fall back to the normal image job")
+        else:
+            log.append(f"{rec['name']}: {state or 'pending'}")
+
+
+def models(t):
+    j = req("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", None, {"x-goog-api-key": GM}, method="GET")
+    rows = [m["name"] for m in j.get("models", []) if "image" in m["name"]]
+    open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} image models"
+
+
+def shared(t):
+    import urllib.parse
+    q={"page_size":str(t.get("n",30)),"sort":t.get("sort","usage_character_count_1y"),"category":t.get("category","professional")}
+    for k in ("gender","accent","use_cases","language","search","descriptives","age"):
+        if t.get(k): q[k]=t[k]
+    j = req("https://api.elevenlabs.io/v1/shared-voices?"+urllib.parse.urlencode(q), None, {"xi-api-key": EL}, method="GET")
+    rows=[f"{v['public_owner_id']}|{v['voice_id']}|{v['name']}|{v.get('gender')}|{v.get('accent')}|{v.get('age')}|{v.get('use_case')}|{v.get('descriptive')}|uses1y={v.get('usage_character_count_1y')}|{(v.get('description') or '')[:120]}" for v in j.get("voices",[])]
+    open(f"{OUT}/{t['name']}.txt","w").write("\n".join(rows)); return f"{len(rows)} shared voices"
+
+def addvoice(t):
+    j = req(f"https://api.elevenlabs.io/v1/voices/add/{t['owner']}/{t['voice_id']}", {"new_name": t["new_name"]}, {"xi-api-key": EL})
+    return "added "+json.dumps(j)[:120]
+
+def usage(t):
+    j = req("https://api.elevenlabs.io/v1/user/subscription", None, {"xi-api-key": EL}, method="GET")
+    keep = {k: j.get(k) for k in ("tier","character_count","character_limit","next_character_count_reset_unix","status","billing_period","currency")}
+    open(f"{OUT}/{t['name']}.json", "w").write(json.dumps(keep, indent=1)); return "usage ok"
+
+KINDS = {"batch_submit": batch_submit, "usage": usage, "shared": shared, "addvoice": addvoice, "voice": voice, "music": music, "voices": voices, "image": image, "models": models}
+if len(sys.argv) > 1 and sys.argv[1] == "poll":
+    batch_poll()
+    open(f"{OUT}/_last_poll.txt", "w").write(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime()) + "\n".join(log))
+    sys.exit(0)
+for f in sorted(glob.glob("jobs/*.json")):
+    for t in json.load(open(f)):
+        try: msg = KINDS[t["kind"]](t)
+        except urllib.error.HTTPError as e: msg = f"HTTP {e.code}: {e.read()[:300]!r}"
+        except Exception as e: msg = f"ERR {e!r}"[:300]
+        log.append(f"{t.get('name')} [{t['kind']}]: {msg}"); print(log[-1])
+    os.remove(f)
+open(f"{OUT}/_last_run.txt", "w").write(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime()) + "\n".join(log))

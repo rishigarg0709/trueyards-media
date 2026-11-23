@@ -1,0 +1,15 @@
+{
+ "op": "set_budget",
+ "ran_at": "2026-11-17T14:07:40.198331Z",
+ "result": {
+  "result": {
+   "success": true
+  },
+  "now": {
+   "id": "120255620965680547",
+   "name": "TrueYards Boost",
+   "status": "PAUSED",
+   "daily_budget": "20000"
+  }
+ }
+}

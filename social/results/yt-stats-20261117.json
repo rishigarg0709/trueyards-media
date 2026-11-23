@@ -1,0 +1,136 @@
+{
+ "op": "yt_stats",
+ "ran_at": "2026-11-17T12:42:26.526246Z",
+ "result": {
+  "kind": "youtube#videoListResponse",
+  "etag": "fscV7WCc4SOpAthpxdudfGCB5i0",
+  "items": [
+   {
+    "kind": "youtube#video",
+    "etag": "kzZPbHWutCwhi5X1Beps1cqPXHs",
+    "id": "XbfkwFvQwMc",
+    "snippet": {
+     "publishedAt": "2026-11-17T10:04:47Z",
+     "channelId": "UCWUQbt9Rh5Wpgbm3Am7r3tA",
+     "title": "Why Delhi has almost no skyscrapers #Shorts",
+     "description": "Gurgaon and Noida are full of towers, yet Delhi stayed low for three reasons: airport height clearances, 174 protected monuments, and the low-rise Lutyens' bungalow zone. Then in August 2026 the Master Plan for Delhi 2047 removed height limits across most of the city.\n\nWould you live on the 50th floor in Delhi?\n\nSources: Height Restriction Rules 2015 (GSR 751(E)); ASI / AMASR Act; CTBUH; MPD 2047 (Aug 2026).\nSome visuals are AI generated. Educational content, not investment advice.\n\nTrueYards: Real Estate Explained.",
+     "thumbnails": {
+      "default": {
+       "url": "https://i.ytimg.com/vi/XbfkwFvQwMc/default.jpg",
+       "width": 120,
+       "height": 90
+      },
+      "medium": {
+       "url": "https://i.ytimg.com/vi/XbfkwFvQwMc/mqdefault.jpg",
+       "width": 320,
+       "height": 180
+      },
+      "high": {
+       "url": "https://i.ytimg.com/vi/XbfkwFvQwMc/hqdefault.jpg",
+       "width": 480,
+       "height": 360
+      },
+      "standard": {
+       "url": "https://i.ytimg.com/vi/XbfkwFvQwMc/sddefault.jpg",
+       "width": 640,
+       "height": 480
+      },
+      "maxres": {
+       "url": "https://i.ytimg.com/vi/XbfkwFvQwMc/maxresdefault.jpg",
+       "width": 1280,
+       "height": 720
+      }
+     },
+     "channelTitle": "TrueYards",
+     "tags": [
+      "Delhi",
+      "Delhi NCR",
+      "city planning",
+      "real estate India",
+      "skyscrapers"
+     ],
+     "categoryId": "27",
+     "liveBroadcastContent": "none",
+     "defaultLanguage": "en",
+     "localized": {
+      "title": "Why Delhi has almost no skyscrapers #Shorts",
+      "description": "Gurgaon and Noida are full of towers, yet Delhi stayed low for three reasons: airport height clearances, 174 protected monuments, and the low-rise Lutyens' bungalow zone. Then in August 2026 the Master Plan for Delhi 2047 removed height limits across most of the city.\n\nWould you live on the 50th floor in Delhi?\n\nSources: Height Restriction Rules 2015 (GSR 751(E)); ASI / AMASR Act; CTBUH; MPD 2047 (Aug 2026).\nSome visuals are AI generated. Educational content, not investment advice.\n\nTrueYards: Real Estate Explained."
+     },
+     "defaultAudioLanguage": "id"
+    },
+    "statistics": {
+     "viewCount": "24",
+     "likeCount": "1",
+     "dislikeCount": "0",
+     "favoriteCount": "0",
+     "commentCount": "0"
+    }
+   },
+   {
+    "kind": "youtube#video",
+    "etag": "JeVoEX_BPOnSZamXC60mWNxnZ_g",
+    "id": "8hBDGb49q8A",
+    "snippet": {
+     "publishedAt": "2026-11-17T10:06:03Z",
+     "channelId": "UCWUQbt9Rh5Wpgbm3Am7r3tA",
+     "title": "Why the Supreme Court ordered Noida's twin towers blown up #Shorts",
+     "description": "Two towers taller than Qutub Minar, never lived in, brought down in seconds on 28 Aug 2022. The case: a revised plan put them on land shown to buyers as green area, the gap to an existing tower was about 9 m against a required 16 m, and residents were never asked for consent. The Supreme Court upheld demolition in Aug 2021 and ordered refunds with 12% interest.\n\nRight call, or a waste?\n\nSources: Supreme Court of India, Supertech Ltd v. Emerald Court Owner RWA (31 Aug 2021); Allahabad High Court (Apr 2014).\nVisuals are AI visualisations, not the real site. Educational content, not legal or investment advice.\n\nTrueYards: Real Estate Explained.",
+     "thumbnails": {
+      "default": {
+       "url": "https://i.ytimg.com/vi/8hBDGb49q8A/default.jpg",
+       "width": 120,
+       "height": 90
+      },
+      "medium": {
+       "url": "https://i.ytimg.com/vi/8hBDGb49q8A/mqdefault.jpg",
+       "width": 320,
+       "height": 180
+      },
+      "high": {
+       "url": "https://i.ytimg.com/vi/8hBDGb49q8A/hqdefault.jpg",
+       "width": 480,
+       "height": 360
+      },
+      "standard": {
+       "url": "https://i.ytimg.com/vi/8hBDGb49q8A/sddefault.jpg",
+       "width": 640,
+       "height": 480
+      },
+      "maxres": {
+       "url": "https://i.ytimg.com/vi/8hBDGb49q8A/maxresdefault.jpg",
+       "width": 1280,
+       "height": 720
+      }
+     },
+     "channelTitle": "TrueYards",
+     "tags": [
+      "Noida twin towers",
+      "RERA",
+      "Supreme Court",
+      "homebuyers",
+      "real estate India"
+     ],
+     "categoryId": "27",
+     "liveBroadcastContent": "none",
+     "defaultLanguage": "en",
+     "localized": {
+      "title": "Why the Supreme Court ordered Noida's twin towers blown up #Shorts",
+      "description": "Two towers taller than Qutub Minar, never lived in, brought down in seconds on 28 Aug 2022. The case: a revised plan put them on land shown to buyers as green area, the gap to an existing tower was about 9 m against a required 16 m, and residents were never asked for consent. The Supreme Court upheld demolition in Aug 2021 and ordered refunds with 12% interest.\n\nRight call, or a waste?\n\nSources: Supreme Court of India, Supertech Ltd v. Emerald Court Owner RWA (31 Aug 2021); Allahabad High Court (Apr 2014).\nVisuals are AI visualisations, not the real site. Educational content, not legal or investment advice.\n\nTrueYards: Real Estate Explained."
+     },
+     "defaultAudioLanguage": "en"
+    },
+    "statistics": {
+     "viewCount": "93",
+     "likeCount": "3",
+     "dislikeCount": "0",
+     "favoriteCount": "0",
+     "commentCount": "1"
+    }
+   }
+  ],
+  "pageInfo": {
+   "totalResults": 2,
+   "resultsPerPage": 2
+  }
+ }
+}

@@ -1,0 +1,33 @@
+name: salesplan
+# The 9 am leads status and personal plan for the sales team, sent by the WhatsApp bot itself. This workflow shows
+# what the bot would send (counts only: this repo is public, so no lead names or numbers are printed) or switches it.
+# Switch it on only together with removing the send step from the 9 am scheduled task, or the team gets it twice.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "status, on or off"
+        default: "status"
+      by:
+        description: "Who asked"
+        default: "Rishi"
+jobs:
+  salesplan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sales plan
+        env:
+          PERF_URL: ${{ secrets.PERF_URL }}
+          PERF_KEY: ${{ secrets.PERF_KEY }}
+          ACT: ${{ inputs.action }}
+          BY: ${{ inputs.by }}
+        run: |
+          BASE="${PERF_URL%%/perf/*}"
+          SHOW='import json,sys;d=json.load(sys.stdin);l=d.get("last") or {};print({"on":d.get("on"),"counts":d.get("counts"),"plan_lines":len(d.get("plan") or []),"plan_chars":[len(x) for x in (d.get("plan") or [])],"status_numbers":(d.get("status") or [])[1:],"last_day":l.get("day"),"last_sent":l.get("sent"),"last_missing":l.get("missing")})'
+          case "$ACT" in
+            status) curl -sS -m 90 "$BASE/smx/salesplan" -H "x-smx-key: $PERF_KEY" | python3 -c "$SHOW" ;;
+            on|off)
+              BODY=$(python3 -c 'import json,os;print(json.dumps({"on": os.environ["ACT"]=="on", "by": os.environ["BY"][:40]}))')
+              curl -sS -m 90 -X POST "$BASE/smx/salesplan" -H "x-smx-key: $PERF_KEY" -H "content-type: application/json" -d "$BODY" | python3 -c "$SHOW" ;;
+            *) echo "action must be status, on or off"; exit 1 ;;
+          esac
