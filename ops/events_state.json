@@ -1,9 +1,9 @@
 {
- "last_sha": "47afeaa5342fbbf8624b1c41c39b2de1f583b828",
+ "last_sha": "1af8714614bea3b79fafd905be1f3b054e40577c",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "",
    "camp": ""
   },
@@ -21,7 +21,7 @@
   },
   "campaign:120255657866010547": {
    "name": "FV Jind SCO CTWA",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "",
    "camp": ""
   },
@@ -45,13 +45,13 @@
   },
   "adset:120255721016990547": {
    "name": "FIT Meet W - reached on WhatsApp (warm)",
-   "status": "ACTIVE",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "15000",
    "camp": "FIT Business Meet 29 Nov"
   },
   "adset:120255721015440547": {
    "name": "FIT Meet L - industry owners from our database",
-   "status": "ACTIVE",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "35000",
    "camp": "FIT Business Meet 29 Nov"
   },
@@ -93,7 +93,7 @@
   },
   "adset:120255657866720547": {
    "name": "FV Jind J - Advantage+ Jind 30 km",
-   "status": "ACTIVE",
+   "status": "CAMPAIGN_PAUSED",
    "budget": "30000",
    "camp": "FV Jind SCO CTWA"
   },
