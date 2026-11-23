@@ -1,5 +1,5 @@
 {
- "last_sha": "f74154a301eef477d451a3fa6b4e4bb6e2b16fd5",
+ "last_sha": "942117d785532254df681242c4c06d48d38b937b",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -15,7 +15,7 @@
   },
   "campaign:120255661706190547": {
    "name": "TrueYards Follow",
-   "status": "PAUSED",
+   "status": "ACTIVE",
    "budget": "20000",
    "camp": ""
   },
@@ -87,7 +87,7 @@
   },
   "adset:120255661720970547": {
    "name": "TrueYards Follow - IG profile visits",
-   "status": "CAMPAIGN_PAUSED",
+   "status": "ACTIVE",
    "budget": "",
    "camp": "TrueYards Follow"
   },
