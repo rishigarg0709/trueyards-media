@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-23 20:09",
+ "checked_at": "2026-11-23 20:13",
  "checks": [
   {
    "id": "gemini",
@@ -40,14 +40,15 @@
   },
   {
    "id": "elevenlabs",
-   "name": "elevenlabs",
-   "status": "check",
-   "left": null,
-   "burn_per_day": null,
-   "runway_days": null,
-   "detail": "check failed: TimeoutError",
-   "action": "",
-   "link": ""
+   "name": "ElevenLabs voice and music",
+   "unit": "credits",
+   "link": "https://elevenlabs.io/app/subscription",
+   "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
+   "status": "ok",
+   "left": 96945,
+   "burn_per_day": 5000,
+   "runway_days": 19.4,
+   "detail": "96,945 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
