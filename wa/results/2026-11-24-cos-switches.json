@@ -1,0 +1,653 @@
+{
+ "at": "2026-11-24 22:18",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "switches",
+   "changes": false,
+   "result": {
+    "autoRetry": {
+     "on": true,
+     "plan": {
+      "days": [
+       1,
+       2,
+       4,
+       7,
+       10
+      ],
+      "hours": [
+       10,
+       15,
+       19,
+       11,
+       16
+      ],
+      "batch": 25
+     }
+    },
+    "jindVideo": {
+     "on": false,
+     "by": "Agent: cos",
+     "at": "2026-11-23T05:30:16.639Z",
+     "pk": "SET",
+     "template": "fv_jind_video_v2",
+     "sk": "JIND_VIDEO"
+    },
+    "pause": {
+     "until": ""
+    },
+    "nurture": {
+     "on": true
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-24T16:48:28.516Z"
+  },
+  {
+   "ok": true,
+   "op": "templates",
+   "changes": false,
+   "result": {
+    "templates": [
+     {
+      "name": "fit_meet_reminder",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Reminder: you are registered for the *{{1}}*.\n\n*When:* {{2}}\n*Venue:* Forteasia Industrial Township (FIT), Meham-Beri Road, Kalanaur, Rohtak\n\nCome any time during the day. Please tap below to confirm you are coming.",
+      "buttons": [
+       "Coming",
+       "Can't make it",
+       "Get location"
+      ]
+     },
+     {
+      "name": "fit_meet_invite_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "You are invited to the *Forteasia Industrial Business Meet* at the FIT site.\n\n*Date:* Sunday, 29 November 2026\n*Time:* 10 am to 6 pm, followed by hi-tea\n*Venue:* Forteasia Industrial Township (FIT), Meham-Beri Road, Kalanaur, Rohtak\n\nSee the industrial plots, get every question answered on site and meet our team. Entry is free.\n\nTap *Register now* to confirm your visit.",
+      "buttons": [
+       "Register now",
+       "Get location",
+       "Call me"
+      ]
+     },
+     {
+      "name": "fit_meet_invite",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "You are invited to the *Forteasia Industrial Business Meet* at the FIT site.\n\n*Date:* Sunday, 29 November 2026\n*Time:* 10 am to 6 pm, followed by hi-tea\n*Venue:* Forteasia Industrial Township (FIT), Meham-Beri Road, Kalanaur, Rohtak\n\nSee the industrial plots, get every question answered on site and meet our team. Entry is free.\n\nTap *Register now* to choose your time.",
+      "buttons": [
+       "Register now",
+       "Get location",
+       "Call me"
+      ]
+     },
+     {
+      "name": "jind_lead_alert",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "New Flower Valley Jind SCO lead alert.\n\nLead: {{1}}\nContact: {{2}}\nPhone: {{3}}\nActivity: {{4}}\n\nThe lead has been added to the Jind tracker sheet. After your call, tap the outcome below and add a remark.",
+      "buttons": [
+       "Site visit planned",
+       "Not picked/Call later",
+       "Not interested"
+      ]
+     },
+     {
+      "name": "fv_jind_visitor_v1",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Thank you for visiting *Forteasia Flower Valley, Sector 26, Jind*.\n\nDiscover the commercial plots at the front of the township, for your own shop or as an investment.\n\n🏬 SCO (G+3), double-storey shops and booths\n🛣️ On the 24-metre-wide road, with frontage parking\n🌳 Around a landscaped central plaza\n\nTap below for a site visit, the brochure or a call.\n\nHRERA-PKL-JND-314-2022",
+      "buttons": [
+       "Book site visit",
+       "Download brochure",
+       "Request callback"
+      ]
+     },
+     {
+      "name": "fv_jind_visit_invite",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "See the commercial plots at *Forteasia Flower Valley, Sector 26, Jind* this weekend.\n\nOur team will show you the SCO, double-storey shop and booth plots on the 24-metre-wide road, with the layout and current availability.\n\nPick a day below and we will call you to fix the time.\n\nHRERA-PKL-JND-314-2022",
+      "buttons": [
+       "Visit on Saturday",
+       "Visit on Sunday",
+       "Call me first"
+      ]
+     },
+     {
+      "name": "fv_jind_video_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "VIDEO",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Your shop, in front of a township people already live in.\n\n*Forteasia Flower Valley, Sector 26, Jind* after sunset 🌙. The fountain, parks and walkways are busy with resident families every evening.\n\nThe commercial plots sit at the front of the township, on the 24-metre road. Every resident passes them, so the customers are already there.\n\n🏬 SCO (G+3) · double-storey shops · booths\nFor your own business or to rent out\n\nSee the plots in person this weekend.\n\nHRERA-PKL-JND-314-2022",
+      "buttons": [
+       "Book site visit",
+       "Download brochure",
+       "Request callback"
+      ]
+     },
+     {
+      "name": "fv_jind_sco_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Discover commercial plots at *Forteasia Flower Valley, Sector 26, Jind*.\n\n🏬 DSS · SCO · Booths\n🛣️ On a 24-metre-wide road, with frontage parking\n🏡 Inside an established residential township, behind PGI Jind\n\nOwn the shop your neighbourhood walks into. Tap *Know more* to see which plot suits you.\n\nHRERA-PKL-JND-314-2022",
+      "buttons": [
+       "Know more",
+       "Download brochure",
+       "Request callback"
+      ]
+     },
+     {
+      "name": "fv_jind_video_v1",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "VIDEO",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "See *Forteasia Flower Valley, Sector 26, Jind* after sunset 🌙\n\nThe musical fountain, parks, open-air gym and lit walkways, where families of the township spend their evenings.\n\nThe commercial plots are at the front of this township, on the 24-metre-wide road, so these families are right next to your shop.\n\n🏬 SCO (G+3), double-storey shops and booths\n\nTap below for a site visit, the brochure or a call.\n\nHRERA-PKL-JND-314-2022 · www.haryanarera.gov.in",
+      "buttons": [
+       "Book site visit",
+       "Download brochure",
+       "Request callback"
+      ]
+     },
+     {
+      "name": "fv_jind_sco_launch",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Namaste 🙏\n\nCommercial plots are now open at *Forteasia Flower Valley, Sector 26, Jind*.\n\n🏬 DSS · SCO · Booths\n🛣️ On a 24-metre-wide road, with frontage parking\n🏡 Inside an established residential township, behind PGI Jind\n\nOwn the shop your neighbourhood walks into. Tap below for the price list or a free site visit.\n\nHRERA-PKL-JND-314-2022 · www.haryanarera.gov.in",
+      "buttons": [
+       "Send price list",
+       "Book site visit",
+       "Call me"
+      ]
+     },
+     {
+      "name": "sales_visit_confirm_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello, your site visit to Forteasia Industrial Township is confirmed for {{1}}.\n\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\nOur team will meet you at the site. If the time does not suit you, reply here.",
+      "buttons": []
+     },
+     {
+      "name": "sales_after_call_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello, thank you for your time on the call with the Forteasia team.\n\nSharing the brochure and site location of Forteasia Industrial Township as discussed.\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\n\nYou can message us here any time.",
+      "buttons": [
+       "Download Brochure",
+       "Plan a site visit"
+      ]
+     },
+     {
+      "name": "sales_last_try_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello, we tried reaching you a few times about your plot enquiry. We will not call again for now.\n\nWhenever you want the details or a site visit, reply here and we will call you.",
+      "buttons": [
+       "Call me now"
+      ]
+     },
+     {
+      "name": "sales_details_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello, we could not reach you on the phone, so we are sharing the details here.\n\nForteasia Industrial Township, Meham-Beri Road, Rohtak. HRERA registered. Industrial plots of 500 to 4,000 sq yd.\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\n\nReply with a time that suits you and we will call.",
+      "buttons": [
+       "Download Brochure",
+       "Call me tomorrow"
+      ]
+     },
+     {
+      "name": "sales_missed_call_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello, this is the Forteasia sales team. We tried calling you about your enquiry for plots at Forteasia Industrial Township.\n\nWhen should we call you?",
+      "buttons": [
+       "Call me now",
+       "Call me this evening",
+       "Call me tomorrow"
+      ]
+     },
+     {
+      "name": "fit_sales_daily_plan",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Good morning {{1}}! Your FIT plan for today:\n\n📞 Call first: {{2}}\n\n🏭 Site visits: {{3}}\n\n🔁 Follow-ups due: {{4}}\n\n🎯 Focus today: {{5}}\n\nUpdate every call in the Leads sheet or with the buttons on the lead alerts, so we can track visits and bookings.",
+      "buttons": [
+       "OK"
+      ]
+     },
+     {
+      "name": "sales_visit_confirm",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello {{1}}, your site visit to Forteasia Industrial Township is confirmed for {{2}}.\n\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\n{{3}} will meet you at the site. If the time does not suit you, reply here.",
+      "buttons": []
+     },
+     {
+      "name": "sales_after_call",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello {{1}}, thank you for your time. This is {{2}} from Forteasia.\n\nSharing the brochure and site location of Forteasia Industrial Township as discussed.\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\n\nYou can message me here any time.",
+      "buttons": [
+       "Download Brochure",
+       "Plan a site visit"
+      ]
+     },
+     {
+      "name": "sales_last_try",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello {{1}}, I tried reaching you a few times about your plot enquiry. I will not call again for now.\n\nWhenever you want the details or a site visit, reply here and I will call you.",
+      "buttons": [
+       "Call me now"
+      ]
+     },
+     {
+      "name": "sales_details",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello {{1}}, I could not reach you on the phone, so I am sharing the details here.\n\nForteasia Industrial Township, Meham-Beri Road, Rohtak. HRERA registered. Industrial plots of 500 to 4,000 sq yd.\nLocation: https://maps.google.com/?q=Village+Anwal+Kalanaur+Rohtak+Haryana\n\nReply with a time that suits you and I will call.",
+      "buttons": [
+       "Download Brochure",
+       "Call me tomorrow"
+      ]
+     },
+     {
+      "name": "sales_missed_call",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hello {{1}}, this is {{2}} from Forteasia. I tried calling you about your enquiry for plots at Forteasia Industrial Township.\n\nWhen should I call you?",
+      "buttons": [
+       "Call me now",
+       "Call me this evening",
+       "Call me tomorrow"
+      ]
+     },
+     {
+      "name": "fit_fact_card",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, here is one more reason units are choosing *Forteasia Industrial Township (FIT)*, Kalanaur, Rohtak 👆\n\nHave a question about plots, approvals or subsidies? Tap *Ask AI Bot* for an answer any time, or tap *Get location* to plan your route to the site.",
+      "buttons": [
+       "Ask AI Bot",
+       "Get location",
+       "Check my subsidies"
+      ]
+     },
+     {
+      "name": "fit_leads_daily_status_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "TEXT",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "*Tap OK below to keep receiving these updates.*\n\nDate: {{1}}\n\nTotal leads: {{2}}\nNew in last 24h: {{3}}\n\n🟢 Site visit planned: {{4}}\n✅ Visit done, interested: {{5}}\n⛔ Visit done, not interested: {{6}}\n🟡 Call again: {{7}}\n   • not picked / unreachable: {{8}}\n   • other follow-ups: {{9}}\n🔴 Not interested: {{10}}\n⚪ Not called yet: {{11}}\n\nFull details are in the Leads sheet.",
+      "buttons": [
+       "OK",
+       "Open Leads Sheet"
+      ]
+     },
+     {
+      "name": "fit_autopilot_daily",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "TEXT",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Here is the daily update from the FIT WhatsApp autopilot for {{1}}.\n\n*Yesterday's results:* {{2}}\n\n*What the system learnt:* {{3}}\n\n*Plan for today:* {{4}}\n\n*Account status and safety checks:* {{5}}\n\nThe full report is in the team inbox under Broadcasts.",
+      "buttons": []
+     },
+     {
+      "name": "fit_video_nudge",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "VIDEO",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, here is a 90-second walk through *Forteasia Industrial Township (FIT)*, Kalanaur, Rohtak.\n\n🏭 Industrial plots of 500 to 4,000 sq yd on 18 m and 24 m roads\n🛣️ Rohtak-Bhiwani Highway 5 min, NH-152D 10 min\n💰 New plots are in Haryana's *Sub-Prime* subsidy category: 25% capital subsidy (thrust sectors) and 75% stamp duty refund\n✅ DTCP licensed, HRERA-PKL-ROH-795-2025\n\nWatch the video, then tap *Check my subsidies* or ask our AI bot anything.",
+      "buttons": [
+       "Check my subsidies",
+       "Ask AI Bot",
+       "Plan a site visit"
+      ]
+     },
+     {
+      "name": "fit_subsidy_nudge",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, planning to expand or shift your unit in the next year?\n\nUnder Haryana's 2026 MSME policy, new plots at *FIT Rohtak* are in the *Sub-Prime* area category, so your unit can get:\n• 25% capital subsidy, up to ₹3.5 crore (thrust sectors)\n• 75% stamp duty refund on the plot\n• 7% interest subsidy, up to ₹25 lakh a year\n• 50 to 60% SGST back for 7 years\n\nFIT is a DTCP-licensed, RERA-approved industrial township at Kalanaur, with plots from 500 sq yd.\n\nTap *Check my subsidies* for your industry, or ask our AI bot anything.",
+      "buttons": [
+       "Check my subsidies",
+       "Ask AI Bot",
+       "Download Brochure"
+      ]
+     },
+     {
+      "name": "fit_walkthrough_video",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "VIDEO",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, thank you for your interest in *Forteasia Industrial Township (FIT)*, Kalanaur, Rohtak. Here is a walkthrough of the township 🎥\n\n🏭 Industrial plots from ₹19,990 per sq yd, 500 to 4,000 sq yd\n🏡 Residential plots of 90 to 160 sq yd for you and your team\n💰 New plots are in Haryana's *Sub-Prime* subsidy category: 25% capital subsidy (thrust sectors) and 75% stamp duty refund\n✅ DTCP licensed, HRERA-PKL-ROH-795-2025\n\nThe best way to judge FIT is to see it. Tap *Plan a site visit* and we will arrange it at a time that suits you.",
+      "buttons": [
+       "Plan a site visit",
+       "Check my subsidies",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "industry_lead_alert_v2",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "New FIT industry lead alert.\n\nCompany: {{1}}\nContact: {{2}}\nPhone: {{3}}\nActivity: {{4}}\n\nThe lead has been added to the FIT Leads sheet. After your call, tap the outcome below and add a remark.",
+      "buttons": [
+       "Site visit planned",
+       "Not picked/Call later",
+       "Not interested"
+      ]
+     },
+     {
+      "name": "fit_leads_daily_status",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "TEXT",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Date: {{1}}\n\nTotal leads: {{2}}\nNew in last 24h: {{3}}\n\n🟢 Site visit planned: {{4}}\n✅ Visit done, interested: {{5}}\n⛔ Visit done, not interested: {{6}}\n🟡 Call again: {{7}}\n   • not picked / unreachable: {{8}}\n   • other follow-ups: {{9}}\n🔴 Not interested: {{10}}\n⚪ Not called yet: {{11}}\n\nLeads sheet: https://docs.google.com/spreadsheets/d/1E9HR3b-hnmlnuk6aWXnGQ-BcC6YIv13vZPASHKuRmSk",
+      "buttons": [
+       "Open Leads Sheet"
+      ]
+     },
+     {
+      "name": "industry_lead_alert",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "New FIT industry lead alert.\n\nCompany: {{1}}\nContact: {{2}}\nPhone: {{3}}\nActivity: {{4}}\n\nThe lead has been added to the FIT Industry Warm Leads sheet for follow-up.",
+      "buttons": []
+     },
+     {
+      "name": "resort_carousel",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": true,
+      "body": "Hi {{1}}, discover *Forteasia Resort* and take a walk through our 13.7 acre gated township in Rohtak.\n\nSwipe through the cards to see the plots, clubhouse, sports facilities and location, and tap Know more on anything you would like details on.\n\n_Reply STOP to stop updates_",
+      "buttons": []
+     },
+     {
+      "name": "fit_carousel",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": true,
+      "body": "Hi {{1}}, a short walkthrough of *Forteasia’s 138+ acre integrated township* in Rohtak.\n\nSwipe through the cards to see the plots, location and amenities, and tap Know more on anything you would like details on.\n\n_Reply STOP to stop updates_",
+      "buttons": []
+     },
+     {
+      "name": "fit_industry_carousel",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": true,
+      "body": "Hi {{1}}, discover and take a walkthrough of *Forteasia's 138+ acre RERA approved Industrial Township* at Kalanaur, Rohtak.\n\nSwipe through the cards to see the plots, infrastructure and location, and tap *Check my subsidies* to see what Haryana's 2026 policies offer your industry.\n\n_Reply STOP to stop updates_",
+      "buttons": []
+     },
+     {
+      "name": "fit_industry",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, build your next unit at *Forteasia Industrial Township (FIT)*, a *138+ acre RERA approved township* at Kalanaur, Rohtak, with industrial plots of 500 to 4,000 sq yd.\n\n🏭 For manufacturing units, MSMEs, warehousing and logistics\n🛣️ 18 m and 24 m internal roads for heavy vehicles\n⚡ Power, water, drainage and sewage treatment\n📍 Rohtak-Bhiwani Highway 5 min, IMT Rohtak 25 min\n💰 Haryana's 2026 policies offer capital subsidy, interest subsidy, SGST reimbursement and stamp duty refunds\n✅ HRERA-PKL-ROH-795-2025, 653-2025\n📞 +91 92206 07264\n\nTap *Check my subsidies* to see what your industry gets.",
+      "buttons": [
+       "Check my subsidies",
+       "Explore Township",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "fit_golf",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, Discover premium residential plots with a golf course at *Forteasia’s 138+ acre Integrated Township* in Rohtak.\n\n🏡 Plots of 90 to 160 sq yd\n💰 Starting from ₹27 lakh\n✅ RERA approved (HRERA-PKL-ROH-653-2025, 795-2025)\n📍 Meham-Beri Road, Kalanaur, Rohtak\n📞 +91 92206 07264\n\nTap below to explore the township or have our team call you.",
+      "buttons": [
+       "Explore Township",
+       "Download Brochure",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "lead_welcome",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, thank you for contacting Forteasia Group!\n\nWe develop industrial, residential and commercial projects across Haryana.\n\nTap below to see our projects or have our team call you.",
+      "buttons": [
+       "Explore Projects",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "fit_promo",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, discover Forteasia's 138+ acre Integrated Township in Rohtak, where you can work, live and grow.\n\n🏡 *Residential plots:* 90 to 160 sq yd, starting from ₹27 lakh\n\n⛳ *Amenities:* golf course strip, clubhouse with swimming pool and gym, landscaped parks, jogging tracks, kids' play areas and a temple\n\n📍 *Connectivity:* 5 min from the Rohtak-Bhiwani Highway, 10 min from NH-152D, 15 min from the Delhi-Hisar Highway and 40 min from the KMP Expressway\n\nTap below to explore the township or get a call from our team.",
+      "buttons": [
+       "Explore Township",
+       "Download Brochure",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "resort_promo",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "MARKETING",
+      "rejected_reason": "NONE",
+      "header": "IMAGE",
+      "hasHeaderLink": true,
+      "carousel": false,
+      "body": "Hi {{1}}, *Don't just buy land. Buy the lifestyle.* Discover premium residential plots with resort-style living at *Forteasia Resort*, a 13.7 acre gated township in Sectors 22A & 21C, Rohtak.\n\n🏡 200 plots of 148 to 179 sq yd\n🎾 Clubhouse, gym, lawn tennis, cricket turf and more\n🌳 Parks, jogging tracks, kids' play area and a temple\n✅ RERA approved (HRERA-PKL-ROH-750-2025)\n📍 12 min from the railway station, 15 min from MDU\n📞 +91 92206 07264\n\nTap below to explore the project or have our team call you.",
+      "buttons": [
+       "Explore Project",
+       "Download Brochure",
+       "Request Callback"
+      ]
+     },
+     {
+      "name": "enquiry_received",
+      "language": "en",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Hi {{1}}, thank you for your enquiry with Forteasia. We have received your request and our team will call you shortly.\n\nIf it helps, tap below to tell us how you'd like to connect.",
+      "buttons": [
+       "Call me now",
+       "Chat here first"
+      ]
+     },
+     {
+      "name": "hello_world",
+      "language": "en_US",
+      "status": "APPROVED",
+      "category": "UTILITY",
+      "rejected_reason": "NONE",
+      "header": "TEXT",
+      "hasHeaderLink": false,
+      "carousel": false,
+      "body": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us.",
+      "buttons": []
+     }
+    ]
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-24T16:48:29.606Z"
+  }
+ ]
+}
