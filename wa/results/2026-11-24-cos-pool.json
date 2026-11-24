@@ -1,0 +1,2885 @@
+{
+ "at": "2026-11-24 22:09",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.summary",
+   "changes": false,
+   "result": {
+    "days": {
+     "14 Nov": {
+      "new": {
+       "s": 975,
+       "d": 586,
+       "r": 388,
+       "l": 11,
+       "f": 384
+      },
+      "follow": {
+       "s": 273,
+       "d": 223,
+       "r": 151,
+       "l": 4,
+       "f": 44
+      },
+      "retry": {
+       "s": 299,
+       "d": 117,
+       "r": 79,
+       "l": 3,
+       "f": 180
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 391,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 194,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 23,
+        "retry": false
+       }
+      },
+      "date": "2026-11-14"
+     },
+     "24 Nov": {
+      "new": {
+       "s": 1177,
+       "d": 505,
+       "r": 281,
+       "l": 7,
+       "f": 654
+      },
+      "follow": {
+       "s": 52,
+       "d": 41,
+       "r": 22,
+       "l": 0,
+       "f": 11
+      },
+      "retry": {
+       "s": 267,
+       "d": 85,
+       "r": 54,
+       "l": 1,
+       "f": 175
+      },
+      "warm": {
+       "s": 52,
+       "d": 36,
+       "r": 19,
+       "l": 3,
+       "f": 12
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry_carousel": {
+        "s": 10,
+        "d": 7,
+        "r": 5,
+        "l": 1,
+        "f": 3
+       },
+       "fit_industry": {
+        "s": 8,
+        "d": 6,
+        "r": 3,
+        "l": 1,
+        "f": 2
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 32,
+        "d": 23,
+        "r": 11,
+        "l": 1,
+        "f": 6
+       },
+       "fit_subsidy_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 728,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 113,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 9,
+        "retry": false
+       },
+       "131000 Something went wrong": {
+        "n": 2,
+        "retry": true
+       }
+      },
+      "date": "2026-11-24"
+     },
+     "18 Nov": {
+      "new": {
+       "s": 773,
+       "d": 440,
+       "r": 294,
+       "l": 4,
+       "f": 328
+      },
+      "follow": {
+       "s": 405,
+       "d": 337,
+       "r": 269,
+       "l": 4,
+       "f": 64
+      },
+      "retry": {
+       "s": 248,
+       "d": 118,
+       "r": 66,
+       "l": 2,
+       "f": 128
+      },
+      "warm": {
+       "s": 36,
+       "d": 24,
+       "r": 19,
+       "l": 0,
+       "f": 12
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 18,
+        "d": 12,
+        "r": 9,
+        "l": 0,
+        "f": 6
+       },
+       "fit_industry_carousel": {
+        "s": 6,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 4
+       },
+       "fit_video_nudge": {
+        "s": 5,
+        "d": 4,
+        "r": 4,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 5,
+        "d": 4,
+        "r": 2,
+        "l": 0,
+        "f": 1
+       },
+       "fit_subsidy_nudge": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 416,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 104,
+        "retry": false
+       },
+       "Person stopped marketing messages (131050)": {
+        "n": 1,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 11,
+        "retry": false
+       }
+      },
+      "date": "2026-11-18"
+     },
+     "15 Nov": {
+      "new": {
+       "s": 848,
+       "d": 83,
+       "r": 53,
+       "l": 1,
+       "f": 764
+      },
+      "follow": {
+       "s": 251,
+       "d": 19,
+       "r": 13,
+       "l": 1,
+       "f": 232
+      },
+      "retry": {
+       "s": 225,
+       "d": 13,
+       "r": 6,
+       "l": 0,
+       "f": 212
+      },
+      "warm": {
+       "s": 79,
+       "d": 5,
+       "r": 2,
+       "l": 0,
+       "f": 74
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry": {
+        "s": 29,
+        "d": 2,
+        "r": 0,
+        "l": 0,
+        "f": 27
+       },
+       "fit_industry_carousel": {
+        "s": 45,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 43
+       },
+       "fit_video_nudge": {
+        "s": 5,
+        "d": 1,
+        "r": 1,
+        "l": 0,
+        "f": 4
+       }
+      },
+      "fails": {
+       "Sent too fast for Meta (rate limit), safe to retry (130429)": {
+        "n": 1130,
+        "retry": true
+       },
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 34,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 117,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 1,
+        "retry": false
+       }
+      },
+      "date": "2026-11-15"
+     },
+     "12 Nov": {
+      "new": {
+       "s": 988,
+       "d": 626,
+       "r": 449,
+       "l": 12,
+       "f": 355
+      },
+      "follow": {
+       "s": 273,
+       "d": 218,
+       "r": 171,
+       "l": 6,
+       "f": 54
+      },
+      "retry": {
+       "s": 279,
+       "d": 55,
+       "r": 46,
+       "l": 2,
+       "f": 223
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 452,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 159,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 21,
+        "retry": false
+       }
+      },
+      "date": "2026-11-12"
+     },
+     "13 Nov": {
+      "new": {
+       "s": 1010,
+       "d": 591,
+       "r": 414,
+       "l": 10,
+       "f": 415
+      },
+      "follow": {
+       "s": 273,
+       "d": 206,
+       "r": 152,
+       "l": 2,
+       "f": 66
+      },
+      "retry": {
+       "s": 245,
+       "d": 95,
+       "r": 53,
+       "l": 0,
+       "f": 148
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 436,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 177,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 16,
+        "retry": false
+       }
+      },
+      "date": "2026-11-13"
+     },
+     "20 Nov": {
+      "new": {
+       "s": 763,
+       "d": 446,
+       "r": 307,
+       "l": 5,
+       "f": 313
+      },
+      "follow": {
+       "s": 259,
+       "d": 195,
+       "r": 136,
+       "l": 4,
+       "f": 59
+      },
+      "retry": {
+       "s": 445,
+       "d": 175,
+       "r": 87,
+       "l": 3,
+       "f": 264
+      },
+      "warm": {
+       "s": 2,
+       "d": 2,
+       "r": 1,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 54,
+       "d": 36,
+       "r": 26,
+       "l": 0,
+       "f": 14
+      },
+      "warmTpl": {
+       "fit_industry": {
+        "s": 21,
+        "d": 11,
+        "r": 8,
+        "l": 0,
+        "f": 7
+       },
+       "fit_industry_carousel": {
+        "s": 32,
+        "d": 24,
+        "r": 18,
+        "l": 0,
+        "f": 7
+       },
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 520,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 115,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 15,
+        "retry": false
+       }
+      },
+      "date": "2026-11-20"
+     },
+     "16 Nov": {
+      "new": {
+       "s": 158,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 158
+      },
+      "follow": {
+       "s": 72,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 72
+      },
+      "retry": {
+       "s": 41,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 41
+      },
+      "warm": {
+       "s": 8,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 8
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry_carousel": {
+        "s": 2,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 2
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 4,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 4
+       },
+       "fit_industry": {
+        "s": 2,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 2
+       }
+      },
+      "fails": {
+       "Sent too fast for Meta (rate limit), safe to retry (130429)": {
+        "n": 254,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 23,
+        "retry": false
+       },
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 2,
+        "retry": true
+       }
+      },
+      "date": "2026-11-16"
+     },
+     "19 Nov": {
+      "new": {
+       "s": 1560,
+       "d": 937,
+       "r": 634,
+       "l": 11,
+       "f": 613
+      },
+      "follow": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "retry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warm": {
+       "s": 2,
+       "d": 1,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 461,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 127,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 22,
+        "retry": false
+       },
+       "131000 Something went wrong": {
+        "n": 2,
+        "retry": true
+       },
+       "2 Something went wrong.": {
+        "n": 1,
+        "retry": false
+       }
+      },
+      "date": "2026-11-19"
+     },
+     "23 Nov": {
+      "new": {
+       "s": 1192,
+       "d": 618,
+       "r": 404,
+       "l": 7,
+       "f": 559
+      },
+      "follow": {
+       "s": 53,
+       "d": 46,
+       "r": 40,
+       "l": 2,
+       "f": 6
+      },
+      "retry": {
+       "s": 285,
+       "d": 136,
+       "r": 93,
+       "l": 1,
+       "f": 146
+      },
+      "warm": {
+       "s": 23,
+       "d": 14,
+       "r": 8,
+       "l": 1,
+       "f": 9
+      },
+      "wretry": {
+       "s": 10,
+       "d": 4,
+       "r": 4,
+       "l": 0,
+       "f": 6
+      },
+      "warmTpl": {
+       "fit_industry": {
+        "s": 7,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 1
+       },
+       "fit_industry_carousel": {
+        "s": 8,
+        "d": 4,
+        "r": 2,
+        "l": 0,
+        "f": 4
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 10,
+        "d": 5,
+        "r": 3,
+        "l": 0,
+        "f": 5
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 7,
+        "d": 3,
+        "r": 3,
+        "l": 0,
+        "f": 4
+       },
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 530,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 173,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 23,
+        "retry": false
+       }
+      },
+      "date": "2026-11-23"
+     },
+     "22 Nov": {
+      "new": {
+       "s": 1292,
+       "d": 831,
+       "r": 546,
+       "l": 8,
+       "f": 450
+      },
+      "follow": {
+       "s": 54,
+       "d": 44,
+       "r": 31,
+       "l": 0,
+       "f": 9
+      },
+      "retry": {
+       "s": 179,
+       "d": 96,
+       "r": 57,
+       "l": 4,
+       "f": 82
+      },
+      "warm": {
+       "s": 27,
+       "d": 24,
+       "r": 18,
+       "l": 4,
+       "f": 3
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_subsidy_nudge": {
+        "s": 6,
+        "d": 4,
+        "r": 2,
+        "l": 1,
+        "f": 2
+       },
+       "fit_industry_carousel": {
+        "s": 7,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 10,
+        "d": 10,
+        "r": 8,
+        "l": 2,
+        "f": 0
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 391,
+        "retry": true
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 16,
+        "retry": false
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 137,
+        "retry": false
+       }
+      },
+      "date": "2026-11-22"
+     },
+     "21 Nov": {
+      "new": {
+       "s": 1213,
+       "d": 717,
+       "r": 480,
+       "l": 9,
+       "f": 487
+      },
+      "follow": {
+       "s": 54,
+       "d": 40,
+       "r": 26,
+       "l": 0,
+       "f": 12
+      },
+      "retry": {
+       "s": 337,
+       "d": 194,
+       "r": 139,
+       "l": 1,
+       "f": 141
+      },
+      "warm": {
+       "s": 10,
+       "d": 9,
+       "r": 8,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 6,
+       "d": 4,
+       "r": 2,
+       "l": 0,
+       "f": 2
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 5,
+        "d": 4,
+        "r": 4,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 9,
+        "d": 7,
+        "r": 6,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry_carousel": {
+        "s": 2,
+        "d": 2,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 474,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 150,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 18,
+        "retry": false
+       }
+      },
+      "date": "2026-11-21"
+     }
+    },
+    "retry": {
+     "waiting": 6692,
+     "dueToday": 4465,
+     "dueTomorrow": 405,
+     "dueLater": 1822,
+     "byDay": {
+      "24 Nov": 4465,
+      "25 Nov": 405,
+      "26 Nov": 450,
+      "27 Nov": 507,
+      "28 Nov": 653,
+      "29 Nov": 75,
+      "30 Nov": 137
+     },
+     "gaveUp": 0,
+     "permanent": 1765,
+     "permReasons": {
+      "Number can't receive WhatsApp messages (131026)": 1588,
+      "Meta test group (not delivered) (130472)": 175,
+      "2 Something went wrong.": 1,
+      "Person stopped marketing messages (131050)": 1
+     },
+     "sent": {
+      "s": 2850,
+      "d": 1084,
+      "r": 680,
+      "l": 17,
+      "f": 1740
+     },
+     "earlier": 1810
+    },
+    "warmRetry": {
+     "waiting": 46,
+     "dueToday": 0,
+     "dueTomorrow": 0,
+     "dueLater": 46,
+     "byDay": {
+      "26 Nov": 17,
+      "27 Nov": 11,
+      "28 Nov": 12,
+      "29 Nov": 6
+     },
+     "gaveUp": 0,
+     "permanent": 1,
+     "permReasons": {
+      "Number can't receive WhatsApp messages (131026)": 1
+     },
+     "sent": {
+      "s": 70,
+      "d": 44,
+      "r": 32,
+      "l": 0,
+      "f": 22
+     }
+    },
+    "warm": {
+     "reengage": 167,
+     "visit": 37,
+     "stopped": 256,
+     "total": 460,
+     "sent": {
+      "s": 309,
+      "d": 159,
+      "r": 107,
+      "l": 8,
+      "f": 140
+     },
+     "neverSent": 61
+    },
+    "readers": {
+     "total": 6799,
+     "hot": 734,
+     "due": 3182,
+     "hotDue": 405,
+     "done": 3318
+    },
+    "gaps": [
+     4,
+     6,
+     8
+    ]
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-24T16:40:04.914Z"
+  },
+  {
+   "ok": true,
+   "op": "autopilot",
+   "changes": false,
+   "result": {
+    "cfg": {
+     "on": true,
+     "budgetInr": 1005,
+     "costPerDelivered": 1.02,
+     "maxLeadsPerDay": 25,
+     "minRelValue": 0.3,
+     "followShare": 0.25,
+     "firstOnly": true,
+     "coldRetry": true,
+     "retryMaxShare": 0.3,
+     "coldFollow": "learn",
+     "followLearn": {
+      "floor": 0.05,
+      "lowRatio": 0.3,
+      "max": 0.05,
+      "minDelivered": 300,
+      "minLeads": 15
+     },
+     "maxRetries": 3,
+     "retryGapDays": [
+      4,
+      6,
+      8
+     ],
+     "retryShare": 0.1,
+     "retryPrior": {
+      "ratio": 0.9,
+      "strength": 400,
+      "deliver": 0.4
+     },
+     "explore": 0.2,
+     "maxCellShare": 0.35,
+     "testCellSends": 120,
+     "maxTestCells": 20,
+     "provenTouches": 5,
+     "testTouches": 2,
+     "hotScore": 75,
+     "hotTouches": 4,
+     "slots": [
+      "08:15",
+      "10:00",
+      "11:45",
+      "13:30",
+      "15:15",
+      "17:00",
+      "20:30",
+      "21:15"
+     ],
+     "minSlotShare": 0.08,
+     "slotPrior": {
+      "08:15": [
+       4,
+       550
+      ],
+      "10:00": [
+       8,
+       380
+      ],
+      "11:45": [
+       8,
+       380
+      ],
+      "13:30": [
+       4,
+       550
+      ],
+      "15:15": [
+       4,
+       550
+      ],
+      "17:00": [
+       6,
+       440
+      ],
+      "18:45": [
+       5,
+       470
+      ],
+      "20:30": [
+       5,
+       470
+      ],
+      "21:15": [
+       5,
+       470
+      ]
+     },
+     "sequence": [
+      "fit_industry",
+      "fit_industry_carousel",
+      "fit_video_nudge",
+      "fit_subsidy_nudge"
+     ],
+     "firstTemplates": [
+      "fit_industry",
+      "fit_video_nudge"
+     ],
+     "learnFirst": true,
+     "followTemplates": [
+      "fit_video_nudge",
+      "fit_industry_carousel",
+      "fit_subsidy_nudge",
+      "fit_industry"
+     ],
+     "videoTemplates": [
+      "fit_video_nudge",
+      "fit_walkthrough_video"
+     ],
+     "points": {
+      "lead": 1,
+      "fu": 4,
+      "sv": 10,
+      "vdone": 25,
+      "stop": -3
+     },
+     "festivalDays": [],
+     "festivalShare": 0.5,
+     "pausedCells": [],
+     "planAt": "07:30",
+     "reportTo": [
+      "[number]"
+     ],
+     "warm": {
+      "on": true,
+      "reengage": {
+       "gapDays": 3,
+       "max": 8,
+       "rotation": [
+        "fit_industry",
+        "fit_industry_carousel",
+        "fit_video_nudge",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_walkthrough_video",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "visit": {
+       "gapDays": 4,
+       "max": 6,
+       "rotation": [
+        "fit_fact_card",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "quietDays": 2,
+      "stopAfterUnread": 3
+     },
+     "reportTemplate": "fit_autopilot_daily"
+    },
+    "pool": {
+     "rows": 66381,
+     "at": "2026-11-11T14:05:22.524Z"
+    },
+    "report": {
+     "broadcasts": [
+      {
+       "id": "C#2026-11-24T06:15:00.000Z#ap0a6ff6",
+       "n": 73,
+       "slot": "11:45",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T15:00:00.000Z#ap1835ae",
+       "n": 107,
+       "slot": "20:30",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T11:30:00.000Z#apac525e",
+       "n": 106,
+       "slot": "17:00",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T06:15:00.000Z#apbb8bdf",
+       "n": 171,
+       "slot": "11:45",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T08:00:00.000Z#ape3c27c",
+       "n": 61,
+       "slot": "13:30",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T04:30:00.000Z#ap7771f5",
+       "n": 86,
+       "slot": "10:00",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T04:30:00.000Z#ap634dff",
+       "n": 150,
+       "slot": "10:00",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T11:30:00.000Z#ape0a427",
+       "n": 53,
+       "slot": "17:00",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T15:00:00.000Z#ap7bb2d3",
+       "n": 164,
+       "slot": "20:30",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T15:45:00.000Z#ap75d8b5",
+       "n": 67,
+       "slot": "21:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T09:45:00.000Z#ap766378",
+       "n": 85,
+       "slot": "15:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T15:45:00.000Z#ap47a495",
+       "n": 49,
+       "slot": "21:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T09:45:00.000Z#ap8d2252",
+       "n": 49,
+       "slot": "15:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T02:45:00.000Z#ap3b22f7",
+       "n": 49,
+       "slot": "08:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T08:00:00.000Z#ap9a75ab",
+       "n": 30,
+       "slot": "13:30",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-24T02:45:00.000Z#apb0c2c8",
+       "n": 91,
+       "slot": "08:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-24T15:00:00.000Z#ap3c776c",
+       "n": 23,
+       "slot": "20:30",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T06:15:00.000Z#ape3582b",
+       "n": 5,
+       "slot": "11:45",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T15:45:00.000Z#ape6fcca",
+       "n": 5,
+       "slot": "21:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T15:00:00.000Z#apf5a0ce",
+       "n": 9,
+       "slot": "20:30",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T09:45:00.000Z#apa4eaeb",
+       "n": 1,
+       "slot": "15:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T02:45:00.000Z#apc7dcd4",
+       "n": 6,
+       "slot": "08:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T08:00:00.000Z#ap81eaa4",
+       "n": 5,
+       "slot": "13:30",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T11:30:00.000Z#ap6791e5",
+       "n": 6,
+       "slot": "17:00",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T15:45:00.000Z#ap439b2a",
+       "n": 3,
+       "slot": "21:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T04:30:00.000Z#ap792c4b",
+       "n": 4,
+       "slot": "10:00",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T09:45:00.000Z#ap2a6454",
+       "n": 7,
+       "slot": "15:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T06:15:00.000Z#ap96e746",
+       "n": 10,
+       "slot": "11:45",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T11:30:00.000Z#ap12b9c1",
+       "n": 8,
+       "slot": "17:00",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-24T02:45:00.000Z#apd124ba",
+       "n": 2,
+       "slot": "08:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T08:00:00.000Z#ap2ee018",
+       "n": 1,
+       "slot": "13:30",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-24T04:30:00.000Z#ap1b9198",
+       "n": 10,
+       "slot": "10:00",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T02:45:00.000Z#awcd360b",
+       "n": 4,
+       "slot": "08:15",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T11:30:00.000Z#aw56a81a",
+       "n": 3,
+       "slot": "17:00",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T04:30:00.000Z#aw58ee81",
+       "n": 6,
+       "slot": "10:00",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T15:00:00.000Z#aw20fb86",
+       "n": 7,
+       "slot": "20:30",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T08:00:00.000Z#aw571dc7",
+       "n": 1,
+       "slot": "13:30",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T02:45:00.000Z#awe7bcce",
+       "n": 2,
+       "slot": "08:15",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T11:30:00.000Z#awe5366b",
+       "n": 1,
+       "slot": "17:00",
+       "template": "fit_subsidy_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T06:15:00.000Z#aw13d647",
+       "n": 6,
+       "slot": "11:45",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T15:45:00.000Z#aw605913",
+       "n": 2,
+       "slot": "21:15",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T09:45:00.000Z#aw6d77bd",
+       "n": 1,
+       "slot": "15:15",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T06:15:00.000Z#aw3667d2",
+       "n": 2,
+       "slot": "11:45",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T11:30:00.000Z#aw458b53",
+       "n": 2,
+       "slot": "17:00",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T08:00:00.000Z#aw52f545",
+       "n": 3,
+       "slot": "13:30",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T15:45:00.000Z#awc7cb0c",
+       "n": 1,
+       "slot": "21:15",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T09:45:00.000Z#aw326b56",
+       "n": 1,
+       "slot": "15:15",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T04:30:00.000Z#awd75c66",
+       "n": 1,
+       "slot": "10:00",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T09:45:00.000Z#aw888197",
+       "n": 2,
+       "slot": "15:15",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-24T04:30:00.000Z#awe916ed",
+       "n": 1,
+       "slot": "10:00",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T11:30:00.000Z#awa2fb96",
+       "n": 1,
+       "slot": "17:00",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T15:00:00.000Z#aw7599fb",
+       "n": 2,
+       "slot": "20:30",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T08:00:00.000Z#awffdb37",
+       "n": 1,
+       "slot": "13:30",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T02:45:00.000Z#aw0b41e3",
+       "n": 1,
+       "slot": "08:15",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-24T15:45:00.000Z#aw052bd4",
+       "n": 1,
+       "slot": "21:15",
+       "template": "fit_industry_carousel",
+       "warm": true
+      }
+     ],
+     "budgetDeliv": 935,
+     "cells": [
+      {
+       "c": "O.eng.mid",
+       "delivered": 417,
+       "freshLeft": 0,
+       "fu": 4,
+       "label": "Other 51 to 75 km, engineering/auto, score 55-74",
+       "leads": 9,
+       "optouts": 0,
+       "proven": true,
+       "q": 5.8,
+       "rate": 2.12,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 4
+      },
+      {
+       "c": "a.oth.hi",
+       "delivered": 900,
+       "freshLeft": 0,
+       "fu": 11,
+       "label": "Within 30 km, textile/furniture/other mfg, score 75+",
+       "leads": 24,
+       "optouts": 2,
+       "proven": true,
+       "q": 4.6,
+       "rate": 2.6,
+       "today": {
+        "first": 0,
+        "follow": 52,
+        "retry": 0
+       },
+       "visits": 9
+      },
+      {
+       "c": "a.chem.hi",
+       "delivered": 204,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Within 30 km, plastics/pharma/chem, score 75+",
+       "leads": 5,
+       "optouts": 0,
+       "proven": true,
+       "q": 4.1,
+       "rate": 2.15,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 10
+       },
+       "visits": 2
+      },
+      {
+       "c": "a.oth.lo",
+       "delivered": 12,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, textile/furniture/other mfg, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 4.2,
+       "rate": 2.01,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.eng.hi",
+       "delivered": 531,
+       "freshLeft": 0,
+       "fu": 4,
+       "label": "Within 30 km, engineering/auto, score 75+",
+       "leads": 14,
+       "optouts": 2,
+       "proven": true,
+       "q": 3.2,
+       "rate": 2.54,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 28
+       },
+       "visits": 4
+      },
+      {
+       "c": "O.eng.lo",
+       "delivered": 168,
+       "freshLeft": 149,
+       "fu": 1,
+       "label": "Other 51 to 75 km, engineering/auto, score <55",
+       "leads": 3,
+       "optouts": 0,
+       "proven": false,
+       "q": 4.1,
+       "rate": 1.89,
+       "today": {
+        "first": 116,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.chem.mid",
+       "delivered": 125,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "31 to 50 km, plastics/pharma/chem, score 55-74",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 3,
+       "rate": 2.51,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 18
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.elec.hi",
+       "delivered": 132,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, electrical, score 75+",
+       "leads": 5,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.4,
+       "rate": 3.03,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.chem.lo",
+       "delivered": 3,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, plastics/pharma/chem, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.6,
+       "rate": 1.71,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.trd.hi",
+       "delivered": 463,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Within 30 km, traders/warehousing, score 75+",
+       "leads": 13,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.3,
+       "rate": 2.64,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 11
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.elec.lo",
+       "delivered": 8,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, electrical, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.7,
+       "rate": 2.24,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.eng.lo",
+       "delivered": 4,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, engineering/auto, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.8,
+       "rate": 2.14,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.trd.mid",
+       "delivered": 235,
+       "freshLeft": 214,
+       "fu": 2,
+       "label": "31 to 50 km, traders/warehousing, score 55-74",
+       "leads": 5,
+       "optouts": 0,
+       "proven": true,
+       "q": 3,
+       "rate": 1.99,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "b.trd.hi",
+       "delivered": 1,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, traders/warehousing, score 75+",
+       "leads": 1,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.4,
+       "rate": 2.43,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 1
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.oth.mid",
+       "delivered": 419,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, textile/furniture/other mfg, score 55-74",
+       "leads": 5,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.8,
+       "rate": 1.45,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.trd.lo",
+       "delivered": 8,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, traders/warehousing, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.6,
+       "rate": 2.01,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.oth.mid",
+       "delivered": 649,
+       "freshLeft": 533,
+       "fu": 3,
+       "label": "Rest of Delhi, textile/furniture/other mfg, score 55-74",
+       "leads": 12,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.9,
+       "rate": 1.79,
+       "today": {
+        "first": 399,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 2
+      },
+      {
+       "c": "O.elec.mid",
+       "delivered": 58,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, electrical, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.2,
+       "rate": 2.33,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.elec.mid",
+       "delivered": 183,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, electrical, score 55-74",
+       "leads": 3,
+       "optouts": 2,
+       "proven": true,
+       "q": 2.6,
+       "rate": 1.96,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "O.chem.mid",
+       "delivered": 67,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, plastics/pharma/chem, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.2,
+       "rate": 2.28,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.eng.lo",
+       "delivered": 52,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2,
+       "rate": 2.22,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 56
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.chem.lo",
+       "delivered": 226,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Other 51 to 75 km, plastics/pharma/chem, score <55",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.4,
+       "rate": 1.85,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.elec.lo",
+       "delivered": 239,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "West cluster, electrical, score <55",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.6,
+       "rate": 1.62,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.oth.lo",
+       "delivered": 122,
+       "freshLeft": 58,
+       "fu": 0,
+       "label": "31 to 50 km, textile/furniture/other mfg, score <55",
+       "leads": 3,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.3,
+       "rate": 1.83,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.trd.mid",
+       "delivered": 425,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, traders/warehousing, score 55-74",
+       "leads": 6,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.6,
+       "rate": 1.6,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "O.elec.lo",
+       "delivered": 409,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Other 51 to 75 km, electrical, score <55",
+       "leads": 7,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.3,
+       "rate": 1.76,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 62
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.trd.mid",
+       "delivered": 115,
+       "freshLeft": 136,
+       "fu": 0,
+       "label": "Rest of Delhi, traders/warehousing, score 55-74",
+       "leads": 3,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 2.22,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.chem.lo",
+       "delivered": 57,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, plastics/pharma/chem, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.8,
+       "rate": 1.4,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 18
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.trd.mid",
+       "delivered": 86,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, traders/warehousing, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.4,
+       "rate": 1.61,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 42
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.chem.mid",
+       "delivered": 169,
+       "freshLeft": 107,
+       "fu": 0,
+       "label": "Within 30 km, plastics/pharma/chem, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.4,
+       "rate": 1.13,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.eng.lo",
+       "delivered": 25,
+       "freshLeft": 1505,
+       "fu": 0,
+       "label": "Rest of Delhi, engineering/auto, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.1,
+       "rate": 1.81,
+       "today": {
+        "first": 120,
+        "follow": 0,
+        "retry": 21
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.oth.mid",
+       "delivered": 182,
+       "freshLeft": 343,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score 55-74",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.9,
+       "rate": 1.99,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.elec.mid",
+       "delivered": 89,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "West cluster, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 2,
+       "proven": false,
+       "q": 2.7,
+       "rate": 1.38,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "b.eng.hi",
+       "delivered": 4,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.2,
+       "rate": 1.62,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.elec.mid",
+       "delivered": 112,
+       "freshLeft": 17,
+       "fu": 1,
+       "label": "Rest of Delhi, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.7,
+       "rate": 0.92,
+       "today": {
+        "first": 17,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "N.eng.mid",
+       "delivered": 150,
+       "freshLeft": 419,
+       "fu": 1,
+       "label": "North cluster, engineering/auto, score 55-74",
+       "leads": 4,
+       "optouts": 1,
+       "proven": false,
+       "q": 1.5,
+       "rate": 2.25,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.trd.lo",
+       "delivered": 111,
+       "freshLeft": 4023,
+       "fu": 0,
+       "label": "Rest of Delhi, traders/warehousing, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.87,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.elec.mid",
+       "delivered": 56,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.3,
+       "rate": 1.45,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "N.elec.mid",
+       "delivered": 22,
+       "freshLeft": 169,
+       "fu": 0,
+       "label": "North cluster, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.5,
+       "rate": 2.22,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.oth.hi",
+       "delivered": 10,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, textile/furniture/other mfg, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.7,
+       "rate": 1.23,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.eng.lo",
+       "delivered": 120,
+       "freshLeft": 405,
+       "fu": 0,
+       "label": "West cluster, engineering/auto, score <55",
+       "leads": 3,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.5,
+       "rate": 2.16,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.elec.hi",
+       "delivered": 2,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.4,
+       "rate": 1.31,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.eng.mid",
+       "delivered": 277,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, engineering/auto, score 55-74",
+       "leads": 4,
+       "optouts": 2,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.71,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.oth.lo",
+       "delivered": 109,
+       "freshLeft": 1344,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.2,
+       "rate": 1.39,
+       "today": {
+        "first": 120,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.oth.mid",
+       "delivered": 283,
+       "freshLeft": 284,
+       "fu": 1,
+       "label": "31 to 50 km, textile/furniture/other mfg, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.3,
+       "rate": 0.92,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "G.elec.mid",
+       "delivered": 21,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Gurugram/Manesar, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.6,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "N.elec.lo",
+       "delivered": 49,
+       "freshLeft": 844,
+       "fu": 0,
+       "label": "North cluster, electrical, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.5,
+       "rate": 1.92,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "NWD.chem.mid",
+       "delivered": 79,
+       "freshLeft": 42,
+       "fu": 1,
+       "label": "North-West Delhi industrial, plastics/pharma/chem, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.8,
+       "rate": 1.01,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.chem.lo",
+       "delivered": 125,
+       "freshLeft": 2538,
+       "fu": 0,
+       "label": "Rest of Delhi, plastics/pharma/chem, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2,
+       "rate": 1.41,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.eng.mid",
+       "delivered": 68,
+       "freshLeft": 369,
+       "fu": 0,
+       "label": "West cluster, engineering/auto, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.6,
+       "rate": 1.75,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.trd.lo",
+       "delivered": 141,
+       "freshLeft": 65,
+       "fu": 0,
+       "label": "31 to 50 km, traders/warehousing, score <55",
+       "leads": 1,
+       "optouts": 1,
+       "proven": false,
+       "q": 2.2,
+       "rate": 1.26,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.eng.mid",
+       "delivered": 119,
+       "freshLeft": 71,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.1,
+       "rate": 1.3,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.trd.lo",
+       "delivered": 61,
+       "freshLeft": 770,
+       "fu": 0,
+       "label": "West cluster, traders/warehousing, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.49,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.chem.lo",
+       "delivered": 62,
+       "freshLeft": 534,
+       "fu": 0,
+       "label": "West cluster, plastics/pharma/chem, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 1.89,
+       "today": {
+        "first": 120,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.chem.mid",
+       "delivered": 105,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "West cluster, plastics/pharma/chem, score 55-74",
+       "leads": 3,
+       "optouts": 1,
+       "proven": false,
+       "q": 1.1,
+       "rate": 2.36,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.eng.mid",
+       "delivered": 116,
+       "freshLeft": 567,
+       "fu": 0,
+       "label": "Rest of Delhi, engineering/auto, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.1,
+       "rate": 1.19,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.elec.lo",
+       "delivered": 49,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.4,
+       "rate": 1,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.oth.mid",
+       "delivered": 367,
+       "freshLeft": 188,
+       "fu": 1,
+       "label": "West cluster, textile/furniture/other mfg, score 55-74",
+       "leads": 5,
+       "optouts": 2,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.33,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "W.trd.mid",
+       "delivered": 25,
+       "freshLeft": 83,
+       "fu": 0,
+       "label": "West cluster, traders/warehousing, score 55-74",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.9,
+       "rate": 1.22,
+       "today": {
+        "first": 15,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.chem.lo",
+       "delivered": 90,
+       "freshLeft": 242,
+       "fu": 0,
+       "label": "West Delhi industrial, plastics/pharma/chem, score <55",
+       "leads": 2,
+       "optouts": 1,
+       "proven": false,
+       "q": 1.3,
+       "rate": 1.78,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      }
+     ],
+     "changes": [
+      {
+       "c": "O.elec.lo",
+       "delivered": 409,
+       "fu": 2,
+       "label": "Other 51 to 75 km, electrical, score <55",
+       "leads": 7,
+       "now": 62,
+       "rate": 1.76,
+       "visits": 0,
+       "was": 333
+      },
+      {
+       "c": "a.trd.mid",
+       "delivered": 425,
+       "fu": 1,
+       "label": "Within 30 km, traders/warehousing, score 55-74",
+       "leads": 6,
+       "now": 0,
+       "rate": 1.6,
+       "visits": 1,
+       "was": 206
+      },
+      {
+       "c": "D.oth.mid",
+       "delivered": 649,
+       "fu": 3,
+       "label": "Rest of Delhi, textile/furniture/other mfg, score 55-74",
+       "leads": 12,
+       "now": 399,
+       "rate": 1.79,
+       "visits": 2,
+       "was": 596
+      },
+      {
+       "c": "D.eng.lo",
+       "delivered": 25,
+       "fu": 0,
+       "label": "Rest of Delhi, engineering/auto, score <55",
+       "leads": 1,
+       "now": 141,
+       "rate": 1.81,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "O.oth.lo",
+       "delivered": 109,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score <55",
+       "leads": 1,
+       "now": 120,
+       "rate": 1.39,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "W.chem.lo",
+       "delivered": 62,
+       "fu": 0,
+       "label": "West cluster, plastics/pharma/chem, score <55",
+       "leads": 1,
+       "now": 120,
+       "rate": 1.89,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "O.eng.lo",
+       "delivered": 168,
+       "fu": 1,
+       "label": "Other 51 to 75 km, engineering/auto, score <55",
+       "leads": 3,
+       "now": 116,
+       "rate": 1.89,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "b.eng.lo",
+       "delivered": 52,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score <55",
+       "leads": 2,
+       "now": 56,
+       "rate": 2.22,
+       "visits": 0,
+       "was": 8
+      }
+     ],
+     "counts": {
+      "first": 1177,
+      "follow": 52,
+      "hot": 52,
+      "retry": 267
+     },
+     "date": "2026-11-24",
+     "dry": false,
+     "expectedCost": 1003,
+     "expectedDelivered": 935,
+     "expectedLeads": 15.8,
+     "festival": false,
+     "firstTemplates": {
+      "D": {
+       "fit_industry": 297,
+       "fit_video_nudge": 254
+      },
+      "G": {
+       "fit_industry": 10,
+       "fit_video_nudge": 35
+      },
+      "N": {
+       "fit_industry": 16,
+       "fit_video_nudge": 29
+      },
+      "NWD": {
+       "fit_industry": 32,
+       "fit_video_nudge": 28
+      },
+      "O": {
+       "fit_industry": 235,
+       "fit_video_nudge": 16
+      },
+      "W": {
+       "fit_industry": 128,
+       "fit_video_nudge": 37
+      },
+      "WD": {
+       "fit_industry": 37,
+       "fit_video_nudge": 23
+      }
+     },
+     "followEvidence": {
+      "delivered": 2323,
+      "leads": 38,
+      "proven": true,
+      "ratio": 1.22
+     },
+     "followMode": "learn",
+     "followShare": 0.05,
+     "fuRatio": 1,
+     "planner": {
+      "budget": 1005,
+      "clamped": false,
+      "from": "2026-11-18",
+      "ok": true,
+      "prev": 1005,
+      "warm": {
+       "cellsPerDay": 1,
+       "leadDays": 4,
+       "waveSize": 400
+      }
+     },
+     "rescoreNote": "",
+     "rescoredAt": "2026-11-19T02:01:07.348Z",
+     "retryDelivery": 0.55,
+     "retryOn": true,
+     "retryRatio": 1,
+     "retryStats": {
+      "delivered": 557,
+      "leads": 8,
+      "sent": 990
+     },
+     "sheetSync": {
+      "changed": 2,
+      "rows": 387
+     },
+     "slotShares": {
+      "08:15": 10.7,
+      "10:00": 17.2,
+      "11:45": 16.2,
+      "13:30": 8,
+      "15:15": 8.2,
+      "17:00": 12.5,
+      "20:30": 18.5,
+      "21:15": 8.8
+     },
+     "slotStats": {
+      "08:15": {
+       "d": 873,
+       "l": 15
+      },
+      "10:00": {
+       "d": 1109,
+       "l": 14
+      },
+      "11:45": {
+       "d": 1226,
+       "l": 21
+      },
+      "13:30": {
+       "d": 844,
+       "l": 9
+      },
+      "15:15": {
+       "d": 837,
+       "l": 12
+      },
+      "17:00": {
+       "d": 1061,
+       "l": 16
+      },
+      "18:45": {
+       "d": 258,
+       "l": 2
+      },
+      "20:30": {
+       "d": 916,
+       "l": 11
+      },
+      "21:15": {
+       "d": 1067,
+       "l": 16
+      }
+     },
+     "testCells": 24,
+     "tplStats": {
+      "fit_industry": {
+       "d": 3005,
+       "l": 41
+      },
+      "fit_industry_carousel": {
+       "d": 411,
+       "l": 5
+      },
+      "fit_subsidy_nudge": {
+       "d": 513,
+       "l": 10
+      },
+      "fit_video_nudge": {
+       "d": 1939,
+       "l": 22
+      }
+     },
+     "warm": {
+      "cost": 50,
+      "reengage": 51,
+      "retry": 0,
+      "total": 52,
+      "visit": 1
+     },
+     "waveHeld": 1200,
+     "waveSends": 399,
+     "yesterday": {
+      "cost": 811,
+      "date": "2026-11-23",
+      "delivered": 795,
+      "fu": 3,
+      "leads": 10,
+      "optouts": 0,
+      "read": 478,
+      "sent": 1530
+     }
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-24T16:40:05.572Z"
+  }
+ ]
+}
