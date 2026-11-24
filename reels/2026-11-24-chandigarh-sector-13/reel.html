@@ -1,0 +1,209 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0B1A15}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0B1A15;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0B1A15}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0B1A15;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0B1A15;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0B1A15;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const WS=/*WS*/[["This", 0.0, 0.148], ["city", 0.207, 0.444], ["skipped", 0.491, 0.815], ["Sector", 0.868, 1.185], ["thirteen...", 1.243, 1.817], ["for", 2.037, 2.148], ["more", 2.178, 2.296], ["than", 2.326, 2.444], ["fifty", 2.506, 2.815], ["years.", 2.877, 3.331], ["Chandigarh.", 3.469, 4.519], ["Sector", 4.593, 5.037], ["twelve.", 5.101, 5.592], ["Then...", 5.748, 6.35], ["fourteen.", 6.51, 7.131], ["The", 7.333, 7.778], ["popular", 7.824, 8.148], ["story?", 8.222, 8.667], ["Superstition.", 8.79, 9.919], ["The", 10.111, 10.667], ["planner,", 10.713, 11.111], ["Le", 11.16, 11.259], ["Corbusier,", 11.315, 12.056], ["is", 12.197, 12.296], ["said", 12.341, 12.519], ["to", 12.544, 12.593], ["have", 12.622, 12.741], ["seen", 12.785, 12.963], ["thirteen", 13.02, 13.481], ["as", 13.531, 13.63], ["unlucky...", 13.694, 14.278], ["and", 14.519, 14.63], ["left", 14.674, 14.852], ["it", 14.877, 14.926], ["out.", 15.0, 15.352], ["Then,", 15.593, 16.259], ["in", 16.308, 16.407], ["February", 16.456, 16.852], ["twenty", 16.894, 17.148], ["twenty...", 17.201, 17.719], ["Sector", 17.942, 18.259], ["thirteen", 18.308, 18.704], ["finally", 18.759, 19.148], ["appeared.", 19.197, 19.706], ["Not", 19.907, 20.407], ["new", 20.481, 20.704], ["land.", 20.778, 21.148], ["An", 21.321, 21.667], ["old", 21.722, 21.889], ["town", 21.963, 22.259], ["on", 22.308, 22.407], ["the", 22.426, 22.481], ["city's", 22.541, 22.852], ["edge,", 22.911, 23.291], ["Manimajra,", 23.5, 24.306], ["was", 24.37, 24.481], ["simply", 24.524, 24.778], ["renamed.", 24.861, 25.537], ["But", 25.759, 26.259], ["the", 26.296, 26.407], ["official", 26.448, 26.778], ["records", 26.843, 27.296], ["tell", 27.326, 27.444], ["a", 27.481, 27.519], ["quieter", 27.574, 27.963], ["story.", 28.037, 28.481], ["The", 28.63, 29.074], ["land", 29.133, 29.37], ["for", 29.407, 29.519], ["twelve", 29.571, 29.889], ["and", 29.944, 30.111], ["thirteen", 30.169, 30.63], ["was", 30.704, 30.926], ["first", 30.975, 31.222], ["marked", 31.275, 31.593], ["as", 31.618, 31.667], ["a", 31.704, 31.741], ["cultural", 31.798, 32.259], ["zone...", 32.333, 32.731], ["and", 32.963, 33.074], ["thirteen", 33.131, 33.593], ["just", 33.637, 33.815], ["never", 33.852, 34.037], ["found", 34.086, 34.333], ["its", 34.37, 34.481], ["place.", 34.544, 34.988], ["So...", 35.229, 35.895], ["superstition,", 35.969, 36.868], ["or", 36.981, 37.081], ["planning?", 37.13, 37.639], ["Next", 37.836, 38.488], ["time", 38.532, 38.71], ["you", 38.747, 38.858], ["read", 38.903, 39.081], ["the", 39.099, 39.155], ["map,", 39.229, 39.534], ["count", 39.636, 39.821], ["again.", 39.883, 40.34], ["Twelve.", 40.498, 41.544], ["Thirteen.", 41.785, 42.33], ["Fourteen.", 42.462, 43.425]];
+const BEATS=/*BEATS*/[0.616, 1.243, 1.87, 2.497, 3.124, 3.751, 4.378, 5.005, 5.632, 6.235, 6.862, 7.489, 8.116, 8.743, 9.37, 9.997, 10.624, 11.251, 11.878, 12.505, 13.132, 13.759, 14.385, 14.989, 15.616, 16.243, 16.87, 17.497, 18.124, 18.751, 19.378, 20.005, 20.632, 21.235, 21.862, 22.489, 23.116, 23.743, 24.37, 24.997, 25.624, 26.251, 26.878, 27.505, 28.132, 28.759, 29.386, 29.989, 30.616, 31.243, 31.87, 32.497, 33.124, 33.751, 34.378, 35.005, 35.632, 36.259, 36.886, 37.513, 38.14, 38.767, 39.394, 40.021, 40.648, 41.275, 41.902, 42.529, 43.156, 43.783, 44.41, 45.037, 45.664, 46.291, 46.918, 47.545, 48.172, 48.799, 49.426, 50.053, 50.68, 51.307, 51.934, 52.561, 53.188, 53.815, 54.442, 55.069, 55.696, 56.323, 56.95, 57.577, 58.204, 58.831, 59.458, 60.085, 60.712, 61.339, 61.966, 62.593];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0B1A15';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const OST=WS[WS.length-1][2]+0.85;const END=OST+6.1;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(11,26,21,.9) 0%,rgba(11,26,21,.55) 17%,rgba(11,26,21,0) 30%';
+const GB=(a)=>GTOP+`,rgba(11,26,21,0) ${a}%,rgba(11,26,21,.82) ${a+16}%,rgba(11,26,21,.96) ${a+28}%,#0B1A15 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+const HOOKEV=wt('thirteen');
+// ================= SCENES (look B Emerald Doc: deep green-black, white, one teal accent, Fraunces year numerals) =================
+const BG='#0B1A15';
+const L15=x=>Math.max(1.55,x); // D41: no text before 1.5 s
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(11,26,21,0) ${y+120}px,rgba(11,26,21,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};
+// the empty sector on the hero aerial (layout px of m1 at scale 1)
+const GX=572,GY=858,GW=284,GH=280,GCX=GX+GW/2,GCY=GY+GH/2;
+const rect=(p,x,y,wd,ht,th=6,dash)=>{const s=svg(p,'',`<rect x="${x}" y="${y}" width="${wd}" height="${ht}" rx="6" fill="none" stroke="#28c39d" stroke-width="${th}" ${dash?'stroke-dasharray="22 14"':''} style="filter:drop-shadow(0 0 10px rgba(40,195,157,.6))"/>`);const e=s.querySelector('rect');const L=2*(wd+ht);if(!dash){e.style.strokeDasharray=L;e.style.strokeDashoffset=L}s.draw=q=>{if(!dash)e.style.strokeDashoffset=L*(1-cl(q));else s.style.opacity=cl(q)};return s};
+const hookFrame=sc=>{const b=box(sc,'m1',GCX,GCY,'50% 50%');const r=rect(b,GX,GY,GW,GH,6);
+ const q=mk(b,'ts',`position:absolute;left:${GX}px;top:${GY+70}px;width:${GW}px;text-align:center;font:800 130px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0`,'13?');
+ const g=mk(sc,'sh','background:'+GB(58));
+ return {b,r,q,g}};
+// marker post (m5): blank face at layout x 446-632, y 862-1222
+const FACE=(p)=>mk(p,'',`position:absolute;left:446px;top:862px;width:186px;height:360px;display:flex;align-items:center;justify-content:center;font:800 150px/1 IN;letter-spacing:-.05em;color:#0B1A15`,'');
+// 1. HOOK: bright aerial over the sector grid, fast push-in toward the bare rectangle; teal outline traces it; spoken from 0 s; text after 1.55 s
+add(0,sc=>{const f=hookFrame(sc);
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px;font-size:118px',[['No',L15(wt('skipped')),''],['Sector',L15(wt('sector'))],['\n'],['13.',L15(HOOKEV),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1530px;color:#BFF5E4',[['For',wt('for')],['50+',wt('fifty')],['years',wt('years')]]);
+ return t=>{const sk=shake(t,HOOKEV,6);f.b.style.transform=`translate(${sk}px,${sk*.4}px) scale(${1.0+.22*eio(t/4.2)})`;f.r.draw((t-.2)/1.0);
+  f.q.style.opacity=cl((t-HOOKEV)/.2);f.g.style.opacity=cl((t-1.35)/.3);rv(h,t);rv(k,t)}});
+// 2. Blank sector marker on a leafy avenue: the face reads 12, then 14. "Chandigarh. Sector twelve. Then... fourteen."
+add(wt('chandigarh')-.1,sc=>{const b=box(sc,'m5',540,1040,'50% 50%');const fc=FACE(b);mk(sc,'sh','background:'+GB(60));
+ const k=T(sc,'K ts','left:72px;top:1300px;color:#FFFFFF',[['●',wt('chandigarh'),'c'],['Chandigarh',wt('chandigarh')]]);
+ const h=T(sc,'H ts','left:70px;top:1350px;width:960px;font-size:130px',[['12',wt('twelve')],['→',wt('then')],['14',wt('fourteen'),'hl',1]]);
+ const b0=wt('chandigarh')-.1,t1=wt('twelve')-b0,t2=wt('fourteen')-b0;
+ return t=>{b.style.transform=`scale(${1.32+.12*eio(t/3.4)})`;fc.textContent=t>=t2?'14':t>=t1?'12':'';fc.style.transform=`scale(${1+.25*Math.max(0,1-Math.abs(t-(t>=t2?t2:t1))/.2)})`;rv(k,t);rv(h,t)}},true);
+// 3. Real Capitol Complex by the water, slow pull-out. "The popular story? Superstition."
+add(wt('popular')-.15,sc=>{const b=box(sc,'capitol',540,760,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#FFFFFF',[['●',wt('popular'),'c'],['The',wt('popular')-.05],['popular',wt('popular')],['story',wt('story')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:960px;font-size:128px',[['Super-',wt('superstition')],['\n'],['stition.',wt('superstition')+.12,'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.16-.1*eio(t/2.6)})`;rv(k,t);rv(h,t)}},true);
+// 4. Real Open Hand monument, tilt up. "The planner, Le Corbusier, is said to have seen thirteen as unlucky..."
+add(wt('planner')-.15,sc=>{const b=box(sc,'hand',540,500,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1200px;color:#FFFFFF',[['●',wt('planner'),'c'],['The',wt('planner')-.05],['planner',wt('planner')]]);
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:112px',[['Le',wt('le')],['Corbusier.',wt('corbusier')]]);
+ const st=mk(sc,'stamp','left:70px;top:1400px;font-size:70px;background:rgba(14,107,80,.6);color:#fff','"UNLUCKY" 13?');
+ const b0=wt('planner')-.15,t0=wt('unlucky')-b0;
+ return t=>{b.style.transform=`scale(1.18) translateY(${-60+70*eio(t/4)}px)`;rv(k,t);rv(h,t);if(t>=t0)slam(st,t,t0,1.8,-4);else st.style.opacity=0}},true);
+// 5. Drafting table, pencil over the plan. "...and left it out."
+add(wt('left')-.25,sc=>{const b=box(sc,'m2',420,700,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:124px',[['Left',wt('left')],['it',wt('it')],['\n'],['out.',wt('out'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.5+.12*eio(t/1.8)})`;rv(h,t)}},true);
+// 6. REVEAL: back on the aerial gap, close; the bare rectangle fills with an old town. "Then, in February 2020... Sector thirteen finally appeared."
+add(wt('then',2)-.15,sc=>{const b=box(sc,'m1',GCX,GCY,'50% 50%');
+ const fill=mk(b,'',`position:absolute;left:${GX}px;top:${GY}px;width:${GW}px;height:${GH}px;overflow:hidden;border-radius:6px;clip-path:inset(0 100% 0 0)`);const fi=document.createElement('img');fi.src='img/m3.jpg';fi.style.cssText=`position:absolute;left:-40px;top:-${GH*1.05}px;width:${GW+80}px;height:${(GW+80)*1.79}px;object-fit:cover`;fill.appendChild(fi);
+ const r=rect(b,GX,GY,GW,GH,5);r.draw(1);
+ mk(sc,'sh','background:'+GB(58));
+ const tg=mk(sc,'tag','left:72px;top:1190px;opacity:0','Tell a friend');
+ const m=mk(sc,'ts','left:66px;top:1250px;font:800 110px/1 IN;letter-spacing:-.04em;color:#fff;opacity:0','February');
+ const y=mk(sc,'Y ts','left:60px;top:1368px;opacity:0','2020');
+ const b0=wt('then',2)-.15,t0=wt('february')-b0,t1=wt('twenty')-b0,t2=wt('appeared')-b0;
+ return t=>{b.style.transform=`scale(${2.3+.25*eio(t/4)})`;fade(tg,t,.05,.2,10);fade(m,t,t0,.22,16);if(t<t0)m.style.opacity=0;slam(y,t,t1,1.4,0);if(t<t1)y.style.opacity=0;y.style.color=t>t1+.3?'#28c39d':'#fff';
+  const p=eio((t-(t2-.9))/.9);fill.style.clipPath=`inset(0 ${(100*(1-p)).toFixed(1)}% 0 0)`}},true);
+// 7. Old town gateway (AI), push in. "Not new land. An old town on the city's edge..."
+add(wt('not')-.12,sc=>{const b=box(sc,'m3',540,760,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1240px;color:#FFFFFF',[['●',wt('old'),'c'],['An',wt('old')-.05],['old',wt('old')],['town',wt('town')]]);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px;font-size:124px',[['Not',wt('not')],['new',wt('new')],['\n'],['land.',wt('land'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.12+.1*eio(t/3.2)})`;rv(k,t);rv(h,t)}},true);
+// 8. Same town, the lane through the gate. "Manimajra, was simply renamed."
+add(wt('manimajra')-.15,sc=>{const b=box(sc,'m3',540,1040,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px;font-size:116px',[['Manimajra',wt('manimajra')],['\n'],['=',wt('renamed')-.1],['Sector',wt('renamed')-.05,'hl'],['13',wt('renamed'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1530px;color:#BFF5E4',[['Renamed,',wt('renamed')+.2],['Feb',wt('renamed')+.3],['2020',wt('renamed')+.35]]);
+ return t=>{b.style.transform=`scale(${1.9+.12*eio(t/2.6)}) translateX(${-6*t}px)`;rv(h,t);rv(k,t)}},true);
+// 9. The plan on the table, slow pan. "But the official records tell a quieter story."
+add(wt('but')-.12,sc=>{const b=box(sc,'m2',300,620,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts','left:72px;top:1230px;color:#FFFFFF',[['●',wt('official'),'c'],['Official',wt('official')],['records',wt('records')]]);
+ const h=T(sc,'H ts','left:70px;top:1280px;width:960px;font-size:116px',[['A',wt('quieter')-.1],['quieter',wt('quieter')],['\n'],['story.',wt('story',2),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.75) translateX(${20-12*t}px)`;rv(k,t);rv(h,t)}},true);
+// 10. Plan corner with a teal wash over two blocks: cultural zone. "The land for twelve and thirteen was first marked as a cultural zone..."
+add(wt('land',2)-.15,sc=>{const b=box(sc,'m2',560,700,'50% 50%');
+ const z=mk(b,'',`position:absolute;left:520px;top:600px;width:260px;height:180px;border:5px solid #28c39d;background:rgba(40,195,157,.32);border-radius:6px;opacity:0;transform:rotate(-8deg)`);
+ const zl=mk(b,'K',`position:absolute;left:528px;top:548px;color:#fff;font-size:30px;font-weight:500;background:#28c39d;color:#0B1A15;padding:6px 10px 4px;border-radius:4px;opacity:0;transform:rotate(-8deg);text-shadow:0 2px 8px rgba(0,0,0,.8)`,'12 + 13');
+ mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px;font-size:108px',[['12',wt('twelve',2)],['+',wt('and',2)],['13:',wt('thirteen',4)],['\n'],['a',wt('cultural')-.05],['cultural',wt('cultural'),'hl'],['zone.',wt('zone'),'hl',1]]);
+ const b0=wt('land',2)-.15,t0=wt('twelve',2)-b0;
+ return t=>{b.style.transform=`scale(${1.55+.08*eio(t/3.5)})`;z.style.opacity=cl((t-t0)/.3);zl.style.opacity=cl((t-t0)/.3);rv(h,t)}},true);
+// 11. Real-looking avenue (AI), push along the road. "...and thirteen just never found its place."
+add(wt('and',3)-.12,sc=>{const b=box(sc,'m4',540,1100,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const h=T(sc,'H ts','left:70px;top:1280px;width:960px;font-size:108px',[['13',wt('thirteen',5),'hl'],['never',wt('never')],['found',wt('found')],['\n'],['its',wt('its')],['place.',wt('place'),'',1]]);
+ return t=>{b.style.transform=`scale(${1.12+.16*eio(t/3)})`;rv(h,t)}},true);
+// 12. Roundabout crop: the question. "So... superstition, or planning?"
+add(wt('so')-.1,sc=>{const b=box(sc,'m4',540,1060,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:108px',[['Superstition...',wt('superstition',2),'hl'],['\n'],['or',wt('or')],['planning?',wt('planning'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.9-.1*eio(t/2.4)})`;rv(h,t)}},true);
+// 13. Marker post again: "Next time you read the map, count again."
+add(wt('next')-.12,sc=>{const b=box(sc,'m5',540,1040,'50% 50%');const fc=FACE(b);mk(sc,'sh','background:'+GB(60));
+ const h=T(sc,'H ts','left:70px;top:1340px;width:960px;font-size:116px',[['Count',wt('count')],['again.',wt('again'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1290px;color:#FFFFFF',[['●',wt('read'),'c'],['Read',wt('read')],['the',wt('map')-.05],['map',wt('map')]]);
+ const b0=wt('next')-.12,tc=wt('count')-b0;
+ return t=>{b.style.transform=`scale(${1.55-.14*eio(t/2.6)})`;fc.textContent=t>=tc?'13':'';fc.style.color='#0E6B50';fc.style.transform=`scale(${1+.25*Math.max(0,1-Math.abs(t-tc)/.2)})`;rv(k,t);rv(h,t)}},true);
+// 14. Loop: back to the hook aerial, the gap counts 12, 13, 14 and the push-in matches frame 0
+add(wt('twelve',3)-.12,sc=>{const f=hookFrame(sc);f.r.draw(1);f.g.style.opacity=1;
+ const n=mk(sc,'ts','left:66px;top:1270px;font:800 200px/1 IN;letter-spacing:-.05em;color:#fff','');
+ const b0=wt('twelve',3)-.12,a=wt('twelve',3)-b0,c=wt('thirteen',6)-b0,d=wt('fourteen',2)-b0;
+ return t=>{f.b.style.transform=`scale(${1.18-.18*eo(t/2.2)})`;const v=t>=d?'14':t>=c?'13':t>=a?'12':'';f.q.textContent=v||'13?';f.q.style.opacity=1;n.innerHTML=v?`<span class="${v=='13'?'hl':''}">${v}</span>`:'';const tv=t>=d?d:t>=c?c:a;n.style.transform=`scale(${1+.18*Math.max(0,1-(t-tv)/.2)})`}},true);
+// 19. Voiced follow outro (test X15, reels/_outro): George says like and follow; the card taps the heart and Follow; seven day boxes fill
+const OT={like:.35+1.164,follow:.35+1.565,story:.35+4.025,every:.35+4.545,end:.35+5.2};
+add(OST,sc=>{sc.style.zIndex=1;
+ const bg=mk(sc,'',`left:-40px;top:-40px;width:1160px;height:2000px;background:url(img/m1.jpg) center/cover`);const sh=mk(sc,'sh','background:linear-gradient(180deg,rgba(11,26,21,.35),rgba(11,26,21,.82));opacity:0');
+ const card=mk(sc,'',`left:90px;width:900px;top:560px;background:#fff;border-radius:44px;padding:56px 56px 52px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0B1A15;font-family:IN`,
+ `<div style="display:flex;align-items:center;gap:34px"><div style="width:168px;height:168px;border-radius:50%;background:#fff;border:6px solid #28c39d;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/logo.png" style="width:120px;height:120px;object-fit:contain;border-radius:22px"></div><div><div style="font:800 60px/1.1 IN;display:flex;align-items:center;gap:14px">TrueYards <span style="width:46px;height:46px;border-radius:50%;background:#3897f0;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span></div><div style="font:500 36px/1.2 IN;color:#6b7a75;margin-top:6px">@trueyards.in</div></div></div><div style="font:500 40px/1.3 IN;margin:34px 0 40px">Real estate, explained. One story a day.</div><div style="display:flex;gap:24px"><div class="ofb" style="flex:1;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;font:800 46px/1 IN;position:relative;overflow:hidden;background:#28c39d;color:#fff"><span class="oft">Follow</span><div class="orp" style="position:absolute;border-radius:50%;background:rgba(255,255,255,.55);width:40px;height:40px;left:50%;top:50%;transform:translate(-50%,-50%) scale(0)"></div></div><div class="olb" style="flex:0 0 120px;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:#EEF2F1"><svg class="oht" viewBox="0 0 24 24" style="width:62px;height:62px"><path class="ohp" fill="none" stroke="#0B1A15" stroke-width="2" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg></div></div>`);
+ const line=mk(sc,'',`left:0;width:1080px;top:1230px;text-align:center;color:#fff;font:800 78px/1.2 IN;letter-spacing:-.01em;opacity:0`,'Like. <b style="background:#28c39d;padding:0 18px;border-radius:10px;color:#0B1A15">Follow.</b> Learn.');
+ const dots=mk(sc,'',`left:0;width:1080px;top:1370px;display:flex;justify-content:center;gap:26px`);const DS=['M','T','W','T','F','S','S'].map(d=>mk(dots,'',`position:relative;width:70px;height:70px;border-radius:18px;border:4px solid rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;color:#fff;font:500 24px/1 IN;opacity:0`,d));
+ const hp=[];for(let i=0;i<7;i++){hp.push(svg(sc,'width:56px;height:56px;opacity:0','<path fill="#ff3b5c" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/>'));hp[i].setAttribute('viewBox','0 0 24 24')}
+ const hand=svg(sc,'width:150px;height:150px;opacity:0','<path fill="#fff" stroke="#0B1A15" stroke-width="2.2" stroke-linejoin="round" d="M24 30V10a4 4 0 0 1 8 0v16l2-.3a4 4 0 0 1 4.5 3.2l.2 1 1.5-.3a4 4 0 0 1 4.6 3.1l.2.9 1.4-.2a4 4 0 0 1 4.6 3.4l1.3 9.2c.8 6-3 11.5-9 12.7L36 60c-4.2.8-8.4-.9-10.9-4.3L14 40.5a4 4 0 0 1 6.3-5L24 40z"/>');hand.setAttribute('viewBox','0 0 64 64');
+ const fb=card.querySelector('.ofb'),ft=card.querySelector('.oft'),rp=card.querySelector('.orp'),lb=card.querySelector('.olb'),ht=card.querySelector('.oht'),hpp=card.querySelector('.ohp');
+ const E=(t,a,b)=>cl((t-a)/(b-a));
+ return t=>{const T=OT;const bgp=eo(E(t,0,.6));bg.style.filter=`blur(${bgp*26}px) brightness(${1-bgp*.25})`;bg.style.transform=`scale(${1.0+.03*t/6})`;sh.style.opacity=bgp;
+  const c=eb(E(t,.15,.75));card.style.opacity=E(t,.15,.4);card.style.transform=`translateY(${(1-c)*160}px) scale(${.94+.06*c})`;
+  const on=t>=T.like;hpp.setAttribute('fill',on?'#ff3b5c':'none');hpp.setAttribute('stroke',on?'#ff3b5c':'#0B1A15');ht.style.transform=`scale(${on?1+.45*Math.sin(Math.PI*E(t,T.like,T.like+.35)):1})`;
+  const L=lb.getBoundingClientRect(),FB=fb.getBoundingClientRect();
+  hp.forEach((h,i)=>{const p=E(t,T.like+i*.05,T.like+.9+i*.05);const ang=-90+(i-3)*22;const r=p*(220+i*12);h.style.left=(L.left+L.width/2-28+Math.cos(ang*Math.PI/180)*r*.6)+'px';h.style.top=(L.top+L.height/2-28+Math.sin(ang*Math.PI/180)*r)+'px';h.style.opacity=p>0&&p<1?1-p:0;h.style.transform=`scale(${.6+p*.8}) rotate(${(i-3)*12}deg)`});
+  const p1=eo(E(t,T.like-.55,T.like-.05)),p2=eo(E(t,T.like+.3,T.follow-.05));const x0=880,y0=1500,xl=L.left+L.width/2-40,yl=L.top+L.height/2-20,xf=FB.left+FB.width/2-40,yf=FB.top+FB.height/2-20;
+  let hx=x0+(xl-x0)*p1,hy=y0+(yl-y0)*p1;hx+=(xf-xl)*p2;hy+=(yf-yl)*p2;const pr=Math.max(0,1-Math.abs(t-T.like)/.12)+Math.max(0,1-Math.abs(t-T.follow)/.12);
+  hand.style.left=hx+'px';hand.style.top=hy+'px';hand.style.transform=`scale(${1-.12*pr})`;hand.style.opacity=E(t,T.like-.6,T.like-.35)*(1-E(t,T.follow+.5,T.follow+.8));
+  const fo=t>=T.follow;fb.style.background=fo?'#EEF2F1':'#28c39d';fb.style.color=fo?'#0B1A15':'#fff';ft.textContent=fo?'Following ✓':'Follow';const r2=E(t,T.follow,T.follow+.5);rp.style.transform=`translate(-50%,-50%) scale(${r2*22})`;rp.style.opacity=r2>0?1-r2:0;fb.style.transform=`scale(${1-.05*Math.max(0,1-Math.abs(t-T.follow)/.15)})`;
+  const l=eo(E(t,T.follow+.4,T.follow+.9));line.style.opacity=l;line.style.transform=`translateY(${(1-l)*30}px)`;
+  DS.forEach((d,i)=>{const a=T.story-.1+i*((T.end-.3-T.story)/7);d.style.opacity=eo(E(t,T.story-.5,T.story-.1));const f=t>=a;d.style.background=f?'#28c39d':'none';d.style.borderColor=f?'#28c39d':'rgba(255,255,255,.65)';d.style.transform=`scale(${f?1+.18*Math.max(0,1-(t-a)/.2):1})`})}},false);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';const SRC='Sources: The Tribune (11 Feb 2020), DNA (12 Feb 2020), Daily Pioneer (2020).';
+const FINE=[[0,AIL+' Chandigarh sector grid.'],[SC[1].t0,AIL],[SC[2].t0,'Capitol Complex, Chandigarh. Photo: Ankit Pai N / Unsplash.'],[SC[3].t0,'Open Hand Monument, Chandigarh. Photo: Ankit Pai N / Unsplash. Popular account, not proven (The Tribune, DNA, 2020).'],[SC[4].t0,AIL],[SC[5].t0,AIL+' Manimajra notified as Sector 13, Feb 2020 (The Tribune, DNA).'],[SC[6].t0,AIL+' Old town, for illustration.'],[SC[8].t0,AIL+' UT records via Daily Pioneer (2020).'],[SC[10].t0,AIL],[SC[11].t0,AIL+' '+SRC],[SC[13].t0,'Education only, not advice.'],[OST,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;fe.style.color='rgba(246,241,230,.62)';
+ document.getElementById('brand').style.opacity=t>=OST?1-cl((t-OST)/.3):1;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,wt('superstition'),wt('unlucky'),wt('twenty'),wt('renamed'),wt('cultural')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ document.getElementById('fol').style.opacity=0;
+};
+</script></body></html>
