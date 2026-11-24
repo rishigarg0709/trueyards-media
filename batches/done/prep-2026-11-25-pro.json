@@ -26,5 +26,12 @@
    "hero": true
   }
  ],
- "fallback_after_utc": null
+ "fallback_after_utc": null,
+ "saved": [
+  "2026-11-25-midday-1",
+  "2026-11-25-evening-1",
+  "2026-11-25-carousel-1"
+ ],
+ "missing": [],
+ "finished": "2026-11-24T17:11Z"
 }
