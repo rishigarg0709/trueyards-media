@@ -1,0 +1,32 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ },
+ {
+  "kind": "voice",
+  "name": "mboc-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "They paid for their flats... and then they had to walk out of them. Mumbai. A thirty-four storey tower in Tardeo. The top seventeen floors had no occupation certificate. July 2025, the High Court ordered them vacated. The Supreme Court would not step in. By the end of August, they were gone. Here's what most buyers miss. [short pause] The keys are not permission to live there. The OC is. It's the city's paper that says this building may be lived in. And Mumbai has more than twenty-five thousand buildings without one. Their societies even pay fifty percent extra for water. So before you take the keys... ask for one paper.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "mboc-vo-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "They paid for their flats... and then they had to walk out of them. Mumbai. A thirty-four storey tower in Tardeo. The top seventeen floors had no occupation certificate. July 2025, the High Court ordered them vacated. The Supreme Court would not step in. By the end of August, they were gone. Here's what most buyers miss. [short pause] The keys are not permission to live there. The OC is. It's the city's paper that says this building may be lived in. And Mumbai has more than twenty-five thousand buildings without one. Their societies even pay fifty percent extra for water. So before you take the keys... ask for one paper.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
