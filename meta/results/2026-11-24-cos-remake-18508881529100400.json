@@ -1,0 +1,34 @@
+{
+ "op": "boost_post",
+ "ran_at": "2026-11-24T16:15:54.258384Z",
+ "result": {
+  "creative": {
+   "id": "1585997619998292"
+  },
+  "ad": {
+   "id": "120255777897570547"
+  },
+  "activated": {
+   "adset": {
+    "error": {
+     "message": "(#613) Calls to this API have exceeded the concurrent request rate limit of 1 calls per 30 seconds.",
+     "type": "OAuthException",
+     "code": 613,
+     "error_subcode": 4841018,
+     "fbtrace_id": "AJ-FEKmWGiP_2bQl3vGGS-t"
+    }
+   },
+   "campaign": {
+    "error": {
+     "message": "(#613) Calls to this API have exceeded the concurrent request rate limit of 1 calls per 30 seconds.",
+     "type": "OAuthException",
+     "code": 613,
+     "error_subcode": 4841018,
+     "fbtrace_id": "AyvAkDPHE8a3QmuA69xT69K"
+    }
+   }
+  },
+  "cta": true,
+  "cta_error": null
+ }
+}

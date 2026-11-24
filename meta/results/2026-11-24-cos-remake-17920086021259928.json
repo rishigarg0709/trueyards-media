@@ -1,0 +1,22 @@
+{
+ "op": "boost_post",
+ "ran_at": "2026-11-24T16:15:34.996260Z",
+ "result": {
+  "creative": {
+   "id": "1121392890711257"
+  },
+  "ad": {
+   "id": "120255777892960547"
+  },
+  "activated": {
+   "adset": {
+    "success": true
+   },
+   "campaign": {
+    "success": true
+   }
+  },
+  "cta": true,
+  "cta_error": null
+ }
+}
