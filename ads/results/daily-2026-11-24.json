@@ -1,0 +1,142 @@
+{
+ "op": "daily",
+ "ran_at": "2026-11-24T04:27:17.811307Z",
+ "result": {
+  "date": "2026-11-24",
+  "dry_run": false,
+  "actions": [
+   "FIT R - Reminder after WhatsApp: targeting 3 audience(s)",
+   "FIT U - Unreachable on WhatsApp: targeting 1 audience(s)",
+   "FIT W - Warm-up before WhatsApp: targeting 3 audience(s)"
+  ],
+  "flags": [
+   "R10 reel Hinglish HQ: mil gaya: 7-day frequency 3.1, creative fatigue, replace it this week"
+  ],
+  "campaign_status": "ACTIVE",
+  "spend_month_inr": 2716.22,
+  "spend_yesterday_inr": 333.29,
+  "daily_budget_total_inr": 487.0,
+  "monthly_cap_inr": 30000,
+  "lead_data": "joined from the bot's lead records (per ad id)",
+  "lift": null,
+  "waves": 6,
+  "ads": [
+   {
+    "ad": "R10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 7.95,
+    "conv_yday": 0,
+    "spend_life": 12.21,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 3.142857,
+    "ctr_7d": 4.545455
+   },
+   {
+    "ad": "R11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 1.94,
+    "conv_yday": 0,
+    "spend_life": 6.2,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.333333,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "U11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 3.69,
+    "conv_yday": 0,
+    "spend_life": 6.24,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 2.333333,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "U10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 3.08,
+    "conv_yday": 0,
+    "spend_life": 4.88,
+    "conv_life": 0,
+    "cpc_life": null,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.571429,
+    "ctr_7d": 0.0
+   },
+   {
+    "ad": "P11 reel 3 things HQ",
+    "status": "ACTIVE",
+    "spend_yday": 28.87,
+    "conv_yday": 0,
+    "spend_life": 136.16,
+    "conv_life": 3,
+    "cpc_life": 45,
+    "qualified": 1,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.514774,
+    "ctr_7d": 1.026694
+   },
+   {
+    "ad": "P10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "spend_yday": 287.76,
+    "conv_yday": 4,
+    "spend_life": 2546.38,
+    "conv_life": 34,
+    "cpc_life": 75,
+    "qualified": 22,
+    "visit_planned": 4,
+    "visit_done": 0,
+    "freq_7d": 2.093453,
+    "ctr_7d": 1.343284
+   },
+   {
+    "ad": "P9 reel 3 things: planned industrial plot",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 0.84,
+    "conv_life": 1,
+    "cpc_life": 1,
+    "qualified": 0,
+    "visit_planned": 0,
+    "visit_done": 0,
+    "freq_7d": 1.0,
+    "ctr_7d": 75.0
+   },
+   {
+    "ad": "P8 reel voiceover Hinglish: mil gaya",
+    "status": "PAUSED",
+    "spend_yday": 0.0,
+    "conv_yday": 0,
+    "spend_life": 3.31,
+    "conv_life": 1,
+    "cpc_life": 3,
+    "qualified": null,
+    "visit_planned": null,
+    "visit_done": null,
+    "freq_7d": 1.043478,
+    "ctr_7d": 12.5
+   }
+  ],
+  "meta_cost_per_chat": 70,
+  "meta_ramp": "Meta ramp: INR 495/day toward 1000 (held: Meta spent only 68% of the budget)",
+  "plan": "planner 2026-11-18: Meta INR 495/day (all tactics active)",
+  "tester": "waits for the weekly batch (Monday): edits reset Meta's learning"
+ }
+}
