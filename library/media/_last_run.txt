@@ -1,5 +1,4 @@
-2026-11-24 07:02 UTC
+2026-11-24 11:50 UTC
 el-usage [usage]: usage ok
-chd13-vo-1 [voice]: voice ok
-chd13-vo-2 [voice]: voice ok
-chd13-beat [music]: music ok 720605 bytes
+mboc-vo-1 [voice]: voice ok
+mboc-vo-2 [voice]: voice ok
