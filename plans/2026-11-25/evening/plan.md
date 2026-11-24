@@ -1,6 +1,6 @@
 # 2026-11-25 evening reel (19:07 IST): Ahmedabad's pols, where some house fronts were escape routes
 
-- BATCH: ordered in prep-2026-11-25 (nightly planner, 2026-11-24 22:40 IST). Status line is added below after the submit check. If any image is missing at run time (check batches/pending/ and batches/failed/), generate only the missing ones with the normal image job.
+- BATCH: ordered in prep-2026-11-25 (nightly planner, 2026-11-24 22:20 IST). CONFIRMED submitted 2026-11-24 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-25-pro.json (3 Pro: midday-1, evening-1, carousel-1) and prep-2026-11-25.json (13 Flash). The 8 real photos in fetch/2026-11-25.txt are in library/stock/ (d1125m-*, d1125e-*, d1125c-*). If any image is missing at run time (check batches/pending/ and batches/failed/), generate only the missing ones with the normal image job.
 - Test: **X19 control** (D56: usual plan, no send line).
 - Publishing: main grid (D54), one Instagram copy, "share_to_feed": true, never "trial". Platform texts fresh per platform (D53).
 - Opening (D41, motion): frame 0 is a bright, full-frame push down a sunlit pol lane (carved wooden house fronts, gate at the end), the line SPOKEN from 0 s; no text card before 1.5 s.

@@ -1,6 +1,6 @@
 # 2026-11-25 carousel (17:13 IST): Getting your flat's keys? 7 checks before you sign
 
-- BATCH: ordered in prep-2026-11-25 (nightly planner, 2026-11-24 22:40 IST). Status line is added below after the submit check. If any image is missing at run time (check batches/pending/ and batches/failed/), generate only the missing ones with the normal image job.
+- BATCH: ordered in prep-2026-11-25 (nightly planner, 2026-11-24 22:20 IST). CONFIRMED submitted 2026-11-24 16:59 UTC (22:29 IST): batches/pending/prep-2026-11-25-pro.json (3 Pro: midday-1, evening-1, carousel-1) and prep-2026-11-25.json (13 Flash). The 8 real photos in fetch/2026-11-25.txt are in library/stock/ (d1125m-*, d1125e-*, d1125c-*). If any image is missing at run time (check batches/pending/ and batches/failed/), generate only the missing ones with the normal image job.
 - Slot: Wednesday, so this is a real carousel under D54 (Mon, Wed, Fri evergreen grid content, judged on profile visitors who follow, not reach).
 - Look: T TrueYards Brand, light variant (off-white #F4F7F5 field, ink #0F1A17 text, deep green #0E6B50 kickers, teal #28c39d label bars and the tape thread). D2 carousels when it suits.
 - 7 slides, 1080 x 1350, one wide canvas 7560 x 1350.
