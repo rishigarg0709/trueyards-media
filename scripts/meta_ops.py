@@ -227,18 +227,24 @@ def op_boost_post(req):
     if not sets:
         return {"error": "no ad set"}
     p = page()
-    creative = call(f"{ACT}/adcreatives", {"name": f"boost {req['media_id']}", "object_id": p["id"],
-                    "instagram_user_id": CFG["ig_user_id"], "source_instagram_media_id": req["media_id"],
-                    }, "POST")
+    cr_base = {"name": f"boost {req['media_id']}", "object_id": p["id"],
+               "instagram_user_id": CFG["ig_user_id"], "source_instagram_media_id": req["media_id"]}
+    # Visit profile button (Rishi, 24 Nov 21:31, N62): without it the ad records 0 profile visits
+    creative = call(f"{ACT}/adcreatives", {**cr_base, "call_to_action": {"type": "VIEW_INSTAGRAM_PROFILE",
+                    "value": {"link": "https://www.instagram.com/trueyards.in/"}}}, "POST")
+    cta_error = None
     if "error" in creative:
-        return {"creative_error": creative}
+        cta_error = creative
+        creative = call(f"{ACT}/adcreatives", cr_base, "POST")
+    if "error" in creative:
+        return {"creative_error": creative, "cta_error": cta_error}
     ad = call(f"{ACT}/ads", {"name": f"boost {req['media_id']}", "adset_id": sets[0]["id"],
               "creative": {"creative_id": creative["id"]}, "status": "ACTIVE"}, "POST")
     on = {}
     if req.get("activate", True):
         on["adset"] = call(sets[0]["id"], {"status": "ACTIVE"}, "POST")
         on["campaign"] = call(camp["id"], {"status": "ACTIVE"}, "POST")
-    return {"creative": creative, "ad": ad, "activated": on}
+    return {"creative": creative, "ad": ad, "activated": on, "cta": cta_error is None, "cta_error": cta_error}
 
 def op_pause_ad(req):
     return call(req["ad_id"], {"status": "PAUSED"}, "POST")
