@@ -28,5 +28,7 @@ Instagram: the swipe story with music. LinkedIn: the same images work as a docum
 ## How we learn what each platform likes
 These audience notes are starting assumptions, not findings. The daily analytics run compares each platform's own numbers (op platform_stats) and writes what works per platform into learnings/LEARNINGS.md. When a platform's results contradict a row above, change the row and say so in log.md.
 
+Findings so far (analytics run, 24 Nov, early signs): YouTube rewards engineering and scale stories (Aangan 526, Steinway 440 in a day, Hong Kong 434) far more than the famous-India stories that win Instagram (Delhi 53, Bengaluru 11), so the YouTube title should state the scale number and the plain question. Threads rewards carousels and checklists with a rupee number (stamp duty 175, cost of a flat 93 in a day) over reels (0 to 44), so carousel text on Threads is a numbered list with the number in line one. Facebook gives about 200 plays to any reel with a place name. X stays in low double digits; short text is enough.
+
 ## Check before posting
 Read the six texts side by side. If two of them share a sentence, rewrite one.

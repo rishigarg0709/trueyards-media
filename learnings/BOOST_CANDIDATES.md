@@ -99,3 +99,21 @@ Active (Follow - spread, D40): Burj Khalifa and Jakarta, day 3, INR 100 a day ea
 | Jakarta (17995953015110577) | 111 h | 192 | 54.7% | 16.5% | 0 | about INR 195 | FB 221 | ACTIVE, day 3 |
 | Noida twin towers (18131037979847506) | 159 h | 1,346 | 43.7% | 37.2% | 0 | about INR 600 | YT 736 | Had its turn |
 | Kerala, SC, Mumbai rent trials | | 95 to 117 | 79 to 82% | | 0 | 0 | | Excluded (skip over 75%) |
+
+## 2026-11-24 (pull 05:14 UTC)
+Active after this run: all-India TrueYards Follow: Bengaluru lakes (120255753611660547), Steel rods (120255678724950547), Japan houses (120255767700300547, new, in review). Delhi paused. Warm spread: Burj and Jakarta (D55, judged 25 or 26 Nov). Note: boost_post ads lack the Visit profile button and record 0 profile visits (NeedsRishi).
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Bengaluru bus station was a lake (17920086021259928) | 38 h | 1,184 | 49.7% | 15.7% | 0 | FB 238 p91, X p100, Threads 44 | ACTIVE all-India since 23 Nov 20:23; pause 27 Nov (4 days) |
+| Steel rods trial (18508881529100400) | 5.9 d | 1,673 | 34.9% | 42.3% | 1.8 | FB 781, YT 683 | ACTIVE all-India; pause once Japan delivers (ran 4+ days); ages out 28 Nov |
+| Japan houses trial (18086326760340689) | 6.9 d | 414 | 48.0% | 30.7% | 0 | YT 91 | BOOSTED 24 Nov 10:48 (best hold and skip of the never-boosted eligible reels); ages out 27 Nov |
+| Aangan courtyard trial (18140554237642623) | 2.6 d | 252 | 50.0% | 22.9% | 0 (3 saves) | YT 526 p87 | Next in line (eligible to 1 Dec) |
+| Hong Kong homes trial (17940674607125722) | 2.9 d | 134 | 49.6% | 21.6% | 0 | YT 434 | Behind Aangan |
+| Jakarta sinking (17995953015110577) | 5.6 d | 198 | 54.8% | 16.1% | 0 | FB 221 | ACTIVE in warm spread (D55) |
+| Burj Khalifa on sand (18455422555132731) | 6.6 d | 316 | 59.6% | 23.2% | 0 | FB 232 | ACTIVE in warm spread (D55) |
+| Steinway Tower (17916533091559974) | 14 h | 126 | 55.2% | 19.5% | 0 | YT 440 p80, X p95 | Eligible from 20:49 IST 24 Nov; grid reel with follow card |
+| Shani Shingnapur (17954408460050031) | 45 h | 112 | 53.1% | 16.9% | 0 | X p86 | Weak on IG |
+| Carpet vs super built-up (18131749264842833) | 40 h | 161 | 60.5% | 17.1% | 0 | X p91 | Weak (skip over 60%) |
+| Delhi skyscrapers (18341456980274380) | 7.9 d | 1,580 | 44.0% | 34.1% | 1.3 | | PAUSED 24 Nov (ran since 20 Nov); ages out 26 Nov |
+| Noida twin towers (18131037979847506) | 7.6 d | 1,353 | 43.7% | 37.3% | 0 | YT 738 | Paused 23 Nov; ages out 26 Nov |
