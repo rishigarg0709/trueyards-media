@@ -74,6 +74,7 @@ Voices (confounded with topic): Tara (Noida, Steel rods, Mumbai rent, Aangan, Be
 
 ## Running experiments
 - Hook tournament (X1): contradiction 10 reels, median skip 49.9%, hold 22.3%; archetype 24 2 reels 44.0%; scale awe (23) joins with Steinway 55.2%. Next review 2026-11-26. Changes our mind: any archetype beating contradiction by 10 points of median skip over 3 or more reels.
+- Shares (X19, D56): from 25 Nov midday, reels alternate between family-argument topics that end on a "send this to..." line and normal reels; judge at 72 h on sends per 1,000 reach, then follows per 1,000 reach, 4 per side.
 - Opening (X14): DONE, Proven (L18). Default for 80% of reels (D41).
 - Look T (X3, D2): 6 reels, median skip 55.0%, ties other motion-open looks. Final call 2026-11-25.
 - Follow outro (X15, D49): voiced Shani 16.9% hold, Bengaluru 15.7%; silent Carpet 17.1%, Steinway 19.5%. 2 vs 2. Account follows on reel days: voiced Bengaluru day (22 Nov) +2; silent Steinway day (23 Nov) +8 (with more paid visits). Too early.
