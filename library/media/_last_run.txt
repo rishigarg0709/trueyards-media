@@ -1,4 +1,4 @@
-2026-11-24 11:50 UTC
+2026-11-24 13:46 UTC
 el-usage [usage]: usage ok
-mboc-vo-1 [voice]: voice ok
-mboc-vo-2 [voice]: voice ok
+grill-vo-1 [voice]: voice ok
+grill-vo-2 [voice]: voice ok
