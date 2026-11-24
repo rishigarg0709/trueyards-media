@@ -1,0 +1,87 @@
+{
+ "batch": "batches/3bsshgmyb644ttep4p6xcpr2w9egltx1okqu",
+ "name": "prep-2026-11-25",
+ "model": "gemini-3.1-flash-image",
+ "submitted": "2026-11-24T16:59Z",
+ "images": [
+  {
+   "name": "2026-11-25-midday-2",
+   "prompt": "Overhead still life of an Indian family dinner table after a meal: steel thalis and glasses, and in the middle two objects facing each other like a debate, a shiny apartment door key on a key ring with a plain tag, and a small grey concrete plot boundary pillar painted with a plain coral band. Natural window light. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-midday-3",
+   "prompt": "An empty fenced residential plot in a north Indian colony, flat bare earth, four small concrete boundary pillars at the corners joined by a thin wire, low walls of neighbouring finished houses on both sides, open sky, early morning light, wide eye-level view. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-midday-4",
+   "prompt": "Straight-down aerial photograph of a single residential tower and its compound on a flat plot of land: the tower's roof, a driveway, a small garden and the boundary wall; the whole land area is very lightly divided into a fine grid of about two hundred equal faint rectangles, one rectangle highlighted in soft coral. Clean daylight. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-midday-5",
+   "prompt": "Close still life on a light wooden desk: a printed property sale deed with paragraphs too small to read, a fountain pen, and a round magnifying glass resting over one line, a small coral paper flag marking that line, soft daylight from a window. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-midday-6",
+   "prompt": "Two buildings side by side in an Indian city: on the left a tired four-storey 1970s housing society block with stained walls and small balconies, on the right a brand new tall glass and concrete residential tower that has replaced its twin, same plot size, clear blue sky, wide eye-level street view. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-evening-2",
+   "prompt": "Close frontal photograph of one carved wooden house front in an Ahmedabad pol: an old painted wooden door set into intricate teak carving, slightly ajar, and through the narrow gap, instead of a room, a dim narrow passage leading straight through to a sunlit lane on the other side. Bright sunlight on the carving. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-evening-3",
+   "prompt": "Aerial photograph looking down over the joined rooftops of an old Ahmedabad pol: flat terraces and tiled roofs of tightly packed houses sharing walls, all connected so one could walk from roof to roof, little parapets and steps between them, one clear path of rooftops lit by sun, the gate building visible at the edge. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-evening-4",
+   "prompt": "Photograph of a massive old wooden pol gateway in Ahmedabad seen from inside the lane, the heavy double gate closed with iron studs and a wooden bar, a small guard room with a window directly above the gate, bright daylight on the carved timber. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-evening-5",
+   "prompt": "Cutaway photograph of an old Ahmedabad house interior courtyard floor: a stone hatch lifted open in the floor revealing a deep rainwater storage tank (tanka) going down many metres, cool water at the bottom catching light, carved wooden pillars around. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-carousel-2",
+   "prompt": "Ultra-wide 21:9 panorama at 2K, one continuous scene with no seams, the far left and far right edges fade softly into a plain off-white #F4F7F5 field, calm empty upper third for headline text, no people visible, no readable text or brand names. Wide photograph of a brand new, completely empty Indian apartment from the entrance: bright living room with vitrified tile floor, white walls, a large window, flowing into an open kitchen with granite counter and new steel sink, morning daylight, nothing installed but fittings. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-carousel-3",
+   "prompt": "Portrait 4:5 at 2K, objects big and photoreal, set directly on a plain off-white #F4F7F5 background that fills the frame edge to edge so it blends into the slide, soft shadow under objects, generous empty off-white space in the top third for headline text, no people visible, no readable text or brand names. Still life of handover-day tools laid out together: a yellow retractable tape measure partly pulled out, a spirit level, a closed plain document folder with a teal clip, a phone torch shining, arranged diagonally so the tape measure extends off the right edge of the frame. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-carousel-4",
+   "prompt": "Ultra-wide 21:9 panorama at 2K, one continuous scene with no seams, the far left and far right edges fade softly into a plain off-white #F4F7F5 field, calm empty upper third for headline text, no people visible, no readable text or brand names. Wide photograph continuing through a new empty Indian flat: a bathroom with white tiles and a running chrome tap and a damp patch at the ceiling corner, a corridor with a white modular switchboard, and a bedroom that opens to a small balcony with a city view, bright daylight. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-25-carousel-5",
+   "prompt": "Portrait 4:5 at 2K, objects big and photoreal, set directly on a plain off-white #F4F7F5 background that fills the frame edge to edge so it blends into the slide, soft shadow under objects, generous empty off-white space in the top third for headline text, no people visible, no readable text or brand names. Still life of a snag list: a clipboard with a checklist sheet with tick boxes (no readable words), a pencil, a phone showing a camera viewfinder, and small teal sticky notes stuck on a sample of white wall plaster with a hairline crack. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}

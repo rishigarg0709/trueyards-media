@@ -1,4 +1,2 @@
-2026-11-24 13:46 UTC
-el-usage [usage]: usage ok
-grill-vo-1 [voice]: voice ok
-grill-vo-2 [voice]: voice ok
+2026-11-24 16:59 UTC
+prep-2026-11-25 [batch_submit]: batch submitted prep-2026-11-25-pro: gemini-3-pro-image 3 images (batches/dmjba3czdbw5g2gj2b74p3tdo789mfa6f43s); prep-2026-11-25: gemini-3.1-flash-image 13 images (batches/3bsshgmyb644ttep4p6xcpr2w9egltx1okqu)

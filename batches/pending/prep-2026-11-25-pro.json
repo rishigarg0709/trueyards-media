@@ -1,0 +1,30 @@
+{
+ "batch": "batches/dmjba3czdbw5g2gj2b74p3tdo789mfa6f43s",
+ "name": "prep-2026-11-25-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-24T16:59Z",
+ "images": [
+  {
+   "name": "2026-11-25-midday-1",
+   "prompt": "Hyper-realistic photograph shot as if real: a modern 20-storey Indian residential apartment tower in a quiet suburb, gently lifted about four metres off the ground and hovering, casting a soft shadow, revealing the bare square plot of earth beneath it; the plot is lightly marked into a neat grid of many small equal squares by thin chalk lines, and one single small square glows faintly coral. Low three-quarter view from the street, believable scale and shadows, morning daylight, looks like a real news photo. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  },
+  {
+   "name": "2026-11-25-evening-1",
+   "prompt": "Bright full-frame photograph of a narrow old lane inside a pol in Ahmedabad's walled city: tall carved wooden house fronts with jharokha balconies and painted doors on both sides, a heavy wooden gateway with a small room above it at the far end, a carved wooden bird feeder (chabutro) on a pillar in the middle of the lane, warm sun on the facades, eye-level view looking down the lane, period-accurate details. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K",
+   "hero": true
+  },
+  {
+   "name": "2026-11-25-carousel-1",
+   "prompt": "Portrait 4:5 at 2K, objects big and photoreal, set directly on a plain off-white #F4F7F5 background that fills the frame edge to edge so it blends into the slide, soft shadow under objects, generous empty off-white space in the top third for headline text, no people visible, no readable text or brand names. Hero still life for a cover: a bunch of new brass house keys on a ring with a plain teal tag, hanging from the lock of a freshly painted white flat front door that stands slightly open onto a bright empty room, the keys large in the lower middle of the frame. photorealistic photograph, bright natural daylight, clean and crisp, true colours, high key with a clear subject, subtle teal and deep green tints in the grade, never murky, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K",
+   "hero": true
+  }
+ ],
+ "fallback_after_utc": null
+}
