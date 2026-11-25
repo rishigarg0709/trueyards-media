@@ -1,5 +1,5 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-25",
  "status": "ok",
  "product": "FIT",
  "total": 1500,
@@ -28,32 +28,40 @@
   "window_days": 14,
   "channels": {
    "wa": {
-    "spend": 2885,
-    "leads": 120,
-    "qualified": 18,
-    "visit_planned": 14,
-    "visit_done": 0,
+    "spend": 9135,
+    "leads": 235,
+    "qualified": 48,
+    "visit_planned": 34,
+    "visit_done": 2,
     "booked": 0,
-    "per_visit": 206,
-    "per_qualified": 160,
-    "per_lead": 24
+    "per_visit": 269,
+    "per_qualified": 190,
+    "per_lead": 39
    },
    "meta": {
-    "spend": 181,
-    "leads": 4,
-    "qualified": 0,
-    "visit_planned": 0,
-    "visit_done": 0,
+    "spend": 4209,
+    "leads": 88,
+    "qualified": 20,
+    "visit_planned": 15,
+    "visit_done": 8,
     "booked": 0,
-    "per_visit": null,
-    "per_qualified": null,
-    "per_lead": 45
+    "per_visit": 281,
+    "per_qualified": 210,
+    "per_lead": 48
    }
   },
   "meta_spend": {
    "other": {
-    "spend": 181.37,
-    "chats": 6
+    "spend": 4023.24,
+    "chats": 41
+   },
+   "remind": {
+    "spend": 118.61,
+    "chats": 0
+   },
+   "unreach": {
+    "spend": 67.14,
+    "chats": 0
    }
   },
   "lift": {
@@ -64,7 +72,7 @@
   "summary": "ok"
  },
  "reasons": [
-  "Not enough visits or qualified leads on both channels yet to compare; split unchanged.",
+  "Cost per site visit planned is close (WhatsApp INR 269, Meta INR 281); no shift.",
   "Warm-up lift not measurable yet (needs 3 waves a week old); shares held."
  ]
 }
