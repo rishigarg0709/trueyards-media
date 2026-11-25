@@ -1,5 +1,8 @@
 # FIT Industry, new theme C (23 Nov 2026): "Kiraye se apne address tak"
 
+**REJECTED by Rishi 25 Nov 19:33**: does not match the winning red and white real-footage reel; no sad or pain-led reels. Replaced by fit-d.
+
+
 A completely new reel, not a hook swap on P10. Theme: stop renting a cramped factory, own your plot.
 - Hook: a "Landlord" message pops up ("Next month se rent badh raha hai"), spoken question "Landlord का message आया? Rent फिर बढ़ गया?"
 - Pain (rent rises every year, truck stuck in the lane, factory still not yours), hard cut to "Ab kiraya nahi. Apni zameen."
