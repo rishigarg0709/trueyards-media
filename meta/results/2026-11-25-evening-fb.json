@@ -1,0 +1,12 @@
+{
+ "op": "fb_reel",
+ "ran_at": "2026-11-25T14:45:52.080737Z",
+ "result": {
+  "video_id": "1685285372988120",
+  "finish": {
+   "success": true,
+   "message": "Video is Processing. To check the status of the video, please follow the instructions listed at https://developers.facebook.com/docs/video-api/guides/reels-publishing#get-the-upload-status.",
+   "post_id": "122159318271349925"
+  }
+ }
+}
