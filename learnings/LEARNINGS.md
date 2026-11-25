@@ -9,81 +9,82 @@ Every reel and carousel run reads this file before choosing a topic, hook and st
 - Compare each post with the account's rolling median, not with absolute numbers. Call something a pattern only when it holds across at least 3 posts.
 
 ## Current findings
-Data: learnings/data/2026-11-24-media.csv, -account.csv, -facebook.csv, -cross.csv, -platforms.csv (pull 05:14 UTC 24 Nov; 27 TrueYards posts on Instagram, Forteasia reel excluded). Steel rods, Delhi, Noida, Burj, Jakarta and now Bengaluru (from 23 Nov 20:23) have had growth ads: their Instagram post insights stay organic only; ad numbers live in BOOST_LOG.md. Reels do not return follows or profile visits per post, so follows per 1,000 reach is measured at account level. From 23 Nov reels post to the grid, not as trials (D54).
-- Followers: IG 430 (+8 in 24 h, the best day so far), FB page 6 (+0), YouTube 6 subscribers (+2), Threads 12 (+1), X not returned. Progress to 100,000: 0.43%.
-- Follows per 1,000 reach (account): 23 Nov IG reach 7,142 (paid and organic) for about +8 followers, about 1.1 per 1,000 (22 Nov about 0.3). Growth ads in the same 24 h: about INR 235 and about 157 paid profile visits (all from the warm spread campaign), so about 1 follower per 20 paid visits against about 1 in 96 before (D54 compares this for a week). Early sign: one day.
-- Paid finding (new, D42 lopsided): the three all-India ads made with boost_post (Steel rods, Delhi, Bengaluru) record 0 profile visits: INR 38.07 and 1,192 reach this morning, against 38 visits for INR 40.28 on the two spread ads. boost_post builds the ad without the "Visit Instagram profile" button that follow_setup and follow_spread add (scripts/meta_ops.py), so the all-India campaign buys video views. Raised to Rishi (NeedsRishi) and the SMX chat (LIVE_STATUS).
-- Steinway Tower (23 Nov evening, first grid reel under D54, look T, George, scale awe, 51.9 s): 126 reach in 14 h, skip 55.2%, hold 19.5%. Weak on IG so far but 440 YouTube views in its first day (p80, best first day after Aangan) and the best X post of the day (17 views, p95).
-- Cost-of-flat carousel (23 Nov, first D54 evergreen carousel): 10 reach, 1 save (10% of reach) on IG; 93 views on Threads (p91). Carousels are judged on profile visitors who follow, not reach.
-- Hold: Steinway 51.9 s holds 19.5% against 15.7 to 17.1% for the three 56 to 60 s reels of 22 Nov. Early sign that shorter helps; X18 still has 0 reels at 35 to 45 s.
-- Best reel of the last 7 days (per-post follows are not returned, so by reach, skip and hold): Steel rods (18 Nov), reach 1,673, skip 34.9%, hold 42.3%, 3 sends (1.8 per 1,000). Newest strong one: Bengaluru lake, 1,184 reach, skip 49.7%, hold 15.7%, 0 sends; reach has flattened (1,126 to 1,184 in 24 h).
-- Trials (D18 ended 23 Nov): last 10 trials median reach 134, median skip 56.8%. None meets the share-to-everyone bar (skip under 35%, hold 45%+, 2 sends or follows per 1,000). Under D54 the trials that worked (Steel rods, Bengaluru, Japan, Aangan) are already listed for Share to everyone in NeedsRishi N57.
-- Sends: 0 on Instagram from the 11 newest reels. Comments 0.
+Data: learnings/data/2026-11-25-media.csv, -account.csv, -facebook.csv, -cross.csv, -platforms.csv (pull 05:16 UTC 25 Nov; 30 TrueYards posts on Instagram, Forteasia reel excluded). Steel rods, Delhi, Noida, Burj, Jakarta, Bengaluru and Japan have had growth ads (Aangan from 25 Nov): their Instagram post insights stay organic only; ad numbers live in BOOST_LOG.md. Reels do not return follows or profile visits per post, so follows per 1,000 reach is measured at account level. From 23 Nov reels post to the grid, not as trials (D54).
+- Followers: IG 439 (+9 in 24 h, new best day), FB page 7 (+1), YouTube 6 subscribers (+0), Threads 12 (+0), X not returned. Progress to 100,000: 0.44%.
+- Follows per 1,000 reach (account): 24 Nov IG reach 18,748 (paid and organic, more than double 23 Nov) for +9, about 0.5 per 1,000 (23 Nov about 1.1). The extra reach was mostly the all-India growth ads; more reach did not bring more follows per person reached.
+- NEW, grid reels keep viewers better (D54, Signal, L20): the three reels of 24 Nov, all on the main grid, have the lowest skip rates since Steel rods: Chandigarh Sector 13 38.1% (969 reach in 21 h, reach breakout, 7 times the median), Mumbai no-OC 41.7%, Balcony grill 41.1%. The 4 grid reels since D54 have median skip 41.4% against 53.1% for the last 11 trials. Confounded: all three are famous-place or every-street India topics with motion openings (L17, L18).
+- Balcony grill (24 Nov evening, look T, Jessa, hook 24, 51.2 s): 384 reach in 15 h, skip 41.1%, average watch 40.0 s of 51.2 s (hold 78.1%, the best ever, almost 2 times Steel rods 42.2%). 1 send, 1 save. X p88.
+- Mumbai flats with no OC (24 Nov 17:13 slot, look A, Tara, contradiction, real case, 44.8 s): 131 reach in 17 h, skip 41.7%, hold 27.4%, 3 sends = 22.9 sends per 1,000 reach, the best send rate of any TrueYards reel (Steel rods 1.8). A real case with a loss people fear gets sent. First X18 short reel (44.8 s).
+- Chandigarh Sector 13 (24 Nov midday, look B, George, contradiction on a famous place, 50.4 s): 969 reach in 21 h, skip 38.1%, hold 21.2%, 1 send, 11 likes. First George reel under 52% skip, so the George finding was the topic, not the voice. X 24 views (p96).
+- Best reel of the last 7 days (per-post follows are not returned, so by reach, skip, hold and sends): Chandigarh for reach and skip; Mumbai no-OC for sends; Balcony for hold.
+- Trials (D18 ended 23 Nov): no trial reel meets the share-to-everyone bar (skip under 35%, hold 45%+, 2 sends or follows per 1,000). The 4 trials that worked stay listed in NeedsRishi N57.
+- Carousel: cost-of-flat (23 Nov) 16 reach, 1 save, 1 like; carousels are judged on profile visitors who follow (D54).
 
 ### Hook tournament standings (IG reels, organic; ranked by skip because per-post follows are not returned)
 | Archetype | Posts | Reach | Median skip | Median hold | Sends per 1,000 |
 |---|---|---|---|---|---|
-| 24 Why does X look like this (Steel rods, Shani Shingnapur) | 2 | 1,785 | 44.0% | 29.6% | 1.7 |
-| 1 Contradiction (Delhi, Noida, Japan, Burj, Kerala, SC, Hong Kong, Aangan, Carpet, Bengaluru) | 10 | 5,615 | 49.9% | 22.3% | 0.4 |
-| 10 Visual shock (Jakarta) | 1 | 198 | 54.8% | 16.1% | 0 |
-| 23 Scale awe (Steinway, new) | 1 | 126 | 55.2% | 19.5% | 0 |
+| 24 Why does X look like this (Steel rods, Shani, Balcony grill) | 3 | 2,175 | 41.1% | 42.2% | 1.8 |
+| 1 Contradiction (Delhi, Noida, Japan, Burj, Kerala, SC, Hong Kong, Aangan, Carpet, Bengaluru, Chandigarh, Mumbai no-OC) | 12 | 6,743 | 49.7% | 22.2% | 0.9 |
+| 23 Scale awe (Steinway) | 1 | 140 | 54.3% | 18.6% | 0 |
+| 10 Visual shock (Jakarta) | 1 | 203 | 56.4% | 15.7% | 0 |
 | 14 Story cold open (Jaipur) | 1 | 134 | 64.0% | 16.5% | 0 |
-| 2 Number slam (home loan, Mumbai rent) | 2 | 153 | 82.0% | 15.9% | 0 |
-Contradiction (10 reels, past the bar) leads on volume; inside it, a famous place or real case reaches 1,184 to 1,580 (Delhi, Noida, Bengaluru) against 104 to 414 on a generic object or a global city (L17). Archetype 24 leads on skip but has only 2 reels.
+| 2 Number slam (home loan, Mumbai rent) | 2 | 154 | 82.1% | 15.8% | 0 |
+Archetype 24 now leads contradiction by 8.6 points of skip and almost 2 times the hold over 3 reels (2 of them on the grid or Steel rods). Contradiction is past the bar on volume; inside it, a famous Indian place or real case wins (Chandigarh, Delhi, Noida, Bengaluru, Mumbai no-OC).
 
 ### Story types (early sign unless marked)
-- Famous Indian place or case with a hidden past or rule, or a thing on every Indian street: Steel rods 1,673, Delhi 1,580, Noida 1,353, Bengaluru 1,184. The only reels over 1,000 reach (L17, Signal).
-- Engineering marvels and global comparisons (Aangan, Hong Kong, Steinway) are weak on IG (126 to 252) but lead YouTube (526, 434, 440 views).
-- Rules or money maths on a generic object (Carpet 161, Mumbai rent 95, home loan 58) are the weakest on IG; regional India and news (Kerala, SC) lose on IG but win on Threads and Facebook.
+- Famous Indian place or a thing on every Indian street, with a hidden past or rule: Steel rods 1,679, Delhi 1,586, Noida 1,360, Bengaluru 1,191, Chandigarh 969 in 21 h. Still the only reels near or over 1,000 reach (L17, Signal, now 5 reels).
+- Real case with a loss people fear (Mumbai no-OC): the only reel with sends over 2 per 1,000. Early sign, 1 reel.
+- Engineering marvels and global comparisons (Aangan, Hong Kong, Steinway) are weak on IG (134 to 252) but lead YouTube (548, 435, 454).
+- Rules or money maths on a generic object (Carpet 162, Mumbai rent 95, home loan 59) are the weakest on IG.
 - Small-place curiosity without a famous name (Shani 112, Kerala 104, Jaipur 134) does not travel.
 
 ### Looks and voices (early sign)
 | Look | Reels | Reach | Median skip | Median hold |
 |---|---|---|---|---|
-| C Midnight Gold with bright real photos (Steel rods) | 1 | 1,673 | 34.9% | 42.3% |
-| A Newsroom Red (Delhi, Noida, SC) | 3 | 3,050 | 44.0% | 34.1% |
-| F Tokyo Neutral (Japan, Hong Kong, Carpet) | 3 | 709 | 49.6% | 21.6% |
-| T TrueYards Brand (Jakarta, Mumbai rent, Kerala, Aangan, Bengaluru, Steinway) | 6 | 1,959 | 55.0% | 15.9% |
-| B Emerald Doc (Jaipur, Shani) | 2 | 246 | 58.6% | 16.7% |
-| E Blueprint line art (Burj) | 1 | 316 | 59.6% | 23.2% |
-Look T test (D2, X3, ends 25 Nov): 6 reels, median skip 55.0%. With a motion opening look T (Aangan 50.0%, Bengaluru 49.7%, Steinway 55.2%) sits inside the 49.6 to 60.5% range of other motion-open reels; its 2 big losses were text-card openings. Look is not the cause of wins or losses; the topic and opening are. Final call in tomorrow's run.
-Voices (confounded with topic): Tara (Noida, Steel rods, Mumbai rent, Aangan, Bengaluru) median skip 49.7%, 4,557 reach; Jessa (6 reels) 52.2%; George (Burj, Jaipur, Kerala, Shani, Steinway) 59.6%, 792 reach. George now 5 of 5 above 52% skip: early sign, near the bar.
+| C Midnight Gold with bright real photos (Steel rods) | 1 | 1,679 | 35.0% | 42.2% |
+| A Newsroom Red (Delhi, Noida, SC, Mumbai no-OC) | 4 | 3,194 | 44.0% | 30.7% |
+| F Tokyo Neutral (Japan, Hong Kong, Carpet) | 3 | 714 | 49.6% | 21.6% |
+| B Emerald Doc (Jaipur, Shani, Chandigarh) | 3 | 1,215 | 53.1% | 16.9% |
+| T TrueYards Brand (Jakarta, Mumbai rent, Kerala, Aangan, Bengaluru, Steinway, Balcony) | 7 | 2,369 | 54.3% | 15.7% |
+| E Blueprint line art (Burj) | 1 | 319 | 60.2% | 23.1% |
+Look T test (D2, X3) FINAL, 25 Nov: 7 reels, median skip 54.3%, hold 15.7%, 2,369 reach. Look T has the worst and the best (Balcony 41.1% skip, hold 78.1%) depending on opening and topic, and every look has a wide range. Verdict: the look does not decide a reel; topic and opening do. Look T stays allowed but is no longer required daily (D2 ends today). Analytics stops tracking looks as a test.
+Voices: Tara 6 reels, median skip 46.8%, 4,708 reach; Jessa 7 reels, 49.6%; George 6 reels, 57.2%, but Chandigarh (George) 38.1% shows the earlier George losses were weak topics. Not a rule.
 
 ## Platform fit (compare within a platform only)
-- YouTube Shorts: Noida 738, Steel rods 683, Aangan 526 (p87), Steinway 440 (p80, first day), Hong Kong 434, Jakarta 223, Mumbai 143, Shani 125, Kerala 114, Jaipur 99, Japan 91, Delhi 53, SC 21, Bengaluru 11, Burj 5. Subscribers 6 (+2 today). Engineering marvels and global scale stories win on YouTube while the famous-India stories that win IG (Delhi 53, Bengaluru 11) do not. Rule for reel runs: YouTube title is the plain question plus the scale number ("435 m tall, 18 m wide: how does it stand?"), no puzzle wording; judge by subscribers (D30).
-- Facebook: Steel rods 781, Kerala 274, Bengaluru 238 (p91), Burj 232, Jakarta 221, Steinway 212 (p77, first day), Jaipur 210, Mumbai 203, SC 77; carousels and most others under 20. Facebook gives about 200 plays to almost any reel with a place name; it is a reach floor, not engagement.
-- Threads: stamp duty carousel 175, Kerala 104 (p95), cost-of-flat carousel 93 (p91, first day), SC news text 50, Bengaluru 44; reels 0 to 17. Carousel and checklist text with a rupee number does best on Threads. Rule: Threads text leads with the number and the place in line one; carousels go to Threads as a numbered text list.
-- X: Bengaluru 26 (p100), Steinway 17 (p95), Carpet 12, Aangan 11, Shani 11. Still single and low double digits, no follows. Text-only cross-posts are enough.
-- Underperformed on IG but top 20% elsewhere: Steinway (IG 126, YT p80, X p95), cost-of-flat carousel (IG 10, Threads p91), Aangan (IG 252, YT p87), Hong Kong (IG 134, YT 434), Kerala (IG 104, FB p95, Threads p95), Shani (IG 112, X p86), stamp duty carousel (IG 20, Threads p100). Reverse: Delhi (IG 1,580, YT 53, Threads 11) and Bengaluru (IG 1,184, YT 11).
-- Same everywhere: Steel rods is top on IG, FB and YouTube; Bengaluru top 20% on IG, FB, Threads and X.
+- YouTube Shorts: Noida 743, Steel rods 684, Aangan 548 (p88), Steinway 454 (p82), Hong Kong 435, Jakarta 223, Mumbai rent 143, Shani 127, Kerala 116, Chandigarh 106 (first day), Jaipur 103, Balcony 95 (first day), Japan 91, Delhi 59, SC 21, Bengaluru 13, Burj 5. The Mumbai no-OC reel has no YouTube copy. Subscribers 6 (+0). Engineering marvels and global scale stories win YouTube while the famous-India stories that win IG (Delhi 59, Bengaluru 13, Chandigarh 106) do less. Rule for reel runs: YouTube title is the plain question plus the scale number ("435 m tall, 18 m wide: how does it stand?"), no puzzle wording; judge by subscribers (D30). Every reel, including the 17:13 slot, needs its YouTube copy.
+- Facebook: Steel rods 781, Kerala 278 (p96), Bengaluru 239, Burj 232, Jakarta 221, Steinway 216, Jaipur 211, Mumbai rent 203, Chandigarh 91 (first day), SC 77, Balcony 47 (first day), Mumbai no-OC 23. Facebook gives about 200 plays to almost any reel with a place name within 2 to 3 days; a reach floor, not engagement. Page followers 7.
+- Threads: stamp duty carousel 175, Kerala 104 (p96), cost-of-flat carousel 104 (p96), SC news text 50, Bengaluru 44; reels 0 to 17 (Mumbai no-OC 14, Chandigarh 11). Rule stays: Threads text leads with the number and the place in line one; carousels go to Threads as a numbered text list.
+- X: Bengaluru 26 (p100), Chandigarh 24 (p96), Steinway 17 (p92), Balcony 13 (p88), Carpet 12, Aangan 11, Shani 11, Mumbai no-OC 10. A famous Indian place plus a puzzle in the first line does best on X too. Still no follows; text-only cross-posts are enough.
+- Underperformed on IG but top 20% elsewhere: Steinway (IG 140, YT p82, X p92), cost-of-flat carousel (IG 16, Threads p96), Aangan (IG 252, YT p88), Hong Kong (IG 134, YT 435), Kerala (IG 104, FB p96, Threads p96), stamp duty carousel (IG 24, Threads p100). Reverse: Delhi (IG 1,586, YT 59) and Bengaluru (IG 1,191, YT 13).
+- Same everywhere: Steel rods top on IG, FB and YouTube; Bengaluru and Chandigarh top 20% on IG and X.
 
 ## Do more
-- Contradiction or "why does X look like this" on a FAMOUS Indian place or a thing on every Indian street, with a hidden past or rule (4 reels at 1,184 to 1,673 reach vs 58 to 414 for every other reel, L17). Name the city in the first line.
-- Full-frame motion opening with the line spoken from 0 s: now Proven (X14: 5 motion-open trials at 24 h+, median skip 50.0% vs 80.0% for 4 text-card trials; L18).
-- Shorter reels: aim for 40 to 48 s (Steinway 51.9 s holds 19.5% vs 16 to 17% at 56 to 60 s; the 52 to 57 s winners held 34 to 42%). Run X18 at 35 to 45 s on the next reel.
-- Tara or Jessa as narrator for India stories (Tara 49.7%, Jessa 52.2% median skip vs George 59.6%).
-- For YouTube: engineering and global scale stories (Aangan, Hong Kong, Steinway) get 430 to 530 views; keep one a week for YouTube even though IG reach is low.
+- "Why does X look like this" on a thing on every Indian street (Steel rods, Balcony grill): 3 reels, median skip 41.1%, hold 42.2%, the best hook so far. At least 1 reel in 3 should be this shape while it leads.
+- Contradiction on a FAMOUS Indian place or real case, city in the first line (Chandigarh 969 reach in 21 h, skip 38.1%; L17, 5 reels near or over 1,000).
+- Real cases where buyers lost something (Mumbai no-OC: 22.9 sends per 1,000, best ever). Pairs well with X19 shares.
+- Full-frame motion opening with the line spoken from 0 s (Proven, L18).
+- 44 to 51 s length: Mumbai no-OC 44.8 s and Balcony 51.2 s held 27% and 78%; the 56 to 60 s reels held 16 to 17%.
+- For YouTube: one engineering or global scale story a week (Aangan, Hong Kong, Steinway: 435 to 548 views).
 
 ## Do less
-- Rules or money explainers on a generic object or empty room (Carpet 161, Mumbai rent 95, home loan 58). Put the rule inside a famous place or real case instead.
+- Rules or money explainers on a generic object or empty room (Carpet 162, Mumbai rent 95, home loan 59). Put the rule inside a famous place or real case (Mumbai no-OC shows how).
 - Small-place curiosities without a name people know (Shani 112, Kerala 104, Jaipur 134).
 - Text cards, label bars or a bare number as the first frame (median skip 80%).
 - Reels over 55 s (every one since 19 Nov holds under 23%).
-- George as the opening voice on IG reels (5 of 5 above 52% skip, early sign).
-- Growth ads made with boost_post until the ad carries the Visit profile button (0 profile visits recorded on INR 38 today).
+- Global engineering stories as the IG reel of the day (Steinway 140 reach, skip 54.3%): keep them, but as the YouTube-first slot.
+- Judging growth ads on cheap profile visits: the all-India ads now buy visits at INR 0.64 but L12 says such visits rarely follow.
 
 ## Running experiments
-- Hook tournament (X1): contradiction 10 reels, median skip 49.9%, hold 22.3%; archetype 24 2 reels 44.0%; scale awe (23) joins with Steinway 55.2%. Next review 2026-11-26. Changes our mind: any archetype beating contradiction by 10 points of median skip over 3 or more reels.
-- Shares (X19, D56): from 25 Nov midday, reels alternate between family-argument topics that end on a "send this to..." line and normal reels; judge at 72 h on sends per 1,000 reach, then follows per 1,000 reach, 4 per side.
-- Opening (X14): DONE, Proven (L18). Default for 80% of reels (D41).
-- Look T (X3, D2): 6 reels, median skip 55.0%, ties other motion-open looks. Final call 2026-11-25.
-- Follow outro (X15, D49): voiced Shani 16.9% hold, Bengaluru 15.7%; silent Carpet 17.1%, Steinway 19.5%. 2 vs 2. Account follows on reel days: voiced Bengaluru day (22 Nov) +2; silent Steinway day (23 Nov) +8 (with more paid visits). Too early.
-- Length (X18): 0 short reels yet; Steinway at 51.9 s is the closest data point (hold 19.5%).
-- Grid not trial (D54, from 23 Nov): week-long check of reach per reel against the trial period (last 10 trials median reach 134) and followers per profile visit against about 1 in 96. Day 1: Steinway 126 reach in 14 h; about 1 in 20 paid visits.
-- Geography (L2): national India famous place 1,184 to 1,673 IG reach (4 reels); global 126 to 414 (5 reels); small-place India 104 to 161 (4 reels). At the bar on the global side; L17 covers it.
-- Growth ads (X4, X16, D55): since 18 Nov 16:45 about INR 1,146 on TrueYards Follow and Follow - spread, about 1,530 profile visits, +22 gross (408 to 430), about +16 net: about INR 52 gross and INR 72 net per follower. Warm spread (X16) judged 25 or 26 Nov against the all-India campaign.
-- Posting slot: midday median reach 134 vs evening 252. Confounded with topic.
-- Remixes queued (14-day rule): Delhi (Lutyens, Paris), Noida (minute-by-minute, Maradu), Steel rods (black tanks, one floor at a time, from 2 Dec), Kerala (akiya, Gulf mansions, from 4 Dec), Bengaluru (Chennai wetlands, Tehri, lake-bed plot check, from 6 Dec), Steinway (from 7 Dec, YouTube-first).
+- Hook tournament (X1): archetype 24 3 reels, median skip 41.1%, hold 42.2%; contradiction 12 reels, 49.7%, hold 22.2%. Changes our mind: any archetype beating contradiction by 10 points of median skip over 3 or more reels; archetype 24 is at 8.6 points. Next review 2026-11-26.
+- Shares (X19, D56): starts with the 25 Nov midday reel (Flat or plot); judge at 72 h on sends per 1,000 reach, then follows per 1,000 reach, 4 per side. Benchmark: Mumbai no-OC 22.9 sends per 1,000 (control-style reel).
+- Follow outro (X15, D49): voiced Shani 16.9%, Bengaluru 15.7%, Chandigarh 21.2%, Balcony 78.1% hold; silent Carpet 17.1%, Steinway 18.6%, Mumbai no-OC 27.4%. 4 vs 3 reels. Account follows on reel days: voiced days +2 (22 Nov) and +9 (24 Nov, mixed with silent Mumbai no-OC); silent day +8 (23 Nov). Too early, outro does not hurt hold.
+- Length (X18): 1 short reel (Mumbai no-OC 44.8 s, hold 27.4%) against 56 to 60 s reels at 15.7 to 17.1%. 1 of 3.
+- Grid not trial (D54, from 23 Nov): 4 grid reels median skip 41.4% vs 53.1% for the last 11 trials; reach Chandigarh 969 and Balcony 384 in under a day vs trial median about 134. Followers per paid profile visit about 1 in 52 in the last 24 h (target better than 1 in 96). Signal (L20); week-long check ends 30 Nov.
+- Look T (X3, D2): DONE 25 Nov, no effect of the look; see Looks.
+- Geography (L2, L17): national India famous place 969 to 1,679 IG reach (5 reels); global 134 to 418 (6 reels); small-place India 104 to 162 (4 reels).
+- Growth ads (X4, X16, D55): since 18 Nov 16:45 about INR 1,841 on TrueYards Follow and Follow - spread, +31 gross (408 to 439), about +24 net: about INR 59 gross and INR 77 net per follower. Last 24 h about INR 695 for +9 gross: about INR 77 gross, INR 87 net, the worst value day, because the all-India campaign spent about INR 342 on 24 Nov (Meta may overspend a daily budget by up to 75%). Warm spread (X16) is judged in the 26 Nov run, after the all-India ads have one full day with the Visit profile button.
+- Posting slot: confounded with topic; Chandigarh (midday) is the best midday reel.
+- Remixes queued (14-day rule): Delhi (Lutyens, Paris), Noida (minute-by-minute, Maradu), Steel rods (black tanks, one floor at a time, from 2 Dec), Kerala (akiya, Gulf mansions, from 4 Dec), Bengaluru (Chennai wetlands, Tehri, lake-bed plot check, from 6 Dec), Steinway (from 7 Dec, YouTube-first), Chandigarh (from 8 Dec), Mumbai no-OC (from 8 Dec), Balcony grill (from 8 Dec).
 
 ## History
 - 2026-11-16: file created.
@@ -95,3 +96,4 @@ Voices (confounded with topic): Tara (Noida, Steel rods, Mumbai rent, Aangan, Be
 - 2026-11-22: the two full-frame motion openings (Hong Kong, Aangan trials) kept 2.5 times more viewers past 3 s than the four text-card trials (skip 48.5 and 48.9% vs median 80.0%), and Aangan in look T matched look F, so openings, not looks, caused the slump; contradiction reaches 8 reels (median skip 48.7%); IG 420 (+5, best day), YouTube 4 subscribers (+2), Hong Kong and Aangan are the best first-day Shorts (341 and 315 views); growth ads INR 110.63 for about +4 net followers in 24 h (about INR 28 each), still above the INR 12 line, proposal to Rishi (N50).
 - 2026-11-23: Bengaluru lake trial broke out (1,126 reach in 14.5 h, about 9 times the trial median, top 20% on IG, FB, Threads and X) while 0 sends and hold 16%; motion openings now 5 trials at median skip 50.0% vs 80.0% for text cards; contradiction on a famous place is the winning shape (4 reels over 1,000 reach), rules on a generic object the weakest (Carpet 157); look T ties other looks with a motion opening; hold fell to 16 to 17% on 56 to 60 s reels, so a 35 to 45 s length test (X18) starts; IG 422 (+2), growth ads INR 187 on 22 Nov for about +1 net (warm audience day 1, visits dearer); D40 rotation to Steel rods and Delhi not run (this task may not call follow_spread), Burj and Jakarta kept.
 - 2026-11-24: IG 430 (+8, best day; about 1 follower per 20 paid visits vs 1 in 96 before), YouTube 6 (+2), Threads 12 (+1); motion openings Proven (X14, L18); Steinway, the first grid reel under D54, is weak on IG (126 in 14 h, skip 55.2%) but p80 on YouTube and p95 on X, so engineering and scale stories are a YouTube fit; George 5 of 5 above 52% skip; the all-India growth ads made with boost_post record 0 profile visits because they lack the Visit profile button (raised to Rishi); Delhi ad paused, Japan added.
+- 2026-11-25: the three 24 Nov grid reels kept viewers better than any trial since Steel rods (Chandigarh skip 38.1% and 969 reach in 21 h, Balcony grill hold 78.1%, Mumbai no-OC 22.9 sends per 1,000, the best send rate ever), so grid publishing (D54) plus famous-place topics is the new Signal (L20); archetype 24 leads the hook tournament (3 reels, skip 41.1%); look T test closed with no look effect; George's first good reel (Chandigarh) clears the voice; IG 439 (+9, best day), FB 7, YT 6, Threads 12; growth ads about INR 695 in 24 h for +9 (about INR 87 net each), all-India ads now record visits with the button (281 by 10:45 at INR 0.64); Steel rods ad paused after 6 days, Aangan added.

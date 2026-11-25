@@ -117,3 +117,21 @@ Active after this run: all-India TrueYards Follow: Bengaluru lakes (120255753611
 | Carpet vs super built-up (18131749264842833) | 40 h | 161 | 60.5% | 17.1% | 0 | X p91 | Weak (skip over 60%) |
 | Delhi skyscrapers (18341456980274380) | 7.9 d | 1,580 | 44.0% | 34.1% | 1.3 | | PAUSED 24 Nov (ran since 20 Nov); ages out 26 Nov |
 | Noida twin towers (18131037979847506) | 7.6 d | 1,353 | 43.7% | 37.3% | 0 | YT 738 | Paused 23 Nov; ages out 26 Nov |
+
+## 2026-11-25 (pull 05:16 UTC)
+Running: all-India TrueYards Follow (INR 200/day): Bengaluru lakes (ad 120255777892960547), Japan (120255777895420547), Aangan (added today, boost_post). Steel rods ad 120255777897570547 paused today (paid since 19 Nov, 6 days; it took 78% of today's all-India spend). Warm spread (INR 200/day, D55, judged 26 Nov): Burj and Jakarta.
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Chandigarh Sector 13 (18038784548709035, grid, voiced outro) | 21 h | 969 | 38.1% | 21.2% | 1.0 | X p96 (24), YT 106 | Best eligible from 13:22 IST today. First in line for the next ad slot (26 Nov run, replacing Japan, which ages out 27 Nov) |
+| Balcony grill (18114493301598863, grid, voiced outro) | 15 h | 384 | 41.1% | 78.1% | 2.6 | X p88, YT 95 | Eligible from 20:04 IST today. Second in line |
+| Mumbai no-OC (17970572490219322, grid, silent card) | 17 h | 131 | 41.7% | 27.4% | 22.9 | Threads 14, X 10, no YT copy | Eligible from 18:10 IST today. Best sends; low reach so far |
+| Bengaluru lakes trial (17920086021259928) | 62 h | 1,191 | 49.8% | 15.7% | 0 | FB 239, X p100 | ACTIVE (all-India) since 23 Nov 20:23; ages out 2 Dec |
+| Japan houses trial (18086326760340689) | 189 h | 418 | 48.6% | 30.4% | 0 | YT 91 | ACTIVE (all-India) since 24 Nov; post is 10 days old on 27 Nov, pause then |
+| Aangan courtyard trial (18140554237642623) | 87 h | 252 | 50.0% | 22.9% | 0 (1.2% saves) | YT p88 (548) | ADDED today (all-India) |
+| Steel rods trial (18508881529100400) | 166 h | 1,679 | 35.0% | 42.2% | 1.8 | FB and YT top | PAUSED today after 6 days of paid exposure |
+| Steinway (17916533091559974, grid) | 38 h | 140 | 54.3% | 18.6% | 0 | YT p82, X p92 | Weak on IG; not a candidate |
+| Hong Kong, Shani, Carpet trials | 64 to 93 h | 112 to 162 | 49.6 to 60.5% | 17 to 22% | 0 | | Behind Aangan |
+| Burj, Jakarta | 159 to 183 h | 203 to 319 | 56 to 60% | 16 to 23% | 0 | | In the warm spread test until 26 Nov |
+| Delhi, Noida | 207 to 213 h | 1,360 to 1,586 | 44% | 34 to 37% | 0 to 0.1 | | Had their paid turns; age out 26 Nov |
+| Forteasia project reel | | | | | | | Never boost |
