@@ -1,7 +1,0 @@
-d1126m-gold-shop https://images.unsplash.com/photo-1760786933951-ce3791011d1e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3000
-d1126c-hdb-1 https://images.unsplash.com/photo-1550838771-2b5ce38db44a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3000
-d1126c-hdb-2 https://images.unsplash.com/photo-1527465094057-db061fdbfaf7?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=2763
-d1126c-hdb-3 https://images.unsplash.com/photo-1605752994434-11d1a141a3f4?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3000
-d1126e-mumbai-tarps https://images.unsplash.com/photo-1769555692267-0985f3c32ec4?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3000
-d1126e-byculla https://images.unsplash.com/photo-1768822855306-543f47d239e5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4000
-d1126e-mumbai-aerial https://images.unsplash.com/photo-1592715833087-52fd556efb3a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=3000
