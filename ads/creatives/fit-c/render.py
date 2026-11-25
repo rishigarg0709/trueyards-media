@@ -163,7 +163,7 @@ def hrera_card(p):
             d.rectangle((92, yy + 14, 118, yy + 40), fill=RED)
             d.text((146, yy), s, font=fB(56), fill=(18, 18, 18))
     if p > 0.45:
-        d.text((92, 1170), "DTCP Haryana licence 86 and 164 of 2026", font=fM(36), fill=(70, 70, 70))
+        d.text((92, 1170), "DTCP licences 86/2024, 84/2025, 185/2025", font=fM(36), fill=(70, 70, 70))
         d.text((92, 1220), "Verify at www.haryanarera.gov.in", font=fM(36), fill=(70, 70, 70))
     lg2 = logo.resize((230, 158))
     dark = Image.new("RGBA", (290, 200), (18, 18, 18, 255))
