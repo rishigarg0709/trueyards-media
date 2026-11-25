@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[["Every", 0.0, 0.291], ["Indian", 0.343, 0.655], ["balcony", 0.709, 1.091], ["is", 1.139, 1.236], ["a", 1.273, 1.309], ["cage.", 1.411, 1.891], ["On", 2.085, 2.473], ["purpose.", 2.545, 3.118], ["Look", 3.355, 3.733], ["up", 3.781, 3.878], ["on", 3.926, 4.024], ["any", 4.078, 4.242], ["street.", 4.305, 4.741], ["Iron", 4.977, 5.385], ["grills,", 5.433, 6.005], ["floor", 6.105, 6.257], ["to", 6.305, 6.403], ["ceiling.", 6.457, 6.912], ["Families", 7.009, 7.785], ["put", 7.821, 7.93], ["them", 7.959, 8.075], ["up", 8.124, 8.221], ["after", 8.257, 8.439], ["burglaries.", 8.487, 9.166], ["Safety,", 9.322, 10.34], ["right?", 10.524, 10.769], ["Here's", 11.005, 11.893], ["what", 11.922, 12.038], ["fire", 12.096, 12.329], ["officers", 12.394, 12.911], ["keep", 12.969, 13.202], ["warning.", 13.265, 13.784], ["A", 14.02, 14.032], ["grill", 14.08, 14.323], ["that", 14.352, 14.468], ["keeps", 14.529, 14.832], ["thieves", 14.877, 15.195], ["out...", 15.305, 15.705], ["can", 15.941, 16.05], ["also", 16.137, 16.486], ["keep", 16.559, 16.85], ["you", 16.941, 17.214], ["in.", 17.407, 17.868], ["September", 18.035, 19.541], ["2021,", 19.686, 20.523], ["Bengaluru.", 20.756, 21.447], ["A", 21.684, 21.938], ["fire", 22.011, 22.302], ["in", 22.35, 22.447], ["an", 22.495, 22.593], ["apartment", 22.629, 22.956], ["complex.", 23.038, 23.747], ["Two", 23.984, 24.256], ["people", 24.298, 24.547], ["were", 24.591, 24.765], ["trapped", 24.811, 25.129], ["on", 25.177, 25.274], ["a", 25.275, 25.275], ["grilled", 25.311, 25.565], ["balcony,", 25.638, 26.247], ["and", 26.365, 26.584], ["lost", 26.627, 26.802], ["their", 26.826, 26.947], ["lives.", 27.032, 27.529], ["The", 27.765, 28.529], ["next", 28.587, 28.82], ["day,", 28.875, 29.265], ["the", 29.347, 29.402], ["city", 29.445, 29.62], ["told", 29.664, 29.838], ["residents:", 29.896, 30.565], ["no", 30.784, 31.22], ["balcony", 31.275, 31.656], ["grills", 31.705, 32.02], ["without", 32.065, 32.384], ["its", 32.42, 32.529], ["approval.", 32.585, 33.167], ["Mumbai's", 33.339, 34.347], ["fire", 34.405, 34.638], ["chief", 34.675, 34.856], ["has", 34.893, 35.002], ["a", 35.038, 35.075], ["simple", 35.116, 35.365], ["fix.", 35.475, 35.929], ["Keep", 36.165, 36.515], ["the", 36.533, 36.587], ["grill,", 36.648, 37.103], ["but", 37.333, 37.387], ["make", 37.431, 37.605], ["it", 37.63, 37.678], ["open,", 37.765, 38.22], ["with", 38.318, 38.551], ["a", 38.587, 38.624], ["lock", 38.682, 38.915], ["you", 38.933, 38.987], ["can", 39.024, 39.133], ["break", 39.181, 39.424], ["in", 39.472, 39.569], ["an", 39.594, 39.642], ["emergency.", 39.707, 40.442], ["So", 40.678, 41.454], ["look", 41.497, 41.672], ["at", 41.696, 41.745], ["your", 41.774, 41.89], ["balcony...", 41.954, 42.517], ["can", 42.754, 42.917], ["your", 42.961, 43.135], ["cage", 43.223, 43.572], ["open?", 43.659, 44.132]];
+const BEATS=/*BEATS*/[0.296, 0.854, 1.411, 1.945, 2.502, 3.06, 3.617, 4.174, 4.731, 5.289, 5.846, 6.403, 6.961, 7.518, 8.075, 8.632, 9.19, 9.724, 10.281, 10.838, 11.396, 11.953, 12.51, 13.067, 13.625, 14.182, 14.739, 15.297, 15.854, 16.411, 16.968, 17.526, 18.083, 18.64, 19.197, 19.732, 20.289, 20.846, 21.403, 21.961, 22.518, 23.075, 23.632, 24.19, 24.747, 25.281, 25.838, 26.396, 26.953, 27.51, 28.068, 28.625, 29.182, 29.739, 30.297, 30.854, 31.411, 31.945, 32.503, 33.06, 33.64, 34.198, 34.755, 35.289, 35.846, 36.403, 36.961, 37.518, 38.075, 38.633, 39.19, 39.747, 40.304, 40.862, 41.419, 41.953, 42.51, 43.068, 43.625, 44.182, 44.739, 45.297, 45.854, 46.411, 46.969, 47.526, 48.083, 48.64, 49.198, 49.755, 50.312, 50.846, 51.404, 51.961, 52.518, 53.075, 53.633, 54.19, 54.747, 55.281, 55.839, 56.396];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0F1A17';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const OST=WS[WS.length-1][2]+0.85;const END=OST+6.2;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+// ================= SCENES (look T TrueYards Brand: ink, white, teal #28c39d label bars, deep green #0E6B50, Inter 800 + Plex Mono) =================
+const BG='#0F1A17';
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(15,26,23,0) ${y+120}px,rgba(15,26,23,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};

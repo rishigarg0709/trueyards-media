@@ -1,0 +1,206 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(6,14,12,.8),0 1px 3px rgba(6,14,12,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[["In", 0.0, 0.16], ["old", 0.22, 0.4], ["Ahmedabad,", 0.453, 1.083], ["some", 1.363, 1.555], ["house", 1.595, 1.795], ["fronts", 1.829, 2.035], ["are", 2.075, 2.195], ["not", 2.235, 2.355], ["houses.", 2.446, 3.075], ["They're", 3.235, 3.955], ["escape", 4.012, 4.355], ["routes.", 4.424, 4.915], ["This", 5.195, 5.227], ["is", 5.28, 5.387], ["a", 5.427, 5.467], ["pol.", 5.567, 5.947], ["Fifty", 6.12, 6.987], ["to", 7.094, 7.307], ["a", 7.347, 7.387], ["hundred", 7.427, 7.707], ["homes", 7.774, 8.107], ["sharing", 8.167, 8.587], ["walls...", 8.68, 9.22], ["behind", 9.5, 9.774], ["one", 9.854, 10.094], ["gate.", 10.158, 10.438], ["Why", 10.718, 10.758], ["build", 10.798, 10.998], ["a", 11.038, 11.078], ["street", 11.124, 11.398], ["like", 11.414, 11.478], ["a", 11.518, 11.558], ["fortress?", 11.638, 12.358], ["In", 12.638, 13.385], ["the", 13.405, 13.465], ["1700s,", 13.545, 14.505], ["as", 14.532, 14.585], ["Mughals", 14.665, 15.065], ["and", 15.085, 15.145], ["Marathas", 15.185, 15.705], ["fought", 15.751, 16.025], ["over", 16.057, 16.185], ["the", 16.205, 16.265], ["city,", 16.329, 16.769], ["its", 17.049, 17.229], ["old", 17.309, 17.549], ["walls", 17.629, 18.029], ["stopped", 18.099, 18.589], ["keeping", 18.629, 18.909], ["robbers", 18.949, 19.309], ["out.", 19.389, 19.619], ["So", 19.899, 20.432], ["neighbours", 20.461, 20.752], ["locked", 20.786, 20.992], ["themselves", 21.028, 21.392], ["in.", 21.499, 21.792], ["A", 22.072, 22.552], ["guard", 22.605, 22.872], ["lived", 22.912, 23.112], ["above", 23.152, 23.352], ["the", 23.372, 23.432], ["gate.", 23.496, 23.776], ["Narrow", 23.981, 24.872], ["passages,", 24.961, 25.731], ["some", 25.96, 26.152], ["disguised", 26.224, 26.872], ["as", 26.899, 26.952], ["the", 26.992, 27.112], ["fronts", 27.146, 27.352], ["of", 27.379, 27.432], ["homes,", 27.525, 28.072], ["let", 28.252, 28.792], ["families", 28.845, 29.272], ["slip", 29.32, 29.512], ["away", 29.56, 29.752], ["in", 29.805, 29.912], ["an", 29.939, 29.992], ["attack.", 30.072, 30.622], ["Even", 30.872, 31.832], ["the", 31.852, 31.912], ["rooftops", 31.965, 32.472], ["joined,", 32.529, 32.952], ["house", 33.059, 33.592], ["to", 33.645, 33.752], ["house.", 33.819, 34.232], ["In", 34.512, 34.53], ["2017,", 34.69, 35.67], ["this", 35.95, 36.078], ["old", 36.158, 36.398], ["city", 36.446, 36.638], ["became", 36.695, 37.038], ["India's", 37.091, 37.518], ["first", 37.598, 37.998], ["World", 38.078, 38.478], ["Heritage", 38.531, 38.958], ["City.", 39.038, 39.438], ["So", 39.718, 40.465], ["that", 40.513, 40.705], ["plain", 40.758, 41.025], ["old", 41.045, 41.105], ["door...", 41.217, 41.707], ["is", 41.987, 42.04], ["it", 42.067, 42.12], ["a", 42.2, 42.28], ["house?", 42.347, 42.76], ["Or", 43.04, 43.84], ["a", 43.88, 43.92], ["way", 43.98, 44.16], ["out?", 44.24, 44.51]];
+const BEATS=/*BEATS*/[0.558, 1.115, 1.673, 2.23, 2.764, 3.321, 3.879, 4.436, 4.993, 5.55, 6.108, 6.665, 7.222, 7.78, 8.337, 8.894, 9.451, 10.009, 10.543, 11.1, 11.657, 12.215, 12.772, 13.329, 13.886, 14.444, 15.001, 15.558, 16.116, 16.673, 17.23, 17.787, 18.345, 18.902, 19.459, 20.016, 20.551, 21.108, 21.665, 22.222, 22.78, 23.337, 23.894, 24.451, 25.009, 25.566, 26.1, 26.657, 27.215, 27.772, 28.329, 28.887, 29.444, 30.001, 30.558, 31.116, 31.673, 32.23, 32.764, 33.322, 33.879, 34.459, 35.017, 35.574, 36.108, 36.665, 37.222, 37.78, 38.337, 38.894, 39.452, 40.009, 40.566, 41.123, 41.681, 42.238, 42.772, 43.329, 43.887, 44.444, 45.001, 45.558, 46.116, 46.673, 47.23, 47.788, 48.345, 48.902, 49.459, 50.017, 50.574, 51.131, 51.665, 52.223, 52.78, 53.337, 53.894, 54.452, 55.009, 55.566, 56.1, 56.658, 57.215];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0F1A17';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const OST=WS[WS.length-1][2]+0.85;const END=OST+6.2;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+// ================= SCENES (look T TrueYards Brand: ink, white, teal #28c39d label bars, deep green #0E6B50, Inter 800 + Plex Mono) =================
+const BG='#0F1A17';
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(15,26,23,0) ${y+120}px,rgba(15,26,23,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};
+// recurring device: a thin teal "gate" frame (two posts and a lintel) that draws on around key captions
+const gate=(sc,x,y,wd,h)=>{const g=svg(sc,'',`<path d="M${x} ${y+h} V${y} H${x+wd} V${y+h}" fill="none" stroke="#28c39d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="filter:drop-shadow(0 0 8px rgba(40,195,157,.6))"/>`);const p=g.querySelector('path');return (t,a)=>{p.style.strokeDashoffset=1-eio((t-a)/.7)}};
+const HOOKEV=wt('not');
+// 1. HOOK: bright sunlit pol lane, carved house fronts, gate at the end; push down the lane from frame 0; line spoken from 0 s; no text before 1.55 s
+const hookImg=sc=>box(sc,'m1',560,980,'50% 50%');
+add(0,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.08) saturate(1.08)';mk(sc,'sh','background:'+GTOP+')');const g=mk(sc,'sh','background:'+GB(46)+';opacity:0');
+ const k=T(sc,'K ts','left:72px;top:1170px;color:#BFF5E4',[['●',1.55,'c'],['Old',1.55],['Ahmedabad',1.55]]);
+ const h1=T(sc,'M ts','left:70px;top:1215px;width:900px',[['Not',Math.max(1.6,HOOKEV)],['houses.',wt('houses')]]);
+ const h2=T(sc,'H ts','left:70px;top:1305px;width:900px;font-size:118px',[['Escape',wt('escape'),'hl',1],['\n'],['routes.',wt('routes')]]);
+ return t=>{const s=1.04+.16*eio(t/5.2);const sk=shake(t,HOOKEV,5);b.style.transform=`translate(${sk}px,${sk*.4}px) scale(${s})`;
+  g.style.opacity=cl((t-1.4)/.3);rv(k,t);rv(h1,t);rv(h2,t)}});
+// 2. Same lane, the chabutro and nearest facades, pull-out. "This is a pol. Fifty to a hundred homes"
+add(wt('this')-.1,sc=>{const b=box(sc,'m1',650,820,'50% 50%');mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#BFF5E4',[['●',wt('this'),'c'],['Ahmedabad',wt('this')],['·',wt('pol')],['pol',wt('pol')]]);
+ const n=mk(sc,'H ts','left:70px;top:1300px;width:940px;font-size:150px;opacity:0','');
+ const h=T(sc,'M ts','left:70px;top:1470px;width:900px',[['homes,',wt('homes')],['shared',wt('sharing')],['walls.',wt('walls'),'hl']]);
+ const b0=wt('this')-.1,tf=wt('fifty')-b0,th=wt('hundred')-b0;
+ return t=>{b.style.transform=`scale(${1.75-.25*eio(t/3.6)})`;rv(k,t);rv(h,t);
+  if(t<tf){n.style.opacity=0}else{n.style.opacity=1;n.innerHTML=t<th?'50':'50 <span style="font-weight:500;font-size:.5em">to</span> <span class="hl">100</span>';n.style.transform=`scale(${t<th?.9+.1*eb((t-tf)/.25):.9+.1*eb((t-th)/.25)})`;n.style.transformOrigin='0 50%'}}},true);
+// 3. Real photo: an old Ahmedabad pol house, framed panel, push in. "...behind one gate."
+add(wt('behind')-.1,sc=>{const b=panel(sc,'r2',230,1000,'50% 72%',540,640);
+ const gd=gate(sc,60,1265,560,230);
+ const h=T(sc,'H ts','left:96px;top:1310px;width:860px;font-size:104px',[['One',wt('one')],['gate.',wt('gate'),'hl',1]]);
+ const b0=wt('behind')-.1,tg=wt('one')-b0;
+ return t=>{b.im.style.transform=`scale(${1.04+.08*eio(t/2.4)})`;gd(t,tg-.2);rv(h,t)}},true);
+// 4. The heavy studded pol gate, tilt up from the doors. "Why build a street like a fortress?"
+add(wt('why')-.1,sc=>{const b=box(sc,'m4',540,1100,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#BFF5E4',[['●',wt('why'),'c'],['Why',wt('why')],['build',wt('build')],['a',wt('a',3)],['street',wt('street')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:118px',[['Like',wt('like')],['a',wt('like')],['\n'],['fortress?',wt('fortress'),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.32) translateY(${-60+70*eio(t/2)}px)`;rv(k,t);rv(h,t)}},true);
+// 5. Real photo: carved old-city facade (Ashtapad Derasar), framed, year counter. "In the 1700s, as Mughals and Marathas fought over the city,"
+add(wt('in',2)-.1,sc=>{const b=panel(sc,'r1',230,1000,'50% 22%',540,500);
+ const y=mk(sc,'Y ts','left:66px;top:1150px;opacity:0','1700s');
+ const k=T(sc,'K ts','left:72px;top:1420px;color:#BFF5E4',[['●',wt('mughals'),'c'],['Mughals',wt('mughals')],['vs',wt('and')],['Marathas',wt('marathas')]]);
+ const h=T(sc,'M ts','left:70px;top:1470px;width:900px',[['fight',wt('fought')],['over',wt('over')],['the',wt('city')],['city.',wt('city'),'hl']]);
+ const b0=wt('in',2)-.1,ty=wt('1700s')-b0;
+ return t=>{b.im.style.transform=`scale(${1.06+.06*eio(t/4.4)}) translateX(${18-36*eio(t/4.4)}px)`;if(t>=ty)slam(y,t,ty,1.5,0);else y.style.opacity=0;rv(k,t);rv(h,t)}},true);
+// 6. Aerial over the dense old city, slow drift. "its old walls stopped keeping robbers out."
+add(wt('its')-.1,sc=>{const b=box(sc,'m3',540,800,'50% 50%');mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#BFF5E4',[['●',wt('its'),'c'],['City',wt('walls',2)],['walls',wt('walls',2)],['failed',wt('stopped')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:110px',[['Robbers',wt('robbers')],['\n'],['got',wt('out')],['in.',wt('out'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.3+.05*eio(t/2.9)}) translateX(${30-60*eio(t/2.9)}px)`;rv(k,t);rv(h,t)}},true);
+// 7. Gate again: doors, then tilt up to the guard room above. "So neighbours locked themselves in. A guard lived above the gate."
+add(wt('so')-.1,sc=>{const b=box(sc,'m4',540,420,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:108px',[['Locked',wt('locked')],['\n'],['themselves',wt('themselves')],['in.',wt('in',3),'hl',1]]);
+ const tg=mk(sc,'tag','left:72px;top:1250px;opacity:0','Guard room');
+ const h2=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:108px',[['Guard',wt('guard'),'hl'],['\n'],['above',wt('above')],['the',wt('the',3)],['gate.',wt('gate',2)]]);
+ const br=corners(sc,330,300,750,700,56,6);
+ const b0=wt('so')-.1,tgd=wt('a',5)-b0;
+ return t=>{const u=eio((t-tgd+.3)/1.1);b.style.transform=`scale(${1.3+.45*u}) translateY(${-200+260*u}px)`;
+  if(t<tgd){rv(h,t);h2.style.opacity=0;tg.style.opacity=0;br.forEach(e=>e.style.opacity=0)}else{h.style.opacity=0;h2.style.opacity=1;rv(h2,t);fade(tg,t,tgd,.2,10);crn(br,t,tgd+.5)}}},true);
+// 8. Real photo: a narrow stair passage in the old city, push up. "Narrow passages,"
+add(wt('narrow')-.1,sc=>{const b=panel(sc,'r3',230,1000,'50% 62%',540,600);b.im.style.filter='brightness(1.3) saturate(1.05)';
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:118px',[['Narrow',wt('narrow')],['\n'],['passages.',wt('passages'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.05+.09*eio(t/2)}) translateY(${-14*t}px)`;rv(h,t)}},true);
+// 9. REVEAL (tell a friend, about 59%): a carved house front, door ajar, a passage through to another lane; push into the gap; 0.4 s hold on "disguised"
+add(wt('some',2)-.1,sc=>{const b=box(sc,'m2',615,1080,'50% 50%');b.im.style.filter='brightness(1.05)';mk(sc,'sh','background:'+GB(52));
+ const tg=mk(sc,'tag','left:72px;top:1190px;opacity:0','Tell a friend');
+ const h=T(sc,'H ts','left:70px;top:1250px;width:940px;font-size:104px',[['Disguised',wt('disguised'),'hl',1],['as',wt('as')],['\n'],['house',wt('fronts',2)],['fronts.',wt('fronts',2)]]);
+ const h2=T(sc,'M ts','left:70px;top:1480px;width:900px',[['Families',wt('families')],['slip',wt('slip')],['away.',wt('away'),'c']]);
+ const b0=wt('some',2)-.1,td=wt('disguised')-b0,tl=wt('let')-b0;
+ return t=>{const p=t<td?.5*eio(t/td):t<td+.4?.5:.5+.5*eio((t-td-.4)/(tl+1.6-td));b.style.transform=`scale(${1.12+.7*p}) translateX(${shake(t,td,5)}px)`;fade(tg,t,td-.1,.2,10);if(t<td-.1)tg.style.opacity=0;rv(h,t);rv(h2,t)}},true);
+// 10. Aerial over joined rooftops; a teal path hops roof to roof. "Even the rooftops joined, house to house."
+add(wt('even')-.1,sc=>{const b=box(sc,'m3',600,900,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const pts=[[150,1060],[330,900],[520,960],[700,800],[900,860]];
+ const pth=svg(sc,'',`<polyline points="${pts.map(p=>p.join(' ')).join(',')}" fill="none" stroke="#28c39d" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 0" pathLength="1" style="filter:drop-shadow(0 0 10px rgba(40,195,157,.8))"/>`+pts.map((p,i)=>`<circle class="rd" cx="${p[0]}" cy="${p[1]}" r="17" fill="#fff" stroke="#28c39d" stroke-width="7" style="opacity:0"/>`).join(''));
+ const pl=pth.querySelector('polyline'),ds=[...pth.querySelectorAll('.rd')];
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:110px',[['Rooftops',wt('rooftops')],['\n'],['joined.',wt('joined'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#BFF5E4',[['●',wt('house',2),'c'],['House',wt('house',2)],['to',wt('to',2)],['house',wt('house',3)]]);
+ const b0=wt('even')-.1,ta=wt('rooftops')-b0,te=wt('house',3)+.3-b0;
+ return t=>{b.style.transform=`scale(${1.22+.06*eio(t/3.6)}) translateX(${-20+40*eio(t/3.6)}px)`;const p=eio((t-ta)/(te-ta));pl.style.strokeDasharray=`${p} 1`;ds.forEach((d,i)=>{d.style.opacity=p>=i/4-.01&&t>=ta?1:0});rv(h,t);rv(k,t)}},true);
+// 11. Real photo: Ashtapad Derasar facade in the old city, tilt up; year slam. "In 2017, this old city became India's first World Heritage City."
+add(wt('in',5)-.1,sc=>{const b=panel(sc,'r1',230,1000,'50% 78%',540,500);
+ const y=mk(sc,'Y ts','left:66px;top:1120px;opacity:0','2017');
+ const k=T(sc,'K ts','left:72px;top:1390px;color:#BFF5E4',[['●',wt('india\'s'),'c'],['India\'s',wt('india\'s')],['first',wt('first')]]);
+ const h=T(sc,'M ts','left:70px;top:1440px;width:940px',[['World',wt('world')],['Heritage',wt('heritage'),'hl'],['City.',wt('city',3)]]);
+ const b0=wt('in',5)-.1,ty=wt('2017')-b0;
+ return t=>{b.im.style.transform=`scale(${1.06+.04*eio(t/5)}) translateY(${40-80*eio(t/5)}px)`;if(t>=ty)slam(y,t,ty,1.5,0);else y.style.opacity=0;rv(k,t);rv(h,t)}},true);
+// 12. Real photo: a plain old pol house door, push toward the doorway. "So that plain old door... is it a house?"
+add(wt('so',2)-.1,sc=>{const b=panel(sc,'r2',230,1000,'50% 74%',520,640);
+ const gd=gate(sc,60,1265,520,230);
+ const h=T(sc,'H ts','left:96px;top:1310px;width:860px;font-size:118px',[['A',wt('house',4)],['house?',wt('house',4),'hl',1]]);
+ const b0=wt('so',2)-.1,th=wt('house',4)-b0;
+ return t=>{b.im.style.transform=`scale(${1.05+.18*eio(t/2.8)})`;gd(t,th-.25);rv(h,t)}},true);
+// 13. Loop: back to the lane of frame 0. "Or a way out?"
+add(wt('or')-.1,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.08) saturate(1.08)';mk(sc,'sh','background:'+GB(50));
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:118px',[['Or',wt('or')],['a',wt('a',7)],['\n'],['way',wt('way')],['out?',wt('out',2),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.2-.16*eio(t/1.6)})`;rv(h,t)}},true);
+const OT={like:.35+1.22,follow:.35+2.14,story:.35+4.41,every:.35+4.97,end:.35+5.8};
+add(OST,sc=>{sc.style.zIndex=1;
+ const bg=mk(sc,'',`left:-40px;top:-40px;width:1160px;height:2000px;background:url(img/m1.jpg) center/cover`);const sh=mk(sc,'sh','background:linear-gradient(180deg,rgba(11,26,21,.35),rgba(11,26,21,.82));opacity:0');
+ const card=mk(sc,'',`left:90px;width:900px;top:560px;background:#fff;border-radius:44px;padding:56px 56px 52px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0B1A15;font-family:IN`,
+ `<div style="display:flex;align-items:center;gap:34px"><div style="width:168px;height:168px;border-radius:50%;background:#fff;border:6px solid #28c39d;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/logo.png" style="width:120px;height:120px;object-fit:contain;border-radius:22px"></div><div><div style="font:800 60px/1.1 IN;display:flex;align-items:center;gap:14px">TrueYards <span style="width:46px;height:46px;border-radius:50%;background:#3897f0;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span></div><div style="font:500 36px/1.2 IN;color:#6b7a75;margin-top:6px">@trueyards.in</div></div></div><div style="font:500 40px/1.3 IN;margin:34px 0 40px">Real estate, explained. One story a day.</div><div style="display:flex;gap:24px"><div class="ofb" style="flex:1;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;font:800 46px/1 IN;position:relative;overflow:hidden;background:#28c39d;color:#fff"><span class="oft">Follow</span><div class="orp" style="position:absolute;border-radius:50%;background:rgba(255,255,255,.55);width:40px;height:40px;left:50%;top:50%;transform:translate(-50%,-50%) scale(0)"></div></div><div class="olb" style="flex:0 0 120px;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:#EEF2F1"><svg class="oht" viewBox="0 0 24 24" style="width:62px;height:62px"><path class="ohp" fill="none" stroke="#0B1A15" stroke-width="2" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg></div></div>`);
+ const line=mk(sc,'',`left:0;width:1080px;top:1230px;text-align:center;color:#fff;font:800 78px/1.2 IN;letter-spacing:-.01em;opacity:0`,'Like. <b style="background:#28c39d;padding:0 18px;border-radius:10px;color:#0B1A15">Follow.</b> Learn.');
+ const dots=mk(sc,'',`left:0;width:1080px;top:1370px;display:flex;justify-content:center;gap:26px`);const DS=['M','T','W','T','F','S','S'].map(d=>mk(dots,'',`position:relative;width:70px;height:70px;border-radius:18px;border:4px solid rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;color:#fff;font:500 24px/1 IN;opacity:0`,d));
+ const hp=[];for(let i=0;i<7;i++){hp.push(svg(sc,'width:56px;height:56px;opacity:0','<path fill="#ff3b5c" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/>'));hp[i].setAttribute('viewBox','0 0 24 24')}
+ const hand=svg(sc,'width:150px;height:150px;opacity:0','<path fill="#fff" stroke="#0B1A15" stroke-width="2.2" stroke-linejoin="round" d="M24 30V10a4 4 0 0 1 8 0v16l2-.3a4 4 0 0 1 4.5 3.2l.2 1 1.5-.3a4 4 0 0 1 4.6 3.1l.2.9 1.4-.2a4 4 0 0 1 4.6 3.4l1.3 9.2c.8 6-3 11.5-9 12.7L36 60c-4.2.8-8.4-.9-10.9-4.3L14 40.5a4 4 0 0 1 6.3-5L24 40z"/>');hand.setAttribute('viewBox','0 0 64 64');
+ const fb=card.querySelector('.ofb'),ft=card.querySelector('.oft'),rp=card.querySelector('.orp'),lb=card.querySelector('.olb'),ht=card.querySelector('.oht'),hpp=card.querySelector('.ohp');
+ const E=(t,a,b)=>cl((t-a)/(b-a));
+ return t=>{const T=OT;const bgp=eo(E(t,0,.6));bg.style.filter=`blur(${bgp*26}px) brightness(${1-bgp*.25})`;bg.style.transform=`scale(${1.0+.03*t/6})`;sh.style.opacity=bgp;
+  const c=eb(E(t,.15,.75));card.style.opacity=E(t,.15,.4);card.style.transform=`translateY(${(1-c)*160}px) scale(${.94+.06*c})`;
+  const on=t>=T.like;hpp.setAttribute('fill',on?'#ff3b5c':'none');hpp.setAttribute('stroke',on?'#ff3b5c':'#0B1A15');ht.style.transform=`scale(${on?1+.45*Math.sin(Math.PI*E(t,T.like,T.like+.35)):1})`;
+  const L=lb.getBoundingClientRect(),FB=fb.getBoundingClientRect();
+  hp.forEach((h,i)=>{const p=E(t,T.like+i*.05,T.like+.9+i*.05);const ang=-90+(i-3)*22;const r=p*(220+i*12);h.style.left=(L.left+L.width/2-28+Math.cos(ang*Math.PI/180)*r*.6)+'px';h.style.top=(L.top+L.height/2-28+Math.sin(ang*Math.PI/180)*r)+'px';h.style.opacity=p>0&&p<1?1-p:0;h.style.transform=`scale(${.6+p*.8}) rotate(${(i-3)*12}deg)`});
+  const p1=eo(E(t,T.like-.55,T.like-.05)),p2=eo(E(t,T.like+.3,T.follow-.05));const x0=880,y0=1500,xl=L.left+L.width/2-40,yl=L.top+L.height/2-20,xf=FB.left+FB.width/2-40,yf=FB.top+FB.height/2-20;
+  let hx=x0+(xl-x0)*p1,hy=y0+(yl-y0)*p1;hx+=(xf-xl)*p2;hy+=(yf-yl)*p2;const pr=Math.max(0,1-Math.abs(t-T.like)/.12)+Math.max(0,1-Math.abs(t-T.follow)/.12);
+  hand.style.left=hx+'px';hand.style.top=hy+'px';hand.style.transform=`scale(${1-.12*pr})`;hand.style.opacity=E(t,T.like-.6,T.like-.35)*(1-E(t,T.follow+.5,T.follow+.8));
+  const fo=t>=T.follow;fb.style.background=fo?'#EEF2F1':'#28c39d';fb.style.color=fo?'#0B1A15':'#fff';ft.textContent=fo?'Following ✓':'Follow';const r2=E(t,T.follow,T.follow+.5);rp.style.transform=`translate(-50%,-50%) scale(${r2*22})`;rp.style.opacity=r2>0?1-r2:0;fb.style.transform=`scale(${1-.05*Math.max(0,1-Math.abs(t-T.follow)/.15)})`;
+  const l=eo(E(t,T.follow+.4,T.follow+.9));line.style.opacity=l;line.style.transform=`translateY(${(1-l)*30}px)`;
+  DS.forEach((d,i)=>{const a=T.story-.1+i*((T.end-.3-T.story)/7);d.style.opacity=eo(E(t,T.story-.5,T.story-.1));const f=t>=a;d.style.background=f?'#28c39d':'none';d.style.borderColor=f?'#28c39d':'rgba(255,255,255,.65)';d.style.transform=`scale(${f?1+.18*Math.max(0,1-(t-a)/.2):1})`})}},false);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+' Not a real street.'],[SC[1].t0,AIL+' UNESCO World Heritage Centre: a pol has 50 to 100 houses.'],[SC[2].t0,'Photo: Kalpit Visavadiya / Unsplash. Old Ahmedabad.'],[SC[3].t0,AIL],[SC[4].t0,'Photo: Kalpit Visavadiya / Unsplash. Ashtapad Derasar, old Ahmedabad. Pols took shape 1738 to 1753 (Wikipedia; Deccan Herald, 2022).'],[SC[5].t0,AIL+' Live History India, 2020; Wikipedia.'],[SC[6].t0,AIL+' Guard room above the gate (Live History India, 2020).'],[SC[7].t0,'Photo: Rishi Popat / Unsplash.'],[SC[8].t0,AIL+' Passages disguised as house fronts (Live History India, 2020; Deccan Herald, 2022).'],[SC[9].t0,AIL+' Joined terraces (Deccan Herald, 2022).'],[SC[10].t0,'Photo: Kalpit Visavadiya / Unsplash. UNESCO inscription, 2017.'],[SC[11].t0,'Photo: Kalpit Visavadiya / Unsplash.'],[SC[12].t0,AIL+' Education only.'],[OST,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const FLASH=[HOOKEV,wt('gate'),wt('fortress'),wt('disguised'),wt('2017')];
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ document.getElementById('brand').style.opacity=t>=OST?1-cl((t-OST)/.3):1;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ FLASH.forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ document.getElementById('fol').style.opacity=0;
+};
+</script></body></html>
