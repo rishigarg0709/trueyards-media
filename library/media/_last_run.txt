@@ -1,3 +1,4 @@
-2026-11-25 13:45 UTC
-pols-vo-1 [voice]: voice ok
-pols-vo-2 [voice]: voice ok
+2026-11-25 14:07 UTC
+fitd-hook [voice]: voice ok
+fitd-body [voice]: voice ok
+fitd-cta [voice]: voice ok
