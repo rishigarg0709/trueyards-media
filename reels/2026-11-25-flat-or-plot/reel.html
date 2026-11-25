@@ -1,0 +1,226 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:600;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#111112}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#111112;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#111112}
+.sc>*{position:absolute}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:600 108px/1.04 IN;letter-spacing:-.035em}
+.M{font:600 70px/1.12 IN;letter-spacing:-.025em}
+.K{font:500 25px/1.2 PM;letter-spacing:.22em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.c{color:#FF6B57}
+.ink{color:#141416}
+.ink2{color:#3a3a3e}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(17,17,18,.9);color:#fff;font-family:IN}
+.hl{background:#FF6B57;color:#141416;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.55)}
+.tag{display:inline-block;background:#FF6B57;color:#141416;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.18em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.72)}
+#flash{position:absolute;inset:0;background:#FFFFFF;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.05;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 62%,rgba(0,0,0,.22) 100%)}
+#tp{position:absolute;left:72px;top:1500px;width:936px;height:12px;border-radius:6px;z-index:21;opacity:0}
+#tpf{position:absolute;left:0;top:0;height:12px;width:936px;border-radius:6px;background:#FF6B57 repeating-linear-gradient(90deg,rgba(20,20,22,.35) 0 2px,transparent 2px 46.8px)}
+#tpl{position:absolute;top:1450px;width:300px;text-align:right;font:500 26px/1.2 PM;letter-spacing:.08em;z-index:21;opacity:0}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:600 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one<br>real estate story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FF6B57">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=false;
+
+const WS=[["Flat", 0.0, 0.299], ["or", 0.349, 0.449], ["plot?", 0.523, 0.803], ["Every", 1.035, 1.72], ["Indian", 1.763, 2.019], ["family", 2.083, 2.467], ["has", 2.523, 2.692], ["this", 2.721, 2.841], ["fight.", 2.904, 3.29], ["So", 3.55, 3.562], ["here's", 3.607, 3.861], ["what", 3.876, 3.936], ["you", 3.973, 4.085], ["actually", 4.143, 4.609], ["own.", 4.702, 5.072], ["Buy", 5.332, 5.753], ["a", 5.79, 5.827], ["one", 5.865, 5.977], ["thousand", 6.011, 6.276], ["square", 6.319, 6.575], ["foot", 6.62, 6.799], ["flat", 6.859, 7.098], ["in", 7.124, 7.173], ["a", 7.211, 7.248], ["tower...", 7.323, 7.753], ["and", 8.013, 8.069], ["your", 8.114, 8.293], ["share", 8.343, 8.592], ["of", 8.617, 8.667], ["the", 8.686, 8.742], ["land", 8.802, 9.041], ["under", 9.09, 9.34], ["it", 9.415, 9.564], ["can", 9.639, 9.863], ["be", 9.913, 10.013], ["about", 10.05, 10.237], ["two", 10.312, 10.536], ["hundred", 10.573, 10.835], ["and", 10.873, 10.985], ["twenty-eight", 11.038, 11.433], ["square", 11.476, 11.732], ["feet.", 11.807, 12.237], ["That's", 12.42, 13.153], ["your", 13.168, 13.228], ["undivided", 13.302, 13.975], ["share", 14.001, 14.125], ["of", 14.174, 14.274], ["land.", 14.349, 14.729], ["In", 14.989, 15.487], ["one", 15.525, 15.637], ["worked", 15.68, 15.936], ["example,", 15.992, 16.532], ["two", 16.792, 16.904], ["hundred", 16.942, 17.203], ["flats", 17.29, 17.727], ["split", 17.801, 18.175], ["forty", 18.238, 18.549], ["thousand", 18.59, 18.923], ["square", 18.966, 19.222], ["feet", 19.267, 19.446], ["of", 19.496, 19.596], ["land.", 19.656, 19.97], ["Team", 20.23, 20.289], ["plot", 20.364, 20.663], ["says:", 20.723, 21.037], ["the", 21.149, 21.486], ["whole", 21.523, 21.71], ["land", 21.77, 22.009], ["is", 22.059, 22.159], ["yours...", 22.221, 22.611], ["and", 22.871, 22.927], ["it's", 22.977, 23.152], ["the", 23.17, 23.226], ["land", 23.286, 23.525], ["that", 23.54, 23.6], ["tends", 23.65, 23.899], ["to", 23.924, 23.974], ["gain", 24.019, 24.198], ["value", 24.261, 24.572], ["while", 24.622, 24.871], ["buildings", 24.916, 25.32], ["age.", 25.413, 25.833], ["Team", 26.093, 26.811], ["flat", 26.886, 27.185], ["says:", 27.26, 27.633], ["security,", 27.749, 28.809], ["lifts,", 29.066, 29.586], ["a", 29.764, 29.802], ["home", 29.861, 30.101], ["ready", 30.138, 30.325], ["now,", 30.4, 30.73], ["and", 30.951, 31.147], ["no", 31.222, 31.372], ["building", 31.413, 31.746], ["to", 31.771, 31.82], ["manage.", 31.885, 32.344], ["And", 32.604, 32.622], ["if", 32.648, 32.697], ["your", 32.727, 32.847], ["tower", 32.909, 33.22], ["is", 33.295, 33.445], ["ever", 33.49, 33.669], ["redeveloped...", 33.719, 34.439], ["that", 34.699, 34.878], ["slice", 34.965, 35.401], ["decides", 35.448, 35.775], ["what", 35.82, 36.0], ["you", 36.037, 36.149], ["get.", 36.224, 36.554], ["Check", 36.814, 37.437], ["it", 37.487, 37.587], ["in", 37.661, 37.811], ["your", 37.826, 37.886], ["sale", 37.946, 38.185], ["deed.", 38.23, 38.484], ["Send", 38.744, 38.784], ["this", 38.814, 38.934], ["to", 38.959, 39.008], ["the", 39.027, 39.083], ["person", 39.136, 39.457], ["in", 39.482, 39.532], ["your", 39.577, 39.756], ["family", 39.809, 40.13], ["who", 40.223, 40.504], ["wants", 40.541, 40.728], ["a", 40.765, 40.803], ["plot.", 40.878, 41.318]];
+const BEATS=[0.523, 1.196, 1.847, 2.52, 3.193, 3.867, 4.517, 5.19, 5.84, 6.514, 7.187, 7.861, 8.511, 9.184, 9.857, 10.531, 11.181, 11.854, 12.528, 13.178, 13.851, 14.525, 15.198, 15.848, 16.522, 17.195, 17.845, 18.518, 19.192, 19.865, 20.515, 21.189, 21.862, 22.512, 23.186, 23.859, 24.509, 25.183, 25.856, 26.529, 27.18, 27.853, 28.526, 29.176, 29.85, 30.523, 31.173, 31.847, 32.52, 33.193, 33.844, 34.517, 35.19, 35.864, 36.514, 37.187, 37.861, 38.534, 39.184, 39.858, 40.508, 41.181, 41.855, 42.505, 43.178, 43.851, 44.525, 45.175, 45.848, 46.522, 47.172, 47.845, 48.519, 49.192, 49.842, 50.516, 51.189, 51.839, 52.512, 53.186, 53.836, 54.509, 55.183, 55.856, 56.506, 57.18, 57.853, 58.503, 59.177, 59.85, 60.5, 61.174, 61.847, 62.52, 63.17, 63.844, 64.517, 65.191, 65.841, 66.514, 67.187, 67.861, 68.511, 69.184, 69.858];
+const S=document.getElementById('s');
+const CO='#FF6B57',IV='#FFFFFF';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+const CR='#FF6B57',INK='#141416',OB='#111112';
+const inr=n=>n.toLocaleString('en-IN');
+const GTOPF='linear-gradient(180deg,rgba(17,17,18,.74) 0%,rgba(17,17,18,.5) 9%,rgba(17,17,18,.18) 14%,rgba(17,17,18,0) 19%';
+const GL=(a)=>GTOPF+`,rgba(17,17,18,0) ${a}%,rgba(17,17,18,.55) ${a+14}%,rgba(17,17,18,.8) ${a+26}%,rgba(17,17,18,.88) 100%)`;
+const LF=(a)=>GTOPF+`,rgba(244,242,238,0) ${a}%,rgba(244,242,238,.72) ${a+12}%,rgba(244,242,238,.9) ${a+24}%,rgba(244,242,238,.94) 100%)`;
+const lit=(e,t,a)=>{const q=cl((t-a)/.1);e.style.background=`rgba(255,107,87,${q})`;e.style.color=q>.5?INK:''};
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const bar=(p,x,y,wd,h,col)=>{const g=mk(p,'',`left:${x}px;top:${y}px;width:${wd}px;height:${h}px;border-radius:${h/2}px;background:rgba(20,20,22,.10)`);const f=mk(p,'',`left:${x}px;top:${y}px;width:0;height:${h}px;border-radius:${h/2}px;background:${col}`);return {g,f}};
+const LIGHT=[];
+const cab=(br)=>{br.forEach(e=>{e.style.position='absolute'});return br};
+const MISS=[];const cw=s=>s.toLowerCase().replace(/[’]/g,"'").replace(/[^a-z0-9'%,-]/g,'').replace(/[,]$/,'');
+const ws=(s,k=1)=>{let n=0;for(const x of WS){const c=cw(x[0]).replace(/,/g,'');if(c===s){n++;if(n===k)return x[1]}}MISS.push(s+'#'+k);return null};
+const HOOKEV=ws('every');
+const box2=(p,src,ox,oy,pos)=>{const b=box(p,src,ox,oy,pos);return b};
+const gridSVG=(op)=>{let s='';const x0=191,x1=887,y0=393,y1=1062,nc=10,nr=20;for(let c=1;c<nc;c++){const x=x0+(x1-x0)*c/nc;s+=`<line x1="${x}" y1="${y0}" x2="${x}" y2="${y1}"/>`}for(let r=1;r<nr;r++){const y=y0+(y1-y0)*r/nr;s+=`<line x1="${x0}" y1="${y}" x2="${x1}" y2="${y}"/>`}
+ const cx=x0+(x1-x0)*6/nc,cy=y0+(y1-y0)*13/nr;return `<g stroke="rgba(255,255,255,.85)" stroke-width="2.2">${s}</g><rect x="${x0}" y="${y0}" width="${x1-x0}" height="${y1-y0}" fill="none" stroke="#fff" stroke-width="4"/><rect id="cc" x="${cx}" y="${cy}" width="${(x1-x0)/nc}" height="${(y1-y0)/nr}" fill="#FF6B57" stroke="#fff" stroke-width="3"/>`};
+const SQ=[488,1142,605,1183];
+// 1. HOOK: bright impossible-real tower lifted off its plot, push-in from frame 0, line spoken from 0 s; no text until 1.5 s
+add(0,sc=>{const b=box(sc,'hero',546,760);b.im.style.filter='brightness(1.06) saturate(1.08) contrast(1.04)';
+ const gl=mk(b,'',`position:absolute;left:${SQ[0]}px;top:${SQ[1]}px;width:${SQ[2]-SQ[0]}px;height:${SQ[3]-SQ[1]}px;background:#FF6B57;mix-blend-mode:screen;opacity:0`);
+ const gd=mk(sc,'sh','opacity:0;background:'+GL(52));
+ const tA=Math.max(1.5,HOOKEV||1.5);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px;font-size:140px',[['Flat',tA],['or',tA+.1,'c'],['plot?',tA+.2]]);
+ const k=T(sc,'K ts','left:72px;top:1236px;color:#fff',[['●',tA,'c'],['Every',tA],['Indian',ws('indian')],['family',ws('family')],['has',ws('has')],['this',ws('this')],['fight',ws('fight')]]);
+ return t=>{b.style.transform=`scale(${1.04+.13*eio(t/3.6)})`;gd.style.opacity=cl((t-tA+.35)/.4);gl.style.opacity=.25+.25*Math.sin(t*4);rv(h,t);rv(k,t)}});
+LIGHT.push([0,0]);
+// 2. Tilt down to the plot grid. "So here's what you actually own."
+add(ws('so')-.08,sc=>{const b=box(sc,'hero',546,1162);b.im.style.filter='brightness(1.06) saturate(1.08)';
+ const br=cab(corners(b,SQ[0]-14,SQ[1]-14,SQ[2]+14,SQ[3]+14,30,5));
+ mk(sc,'sh','background:'+GL(50));
+ const k=T(sc,'K ts','left:72px;top:1226px;color:#fff',[['●',ws('so'),'c'],['So',ws('so')],["here's",ws("here's")]]);
+ const h=T(sc,'H ts','left:70px;top:1272px;width:960px;font-size:116px',[['What',ws('what')],['you',ws('you')],['\n'],['actually',ws('actually')],['own',ws('own'),'hl',1]]);
+ return t=>{b.style.transform=`translateY(-120px) scale(${1.3+.12*eio(t/2.6)})`;crn(br,t,.3);rv(k,t);rv(h,t)}},true);
+// 3. Real Indian tower, tilt up. "Buy a 1,000 sq ft flat in a tower..."
+add(ws('buy')-.1,sc=>{const b=box(sc,'tower1',540,800,'50% 40%');b.im.style.filter='brightness(1.05)';
+ mk(sc,'sh','background:'+GL(42));
+ const k=T(sc,'K ts','left:72px;top:1150px;color:#fff',[['●',ws('buy'),'c'],['Buy',ws('buy')],['a',ws('a')]]);
+ const h=T(sc,'H ts','left:70px;top:1196px;width:960px;font-size:150px',[['1,000',ws('thousand'),'hl',1],['\n'],['sq',ws('square')],['ft',ws('foot')],['flat',ws('flat',2)]]);
+ return t=>{b.style.transform=`scale(1.1) translateY(${-70+110*eio(t/3.2)}px)`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('buy')-.1,0]);
+// 4. Back on the plot, the coral square: your share of the land ~228 sq ft
+add(ws('your')-.12,sc=>{const b=box(sc,'hero',546,1162);b.im.style.filter='brightness(1.06) saturate(1.08)';
+ const fq=mk(b,'',`position:absolute;left:${SQ[0]}px;top:${SQ[1]}px;width:${SQ[2]-SQ[0]}px;height:${SQ[3]-SQ[1]}px;background:#FF6B57;opacity:0`);
+ const br=cab(corners(b,SQ[0]-14,SQ[1]-14,SQ[2]+14,SQ[3]+14,30,5));
+ mk(sc,'sh','background:'+GL(48));
+ const k=T(sc,'K ts','left:72px;top:1196px;color:#fff',[['●',ws('your'),'c'],['Your',ws('your')],['share',ws('share')],['of',ws('of')],['the',ws('the')],['land',ws('land')]]);
+ const n=mk(sc,'ts','left:58px;top:1240px;font:600 200px/1 IN;letter-spacing:-.045em;color:#fff;opacity:0','≈0');
+ const u=T(sc,'M ts','left:70px;top:1452px;font-size:62px',[['sq',ws('square',2)],['ft',ws('feet')],['of',ws('feet')+.06],['land',ws('feet')+.12,'hl',1]]);
+ const b0=ws('your')-.12,t0=ws('twenty-eight')-b0-.25;
+ return t=>{b.style.transform=`translateY(-260px) scale(${1.36+.06*eio(t/4)})`;crn(br,t,.15);fq.style.opacity=.45*cl((t-t0)/.5);const p=cnt(n,t,t0,.6,p=>'≈'+Math.round(228*p));n.style.color=p>=1?'#FF6B57':'#fff';rv(k,t);rv(u,t)}},true);
+// 5. Aerial of the compound: the land split into slices, one is yours. "That's your undivided share of land."
+add(ws("that's")-.08,sc=>{sc.style.background='#CEC6BB';const b=box(sc,'compound',540,728);
+ const g=svg(b,'opacity:0',gridSVG());g.style.position='absolute';mk(b,'','position:absolute;left:0;top:1066px;width:1080px;height:1000px;background:#CEC6BB');
+ mk(sc,'sh','background:'+LF(54));
+ const k=T(sc,'K ink2','left:72px;top:1200px',[['●',ws("that's"),'c'],["That's",ws("that's")],['your',ws('your',2)]]);
+ const h=T(sc,'H ink','left:70px;top:1246px;width:960px;font-size:100px',[['Undivided',ws('undivided')],['\n'],['share',ws('share',2),'hl',1],['of',ws('of',2)],['land',ws('land',2)]]);
+ const tg=mk(sc,'tag','left:72px;top:1112px;opacity:0','UDS');
+ const b0=ws("that's")-.08,tu=ws('undivided')-b0;
+ return t=>{b.style.transform=`scale(${1.16-.1*eio(t/3.4)}) translateY(110px)`;g.style.opacity=cl((t-tu+.1)/.4);rv(k,t);rv(h,t);fade(tg,t,ws('land',2)-b0,.2,10)}},true);
+LIGHT.push([ws("that's")-.08,1]);
+// 6. Zoom into the coral slice. "In one worked example, 200 flats split 40,000 sq ft of land."
+add(ws('worked')-.45,sc=>{sc.style.background='#CEC6BB';const b=box(sc,'compound',540,728);
+ const g=svg(b,'',gridSVG());g.style.position='absolute';mk(b,'','position:absolute;left:0;top:1066px;width:1080px;height:1000px;background:#CEC6BB');
+ mk(sc,'sh','background:'+LF(52));
+ const k=T(sc,'K ink2','left:72px;top:1190px',[['●',ws('worked'),'c'],['One',ws('one',2)],['worked',ws('worked')],['example',ws('example')]]);
+ const a=mk(sc,'H ink','left:70px;top:1236px;font-size:104px;opacity:0','0 flats');
+ const c=mk(sc,'H ink','left:70px;top:1352px;font-size:104px;opacity:0','0 sq ft');
+ const cc=g.querySelector('#cc');
+ const b0=ws('worked')-.45,tA=ws('hundred',2)-b0-.2,tB=ws('forty')-b0-.1;
+ return t=>{b.style.transform=`scale(${1.0+.2*eio(t/4.5)}) translateY(110px)`;rv(k,t);cnt(a,t,tA,.6,p=>Math.round(200*p)+' flats');cnt(c,t,tB,.7,p=>inr(Math.round(40000*p/100)*100)+' sq ft');
+  cc.setAttribute('opacity',.75+.25*Math.sin(t*5))}},true);
+// 7. Empty fenced plot, pan right. TEAM PLOT: the whole land is yours
+add(ws('team')-.1,sc=>{const b=box(sc,'plot',540,900);b.im.style.filter='brightness(1.04) saturate(1.06)';
+ mk(sc,'sh','background:'+GL(46));
+ const tg=mk(sc,'tag','left:72px;top:1150px;opacity:0','Team plot');
+ const h=T(sc,'H ts','left:70px;top:1222px;width:960px;font-size:112px',[['All',ws('whole')],['the',ws('whole')+.08],['land',ws('land',4),'hl',1],['\n'],['is',ws('is')],['yours.',ws('yours')]]);
+ return t=>{b.style.transform=`scale(1.14) translateX(${50-100*eio(t/3.2)}px)`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+LIGHT.push([ws('team')-.1,0]);
+// 8. Plot corner close. "...it's the land that tends to gain value while buildings age."
+add(ws("it's")-.1,sc=>{const b=box(sc,'plot',300,1060);b.im.style.filter='brightness(1.04) saturate(1.06)';
+ mk(sc,'sh','background:'+GL(46));
+ const tg=mk(sc,'tag','left:72px;top:1150px','Team plot');
+ const h=T(sc,'H ts','left:70px;top:1222px;width:960px;font-size:100px',[['Land',ws('land',5)],['tends',ws('tends')],['to',ws('to')],['\n'],['gain',ws('gain'),'hl',1],['value.',ws('value')],['\n'],['Buildings',ws('buildings')],['age.',ws('age')]]);
+ return t=>{b.style.transform=`scale(${1.3+.12*eio(t/3.5)})`;rv(h,t)}},true);
+// 9. Real tower facade with trees, push-in. TEAM FLAT
+add(ws('team',2)-.1,sc=>{const b=box(sc,'tower2',540,700,'50% 40%');b.im.style.filter='brightness(1.05)';
+ mk(sc,'sh','background:'+GL(42));
+ const tg=mk(sc,'tag','left:72px;top:1130px;opacity:0','Team flat');
+ const h=T(sc,'H ts','left:70px;top:1202px;width:960px;font-size:112px',[['Security.',ws('security'),'hl',1],['\n'],['Lifts.',ws('lifts')],['\n'],['Ready',ws('ready')],['now.',ws('now')]]);
+ return t=>{b.style.transform=`scale(${1.08+.1*eio(t/3.6)})`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+LIGHT.push([ws('team',2)-.1,0]);
+// 10. The flat key on the family table. "...and no building to manage."
+add(ws('no')-.12,sc=>{const b=box(sc,'table',430,960);
+ mk(sc,'sh','background:'+GL(48));
+ const tg=mk(sc,'tag','left:72px;top:1180px','Team flat');
+ const h=T(sc,'H ts','left:70px;top:1252px;width:960px;font-size:112px',[['No',ws('no')],['building',ws('building'),'hl',1],['\n'],['to',ws('to',2)],['manage.',ws('manage')]]);
+ return t=>{b.style.transform=`scale(${1.42-.08*eio(t/3)}) translate(${-20+30*eio(t/3)}px,0px)`;rv(h,t)}},true);
+LIGHT.push([ws('no')-.12,0]);
+// 11. Old society block beside its new tower, pan old to new. "And if your tower is ever redeveloped..."
+add(ws('if')-.3,sc=>{const b=box(sc,'redev',540,800);b.im.style.filter='brightness(1.04)';
+ mk(sc,'sh','background:'+GL(44));
+ const k=T(sc,'K ts','left:72px;top:1150px;color:#fff',[['●',ws('if'),'c'],['If',ws('if')],['your',ws('your',3)],['tower',ws('tower',2)],['is',ws('is',2)],['ever',ws('ever')]]);
+ const h=T(sc,'H ts','left:70px;top:1196px;width:960px;font-size:120px',[['Redeveloped?',ws('redeveloped'),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.3) translateX(${110-200*eio(t/3.4)}px)`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('if')-.3,0]);
+// 12. The new tower top. "...that slice decides what you get."
+add(ws('slice')-.3,sc=>{const b=box(sc,'redev',730,520);b.im.style.filter='brightness(1.04)';
+ mk(sc,'sh','background:'+GL(44));
+ const h=T(sc,'H ts','left:70px;top:1196px;width:960px;font-size:112px',[['Your',ws('slice')-.14],['slice',ws('slice'),'hl',1],['decides',ws('decides')],['\n'],['what',ws('what',2)],['you',ws('you',2)],['get.',ws('get')]]);
+ return t=>{b.style.transform=`scale(${1.3+.12*eio(t/3)}) translateY(${50-40*eio(t/3)}px)`;rv(h,t)}},true);
+// 13. Sale deed with magnifier. "Check it in your sale deed."
+add(ws('check')-.1,sc=>{const b=box(sc,'deed',600,900);
+ mk(sc,'sh','background:'+LF(50));
+ const k=T(sc,'K ink2','left:72px;top:1190px',[['●',ws('check'),'c'],['Check',ws('check')],['it',ws('it',2)]]);
+ const h=T(sc,'H ink','left:70px;top:1236px;width:960px;font-size:108px',[['Your',ws('in',3)],['UDS',ws('in',3)+.1,'hl',1],['\n'],['in',ws('sale')-.1],['the',ws('sale')-.05],['sale',ws('sale')],['deed.',ws('deed')]]);
+ return t=>{b.style.transform=`scale(${1.12+.18*eio(t/3.2)})`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('check')-.1,1]);
+// 14. Family table: key and boundary pillar. Send line
+add(ws('send')-.12,sc=>{const b=box(sc,'table',580,860);
+ mk(sc,'sh','background:'+GL(46));
+ const k=T(sc,'K ts','left:72px;top:1170px;color:#fff',[['●',ws('send'),'c'],['Send',ws('send')],['this',ws('this',2)],['to',ws('to',3)]]);
+ const h=T(sc,'H ts','left:70px;top:1216px;width:960px;font-size:96px',[['the',ws('the',4)],['one',ws('person')],['in',ws('in',4)],['your',ws('your',5)],['\n'],['family',ws('family',2)],['who',ws('who')],['wants',ws('wants')],['\n'],['a',ws('a',4)],['plot.',ws('plot',3),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.42-.2*eio(t/4)})`;rv(k,t);rv(h,t)}},true);
+LIGHT.push([ws('send')-.12,0]);
+// 15. Loop: hook frame, easing back to frame 0; silent follow card on top (X15: this reel uses the silent card)
+add(WS[WS.length-1][2]+.1,sc=>{const b=box(sc,'hero',546,760);b.im.style.filter='brightness(1.06) saturate(1.08) contrast(1.04)';
+ return t=>{b.style.transform=`scale(${1.06-.06*eo(t/2.2)})`}},true);
+LIGHT.push([WS[WS.length-1][2]+.1,0]);
+
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL+' Example only, from a published worked example.'],
+[ws('so')-.08,AIL],
+[ws('buy')-.1,'Photo: Prathamesh Andhale / Unsplash.'],
+[ws('your')-.12,AIL+' 1,000 / 1,75,000 sq ft of flats x 40,000 sq ft of land ≈ 228 sq ft (Housing.com worked example).'],
+[ws("that's")-.08,AIL+' UDS: Housing.com, Brigade Group.'],
+[ws('worked')-.45,AIL+' Housing.com example: 200 flats, 1,75,000 sq ft built, 40,000 sq ft land.'],
+[ws('team')-.1,AIL+' Land tends to appreciate, structures depreciate: BankBazaar, Housing.com.'],
+[ws('team',2)-.1,'Photo: Vaibhav Surana / Unsplash.'],
+[ws('no')-.12,AIL],
+[ws('if')-.3,AIL+' Redevelopment entitlement depends on UDS: Housing.com, BankBazaar.'],
+[ws('check')-.1,AIL+' UDS should be stated in the sale deed: Brigade Group. Educational content, not advice.'],
+[ws('send')-.12,AIL+' Educational content, not advice.'],
+[WS[WS.length-1][2]+.1,AIL]];
+
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;let lg=0;LIGHT.forEach(([tt,v])=>{if(t>=tt)lg=v});fe.style.color=lg?'rgba(20,20,22,.62)':'rgba(255,255,255,.72)';fe.style.textShadow=lg?'none':'0 1px 6px rgba(0,0,0,.6)';
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [ws('thousand'),ws('twenty-eight'),ws('slice')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,.22*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;
+};
+if(MISS.length)console.log('ERR missing words',MISS.join(','));
+</script></body></html>

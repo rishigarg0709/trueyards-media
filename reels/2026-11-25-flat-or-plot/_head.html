@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:600;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#111112}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#111112;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#111112}
+.sc>*{position:absolute}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:600 108px/1.04 IN;letter-spacing:-.035em}
+.M{font:600 70px/1.12 IN;letter-spacing:-.025em}
+.K{font:500 25px/1.2 PM;letter-spacing:.22em;text-transform:uppercase}
+.w{display:inline-block;white-space:pre}
+.c{color:#FF6B57}
+.ink{color:#141416}
+.ink2{color:#3a3a3e}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(17,17,18,.9);color:#fff;font-family:IN}
+.hl{background:#FF6B57;color:#141416;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.55)}
+.tag{display:inline-block;background:#FF6B57;color:#141416;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.18em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.72)}
+#flash{position:absolute;inset:0;background:#FFFFFF;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.05;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 62%,rgba(0,0,0,.22) 100%)}
+#tp{position:absolute;left:72px;top:1500px;width:936px;height:12px;border-radius:6px;z-index:21;opacity:0}
+#tpf{position:absolute;left:0;top:0;height:12px;width:936px;border-radius:6px;background:#FF6B57 repeating-linear-gradient(90deg,rgba(20,20,22,.35) 0 2px,transparent 2px 46.8px)}
+#tpl{position:absolute;top:1450px;width:300px;text-align:right;font:500 26px/1.2 PM;letter-spacing:.08em;z-index:21;opacity:0}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:600 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one<br>real estate story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FF6B57">@trueyards.in</div></div><div id="tp"><div id="tpf"></div></div><div id="tpl"></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=false;
+
+%%WS%%
+%%BEATS%%
+const S=document.getElementById('s');
+const CO='#FF6B57',IV='#FFFFFF';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+const CR='#FF6B57',INK='#141416',OB='#111112';
+const inr=n=>n.toLocaleString('en-IN');
+const GTOPF='linear-gradient(180deg,rgba(17,17,18,.74) 0%,rgba(17,17,18,.5) 9%,rgba(17,17,18,.18) 14%,rgba(17,17,18,0) 19%';
+const GL=(a)=>GTOPF+`,rgba(17,17,18,0) ${a}%,rgba(17,17,18,.55) ${a+14}%,rgba(17,17,18,.8) ${a+26}%,rgba(17,17,18,.88) 100%)`;
+const LF=(a)=>GTOPF+`,rgba(244,242,238,0) ${a}%,rgba(244,242,238,.72) ${a+12}%,rgba(244,242,238,.9) ${a+24}%,rgba(244,242,238,.94) 100%)`;
+const lit=(e,t,a)=>{const q=cl((t-a)/.1);e.style.background=`rgba(255,107,87,${q})`;e.style.color=q>.5?INK:''};
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const bar=(p,x,y,wd,h,col)=>{const g=mk(p,'',`left:${x}px;top:${y}px;width:${wd}px;height:${h}px;border-radius:${h/2}px;background:rgba(20,20,22,.10)`);const f=mk(p,'',`left:${x}px;top:${y}px;width:0;height:${h}px;border-radius:${h/2}px;background:${col}`);return {g,f}};
+const LIGHT=[];
+const cab=(br)=>{br.forEach(e=>{e.style.position='absolute'});return br};
+const MISS=[];const cw=s=>s.toLowerCase().replace(/[’]/g,"'").replace(/[^a-z0-9'%,-]/g,'').replace(/[,]$/,'');
+const ws=(s,k=1)=>{let n=0;for(const x of WS){const c=cw(x[0]).replace(/,/g,'');if(c===s){n++;if(n===k)return x[1]}}MISS.push(s+'#'+k);return null};
