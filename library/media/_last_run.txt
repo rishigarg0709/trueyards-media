@@ -1,4 +1,8 @@
-2026-11-25 14:07 UTC
-fitd-hook [voice]: voice ok
-fitd-body [voice]: voice ok
-fitd-cta [voice]: voice ok
+2026-11-25 14:20 UTC
+fitn1 [voice]: voice ok
+fitn2 [voice]: voice ok
+fitn4 [voice]: voice ok
+fitn1-beat [music]: music ok 512461 bytes
+fitn2-beat [music]: music ok 384984 bytes
+fitn3-beat [music]: music ok 321036 bytes
+fitn4-beat [music]: music ok 448514 bytes
