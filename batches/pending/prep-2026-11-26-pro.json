@@ -1,0 +1,27 @@
+{
+ "batch": "batches/01xx8zu96hcuyjwltik8dgq3qd1ysgcgdmgh",
+ "name": "prep-2026-11-26-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-25T17:07Z",
+ "images": [
+  {
+   "name": "2026-11-26-midday-1",
+   "prompt": "Hyper-realistic street-level photograph of a modern 14-storey Indian residential apartment tower in a north Indian city where one entire middle floor is built from solid polished gold bricks instead of concrete, gleaming, every other floor ordinary cream plaster with balconies and plants, believable scale and shadows, looks like a real news photo, late afternoon sun still lighting the facade brightly while the sky turns deep blue. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour, not a silhouette. photorealistic architectural photograph at blue hour, deep navy sky, warm amber practical lights, glossy reflective surfaces, long-lens compression, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-26-carousel-1",
+   "prompt": "Hyper-realistic photograph of a giant clear glass hourglass, as tall as a 12-storey building, standing on the lawn in front of a white and pale-teal Singapore-style public housing block with many identical windows and laundry poles, sand slowly running from the top half to the bottom half, believable scale and shadows, looks like a real news photo, soft bright overcast daylight. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour, not a silhouette. quiet minimal photograph, muted natural colours, soft even light, lots of negative space, calm composition, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-26-evening-1",
+   "prompt": "Bright aerial photograph of Dharavi in Mumbai: a vast, dense sea of low rooftops of tin sheets and blue tarpaulin stretching to the horizon, narrow lanes between them, and right at its edge a cluster of modern glass office towers of Bandra Kurla Complex, strong clear morning sunlight, crisp detail, looks like a real news photo. Vertical 9:16 at 2K, wide framing so 2 to 3 crops can be cut from it, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for a logo, no people visible, no readable signs or brand names. Bright, evenly lit, clearly visible subject in colour, not a silhouette. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}
