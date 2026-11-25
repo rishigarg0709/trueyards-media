@@ -102,7 +102,7 @@ Re-ranked 2026-11-23 by the learning run: Bengaluru lake trial broke out (1,126 
 ## X19 shares test topics (D56, from 25 Nov; family arguments, both sides with sourced facts, end on a "send this to..." line; no buy or sell advice)
 - [ ] Rent or buy: what 20 years of rent vs EMI really adds up to in an Indian metro | send line: "Send this to the friend who says rent is wasted money" | X19 shares
 - [ ] Gold or property: how each actually grew in India since 2005 (RBI and gold price data) | send line: "Send this to the uncle who says property never falls" | X19 shares
-- [~] 2026-11-25 midday (X19 shares) | Flat or plot: what you really own in each (undivided share of land vs the whole plot) | send line: "Send this to the person in your family who wants a plot" | X19 shares
+- [x] 2026-11-25 midday (X19 shares, published) | Flat or plot: what you really own in each (undivided share of land vs the whole plot) | send line: "Send this to the person in your family who wants a plot" | X19 shares
 - [ ] Prepay the home loan or invest the money: the maths at today's rates | send line: "Send this to the one who pays extra EMI every year" | X19 shares
 - [ ] Ground floor or top floor: what buyers and builders price differently and why | send line: "Send this to whoever is choosing the floor" | X19 shares
 - [ ] Why so many Indian parents insist on their own house: the history behind it | send line: "Send this to your mom or dad" | X19 shares
