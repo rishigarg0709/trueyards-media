@@ -1,0 +1,28 @@
+[
+ {
+  "kind": "voice",
+  "name": "pols-vo-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "In old Ahmedabad, some house fronts are not houses. They're escape routes. [short pause] This is a pol. Fifty to a hundred homes sharing walls... behind one gate. [pause] Why build a street like a fortress? In the 1700s, as Mughals and Marathas fought over the city, its old walls stopped keeping robbers out. So neighbours locked themselves in. A guard lived above the gate. Narrow passages, some disguised as the fronts of homes, let families slip away in an attack. Even the rooftops joined, house to house. [pause] In 2017, this old city became India's first World Heritage City. So that plain old door... is it a house? Or a way out?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "pols-vo-2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "In old Ahmedabad, some house fronts are not houses. They're escape routes. [short pause] This is a pol. Fifty to a hundred homes sharing walls... behind one gate. [pause] Why build a street like a fortress? In the 1700s, as Mughals and Marathas fought over the city, its old walls stopped keeping robbers out. So neighbours locked themselves in. A guard lived above the gate. Narrow passages, some disguised as the fronts of homes, let families slip away in an attack. Even the rooftops joined, house to house. [pause] In 2017, this old city became India's first World Heritage City. So that plain old door... is it a house? Or a way out?",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
