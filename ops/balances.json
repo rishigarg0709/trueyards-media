@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-25 11:15",
+ "checked_at": "2026-11-25 11:20",
  "checks": [
   {
    "id": "gemini",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 4151,
+   "left": 4144,
    "burn_per_day": 1017,
    "runway_days": 4.1,
-   "detail": "About INR 4151 left, spending about INR 1017 a day"
+   "detail": "About INR 4144 left, spending about INR 1017 a day"
   },
   {
    "id": "whatsapp",
@@ -68,11 +68,11 @@
    "unit": "neurons per day",
    "link": "https://dash.cloudflare.com",
    "action": "Nothing to pay: it resets at 05:30 IST. Upgrade to Workers Paid only if the backup is needed every day",
-   "status": "ok",
+   "status": "out",
    "left": null,
    "burn_per_day": null,
    "runway_days": null,
-   "detail": "Free allowance available"
+   "detail": "Today's free allowance is used up; resets 05:30 IST"
   }
  ],
  "alerted": {}
