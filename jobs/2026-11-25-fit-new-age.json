@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "voice",
+  "name": "fitn1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "[curious] Map pe zoom karo... India. Haryana. Rohtak. [excited] Aur yahaan... Forteasia Industrial Township! Ek sau adtees acre. NH-152D sirf das minute. Rohtak-Bhiwani highway sirf paanch minute. Industrial plots, paanch sau se chaar hazaar square yard. Location pasand aayi? Abhi WhatsApp kariye!",
+  "settings": {
+   "stability": 0.45,
+   "similarity_boost": 0.8,
+   "style": 0.45,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fitn2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Pehle... yahaan sirf khet the. [excited] Ab dekhiye! Gate khada hai. Site office chal raha hai. Roads pe kaam tezi se. Forteasia Industrial Township, Rohtak. Ek baar site zaroor dekhiye!",
+  "settings": {
+   "stability": 0.45,
+   "similarity_boost": 0.8,
+   "style": 0.45,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "fitn4",
+  "voice_id": "2iAXJEMO2o0PqUHzvZwQ",
+  "model": "eleven_v3",
+  "text": "Ye hai Rohtak ka naya industrial grid. Ek sau adtees acre. Trucks ke liye chaudi internal roads. Bijli, paani, drainage, sab planned. NH-152D sirf das minute. Forteasia Industrial Township. Future yahin ban raha hai.",
+  "settings": {
+   "stability": 0.45,
+   "similarity_boost": 0.8,
+   "style": 0.45,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "music",
+  "name": "fitn1-beat",
+  "prompt": "Modern cinematic electronic ad track, 100 BPM, 4/4. Starts with an airy whoosh and soft risers for 6 seconds while a camera zooms down from space, then a punchy drop with deep sub bass, crisp claps and a catchy synth pluck hook, confident and premium, clear downbeats. No vocals.",
+  "ms": 32000
+ },
+ {
+  "kind": "music",
+  "name": "fitn2-beat",
+  "prompt": "Trending Indian desi hip-hop phonk instrumental, 95 BPM, heavy 808 bass, sharp hi-hat rolls, cowbell phonk melody with a dhol accent. First 3 seconds sparse and quiet, then a hard bass drop at 3 seconds and strong hits every bar for fast transitions. Energetic, viral reel style. No vocals.",
+  "ms": 24000
+ },
+ {
+  "kind": "music",
+  "name": "fitn3-beat",
+  "prompt": "Viral Instagram reel beat, bouncy upbeat trap pop instrumental at 110 BPM, playful plucks, punchy kick and snare, quick riser into a drop at 2 seconds, fun and catchy, made for fast cuts and meme captions. No vocals.",
+  "ms": 20000
+ },
+ {
+  "kind": "music",
+  "name": "fitn4-beat",
+  "prompt": "Dark futuristic synthwave cyberpunk instrumental, 105 BPM, pulsing analog bass arpeggio, gated reverb drums, neon glow pads, tension build for 4 seconds then steady driving groove. No vocals.",
+  "ms": 28000
+ }
+]
