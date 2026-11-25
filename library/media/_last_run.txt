@@ -1,3 +1,3 @@
-2026-11-25 07:04 UTC
-flatplot-vo-1 [voice]: voice ok
-flatplot-vo-2 [voice]: voice ok
+2026-11-25 13:45 UTC
+pols-vo-1 [voice]: voice ok
+pols-vo-2 [voice]: voice ok
