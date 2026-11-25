@@ -1,5 +1,5 @@
 {
- "at": "2026-11-25 22:46",
+ "at": "2026-11-25 22:58",
  "rows": [
   {
    "id": "120255645738970547",
@@ -8,10 +8,10 @@
    "objective": "OUTCOME_LEADS",
    "created": "2026-11-17",
    "budget_day_inr": 586,
-   "spend_inr": 3507,
-   "spend_today_inr": 501,
-   "impressions": 19339,
-   "reach": 7975,
+   "spend_inr": 3515,
+   "spend_today_inr": 510,
+   "impressions": 19367,
+   "reach": 7988,
    "clicks": 92,
    "chats": 45,
    "chats_today": 4
@@ -23,10 +23,10 @@
    "objective": "OUTCOME_TRAFFIC",
    "created": "2026-11-18",
    "budget_day_inr": 200,
-   "spend_inr": 1186,
+   "spend_inr": 1187,
    "spend_today_inr": 251,
-   "impressions": 46149,
-   "reach": 39539,
+   "impressions": 46157,
+   "reach": 39555,
    "clicks": 1622,
    "chats": 1,
    "chats_today": 0
@@ -38,10 +38,10 @@
    "objective": "OUTCOME_TRAFFIC",
    "created": "2026-11-21",
    "budget_day_inr": 200,
-   "spend_inr": 899,
+   "spend_inr": 900,
    "spend_today_inr": 206,
-   "impressions": 17688,
-   "reach": 14554,
+   "impressions": 17717,
+   "reach": 14564,
    "clicks": 769,
    "chats": 0,
    "chats_today": 0
