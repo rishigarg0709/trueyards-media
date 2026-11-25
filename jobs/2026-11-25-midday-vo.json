@@ -1,0 +1,28 @@
+[
+ {
+  "kind": "voice",
+  "name": "flatplot-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Flat or plot? Every Indian family has this fight. [short pause] So here's what you actually own. Buy a one thousand square foot flat in a tower... and your share of the land under it can be about two hundred and twenty-eight square feet. That's your undivided share of land. In one worked example, two hundred flats split forty thousand square feet of land. [pause] Team plot says: the whole land is yours... and it's the land that tends to gain value while buildings age. Team flat says: security, lifts, a home ready now, and no building to manage. [pause] And if your tower is ever redeveloped... that slice decides what you get. Check it in your sale deed. [pause] Send this to the person in your family who wants a plot.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "flatplot-vo-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Flat or plot? Every Indian family has this fight. [short pause] So here's what you actually own. Buy a one thousand square foot flat in a tower... and your share of the land under it can be about two hundred and twenty-eight square feet. That's your undivided share of land. In one worked example, two hundred flats split forty thousand square feet of land. [pause] Team plot says: the whole land is yours... and it's the land that tends to gain value while buildings age. Team flat says: security, lifts, a home ready now, and no building to manage. [pause] And if your tower is ever redeveloped... that slice decides what you get. Check it in your sale deed. [pause] Send this to the person in your family who wants a plot.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
