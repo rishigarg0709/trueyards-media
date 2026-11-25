@@ -1,0 +1,10 @@
+{
+ "op": "li_post",
+ "ran_at": "2026-11-25T11:55:34.400201Z",
+ "result": {
+  "media_error": {
+   "error": "HTTP 401",
+   "body": "{\"status\":401,\"code\":\"AUTHENTICATION_FAILED\",\"message\":\"Could not authenticate\"}"
+  }
+ }
+}
