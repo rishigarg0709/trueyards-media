@@ -1,6 +1,6 @@
 # 2026-11-26 evening reel (19:07 IST): Dharavi: up to 10 lakh people in 2.4 sq km, and who pays to rebuild it
 
-- BATCH: ordered in prep-2026-11-26 (nightly planner, 2026-11-25 22:50 IST). Status line added below after the submit check. If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
+- BATCH: ordered in prep-2026-11-26 (nightly planner, 2026-11-25 22:50 IST). CONFIRMED submitted 2026-11-25 17:07 UTC (22:37 IST): batches/pending/prep-2026-11-26-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-26.json (11 Flash). The 7 real photos in fetch/2026-11-26.txt are in library/stock/ (d1126m-*, d1126c-*, d1126e-*). If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
 - Test: **X19 control** (D56: usual plan, no send line).
 - Publishing: main grid (D54), one Instagram copy, "share_to_feed": true, never "trial". Platform texts fresh per platform (D53).
 - Opening (D41, motion; D1 bright): frame 0 is a bright, full-frame aerial of the dense sea of rooftops with glass towers at its edge (AI visualisation hero, or the real Mumbai tarps aerial d1126e-mumbai-tarps if the hero is weaker), slow drone-style push from 0 s, the line SPOKEN from 0 s; no text card before 1.5 s; "2.4 sq km" lands at about 3 s.
