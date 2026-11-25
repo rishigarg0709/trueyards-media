@@ -47,7 +47,7 @@ Re-ranked 2026-11-23 by the learning run: Bengaluru lake trial broke out (1,126 
 - [ ] new | weird | Why some Indian towers have no 13th floor (lift buttons jump 12 to 14; builders follow buyer superstition, the floor still exists) | "Press 13. You can't." | hook 29 single word / contradiction | send: anyone in a high-rise | verify 2 named Indian projects with renumbered floors; label it as buyer preference, no faith claims
 - [x] 2026-11-20 midday | news | Supreme Court shields buyers of stalled projects from loan recovery (Sonipat and Bengaluru orders, 19 Nov 2026) | "Paying EMIs... for a flat that never came?" | news desk jump, published as a Trial Reel (IG Df9K9tcobbq)
 - [-] 2026-11-20 midday (displaced by news; requeued below) | global | Hong Kong's coffin homes (planned as subdivided units smaller than a parking space) | "People here live in a space the size of a bed." | visual shock
-- [ ] new | story | Dharavi: the plan to rebuild one of Asia's largest informal settlements | "About a million people. Less than 3 sq km." | hook 1 contradiction (number slam openings failed twice: home loan skip 84.6%, Mumbai rent 81.7%) | send: every Mumbaikar | factual, no blame or politics; verify area, population estimate and project status
+- [~] 2026-11-26 evening | new | story | Dharavi: the plan to rebuild one of Asia's largest informal settlements | "About a million people. Less than 3 sq km." | hook 1 contradiction (number slam openings failed twice: home loan skip 84.6%, Mumbai rent 81.7%) | send: every Mumbaikar | factual, no blame or politics; verify area, population estimate and project status
 - [ ] weird | Spite houses: homes built only to annoy the neighbours | "This house exists only to block a view." | forbidden/weird
 - [ ] story | Lavasa: India's private hill city that turned into a ghost town | "India built a whole city. Then everyone left." | story
 - [ ] history | How Mumbai was made from seven islands | "Mumbai used to be seven islands. Then someone filled in the sea." | hook 6 time jump | send: every Mumbaikar | look D Archive Sepia, voice George | check drafts/mumbai-10-pounds-reel first: may already be the untitled 15 Nov reel
@@ -68,7 +68,7 @@ Re-ranked 2026-11-23 by the learning run: Bengaluru lake trial broke out (1,126 
 - [ ] money | Rent vs buy, the honest maths | "Renting isn't throwing money away. Here's the maths." | myth bust
 - [ ] mystery | Why Indian flats are sold in sq ft but land in gaj, bigha, acre | "Why does India measure land in five different units?" | curiosity
 - [ ] money | How developers actually make money | "Builders don't sell flats. They sell money." | myth bust
-- [ ] global | Why Singapore's public housing works | "Most people in Singapore live in government homes, and like it." | contradiction
+- [~] 2026-11-26 carousel slot (17:13 reel, Thursday) | global | Why Singapore's public housing works | "Most people in Singapore live in government homes, and like it." | contradiction
 - [ ] rules | What RERA actually protects you from (and what it doesn't) | "RERA won't save you from this." | forbidden
 - [ ] marvel | How 3D-printed homes are built | "This house was printed." | awe
 - [ ] money | What your home loan really costs over 20 years | "You borrow 50 lakh. You pay back much more." | stakes
@@ -101,7 +101,7 @@ Re-ranked 2026-11-23 by the learning run: Bengaluru lake trial broke out (1,126 
 
 ## X19 shares test topics (D56, from 25 Nov; family arguments, both sides with sourced facts, end on a "send this to..." line; no buy or sell advice)
 - [ ] Rent or buy: what 20 years of rent vs EMI really adds up to in an Indian metro | send line: "Send this to the friend who says rent is wasted money" | X19 shares
-- [ ] Gold or property: how each actually grew in India since 2005 (RBI and gold price data) | send line: "Send this to the uncle who says property never falls" | X19 shares
+- [~] 2026-11-26 midday (X19 shares) | Gold or property: how each actually grew in India since 2005 (RBI and gold price data) | send line: "Send this to the uncle who says property never falls" | X19 shares
 - [x] 2026-11-25 midday (X19 shares, published) | Flat or plot: what you really own in each (undivided share of land vs the whole plot) | send line: "Send this to the person in your family who wants a plot" | X19 shares
 - [ ] Prepay the home loan or invest the money: the maths at today's rates | send line: "Send this to the one who pays extra EMI every year" | X19 shares
 - [ ] Ground floor or top floor: what buyers and builders price differently and why | send line: "Send this to whoever is choosing the floor" | X19 shares
