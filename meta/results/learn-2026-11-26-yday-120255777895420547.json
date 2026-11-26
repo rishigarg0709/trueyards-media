@@ -1,0 +1,127 @@
+{
+ "op": "ad_breakdown",
+ "ran_at": "2026-11-26T05:22:24.553019Z",
+ "result": {
+  "data": [
+   {
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "17"
+     },
+     {
+      "action_type": "post_reaction",
+      "value": "1"
+     },
+     {
+      "action_type": "onsite_conversion.messaging_block",
+      "value": "1"
+     },
+     {
+      "action_type": "post_engagement",
+      "value": "187"
+     },
+     {
+      "action_type": "post_interaction_gross",
+      "value": "1"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "187"
+     },
+     {
+      "action_type": "post_interaction_net",
+      "value": "1"
+     },
+     {
+      "action_type": "onsite_conversion.post_net_like",
+      "value": "1"
+     },
+     {
+      "action_type": "video_view",
+      "value": "169"
+     }
+    ],
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "feed",
+    "impressions": "823",
+    "reach": "820",
+    "spend": "26.45"
+   },
+   {
+    "actions": [
+     {
+      "action_type": "post_engagement",
+      "value": "2"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "2"
+     },
+     {
+      "action_type": "video_view",
+      "value": "2"
+     }
+    ],
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_explore_grid_home",
+    "impressions": "7",
+    "reach": "7",
+    "spend": "0.01"
+   },
+   {
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "6"
+     },
+     {
+      "action_type": "post_reaction",
+      "value": "1"
+     },
+     {
+      "action_type": "post_engagement",
+      "value": "37"
+     },
+     {
+      "action_type": "post_interaction_gross",
+      "value": "1"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "37"
+     },
+     {
+      "action_type": "post_interaction_net",
+      "value": "1"
+     },
+     {
+      "action_type": "onsite_conversion.post_net_like",
+      "value": "1"
+     },
+     {
+      "action_type": "video_view",
+      "value": "30"
+     }
+    ],
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_reels",
+    "impressions": "386",
+    "reach": "368",
+    "spend": "7.12"
+   }
+  ],
+  "paging": {
+   "cursors": {
+    "before": "MAZDZD",
+    "after": "MgZDZD"
+   }
+  }
+ }
+}

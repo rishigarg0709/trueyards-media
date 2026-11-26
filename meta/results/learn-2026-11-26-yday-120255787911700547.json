@@ -1,0 +1,73 @@
+{
+ "op": "ad_breakdown",
+ "ran_at": "2026-11-26T05:22:25.098607Z",
+ "result": {
+  "data": [
+   {
+    "actions": [
+     {
+      "action_type": "post_engagement",
+      "value": "1"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "1"
+     },
+     {
+      "action_type": "video_view",
+      "value": "1"
+     }
+    ],
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "feed",
+    "impressions": "15",
+    "reach": "13",
+    "spend": "0.5"
+   },
+   {
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_explore_grid_home",
+    "impressions": "1",
+    "reach": "1",
+    "spend": "0"
+   },
+   {
+    "actions": [
+     {
+      "action_type": "link_click",
+      "value": "11"
+     },
+     {
+      "action_type": "post_engagement",
+      "value": "77"
+     },
+     {
+      "action_type": "page_engagement",
+      "value": "77"
+     },
+     {
+      "action_type": "video_view",
+      "value": "66"
+     }
+    ],
+    "date_start": "2026-11-25",
+    "date_stop": "2026-11-25",
+    "publisher_platform": "instagram",
+    "platform_position": "instagram_reels",
+    "impressions": "484",
+    "reach": "455",
+    "spend": "12.14"
+   }
+  ],
+  "paging": {
+   "cursors": {
+    "before": "MAZDZD",
+    "after": "MgZDZD"
+   }
+  }
+ }
+}
