@@ -12,3 +12,9 @@ This cut (FIT-A1-real-apni-factory-ke-liye-address.mp4, 26 s, 1080x1920):
 - Facts: 138 acres, plots 500 to 4,000 gaj, highway 10 min (D5, B26). No prices.
 
 Status: waiting for Rishi's approval (D4, D24). Not live.
+
+## v3 (26 Nov 23:25): FIT-A1-v3-address-amenities-subsidy.mp4, 38.5 s
+Rishi 22:53 to 22:58: big full-screen captions, text with no background, industry amenities, the subsidies, faster talking, modern Hinglish, close with "WhatsApp pe baat kijiye".
+- Script (Tara, Roman Hinglish, sped up 15%): "Apni factory ke liye address chahiye? Toh yeh dekhiye! Rohtak mein, 138 acre ka industrial park. Plots, 500 se 4,000 gaj tak. 24 metre wide roads, trucks ke liye. Apna electrical substation, STP, CCTV aur fire safety. Highway sirf 10 minute. Aur Haryana MSME policy mein... 25% tak capital subsidy! Stamp duty pe 75% back, aur SGST pe 60% tak back! Apna gate. Apna board. Apna address. Forteasia Industrial Township, Rohtak. More details ke liye, humse WhatsApp pe baat kijiye!"
+- One huge word at a time, full screen, no box; key words in FIT red. Subsidy lines carry "*Subject to eligibility, as per Haryana MSME Policy 2026" on screen.
+- Amenities from brochure B26 (electrical substation, STP, CCTV, fire safety, 18 and 24 m roads). Subsidy figures are the Sub-Prime rates from published policy summaries; confirm with the MSME office before scaling spend.
