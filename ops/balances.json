@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-26 11:06",
+ "checked_at": "2026-11-26 11:14",
  "checks": [
   {
    "id": "gemini",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 3193,
+   "left": 3173,
    "burn_per_day": 1043,
-   "runway_days": 3.1,
-   "detail": "About INR 3193 left, spending about INR 1043 a day"
+   "runway_days": 3.0,
+   "detail": "About INR 3173 left, spending about INR 1043 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "low",
-   "left": 1205,
+   "left": 1203,
    "burn_per_day": 1005,
    "runway_days": 1.2,
-   "detail": "About INR 1205 left at INR 1005 a day"
+   "detail": "About INR 1203 left at INR 1005 a day"
   },
   {
    "id": "elevenlabs",
@@ -68,11 +68,11 @@
    "unit": "neurons per day",
    "link": "https://dash.cloudflare.com",
    "action": "Nothing to pay: it resets at 05:30 IST. Upgrade to Workers Paid only if the backup is needed every day",
-   "status": "ok",
+   "status": "out",
    "left": null,
    "burn_per_day": null,
    "runway_days": null,
-   "detail": "Free allowance available"
+   "detail": "Today's free allowance is used up; resets 05:30 IST"
   }
  ],
  "alerted": {
