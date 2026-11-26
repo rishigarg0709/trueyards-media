@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-26 17:20",
+ "checked_at": "2026-11-26 17:31",
  "checks": [
   {
    "id": "gemini",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 2605,
+   "left": 2591,
    "burn_per_day": 1043,
    "runway_days": 2.5,
-   "detail": "About INR 2605 left, spending about INR 1043 a day"
+   "detail": "About INR 2591 left, spending about INR 1043 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "low",
-   "left": 765,
+   "left": 752,
    "burn_per_day": 1005,
-   "runway_days": 0.8,
-   "detail": "About INR 765 left at INR 1005 a day"
+   "runway_days": 0.7,
+   "detail": "About INR 752 left at INR 1005 a day"
   },
   {
    "id": "elevenlabs",
@@ -76,6 +76,6 @@
   }
  ],
  "alerted": {
-  "whatsapp": "2026-11-25T23:55:29.873490+00:00"
+  "whatsapp": "2026-11-26T12:01:38.120685+00:00"
  }
 }
