@@ -89,3 +89,5 @@ Real photos (fetch/2026-11-26.txt): d1126c-hdb-1, d1126c-hdb-2, d1126c-hdb-3.
 
 ## Log fields
 Look F, voice George, hook 1, story type global comparison, hero shot impossible-real, accent coral #FF6B57, music ambient beat about 92 BPM, X19 control, X15 voiced outro, X18 short arm, global (Singapore, framed for India), English, length about 47 s. Slot: carousel slot reel (Thursday, D54 and D41).
+
+> SKIPPED at the 17:25 IST run: Directive D61 (26 Nov 17:30) stops carousels and global topics until 10 Dec. Nothing built or published.

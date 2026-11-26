@@ -77,7 +77,7 @@ Re-ranked 2026-11-23 by the learning run: Bengaluru lake trial broke out (1,126 
 - [ ] money | Rent vs buy, the honest maths | "Renting isn't throwing money away. Here's the maths." | myth bust
 - [ ] mystery | Why Indian flats are sold in sq ft but land in gaj, bigha, acre | "Why does India measure land in five different units?" | curiosity
 - [ ] money | How developers actually make money | "Builders don't sell flats. They sell money." | myth bust
-- [~] 2026-11-26 carousel slot (17:13 reel, Thursday) | global | Why Singapore's public housing works | "Most people in Singapore live in government homes, and like it." | contradiction
+- [-] DROPPED 2026-11-26 (D61: no global topics, carousel slot skipped to 10 Dec) | global | Why Singapore's public housing works | "Most people in Singapore live in government homes, and like it." | contradiction
 - [ ] rules | What RERA actually protects you from (and what it doesn't) | "RERA won't save you from this." | forbidden
 - [ ] marvel | How 3D-printed homes are built | "This house was printed." | awe
 - [ ] money | What your home loan really costs over 20 years | "You borrow 50 lakh. You pay back much more." | stakes
