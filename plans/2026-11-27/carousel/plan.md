@@ -1,5 +1,6 @@
 # 2026-11-27 carousel (17:13 IST): Why India looks like this #3: Why does every Indian street have a shop downstairs?
 
+- BATCH STATUS: CONFIRMED submitted 2026-11-26 17:20 UTC (22:50 IST): batches/pending/prep-2026-11-27-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-27.json (12 Flash). The first push at 22:32 IST crashed cloud-media because the job file was not a task list; fixed at 22:44 IST, nothing was generated twice. The 7 real photos in fetch/2026-11-27.txt are in library/stock/ (d1127m-*, d1127c-*, d1127e-*).
 - BATCH: ordered in prep-2026-11-27 (nightly planner, 2026-11-26 night IST). See the status line added below by the planner after the submit check. If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
 - Why a carousel today (Friday): D61 point 2a (Rishi, 26 Nov 17:25: "keep one a day, do not kill"): one carousel every day in the 17:13 slot, in the winning lane, told as slides, never a rules checklist or money table; photo-led cover with the question on slide 1; last slide asks to follow the series. This supersedes D41's carousel-to-reel swap and D54's Mon/Wed/Fri rule. Build it as a carousel with PLAYBOOK.md (engine/multi.cjs, engine/slice.py).
 - Series: "Why India looks like this #3" (midday #2, evening #4).

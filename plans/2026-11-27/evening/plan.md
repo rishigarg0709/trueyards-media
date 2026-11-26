@@ -1,5 +1,6 @@
 # 2026-11-27 evening reel (19:07 IST): Why India looks like this #4: Why do Mumbai towers have an empty floor in the middle?
 
+- BATCH STATUS: CONFIRMED submitted 2026-11-26 17:20 UTC (22:50 IST): batches/pending/prep-2026-11-27-pro.json (3 Pro: midday-1, carousel-1, evening-1) and prep-2026-11-27.json (12 Flash). The first push at 22:32 IST crashed cloud-media because the job file was not a task list; fixed at 22:44 IST, nothing was generated twice. The 7 real photos in fetch/2026-11-27.txt are in library/stock/ (d1127m-*, d1127c-*, d1127e-*).
 - BATCH: ordered in prep-2026-11-27 (nightly planner, 2026-11-26 night IST). See the status line added below by the planner after the submit check. If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
 - Series: "Why India looks like this #4" (midday #2, carousel #3). If log.md shows the numbers moved, use the next free number.
 - Language test (D61 point 4): English voiceover (Jessa). Midday is Hinglish.
