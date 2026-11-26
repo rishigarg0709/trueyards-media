@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-26 23:48",
+ "checked_at": "2026-11-27 00:09",
  "checks": [
   {
    "id": "gemini",
@@ -12,7 +12,7 @@
    "burn_per_day": 300,
    "runway_days": 3.2,
    "detail": "About INR 974 left of the INR 2000 top-up on 2026-11-18",
-   "spent_today": 142
+   "spent_today": 0
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 2340,
+   "left": 2332,
    "burn_per_day": 1043,
    "runway_days": 2.2,
-   "detail": "About INR 2340 left, spending about INR 1043 a day"
+   "detail": "About INR 2332 left, spending about INR 1043 a day"
   },
   {
    "id": "whatsapp",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 84899,
+   "left": 84463,
    "burn_per_day": 5000,
-   "runway_days": 17.0,
-   "detail": "84,899 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 16.9,
+   "detail": "84,463 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
