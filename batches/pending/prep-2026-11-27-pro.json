@@ -1,0 +1,27 @@
+{
+ "batch": "batches/nsi55lsbjlpckbiczduzglwzr4b7va5ibg5b",
+ "name": "prep-2026-11-27-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-26T17:20Z",
+ "images": [
+  {
+   "name": "2026-11-27-midday-1",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Hyper-realistic photograph looking up at an old 6-storey cream-painted Mumbai residential building in bright sun after the monsoon, jet-black and dark green streaks running down from under the roof parapet and below every window ledge, the lower floors much cleaner, clothes-drying grills and a few potted plants, blue sky with white clouds, believable scale and shadows, looks like a real news photo, no people. bright natural daylight, clean and crisp, true colours, high key with clear subjects, subtle teal and green tints in the grade, never murky, photorealistic, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-evening-1",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Hyper-realistic photograph looking up at a tall white 40-storey Mumbai residential tower, one completely open empty floor at mid-height with only columns and a railing, blue sky visible straight through that gap, every other floor with windows and balconies, bright clear daylight, believable scale and shadows, looks like a real news photo, no people. photorealistic documentary photograph, high contrast, cool desaturated shadows, bright clear midday daylight for this hook frame, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-carousel-1",
+   "prompt": "Vertical 4:5, objects large and filling the lower 55% of the frame, upper area clean cream for headline text, wide framing for crops. A detailed photoreal scale model of a narrow three-storey Indian house: ground floor a small lit kirana shop with a half-raised rolling shutter, shelves of colourful packets and a striped awning, two upper floors a family home with balconies, potted plants, a water tank on the roof, standing on a strip of pavement, no people. photoreal 3D scale model still life on a seamless warm cream #F3EEE4 background, soft even studio daylight, gentle contact shadows, premium editorial product photography, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}

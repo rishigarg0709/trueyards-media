@@ -1,0 +1,81 @@
+{
+ "batch": "batches/vytqh33hpmbn740bwsbeonk32egxzw1y2xzm",
+ "name": "prep-2026-11-27",
+ "model": "gemini-3.1-flash-image",
+ "submitted": "2026-11-26T17:20Z",
+ "images": [
+  {
+   "name": "2026-11-27-midday-2",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Extreme macro photograph of a black and dark green biofilm on wet cement plaster: tiny dark cells, fine green algae filaments and dewdrops, bright side light showing texture, shallow depth of field, scientific nature macro look, no people. bright natural daylight, clean and crisp, true colours, high key with clear subjects, subtle teal and green tints in the grade, never murky, photorealistic, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-midday-3",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Photograph of monsoon rain sheeting off the edge of a concrete roof parapet down the face of an old Mumbai building, clear water streams and drip lines on the wall, bright break in the clouds lighting the scene, no people. bright natural daylight, clean and crisp, true colours, high key with clear subjects, subtle teal and green tints in the grade, never murky, photorealistic, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-midday-4",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Close photograph of a concrete window ledge (chajja) on an old Indian apartment wall with a long black drip streak running down below it, painted cream wall, crisp daylight, no people. bright natural daylight, clean and crisp, true colours, high key with clear subjects, subtle teal and green tints in the grade, never murky, photorealistic, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-midday-5",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. The same kind of old 6-storey Mumbai residential building freshly repainted clean white and cream, no stains, roof parapet clean, bright sunshine, blue sky, a few potted plants on balconies, hopeful clean look, no people. bright natural daylight, clean and crisp, true colours, high key with clear subjects, subtle teal and green tints in the grade, never murky, photorealistic, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-evening-2",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Photograph inside an empty open refuge floor of a high-rise: bare concrete floor, square columns, waist-high railing, open air on all sides, Mumbai towers and haze beyond, daylight, no furniture, no people. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-evening-3",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Photograph of an empty concrete fire staircase in a high-rise filling with grey smoke from below, green emergency exit light glowing, handrail leading down, tense mood, no people, no flames. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-evening-4",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Photorealistic engineering cutaway render of a 40-storey residential tower shown in section, every seventh floor an empty open floor glowing red, the other floors with tiny furnished flats, dark background, technical documentary look, no text labels, no people. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-evening-5",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Photograph of an open high-rise refuge floor illegally bricked in with fresh grey blocks and a new wooden door with a heavy padlock, columns still visible, harsh light, investigative documentary look, no people. photorealistic documentary photograph, high contrast, cool desaturated shadows, overcast or dusk light, subtle 35mm film grain, shot on a full-frame camera, natural lens, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-carousel-2",
+   "prompt": "Ultra-wide 21:9 panorama, one continuous surface edge to edge, objects along the lower 55%, upper area clean cream for text, no gaps or breaks so it can span three slides. A row of five different photoreal scale model Indian shop-houses standing shoulder to shoulder on one long pavement plinth: each has a small shop at ground level (sweets, tailor, mobile repair, hardware, chemist) with rolling shutters and awnings, and a family home on the two floors above with balconies and laundry, no people. photoreal 3D scale model still life on a seamless warm cream #F3EEE4 background, soft even studio daylight, gentle contact shadows, premium editorial product photography, no text, no logos, no watermarks",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-carousel-3",
+   "prompt": "Vertical 4:5, objects large and filling the lower 55% of the frame, upper area clean cream for headline text, wide framing for crops. Still life of a rolled-up grey metal shop shutter section lying on its side with a heavy brass padlock and a red paper seal tag with a string, dramatic soft shadow, no readable text on the tag, no people. photoreal 3D scale model still life on a seamless warm cream #F3EEE4 background, soft even studio daylight, gentle contact shadows, premium editorial product photography, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-carousel-4",
+   "prompt": "Ultra-wide 21:9 panorama, one continuous surface edge to edge, objects along the lower 55%, upper area clean cream for text, no gaps or breaks so it can span three slides. A continuous row of photoreal scale model buildings on one long plinth, each a home above with a different ground-floor use: a small clinic with a red cross, a pathology lab, a bank branch, a gym with dumbbells in the window, and a coaching centre with desks, warm interior lights, no readable signs, no people. photoreal 3D scale model still life on a seamless warm cream #F3EEE4 background, soft even studio daylight, gentle contact shadows, premium editorial product photography, no text, no logos, no watermarks",
+   "aspect": "21:9",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-27-carousel-5",
+   "prompt": "Vertical 4:5, objects large and filling the lower 55% of the frame, upper area clean cream for headline text, wide framing for crops. Still life of a stack of official government gazette papers tied with red tape beside a folded city road map with several streets highlighted in red marker, a fountain pen and round spectacles, no readable text, no people. photoreal 3D scale model still life on a seamless warm cream #F3EEE4 background, soft even studio daylight, gentle contact shadows, premium editorial product photography, no text, no logos, no watermarks",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}
