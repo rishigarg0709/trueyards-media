@@ -1,5 +1,5 @@
 {
- "last_sha": "020ce1e68140e9e4f943c292136d83f77965e2b8",
+ "last_sha": "73f67752430c21fff50417e962fd88fc3728142e",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -43,6 +43,18 @@
    "budget": "20000",
    "camp": ""
   },
+  "adset:120255814288250547": {
+   "name": "TY reel 18038784548709035",
+   "status": "ACTIVE",
+   "budget": "10000",
+   "camp": "TrueYards Follow - spread"
+  },
+  "adset:120255814287450547": {
+   "name": "TY reel 18114493301598863",
+   "status": "ACTIVE",
+   "budget": "10000",
+   "camp": "TrueYards Follow - spread"
+  },
   "adset:120255721016990547": {
    "name": "FIT Meet W - reached on WhatsApp (warm)",
    "status": "CAMPAIGN_PAUSED",
@@ -69,13 +81,13 @@
   },
   "adset:120255718190600547": {
    "name": "TY reel 17995953015110577",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "10000",
    "camp": "TrueYards Follow - spread"
   },
   "adset:120255718190170547": {
    "name": "TY reel 18455422555132731",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "10000",
    "camp": "TrueYards Follow - spread"
   },
