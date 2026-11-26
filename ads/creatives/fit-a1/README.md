@@ -21,3 +21,6 @@ Rishi 22:53 to 22:58: big full-screen captions, text with no background, industr
 
 ## v4 (27 Nov 00:15): FIT-A1-v4-final.mp4, 38.9 s
 Rishi 23:27 to 23:33: plots "400 se 4,000 gaj" (Rishi's figure), "NH-152D se sirf 10 minute door", audio through to the end (music looped with a crossfade; render now asserts full-length audio), "subsidy" instead of "back", close "Zyada jaanne ke liye, is WhatsApp button pe click kijiye!" with end button "Is WhatsApp button pe click karein", and a softer grade (near-neutral contrast and saturation, lifted shadows, rolled-off highlights, no sharpening, lighter vignette).
+
+## v6 (27 Nov 00:35): Rohtak and door fixed
+Rishi 00:12: "Rohtak and door not pronounced correctly". Both words are now written in Devanagari for the voice (रोहतक, दूर), take a1v6-vo-tara-2. Same file name FIT-A1-v4-final.mp4 replaced. Rule: Hindi place names and Hindi words that look like English words go to the voice in Devanagari.
