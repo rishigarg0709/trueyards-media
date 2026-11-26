@@ -1,5 +1,12 @@
-2026-11-26 13:58 UTC
-el-usage [usage]: usage ok
-dharavi-vo-1 [voice]: voice ok
-dharavi-vo-2 [voice]: voice ok
-dharavi-beat [music]: music ok 800853 bytes
+2026-11-26 16:07 UTC
+a1-01-board [image]: image ok
+a1-02-reveal [image]: image ok
+a1-03-road [image]: image ok
+a1-04-topdown [image]: image ok
+a1-05-truck [image]: image ok
+a1-06-highway [image]: image ok
+a1-07-gate [image]: image ok
+a1-08-endcard [image]: image ok
+a1-vo-tara-1 [voice]: voice ok
+a1-vo-tara-2 [voice]: voice ok
+a1-beat [music]: music ok 480697 bytes
