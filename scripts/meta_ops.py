@@ -220,6 +220,8 @@ def op_boost_setup(req):
 def op_boost_post(req):
     """Adds an existing Instagram post as an ad inside the fixed campaign. Never touches budget."""
     guard()
+    if CFG.get("all_india_off"):  # Rishi, 26 Nov 2026: growth spend INR 200 a day total, warm spread only; all-India stays paused
+        return {"blocked": "all-India TrueYards Follow is off (config all_india_off); only the warm spread runs, INR 200 a day"}
     camp = find_campaign()
     if not camp:
         return {"error": "run boost_setup first"}

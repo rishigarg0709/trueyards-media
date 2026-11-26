@@ -7,5 +7,6 @@
   "token_secret": "META_TOKEN",
   "boost_daily_budget_inr": 200,
   "boost_monthly_cap_inr": 6200,
-  "boost_campaign_name": "TrueYards Follow"
+  "boost_campaign_name": "TrueYards Follow",
+  "all_india_off": true
 }
