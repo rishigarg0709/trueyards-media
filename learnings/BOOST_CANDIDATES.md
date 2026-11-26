@@ -135,3 +135,18 @@ Running: all-India TrueYards Follow (INR 200/day): Bengaluru lakes (ad 120255777
 | Burj, Jakarta | 159 to 183 h | 203 to 319 | 56 to 60% | 16 to 23% | 0 | | In the warm spread test until 26 Nov |
 | Delhi, Noida | 207 to 213 h | 1,360 to 1,586 | 44% | 34 to 37% | 0 to 0.1 | | Had their paid turns; age out 26 Nov |
 | Forteasia project reel | | | | | | | Never boost |
+
+## 2026-11-26 (pull 05:17 UTC)
+Active after this run: all-India TrueYards Follow: Bengaluru lakes (since 24 Nov 22:00 remake; first ad 23 Nov), Aangan (since 25 Nov), Balcony grill (added today, ad 120255808013650547). Japan paused (post ages out). Warm spread: Burj (ages out 27 Nov) and Jakarta (ages out 28 Nov), rotation needs Rishi (N67).
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Balcony grill (18114493301598863) | 39 h | 876 | 38.2% | 52.8% | 1.1 | YT 98, X 14 (p89) | BOOSTED 26 Nov 10:56 IST. On the grid, voiced outro. Pause by 30 Nov (4 days) |
+| Chandigarh Sector 13 (18038784548709035) | 45 h | 1,039 | 38.8% | 21.0% | 1.0 | X 25 (p96), YT 112 | Next in line (eligible to 4 Dec); add when an ad slot opens (Bengaluru reaches 4 days on 27 Nov) |
+| Mumbai no-OC (17970572490219322) | 41 h | 153 | 41.1% | 28.0% | 26.1 | X 11, no YT copy | Candidate after Chandigarh: best send rate, small reach |
+| Bengaluru lakes (17920086021259928) | 87 h | 1,196 | 50.0% | 15.7% | 0.8 | X p100, FB 239 | ACTIVE; pause on 27 Nov (4 days since 23 Nov) |
+| Aangan courtyard (18140554237642623) | 111 h | 252 | 50.0% | 22.9% | 0 | YT 550 (p89) | ACTIVE since 25 Nov; post ages out 1 Dec |
+| Steinway (17916533091559974) | 62 h | 144 | 55.6% | 18.2% | 0 | YT 462 (p84), X p93 | Weak on IG; not a candidate for IG follows |
+| Japan houses (18086326760340689) | 213 h | 422 | 49.1% | 30.1% | 0 | YT 91 | PAUSED 26 Nov (ages out 27 Nov) |
+| Flat or plot (18406492459202075), Ahmedabad pols (18034638014683408) | 15 to 22 h | 108 to 119 | 73 to 84% | 7 to 20% | 0 | pols FB 253 (p93) | Not yet eligible; dud signals, not candidates |
+| Forteasia project reel | | | | | | | Never boost |

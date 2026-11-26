@@ -30,5 +30,7 @@ These audience notes are starting assumptions, not findings. The daily analytics
 
 Findings so far (analytics run, 24 Nov, early signs): YouTube rewards engineering and scale stories (Aangan 526, Steinway 440 in a day, Hong Kong 434) far more than the famous-India stories that win Instagram (Delhi 53, Bengaluru 11), so the YouTube title should state the scale number and the plain question. Threads rewards carousels and checklists with a rupee number (stamp duty 175, cost of a flat 93 in a day) over reels (0 to 44), so carousel text on Threads is a numbered list with the number in line one. Facebook gives about 200 plays to any reel with a place name. X stays in low double digits; short text is enough.
 
+Update (analytics run, 26 Nov, early sign): heritage and place stories travel on Facebook even when Instagram skips them (Ahmedabad pols 253 plays in under a day, p93, while IG skip was 83.6%; Kerala 282, Jaipur 215). Facebook text names the place and the year in line one and closes on a memory question ("Have you walked through a pol?"). On X, do not write bare domain names (X auto-links them and links cost more).
+
 ## Check before posting
 Read the six texts side by side. If two of them share a sentence, rewrite one.
