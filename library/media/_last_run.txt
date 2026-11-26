@@ -1,4 +1,3 @@
-2026-11-26 17:38 UTC
-a1v3-vo-tara-1 [voice]: voice ok
-a1v3-vo-tara-2 [voice]: voice ok
-a1v3-vo-tara-3 [voice]: voice ok
+2026-11-26 18:08 UTC
+a1v4-vo-tara-1 [voice]: voice ok
+a1v4-vo-tara-2 [voice]: voice ok
