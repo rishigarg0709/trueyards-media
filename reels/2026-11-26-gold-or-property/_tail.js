@@ -1,0 +1,16 @@
+const AIL='AI visualisation.';
+const FINE=[[0,AIL],
+[ws("who's")-.1,AIL],
+[ws('gold',2)-.1,'Photo: Zoshua Colah / Unsplash.'],
+[ws('in')-.08,AIL+' Gold 24K, 2010 average ≈ ₹18,500 per 10 g: BankBazaar.'],
+[ws('this')-.1,AIL+' ₹1,36,950 per 10 g, Delhi, 16 Nov 2026: Goodreturns via HDFC Sky. Bullion rate before taxes and making charges.'],
+[ws('but')-.1,AIL+' ₹1,38,640 (13 Nov) to ₹1,36,950 (16 Nov), Delhi 24K: Goodreturns via HDFC Sky.'],
+[ws('now')-.1,'Photo: Abhijit M / Unsplash. RBI House Price Index, 18 cities, base 2022-23 = 100.'],
+[ws('in',4)-.1,AIL+' RBI HPI Q1 2025-26 113.4, Q2 112.7 (-0.6%): PTI via Business Standard, 27 Nov 2025.'],
+[ws('so')-.1,AIL+' RBI HPI, all-India, quarter on quarter.'],
+[ws('lately')-.1,'Photo: Abhijit M / Unsplash. RBI HPI Q1 2026-27: +3.6% year on year (RBI, 24 Aug 2026, via ANI).'],
+[ws("here's")-.1,AIL],
+[ws('gold',5)-.1,AIL],
+[ws('a',6)-.1,AIL+' Delhi stamp duty from 6% (men; 4% women). Educational content, not advice.'],
+[ws('send')-.1,AIL+' Educational content, not investment advice.'],
+[WS[WS.length-1][2]+.1,AIL]];
