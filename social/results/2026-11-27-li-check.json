@@ -1,0 +1,16 @@
+{
+ "op": "li_check",
+ "ran_at": "2026-11-27T07:49:35.920644Z",
+ "result": {
+  "ok": false,
+  "name": null,
+  "raw_keys": [
+   "body",
+   "error"
+  ],
+  "error": {
+   "error": "HTTP 401",
+   "body": "{\"status\":401,\"code\":\"AUTHENTICATION_FAILED\",\"message\":\"Could not authenticate\"}"
+  }
+ }
+}
