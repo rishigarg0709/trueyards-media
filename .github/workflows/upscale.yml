@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with: {sparse-checkout: upscale, sparse-checkout-cone-mode: false}
       - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
           mkdir -p fr && ffmpeg -v error -i $(python3 -c "import json;print(json.load(open('upscale/job.json'))['src'])") -start_number 0 fr/f%04d.png && ls fr | wc -l
       - uses: actions/upload-artifact@v4
         with: {name: src-frames, path: fr, retention-days: 3}
@@ -48,6 +49,7 @@ jobs:
         with: {pattern: 'up-*', merge-multiple: true, path: up}
       - name: Loop and encode
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
           pip install -q pillow numpy
           python3 upscale/pack.py
       - name: Commit to library/web
