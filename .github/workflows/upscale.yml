@@ -32,7 +32,7 @@ jobs:
         with: {python-version: '3.12'}
       - name: Real-ESRGAN x4 on this machine's frames
         run: |
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -q spandrel pillow numpy
           curl -sSL -o RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
           N=$(ls fr | wc -l); IDS=$(python3 -c "print(','.join(str(i) for i in range(${{ matrix.chunk }}, $N, 20)))")
