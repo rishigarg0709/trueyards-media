@@ -1,2 +1,5 @@
 # Append-only logs: when two workflows add lines at the same time, keep both sides instead of failing the run (19 Nov batch-poll failure).
 *.jsonl merge=union
+# Run logs: two cloud-media runs finishing together both rewrite this file; keep both sides instead of failing the run and losing its images (27 Nov 14:39, pf.gads).
+library/media/_last_run.txt merge=union
+library/web/_last_run.txt merge=union
