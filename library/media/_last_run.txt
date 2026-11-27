@@ -1,2 +1,5 @@
-2026-11-27 11:30 UTC
-fitweb-plan-green [image]: image ok
+2026-11-27 13:58 UTC
+el-usage [usage]: usage ok
+refuge-vo-1 [voice]: voice ok
+refuge-vo-2 [voice]: voice ok
+2026-11-27-evening-1b [image]: image ok
