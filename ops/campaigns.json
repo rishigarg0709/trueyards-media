@@ -1,5 +1,5 @@
 {
- "at": "2026-11-27 18:41",
+ "at": "2026-11-27 18:54",
  "rows": [
   {
    "id": "120255645738970547",
@@ -8,9 +8,9 @@
    "objective": "OUTCOME_LEADS",
    "created": "2026-11-17",
    "budget_day_inr": 586,
-   "spend_inr": 4568,
-   "spend_today_inr": 478,
-   "impressions": 24117,
+   "spend_inr": 4569,
+   "spend_today_inr": 479,
+   "impressions": 24135,
    "reach": 9065,
    "clicks": 108,
    "chats": 53,
@@ -23,10 +23,10 @@
    "objective": "OUTCOME_TRAFFIC",
    "created": "2026-11-21",
    "budget_day_inr": 200,
-   "spend_inr": 1199,
-   "spend_today_inr": 139,
-   "impressions": 26061,
-   "reach": 21478,
+   "spend_inr": 1201,
+   "spend_today_inr": 141,
+   "impressions": 26151,
+   "reach": 21526,
    "clicks": 1280,
    "chats": 0,
    "chats_today": 0
