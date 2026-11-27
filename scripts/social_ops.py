@@ -178,7 +178,10 @@ def op_ig_scan(req):
 LI_ORG = "urn:li:organization:128124088"
 def li_tok():
     # A pasted secret can carry a stray space, newline or quote; LinkedIn answers 401 AUTHENTICATION_FAILED to that.
-    return (E("LI_TOKEN") or "").strip().strip('"').strip("'").strip()
+    t = (E("LI_TOKEN") or "").strip().strip('"').strip("'").strip()
+    if t.lower().startswith("bearer "): t = t[7:]
+    if ":" in t and " " in t.split(":", 1)[0]: t = t.split(":", 1)[1]  # "Access token: xyz" pasted whole
+    return "".join(t.split())  # drop any inner spaces or line breaks
 
 def li_h(extra=None):
     h = {"Authorization": f"Bearer {li_tok()}", "LinkedIn-Version": "202510", "X-Restli-Protocol-Version": "2.0.0"}
@@ -227,7 +230,8 @@ def op_li_check(req):
         r = http(f"https://api.linkedin.com/rest/organizations/{oid}", None, li_h(), method="GET")
     except Exception as e:
         return {"auth_error": str(e)}
-    return {"ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "raw_keys": sorted(list(r.keys()))[:8], "error": None if (r.get("id") or r.get("localizedName")) else r}
+    tk = li_tok()
+    return {"ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "token_len": len(tk), "token_shape": "AQ..." if tk.startswith("AQ") else "unexpected start", "error": None if (r.get("id") or r.get("localizedName")) else r}
 
 def op_threads_comments(req):
     """{days?} : replies other people left on our recent Threads posts (with our existing answers)."""
