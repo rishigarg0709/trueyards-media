@@ -1,5 +1,3 @@
-2026-11-27 13:58 UTC
-el-usage [usage]: usage ok
-refuge-vo-1 [voice]: voice ok
-refuge-vo-2 [voice]: voice ok
-2026-11-27-evening-1b [image]: image ok
+2026-11-27 14:11 UTC
+fitweb-ind2 [image]: image ok
+fitweb-infra2 [image]: image ok
