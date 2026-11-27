@@ -1,0 +1,70 @@
+{
+ "at": "2026-11-27 17:58",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "broadcast.create",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "id": "C#2026-11-27T12:28:25.153Z#12ea30",
+    "total": 243,
+    "held": false,
+    "note": "",
+    "askedOwner": false
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-27T12:28:25.204Z"
+  },
+  {
+   "ok": true,
+   "op": "broadcasts",
+   "changes": false,
+   "result": {
+    "dailyCap": 5000,
+    "sentToday": 1213,
+    "total": 1,
+    "broadcasts": [
+     {
+      "id": "C#2026-11-27T12:28:25.153Z#12ea30",
+      "name": "FIT warm leads retarget 27 Nov: apni factory ka address card",
+      "audience": "FIT warm retarget 27 Nov",
+      "template": "fit_fact_card",
+      "language": "en",
+      "state": "ready",
+      "total": 243,
+      "cursor": 0,
+      "sent": 0,
+      "delivered": 0,
+      "read": 0,
+      "failed": 0,
+      "failedLater": 0,
+      "replied": 0,
+      "tapped": 0,
+      "autoReplied": 0,
+      "createdAt": "2026-11-27T12:28:25.172Z",
+      "by": "Agent: Chief of Staff",
+      "source": "inbox",
+      "funnel": {
+       "attempted": 0,
+       "sent": 0,
+       "delivered": 0,
+       "read": 0,
+       "engaged": 0,
+       "replied": 0,
+       "tapped": 0,
+       "autoReplied": 0,
+       "explored": 0,
+       "brochure": 0,
+       "call": 0,
+       "optedOut": 0
+      }
+     }
+    ]
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-27T12:28:35.300Z"
+  }
+ ]
+}
