@@ -1,0 +1,12 @@
+[
+ {
+  "kind": "veo",
+  "name": "fitweb-orbit-test",
+  "by": "pf.gads",
+  "model": "veo-3.1-generate-preview",
+  "image": "jobs/refs/fit-web/hero-ref.jpg",
+  "aspect": "16:9",
+  "seconds": 8,
+  "prompt": "A slow, smooth, constant-speed camera orbit of about 45 degrees clockwise around this architectural scale model on the ivory table, the camera stays at the same height and distance, no cuts, no zoom jumps. The model, its buildings, roads and landscaping stay exactly the same and perfectly still; only the camera moves. Soft daylight, calm, premium, no people, no text."
+ }
+]

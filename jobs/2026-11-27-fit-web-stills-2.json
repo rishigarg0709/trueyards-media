@@ -1,0 +1,60 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-hero-a2",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/hero-ref.jpg"
+  ],
+  "prompt": "Keep the scale model, its layout, buildings, roads, golf strip, pool, courts, soil-layer block, the ivory table, the cream room and the light EXACTLY the same as the attached image; only the camera position changes. Camera orbited about 30 degrees clockwise around the model, same height and distance, model still centred slightly right. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted ivory, navy, warm grey and natural green palette. Physical architect's model, crisp miniature detail, tilt-shift realism. Generous empty negative space. Absolutely no text, no letters, no numbers, no logos, no watermarks anywhere."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-hero-a3",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/hero-ref.jpg"
+  ],
+  "prompt": "Keep the scale model, its layout, buildings, roads, golf strip, pool, courts, soil-layer block, the ivory table, the cream room and the light EXACTLY the same as the attached image; only the camera position changes. Camera orbited about 60 degrees clockwise around the model and slightly higher, model centred. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted ivory, navy, warm grey and natural green palette. Physical architect's model, crisp miniature detail, tilt-shift realism. Generous empty negative space. Absolutely no text, no letters, no numbers, no logos, no watermarks anywhere."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-hero-a4",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/hero-ref.jpg"
+  ],
+  "prompt": "Keep the scale model, its layout, buildings, roads, golf strip, pool, courts, soil-layer block, the ivory table, the cream room and the light EXACTLY the same as the attached image; only the camera position changes. Camera moved in closer and lower, looking along the main road towards the entrance plaza and the industrial sheds, cinematic low angle, the rest of the model softly out of focus. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted ivory, navy, warm grey and natural green palette. Physical architect's model, crisp miniature detail, tilt-shift realism. Generous empty negative space. Absolutely no text, no letters, no numbers, no logos, no watermarks anywhere."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-commercial",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/estate-model.jpg"
+  ],
+  "prompt": "Close-up of the commercial block of the township scale model: a row of modern four-level shop-office buildings (ground plus three upper floors; ground floor glass shopfronts with warm interior glow, offices above) facing a wide 24 metre main road with front parking, tiny cars and pedestrians. Ivory studio. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted ivory, navy, warm grey and natural green palette. Physical architect's model, crisp miniature detail, tilt-shift realism. Generous empty negative space. Absolutely no text, no letters, no numbers, no logos, no watermarks anywhere."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-infra",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [],
+  "prompt": "Close-up of the township's utility zone on the scale model: an electrical sub-station with transformers in a fenced yard, a sewage treatment plant with round clarifier tanks and a water recycling unit, slim CCTV poles and fire hydrants along a wide road with a heavy trailer, and a neat cut-away section of the road showing underground utility pipes and cables. No fire station, no fire engines. Ivory studio. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted ivory, navy, warm grey and natural green palette. Physical architect's model, crisp miniature detail, tilt-shift realism. Generous empty negative space. Absolutely no text, no letters, no numbers, no logos, no watermarks anywhere."
+ }
+]
