@@ -1,0 +1,20 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-ind2",
+  "model": "gemini-3-pro-image",
+  "aspect": "4:3",
+  "size": "4K",
+  "keep_size": true,
+  "prompt": "An architect's scale model diorama of ONE industrial plot in a modern Indian industrial township, built on a square cut-away block of soil with a clean cut edge. On it: a modern pre-engineered factory and warehouse with navy-blue ribbed metal cladding and a light roof covered in neat rows of solar panels; a glazed two-storey office block at the front corner with warm lit windows; three loading docks with roller shutters, two white container trucks backed up to the docks and a third truck turning in from the road; a yellow forklift moving pallets in the paved yard; a few tiny workers in orange safety vests; painted parking bays with a few cars; a small security cabin and gate; a low boundary wall lined with trees and green lawn strips; along the front edge a wide tree-lined internal road with streetlights. Everything sits ON the block, nothing floats. Camera at 30 degrees elevation in a three-quarter view, the whole model fully visible and centred with generous margin. PURE WHITE (#FFFFFF) seamless background, a soft grey contact shadow directly under the block only, no table, no room, no turntable, no borders. Soft top-left studio light, hyper-realistic photoreal miniature, museum-quality architect's model, tilt-shift realism, crisp detail, true materials, calm premium look. Absolutely no text, letters, numbers, labels, signs with writing or logos anywhere."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-infra2",
+  "model": "gemini-3-pro-image",
+  "aspect": "4:3",
+  "size": "4K",
+  "keep_size": true,
+  "prompt": "An architect's scale model diorama of the infrastructure of a modern Indian industrial township, built on a square cut-away block of soil whose cut face shows the layers underground. On top: a wide divided road with white lane markings, a landscaped median with trees, footpaths and slim LED streetlight poles, two small trucks and a car on the road; beside the road an electrical sub-station with transformers inside a neat fenced yard, a sewage treatment plant with round clarifier tanks, a tall overhead water tank, a CCTV pole and a red fire hydrant, with green lawns and trees around everything. In the cut face of the block, under the road: a utility trench carrying colour-coded pipes and cables (blue water, black power, orange fibre) and a storm-water drain. No fire station building. Camera at 30 degrees elevation in a three-quarter view, the whole model fully visible and centred with generous margin. PURE WHITE (#FFFFFF) seamless background, a soft grey contact shadow directly under the block only, no table, no room, no turntable, no borders. Soft top-left studio light, hyper-realistic photoreal miniature, museum-quality architect's model, tilt-shift realism, crisp detail, true materials, calm premium look. Absolutely no text, letters, numbers, labels, signs with writing or logos anywhere."
+ }
+]
