@@ -12,3 +12,5 @@ Every handled comment: date | platform | comment id | gist | action | reply
 - 2026-11-23 | Threads | 18121343279006993 | @aniketdwivedi47401: off-topic pasted text (breathing 'IEPs' definition) on Delhi Rs 1 crore flat real cost post | skipped (off-topic, likely spam; hide not available on Threads) | no reply
 - 2026-11-27 09:19 UTC run: Instagram 0, Facebook 0, Threads 0 new; YouTube 1 new on Dharavi Short (API4SFReq4E).
 - 2026-11-27 | YouTube | Ugzbn4Hmy6U4JSk4N914AaABAg | @uncanny5898: hearts and party emojis on Dharavi Short | replied | "Thank you so much for the love!"
+- 2026-11-27 12:23 UTC run: Instagram 0, Facebook 0, YouTube 0 new; Threads 1 new on Dharavi post (17897763063616993).
+- 2026-11-27 | Threads | 18232213681333743 | @eauctionhunt: what happens to families if the market slows before the extra space sells | replied (reply 18647122150059461) | "Fair point! Under the plan, the rehab homes for families are built first, before any extra space is sold."
