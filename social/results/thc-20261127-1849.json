@@ -1,0 +1,35 @@
+{
+ "op": "threads_comments",
+ "ran_at": "2026-11-27T13:27:41.930857Z",
+ "result": {
+  "username": "trueyards.in",
+  "comments": [
+   {
+    "id": "18232213681333743",
+    "is_reply_owned_by_me": false,
+    "text": "Land paying for itself works only if the extra space actually sells at good prices. What happens to the families if the market slows down halfway through?",
+    "timestamp": "2026-11-27T11:43:19+0000",
+    "username": "eauctionhunt",
+    "replied_to": {
+     "id": "17897763063616993"
+    },
+    "post_id": "17897763063616993",
+    "post_text": "We looked into how Dharavi is supposed to be rebuilt. Nobody pays cash for the free flats: eligible families from before",
+    "permalink": "https://www.threads.com/@trueyards.in/post/DgNa8eLhhJn"
+   },
+   {
+    "id": "18647122150059461",
+    "is_reply_owned_by_me": true,
+    "text": "Fair point! Under the plan, the rehab homes for families are built first, before any extra space is sold.",
+    "timestamp": "2026-11-27T12:43:10+0000",
+    "username": "trueyards.in",
+    "replied_to": {
+     "id": "18232213681333743"
+    },
+    "post_id": "17897763063616993",
+    "post_text": "We looked into how Dharavi is supposed to be rebuilt. Nobody pays cash for the free flats: eligible families from before",
+    "permalink": "https://www.threads.com/@trueyards.in/post/DgNa8eLhhJn"
+   }
+  ]
+ }
+}
