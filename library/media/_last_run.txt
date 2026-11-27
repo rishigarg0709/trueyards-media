@@ -1,6 +1,2 @@
-2026-11-27 08:18 UTC
-fitweb-hero-a2 [image]: image ok
-fitweb-hero-a3 [image]: image ok
-fitweb-hero-a4 [image]: image ok
-fitweb-commercial [image]: image ok
-fitweb-infra [image]: image ok
+2026-11-27 08:34 UTC
+fitweb-model-top [image]: HTTP 402: b'{\n  "error": {\n    "code": 402,\n    "message": "Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ",\n    "status": "RESOURCE_EXHAUSTED"\n  }\n}\n'
