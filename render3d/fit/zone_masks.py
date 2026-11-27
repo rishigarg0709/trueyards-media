@@ -1,6 +1,6 @@
 import json
 from PIL import Image, ImageDraw, ImageFilter
-L=json.load(open('/home/claude/trueyards-media/render3d/fit/layout.json'))
+L=json.load(open('/home/claude/trueyards-media/library/web/fitplan/layout_clipped.json'))
 S=4096; SC=1400.0; CX,CY=-68.0,40.0
 def px(x,y): return ((x-(CX-SC/2))/SC*S, ((CY+SC/2)-y)/SC*S)
 Z={'industrial':('shed','office'),'residential':('res',),'commercial':('sco',)}
@@ -16,7 +16,8 @@ holes=Image.new('L',(S,S),0); d=ImageDraw.Draw(holes)
 for poly in L['holes']:
     d.polygon([px(*p) for p in poly[0]],fill=255)
 holes.save('holes-4k.png')
-B=Image.open('/home/claude/trueyards-media/library/media/fitweb-plan-exact-b.png').convert('RGB')
+import sys
+B=Image.open(sys.argv[1] if len(sys.argv)>1 else '/home/claude/trueyards-media/library/media/fitweb-plan-exact-b.png').convert('RGB')
 vis=B.copy()
 cols={'industrial':(255,60,0),'residential':(0,200,255),'commercial':(255,0,200)}
 for z,m in out.items():

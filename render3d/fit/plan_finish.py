@@ -1,13 +1,13 @@
 import numpy as np
 from PIL import Image, ImageFilter, ImageChops
-B=Image.open('/home/claude/trueyards-media/library/media/fitweb-plan-exact-b.png').convert('RGB')
+B=Image.open('/home/claude/trueyards-media/library/media/fitweb-plan2-photo-a.png').convert('RGB')
 H=Image.open('holes-4k.png')
 out=B.copy()
 # each Others Land parcel becomes plain farmland copied from the open fields at the top right (not part of FIT)
 lab=np.array(H)>0
 import cv2
 n,cc,st,_=cv2.connectedComponentsWithStats(lab.astype(np.uint8))
-donors=[(3150,40),(3150,520)]
+donors=[(3300,60),(3300,560)]
 for i in range(1,n):
     x,y,w,h,a=st[i]
     dx,dy=donors[(i-1)%len(donors)]
@@ -17,7 +17,7 @@ for i in range(1,n):
     print('hole',i,x,y,w,h)
 out.save('/home/claude/zones/plan-exact-4k.png')
 out.save('/home/claude/trueyards/public/fit/v2/plan-exact-4k.webp','WEBP',quality=84,method=6)
-out.resize((2400,2400),Image.LANCZOS).save('/home/claude/trueyards/public/fit/v2/plan-exact.webp','WEBP',quality=86,method=6)
+out.resize((2400,2400),Image.LANCZOS).save('/home/claude/trueyards/public/fit/v2/plan-exact.webp','WEBP',quality=86,method=6); out.resize((1600,1600),Image.LANCZOS).save('/home/claude/trueyards/public/fit/v2/plan-exact-1600.webp','WEBP',quality=84,method=6)
 # zone masks at 2400: white with soft alpha, grown a little so the glow wraps each building
 for z in ('industrial','residential','commercial'):
     m=Image.open(f'{z}-4k.png').filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2)).resize((2400,2400),Image.LANCZOS)
