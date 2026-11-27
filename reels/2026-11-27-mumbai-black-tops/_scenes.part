@@ -1,0 +1,87 @@
+// recurring device: teal survey brackets that lock onto the black streaks; series tag
+const HOOKEV=wt('nahi');
+const KC='#BFF5E4';
+const num=(p,css)=>mk(p,'N ts',css+';opacity:0','');
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const strike=(e,t,a)=>{const p=eo((t-a)/.25);e.style.backgroundSize=`${p*100}% 12px`};
+// 1. HOOK: bright stained Mumbai building, push-in toward the black top from frame 0; question spoken from 0 s; no text before 1.55 s; "Pollution? NO" slams on 'nahi'
+const hookImg=(sc,ox,oy)=>box(sc,'m1',ox||540,oy||560,'50% 50%');
+add(0,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.12) saturate(1.08) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');const g=mk(sc,'sh','background:'+GB(50)+';opacity:0');
+ const tA=1.55;
+ const k=T(sc,'K ts','left:72px;top:1080px;color:'+KC,[['●',tA,'c'],['Why',tA],['India',tA],['looks',tA],['like',tA],['this',tA],['#2',tA]]);
+ const q=T(sc,'M ts','left:70px;top:1126px;width:980px;font-size:72px',[['Why',tA],['is',tA],['it',tA],['black',tA,'hl'],['\n'],['at',tA],['the',tA],['top?',tA]]);
+ const p=mk(sc,'M ts','left:70px;top:1330px;width:960px;opacity:0;font-size:84px','Pollution?');
+ const n=mk(sc,'stamp','left:500px;top:1318px;opacity:0;font-size:96px','NO');
+ const b0=0,tp=wt('pollution'),tn=HOOKEV;
+ return t=>{b.style.transform=`scale(${1.04+.2*eio(t/4)}) translateY(${40*eio(t/4)}px)`;g.style.opacity=cl((t-tA+.3)/.35);rv(k,t);rv(q,t);fade(p,t,Math.max(tp,tA),.2,20);if(t>=tn)slam(n,t,tn,1.8,-5);else n.style.opacity=0;b.style.marginLeft=shake(t,tn,7)+'px'}});
+// 2. Real old Mumbai building (framed portrait photo), tilt up. "Yahan saal mein lagbhag dhai metre baarish hoti hai."
+add(wt('yahan')-.1,sc=>{const b=panel(sc,'fort',170,1100,'50% 0%',540,200);
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('saal'),'c'],['Mumbai',wt('saal')],['rain',wt('baarish')],['·',wt('baarish')],['every',wt('saal')],['year',wt('saal')]]);
+ const n=num(sc,'left:56px;top:1290px;color:#fff;font-size:200px');
+ const u=T(sc,'M ts','left:360px;top:1395px;width:600px',[['metres',wt('metre'),'hl']]);
+ const b0=wt('yahan')-.1,tn=wt('dhai')-b0;
+ return t=>{b.im.style.transform=`scale(${1.12-.06*eio(t/4)}) translateY(${-40+60*eio(t/4)}px)`;rv(k,t);const p=cnt(n,t,tn,.6,p=>(2.5*p).toFixed(1));rv(u,t)}},true);
+// 3. Monsoon rain sheeting off a parapet, wide. "Aur uska zyada hissa... sirf chaar mahine mein."
+add(wt('aur')-.1,sc=>{const b=box(sc,'m3',600,500,'50% 50%');b.im.style.filter='brightness(1.1) saturate(1.05)';mk(sc,'sh','background:'+GB(50));
+ const n=num(sc,'left:56px;top:1150px;color:#fff;font-size:220px');
+ const u=T(sc,'M ts','left:70px;top:1380px;width:960px',[['of',wt('chaar')],['it',wt('chaar')],['in',wt('chaar')],['4',wt('chaar'),'hl',1],['months',wt('mahine')]]);
+ const k=mk(sc,'K ts','left:72px;top:1100px;color:'+KC+';opacity:0','● June to September');
+ const b0=wt('aur')-.1,tn=wt('zyada')-b0;
+ return t=>{b.style.transform=`scale(${1.08+.1*eio(t/4)})`;const p=cnt(n,t,tn,.8,p=>Math.round(95*p)+'%');fade(k,t,wt('mahine')-b0,.25,10);rv(u,t)}},true);
+// 4. Close on the drip line, push-in. "Ab dekho paani kahan behta hai. Chhat ki parapet se."
+add(wt('ab')-.1,sc=>{const b=box(sc,'m3',520,420,'50% 50%');b.im.style.filter='brightness(1.12) saturate(1.05)';mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1180px;color:'+KC,[['●',wt('paani'),'c'],['Follow',wt('paani')],['the',wt('paani')],['water',wt('paani')]]);
+ const h=T(sc,'H ts','left:70px;top:1236px;width:960px;font-size:120px',[['Parapet',wt('parapet'),'hl',1]]);
+ const br=corners(sc,300,240,860,900,50,6);const b0=wt('ab')-.1;
+ return t=>{b.style.transform=`scale(${1.7+.18*eio(t/3.4)})`;rv(k,t);rv(h,t);crn(br,t,wt('parapet')-b0-.1)}},true);
+// 5. Window ledge with a black drip streak, tilt down. "Khidki ke ledge se. Seedha deewar par."
+add(wt('khidki')-.1,sc=>{const b=box(sc,'m4c',540,600,'50% 30%');b.im.style.filter='brightness(1.06) saturate(1.04) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(52));
+ const s1=mk(sc,'M ts','left:70px;top:1180px;width:960px;opacity:0','<span class="hl">Ledge.</span>');
+ const s2=mk(sc,'M ts','left:70px;top:1290px;width:960px;opacity:0','Straight down the <span class="hl">wall.</span>');
+ const b0=wt('khidki')-.1;
+ return t=>{b.style.transform=`scale(${1.12+.06*eio(t/3.4)})`;b.im.style.objectPosition=`50% ${20+30*eio(t/3.4)}%`;fade(s1,t,wt('ledge')-b0,.22,20);fade(s2,t,wt('seedha')-b0,.22,20)}},true);
+// 6. Hero again, tight on one streak, fast push (zoom-through). "Sabse kaali lines wahi hain. Kyunki yeh kaala rang..."
+add(wt('sabse')-.1,sc=>{const b=hookImg(sc,420,640);b.im.style.filter='brightness(1.1) saturate(1.08) contrast(1.04)';mk(sc,'sh','background:'+GB(52));
+ const br=corners(sc,250,330,700,960,50,6);
+ const h=T(sc,'H ts','left:70px;top:1240px;width:960px;font-size:104px',[['Darkest',wt('kaali',2)],['lines',wt('lines')],['\n'],['=',wt('wahi')],['water',wt('wahi'),'hl'],['paths',wt('wahi')]]);
+ const b0=wt('sabse')-.1,tz=wt('zinda')-b0;
+ return t=>{const z=eio((t-(tz-.7))/.7);b.style.transform=`scale(${1.9+.15*eio(t/2.5)+2.4*z})`;crn(br,t,.25);rv(h,t,tz-.25);br.forEach(e=>{if(t>tz-.4)e.style.opacity=cl(1-(t-tz+.4)/.2)})}},false);
+// 7. The reveal: macro of the living film. "...zinda hai. Algae, cyanobacteria aur fungus."
+add(wt('zinda')-.05,sc=>{const b=panel(sc,'m2c',230,1080,'50% 50%',540,540);
+ const st=mk(sc,'stamp','left:70px;top:1180px;opacity:0;font-size:110px',"IT'S ALIVE");
+ const l=T(sc,'M ts','left:70px;top:1360px;width:960px;font-size:66px',[['Algae.',wt('algae'),'hl'],['\n'],['Cyanobacteria.',wt('cyanobacteria')],['\n'],['Fungi.',wt('fungus')]]);
+ const b0=wt('zinda')-.05;
+ return t=>{b.im.style.transform=`scale(${1.3-.18*eo(t/1.2)}) rotate(${2-2*eio(t/5)}deg)`;slam(st,t,.02,1.7,-3);rv(l,t,wt('geele')-b0-.15)}},false);
+// 8. Macro close on one filament. "Geele plaster par ek poori film bana lete hain."
+add(wt('geele')-.1,sc=>{const b=panel(sc,'m2c',230,1080,'30% 40%',300,400);
+ const k=T(sc,'K ts','left:72px;top:1240px;color:'+KC,[['●',wt('geele'),'c'],['On',wt('geele')],['wet',wt('geele')],['plaster',wt('plaster')]]);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px;font-size:110px',[['A',wt('ek')],['living',wt('poori'),'hl',1],['\n'],['film',wt('film')]]);
+ return t=>{b.im.style.transform=`scale(${2.1+.2*eio(t/3)}) rotate(${-1+2*eio(t/3)}deg)`;rv(k,t);rv(h,t)}},true);
+// 9. Real Mumbai street of old buildings (framed photo). "Isiliye har society meeting mein wahi bahas: bas repaint kar do?"
+add(wt('isiliye')-.1,sc=>{const b=panel(sc,'street',150,1620,'50% 50%',540,700);mk(sc,'sh','background:'+GB(48));
+ const k=T(sc,'K ts','left:72px;top:1200px;color:'+KC,[['●',wt('society'),'c'],['Every',wt('har')],['society',wt('society')],['meeting',wt('meeting')]]);
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:132px',[['Just',wt('bas')],['\n'],['repaint?',wt('repaint'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.04+.07*eio(t/4)})`;rv(k,t);rv(h,t)}},true);
+// 10. Real weathered Mumbai facade, pan. "Sirf paint kaafi nahi."
+add(wt('sirf',2)-.1,sc=>{const b=box(sc,'windows',540,700,'50% 40%');b.im.style.filter='brightness(1.06) saturate(1.02)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(50));
+ const h=mk(sc,'H ts','left:70px;top:1250px;width:960px;font-size:110px;opacity:0;background:linear-gradient(#28c39d,#28c39d) left 58%/0% 12px no-repeat','Paint alone');
+ const u=mk(sc,'M ts','left:70px;top:1390px;width:960px;opacity:0','won\'t last.');
+ const b0=wt('sirf',2)-.1;
+ return t=>{b.style.transform=`scale(1.12) translateX(${-40+80*eio(t/2.4)}px)`;fade(h,t,.05,.2,20);fade(u,t,wt('nahi',2)-b0,.2,20)}},true);
+// 11. Same building clean and fresh (AI): the fix in order. "Pehle growth saaf, cracks seal, parapet waterproof. Phir anti-algal paint."
+add(wt('pehle')-.1,sc=>{const b=box(sc,'m5',540,520,'50% 50%');b.im.style.filter='brightness(1.06) saturate(1.04)';mk(sc,'sh','background:'+GB(44));
+ const L=[['1','Clean the growth','growth'],['2','Seal the cracks','seal'],['3','Waterproof the parapet','waterproof'],['4','Then anti-algal paint','anti-algal']].map((r,i)=>[mk(sc,'M ts',`left:70px;top:${1070+i*104}px;width:960px;font-size:62px;opacity:0`,`<span class="hl">${r[0]}</span> ${r[1]}`),r[2]]);
+ const b0=wt('pehle')-.1;
+ return t=>{b.style.transform=`scale(${1.06+.08*eio(t/5)}) translateY(${-20*eio(t/5)}px)`;L.forEach(([e,wd])=>fade(e,t,wt(wd)-b0-.05,.22,20))}},true);
+// 12. Send card over the clean facade, pull-out. "Send this to your society secretary."
+add(wt('send')-.1,sc=>{const b=box(sc,'m5',540,700,'50% 40%');b.im.style.filter='brightness(.98) saturate(1.04) blur(2px)';mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.55),rgba(15,26,23,.72))');
+ const c=mk(sc,'',`left:90px;width:900px;top:640px;background:#fff;border-radius:40px;padding:54px 56px 50px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0F1A17;font-family:IN`,
+  `<div style="font:500 26px/1 PM;letter-spacing:.2em;color:#0E6B50;text-transform:uppercase">● Send this to</div><div style="font:800 82px/1.08 IN;letter-spacing:-.03em;margin-top:26px">your society<br><span class="hl">secretary</span></div><div style="font:500 36px/1.3 IN;color:#55655f;margin-top:26px">before the next repaint meeting.</div>`);
+ const ar=svg(sc,'opacity:0','<path d="M780 1160 L900 1160 M860 1120 L900 1160 L860 1200" stroke="#28c39d" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>');
+ return t=>{b.style.transform=`scale(${1.16-.08*eio(t/3)})`;const p=eb(cl((t-.05)/.5));c.style.opacity=cl((t-.05)/.2);c.style.transform=`translateY(${(1-p)*120}px) scale(${.95+.05*p})`;ar.style.opacity=cl((t-.5)/.2);ar.style.transform=`translateX(${8*Math.sin(t*6)}px)`}},false);
+// 13. Loop: back to the frame-0 facade. "Agli baar koi building upar se kaali dikhe... yaad rakhna. Woh gandi nahi. Zinda hai."
+add(wt('agli')-.1,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.12) saturate(1.08) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(48));
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:112px',[['Not',wt('gandi')],['dirty.',wt('gandi')],['\n'],['Alive.',wt('zinda',2),'hl',1]]);
+ const tg=mk(sc,'tagw','left:72px;top:1450px;opacity:0','Why India looks like this · #3 next');
+ const b0=wt('agli')-.1;
+ return t=>{b.style.transform=`scale(${1.3-.26*eio(t/4)}) translateY(${40-40*eio(t/4)}px)`;rv(h,t);fade(tg,t,wt('yaad')-b0,.25,14)}},true);

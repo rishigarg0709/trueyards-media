@@ -1,0 +1,205 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.04 IN;letter-spacing:-.035em}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#28c39d}
+.dg{background:#0E6B50;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(14,107,80,.9);color:#fff;font-family:IN}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(8,16,14,.8),0 1px 3px rgba(8,16,14,.6)}
+.tag{display:inline-block;background:#28c39d;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0F1A17;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #28c39d;color:#28c39d;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(14,107,80,.35);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#E9FFF8;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,10,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#BFF5E4">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const TRIAL=/*TRIAL*/false;
+const WS=/*WS*/[["Mumbai", 0.0, 0.291], ["ki", 0.339, 0.436], ["purani", 0.473, 0.8], ["buildings", 0.844, 1.236], ["upar", 1.285, 1.455], ["se", 1.527, 1.673], ["kaali", 1.721, 1.964], ["kyun", 2.036, 2.182], ["hoti", 2.236, 2.473], ["hain?", 2.509, 2.736], ["Pollution?", 2.88, 3.962], ["Nahi.", 4.144, 4.435], ["Yahan", 4.616, 4.725], ["saal", 4.798, 5.089], ["mein", 5.118, 5.235], ["lagbhag", 5.307, 5.671], ["dhai", 5.707, 5.889], ["metre", 5.937, 6.18], ["baarish", 6.228, 6.544], ["hoti", 6.58, 6.762], ["hai.", 6.816, 7.025], ["Aur", 7.207, 7.316], ["uska", 7.365, 7.535], ["zyada", 7.571, 7.825], ["hissa...", 7.88, 8.307], ["sirf", 8.489, 8.707], ["chaar", 8.735, 8.889], ["mahine", 8.944, 9.253], ["mein.", 9.296, 9.551], ["Ab", 9.733, 9.83], ["dekho", 9.885, 10.194], ["paani", 10.242, 10.485], ["kahan", 10.521, 10.703], ["behta", 10.751, 11.066], ["hai.", 11.103, 11.312], ["Chhat", 11.494, 11.687], ["ki", 11.712, 11.76], ["parapet", 11.815, 12.269], ["se.", 12.317, 12.545], ["Khidki", 12.726, 13.26], ["ke", 13.308, 13.405], ["ledge", 13.454, 13.696], ["se.", 13.769, 14.005], ["Seedha", 14.187, 14.653], ["deewar", 14.677, 14.944], ["par.", 15.016, 15.307], ["Sabse", 15.489, 16.216], ["kaali", 16.265, 16.507], ["lines", 16.555, 16.798], ["wahi", 16.835, 17.089], ["hain.", 17.125, 17.307], ["Kyunki", 17.489, 18.265], ["yeh", 18.301, 18.446], ["kaala", 18.483, 18.701], ["rang...", 18.759, 19.05], ["zinda", 19.232, 19.297], ["hai.", 19.37, 19.615], ["Algae,", 19.797, 20.243], ["cyanobacteria", 20.425, 21.312], ["aur", 21.403, 21.675], ["fungus.", 21.748, 22.185], ["Geele", 22.366, 23.094], ["plaster", 23.148, 23.53], ["par", 23.585, 23.748], ["ek", 23.796, 23.894], ["poori", 23.952, 24.257], ["film", 24.315, 24.548], ["bana", 24.592, 24.766], ["lete", 24.815, 25.057], ["hain.", 25.094, 25.33], ["Isiliye", 25.512, 25.827], ["har", 25.882, 26.045], ["society", 26.1, 26.482], ["meeting", 26.518, 26.773], ["mein", 26.802, 26.918], ["wahi", 26.991, 27.209], ["bahas:", 27.264, 28.155], ["bas", 28.209, 28.373], ["repaint", 28.409, 28.664], ["kar", 28.7, 28.809], ["do?", 28.882, 29.073], ["Sirf", 29.255, 29.927], ["paint", 29.975, 30.218], ["kaafi", 30.266, 30.509], ["nahi.", 30.545, 30.8], ["Pehle", 30.982, 31.491], ["growth", 31.543, 31.855], ["saaf,", 31.903, 32.166], ["cracks", 32.348, 32.597], ["seal,", 32.655, 32.961], ["parapet", 33.125, 33.834], ["waterproof.", 33.886, 34.423], ["Phir", 34.605, 34.725], ["anti-algal", 34.798, 35.38], ["paint.", 35.453, 35.862], ["Send", 36.044, 36.684], ["this", 36.713, 36.829], ["to", 36.877, 36.975], ["your", 36.989, 37.047], ["society", 37.102, 37.484], ["secretary.", 37.542, 38.133], ["Agli", 38.315, 38.751], ["baar", 38.775, 38.969], ["koi", 39.005, 39.115], ["building", 39.155, 39.478], ["upar", 39.551, 39.805], ["se", 39.842, 39.915], ["kaali", 39.939, 40.133], ["dikhe...", 40.187, 40.615], ["yaad", 40.796, 41.257], ["rakhna.", 41.294, 41.712], ["Woh", 41.894, 42.148], ["gandi", 42.185, 42.439], ["nahi.", 42.475, 42.73], ["Zinda", 42.912, 43.457], ["hai.", 43.512, 43.766]];
+const BEATS=/*BEATS*/[0.266, 0.824, 1.381, 1.938, 2.472, 3.029, 3.587, 4.144, 4.701, 5.259, 5.816, 6.373, 6.93, 7.488, 8.045, 8.602, 9.16, 9.717, 10.251, 10.808, 11.365, 11.923, 12.48, 13.037, 13.595, 14.152, 14.709, 15.266, 15.824, 16.381, 16.938, 17.495, 18.053, 18.61, 19.167, 19.725, 20.259, 20.816, 21.373, 21.93, 22.488, 23.045, 23.602, 24.16, 24.717, 25.274, 25.808, 26.365, 26.923, 27.48, 28.037, 28.595, 29.152, 29.709, 30.266, 30.824, 31.381, 31.938, 32.472, 33.03, 33.587, 34.167, 34.725, 35.282, 35.816, 36.373, 36.931, 37.488, 38.045, 38.602, 39.16, 39.717, 40.274, 40.832, 41.389, 41.946, 42.48, 43.037, 43.595, 44.152, 44.709, 45.267, 45.824, 46.381, 46.938, 47.496, 48.053, 48.61, 49.167, 49.725, 50.282, 50.839, 51.373, 51.931, 52.488, 53.045, 53.603, 54.16, 54.717, 55.274, 55.808, 56.366, 56.923];
+const S=document.getElementById('s');
+const CO='#28c39d',IV='#FFFFFF',NV='#0F1A17';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const OST=WS[WS.length-1][2]+0.85;const END=OST+6.2;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(15,26,23,.9) 0%,rgba(15,26,23,.55) 17%,rgba(15,26,23,0) 30%';
+const GB=(a)=>GTOP+`,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.82) ${a+16}%,rgba(15,26,23,.96) ${a+28}%,#0F1A17 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+// ================= SCENES (look T TrueYards Brand: ink #0F1A17, white, teal #28c39d, deep green #0E6B50; Inter 800, Plex Mono kickers) =================
+const BG='#0F1A17';
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(15,26,23,0) ${y+120}px,rgba(15,26,23,0) ${y+h-200}px,${BG} ${y+h}px)`);return b};
+// recurring device: teal survey brackets that lock onto the black streaks; series tag
+const HOOKEV=wt('nahi');
+const KC='#BFF5E4';
+const num=(p,css)=>mk(p,'N ts',css+';opacity:0','');
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const strike=(e,t,a)=>{const p=eo((t-a)/.25);e.style.backgroundSize=`${p*100}% 12px`};
+// 1. HOOK: bright stained Mumbai building, push-in toward the black top from frame 0; question spoken from 0 s; no text before 1.55 s; "Pollution? NO" slams on 'nahi'
+const hookImg=(sc,ox,oy)=>box(sc,'m1',ox||540,oy||560,'50% 50%');
+add(0,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.12) saturate(1.08) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');const g=mk(sc,'sh','background:'+GB(50)+';opacity:0');
+ const tA=1.55;
+ const k=T(sc,'K ts','left:72px;top:1080px;color:'+KC,[['●',tA,'c'],['Why',tA],['India',tA],['looks',tA],['like',tA],['this',tA],['#2',tA]]);
+ const q=T(sc,'M ts','left:70px;top:1126px;width:980px;font-size:72px',[['Why',tA],['is',tA],['it',tA],['black',tA,'hl'],['\n'],['at',tA],['the',tA],['top?',tA]]);
+ const p=mk(sc,'M ts','left:70px;top:1330px;width:960px;opacity:0;font-size:84px','Pollution?');
+ const n=mk(sc,'stamp','left:500px;top:1318px;opacity:0;font-size:96px','NO');
+ const b0=0,tp=wt('pollution'),tn=HOOKEV;
+ return t=>{b.style.transform=`scale(${1.04+.2*eio(t/4)}) translateY(${40*eio(t/4)}px)`;g.style.opacity=cl((t-tA+.3)/.35);rv(k,t);rv(q,t);fade(p,t,Math.max(tp,tA),.2,20);if(t>=tn)slam(n,t,tn,1.8,-5);else n.style.opacity=0;b.style.marginLeft=shake(t,tn,7)+'px'}});
+// 2. Real old Mumbai building (framed portrait photo), tilt up. "Yahan saal mein lagbhag dhai metre baarish hoti hai."
+add(wt('yahan')-.1,sc=>{const b=panel(sc,'fort',170,1100,'50% 0%',540,200);
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('saal'),'c'],['Mumbai',wt('saal')],['rain',wt('baarish')],['·',wt('baarish')],['every',wt('saal')],['year',wt('saal')]]);
+ const n=num(sc,'left:56px;top:1290px;color:#fff;font-size:200px');
+ const u=T(sc,'M ts','left:360px;top:1395px;width:600px',[['metres',wt('metre'),'hl']]);
+ const b0=wt('yahan')-.1,tn=wt('dhai')-b0;
+ return t=>{b.im.style.transform=`scale(${1.12-.06*eio(t/4)}) translateY(${-40+60*eio(t/4)}px)`;rv(k,t);const p=cnt(n,t,tn,.6,p=>(2.5*p).toFixed(1));rv(u,t)}},true);
+// 3. Monsoon rain sheeting off a parapet, wide. "Aur uska zyada hissa... sirf chaar mahine mein."
+add(wt('aur')-.1,sc=>{const b=box(sc,'m3',600,500,'50% 50%');b.im.style.filter='brightness(1.1) saturate(1.05)';mk(sc,'sh','background:'+GB(50));
+ const n=num(sc,'left:56px;top:1150px;color:#fff;font-size:220px');
+ const u=T(sc,'M ts','left:70px;top:1380px;width:960px',[['of',wt('chaar')],['it',wt('chaar')],['in',wt('chaar')],['4',wt('chaar'),'hl',1],['months',wt('mahine')]]);
+ const k=mk(sc,'K ts','left:72px;top:1100px;color:'+KC+';opacity:0','● June to September');
+ const b0=wt('aur')-.1,tn=wt('zyada')-b0;
+ return t=>{b.style.transform=`scale(${1.08+.1*eio(t/4)})`;const p=cnt(n,t,tn,.8,p=>Math.round(95*p)+'%');fade(k,t,wt('mahine')-b0,.25,10);rv(u,t)}},true);
+// 4. Close on the drip line, push-in. "Ab dekho paani kahan behta hai. Chhat ki parapet se."
+add(wt('ab')-.1,sc=>{const b=box(sc,'m3',520,420,'50% 50%');b.im.style.filter='brightness(1.12) saturate(1.05)';mk(sc,'sh','background:'+GB(50));
+ const k=T(sc,'K ts','left:72px;top:1180px;color:'+KC,[['●',wt('paani'),'c'],['Follow',wt('paani')],['the',wt('paani')],['water',wt('paani')]]);
+ const h=T(sc,'H ts','left:70px;top:1236px;width:960px;font-size:120px',[['Parapet',wt('parapet'),'hl',1]]);
+ const br=corners(sc,300,240,860,900,50,6);const b0=wt('ab')-.1;
+ return t=>{b.style.transform=`scale(${1.7+.18*eio(t/3.4)})`;rv(k,t);rv(h,t);crn(br,t,wt('parapet')-b0-.1)}},true);
+// 5. Window ledge with a black drip streak, tilt down. "Khidki ke ledge se. Seedha deewar par."
+add(wt('khidki')-.1,sc=>{const b=box(sc,'m4c',540,600,'50% 30%');b.im.style.filter='brightness(1.06) saturate(1.04) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(52));
+ const s1=mk(sc,'M ts','left:70px;top:1180px;width:960px;opacity:0','<span class="hl">Ledge.</span>');
+ const s2=mk(sc,'M ts','left:70px;top:1290px;width:960px;opacity:0','Straight down the <span class="hl">wall.</span>');
+ const b0=wt('khidki')-.1;
+ return t=>{b.style.transform=`scale(${1.12+.06*eio(t/3.4)})`;b.im.style.objectPosition=`50% ${20+30*eio(t/3.4)}%`;fade(s1,t,wt('ledge')-b0,.22,20);fade(s2,t,wt('seedha')-b0,.22,20)}},true);
+// 6. Hero again, tight on one streak, fast push (zoom-through). "Sabse kaali lines wahi hain. Kyunki yeh kaala rang..."
+add(wt('sabse')-.1,sc=>{const b=hookImg(sc,420,640);b.im.style.filter='brightness(1.1) saturate(1.08) contrast(1.04)';mk(sc,'sh','background:'+GB(52));
+ const br=corners(sc,250,330,700,960,50,6);
+ const h=T(sc,'H ts','left:70px;top:1240px;width:960px;font-size:104px',[['Darkest',wt('kaali',2)],['lines',wt('lines')],['\n'],['=',wt('wahi')],['water',wt('wahi'),'hl'],['paths',wt('wahi')]]);
+ const b0=wt('sabse')-.1,tz=wt('zinda')-b0;
+ return t=>{const z=eio((t-(tz-.7))/.7);b.style.transform=`scale(${1.9+.15*eio(t/2.5)+2.4*z})`;crn(br,t,.25);rv(h,t,tz-.25);br.forEach(e=>{if(t>tz-.4)e.style.opacity=cl(1-(t-tz+.4)/.2)})}},false);
+// 7. The reveal: macro of the living film. "...zinda hai. Algae, cyanobacteria aur fungus."
+add(wt('zinda')-.05,sc=>{const b=panel(sc,'m2c',230,1080,'50% 50%',540,540);
+ const st=mk(sc,'stamp','left:70px;top:1180px;opacity:0;font-size:110px',"IT'S ALIVE");
+ const l=T(sc,'M ts','left:70px;top:1360px;width:960px;font-size:66px',[['Algae.',wt('algae'),'hl'],['\n'],['Cyanobacteria.',wt('cyanobacteria')],['\n'],['Fungi.',wt('fungus')]]);
+ const b0=wt('zinda')-.05;
+ return t=>{b.im.style.transform=`scale(${1.3-.18*eo(t/1.2)}) rotate(${2-2*eio(t/5)}deg)`;slam(st,t,.02,1.7,-3);rv(l,t,wt('geele')-b0-.15)}},false);
+// 8. Macro close on one filament. "Geele plaster par ek poori film bana lete hain."
+add(wt('geele')-.1,sc=>{const b=panel(sc,'m2c',230,1080,'30% 40%',300,400);
+ const k=T(sc,'K ts','left:72px;top:1240px;color:'+KC,[['●',wt('geele'),'c'],['On',wt('geele')],['wet',wt('geele')],['plaster',wt('plaster')]]);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px;font-size:110px',[['A',wt('ek')],['living',wt('poori'),'hl',1],['\n'],['film',wt('film')]]);
+ return t=>{b.im.style.transform=`scale(${2.1+.2*eio(t/3)}) rotate(${-1+2*eio(t/3)}deg)`;rv(k,t);rv(h,t)}},true);
+// 9. Real Mumbai street of old buildings (framed photo). "Isiliye har society meeting mein wahi bahas: bas repaint kar do?"
+add(wt('isiliye')-.1,sc=>{const b=panel(sc,'street',150,1620,'50% 50%',540,700);mk(sc,'sh','background:'+GB(48));
+ const k=T(sc,'K ts','left:72px;top:1200px;color:'+KC,[['●',wt('society'),'c'],['Every',wt('har')],['society',wt('society')],['meeting',wt('meeting')]]);
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:132px',[['Just',wt('bas')],['\n'],['repaint?',wt('repaint'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.04+.07*eio(t/4)})`;rv(k,t);rv(h,t)}},true);
+// 10. Real weathered Mumbai facade, pan. "Sirf paint kaafi nahi."
+add(wt('sirf',2)-.1,sc=>{const b=box(sc,'windows',540,700,'50% 40%');b.im.style.filter='brightness(1.06) saturate(1.02)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(50));
+ const h=mk(sc,'H ts','left:70px;top:1250px;width:960px;font-size:110px;opacity:0;background:linear-gradient(#28c39d,#28c39d) left 58%/0% 12px no-repeat','Paint alone');
+ const u=mk(sc,'M ts','left:70px;top:1390px;width:960px;opacity:0','won\'t last.');
+ const b0=wt('sirf',2)-.1;
+ return t=>{b.style.transform=`scale(1.12) translateX(${-40+80*eio(t/2.4)}px)`;fade(h,t,.05,.2,20);fade(u,t,wt('nahi',2)-b0,.2,20)}},true);
+// 11. Same building clean and fresh (AI): the fix in order. "Pehle growth saaf, cracks seal, parapet waterproof. Phir anti-algal paint."
+add(wt('pehle')-.1,sc=>{const b=box(sc,'m5',540,520,'50% 50%');b.im.style.filter='brightness(1.06) saturate(1.04)';mk(sc,'sh','background:'+GB(44));
+ const L=[['1','Clean the growth','growth'],['2','Seal the cracks','seal'],['3','Waterproof the parapet','waterproof'],['4','Then anti-algal paint','anti-algal']].map((r,i)=>[mk(sc,'M ts',`left:70px;top:${1070+i*104}px;width:960px;font-size:62px;opacity:0`,`<span class="hl">${r[0]}</span> ${r[1]}`),r[2]]);
+ const b0=wt('pehle')-.1;
+ return t=>{b.style.transform=`scale(${1.06+.08*eio(t/5)}) translateY(${-20*eio(t/5)}px)`;L.forEach(([e,wd])=>fade(e,t,wt(wd)-b0-.05,.22,20))}},true);
+// 12. Send card over the clean facade, pull-out. "Send this to your society secretary."
+add(wt('send')-.1,sc=>{const b=box(sc,'m5',540,700,'50% 40%');b.im.style.filter='brightness(.98) saturate(1.04) blur(2px)';mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.55),rgba(15,26,23,.72))');
+ const c=mk(sc,'',`left:90px;width:900px;top:640px;background:#fff;border-radius:40px;padding:54px 56px 50px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0F1A17;font-family:IN`,
+  `<div style="font:500 26px/1 PM;letter-spacing:.2em;color:#0E6B50;text-transform:uppercase">● Send this to</div><div style="font:800 82px/1.08 IN;letter-spacing:-.03em;margin-top:26px">your society<br><span class="hl">secretary</span></div><div style="font:500 36px/1.3 IN;color:#55655f;margin-top:26px">before the next repaint meeting.</div>`);
+ const ar=svg(sc,'opacity:0','<path d="M780 1160 L900 1160 M860 1120 L900 1160 L860 1200" stroke="#28c39d" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>');
+ return t=>{b.style.transform=`scale(${1.16-.08*eio(t/3)})`;const p=eb(cl((t-.05)/.5));c.style.opacity=cl((t-.05)/.2);c.style.transform=`translateY(${(1-p)*120}px) scale(${.95+.05*p})`;ar.style.opacity=cl((t-.5)/.2);ar.style.transform=`translateX(${8*Math.sin(t*6)}px)`}},false);
+// 13. Loop: back to the frame-0 facade. "Agli baar koi building upar se kaali dikhe... yaad rakhna. Woh gandi nahi. Zinda hai."
+add(wt('agli')-.1,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.12) saturate(1.08) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(48));
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:112px',[['Not',wt('gandi')],['dirty.',wt('gandi')],['\n'],['Alive.',wt('zinda',2),'hl',1]]);
+ const tg=mk(sc,'tagw','left:72px;top:1450px;opacity:0','Why India looks like this · #3 next');
+ const b0=wt('agli')-.1;
+ return t=>{b.style.transform=`scale(${1.3-.26*eio(t/4)}) translateY(${40-40*eio(t/4)}px)`;rv(h,t);fade(tg,t,wt('yaad')-b0,.25,14)}},true);
+const OT={like:.35+1.27,follow:.35+1.87,story:.35+4.19,every:.35+4.64,end:.35+5.5};
+add(OST,sc=>{sc.style.zIndex=1;
+ const bg=mk(sc,'',`left:-40px;top:-40px;width:1160px;height:2000px;background:url(img/m1.jpg) center/cover`);const sh=mk(sc,'sh','background:linear-gradient(180deg,rgba(15,26,23,.35),rgba(15,26,23,.82));opacity:0');
+ const card=mk(sc,'',`left:90px;width:900px;top:560px;background:#fff;border-radius:44px;padding:56px 56px 52px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0F1A17;font-family:IN`,
+ `<div style="display:flex;align-items:center;gap:34px"><div style="width:168px;height:168px;border-radius:50%;background:#fff;border:6px solid #28c39d;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="img/logo.png" style="width:120px;height:120px;object-fit:contain;border-radius:22px"></div><div><div style="font:800 60px/1.1 IN;display:flex;align-items:center;gap:14px">TrueYards <span style="width:46px;height:46px;border-radius:50%;background:#3897f0;display:inline-flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span></div><div style="font:500 36px/1.2 IN;color:#6b7a75;margin-top:6px">@trueyards.in</div></div></div><div style="font:500 40px/1.3 IN;margin:34px 0 40px">Real estate, explained. One story a day.</div><div style="display:flex;gap:24px"><div class="ofb" style="flex:1;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;font:800 46px/1 IN;position:relative;overflow:hidden;background:#28c39d;color:#fff"><span class="oft">Follow</span><div class="orp" style="position:absolute;border-radius:50%;background:rgba(255,255,255,.55);width:40px;height:40px;left:50%;top:50%;transform:translate(-50%,-50%) scale(0)"></div></div><div class="olb" style="flex:0 0 120px;height:120px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:#EEF2F1"><svg class="oht" viewBox="0 0 24 24" style="width:62px;height:62px"><path class="ohp" fill="none" stroke="#0F1A17" stroke-width="2" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg></div></div>`);
+ const line=mk(sc,'',`left:0;width:1080px;top:1230px;text-align:center;color:#fff;font:800 78px/1.2 IN;letter-spacing:-.01em;opacity:0`,'Like. <b style="background:#28c39d;padding:0 18px;border-radius:10px;color:#0F1A17">Follow.</b> Learn.');
+ const dots=mk(sc,'',`left:0;width:1080px;top:1370px;display:flex;justify-content:center;gap:26px`);const DS=['M','T','W','T','F','S','S'].map(d=>mk(dots,'',`position:relative;width:70px;height:70px;border-radius:18px;border:4px solid rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;color:#fff;font:500 24px/1 IN;opacity:0`,d));
+ const hp=[];for(let i=0;i<7;i++){hp.push(svg(sc,'width:56px;height:56px;opacity:0','<path fill="#ff3b5c" d="M12 21s-7.5-4.6-9.5-9.2C1 8.2 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.7 4.5 7.3C19.5 16.4 12 21 12 21z"/>'));hp[i].setAttribute('viewBox','0 0 24 24')}
+ const hand=svg(sc,'width:150px;height:150px;opacity:0','<path fill="#fff" stroke="#0F1A17" stroke-width="2.2" stroke-linejoin="round" d="M24 30V10a4 4 0 0 1 8 0v16l2-.3a4 4 0 0 1 4.5 3.2l.2 1 1.5-.3a4 4 0 0 1 4.6 3.1l.2.9 1.4-.2a4 4 0 0 1 4.6 3.4l1.3 9.2c.8 6-3 11.5-9 12.7L36 60c-4.2.8-8.4-.9-10.9-4.3L14 40.5a4 4 0 0 1 6.3-5L24 40z"/>');hand.setAttribute('viewBox','0 0 64 64');
+ const fb=card.querySelector('.ofb'),ft=card.querySelector('.oft'),rp=card.querySelector('.orp'),lb=card.querySelector('.olb'),ht=card.querySelector('.oht'),hpp=card.querySelector('.ohp');
+ const E=(t,a,b)=>cl((t-a)/(b-a));
+ return t=>{const T=OT;const bgp=eo(E(t,0,.6));bg.style.filter=`blur(${bgp*26}px) brightness(${1-bgp*.25})`;bg.style.transform=`scale(${1.0+.03*t/6})`;sh.style.opacity=bgp;
+  const c=eb(E(t,.15,.75));card.style.opacity=E(t,.15,.4);card.style.transform=`translateY(${(1-c)*160}px) scale(${.94+.06*c})`;
+  const on=t>=T.like;hpp.setAttribute('fill',on?'#ff3b5c':'none');hpp.setAttribute('stroke',on?'#ff3b5c':'#0F1A17');ht.style.transform=`scale(${on?1+.45*Math.sin(Math.PI*E(t,T.like,T.like+.35)):1})`;
+  const L=lb.getBoundingClientRect(),FB=fb.getBoundingClientRect();
+  hp.forEach((h,i)=>{const p=E(t,T.like+i*.05,T.like+.9+i*.05);const ang=-90+(i-3)*22;const r=p*(220+i*12);h.style.left=(L.left+L.width/2-28+Math.cos(ang*Math.PI/180)*r*.6)+'px';h.style.top=(L.top+L.height/2-28+Math.sin(ang*Math.PI/180)*r)+'px';h.style.opacity=p>0&&p<1?1-p:0;h.style.transform=`scale(${.6+p*.8}) rotate(${(i-3)*12}deg)`});
+  const p1=eo(E(t,T.like-.55,T.like-.05)),p2=eo(E(t,T.like+.3,T.follow-.05));const x0=880,y0=1500,xl=L.left+L.width/2-40,yl=L.top+L.height/2-20,xf=FB.left+FB.width/2-40,yf=FB.top+FB.height/2-20;
+  let hx=x0+(xl-x0)*p1,hy=y0+(yl-y0)*p1;hx+=(xf-xl)*p2;hy+=(yf-yl)*p2;const pr=Math.max(0,1-Math.abs(t-T.like)/.12)+Math.max(0,1-Math.abs(t-T.follow)/.12);
+  hand.style.left=hx+'px';hand.style.top=hy+'px';hand.style.transform=`scale(${1-.12*pr})`;hand.style.opacity=E(t,T.like-.6,T.like-.35)*(1-E(t,T.follow+.5,T.follow+.8));
+  const fo=t>=T.follow;fb.style.background=fo?'#EEF2F1':'#28c39d';fb.style.color=fo?'#0F1A17':'#fff';ft.textContent=fo?'Following ✓':'Follow';const r2=E(t,T.follow,T.follow+.5);rp.style.transform=`translate(-50%,-50%) scale(${r2*22})`;rp.style.opacity=r2>0?1-r2:0;fb.style.transform=`scale(${1-.05*Math.max(0,1-Math.abs(t-T.follow)/.15)})`;
+  const l=eo(E(t,T.follow+.4,T.follow+.9));line.style.opacity=l;line.style.transform=`translateY(${(1-l)*30}px)`;
+  DS.forEach((d,i)=>{const a=T.story-.1+i*((T.end-.3-T.story)/7);d.style.opacity=eo(E(t,T.story-.5,T.story-.1));const f=t>=a;d.style.background=f?'#28c39d':'none';d.style.borderColor=f?'#28c39d':'rgba(255,255,255,.65)';d.style.transform=`scale(${f?1+.18*Math.max(0,1-(t-a)/.2):1})`})}},false);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+
+const AIL='AI visualisation, representational, not a real building.';const REAL='Real photo: Mumbai / Unsplash.';const FINE=[[0,AIL],[SC[1].t0,REAL+' Rain: IMD Santacruz normals 1991 to 2020, about 2,502 mm a year.'],[SC[2].t0,AIL+' About 95% of the yearly rain falls June to September (IMD normals 1991 to 2020).'],[SC[3].t0,AIL],[SC[4].t0,AIL+' Dark stains follow run-off under parapets and sills (LNEC facade study).'],[SC[5].t0,AIL],[SC[6].t0,AIL+' Magnified. Biofilm on wet facades (RIBuild; LNEC).'],[SC[7].t0,AIL+' Magnified.'],[SC[8].t0,REAL],[SC[9].t0,REAL],[SC[10].t0,AIL+' Order of work: Berger Paints guidance. No brand recommended.'],[SC[11].t0,AIL+' Education only, not advice.'],[SC[12].t0,AIL+' Soot and dirt can add to the stains.'],[OST,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const FLASH=[HOOKEV,wt('zinda'),wt('repaint'),wt('zinda',2)];
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ document.getElementById('brand').style.opacity=t>=OST?1-cl((t-OST)/.3):1;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ FLASH.forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ document.getElementById('fol').style.opacity=0;
+};
+</script></body></html>
