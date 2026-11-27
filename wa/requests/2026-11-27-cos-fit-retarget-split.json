@@ -1,0 +1,7 @@
+{"by": "Chief of Staff", "ops": [
+ {"op": "broadcast.create", "args": {"name": "FIT warm retarget 27 Nov: video walkthrough", "template": "fit_video_nudge", "language": "en", "audience": "FIT retarget 27 Nov - video", "params": {}}},
+ {"op": "broadcast.create", "args": {"name": "FIT warm retarget 27 Nov: subsidy", "template": "fit_subsidy_nudge", "language": "en", "audience": "FIT retarget 27 Nov - subsidy", "params": {}}},
+ {"op": "broadcast.create", "args": {"name": "FIT warm retarget 27 Nov: fact card", "template": "fit_fact_card", "language": "en", "audience": "FIT retarget 27 Nov - fact card", "params": {}}},
+ {"op": "broadcast.create", "args": {"name": "FIT warm retarget 27 Nov: carousel", "template": "fit_carousel", "language": "en", "audience": "FIT retarget 27 Nov - carousel", "params": {}}},
+ {"op": "broadcasts", "args": {"days": 1, "name": "retarget"}}
+]}
