@@ -53,7 +53,7 @@ jobs:
           pip install -q pillow
           python3 - <<'PY'
           import glob, os
-          from multiprocessing import Pool
+          import multiprocessing as mp
           from PIL import Image
           fs = sorted(glob.glob('frames/f*.png')); print(len(fs), 'frames')
           os.makedirs('out/d', exist_ok=True); os.makedirs('out/m', exist_ok=True)
@@ -62,7 +62,7 @@ jobs:
               im.save(f'out/d/{n}.webp', 'WEBP', quality=78, method=4)
               m = im.resize((900, round(900 * im.height / im.width)), Image.LANCZOS); m.save(f'out/m/{n}.webp', 'WEBP', quality=76, method=4)
               return m.resize((225, round(225 * im.height / im.width)))
-          with Pool(os.cpu_count()) as p: thumbs = p.map(one, fs)
+          with mp.get_context("fork").Pool(os.cpu_count()) as p: thumbs = p.map(one, fs)
           cols = 12; rows = (len(thumbs) + cols - 1) // cols
           sh = Image.new('RGBA', (cols * 225, rows * thumbs[0].height), (243, 237, 227, 255))
           for i, t in enumerate(thumbs): sh.alpha_composite(t, ((i % cols) * 225, (i // cols) * t.height))
