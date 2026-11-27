@@ -17,11 +17,38 @@ ap.add_argument('--samples', type=int, default=64); ap.add_argument('--still', t
 ap.add_argument('--blend', default=''); ap.add_argument('--only', default=''); ap.add_argument('--start_deg', type=float, default=-35.0)
 ap.add_argument('--elev', type=float, default=34.0); ap.add_argument('--lens', type=float, default=70.0)
 ap.add_argument('--dist', type=float, default=3260.0); ap.add_argument('--shift', type=float, default=-0.059)
-ap.add_argument('--tiles', type=int, default=1); ap.add_argument('--id', default=''); ap.add_argument('--scale', type=float, default=1560.0)
+ap.add_argument('--tiles', type=int, default=1); ap.add_argument('--obl', type=float, default=0.0); ap.add_argument('--tag', default=''); ap.add_argument('--azim', type=float, default=0.0); ap.add_argument('--id', default=''); ap.add_argument('--scale', type=float, default=1560.0)
 ap.add_argument('--cx', type=float, default=-60.0); ap.add_argument('--cy', type=float, default=30.0)
 A = ap.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else sys.argv[1:])
 L = json.load(open(A.layout))
 random.seed(11)
+
+# ---------- the site stops at the drain: nothing of FIT lies on the Meham-Beri road side (site plan D5) ----------
+from shapely.geometry import Polygon, MultiPolygon, mapping
+from shapely.ops import unary_union
+_d0, _d1 = L['drain'][0][0][0], L['drain'][0][0][1]
+_ux, _uy = _d1[0] - _d0[0], _d1[1] - _d0[1]; _ln = math.hypot(_ux, _uy); _ux, _uy = _ux / _ln, _uy / _ln; _nx, _ny = -_uy, _ux
+_mp = [p for poly in L['meham'] for ring in poly for p in ring]
+_side = 1 if sum((p[0] - _d0[0]) * _nx + (p[1] - _d0[1]) * _ny for p in _mp) > 0 else -1
+def _t(x, y): return ((x - _d0[0]) * _nx + (y - _d0[1]) * _ny) * _side
+_far = 5000
+_o = 2.0
+_hp = Polygon([(_d0[0] + _nx * _side * _o - _ux * _far, _d0[1] + _ny * _side * _o - _uy * _far), (_d0[0] + _nx * _side * _o + _ux * _far, _d0[1] + _ny * _side * _o + _uy * _far),
+               (_d0[0] + _nx * _side * _far + _ux * _far, _d0[1] + _ny * _side * _far + _uy * _far), (_d0[0] + _nx * _side * _far - _ux * _far, _d0[1] + _ny * _side * _far - _uy * _far)])
+def _clip(polys):
+    out = []
+    for poly in polys:
+        g = Polygon(poly[0], poly[1:]).buffer(0).difference(_hp)
+        for p in (g.geoms if hasattr(g, 'geoms') else [g]):
+            if p.is_empty or p.area < 4: continue
+            out.append([list(map(list, p.exterior.coords))] + [list(map(list, r.coords)) for r in p.interiors])
+    return out
+for k in ('plinth', 'site', 'pads', 'roads', 'parks', 'holes'):
+    if k in L: L[k] = _clip(L[k])
+L['buildings'] = [b for b in L['buildings'] if _t(b['x'], b['y']) < -2 - min(b['w'], b['d']) / 2]
+L['trees'] = [t for t in L['trees'] if _t(t['x'], t['y']) < -2]
+print('clipped to the drain line', flush=True)
+os.makedirs(A.out, exist_ok=True); json.dump(L, open(os.path.join(A.out, 'layout_clipped.json'), 'w')) if not A.id else None
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene
@@ -231,7 +258,7 @@ def inside(x, y, rs):
 def near_site(x, y, m=14):
     return any(inside(x + dx, y + dy, SITE) for dx, dy in ((0, 0), (m, 0), (-m, 0), (0, m), (0, -m)))
 
-HALF = A.scale / 2 + 60
+HALF = A.scale / 2 + 60 if A.obl <= 0 else A.scale * 1.1 + 400
 X0, X1, Y0, Y1 = A.cx - HALF, A.cx + HALF, A.cy - HALF, A.cy + HALF
 
 # Meham-Beri road and the drain run on past the site, along the drain's line
@@ -249,7 +276,12 @@ def strip(o, w, t0=-1800, t1=1800):
              [a[0] + ux * t1 - nx * w, a[1] + uy * t1 - ny * w], [a[0] + ux * t0 - nx * w, a[1] + uy * t0 - ny * w],
              [a[0] + ux * t0 + nx * w, a[1] + uy * t0 + ny * w]]]
 flat('meham_ext', [strip(mid, max(half_w, 10.0))], 0.1, M['asphalt'], 0.1)
-flat('drain_ext', [strip(0.0, 4.0)], 0.02, M['water'])
+# the drain runs along the road to its north-west end, then turns north as the canal (site plan D5)
+_tend = (d1[0] - d0[0]) * ux + (d1[1] - d0[1]) * uy
+flat('drain_ext', [strip(0.0, 4.0, -1800, _tend)], 0.02, M['water'])
+_cx = d1[0] - 70.0
+flat('canal_turn', [[[[d1[0] - 4, d1[1] - 4], [d1[0] + 4, d1[1] + 4], [_cx + 4, d1[1] + 30], [_cx - 4, d1[1] + 22], [d1[0] - 4, d1[1] - 4]]]], 0.02, M['water'])
+flat('canal', [[[[_cx - 4, d1[1] + 22], [_cx + 4, d1[1] + 22], [_cx + 4, A.cy + HALF + 400], [_cx - 4, A.cy + HALF + 400], [_cx - 4, d1[1] + 22]]]], 0.02, M['water'])
 # dashed centre line and edge lines on the highway
 bm = bmesh.new()
 for t in range(-1800, 1800, 14):
@@ -261,13 +293,21 @@ for t in range(-1800, 1800, 14):
 new_obj('marks', bm, [M['marking']])
 # the 7K rasta along the north edge runs on to the frame edges
 ry0 = min(p[1] for p in L['raste'][0][0]); ry1 = max(p[1] for p in L['raste'][0][0])
-flat('raste_ext', [[[[X0, ry0], [X1, ry0], [X1, ry1], [X0, ry1], [X0, ry0]]]], 0.11, M['asphalt'], 0.1)
+# the 7K rasta runs east to the frame edge (to Patwapur); at its west end it turns south and meets the Meham-Beri road
+_rx0 = min(p[0] for p in L['raste'][0][0])
+flat('raste_ext', [[[[_rx0, ry0], [X1, ry0], [X1, ry1], [_rx0, ry1], [_rx0, ry0]]]], 0.11, M['asphalt'], 0.1)
+# where the line x = _rx0 meets the highway centre line
+_tj = ((_rx0 + 6) - (d0[0] + nx * mid)) / ux if abs(ux) > 1e-6 else 0
+_yj = d0[1] + ny * mid + uy * _tj
+flat('raste_link', [[[[_rx0, _yj], [_rx0 + 11, _yj], [_rx0 + 11, ry1], [_rx0, ry1], [_rx0, _yj]]]], 0.11, M['asphalt'], 0.1)
 
 random.seed(7)
 def on_road(x, y):
     t = (x - d0[0]) * nx + (y - d0[1]) * ny
-    if abs(t - mid) < half_w + 8 or abs(t) < 9: return True
-    if ry0 - 8 < y < ry1 + 8: return True
+    if abs(t - mid) < half_w + 4 or abs(t) < 6: return True
+    if ry0 - 4 < y < ry1 + 4 and x > min(p[0] for p in L['raste'][0][0]) - 6: return True
+    if min(p[0] for p in L['raste'][0][0]) - 6 < x < min(p[0] for p in L['raste'][0][0]) + 17 and y < ry1 + 4: return True
+    if abs(x - (L['drain'][0][0][1][0] - 70.0)) < 9 and y > L['drain'][0][0][1][1]: return True
     return False
 # farmland: a grid of rectangular killa fields split into strips, each with its own crop and furrow direction
 crops = ['#6B8C3C', '#7A9A44', '#86A24D', '#5E8036', '#94AC5C', '#A3B468', '#7F9A4A', '#9A8360', '#A88F6C', '#B5A27A', '#BFB24E', '#718F43']
@@ -290,7 +330,7 @@ Lk(m1.outputs['Result'], m2.inputs['A']); Lk(noise.outputs['Color'], m2.inputs['
 Lk(m2.outputs['Result'], pb.inputs['Base Color'])
 M['farm'] = fm
 # earth under everything shows through as the bunds between fields
-earth = mat('earth', '#8C7C58', 0.97)
+earth = mat('earth', '#7F8650', 0.97)
 bm = bmesh.new(); r = bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=HALF + 300)
 for v in r['verts']: v.co += Vector((A.cx, A.cy, -0.08))
 new_obj('earth', bm, [earth])
@@ -304,13 +344,13 @@ while xk < X1:
     while yk < Y1:
         cx_, cy_ = xk + KILLA / 2, yk + KILLA / 2
         corners = [(xk, yk), (xk + KILLA, yk), (xk, yk + KILLA), (xk + KILLA, yk + KILLA), (cx_, cy_)]
-        if any(near_site(px, py, 4) or on_road(px, py) for px, py in corners):
-            yk += KILLA; continue
-        n = random.choice([1, 1, 2, 2, 3, 4]); horiz = random.random() < 0.5
+        n = random.choice([2, 2, 3, 3, 4, 5]); horiz = random.random() < 0.5
         for j in range(n):
             if horiz: x0_, x1_, y0_, y1_ = xk, xk + KILLA, yk + KILLA * j / n, yk + KILLA * (j + 1) / n
             else: x0_, x1_, y0_, y1_ = xk + KILLA * j / n, xk + KILLA * (j + 1) / n, yk, yk + KILLA
             g = 0.7
+            sc_ = [(x0_, y0_), (x1_, y0_), (x0_, y1_), (x1_, y1_), ((x0_ + x1_) / 2, (y0_ + y1_) / 2)]
+            if any(near_site(px, py, 3) or on_road(px, py) for px, py in sc_): continue
             vs = [bm.verts.new((x0_ + g, y0_ + g, -0.02)), bm.verts.new((x1_ - g, y0_ + g, -0.02)), bm.verts.new((x1_ - g, y1_ - g, -0.02)), bm.verts.new((x0_ + g, y1_ - g, -0.02))]
             f = bm.faces.new(vs)
             c = hexc(random.choices(crops, weights)[0])
@@ -415,9 +455,18 @@ sun = bpy.data.objects.new('sun', sun_d); sc.collection.objects.link(sun)
 sun.rotation_euler = (math.radians(50), 0, math.radians(-135))
 world = bpy.data.worlds.new('w'); sc.world = world; world.use_nodes = True
 bg = world.node_tree.nodes['Background']; bg.inputs['Color'].default_value = hexc('#DCE6EE'); bg.inputs['Strength'].default_value = 0.75
-cam_d = bpy.data.cameras.new('cam'); cam_d.type = 'ORTHO'; cam_d.ortho_scale = A.scale; cam_d.clip_start = 1; cam_d.clip_end = 6000
+cam_d = bpy.data.cameras.new('cam'); cam_d.type = 'ORTHO'; cam_d.ortho_scale = A.scale; cam_d.clip_start = 1; cam_d.clip_end = 20000
 cam = bpy.data.objects.new('cam', cam_d); sc.collection.objects.link(cam); sc.camera = cam
-cam.location = (A.cx, A.cy, 2500); cam.rotation_euler = (0, 0, 0)
+if A.obl > 0:
+    # oblique aerial view: a long lens from far away, looking north-east-ish at the township
+    cam_d.type = 'PERSP'; cam_d.lens = 85; cam_d.sensor_width = 36
+    el = math.radians(A.obl); az = math.radians(A.azim)
+    dist = A.scale * 85 / 36 * 0.98
+    tgt = Vector((A.cx, A.cy, 0))
+    cam.location = tgt + Vector((-math.sin(az) * math.cos(el), -math.cos(az) * math.cos(el), math.sin(el))) * dist
+    cam.rotation_euler = (math.radians(90) - el, 0, -az)
+else:
+    cam.location = (A.cx, A.cy, 2500); cam.rotation_euler = (0, 0, 0)
 
 sc.render.engine = 'CYCLES'; sc.cycles.device = 'CPU'
 sc.render.resolution_x = A.w; sc.render.resolution_y = A.h; sc.render.resolution_percentage = 100
@@ -452,7 +501,7 @@ else:
 
 os.makedirs(A.out, exist_ok=True)
 tiles = [int(x) for x in A.only.split(',') if x] if A.only else list(range(A.tiles))
-tag = A.id or 'beauty'
+tag = (A.tag + '-' if A.tag else '') + (A.id or 'beauty')
 for i in tiles:
     if A.tiles > 1:
         sc.render.use_border = True; sc.render.use_crop_to_border = True

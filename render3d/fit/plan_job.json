@@ -1,0 +1,10 @@
+{
+ "note": "FIT plan references for Gemini, Rishi 27 Nov 23:05",
+ "tasks": [
+  "--w 2048 --h 2048 --samples 32 --tiles 1 --scale 1400 --cx -68 --cy 40 --tag top",
+  "--w 2048 --h 2048 --samples 32 --tiles 1 --scale 1450 --cx -68 --cy 10 --obl 50 --azim 0 --tag obl",
+  "--w 2048 --h 2048 --samples 32 --tiles 1 --scale 1450 --cx -68 --cy 10 --obl 50 --azim 0 --id industrial --tag obl",
+  "--w 2048 --h 2048 --samples 32 --tiles 1 --scale 1450 --cx -68 --cy 10 --obl 50 --azim 0 --id residential --tag obl",
+  "--w 2048 --h 2048 --samples 32 --tiles 1 --scale 1450 --cx -68 --cy 10 --obl 50 --azim 0 --id commercial --tag obl"
+ ]
+}
