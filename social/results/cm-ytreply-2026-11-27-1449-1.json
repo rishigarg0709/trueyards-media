@@ -1,0 +1,26 @@
+{
+ "op": "yt_reply",
+ "ran_at": "2026-11-27T09:45:31.763613Z",
+ "result": {
+  "kind": "youtube#comment",
+  "etag": "-ceqB5JCOAm7WBgEEud7g-0UpDc",
+  "id": "Ugzbn4Hmy6U4JSk4N914AaABAg.AdhnwDtB_nFAdhtlkMdriN",
+  "snippet": {
+   "channelId": "UCWUQbt9Rh5Wpgbm3Am7r3tA",
+   "textDisplay": "Thank you so much for the love!",
+   "textOriginal": "Thank you so much for the love!",
+   "parentId": "Ugzbn4Hmy6U4JSk4N914AaABAg",
+   "authorDisplayName": "@trueyards_in",
+   "authorProfileImageUrl": "https://yt3.ggpht.com/cxITRsNYQAjilqFoFay4GWM2LNNZcWDNQkYYQAORYseKs3umH2xbH_RA4m9BxNIg0wskzfmFHYQ=s48-c-k-c0x00ffffff-no-rj",
+   "authorChannelUrl": "http://www.youtube.com/@trueyards_in",
+   "authorChannelId": {
+    "value": "UCWUQbt9Rh5Wpgbm3Am7r3tA"
+   },
+   "canRate": true,
+   "viewerRating": "none",
+   "likeCount": 0,
+   "publishedAt": "2026-11-27T09:45:31Z",
+   "updatedAt": "2026-11-27T09:45:31Z"
+  }
+ }
+}
