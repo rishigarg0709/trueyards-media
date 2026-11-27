@@ -10,3 +10,5 @@ Every handled comment: date | platform | comment id | gist | action | reply
 - 2026-11-18 | YouTube | UgyAHhmoyIKfgUUIblp4AaABAg | @Please_Pause: joke, planning for growing and declining population at once | replied (best comment, invite question) | "Ha, that is the spirit of it: the rods quietly wait for the next generation to add a floor. Did your family ever build that extra floor, or are the rods still up there?"
 - 2026-11-23 13:23 UTC run: Instagram 0, Facebook 0, YouTube 0 new; Threads 1 new.
 - 2026-11-23 | Threads | 18121343279006993 | @aniketdwivedi47401: off-topic pasted text (breathing 'IEPs' definition) on Delhi Rs 1 crore flat real cost post | skipped (off-topic, likely spam; hide not available on Threads) | no reply
+- 2026-11-27 09:19 UTC run: Instagram 0, Facebook 0, Threads 0 new; YouTube 1 new on Dharavi Short (API4SFReq4E).
+- 2026-11-27 | YouTube | Ugzbn4Hmy6U4JSk4N914AaABAg | @uncanny5898: hearts and party emojis on Dharavi Short | replied | "Thank you so much for the love!"
