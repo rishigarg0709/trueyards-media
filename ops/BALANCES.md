@@ -1,8 +1,8 @@
-# Balances (checked 2026-11-27 10:28 IST; runs about every 2 hours and after every image job)
+# Balances (checked 2026-11-27 10:34 IST; runs about every 2 hours and after every image job)
 
 | Service | Status | Left | Per day | Days left | Detail | Fix |
 |---|---|---|---|---|---|---|
-| WhatsApp wallet (autopilot, broadcasts, alerts) | LOW | 274 INR | 1005 | 0.3 | About INR 274 left at INR 1005 a day | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
+| WhatsApp wallet (autopilot, broadcasts, alerts) | LOW | 273 INR | 1005 | 0.3 | About INR 273 left at INR 1005 a day | Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box) |
 | Gemini images | OK | 974 INR | 300 | 3.2 | About INR 974 left of the INR 2000 top-up on 2026-11-18 | Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets |
 | Meta ad account (prepaid) | OK | 2,086 INR | 1046 | 2.0 | About INR 2086 left, spending about INR 1046 a day | Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it) |
 | ElevenLabs voice and music | OK | 83,559 credits | 5000 | 16.7 | 83,559 credits left, resets 2026-12-16 11:59 IST | Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset |
