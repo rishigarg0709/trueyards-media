@@ -1,0 +1,4 @@
+{"by": "Chief of Staff", "ops": [
+ {"op": "broadcast.create", "args": {"name": "FIT warm leads retarget 27 Nov: apni factory ka address card", "template": "fit_fact_card", "language": "en", "audience": "FIT warm retarget 27 Nov", "params": {"headerUrl": "https://raw.githubusercontent.com/rishigarg0709/trueyards-media/main/ads/creatives/fit-retarget/fit-retarget-2026-11-27.jpg"}}},
+ {"op": "broadcasts", "args": {"days": 1, "name": "retarget"}}
+]}
