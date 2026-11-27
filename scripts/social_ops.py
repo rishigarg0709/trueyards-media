@@ -220,6 +220,15 @@ def op_li_post(req):
         body["content"] = {"media": {"id": urn}}
     return http("https://api.linkedin.com/rest/posts", body, li_h())
 
+def op_li_check(req):
+    """Read-only token test: reads the TrueYards organization; posts nothing."""
+    oid = LI_ORG.split(":")[-1]
+    try:
+        r = http(f"https://api.linkedin.com/rest/organizations/{oid}", None, li_h(), method="GET")
+    except Exception as e:
+        return {"auth_error": str(e)}
+    return {"ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "raw_keys": sorted(list(r.keys()))[:8], "error": None if (r.get("id") or r.get("localizedName")) else r}
+
 def op_threads_comments(req):
     """{days?} : replies other people left on our recent Threads posts (with our existing answers)."""
     me = th("me", {"fields": "id,username"}, "GET")
@@ -385,7 +394,7 @@ def op_yt_reply(req):
                 {"Authorization": f"Bearer {tok}"})
 
 OPS = {"ig_scan": op_ig_scan, "yt_short": op_yt_short, "yt_check": op_yt_check, "yt_stats": op_yt_stats,
-       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post,
+       "threads_post": op_threads_post, "threads_refresh": op_threads_refresh, "x_post": op_x_post, "li_post": op_li_post, "li_check": op_li_check,
        "threads_comments": op_threads_comments, "ig_comments": op_ig_comments, "threads_reply": op_threads_reply,
        "platform_stats": op_platform_stats, "yt_comments": op_yt_comments, "yt_reply": op_yt_reply}
 
