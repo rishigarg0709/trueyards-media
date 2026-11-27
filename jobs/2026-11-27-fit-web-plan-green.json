@@ -1,0 +1,12 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-plan-green",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": ["jobs/refs/fit-web/top-current.jpg"],
+  "prompt": "Keep this exact top-down architectural scale model of the township unchanged: same layout, same navy factory sheds, same white villas, same roads, pool, courts, parks and the diagonal main road with its vehicles. Replace the empty white background with a lush, natural green landscape that fills the whole square frame edge to edge, as part of the same photoreal miniature: soft green farmland fields in gentle patterns, rows and clusters of miniature trees, hedgerows and grass verges around every side of the township, a few tree belts along the main road, all in the same soft top-left daylight and miniature-model style. No empty or white areas anywhere, no table, no text, letters, numbers or logos, no new buildings."
+ }
+]
