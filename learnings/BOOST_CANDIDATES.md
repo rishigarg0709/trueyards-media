@@ -150,3 +150,18 @@ Active after this run: all-India TrueYards Follow: Bengaluru lakes (since 24 Nov
 | Japan houses (18086326760340689) | 213 h | 422 | 49.1% | 30.1% | 0 | YT 91 | PAUSED 26 Nov (ages out 27 Nov) |
 | Flat or plot (18406492459202075), Ahmedabad pols (18034638014683408) | 15 to 22 h | 108 to 119 | 73 to 84% | 7 to 20% | 0 | pols FB 253 (p93) | Not yet eligible; dud signals, not candidates |
 | Forteasia project reel | | | | | | | Never boost |
+
+## 2026-11-27 (pull 05:25 UTC)
+Active after this run: spread ad sets Balcony grill (ad 120255814288050547) and Chandigarh (ad 120255814289510547), INR 100 a day each since 26 Nov 17:17 (day 1 of 2). All-India TrueYards Follow paused (D60). D61: paid growth only for lane reels under 45% organic skip.
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Balcony grill (18114493301598863) | 63 h | 878 | 38.3% | 52.7% | 1.1 | X p90, YT 99 | ACTIVE in spread (eligible to 4 Dec) |
+| Chandigarh Sector 13 (18038784548709035) | 70 h | 1,044 | 38.7% | 21.0% | 1.0 | X p97, YT 115 | ACTIVE in spread (eligible to 4 Dec) |
+| Mumbai no-OC (17970572490219322) | 65 h | 156 | 41.6% | 28.2% | 25.6 | FB 25 | Under 45% skip, but a real case, not the D61 lane; reserve |
+| Why India looks like this #1 Dharavi (18125641003737710) | 14 h | 159 | 56.1% | 11.3% | 0 | FB 205, YT 123 | Not eligible (under 24 h; skip over 45%) |
+| Gold or property (18136597870808638) | 21.5 h | 130 | 61.4% | 18.8% | 0 | YT 27 | Not eligible (money maths, skip 61%) |
+| Bengaluru lakes (17920086021259928) | 4.6 days | 1,196 | 50.1% | 15.7% | 0.8 | X p100, FB p90 | Over 45% skip; had all-India turn 23 to 26 Nov |
+| Steel rods (18508881529100400) | 8.9 days | 1,684 | 35.0% | 42.2% | 1.8 | FB top, YT 691 | Ages out 28 Nov; paid 19 to 25 Nov |
+| Flat or plot, pols, Steinway, Carpet, Shani | | 112 to 163 | 52 to 83% | | 0 | | Not candidates (skip or off-lane) |
+| Forteasia project reel | | | | | | | Never boost |
