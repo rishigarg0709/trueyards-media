@@ -1,0 +1,38 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-plan2-photo-a",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/plan-exact-ref2.jpg"
+  ],
+  "prompt": "Re-create this image as a real, ultra-high-resolution aerial drone photograph taken straight down (nadir) on a clear, bright winter morning in Haryana, India, of a newly completed premium township. It must look like a genuine photograph, not a 3D model or illustration: real asphalt with tyre wear and crisp white lane markings, real concrete kerbs and footpaths, navy ribbed metal factory roofs with skylights and real shadows, flat-roofed Indian villas in white, cream and sand with parapets, rooftop water tanks and solar heaters, glass-and-stone commercial blocks, parked cars and trucks, real trees with natural crowns casting soft shadows, manicured lawns, parks with paths, gazebos and flower beds inside their existing outlines, the pool clear turquoise. Around it, real Haryana farmland: young wheat in many greens, a few yellow mustard and freshly ploughed brown fields with furrows, thin earth bunds, tubewell rooms and scattered trees. Natural light from the top left, realistic colours, extreme detail and sharpness everywhere so it stays crisp when zoomed in. ABSOLUTE RULE: this is the architect's exact plan, so keep the layout identical in position. Every road and junction, every plot block, every building, every row of houses, every factory shed, every park, the club with its pool and courts, the four round sewage treatment tanks, the canal, the diagonal Meham-Beri highway, the straight road across the top and its link down to the highway must stay exactly where they are, with the same shape, size, count and spacing. Do not add, remove, move, merge, rotate or resize any building, road or plot, and do not change the framing or crop. Keep the two plain light parcels in the east of the site as ordinary crop fields (they are not part of the township). No text, letters, numbers, labels, logos or watermarks."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-plan2-photo-b",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/plan-exact-ref2.jpg"
+  ],
+  "prompt": "Re-create this image as a real, ultra-high-resolution aerial drone photograph taken straight down (nadir) on a clear, bright winter morning in Haryana, India, of a newly completed premium township. It must look like a genuine photograph, not a 3D model or illustration: real asphalt with tyre wear and crisp white lane markings, real concrete kerbs and footpaths, navy ribbed metal factory roofs with skylights and real shadows, flat-roofed Indian villas in white, cream and sand with parapets, rooftop water tanks and solar heaters, glass-and-stone commercial blocks, parked cars and trucks, real trees with natural crowns casting soft shadows, manicured lawns, parks with paths, gazebos and flower beds inside their existing outlines, the pool clear turquoise. Around it, real Haryana farmland: young wheat in many greens, a few yellow mustard and freshly ploughed brown fields with furrows, thin earth bunds, tubewell rooms and scattered trees. Natural light from the top left, realistic colours, extreme detail and sharpness everywhere so it stays crisp when zoomed in. ABSOLUTE RULE: this is the architect's exact plan, so keep the layout identical in position. Every road and junction, every plot block, every building, every row of houses, every factory shed, every park, the club with its pool and courts, the four round sewage treatment tanks, the canal, the diagonal Meham-Beri highway, the straight road across the top and its link down to the highway must stay exactly where they are, with the same shape, size, count and spacing. Do not add, remove, move, merge, rotate or resize any building, road or plot, and do not change the framing or crop. Keep the two plain light parcels in the east of the site as ordinary crop fields (they are not part of the township). No text, letters, numbers, labels, logos or watermarks."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-plan2-viz",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/plan-exact-ref2.jpg"
+  ],
+  "prompt": "Re-render this image as an ultra-realistic premium architectural 3D visualisation (high-end Corona or V-Ray quality) seen straight down, as a luxury developer would show its masterplan: physically accurate materials, soft global illumination, real-looking asphalt with lane markings, navy ribbed metal factory roofs with skylights, elegant flat-roofed Indian villas with terraces in white, cream and sand, glass-and-stone commercial blocks, detailed trees with soft shadows, lush landscaped parks with paths, gazebos and flower beds inside their outlines, a turquoise pool, cars and trucks on the roads, and rich realistic Haryana farmland around it with wheat, mustard and ploughed fields, bunds and trees. Natural light from the top left, extreme detail and sharpness everywhere. ABSOLUTE RULE: this is the architect's exact plan, so keep the layout identical in position. Every road and junction, every plot block, every building, every row of houses, every factory shed, every park, the club with its pool and courts, the four round sewage treatment tanks, the canal, the diagonal Meham-Beri highway, the straight road across the top and its link down to the highway must stay exactly where they are, with the same shape, size, count and spacing. Do not add, remove, move, merge, rotate or resize any building, road or plot, and do not change the framing or crop. Keep the two plain light parcels in the east of the site as ordinary crop fields (they are not part of the township). No text, letters, numbers, labels, logos or watermarks."
+ }
+]
