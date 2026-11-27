@@ -231,7 +231,15 @@ def op_li_check(req):
     except Exception as e:
         return {"auth_error": str(e)}
     tk = li_tok()
-    return {"ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "token_len": len(tk), "token_shape": "AQ..." if tk.startswith("AQ") else "unexpected start", "error": None if (r.get("id") or r.get("localizedName")) else r}
+    alt = {}
+    for nm, url, hd in [("v2_org", f"https://api.linkedin.com/v2/organizations/{oid}", {"Authorization": f"Bearer {tk}", "X-Restli-Protocol-Version": "2.0.0"}),
+                        ("v2_userinfo", "https://api.linkedin.com/v2/userinfo", {"Authorization": f"Bearer {tk}"}),
+                        ("acl", "https://api.linkedin.com/rest/organizationAcls?q=roleAssignee", li_h())]:
+        try:
+            j = http(url, None, hd, method="GET"); alt[nm] = j.get("error") or "ok"
+        except Exception as e:
+            alt[nm] = str(e)[:80]
+    return {"alt": alt, "ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "token_len": len(tk), "token_shape": "AQ..." if tk.startswith("AQ") else "unexpected start", "error": None if (r.get("id") or r.get("localizedName")) else r}
 
 def op_threads_comments(req):
     """{days?} : replies other people left on our recent Threads posts (with our existing answers)."""
