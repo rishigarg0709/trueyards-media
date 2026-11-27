@@ -1,0 +1,14 @@
+{
+ "op": "li_check",
+ "ran_at": "2026-11-27T07:58:36.767575Z",
+ "result": {
+  "ok": false,
+  "name": null,
+  "token_len": 350,
+  "token_shape": "AQ...",
+  "error": {
+   "error": "HTTP 401",
+   "body": "{\"status\":401,\"code\":\"AUTHENTICATION_FAILED\",\"message\":\"Could not authenticate\"}"
+  }
+ }
+}
