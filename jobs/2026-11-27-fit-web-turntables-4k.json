@@ -1,0 +1,111 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-tt-township",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/hero-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the complete integrated township diorama from the attached image on its cut block of earth with visible soil layers: navy factory sheds with trucks, white villa rows, parks, clubhouse with pool and courts, golf strip, diagonal main road and entrance."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-industrial",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/industrial-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: one industrial plot diorama on a square base: a modern factory shed with matte navy cladding and white roof, loading docks, a white container truck at the dock, wide road edge with lane markings, a few trees."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-residential",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/residential-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: one residential block diorama on a square base: a row of white modern two-storey villas with flat roofs and small lawns, a tree-lined street and a small park with a children's play area."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-commercial",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/commercial-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the commercial SCO block diorama on a rectangular base: a row of modern four-level shop-office buildings (ground plus three floors), glass shopfronts with warm glow, front parking with tiny cars on a wide main road."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-club",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/club-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the clubhouse diorama on a square base: a low modern glass clubhouse, turquoise swimming pool with deck, basketball court, badminton court, children's play structure and trampoline on lawns."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-outdoor",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/outdoor-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the park diorama on a round base: winding jogging track, wooden gazebo, cabana seating, water fountain, flower tunnel arch with pink flowers, lawn mounds, sand pit, sculpture and a strip of manicured golf lawn."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-entrance",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/entrance-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the entrance plaza diorama on a rectangular base: modern gate canopy with boom barriers, small police post, bus and taxi bay with a bus, EV charging station with cars, parking and slim CCTV poles."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-tt-infra",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/infra-ref.jpg"
+  ],
+  "prompt": "Product turntable reference sheet in a 2x2 grid: the SAME single physical architectural scale model shown four times, identical model, identical materials, identical soft studio lighting from the top-left, camera at the same 30 degree elevation and same distance in every cell; the model is rotated on a turntable by 0 degrees (top-left cell), 30 degrees clockwise (top-right), 60 degrees clockwise (bottom-left) and 90 degrees clockwise (bottom-right). Each cell: PURE WHITE (#FFFFFF) seamless background, the whole model fully visible and centred with generous margin, a soft grey contact shadow directly under the model only, no turntable disc or platform visible, no table, no room, no grid lines, no borders. Hyper-realistic photoreal miniature, museum-quality architect's model, crisp detail, tilt-shift realism, true materials. Absolutely no text, letters, numbers, labels or logos anywhere. The model: the utility zone diorama on a rectangular base: fenced electrical sub-station with transformers, sewage treatment plant with round clarifier tanks, water recycling unit, a road with a heavy trailer and a cut-away showing underground pipes and cables. No fire station."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-model-top",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/top-ref.jpg",
+   "jobs/refs/fit-web/hero-ref.jpg"
+  ],
+  "prompt": "A perfectly top-down, orthographic, straight-down view (camera exactly overhead, no perspective tilt) of the same architectural scale model of the integrated township as in the attached images: navy industrial factory sheds with tiny trucks, rows of white villas with green parks, a small commercial block on the main road, a clubhouse with a turquoise pool and sports courts, a long manicured golf strip lawn, tree-lined roads, a diagonal main road along one edge with the entrance plaza. The model board is isolated on a PURE WHITE (#FFFFFF) seamless background, no table, no room, no shadow on the background, the whole irregular board fully visible with margin all around, sharp edges. Ultra-premium photoreal miniature, crisp detail, soft even daylight from top-left. Absolutely no text, letters, numbers or logos."
+ }
+]
