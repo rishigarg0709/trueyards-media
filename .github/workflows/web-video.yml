@@ -1,0 +1,33 @@
+name: web-video
+# Veo video jobs for website visuals (scripts/web_video.py). Added 27 Nov 2026 by the Google Ads and YouTube ads chat.
+on:
+  push:
+    paths: ["vjobs/*.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: web-video
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            vjobs
+            jobs/refs
+            library/media/fitweb-*
+            ops
+          sparse-checkout-cone-mode: false
+      - name: Generate
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/web_video.py
+      - name: Commit results
+        run: |
+          git config user.name "trueyards-bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A --sparse library/web vjobs ops/veo_spend.jsonl || true
+          git commit -m "web-video results" || exit 0
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && exit 0; sleep $((i*5)); done; exit 1
