@@ -183,8 +183,22 @@ def li_tok():
     if ":" in t and " " in t.split(":", 1)[0]: t = t.split(":", 1)[1]  # "Access token: xyz" pasted whole
     return "".join(t.split())  # drop any inner spaces or line breaks
 
+LI_VERSIONS = ["202611", "202610", "202609", "202608", "202607", "202606"]
+_LI_VER = {"v": None}
+
+def li_version():
+    """Newest LinkedIn API version that is still active (426 = retired or not yet out). Cached per run."""
+    if _LI_VER["v"]: return _LI_VER["v"]
+    oid = LI_ORG.split(":")[-1]
+    for v in LI_VERSIONS:
+        j = http(f"https://api.linkedin.com/rest/organizations/{oid}", None,
+                 {"Authorization": f"Bearer {li_tok()}", "LinkedIn-Version": v, "X-Restli-Protocol-Version": "2.0.0"}, method="GET")
+        if j.get("error") != "HTTP 426":
+            _LI_VER["v"] = v; return v
+    _LI_VER["v"] = LI_VERSIONS[0]; return _LI_VER["v"]
+
 def li_h(extra=None):
-    h = {"Authorization": f"Bearer {li_tok()}", "LinkedIn-Version": "202510", "X-Restli-Protocol-Version": "2.0.0"}
+    h = {"Authorization": f"Bearer {li_tok()}", "LinkedIn-Version": li_version(), "X-Restli-Protocol-Version": "2.0.0"}
     h.update(extra or {}); return h
 
 def li_upload(kind, blob):
@@ -239,7 +253,7 @@ def op_li_check(req):
             j = http(url, None, hd, method="GET"); alt[nm] = j.get("error") or "ok"
         except Exception as e:
             alt[nm] = str(e)[:80]
-    return {"alt": alt, "ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "token_len": len(tk), "token_shape": "AQ..." if tk.startswith("AQ") else "unexpected start", "error": None if (r.get("id") or r.get("localizedName")) else r}
+    return {"version": li_version(), "alt": alt, "ok": bool(r.get("id") or r.get("localizedName")), "name": r.get("localizedName"), "token_len": len(tk), "token_shape": "AQ..." if tk.startswith("AQ") else "unexpected start", "error": None if (r.get("id") or r.get("localizedName")) else r}
 
 def op_threads_comments(req):
     """{days?} : replies other people left on our recent Threads posts (with our existing answers)."""
