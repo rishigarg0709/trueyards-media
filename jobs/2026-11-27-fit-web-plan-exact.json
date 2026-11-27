@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-plan-exact-a",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/plan-exact-ref.jpg"
+  ],
+  "prompt": "This image is an exact top-down render of a real township masterplan, built from the architect's site plan. Re-render it as an ultra-photorealistic, museum-quality architect's scale model photographed straight down from above, the quality of a high-end real estate developer's presentation model. ABSOLUTE RULE: keep the layout identical, pixel for pixel in position. Every road, every road junction, every plot block, every building, every row of houses, every factory shed, every park, the club with its swimming pool and courts, the four round sewage treatment tanks, the canal, the diagonal highway and the straight road across the top must stay exactly where they are, with the same shape, size, count and spacing. Do not add, remove, move, merge, rotate or resize any building, road or plot. Do not change the framing or crop. Only upgrade the look: real materials and fine detail. Navy blue ribbed metal roofs with skylight strips on the factory sheds; the small villas get realistic flat terraces with parapets, water tanks and solar heaters, in warm white, cream and soft sand tones; the commercial blocks get glass and stone; roads get dark asphalt with crisp white lane markings and kerbs; parks get rich lawns with winding jogging paths, small gazebos, benches and flower beds inside their existing outlines; the pool turns clear turquoise; trees become lush detailed miniature trees with soft shadows. The farmland around the township becomes realistic Haryana fields: lush green wheat, a few mustard and ploughed brown strips with visible furrows, thin earth bunds, hedgerows and scattered trees, filling any bare brown ground around the site with fields and grass verges. Soft natural daylight from the top left with gentle realistic shadows, crisp focus edge to edge, extremely high detail so it stays sharp when zoomed in. No text, letters, numbers, labels, logos or watermarks."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-plan-exact-b",
+  "model": "gemini-3-pro-image",
+  "aspect": "1:1",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/plan-exact-ref.jpg"
+  ],
+  "prompt": "This image is an exact top-down render of a real township masterplan, built from the architect's site plan. Re-render it as an ultra-photorealistic, museum-quality architect's scale model photographed straight down from above, the quality of a high-end real estate developer's presentation model. ABSOLUTE RULE: keep the layout identical, pixel for pixel in position. Every road, every road junction, every plot block, every building, every row of houses, every factory shed, every park, the club with its swimming pool and courts, the four round sewage treatment tanks, the canal, the diagonal highway and the straight road across the top must stay exactly where they are, with the same shape, size, count and spacing. Do not add, remove, move, merge, rotate or resize any building, road or plot. Do not change the framing or crop. Only upgrade the look: real materials and fine detail. Navy blue ribbed metal roofs with skylight strips on the factory sheds; the small villas get realistic flat terraces with parapets, water tanks and solar heaters, in warm white, cream and soft sand tones; the commercial blocks get glass and stone; roads get dark asphalt with crisp white lane markings and kerbs; parks get rich lawns with winding jogging paths, small gazebos, benches and flower beds inside their existing outlines; the pool turns clear turquoise; trees become lush detailed miniature trees with soft shadows. The farmland around the township becomes realistic Haryana fields: lush green wheat, a few mustard and ploughed brown strips with visible furrows, thin earth bunds, hedgerows and scattered trees, filling any bare brown ground around the site with fields and grass verges. Soft natural daylight from the top left with gentle realistic shadows, crisp focus edge to edge, extremely high detail so it stays sharp when zoomed in. No text, letters, numbers, labels, logos or watermarks."
+ }
+]
