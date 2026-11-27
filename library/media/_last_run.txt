@@ -1,10 +1,6 @@
-2026-11-27 08:05 UTC
-fitweb-hero [image]: image ok
-fitweb-top [image]: image ok
-fitweb-industrial [image]: image ok
-fitweb-residential [image]: image ok
+2026-11-27 08:18 UTC
+fitweb-hero-a2 [image]: image ok
+fitweb-hero-a3 [image]: image ok
+fitweb-hero-a4 [image]: image ok
 fitweb-commercial [image]: image ok
-fitweb-club [image]: image ok
-fitweb-outdoor [image]: image ok
-fitweb-entrance [image]: image ok
 fitweb-infra [image]: image ok
