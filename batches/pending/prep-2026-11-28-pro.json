@@ -1,0 +1,27 @@
+{
+ "batch": "batches/sqklzv42omglphjlnahsq7zyw0gobt9k1l78",
+ "name": "prep-2026-11-28-pro",
+ "model": "gemini-3-pro-image",
+ "submitted": "2026-11-27T17:03Z",
+ "images": [
+  {
+   "name": "2026-11-28-midday-1",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Hyper-realistic photograph of an abandoned, half-built 14-storey concrete residential tower in an Indian city: bare grey slabs and columns, no walls on the upper floors, rusted steel rods sticking up from the top columns, a torn faded green safety net on one side, weeds on the lower slabs; it stands squeezed between two finished, lived-in residential towers with painted walls, potted plants and clothes drying on balconies; bright midday sun, clear blue sky with a few white clouds, believable scale and shadows, looks like a real news photo, no people. photorealistic National Geographic style photograph, soft natural daylight, gentle atmospheric haze, rich greens and earth tones, crisp detail, no text, no logos",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-28-evening-1",
+   "prompt": "Vertical 9:16, main subject in the middle third, calmer empty area in the lower third for captions, top 300 px slightly darker for the logo, wide framing so 2 to 3 crops can be cut. Hyper-realistic photograph looking up at a concrete electricity pole on an Indian city street buried in a huge black tangle of cables: dozens of thick and thin black cables, loops and coils, junction boxes and splitters strapped to the pole, a few thin bare power conductors running cleanly across the very top, old painted buildings with balconies at the edges of the frame, bright midday sun, clear deep blue sky behind the wires, believable scale, looks like a real news photo, no people. photorealistic, bright clear daylight, crisp, true colours, subtle cool cyan tint in the grade, no text, no logos, no watermarks",
+   "aspect": "9:16",
+   "size": "2K"
+  },
+  {
+   "name": "2026-11-28-carousel-1",
+   "prompt": "Vertical 4:5 carousel image, subject large and in the lower 60 percent, calm empty area in the upper 40 percent for headline text, wide framing so 2 crops can be cut. Hyper-realistic photograph of a white colonial-era Indian bungalow with a deep columned verandah and a sloping tiled roof, set far back in a big green walled compound with an old banyan or neem tree whose canopy spreads wide to the right edge of the frame, a gravel drive and a low whitewashed boundary wall with a gate, wide quiet tree-lined road in front, bright soft morning light, sky fading to warm paper #EFE6D4 at the top, no people. warm sepia-leaning natural grade, period feel, crisp detail, no text, no logos",
+   "aspect": "4:5",
+   "size": "2K"
+  }
+ ],
+ "fallback_after_utc": null
+}

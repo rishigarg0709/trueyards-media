@@ -1,3 +1,2 @@
-2026-11-27 14:11 UTC
-fitweb-ind2 [image]: image ok
-fitweb-infra2 [image]: image ok
+2026-11-27 17:03 UTC
+prep-2026-11-28 [batch_submit]: batch submitted prep-2026-11-28-pro: gemini-3-pro-image 3 images (batches/sqklzv42omglphjlnahsq7zyw0gobt9k1l78); prep-2026-11-28: gemini-3.1-flash-image 12 images (batches/cx6wcx5bmbcbi9ptvq9lsopw8wb24xqlk5x2)
