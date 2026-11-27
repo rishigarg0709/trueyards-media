@@ -1,0 +1,176 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0D0D0F}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0D0D0F;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0D0D0F}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 100px/1.0 IN;letter-spacing:-.02em;text-transform:uppercase}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#E63B2E}
+.dg{background:#E63B2E;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(13,13,15,.92);color:#fff;font-family:IN}
+.hl{background:#E63B2E;color:#fff;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.6)}
+.tag{display:inline-block;background:#E63B2E;color:#0D0D0F;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0D0D0F;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #E63B2E;color:#E63B2E;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(230,59,46,.18);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.6)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#FFF4F2;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,4,6,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FFD2CC">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const WS=/*WS*/[["They", 0.0, 0.15], ["paid", 0.179, 0.299], ["for", 0.318, 0.374], ["their", 0.399, 0.523], ["flats...", 0.598, 1.019], ["and", 1.262, 1.318], ["then", 1.348, 1.467], ["they", 1.482, 1.542], ["had", 1.579, 1.692], ["to", 1.717, 1.766], ["walk", 1.811, 1.991], ["out", 2.028, 2.14], ["of", 2.19, 2.29], ["them.", 2.32, 2.572], ["Mumbai.", 2.781, 3.935], ["A", 4.084, 4.234], ["thirty-four", 4.277, 4.757], ["storey", 4.807, 5.131], ["tower", 5.206, 5.579], ["in", 5.629, 5.729], ["Tardeo.", 5.785, 6.327], ["The", 6.533, 7.15], ["top", 7.206, 7.374], ["seventeen", 7.411, 7.748], ["floors", 7.801, 8.121], ["had", 8.178, 8.346], ["no", 8.446, 8.645], ["occupation", 8.699, 9.243], ["certificate.", 9.299, 9.991], ["July", 10.215, 11.112], ["2025,", 11.262, 12.579], ["the", 12.626, 12.682], ["High", 12.712, 12.832], ["Court", 12.881, 13.131], ["ordered", 13.178, 13.505], ["them", 13.55, 13.729], ["vacated.", 13.785, 14.393], ["The", 14.607, 15.224], ["Supreme", 15.262, 15.523], ["Court", 15.586, 15.897], ["would", 15.922, 16.047], ["not", 16.121, 16.346], ["step", 16.391, 16.57], ["in.", 16.645, 16.794], ["By", 17.037, 17.736], ["the", 17.754, 17.81], ["end", 17.848, 17.96], ["of", 17.985, 18.035], ["August,", 18.099, 18.633], ["they", 18.722, 19.081], ["were", 19.111, 19.231], ["gone.", 19.291, 20.048], ["Here's", 20.291, 20.993], ["what", 21.038, 21.218], ["most", 21.278, 21.517], ["buyers", 21.581, 21.965], ["miss.", 22.055, 22.489], ["The", 22.732, 22.746], ["keys", 22.836, 23.194], ["are", 23.25, 23.419], ["not", 23.493, 23.718], ["permission", 23.759, 24.166], ["to", 24.216, 24.316], ["live", 24.361, 24.54], ["there.", 24.59, 25.176], ["The", 25.26, 25.512], ["OC", 25.687, 26.036], ["is.", 26.136, 26.397], ["It's", 26.64, 27.264], ["the", 27.282, 27.338], ["city's", 27.413, 27.787], ["paper", 27.862, 28.236], ["that", 28.28, 28.46], ["says", 28.52, 28.759], ["this", 28.789, 28.908], ["building", 28.95, 29.282], ["may", 29.357, 29.581], ["be", 29.631, 29.731], ["lived", 29.78, 30.03], ["in.", 30.079, 30.254], ["And", 30.46, 31.077], ["Mumbai", 31.13, 31.45], ["has", 31.507, 31.675], ["more", 31.705, 31.824], ["than", 31.869, 32.049], ["twenty-five", 32.102, 32.721], ["thousand", 32.779, 33.245], ["buildings", 33.29, 33.693], ["without", 33.74, 34.067], ["one.", 34.142, 34.441], ["Their", 34.603, 35.413], ["societies", 35.465, 35.936], ["even", 35.981, 36.161], ["pay", 36.217, 36.385], ["fifty", 36.435, 36.684], ["percent", 36.74, 37.133], ["extra", 37.195, 37.507], ["for", 37.544, 37.656], ["water.", 37.743, 38.254], ["So", 38.497, 39.345], ["before", 39.398, 39.719], ["you", 39.756, 39.868], ["take", 39.898, 40.018], ["the", 40.055, 40.167], ["keys...", 40.257, 41.014], ["ask", 41.257, 41.481], ["for", 41.519, 41.631], ["one", 41.706, 41.93], ["paper.", 42.005, 42.5]];
+const BEATS=/*BEATS*/[1.811, 2.438, 3.065, 3.692, 4.319, 4.946, 5.573, 6.176, 6.803, 7.43, 8.057, 8.684, 9.311, 9.938, 10.565, 11.192, 11.819, 12.446, 13.049, 13.676, 14.303, 14.93, 15.557, 16.184, 16.811, 17.438, 18.065, 18.692, 19.319, 19.946, 20.573, 21.2, 21.803, 22.43, 23.057, 23.684, 24.311, 24.938, 25.565, 26.192, 26.819, 27.446, 28.073, 28.7, 29.303, 29.954, 30.581, 31.207, 31.811, 32.438, 33.065, 33.692, 34.319, 34.946, 35.573];
+const S=document.getElementById('s');
+const CO='#E63B2E',IV='#FFFFFF',NV='#0D0D0F';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;const OST=END;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(13,13,15,.9) 0%,rgba(13,13,15,.55) 17%,rgba(13,13,15,0) 30%';
+const GB=(a)=>GTOP+`,rgba(13,13,15,0) ${a}%,rgba(13,13,15,.82) ${a+16}%,rgba(13,13,15,.96) ${a+28}%,#0D0D0F 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+const HOOKEV=wt('walk');
+// ================= SCENES (look A Newsroom Red: near-black, white, one red #E63B2E, Inter 900 caps, mono kickers) =================
+const BG='#0D0D0F';
+const L15=x=>Math.max(1.55,x); // D41: no text before 1.5 s
+// floor counter device: 34 floors on the right edge, floors 18 to 34 turn hollow on "no occupation certificate"
+const FC=mk(S,'',`position:absolute;left:980px;top:300px;width:44px;height:900px;z-index:20;opacity:0`);
+const FL=[];for(let i=0;i<34;i++){FL.push(mk(FC,'',`position:absolute;left:0;top:${(33-i)*26}px;width:44px;height:18px;border-radius:3px;background:#fff;border:3px solid #fff;opacity:0;box-shadow:0 2px 10px rgba(0,0,0,.5)`))}
+const FN=mk(S,'ts',`position:absolute;left:684px;top:262px;width:340px;white-space:nowrap;text-align:right;font:500 26px/1 PM;letter-spacing:.12em;color:#fff;z-index:20;opacity:0`,'');
+const T_NO=wt('no'),T_34=wt('thirty-four');
+const floors=t=>{const on=(t<wt('july')+.2)||(t>=wt('paper',2)-.1&&t<END-1.6);FC.style.opacity=on?1:0;FN.style.opacity=on&&t>=1.55?1:0;
+ const n=Math.min(34,Math.floor(cl(t/T_34)*34+.0001)+(t>=T_34?0:0));const cnt=t>=wt('paper',2)-.1?34:Math.max(1,Math.round(cl(t/T_34)*34));
+ FL.forEach((f,i)=>{f.style.opacity=i<cnt?1:0;const hol=(t>=T_NO&&t<wt('paper',2)-.1&&i>=17)||(t>=wt('paper',2)-.1&&i>=17);f.style.background=hol?'rgba(230,59,46,.0)':(i>=17&&t>=T_NO?'transparent':'#fff');f.style.borderColor=hol?'#E63B2E':'#fff'});
+ FN.innerHTML=t>=T_NO?'<span style="color:#E63B2E">18-34: NO OC</span>':'FLOOR '+cnt};
+const panelG=a=>GB(a);
+// 1. HOOK: bright full-frame tilt up the tower, lived-in below, bare above; line spoken from 0 s; text after 1.55 s
+const towerBox=sc=>{const b=box(sc,'m1',540,960,'50% 50%');return b};
+add(0,sc=>{const b=towerBox(sc);mk(sc,'sh','background:linear-gradient(180deg,rgba(13,13,15,.55) 0%,rgba(13,13,15,.25) 9%,rgba(13,13,15,0) 16%)');const g=mk(sc,'sh','background:'+GB(60)+';opacity:0');
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#FFD2CC',[['●',L15(wt('they',2)),'c'],['Mumbai',L15(wt('they',2))]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:112px',[['Paid',L15(wt('had'))],['for',L15(wt('had'))+.05],['it.',L15(wt('had'))+.1],['\n'],['Had',wt('walk')],['to',wt('walk')+.05],['leave.',wt('out'),'hl',1]]);
+ return t=>{const sk=shake(t,HOOKEV,6);const p=eio(t/3.2);b.style.transform=`translate(${sk}px,0) scale(1.24) translateY(${-150+300*p}px)`;g.style.opacity=cl((t-1.35)/.3);rv(k,t);rv(h,t)}});
+// 2. Real Mumbai high-rises, push-in. "Mumbai. A thirty-four storey tower in Tardeo."
+add(wt('mumbai')-.1,sc=>{const b=box(sc,'r1',540,700,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#fff',[['●',wt('a'),'c'],['Tardeo,',wt('tardeo')],['Mumbai',wt('tardeo')+.1]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:150px',[['34',wt('thirty-four'),'hl',1],['\n'],['storeys',wt('storey')]]);
+ return t=>{b.style.transform=`scale(${1.08+.08*eio(t/3.6)})`;rv(k,t);rv(h,t)}},true);
+// 3. Tower top half close, bare windows. "The top seventeen floors had no occupation certificate."
+add(wt('the')-.12,sc=>{const b=box(sc,'m1',540,420,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1260px;width:900px;font-size:116px',[['Top',wt('top')],['17',wt('seventeen')],['floors:',wt('floors')],['\n'],['no',wt('no'),'hl'],['OC.',wt('occupation'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1530px;color:#FFD2CC',[['Occupation',wt('occupation')+.1],['certificate',wt('certificate')]]);
+ return t=>{b.style.transform=`scale(${1.9+.12*eio(t/3.6)})`;rv(h,t);rv(k,t)}},true);
+// 4. Records office racks. "July 2025, the High Court ordered them vacated."
+add(wt('july')-.12,sc=>{const b=box(sc,'m3',300,700,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const tg=mk(sc,'tag','left:72px;top:1190px;opacity:0','Bombay High Court');
+ const h=T(sc,'H ts','left:70px;top:1260px;width:900px;font-size:120px',[['July',wt('july')],['2025:',wt('2025')],['\n'],['vacate.',wt('vacated'),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.6) translateX(${30-14*t}px)`;fade(tg,t,wt('high')-(wt('july')-.12),.2,10);if(t<wt('high')-(wt('july')-.12))tg.style.opacity=0;rv(h,t)}},true);
+// 5. Empty flat. "The Supreme Court would not step in."
+add(wt('the',3)-.12,sc=>{const b=box(sc,'m5',540,760,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#fff',[['●',wt('supreme'),'c'],['Supreme',wt('supreme')],['Court',wt('court',2)]]);
+ const st=mk(sc,'stamp','left:70px;top:1310px;font-size:84px;background:rgba(230,59,46,.2);color:#fff','NO RELIEF');
+ const b0=wt('the',3)-.12,t0=wt('not')-b0;
+ return t=>{b.style.transform=`scale(${1.12+.1*eio(t/2.6)})`;rv(k,t);if(t>=t0)slam(st,t,t0,1.8,-4);else st.style.opacity=0}},true);
+// 6. Boxes by the door. "By the end of August, they were gone."
+add(wt('by')-.12,sc=>{const b=box(sc,'m5',760,1100,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts','left:72px;top:1250px;color:#FFD2CC',[['By',wt('by')],['end',wt('end')],['of',wt('of',2)],['August',wt('august')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:900px;font-size:150px',[['Gone.',wt('gone'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.7+.14*eio(t/3)}) translateX(${-4*t}px)`;rv(k,t);rv(h,t)}},true);
+// 7. REVEAL: keys on the possession letter; red strike. "Here's what most buyers miss. The keys are not permission to live there."
+add(wt("here's")-.12,sc=>{const b=box(sc,'m2',420,980,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const tg=mk(sc,'tag','left:72px;top:1190px;opacity:0','Tell a friend');
+ const k=T(sc,'K ts','left:72px;top:1260px;color:#fff',[['What',wt('what')],['most',wt('most')],['buyers',wt('buyers')],['miss',wt('miss')]]);
+ const h=T(sc,'H ts','left:70px;top:1320px;width:940px;font-size:118px',[['Keys',wt('keys')],['≠',wt('not',2),'hl',1],['\n'],['permission',wt('permission')]]);
+ const x=svg(sc,'','<line x1="150" y1="760" x2="930" y2="1010" stroke="#E63B2E" stroke-width="16" stroke-linecap="round" style="filter:drop-shadow(0 0 12px rgba(230,59,46,.6))"/>');const ln=x.querySelector('line');const L=820;ln.style.strokeDasharray=L;
+ const b0=wt("here's")-.12,t0=wt('not',2)-b0,tk=wt('keys')-b0;
+ return t=>{const hold=t>=t0&&t<t0+.4;b.style.transform=`scale(${1.05+.22*eio(Math.min(t,t0)/(t0+.01))+(t>t0+.4?.04*eio((t-t0-.4)/2):0)})`;fade(tg,t,.05,.2,10);rv(k,t,tk-.05);rv(h,t);ln.style.strokeDashoffset=L*(1-eo((t-t0)/.3))}},true);
+// 8. The certificate with the seal. "The OC is."
+add(wt('the',6)-.12,sc=>{const b=box(sc,'m3',640,1010,'50% 50%');mk(sc,'sh','background:'+GB(56));
+ const h=T(sc,'H ts','left:70px;top:1270px;width:940px;font-size:112px',[['The',wt('the',6)],['OC',wt('oc'),'hl',1],['is.',wt('is')],['\n'],['Occupation',wt('is')+.25],['certificate',wt('is')+.4]]);
+ return t=>{b.style.transform=`scale(${2.2+.2*eio(t/1.6)})`;rv(h,t)}},true);
+// 9. Lived-in lower floors. "It's the city's paper that says this building may be lived in."
+add(wt("it's")-.12,sc=>{const b=box(sc,'m1',540,1560,'50% 50%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts','left:72px;top:1200px;color:#fff',[['●',wt('city\'s'),'c'],['The',wt('the',7)],["city's",wt("city's")],['paper',wt('paper')]]);
+ const h=T(sc,'H ts','left:70px;top:1250px;width:940px;font-size:112px',[['This',wt('this')],['building',wt('building')],['\n'],['may',wt('may')],['be',wt('be')],['lived',wt('lived'),'hl'],['in.',wt('in',3),'hl',1]]);
+ return t=>{b.style.transform=`scale(${2.0-.14*eio(t/3.6)})`;rv(k,t);rv(h,t)}},true);
+// 10. Real Mumbai towers, tilt down; counter 25,000+. "And Mumbai has more than twenty-five thousand buildings without one."
+add(wt('and',2)-.12,sc=>{const b=box(sc,'r1',540,1500,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1220px;color:#fff',[['●',wt('mumbai',2),'c'],['Mumbai',wt('mumbai',2)]]);
+ const n=mk(sc,'H ts','left:66px;top:1270px;font-size:170px;opacity:0','');
+ const h=T(sc,'H ts','left:70px;top:1450px;width:940px;font-size:80px',[['buildings',wt('buildings')],['without',wt('without')],['one',wt('one'),'hl',1]]);
+ const b0=wt('and',2)-.12,t0=wt('twenty-five')-b0,t1=wt('thousand')-b0;
+ return t=>{b.style.transform=`scale(1.3) translateY(${120-60*eio(t/4)}px)`;rv(k,t);rv(h,t);n.style.opacity=cl((t-t0)/.15);const v=Math.round(25000*eo((t-t0)/(t1-t0+.35)));n.innerHTML=`<span class="${t>t1+.3?'hl':''}">${v.toLocaleString('en-IN')}${t>t1+.3?'+':''}</span>`}},true);
+// 11. Water meter. "Their societies even pay fifty percent extra for water."
+add(wt('their',2)-.12,sc=>{const b=box(sc,'m4',420,900,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1220px;color:#fff',[['●',wt('societies'),'c'],['Societies',wt('societies')],['without',wt('societies')+.1],['an',wt('societies')+.2],['OC',wt('societies')+.25]]);
+ const h=T(sc,'H ts','left:70px;top:1270px;width:940px;font-size:120px',[['Water',wt('water')-.9]]);
+ const y=mk(sc,'Y ts','left:60px;top:1400px;font:900 230px/1 IN;letter-spacing:-.04em;color:#E63B2E;opacity:0','+50%');
+ const b0=wt('their',2)-.12,t0=wt('fifty')-b0;
+ return t=>{b.style.transform=`scale(${1.7+.16*eio(t/3.8)})`;rv(k,t);rv(h,t);if(t>=t0)slam(y,t,t0,1.5,0);else y.style.opacity=0}},true);
+// 12. Keys again. "So before you take the keys... ask for one paper."
+add(wt('so')-.1,sc=>{const b=box(sc,'m2',380,1000,'50% 50%');mk(sc,'sh','background:'+GB(54));
+ const k=T(sc,'K ts','left:72px;top:1220px;color:#fff',[['Before',wt('before')],['you',wt('you')],['take',wt('take')],['the',wt('the',8)],['keys',wt('keys',2)]]);
+ const h=T(sc,'H ts','left:70px;top:1270px;width:940px;font-size:124px',[['Ask',wt('ask')],['for',wt('for',3)],['\n'],['the',wt('one',2)],['OC.',wt('paper',2),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.7-.3*eio(t/3.2)})`;rv(k,t);rv(h,t)}},true);
+// 13. Loop: back to the tower of frame 0, counter full again
+add(wt('paper',2)+.25,sc=>{const b=towerBox(sc);
+ return t=>{b.style.transform=`scale(1.24) translateY(${-150+60*eio(t/1.5)}px)`}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation, not the actual building.';const SRC='Sources: Free Press Journal (6 Sep 2025, 20 Oct 2025), Zee Business (BMC data 2016-17).';
+const FINE=[[0,''],[1.4,AIL],[SC[1].t0,'Mumbai skyline. Photo: Zoshua Colah / Unsplash.'],[SC[2].t0,AIL+' Free Press Journal, 6 Sep 2025.'],[SC[3].t0,'AI visualisation. Free Press Journal, 6 Sep 2025.'],[SC[4].t0,'AI visualisation.'],[SC[6].t0,'AI visualisation. Educational content, not legal advice.'],[SC[7].t0,'AI visualisation.'],[SC[8].t0,AIL],[SC[9].t0,'Photo: Zoshua Colah / Unsplash. Free Press Journal, 20 Oct 2025.'],[SC[10].t0,'AI visualisation. Zee Business, BMC data 2016-17.'],[SC[11].t0,SRC+' Not legal advice.'],[SC[12].t0,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';s.sc.style.opacity=1;
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+ floors(t);
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,wt('thirty-four'),wt('no'),wt('not',2),wt('oc'),wt('fifty')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;scenes[scenes.length-1].sc.style.opacity=1-cl(fo*1.4);document.getElementById('brand').style.opacity=1-fo;
+};
+</script></body></html>

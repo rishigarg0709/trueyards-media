@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0D0D0F}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0D0D0F;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0D0D0F}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 100px/1.0 IN;letter-spacing:-.02em;text-transform:uppercase}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#E63B2E}
+.dg{background:#E63B2E;color:#fff;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(13,13,15,.92);color:#fff;font-family:IN}
+.hl{background:#E63B2E;color:#fff;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.6)}
+.tag{display:inline-block;background:#E63B2E;color:#0D0D0F;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0D0D0F;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #E63B2E;color:#E63B2E;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(230,59,46,.18);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.6)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#FFF4F2;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,4,6,.38) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#FFD2CC">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const WS=[["This", 0.0, 0.143], ["Mumbai", 0.194, 0.5], ["tower", 0.571, 0.929], ["has", 0.982, 1.143], ["an", 1.19, 1.286], ["empty", 1.321, 1.5], ["floor.", 1.56, 2.0], ["By", 2.2, 2.867], ["law.", 2.956, 3.276], ["No", 3.476, 4.238], ["flats.", 4.333, 4.833], ["No", 5.033, 5.414], ["walls.", 5.51, 6.05], ["Just", 6.229, 6.914], ["columns", 6.995, 7.557], ["and", 7.611, 7.772], ["air.", 7.843, 8.183], ["It's", 8.383, 9.204], ["not", 9.231, 9.312], ["unfinished.", 9.377, 10.026], ["In", 10.216, 10.597], ["Maharashtra,", 10.645, 11.24], ["once", 11.283, 11.454], ["a", 11.49, 11.526], ["tower", 11.562, 11.74], ["passes", 11.802, 12.169], ["twenty-four", 12.199, 12.526], ["metres,", 12.597, 13.137], ["a", 13.337, 13.409], ["refuge", 13.46, 13.766], ["area", 13.823, 14.052], ["comes", 14.087, 14.266], ["on", 14.313, 14.409], ["every", 14.456, 14.694], ["seventh", 14.73, 14.98], ["floor", 15.016, 15.194], ["you", 15.23, 15.337], ["live", 15.366, 15.48], ["on.", 15.552, 15.766], ["Here's", 15.937, 16.694], ["why.", 16.766, 17.052], ["In", 17.252, 17.823], ["a", 17.859, 17.894], ["fire,", 17.98, 18.45], ["the", 18.502, 18.609], ["stairs", 18.67, 19.037], ["fill", 19.066, 19.18], ["with", 19.223, 19.394], ["smoke", 19.454, 19.752], ["faster", 19.823, 20.252], ["than", 20.28, 20.394], ["people", 20.425, 20.609], ["can", 20.662, 20.823], ["get", 20.859, 20.966], ["down.", 21.037, 21.394], ["So", 21.594, 22.119], ["you", 22.154, 22.261], ["don't", 22.279, 22.476], ["run", 22.529, 22.69], ["thirty", 22.731, 22.976], ["floors.", 23.047, 23.547], ["You", 23.672, 24.047], ["go", 24.094, 24.19], ["down", 24.219, 24.333], ["a", 24.404, 24.476], ["few,", 24.547, 24.927], ["step", 25.104, 25.333], ["into", 25.361, 25.476], ["open", 25.519, 25.69], ["air...", 25.779, 26.159], ["and", 26.359, 26.413], ["wait", 26.456, 26.627], ["for", 26.645, 26.699], ["rescue.", 26.77, 27.34], ["And", 27.54, 27.553], ["the", 27.571, 27.625], ["builder", 27.661, 27.911], ["doesn't", 27.946, 28.196], ["lose.", 28.296, 28.768], ["Up", 28.958, 29.339], ["to", 29.363, 29.411], ["four", 29.468, 29.696], ["percent", 29.75, 30.125], ["of", 30.172, 30.268], ["the", 30.303, 30.411], ["floor", 30.446, 30.625], ["area", 30.682, 30.911], ["it", 30.958, 31.053], ["serves", 31.115, 31.482], ["is", 31.529, 31.625], ["free", 31.696, 31.982], ["of", 32.029, 32.125], ["FSI.", 32.232, 32.768], ["But", 32.968, 33.664], ["it", 33.688, 33.736], ["can", 33.771, 33.878], ["never", 33.914, 34.093], ["be", 34.14, 34.236], ["sold.", 34.307, 34.647], ["Never", 34.807, 35.521], ["locked.", 35.593, 36.063], ["Never", 36.247, 37.021], ["turned", 37.052, 37.236], ["into", 37.278, 37.45], ["a", 37.521, 37.593], ["flat.", 37.664, 37.944], ["So", 38.144, 38.906], ["that", 38.934, 39.049], ["empty", 39.096, 39.334], ["floor", 39.382, 39.62], ["isn't", 39.674, 39.906], ["missing.", 39.959, 40.477], ["It's", 40.677, 41.51], ["waiting.", 41.537, 41.837]];
+const BEATS=[0.448, 1.075, 1.702, 2.329, 2.956, 3.583, 4.21, 4.814, 5.441, 6.067, 6.694, 7.321, 7.948, 8.575, 9.202, 9.829, 10.456, 11.083, 11.687, 12.314, 12.941, 13.568, 14.194, 14.821, 15.448, 16.075, 16.702, 17.329, 17.956, 18.583, 19.21, 19.837, 20.441, 21.068, 21.695, 22.321, 22.948, 23.575, 24.202, 24.829, 25.456, 26.083, 26.71, 27.337, 27.941, 28.591, 29.218, 29.845, 30.448, 31.075, 31.702, 32.329, 32.956, 33.583, 34.21, 34.837, 35.464, 36.091, 36.718, 37.345, 37.972, 38.575, 39.202, 39.829, 40.433, 41.06, 41.687, 42.314, 42.941, 43.568, 44.195];
+const S=document.getElementById('s');
+const CO='#E63B2E',IV='#FFFFFF',NV='#0D0D0F';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;const OST=END;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(13,13,15,.9) 0%,rgba(13,13,15,.55) 17%,rgba(13,13,15,0) 30%';
+const GB=(a)=>GTOP+`,rgba(13,13,15,0) ${a}%,rgba(13,13,15,.82) ${a+16}%,rgba(13,13,15,.96) ${a+28}%,#0D0D0F 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+const HOOKEV=wt('law');
+// ================= SCENES (look A Newsroom Red: near-black #0D0D0F, white, one red #E63B2E; Inter 900 caps, Plex Mono kickers) =================
+const BG='#0D0D0F';const KC='#FFD2CC';
+const L15=x=>Math.max(1.55,x); // D41: no text before 1.5 s
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(13,13,15,0) ${y+140}px,rgba(13,13,15,0) ${y+h-220}px,${BG} ${y+h}px)`);return b};
+const num=(p,css)=>mk(p,'H ts',css+';opacity:0','');
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.innerHTML=f(p);return p};
+// recurring device: a thin red "refuge" bracket that locks onto the open floor
+const heroBox=(sc,ox,oy,pos)=>box(sc,'h1',ox||540,oy||800,pos||'50% 50%');
+// 1. HOOK: bright white tower, open empty floor with sky through it; slow tilt up toward the gap from frame 0; line spoken from 0 s; text from 1.55 s
+add(0,sc=>{const b=heroBox(sc,540,760);b.im.style.filter='brightness(1.06) saturate(1.06) contrast(1.03)';mk(sc,'sh','background:linear-gradient(180deg,rgba(13,13,15,.88) 0%,rgba(13,13,15,.6) 8%,rgba(13,13,15,0) 17%)');const g=mk(sc,'sh','background:'+GB(48)+';opacity:0');
+ const k=T(sc,'K ts','left:72px;top:1236px;color:'+KC,[['●',1.55,'c'],['Why',1.55],['India',1.55],['looks',1.55],['like',1.55],['this',1.55],['#4',1.55]]);
+ const h=T(sc,'H ts','left:70px;top:1284px;width:940px;font-size:112px',[['An',L15(wt('an'))],['empty',L15(wt('empty'))],['floor.',L15(wt('floor'))],['\n'],['By',wt('by')],['law.',wt('law'),'hl',1]]);
+ const br=corners(sc,110,650,970,1150,60,7);
+ return t=>{const sk=shake(t,HOOKEV,6);const p=eio(t/3.4);b.style.transform=`translate(${sk}px,0) scale(${1.2+.05*p}) translateY(${-150+40*p}px)`;g.style.opacity=cl((t-1.3)/.3);rv(k,t);rv(h,t);crn(br,t,HOOKEV+.05)}});
+// 2. Hero close on the gap, push-in. "No flats. No walls."
+add(wt('no')-.1,sc=>{const b=heroBox(sc,540,820);b.im.style.filter='brightness(1.06) saturate(1.06) contrast(1.03)';mk(sc,'sh','background:'+GB(56));
+ const b0=wt('no')-.1;
+ const h=T(sc,'H ts','left:70px;top:1270px;width:940px;font-size:126px',[['No',wt('no')],['flats.',wt('flats'),'hl'],['\n'],['No',wt('no',2)],['walls.',wt('walls'),'hl']]);
+ return t=>{b.style.transform=`scale(${1.9+.16*eio(t/2.6)}) translateY(${20-30*eio(t/2.6)}px)`;rv(h,t)}},true);
+// 3. Inside the open floor (AI), framed panel, slow push. "Just columns and air."
+add(wt('just')-.1,sc=>{const b=panel(sc,'r2',260,980,'50% 50%',540,490);
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('just'),'c'],['Inside',wt('just')],['the',wt('just')],['empty',wt('just')],['floor',wt('just')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:940px;font-size:112px',[['Just',wt('just')],['columns',wt('columns')],['\n'],['and',wt('and')],['air.',wt('air'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.04+.1*eio(t/3)}) translateX(${-20+30*eio(t/3)}px)`;rv(k,t);rv(h,t)}},true);
+// 4. Real Mumbai supertall, tilt up. "It's not unfinished."
+add(wt("it's")-.1,sc=>{const b=box(sc,'sup',540,700,'50% 40%');b.im.style.filter='brightness(1.08) saturate(1.04)';mk(sc,'sh','background:'+GB(54));
+ const b0=wt("it's")-.1;
+ const h=mk(sc,'H ts','left:70px;top:1270px;width:940px;font-size:118px;opacity:0','Not');
+ const u=mk(sc,'H ts','left:70px;top:1390px;font-size:118px;opacity:0;background:linear-gradient(#E63B2E,#E63B2E) left 54%/0% 14px no-repeat','unfinished.');
+ return t=>{b.style.transform=`scale(${1.1+.04*eio(t/2.4)}) translateY(${70-90*eio(t/2.4)}px)`;fade(h,t,wt('not')-b0,.2,20);fade(u,t,wt('unfinished')-b0,.2,20);u.style.backgroundSize=`${eo((t-(wt('unfinished')-b0+.35))/.28)*100}% 14px`}},true);
+// 5. Real Mumbai towers (framed). "In Maharashtra, once a tower passes twenty-four metres,"
+add(wt('in')-.1,sc=>{const b=box(sc,'byc',540,600,'50% 30%');b.im.style.filter='brightness(1.06) saturate(1.04)';mk(sc,'sh','background:'+GB(52));
+ const b0=wt('in')-.1;
+ const tg=mk(sc,'tag','left:72px;top:1160px;opacity:0','Maharashtra rule');
+ const k=T(sc,'K ts','left:72px;top:1240px;color:'+KC,[['Once',wt('once')],['a',wt('once')],['tower',wt('tower',2)],['passes',wt('passes')]]);
+ const n=num(sc,'left:62px;top:1290px;font-size:250px;letter-spacing:-.04em');
+ const tn=wt('twenty-four')-b0;
+ return t=>{b.style.transform=`scale(${1.12+.08*eio(t/3.4)})`;fade(tg,t,.05,.2,10);rv(k,t);cnt(n,t,tn,.55,p=>`${Math.round(24*p)}<span style="font-size:.5em"> m</span>`);n.style.color=t>tn+.6?'#E63B2E':'#fff'}},true);
+// 6. Cutaway: every 7th floor lit red (AI), full section, push. "a refuge area comes on every seventh floor you live on."
+add(wt('a',2)-.1,sc=>{const b=box(sc,'c4',540,700,'50% 30%');b.im.style.filter='brightness(1.12) saturate(1.05)';mk(sc,'sh','background:'+GB(58));
+ const b0=wt('a',2)-.1;
+ const k=T(sc,'K ts','left:72px;top:1300px;color:'+KC,[['●',wt('refuge'),'c'],['A',wt('refuge')],['refuge',wt('refuge')],['area',wt('area')]]);
+ const h=T(sc,'H ts','left:70px;top:1350px;width:940px;font-size:112px',[['Every',wt('every')],['7th',wt('seventh'),'hl',1],['\n'],['floor',wt('floor',2)]]);
+ return t=>{b.style.transform=`scale(${1.02+.1*eio(t/3.6)}) translateY(${-10*eio(t/3.6)}px)`;rv(k,t);rv(h,t)}},true);
+// 7. Stairwell filling with smoke (AI), wide, push. "Here's why. In a fire, the stairs fill with smoke"
+add(wt("here's")-.1,sc=>{const b=box(sc,'s3',540,900,'50% 50%');b.im.style.filter='brightness(1.22) saturate(1.02) contrast(1.02)';mk(sc,'sh','background:'+GB(54));
+ const b0=wt("here's")-.1;
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('fire'),'c'],['In',wt('in',2)],['a',wt('a',3)],['fire',wt('fire')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:940px;font-size:108px',[['Smoke',wt('smoke'),'hl',1],['\n'],['fills',wt('fill')],['the',wt('stairs')],['stairs',wt('stairs')]]);
+ const q=mk(sc,'H ts','left:70px;top:1300px;width:940px;font-size:140px;opacity:0','Why?');
+ return t=>{b.style.transform=`scale(${1.1+.12*eio(t/4)})`;const tf=wt('in',2)-b0-.05;q.style.opacity=t<tf?cl((t-.05)/.15):0;rv(k,t);rv(h,t)}},true);
+// 8. Smoke close (AI crop), slow drift up. "faster than people can get down."
+add(wt('faster')-.1,sc=>{const b=box(sc,'s3',560,1180,'50% 50%');b.im.style.filter='brightness(1.2) saturate(1.02)';mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1300px;width:960px;font-size:92px',[['Faster',wt('faster'),'hl'],['than',wt('than')],['\n'],['people',wt('people')],['can',wt('can')],['get',wt('get')],['down.',wt('down')]]);
+ return t=>{b.style.transform=`scale(${2.0+.14*eio(t/2.6)}) translateY(${30-40*eio(t/2.6)}px)`;rv(h,t)}},false);
+// 9. Cutaway again, close on two lit floors: the escape. "So you don't run thirty floors. You go down a few,"
+add(wt('so')-.1,sc=>{const b=box(sc,'c4',540,1000,'50% 30%');b.im.style.filter='brightness(1.14) saturate(1.05)';mk(sc,'sh','background:'+GB(58));
+ const b0=wt('so')-.1;
+ const h=mk(sc,'H ts','left:70px;top:1190px;width:940px;font-size:100px;opacity:0',"Don't run <span style=\"background:linear-gradient(#E63B2E,#E63B2E) left 54%/0% 14px no-repeat\" id=\"r30\">30</span> floors.");
+ const u=mk(sc,'H ts','left:70px;top:1410px;width:940px;font-size:100px;opacity:0','Go down <span class="hl">a few.</span>');
+ const ar=svg(sc,'opacity:0','<path d="M960 420 L960 900 M920 860 L960 905 L1000 860" stroke="#E63B2E" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>');
+ return t=>{const tg=wt('go')-b0;b.style.transform=`scale(${1.7+.12*eio(t/4)}) translateY(${-60+60*eio(t/4)}px)`;fade(h,t,wt('run')-b0-.05,.2,20);const s=h.querySelector('span');s.style.backgroundSize=`${eo((t-(wt('thirty')-b0+.2))/.25)*100}% 14px`;fade(u,t,tg,.2,20);ar.style.opacity=cl((t-tg)/.2);ar.style.transform=`translateY(${(t>tg?eio((t-tg)/1.2):0)*80}px)`}},true);
+// 10. Inside the refuge floor, push to the railing and the city: "step into open air... and wait for rescue." (tell-a-friend core)
+add(wt('step')-.1,sc=>{const b=panel(sc,'r2',260,980,'85% 50%',800,490);
+ const b0=wt('step')-.1;
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('step'),'c'],['Step',wt('step')],['into',wt('into')],['open',wt('open')],['air',wt('air',2)]]);
+ const st=mk(sc,'stamp','left:70px;top:1300px;opacity:0;font-size:118px;color:#fff;background:rgba(230,59,46,.22)','WAIT.');
+ const u=T(sc,'M ts','left:70px;top:1470px;width:940px',[['for',wt('for')],['rescue',wt('rescue'),'hl']]);
+ return t=>{b.im.style.transform=`scale(${1.3+.22*eio(t/3.6)})`;rv(k,t);const tw=wt('wait')-b0;if(t>=tw)slam(st,t,tw,1.7,-3);else st.style.opacity=0;rv(u,t)}},true);
+// 11. Cutaway, single refuge floor close: "And the builder doesn't lose. Up to four percent ... is free of FSI."
+add(wt('and',3)-.1,sc=>{const b=box(sc,'c4',540,820,'50% 30%');b.im.style.filter='brightness(1.14) saturate(1.05)';mk(sc,'sh','background:'+GB(52));
+ const b0=wt('and',3)-.1;
+ const k=T(sc,'K ts','left:72px;top:1130px;color:'+KC,[['The',wt('the',2)],['builder',wt('builder')],["doesn't",wt("doesn't")],['lose',wt('lose')]]);
+ const k2=T(sc,'M ts','left:70px;top:1110px;color:#fff',[['Up',wt('up')],['to',wt('to')]]);
+ const n=num(sc,'left:58px;top:1180px;font-size:250px;letter-spacing:-.04em');
+ const u=T(sc,'H ts','left:70px;top:1430px;width:940px;font-size:92px',[['free',wt('free')],['of',wt('of',2)],['FSI',wt('fsi'),'hl',1]]);
+ const tn=wt('four')-b0;
+ return t=>{b.style.transform=`scale(${2.5+.18*eio(t/4)})`;rv(k,t,wt('up')-b0-.2);rv(k2,t);cnt(n,t,tn,.5,p=>`${Math.round(4*p)}%`);n.style.color=t>tn+.55?'#E63B2E':'#fff';rv(u,t)}},true);
+// 12. Bricked-in refuge floor with a padlocked door (AI): "But it can never be sold."
+add(wt('but')-.1,sc=>{const b=box(sc,'w5',600,900,'50% 50%');b.im.style.filter='brightness(1.18) saturate(1.02)';mk(sc,'sh','background:'+GB(54));
+ const b0=wt('but')-.1;
+ const tg=mk(sc,'tagw','left:72px;top:1220px;opacity:0','Not allowed');
+ const h=T(sc,'H ts','left:70px;top:1290px;width:940px;font-size:120px',[['Never',wt('never')],['sold.',wt('sold'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.12+.1*eio(t/2.4)})`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+// 13. Padlock close: "Never locked."
+add(wt('never',2)-.1,sc=>{const b=box(sc,'w5',573,1170,'50% 50%');b.im.style.filter='brightness(1.2) saturate(1.02)';mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1290px;width:940px;font-size:120px',[['Never',wt('never',2)],['locked.',wt('locked'),'hl',1]]);
+ const br=corners(sc,466,480,756,770,50,6);
+ return t=>{b.style.transform=`translateY(-150px) scale(${2.4+.2*eio(t/1.6)})`;rv(h,t);crn(br,t,.15)}},false);
+// 14. Real tower facade (Mumbai), slow pan: "Never turned into a flat."
+add(wt('never',3)-.1,sc=>{const b=panel(sc,'mnt',200,1160,'50% 50%',540,580);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:940px;font-size:112px',[['Never',wt('never',3)],['a',wt('a',5)],['flat.',wt('flat'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.06+.08*eio(t/2.4)}) translateX(${20-40*eio(t/2.4)}px)`;rv(h,t)}},true);
+// 15. Loop: back to the frame-0 tower. "So that empty floor isn't missing. It's waiting."
+add(wt('so',2)-.1,sc=>{const b=heroBox(sc,540,760);b.im.style.filter='brightness(1.06) saturate(1.06) contrast(1.03)';mk(sc,'sh','background:linear-gradient(180deg,rgba(13,13,15,.88) 0%,rgba(13,13,15,.6) 8%,rgba(13,13,15,0) 17%)');mk(sc,'sh','background:'+GB(46));/*loop*/
+ const b0=wt('so',2)-.1;
+ const k=T(sc,'M ts','left:70px;top:1140px;width:960px;font-size:66px;color:#fff',[['That',wt('that')],['empty',wt('empty',2)],['floor',wt('floor',4)],["isn't",wt("isn't")],['missing',wt('missing')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:960px;font-size:124px',[["It's",wt("it's",2)],['waiting.',wt('waiting'),'hl',1]]);
+ const tg=mk(sc,'tagw','left:72px;top:1462px;opacity:0','Why India looks like this · #5 next');
+ const br=corners(sc,110,650,970,1150,60,7);
+ return t=>{const p=eio(t/3);b.style.transform=`scale(${1.36-.11*p}) translateY(${-150+0*p}px)`;rv(k,t);rv(h,t);fade(tg,t,wt('waiting')-b0+.3,.25,14);crn(br,t,wt('waiting')-b0)}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation, not a real building.';const REAL='Real photo: Mumbai / Unsplash.';const FINE=[[0,''],[1.4,AIL],[SC[3].t0,REAL],[SC[4].t0,REAL+' '+'Maharashtra rule, as summarised by Square Yards, Nov 2024.'],[SC[5].t0,AIL+' Maharashtra rule, as summarised by Square Yards, Nov 2024.'],[SC[6].t0,AIL+' No fire shown. Why: Piramal Realty, Jul 2025; NBC 2016 (Housing.com).'],[SC[8].t0,AIL],[SC[10].t0,AIL+' Up to 4% of the habitable floor area it serves (Piramal Realty, Jul 2025).'],[SC[11].t0,AIL+' Not allowed: sold, locked, walled in (Piramal Realty, Jul 2025).'],[SC[13].t0,REAL+' Building shown is not a refuge-floor case.'],[SC[14].t0,AIL+' Education only, not advice.'],[END-1.8,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';s.sc.style.opacity=1;
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,wt('twenty-four'),wt('seventh'),wt('wait'),wt('four'),wt('flat')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;scenes[scenes.length-1].sc.style.opacity=1-cl(fo*1.4);document.getElementById('brand').style.opacity=1-fo;
+};
+</script></body></html>
