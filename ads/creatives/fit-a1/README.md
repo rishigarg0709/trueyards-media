@@ -24,3 +24,6 @@ Rishi 23:27 to 23:33: plots "400 se 4,000 gaj" (Rishi's figure), "NH-152D se sir
 
 ## v6 (27 Nov 00:35): Rohtak and door fixed
 Rishi 00:12: "Rohtak and door not pronounced correctly". Both words are now written in Devanagari for the voice (रोहतक, दूर), take a1v6-vo-tara-2. Same file name FIT-A1-v4-final.mp4 replaced. Rule: Hindi place names and Hindi words that look like English words go to the voice in Devanagari.
+
+## v7 (27 Nov 09:30)
+Rishi 09:00: English WhatsApp outro in a modern premium look; "percent" and "152-D" not said right. Voice now spells "twenty five percent", "seventy five percent", "sixty percent" and "N H one fifty two D"; voice close "To know more, tap the WhatsApp button below!"; new end card: blurred footage, FIT logo, spaced eyebrow, "Your factory's address.", glass WhatsApp card "Chat with us on WhatsApp / Tap the button below to know more" with a pulsing green edge and chevrons. Rule: write numbers, percents and road codes out in words for the voice.
