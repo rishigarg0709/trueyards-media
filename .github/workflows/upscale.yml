@@ -1,0 +1,59 @@
+name: upscale
+on:
+  push:
+    paths: ['upscale/job.json']
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency: {group: upscale, cancel-in-progress: false}
+jobs:
+  frames:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: upscale, sparse-checkout-cone-mode: false}
+      - run: |
+          mkdir -p fr && ffmpeg -v error -i $(python3 -c "import json;print(json.load(open('upscale/job.json'))['src'])") -start_number 0 fr/f%04d.png && ls fr | wc -l
+      - uses: actions/upload-artifact@v4
+        with: {name: src-frames, path: fr, retention-days: 3}
+  up:
+    needs: frames
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix: {chunk: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]}
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: upscale, sparse-checkout-cone-mode: false}
+      - uses: actions/download-artifact@v4
+        with: {name: src-frames, path: fr}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Real-ESRGAN x4 on this machine's frames
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q spandrel pillow numpy
+          curl -sSL -o RealESRGAN_x4plus.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
+          N=$(ls fr | wc -l); IDS=$(python3 -c "print(','.join(str(i) for i in range(${{ matrix.chunk }}, $N, 20)))")
+          python3 upscale/upscale.py fr up "$IDS"
+      - uses: actions/upload-artifact@v4
+        with: {name: "up-${{ matrix.chunk }}", path: up, retention-days: 3, compression-level: 0}
+  pack:
+    needs: up
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: "upscale\nlibrary/web", sparse-checkout-cone-mode: false}
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'up-*', merge-multiple: true, path: up}
+      - name: Loop and encode
+        run: |
+          pip install -q pillow numpy
+          python3 upscale/pack.py
+      - name: Commit to library/web
+        run: |
+          N=$(python3 -c "import json;print(json.load(open('upscale/job.json'))['name'])")
+          mkdir -p library/web/$N && cp out/* library/web/$N/
+          git config user.name "upscale"; git config user.email "upscale@users.noreply.github.com"
+          git add --sparse library/web/$N && git commit -q -m "upscale: $N 4K loop (Real-ESRGAN x4)"
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done
