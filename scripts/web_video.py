@@ -22,7 +22,7 @@ def list_models(t):
         rows += [f"{m['name']} | {','.join(m.get('supportedGenerationMethods', []))}" for m in j.get("models", [])]
         tok = j.get("nextPageToken")
         if not tok: break
-    open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); return f"{len(rows)} models"
+    open(f"{OUT}/{t['name']}.txt", "w").write("\n".join(rows)); print("\n".join(r for r in rows if "veo" in r.lower())); return f"{len(rows)} models"
 
 def _img(p):
     return {"bytesBase64Encoded": base64.b64encode(open(p, "rb").read()).decode(), "mimeType": "image/png" if p.endswith(".png") else "image/jpeg"}
