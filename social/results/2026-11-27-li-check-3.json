@@ -1,0 +1,19 @@
+{
+ "op": "li_check",
+ "ran_at": "2026-11-27T08:06:43.044044Z",
+ "result": {
+  "alt": {
+   "v2_org": "HTTP 401",
+   "v2_userinfo": "HTTP 401",
+   "acl": "HTTP 401"
+  },
+  "ok": false,
+  "name": null,
+  "token_len": 350,
+  "token_shape": "AQ...",
+  "error": {
+   "error": "HTTP 401",
+   "body": "{\"status\":401,\"code\":\"AUTHENTICATION_FAILED\",\"message\":\"Could not authenticate\"}"
+  }
+ }
+}
