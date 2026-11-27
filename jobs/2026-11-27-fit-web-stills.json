@@ -1,0 +1,105 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-hero",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/estate-model.jpg",
+   "jobs/refs/fit-web/site-plan-d5.jpg",
+   "jobs/refs/fit-web/style-fit-c.jpg"
+  ],
+  "prompt": "Hero shot, three-quarter view from above: a large photoreal architect's scale model of an integrated industrial township standing on a cut block of earth with visible soil layers, the block resting on an ivory table in a cream studio. Follow the layout logic of the attached site plan: a long diagonal main road along one edge with a secured entrance plaza, an industrial zone of matte navy factory sheds on wide roads with tiny trailers, a residential zone of rows of white modern villas with parks, a small commercial block of three-storey shop-office buildings on the main road, a clubhouse with a swimming pool and sports courts, green parks with walking tracks and a long golf strip of lawn. Match the material and finish of the attached estate model, but in the ivory studio of the attached ad. Model centred slightly right, empty cream space on the left third. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-top",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/site-plan-d5.jpg",
+   "jobs/refs/fit-web/estate-model.jpg"
+  ],
+  "prompt": "Straight top-down view of the same township scale model on an ivory table: the full planned layout readable like a living site plan, grid of plots and roads, navy factory roofs in the industrial zone, white villa roofs in the residential zone, green parks and a long golf strip lawn, a pool, a diagonal main road along one edge. Calm, symmetric, editorial. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-industrial",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/style-fit-c.jpg"
+  ],
+  "prompt": "Close-up of one modern industrial factory shed scale model (matte navy cladding, white roof, loading dock with a white container truck backing in) standing on a printed site plan with fine black plot lines, a few tiny trees, wide road with lane markings. Same ivory studio and light as the attached ad. Model on the right half. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-residential",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/estate-model.jpg"
+  ],
+  "prompt": "Close-up of the residential zone of the township scale model: a row of white modern two-storey villas with flat roofs, small front lawns, tree-lined internal street, a neighbourhood park with a children's play area and benches, tiny families walking. Same ivory studio, warm late-afternoon light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-commercial",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-web/estate-model.jpg"
+  ],
+  "prompt": "Close-up of the commercial block of the township scale model: a row of modern three-storey shop-office buildings (ground floor glass shopfronts with warm interior glow, offices above) facing a wide 24 metre main road with front parking and tiny cars and pedestrians. Same ivory studio and light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-club",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [],
+  "prompt": "Close-up of a clubhouse scale model inside the township: a modern low clubhouse building with glass walls, a turquoise swimming pool with deck, a basketball court, a badminton court, a volleyball court, a children's multiplay area and trampoline, landscaped lawn. Same ivory studio and light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-outdoor",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [],
+  "prompt": "Close-up of the township's landscaped park on the scale model: a winding jogging track, a yoga lawn, a gazebo, cabana seating, a water fountain, a flower tunnel arch covered in tiny pink flowers, lawn mounds, a sand pit, a small sculpture, and a long manicured golf strip lawn beyond. Same ivory studio and soft light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-entrance",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [],
+  "prompt": "Close-up of the township entrance on the scale model: a grand secured entrance plaza with a modern gate canopy and boom barriers, a small police post, a bus and taxi stand bay, an EV charging station with tiny cars plugged in, a common parking area, slim CCTV poles, all on a wide main road. Same ivory studio and light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-infra",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [],
+  "prompt": "Close-up of the township's utility zone on the scale model: an electrical sub-station with transformers and a fenced yard, a sewage treatment plant with round clarifier tanks and a water recycling unit, a fire station bay, underground utility trench shown in a neat cut-away section beside a wide road with a heavy trailer. Same ivory studio and light. Ultra-premium photoreal architectural scale model photography, Apple product-page aesthetic. Warm ivory and cream studio: soft beige wall, ivory paper, soft diffused window daylight from the left, gentle long shadows, shallow depth of field, muted palette of ivory, navy, warm grey and natural green, subtle champagne highlights. The model is a physical architect's model with crisp miniature detail (matte navy factory sheds, white villas, glass, tiny trees, tiny trucks and cars), tilt-shift realism. Generous empty negative space for headline text. Absolutely no text, no letters, no numbers, no logos, no watermarks, no signage words anywhere in the image."
+ }
+]
