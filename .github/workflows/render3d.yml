@@ -1,0 +1,62 @@
+name: render3d
+on:
+  push:
+    paths: ['render3d/*/job.json']
+  workflow_dispatch:
+    inputs:
+      model: {description: 'folder under render3d', default: 'fit'}
+concurrency: {group: render3d, cancel-in-progress: true}
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix: {chunk: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]}
+    steps:
+      - uses: actions/checkout@v4
+        with: {sparse-checkout: render3d, sparse-checkout-cone-mode: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - name: Install Blender as a Python module
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxrender1 libxxf86vm1 libxfixes3 libxi6 libxkbcommon0 libsm6 libgl1 libegl1 >/dev/null
+          pip install -q bpy==5.3.0
+      - name: Render this machine's frames
+        env: {MODEL: "${{ github.event.inputs.model || 'fit' }}", CHUNK: "${{ matrix.chunk }}"}
+        run: |
+          cd render3d/$MODEL
+          ARGS=$(python3 -c "import json;j=json.load(open('job.json'));n=j['frames'];c=int('$CHUNK');print(f\"--frames {n} --w {j['w']} --h {j['h']} --samples {j['samples']} --start_deg {j.get('start_deg',0)} --only \"+','.join(str(i) for i in range(c,n,20)))")
+          echo "$ARGS"
+          python3 build.py --layout layout.json --out frames $ARGS 2>&1 | grep -E "^rendered|Error|Traceback|line [0-9]" || true
+          ls frames | wc -l
+      - uses: actions/upload-artifact@v4
+        with: {name: "frames-${{ matrix.chunk }}", path: "render3d/${{ github.event.inputs.model || 'fit' }}/frames/*.png", retention-days: 7}
+  pack:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'frames-*', merge-multiple: true, path: frames}
+      - name: WebP frames and contact sheet
+        run: |
+          pip install -q pillow
+          python3 - <<'PY'
+          import glob, os
+          from PIL import Image
+          fs = sorted(glob.glob('frames/f*.png')); print(len(fs), 'frames')
+          os.makedirs('out/d', exist_ok=True); os.makedirs('out/m', exist_ok=True)
+          thumbs = []
+          for f in fs:
+              im = Image.open(f).convert('RGBA'); n = os.path.basename(f)[:-4]
+              im.save(f'out/d/{n}.webp', 'WEBP', quality=80, method=6)
+              m = im.resize((900, round(900 * im.height / im.width)), Image.LANCZOS); m.save(f'out/m/{n}.webp', 'WEBP', quality=78, method=6)
+              thumbs.append(m.resize((225, round(225 * im.height / im.width))))
+          cols = 12; rows = (len(thumbs) + cols - 1) // cols
+          sh = Image.new('RGBA', (cols * 225, rows * thumbs[0].height), (243, 237, 227, 255))
+          for i, t in enumerate(thumbs): sh.alpha_composite(t, ((i % cols) * 225, (i // cols) * t.height))
+          sh.convert('RGB').save('out/sheet.jpg', quality=82)
+          PY
+          du -sh out/d out/m
+      - uses: actions/upload-artifact@v4
+        with: {name: "${{ github.event.inputs.model || 'fit' }}-webp", path: out, retention-days: 14}
