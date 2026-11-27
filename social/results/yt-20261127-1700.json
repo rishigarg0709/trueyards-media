@@ -1,0 +1,18 @@
+{
+ "op": "yt_comments",
+ "ran_at": "2026-11-27T11:40:33.057509Z",
+ "result": {
+  "comments": [
+   {
+    "comment_id": "Ugzbn4Hmy6U4JSk4N914AaABAg",
+    "video_id": "API4SFReq4E",
+    "author": "@uncanny5898",
+    "text": "\u2764\ud83c\udf89\ud83e\udd0d\u2764\ufe0f\ud83d\udc95\ud83d\udc9f\ud83d\udc9c\u2764\ufe0f\ud83d\udc95\u2764\ufe0f\u200d\ud83e\ude79\ud83d\udc9f",
+    "likes": 1,
+    "published": "2026-11-27T08:54:31Z",
+    "is_ours": false,
+    "we_replied": true
+   }
+  ]
+ }
+}
