@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-27 12:37",
+ "checked_at": "2026-11-27 12:47",
  "checks": [
   {
    "id": "gemini",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 4944,
+   "left": 4924,
    "burn_per_day": 1046,
    "runway_days": 4.7,
-   "detail": "About INR 4944 left, spending about INR 1046 a day"
+   "detail": "About INR 4924 left, spending about INR 1046 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "low",
-   "left": 119,
+   "left": 118,
    "burn_per_day": 1005,
    "runway_days": 0.1,
-   "detail": "About INR 119 left at INR 1005 a day"
+   "detail": "About INR 118 left at INR 1005 a day"
   },
   {
    "id": "elevenlabs",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 83559,
+   "left": 82929,
    "burn_per_day": 5000,
-   "runway_days": 16.7,
-   "detail": "83,559 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 16.6,
+   "detail": "82,929 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
