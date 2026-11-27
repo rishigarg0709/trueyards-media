@@ -1,5 +1,6 @@
 # 2026-11-28 carousel (17:13 IST): Why India looks like this #6: Why do so many Indian cities have a "Civil Lines"?
 
+- BATCH STATUS: CONFIRMED submitted 2026-11-27 17:03 UTC (22:33 IST): batches/pending/prep-2026-11-28-pro.json (3 Pro: midday-1, evening-1, carousel-1) and prep-2026-11-28.json (12 Flash). Real photos: fetch/2026-11-28.txt (d1128m-*, d1128e-*) into library/stock/; if a d1128 photo is missing at run time, re-run the fetch or use the shot's library alternative.
 - BATCH: ordered in prep-2026-11-28 (nightly planner, 2026-11-27 night IST). See the status line the planner adds below after the submit check. If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
 - Why a carousel today (Saturday): D61 point 2a (Rishi, 26 Nov 17:25: "keep one a day, do not kill"): one carousel every day in the 17:13 slot, in the winning lane, told as slides, never a rules checklist or money table; photo-led cover with the question on slide 1; last slide asks to follow the series. This overrides the Monday, Wednesday, Friday days in D54.
 - Series: "Why India looks like this #6" (midday #5, evening #7).

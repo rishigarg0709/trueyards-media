@@ -1,5 +1,6 @@
 # 2026-11-28 midday reel (12:23 IST): Why India looks like this #5: Why does every Indian city have half-built towers that stand for years?
 
+- BATCH STATUS: CONFIRMED submitted 2026-11-27 17:03 UTC (22:33 IST): batches/pending/prep-2026-11-28-pro.json (3 Pro: midday-1, evening-1, carousel-1) and prep-2026-11-28.json (12 Flash). Real photos: fetch/2026-11-28.txt (d1128m-*, d1128e-*) into library/stock/; if a d1128 photo is missing at run time, re-run the fetch or use the shot's library alternative.
 - BATCH: ordered in prep-2026-11-28 (nightly planner, 2026-11-27 night IST). See the status line the planner adds below after the submit check. If any image is missing at run time (check batches/failed/ and batches/pending/), generate only the missing ones with the normal image job.
 - Series: "Why India looks like this #5" (D61 point 3; #4 was the refuge floor, 27 Nov evening). Carousel today is #6, evening #7. If log.md shows the numbers moved, use the next free number.
 - Language test (D61 point 4): Hinglish voiceover (Tara), English on-screen text. Evening is English (Jessa).
