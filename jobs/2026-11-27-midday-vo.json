@@ -1,0 +1,32 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage-2026-11-27-midday"
+ },
+ {
+  "kind": "voice",
+  "name": "2026-11-27-midday-vo-1",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Mumbai ki purani buildings upar se kaali kyun hoti hain? Pollution? [pause] Nahi. Yahan saal mein lagbhag dhai metre baarish hoti hai. Aur uska zyada hissa... sirf chaar mahine mein. Ab dekho paani kahan behta hai. Chhat ki parapet se. Khidki ke ledge se. Seedha deewar par. Sabse kaali lines wahi hain. Kyunki yeh kaala rang... [whispers] zinda hai. Algae, cyanobacteria aur fungus. Geele plaster par ek poori film bana lete hain. Isiliye har society meeting mein wahi bahas: bas repaint kar do? Sirf paint kaafi nahi. Pehle growth saaf, cracks seal, parapet waterproof. Phir anti-algal paint. Send this to your society secretary. Agli baar koi building upar se kaali dikhe... yaad rakhna. Woh gandi nahi. Zinda hai.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "2026-11-27-midday-vo-2",
+  "voice_id": "P7vsEyTOpZ6YUTulin8m",
+  "model": "eleven_v3",
+  "text": "Mumbai ki purani buildings upar se kaali kyun hoti hain? Pollution? [pause] Nahi. Yahan saal mein lagbhag dhai metre baarish hoti hai. Aur uska zyada hissa... sirf chaar mahine mein. Ab dekho paani kahan behta hai. Chhat ki parapet se. Khidki ke ledge se. Seedha deewar par. Sabse kaali lines wahi hain. Kyunki yeh kaala rang... [whispers] zinda hai. Algae, cyanobacteria aur fungus. Geele plaster par ek poori film bana lete hain. Isiliye har society meeting mein wahi bahas: bas repaint kar do? Sirf paint kaafi nahi. Pehle growth saaf, cracks seal, parapet waterproof. Phir anti-algal paint. Send this to your society secretary. Agli baar koi building upar se kaali dikhe... yaad rakhna. Woh gandi nahi. Zinda hai.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
