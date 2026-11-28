@@ -1,5 +1,5 @@
 {
- "last_sha": "d0310b920eb8c11ee0aa5cbf20db4071200831e2",
+ "last_sha": "b078b39b77dda01faea3341cabc660d2f8bbb27a",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -112,25 +112,25 @@
   "adset:120255647446550547": {
    "name": "FIT W - Warm-up before WhatsApp",
    "status": "CAMPAIGN_PAUSED",
-   "budget": "12000",
+   "budget": "30000",
    "camp": "FIT Warm v1"
   },
   "adset:120255647397480547": {
    "name": "FIT U - Unreachable on WhatsApp",
-   "status": "PAUSED",
-   "budget": "12000",
+   "status": "ACTIVE",
+   "budget": "10000",
    "camp": "FIT CTWA Leads v2"
   },
   "adset:120255647304890547": {
    "name": "FIT R - Reminder after WhatsApp",
    "status": "ACTIVE",
-   "budget": "12000",
+   "budget": "10000",
    "camp": "FIT CTWA Leads v2"
   },
   "adset:120255645739620547": {
    "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
    "status": "ACTIVE",
-   "budget": "34600",
+   "budget": "55000",
    "camp": "FIT CTWA Leads v2"
   },
   "adset:120255620983010547": {
