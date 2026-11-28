@@ -1110,9 +1110,6 @@ OPS["archive_stale"] = op_archive_stale
 
 
 
-if __name__ == "__main__":
-    main()
-
 # ---------- region learning and targeting refresh (28 Nov 2026) ----------
 def op_region_report(req):
     """{"preset": "last_14d"}: spend, chats and cost per chat by region for this product's campaign (Meta's region breakdown)."""
@@ -1145,3 +1142,7 @@ def op_retarget_adset(req):
     r = call(s_["id"], {"targeting": t}, "POST")
     return {"result": r, "cities": [c["q"] for c in a["cities"]], **notes}
 OPS["retarget_adset"] = op_retarget_adset
+
+
+if __name__ == "__main__":
+    main()
