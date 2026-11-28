@@ -1,4 +1,3 @@
-2026-11-28 14:47 UTC
-fitweb-gate-model-a [image]: image ok
-fitweb-gate-model-b [image]: image ok
-fitweb-gate-model-c [image]: image ok
+2026-11-28 15:05 UTC
+fitweb-gate-c-logos-1 [image]: image ok
+fitweb-gate-c-logos-2 [image]: image ok
