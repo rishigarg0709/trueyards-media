@@ -40,7 +40,7 @@ var CFG = {
 
 // Town in the shared record -> district name as Google lists it in our targeting.
 var TOWN_TO_DISTRICT = {
-  'rohtak': 'Rohtak', 'kalanaur': 'Rohtak', 'meham': 'Rohtak', 'sampla': 'Rohtak', 'imt rohtak': 'Rohtak',
+  'rohtak': 'Rohtak', 'kalanaur': 'Rohtak', 'lakhan majra': 'Rohtak', 'meham': 'Rohtak', 'sampla': 'Rohtak', 'imt rohtak': 'Rohtak',
   'bahadurgarh': 'Jhajjar', 'jhajjar': 'Jhajjar', 'beri': 'Jhajjar', 'asaudha': 'Jhajjar',
   'sonipat': 'Sonipat', 'sonepat': 'Sonipat', 'kundli': 'Sonipat', 'rai': 'Sonipat', 'gohana': 'Sonipat', 'kharkhoda': 'Sonipat', 'murthal': 'Sonipat',
   'panipat': 'Panipat', 'samalkha': 'Panipat',
