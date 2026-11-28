@@ -1,0 +1,102 @@
+// recurring device: teal survey brackets + floor ticks on the skeleton; series tag
+const HOOKEV=wt('kyun');
+const KC='#BFF5E4';
+const num=(p,css)=>mk(p,'N ts',css+';opacity:0','');
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.textContent=f(p);return p};
+const fmt=n=>n.toLocaleString('en-IN');
+// 1. HOOK: bright skeleton tower between lived-in towers, push-in from frame 0; line spoken from 0 s; no text before 1.55 s
+const hookImg=(sc,ox,oy,pos)=>box(sc,'h1',ox||540,oy||520,pos||'50% 50%');
+add(0,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.1) saturate(1.06) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');const g=mk(sc,'sh','background:'+GB(52)+';opacity:0');
+ const tA=1.55;
+ const k=T(sc,'K ts','left:72px;top:1130px;color:'+KC,[['●',tA,'c'],['Why',tA],['India',tA],['looks',tA],['like',tA],['this',tA],['#5',tA]]);
+ const q=T(sc,'M ts','left:70px;top:1176px;width:980px;font-size:84px',[['Why',tA],['is',tA],['it',tA],['still',tA],['\n'],['half-built?',HOOKEV,'hl',1]]);
+ const br=corners(sc,262,330,820,1060,56,6);
+ return t=>{b.style.transform=`scale(${1.04+.16*eio(t/3.9)}) translateY(${36*eio(t/3.9)}px)`;g.style.opacity=cl((t-tA+.3)/.35);rv(k,t);rv(q,t);crn(br,t,HOOKEV-.1);b.style.marginLeft=shake(t,HOOKEV,6)+'px'}});
+// 2. Tight on the rusted rods of the top floor, tilt down; 4.8 lakh counts up from 'saat'
+add(wt('saat')-.08,sc=>{const b=hookImg(sc,540,300,'50% 20%');b.im.style.filter='brightness(1.1) saturate(1.06) contrast(1.04)';mk(sc,'sh','background:'+GB(50));
+ const b0=wt('saat')-.08;
+ const k=mk(sc,'K ts','left:72px;top:1100px;color:'+KC+';opacity:0','● 7 biggest cities · <span style="font:600 30px/1 FR;letter-spacing:0">May 2022</span>');
+ const n=num(sc,'left:56px;top:1150px;color:#fff;font-size:230px');
+ const u=T(sc,'M ts','left:440px;top:1250px;width:440px;font-size:96px',[['lakh',wt('lakh'),'hl',1]]);
+ const h=T(sc,'B ts','left:72px;top:1420px;width:900px;font-size:46px',[['homes',wt('ghar')],['stuck',wt('atke')],['or',wt('ya')],['badly',wt('bahut')],['delayed',wt('late')]]);
+ return t=>{b.style.transform=`scale(${2.0+.12*eio(t/4.8)}) translateY(${120-160*eio(t/4.8)}px)`;fade(k,t,.15,.25,10);cnt(n,t,.25,wt('lakh')-b0-.25,p=>(4.8*p).toFixed(1));rv(u,t);rv(h,t)}},true);
+// 3. Real building under construction with scaffolding, tilt up. "Aadhe sirf NCR mein."
+add(wt('aadhe')-.1,sc=>{const b=box(sc,'scaf',540,700,'50% 100%');b.im.style.filter='brightness(1.04) saturate(1.05)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(48));
+ const b0=wt('aadhe')-.1;
+ const h=T(sc,'H ts','left:70px;top:1200px;width:960px;font-size:118px',[['Half',wt('aadhe')],['in',wt('sirf')],['\n'],['NCR',wt('ncr'),'hl',1]]);
+ return t=>{b.style.transform=`scale(1.06)`;b.im.style.objectPosition=`50% ${100-60*eio(t/1.6)}%`;rv(h,t)}},true);
+// 4. Inside one empty floor: bare slab, weeds. "Aur twist? Jo projects poori tarah ruk gaye..."
+add(wt('aur')-.1,sc=>{const b=box(sc,'h2',540,900,'50% 50%');b.im.style.filter='brightness(1.12) saturate(1.04)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(50));
+ const h=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:120px',[['The',wt('twist')],['twist?',wt('twist'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1340px;color:'+KC,[['●',wt('poori'),'c'],['Projects',wt('poori')],['that',wt('poori')],['fully',wt('tarah')],['stopped',wt('ruk')]]);
+ return t=>{b.style.transform=`scale(${1.06+.12*eio(t/3)})`;rv(h,t);rv(k,t)}},true);
+// 5. The reveal: sale papers and keys on a table, the stalled tower outside. "unke lagbhag do-tihai flats pehle hi bik chuke the."
+add(wt('unke')-.1,sc=>{const b=box(sc,'h3',540,1100,'50% 60%');b.im.style.filter='brightness(1.12) saturate(1.05)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(54));
+ const b0=wt('unke')-.1;
+ const h=T(sc,'H ts','left:70px;top:1160px;width:960px;font-size:116px',[['About',wt('lagbhag',2)],['2',wt('do-tihai'),'c',1],['in',wt('do-tihai')],['3',wt('do-tihai'),'c',1],['flats',wt('flats')]]);
+ const st=mk(sc,'stamp','left:70px;top:1330px;opacity:0;font-size:96px','ALREADY SOLD');
+ return t=>{b.style.transform=`scale(${1.14-.1*eio(t/3)})`;rv(h,t);const tb=wt('bik')-b0;if(t>=tb)slam(st,t,tb,1.8,-4);else st.style.opacity=0;b.style.marginLeft=shake(t,tb,6)+'px'}},true);
+// 6. Real tall concrete skeleton, slow push. "Ghaziabad ka ek project. 6,253 flats."
+add(wt('ghaziabad')-.1,sc=>{const b=box(sc,'kite',600,700,'60% 40%');b.im.style.filter='brightness(1.06) saturate(1.04)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(46));
+ const b0=wt('ghaziabad')-.1;
+ const k=T(sc,'K ts','left:72px;top:1080px;color:'+KC,[['●',wt('ghaziabad'),'c'],['Ghaziabad',wt('ghaziabad')],['·',wt('project')],['one',wt('ek',2)],['project',wt('project')]]);
+ const n=num(sc,'left:56px;top:1130px;color:#fff;font-size:250px');
+ const u=T(sc,'M ts','left:72px;top:1390px;width:900px',[['flats,',wt('flats',2),'hl'],['stuck',wt('flats',2)]]);
+ return t=>{b.style.transform=`scale(${1.06+.1*eio(t/3.8)})`;rv(k,t);cnt(n,t,wt('chhe')-b0,wt('tirepan')-wt('chhe')+.3,p=>fmt(Math.round(6253*p)));rv(u,t)}},true);
+// 7. The mismatch, drawn over the hero: loan years vs project years
+add(wt('bank')-.1,sc=>{const b=hookImg(sc,540,700,'50% 50%');b.im.style.filter='brightness(.72) saturate(.95) blur(1px)';mk(sc,'sh','background:linear-gradient(180deg,rgba(11,26,21,.75),rgba(11,26,21,.35) 30%,rgba(11,26,21,.55) 55%,rgba(11,26,21,.92) 80%)');
+ const b0=wt('bank')-.1;const X0=70,U=100;
+ const ax=mk(sc,'',`left:${X0}px;top:1210px;width:${8*U}px;height:2px;background:rgba(255,255,255,.35)`);
+ const ticks=[...Array(9)].map((_,i)=>mk(sc,'K',`left:${X0+i*U-8}px;top:1226px;color:rgba(255,255,255,.7);font-size:22px;letter-spacing:0`,String(i)));
+ const yr=mk(sc,'K','left:'+(X0+8*U+20)+'px;top:1226px;color:rgba(255,255,255,.7);font-size:22px','years');
+ const l1=mk(sc,'K ts','left:72px;top:830px;color:'+KC+';opacity:0','● Bank loan');
+ const bar1=mk(sc,'',`left:${X0}px;top:880px;height:90px;width:0;background:#fff;border-radius:6px`);
+ const t1=mk(sc,'M ts','left:470px;top:880px;opacity:0;font-size:64px','3 to 4 yrs');
+ const l2=mk(sc,'K ts','left:72px;top:1010px;color:'+KC+';opacity:0','● Project');
+ const bar2=mk(sc,'',`left:${X0}px;top:1060px;height:90px;width:0;background:#28c39d;border-radius:6px`);
+ const t2=mk(sc,'M ts','left:70px;top:1270px;opacity:0;font-size:76px','Project: <span class="hl">7 to 8 years</span>');
+ const gap=mk(sc,'',`left:${X0+4*U}px;top:860px;width:${4*U}px;height:310px;border:4px dashed rgba(255,255,255,.55);border-left:none;opacity:0`);
+ return t=>{b.style.transform=`scale(${1.1+.05*eio(t/4.2)})`;const a1=wt('teen')-b0,a2=wt('saat',2)-b0;
+  fade(l1,t,a1-.2,.2,8);const p1=eo((t-a1)/.9);bar1.style.width=(p1*3.5*U)+'px';t1.style.left=(X0+p1*3.5*U+24)+'px';fade(t1,t,a1+.4,.2,0);
+  fade(l2,t,a2-.25,.2,8);const p2=eo((t-a2)/1.1);bar2.style.width=(p2*7.5*U)+'px';fade(t2,t,wt('aath',2)-b0,.25,16);gap.style.opacity=cl((t-(wt('lagte')-b0))/.3)*.9}},true);
+// 8. Weeds in the bare slab, push-in. "Paisa beech mein khatam. Phir case. Phir insolvency."
+add(wt('paisa')-.1,sc=>{const b=box(sc,'h2',300,1500,'30% 85%');b.im.style.filter='brightness(1.1) saturate(1.06)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(42));
+ const b0=wt('paisa')-.1;
+ const L=[['Money runs out.','khatam',''],['Court case.','case',''],['Insolvency.','insolvency','hl']].map((r,i)=>[mk(sc,'M ts',`left:70px;top:${1090+i*112}px;width:960px;font-size:80px;opacity:0`,r[2]?`<span class="hl">${r[0]}</span>`:r[0]),r[1]]);
+ return t=>{b.style.transform=`scale(${1.5+.14*eio(t/3)}) translateY(${-30*eio(t/3)}px)`;L.forEach(([e,wd])=>fade(e,t,wt(wd)-b0-.15,.2,18))}},true);
+// 9. Rent receipt book and calendar on a table. "Aur buyer? EMI bhi bharta hai... aur kiraya bhi."
+add(wt('aur',2)-.1,sc=>{const b=box(sc,'h4',900,1000,'78% 60%');b.im.style.filter='brightness(1.12) saturate(1.04)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(50));
+ const b0=wt('aur',2)-.1;
+ const k=T(sc,'K ts','left:72px;top:1150px;color:'+KC,[['●',wt('buyer'),'c'],['The',wt('buyer')],['buyer',wt('buyer')],['pays',wt('bharta')]]);
+ const h=T(sc,'H ts','left:70px;top:1200px;width:960px;font-size:150px',[['EMI',wt('emi'),'',1],['+',wt('kiraya')],['rent',wt('kiraya'),'hl',1]]);
+ const s=mk(sc,'B ts','left:72px;top:1390px;width:900px;opacity:0','every month, while they wait');
+ return t=>{b.style.transform=`scale(${1.4+.08*eio(t/3.4)}) translateX(${-20*eio(t/3.4)}px)`;rv(k,t);rv(h,t);fade(s,t,wt('bhi',2)-b0,.25,12)}},true);
+// 10. Impossible-real: the skeleton fills in, floor by floor, into the finished tower. "2019 mein sarkar ne ek fund banaya."
+add(wt('do',2)-.1,sc=>{const b=hookImg(sc,540,700);b.im.style.filter='brightness(1.1) saturate(1.06)';
+ const f=box(sc,'h5',540,700,'50% 50%');f.im.style.filter='brightness(1.06) saturate(1.06)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(52));
+ const b0=wt('do',2)-.1;const tw=wt('fund')-b0-.4;
+ const yv=mk(sc,'Y ts','left:64px;top:1080px;opacity:0;font-size:200px','2019');
+ const h=T(sc,'M ts','left:72px;top:1300px;width:960px',[['Govt',wt('sarkar')],['fund',wt('fund')],['for',wt('fund')],['stuck',wt('banaya')],['homes',wt('banaya'),'hl']]);
+ const k=mk(sc,'K ts','left:72px;top:1420px;color:'+KC+';opacity:0','● SWAMIH fund');
+ return t=>{const s=1.06+.08*eio(t/3);b.style.transform=`scale(${s})`;f.style.transform=`scale(${s})`;
+  const p=cl((t-tw)/1.6);const q=Math.min(1,(Math.floor(p*14)+eo((p*14)%1))/14);const e=(1-q)*112-6;f.style.webkitMaskImage=f.style.maskImage=`linear-gradient(180deg,transparent ${e}%,#000 ${e+6}%)`;
+  fade(yv,t,wt('unnees')-b0-.2,.3,20);rv(h,t);fade(k,t,wt('banaya')-b0,.25,10)}},true);
+// 11. Finished tower, closer; counter to 61,000 by Dec 2025
+add(wt('december')-.1,sc=>{const b=box(sc,'h5',560,620,'50% 35%');b.im.style.filter='brightness(1.08) saturate(1.06)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(48));
+ const b0=wt('december')-.1;
+ const k=mk(sc,'K ts','left:72px;top:1100px;color:'+KC+';opacity:0','● Finished by <span style="font:600 30px/1 FR;letter-spacing:0">Dec 2025</span>');
+ const n=num(sc,'left:56px;top:1150px;color:#fff;font-size:250px');
+ const u=T(sc,'M ts','left:72px;top:1410px;width:900px',[['homes',wt('ghar',2),'hl'],['completed',wt('poore')]]);
+ return t=>{b.style.transform=`scale(${1.5-.1*eio(t/3.8)})`;fade(k,t,.1,.25,10);cnt(n,t,.35,wt('hazaar',4)-b0-.35+.2,p=>'~'+fmt(Math.round(61000*p/100)*100));rv(u,t)}},true);
+// 12. Send card over the real skeleton photo, blurred. "Send this to anyone paying EMI on a flat that isn't ready."
+add(wt('send')-.1,sc=>{const b=box(sc,'kite',540,700,'60% 40%');b.im.style.filter='brightness(.95) saturate(1.04) blur(3px)';mk(sc,'sh','background:linear-gradient(180deg,rgba(11,26,21,.55),rgba(11,26,21,.72))');
+ const c=mk(sc,'',`left:90px;width:900px;top:600px;background:#fff;border-radius:40px;padding:54px 56px 50px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;color:#0B1A15;font-family:IN`,
+  `<div style="font:500 26px/1 PM;letter-spacing:.2em;color:#0E6B50;text-transform:uppercase">● Send this to</div><div style="font:800 78px/1.08 IN;letter-spacing:-.03em;margin-top:26px">anyone paying <span class="hl">EMI</span><br>on a flat that<br>isn't ready</div>`);
+ const ar=svg(sc,'opacity:0','<path d="M780 1150 L900 1150 M860 1110 L900 1150 L860 1190" stroke="#28c39d" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>');
+ return t=>{b.style.transform=`scale(${1.16-.08*eio(t/3)})`;const p=eb(cl((t-.05)/.5));c.style.opacity=cl((t-.05)/.2);c.style.transform=`translateY(${(1-p)*120}px) scale(${.95+.05*p})`;ar.style.opacity=cl((t-.5)/.2);ar.style.transform=`translateX(${8*Math.sin(t*6)}px)`}},false);
+// 13. Loop: back to the frame-0 skeleton. "Agli baar yeh dhaancha dikhe... yaad rakhna. Yeh khaali nahi hai. Kisi ka ghar hai."
+add(wt('agli')-.1,sc=>{const b=hookImg(sc);b.im.style.filter='brightness(1.1) saturate(1.06) contrast(1.03)';mk(sc,'sh','background:'+GTOP+')');mk(sc,'sh','background:'+GB(50));
+ const h=T(sc,'H ts','left:70px;top:1150px;width:960px;font-size:112px',[['Not',wt('khaali')],['empty.',wt('khaali')],['\n'],["Someone's",wt('kisi'),'hl',1],['\n'],['home.',wt('ghar',3),'hl',1]]);
+ const tg=mk(sc,'tagw','left:72px;top:1080px;opacity:0','Why India looks like this · #6 next');
+ const b0=wt('agli')-.1;
+ return t=>{b.style.transform=`scale(${1.26-.22*eio(t/5)}) translateY(${36-36*eio(t/5)}px)`;rv(h,t);fade(tg,t,wt('yaad')-b0,.25,14)}},true);
