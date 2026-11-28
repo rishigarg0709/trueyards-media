@@ -1,0 +1,28 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-gate-v7-1",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-v5-2.png",
+   "jobs/refs/fit-gate/site-plan.png"
+  ],
+  "prompt": "Create a new image. Image 1 is the current render: copy its camera angle, framing, miniature scale-model style, soft warm light and beige background exactly, and copy the whole gate area exactly as it is in image 1 (the canopy with FORTEASIA INDUSTRIAL TOWNSHIP lettering, the left guard block with glass cabin, FIT logo and its plaque, the right pillar with the Forteasia logo, exactly one boom barrier at the guard cabin, flags, grass, workers, the trucks, pickup and forklift at the gate, and the wide six-lane main road outside the gate with its T-junction and turn arrows). Image 2 is a top-down site plan: lay out the township behind the gate exactly like it. The township road goes straight in from the gate with its green median and trees and continues into the far distance, as in image 1. On the LEFT of the township road is ONE factory, on the RIGHT ONE warehouse. Both buildings stand with their long side PARALLEL to the township road, set back from it, and their main facade with the loading docks faces the township road, like shops lining a street, so that from this camera the viewer looks along the road and sees the dock facades of both buildings facing each other across the road. Between each building and the road is a paved truck yard joined to the road by a wide driveway. The factory has a saw-tooth roof with skylights and solar panels, a small office block at the front corner, roller-shutter bays with warm light, a truck backed into a bay, a forklift, pallets and workers. The warehouse has a row of loading docks, two open with warm light, a container truck at a dock, a forklift, pallets and workers. Nothing else in the township. Do not draw the plan's labels or colours, it is only a layout guide. No text other than the existing gate lettering and logos, no watermark."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-gate-v7-2",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-v5-2.png",
+   "jobs/refs/fit-gate/site-plan.png"
+  ],
+  "prompt": "Create a new image. Image 1 is the current render: copy its camera angle, framing, miniature scale-model style, soft warm light and beige background exactly, and copy the whole gate area exactly as it is in image 1 (the canopy with FORTEASIA INDUSTRIAL TOWNSHIP lettering, the left guard block with glass cabin, FIT logo and its plaque, the right pillar with the Forteasia logo, exactly one boom barrier at the guard cabin, flags, grass, workers, the trucks, pickup and forklift at the gate, and the wide six-lane main road outside the gate with its T-junction and turn arrows). Image 2 is a top-down site plan: lay out the township behind the gate exactly like it. The township road goes straight in from the gate with its green median and trees and continues into the far distance, as in image 1. On the LEFT of the township road is ONE factory, on the RIGHT ONE warehouse. Both buildings stand with their long side PARALLEL to the township road, set back from it, and their main facade with the loading docks faces the township road, like shops lining a street, so that from this camera the viewer looks along the road and sees the dock facades of both buildings facing each other across the road. Between each building and the road is a paved truck yard joined to the road by a wide driveway. The factory has a saw-tooth roof with skylights and solar panels, a small office block at the front corner, roller-shutter bays with warm light, a truck backed into a bay, a forklift, pallets and workers. The warehouse has a row of loading docks, two open with warm light, a container truck at a dock, a forklift, pallets and workers. Nothing else in the township. Do not draw the plan's labels or colours, it is only a layout guide. No text other than the existing gate lettering and logos, no watermark."
+ }
+]
