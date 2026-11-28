@@ -1,0 +1,16 @@
+{
+ "at": "2026-11-28 11:02",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": false,
+   "op": "autopilot.config",
+   "changes": true,
+   "error": "\"cfg\" must be an object",
+   "by": "Chief of Staff",
+   "at": "2026-11-28T05:32:15.725Z",
+   "http": 400
+  }
+ ],
+ "stopped": "Step 1 failed, the remaining 1 were not run"
+}
