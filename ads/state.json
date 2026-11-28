@@ -29,5 +29,11 @@
  },
  "campaign_id": "120255645738970547",
  "last_creatives_added": "2026-11-18",
- "launched_on": "2026-11-18"
+ "launched_on": "2026-11-18",
+ "meta_ramp": {
+  "at": null,
+  "level": 1020.0,
+  "ref": 130,
+  "ref_metric": "qualified lead"
+ }
 }
