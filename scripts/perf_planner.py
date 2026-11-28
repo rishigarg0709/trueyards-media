@@ -179,6 +179,14 @@ def plan(now=None):
            "evidence": {"window_days": win, "channels": ev, "meta_spend": spend, "lift": (summary or {}).get("lift"),
                         "summary": "ok" if summary else "unavailable"},
            "reasons": r1 + r2}
+    # One weekly focus and the Google budgets for every channel (D76): the WhatsApp autopilot, Meta and the Google
+    # coordination script (gads/fit-coordination.js) all read these. Kept from config/perf.json until the planner
+    # learns them from cross-channel results by district.
+    monday = d - datetime.timedelta(days=d.weekday())
+    if CFG.get("focus"):
+        out["focus"] = {**CFG["focus"], "week_of": str(monday)}
+    if CFG.get("google"):
+        out["google"] = CFG["google"]
     json.dump(out, open("perf/plan.json", "w"), indent=1)
     with open("perf/ledger.jsonl", "a") as f:
         f.write(json.dumps({"date": str(d), "total": total, "wa": wa, "meta": meta, "tactics": tactics, "channels": ev, "lift": (summary or {}).get("lift")}) + "\n")

@@ -72,7 +72,7 @@ function main() {
   var changes = [];
   var camps = fitCampaigns();
   camps.forEach(function (c) {
-    if (c.getName().indexOf(CFG.BID_CAMPAIGN_PREFIX) === 0) changes = changes.concat(setLocationBids(c, focus, avoid, proven));
+    if (c.targeting && c.getName().indexOf(CFG.BID_CAMPAIGN_PREFIX) === 0) changes = changes.concat(setLocationBids(c, focus, avoid, proven));
   });
   if (plan && plan.google) changes = changes.concat(applyBudgets(camps, plan.google));
 
@@ -131,7 +131,44 @@ function fitCampaigns() {
     var it = sel.withCondition("Name STARTS_WITH '" + CFG.CAMPAIGN_PREFIX + "'").withCondition("Status != REMOVED").get();
     while (it.hasNext()) list.push(it.next());
   });
-  return list;
+  return list.concat(demandGenCampaigns());
+}
+
+// Demand Gen campaigns (FIT Industry - YouTube) are not in AdsApp.campaigns() or videoCampaigns(), so read them with
+// GAQL and wrap them in the few methods this script uses (name, status, budget, yesterday's stats, bidding).
+// They target states, not districts, so they get no location bids (no targeting()).
+function demandGenCampaigns() {
+  var out = [];
+  var cid = AdsApp.currentAccount().getCustomerId().replace(/-/g, '');
+  var it = AdsApp.search("SELECT campaign.id, campaign.name, campaign.status, campaign.bidding_strategy_type, campaign_budget.resource_name, " +
+    "campaign_budget.amount_micros FROM campaign WHERE campaign.advertising_channel_type = 'DEMAND_GEN' AND campaign.status != 'REMOVED' " +
+    "AND campaign.name LIKE '" + CFG.CAMPAIGN_PREFIX + "%'");
+  while (it.hasNext()) {
+    (function (r) {
+      var id = r.campaign.id, budgetRn = r.campaignBudget.resourceName, amount = Number(r.campaignBudget.amountMicros) / 1e6;
+      out.push({
+        getName: function () { return r.campaign.name; },
+        isEnabled: function () { return r.campaign.status === 'ENABLED'; },
+        getBiddingStrategyType: function () { return r.campaign.biddingStrategyType; },
+        getBudget: function () {
+          return {
+            getAmount: function () { return amount; },
+            setAmount: function (v) {
+              AdsApp.mutate({ campaignBudgetOperation: { update: { resourceName: budgetRn, amountMicros: Math.round(v * 1e6) }, updateMask: 'amount_micros' } });
+              amount = v;
+            }
+          };
+        },
+        getStatsFor: function () {
+          var m = { cost: 0, impressions: 0, clicks: 0, conversions: 0 };
+          var s = AdsApp.search("SELECT metrics.cost_micros, metrics.impressions, metrics.clicks, metrics.conversions FROM campaign WHERE campaign.id = " + id + " AND segments.date DURING YESTERDAY");
+          if (s.hasNext()) { var x = s.next().metrics; m = { cost: Number(x.costMicros || 0) / 1e6, impressions: Number(x.impressions || 0), clicks: Number(x.clicks || 0), conversions: Number(x.conversions || 0) }; }
+          return { getCost: function () { return m.cost; }, getImpressions: function () { return m.impressions; }, getClicks: function () { return m.clicks; }, getConversions: function () { return m.conversions; } };
+        }
+      });
+    })(it.next());
+  }
+  return out;
 }
 
 function baseName(loc) { return String(loc.getName()).split(',')[0].trim(); }

@@ -72,6 +72,31 @@
   "summary": "ok"
  },
  "reasons": [
-  "Rishi 28 Nov: INR 3,000/day incl GST (2,540 before GST). WhatsApp 760, Meta 1,020 (discovery 550, warm-up 300, R 85, U 85); Google Search 420 and YouTube 340 by the Google Ads agent."
- ]
+  "Rishi 28 Nov: INR 3,000/day incl GST (2,540 before GST). WhatsApp 760, Meta 1,020 (discovery 550, warm-up 300, R 85, U 85); Google Search 420 and YouTube 340 by the Google Ads agent.",
+  "Chief of Staff 28 Nov 18:55: focus and google blocks added (D76, D77): Google Search 310 (category 225, brand 85) and YouTube 450 before GST."
+ ],
+ "focus": {
+  "districts": [
+   "Rohtak",
+   "Jhajjar",
+   "Bhiwani",
+   "Sonipat",
+   "Panipat",
+   "Hisar",
+   "Jind"
+  ],
+  "avoid": [
+   "Gurugram",
+   "Noida",
+   "South Delhi",
+   "West Delhi"
+  ],
+  "why": "Within about 90 minutes of the site, where FIT's qualified leads and site visits come from (Rohtak, Jind, Hisar, Charkhi Dadri, Bhiwani); Gurugram, Noida, South and West Delhi bring chats but no qualified lead yet.",
+  "week_of": "2026-11-30"
+ },
+ "google": {
+  "search_category_inr": 225,
+  "search_brand_inr": 85,
+  "youtube_inr": 450
+ }
 }

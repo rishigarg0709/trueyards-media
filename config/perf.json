@@ -36,5 +36,29 @@
  "_set_by_rishi": "17 Nov 2026: FIT, INR 1,500/day total; ads from the TrueYards Facebook page and Instagram.",
  "_tactics_note": "18 Nov: one prospecting ad set (P). Tactic budgets with no live audience flow back to prospecting in the daily run.",
  "_rishi_28nov": "Rishi, 28 Nov 2026: discovery, warm-up, and R and U on a little budget (about INR 100 a day each).",
- "_set_by_rishi_28nov": "Rishi 28 Nov 2026 11:07 IST: INR 3,000/day INCLUDING 18% GST (INR 2,540 before GST) across WhatsApp, Meta, Google Search and YouTube. This planner covers WhatsApp 760 + Meta 1,020 = 1,780 before GST; Google Search 420 and YouTube 340 (before GST) are run by the Google Ads agent (D71) until Google joins the planner. Meta: discovery 550, warm-up 300, R 85, U 85."
+ "_set_by_rishi_28nov": "Rishi 28 Nov 2026 11:07 IST: INR 3,000/day INCLUDING 18% GST (INR 2,540 before GST) across WhatsApp, Meta, Google Search and YouTube. This planner covers WhatsApp 760 + Meta 1,020 = 1,780 before GST; Google Search 420 and YouTube 340 (before GST) are run by the Google Ads agent (D71) until Google joins the planner. Meta: discovery 550, warm-up 300, R 85, U 85.",
+ "focus": {
+  "districts": [
+   "Rohtak",
+   "Jhajjar",
+   "Bhiwani",
+   "Sonipat",
+   "Panipat",
+   "Hisar",
+   "Jind"
+  ],
+  "avoid": [
+   "Gurugram",
+   "Noida",
+   "South Delhi",
+   "West Delhi"
+  ],
+  "why": "Within about 90 minutes of the site, where FIT's qualified leads and site visits come from (Rohtak, Jind, Hisar, Charkhi Dadri, Bhiwani); Gurugram, Noida, South and West Delhi bring chats but no qualified lead yet."
+ },
+ "google": {
+  "search_category_inr": 225,
+  "search_brand_inr": 85,
+  "youtube_inr": 450
+ },
+ "_google_note": "Rishi 28 Nov (D71, D77): Google share INR 760 a day before GST (about 900 incl GST): YouTube Demand Gen 450, Search 310 (category 225, brand 85). Applied daily by gads/fit-coordination.js inside its hard caps. Google joins the cost per qualified lead rebalance after its first 14 days (D71)."
 }
