@@ -1,0 +1,113 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0F1A17}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0F1A17;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0F1A17}
+.sc>*{position:absolute}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:900 108px/1.02 IN;letter-spacing:-.04em}
+.M{font:900 88px/1.05 IN;letter-spacing:-.035em}
+.K{font:500 28px/1.2 PM;letter-spacing:.2em;text-transform:uppercase;color:#28c39d}
+.w{display:inline-block;white-space:pre}
+.hl{background:#28c39d;color:#0F1A17;padding:0 .12em;border-radius:10px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(4,10,8,.85),0 1px 3px rgba(4,10,8,.6)}
+.big{font:200 300px/1 IN;letter-spacing:-.06em;color:#28c39d}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(255,255,255,.7)}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(15,26,23,.9);color:#fff}
+#flash{position:absolute;inset:0;background:#E9FFF7;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.06;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(4,10,8,.34) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#28c39d">@trueyards.in</div></div>
+<div id="fine"></div><div id="vig"></div><div id="flash"></div><img id="grain" src="img/grain.png">
+</div>
+<script>
+// Music-only reel: no voiceover. Every cut sits on a steady 120 BPM grid (beat 0.5 s, one card per 4 beats = 2 s) so any 100 to 120 BPM song fits (60 BPM songs hit every other beat).
+const BPM=120,BT=60/BPM,b=k=>+(k*BT).toFixed(3);
+const CARDS_END=b(40);const END=CARDS_END+2.3;
+const S=document.getElementById('s');
+const cl=(x,a=0,c=1)=>Math.max(a,Math.min(c,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks,t0=.06,st=BT/2)=>{const e=mk(p,cls,css);e.ts=[];let i=0;toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[1]?' '+k[1]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=t0+i*st*.5;s.pop=k[2];i++;e.ts.push(s)});return e};
+const rv=(e,t)=>{e.ts.forEach(s=>{const p=(t-s.t)/.16;const q=eo(p);s.style.opacity=cl(p*2);s.style.transform=s.pop?`scale(${.55+.45*eb((t-s.t)/.24)})`:`translateY(${(1-q)*28}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*5}px)`:'none'})};
+const shake=(t,a,amp=10)=>t>=a&&t<a+.4?Math.sin(t*97)*amp*(1-(t-a)/.4):0;
+const box=(p,src,ox,oy,pos,lift=0)=>{const bx=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:'+(-lift)+'px;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');bx.appendChild(i);return bx};
+const GB=a=>`linear-gradient(180deg,rgba(15,26,23,.66) 0%,rgba(15,26,23,.3) 9%,rgba(15,26,23,0) 17%,rgba(15,26,23,0) ${a}%,rgba(15,26,23,.8) ${a+14}%,rgba(15,26,23,.94) ${a+24}%,#0F1A17 100%)`;
+const SC=[];const add=(k,fn)=>SC.push({t0:b(k),fn});
+const TOP=1170;
+// 1. HOOK (beats 0-4): the sunken house, push-in from frame 0, question word by word
+add(0,sc=>{const bx=box(sc,'after',540,820,'50% 42%',200);mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Look'],['at'],['the'],['door']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['Why'],['is'],['this'],['house'],['\n'],['below',"hl",1],['the',"hl",1],['road?',"hl",1]],.02,.13);
+ return t=>{const sk=shake(t,b(2),6);bx.style.transform=`translate(${sk}px,0) scale(${1.03+.07*eo(t/2.1)})`;rv(k,t);rv(h,t)}});
+// 2. BEFORE (beats 4-8): same house, steps up
+add(4,sc=>{const bx=box(sc,'before',540,820,'50% 42%',200);mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Same'],['house,'],['years'],['ago']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['Steps'],['went'],['\n'],['up',"hl",1],['to'],['the'],['door.']]);
+ return t=>{bx.style.transform=`scale(${1.12-.05*eio(t/2.1)})`;rv(k,t);rv(h,t)}});
+// 3. relaying (beats 8-12)
+add(8,sc=>{const bx=box(sc,'s3',540,900,'50% 45%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Every'],['few'],['years']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['A'],['new'],['road'],['\n'],['goes'],['on',"hl",1],['top.',"hl",1]]);
+ return t=>{bx.style.transform=`translateX(${-30+55*eio(t/2.1)}px) scale(1.12)`;rv(k,t);rv(h,t)}});
+// 4. the layers (beats 12-16)
+add(12,sc=>{const bx=box(sc,'s2',540,700,'50% 40%',450);mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Under'],['the'],['road']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['The'],['old'],['layer'],['\n'],['often',"hl",1],['stays.',"hl",1]]);
+ return t=>{bx.style.transform=`scale(${1.04+.08*eio(t/2.1)})`;rv(k,t);rv(h,t)}});
+// 5. MONTAGE (beats 16-20): one cut per beat, +3 cm slams, the road climbs
+const MON=['s3','s2','before','after'];
+MON.forEach((src,i)=>add(16+i,sc=>{const bx=box(sc,src,540,900,'50% 45%',src.length>3&&src!=='s3'&&src!=='s2'?200:(src==='s2'?450:0));mk(sc,'sh','background:'+GB(50));
+ const n=mk(sc,'big ts',`left:60px;top:${TOP-40}px`,'+3 cm');
+ const k=T(sc,'K ts',`left:74px;top:${TOP+290}px;color:#fff`,[[['Again.','And again.','And again.','And again.'][i]]],.0,.1);
+ return t=>{const sk=shake(t,0,9);bx.style.transform=`translate(${sk}px,0) scale(${1.16-.04*i+.05*eo(t/.5)})`;n.style.transform=`scale(${.6+.4*eb(t/.18)})`;n.style.transformOrigin='0 50%';rv(k,t)}}));
+// 6. AFTER (beats 20-24)
+add(20,sc=>{const bx=box(sc,'after',540,1000,'50% 42%',200);mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Today']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['The'],['road'],['ate'],['\n'],['the',"hl",1],['steps.',"hl",1]]);
+ return t=>{bx.style.transform=`scale(${1.3-.18*eo(t/2.1)})`;rv(k,t);rv(h,t)}});
+// 7. TELL-A-FRIEND (beats 24-28, about 54%): 2+ ft counts up with a shake
+add(24,sc=>{const bx=box(sc,'s2',540,800,'50% 40%',450);mk(sc,'sh','background:'+GB(40));
+ const k=T(sc,'K ts',`left:74px;top:${TOP-250}px`,[['●'],['Chennai'],['survey,'],['2026']],.0,.1);
+ const n=mk(sc,'big ts',`left:56px;top:${TOP-205}px`,'0');
+ const h=T(sc,'M ts',`left:70px;top:${TOP+110}px;width:960px`,[['Some'],['homes'],['now'],['sit'],['\n'],['below',"hl",1],['the',"hl",1],['road.',"hl",1]],.5,.14);
+ return t=>{const sk=shake(t,.45,14);bx.style.transform=`translate(${sk}px,${sk*.5}px) scale(${1.2+.05*eio(t/2)})`;const p=eo(t/.45);n.textContent=p>=1?'2 ft+':(2*p).toFixed(1)+' ft';rv(k,t);rv(h,t)}});
+// 8. flood (beats 28-32)
+add(28,sc=>{const bx=box(sc,'s4',540,900,'50% 45%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Every'],['monsoon']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['Rain'],['now'],['runs'],['\n'],['into',"hl",1],['the',"hl",1],['house.',"hl",1]]);
+ return t=>{bx.style.transform=`translateX(${35-60*eio(t/2.1)}px) scale(1.12)`;rv(k,t);rv(h,t)}});
+// 9. the fix (beats 32-36)
+add(32,sc=>{const bx=box(sc,'s5',540,900,'50% 45%');mk(sc,'sh','background:'+GB(52));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Madras'],['High'],['Court,'],['2018']],.0,.1);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['Scrape',"hl",1],['first.',"hl",1],['\n'],['Then'],['relay.']]);
+ return t=>{bx.style.transform=`scale(${1.14-.06*eio(t/2.1)})`;rv(k,t);rv(h,t)}});
+// 10. loop back to the hook house (beats 36-40), held under the follow card
+add(36,sc=>{const bx=box(sc,'after',540,820,'50% 42%',200);mk(sc,'sh','background:'+GB(56));
+ const k=T(sc,'K ts',`left:74px;top:${TOP}px`,[['●'],['Chennai'],['made'],['it'],['the'],['rule,'],['Oct'],['2026']],.0,.08);
+ const h=T(sc,'H ts',`left:70px;top:${TOP+48}px;width:960px`,[['Now'],['look'],['at'],['\n'],['your',"hl"],['street.',"hl",1]]);
+ return t=>{bx.style.transform=`scale(${1.16-.13*eo(t/2.1)})`;rv(k,t);rv(h,t)}});
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,t1:i+1<SC.length?SC[i+1].t0:END}});
+window.DUR=END;
+const AIL='AI visualisation.';
+const FINE=[[0,AIL],[b(8),AIL+' IRC norms: mill the old layer, relay at the same height (Citizen Matters, 2024).'],[b(16),AIL+' Contractors often remove under 1 cm and add over 3 cm (Citizen Matters, 2024).'],[b(24),AIL+' Arappor Iyakkam survey of 245 spots, Aug 2026: Mugalivakkam homes over 2 ft below the road (DT Next).'],[b(32),AIL+' Madras HC, Chitlapakkam case, 9 Mar 2018 (Citizen Matters).'],[b(36),AIL+' Greater Chennai Corporation circular, Oct 2026 (DT Next). Education only.']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach(s=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach(s=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';if(on)s.u(t-s.t0)});
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});document.getElementById('fine').textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0)fl=Math.max(fl,.16*Math.exp(-(t-s.t0)/.06))});
+ [b(24)+.45].forEach(e=>{if(t>=e)fl=Math.max(fl,.4*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ document.getElementById('fol').style.opacity=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.3))/.25));
+};
+</script></body></html>

@@ -1,0 +1,31 @@
+MUSIC-ONLY REEL, 28 Nov 2026: Why is this house below the road? (roads relaid without milling)
+Test: does a trending song lift reach vs our usual voiceover reels? Post manually in the Instagram app. Do not use the API.
+
+FILES
+- reel-silent.mp4  (22.3 s, no audio track; upload this and add the song in the app)
+- reel-guide.mp4   (same video with a quiet ElevenLabs music bed at 120 BPM; fallback, see option 3)
+- cover.jpg / cover-ig.jpg (set as the cover)
+- caption.txt (paste as is)
+
+TIMING GRID
+Every cut sits on a steady 120 BPM grid: one card every 4 beats (2.0 s), cuts at 0, 2, 4, 6, 8, then one cut per beat from 8.0 to 10.0 s ("+3 cm" montage), then 10, 12, 14, 16, 18 s; follow card from 20.5 s. Any song from 100 to 120 BPM with a steady beat fits; a 60 BPM song hits every other beat. The big reveal ("2 ft+ below the road") lands at 12.0 s, so a drop or chorus near there helps.
+
+3 SONG OPTIONS (top pick first)
+1) Time, Pink Floyd  [TOP PICK]
+   Why: it is THE before-and-after sound right now ("Time, then and now", about 5 lakh reels, Postdom 26 Nov; Dash Social 24 Nov; CreatorDB "then-and-now glow-up"). This reel is a then-and-now of the same house, so the sound tells viewers what kind of video it is before they read a word.
+   Start: keep Instagram's suggested highlight (the clip the trend uses); if you set it by hand, start where the drums and vocals come in ("Ticking away the moments", about 2:20 in the album version) and nudge so a drum hit sits on 0:00. Licensed track: shows for creator accounts; a business account may not see it (New Engen 27 Nov).
+2) Dilruba Dilnasheen, Rito Riba
+   Why: the fastest-growing sound on Instagram this week in our region (about 35 lakh reels, +1.8 lakh in 24 h, Kabo 27 Nov; also No. 2 on Virlo's 7-day list). A Hindi pop hook Indian viewers already know, so it can lift the first 3 seconds.
+   Start: at the hook (Instagram's suggested highlight), with a downbeat on the first frame.
+3) Royalty-free / business-safe: our own track (reel-guide.mp4) as original audio, or any upbeat track from Meta's Sound Collection / the Royalty-free tab in the app's music picker
+   Why: always available on a business account and safe forever (no muting later). Our track is a bright, playful pop pulse at 120 BPM, already on the grid.
+   Start: 0:00 (it is pre-aligned). If you pick a library track instead, choose one marked 100 to 120 BPM and start on a downbeat.
+
+Note: no trend list confirms business-account availability for options 1 and 2, and none publish BPM; check that the song shows in your picker and that the cuts feel on the beat in the preview.
+
+HOW TO POST
+Open Instagram > + > Reel > upload reel-silent.mp4 > Add audio (option 1, else 2, else 3) > set the start as above > Next > paste caption.txt > Edit cover > Add from camera roll > cover.jpg > Share as a normal reel on the main grid (Directive D54: no Trial).
+Best time: about 9 pm IST today. Today's evening reel goes out at 19:07, so 9 pm keeps a 2 h gap and stays in the evening window. If you post tomorrow instead, about 7 pm.
+
+Sources for the song data: postdom.com/blog/instagram-trends (26 Nov 2026), dashsocial.com/blog/trending-instagram-reels-songs (24 Nov), creatordb.app/free-tools/trending-instagram-audio (18 Nov), kabo.sh/tools/trending-instagram-audio (27 Nov), virlo.ai/instagram-trends (27 Nov), newengen.com/insights/instagram-trends (27 Nov), later.com/blog/instagram-reels-trends (27 Nov).
+Sources for the story: citizenmatters.in (Chitlapakkam HC order, 13 Mar 2018; "Rising streets and shrinking homes", 31 Jan 2024), dtnext.in (Arappor survey, 30 Aug 2026; GCC milling circular, 31 Oct 2026).
