@@ -1,5 +1,5 @@
 {
- "last_sha": "428fd0adfa825e3fff0faa4ed6e17ef3becf7cd4",
+ "last_sha": "d0bdd8c570f411f505d1713f1d8d710201b058e2",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -123,7 +123,7 @@
   },
   "adset:120255647304890547": {
    "name": "FIT R - Reminder after WhatsApp",
-   "status": "PAUSED",
+   "status": "ACTIVE",
    "budget": "12000",
    "camp": "FIT CTWA Leads v2"
   },
