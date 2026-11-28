@@ -1,5 +1,5 @@
 {
- "last_sha": "3a8fde9c005351d025207cbf34c9cd26f1ec9b21",
+ "last_sha": "428fd0adfa825e3fff0faa4ed6e17ef3becf7cd4",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -117,13 +117,13 @@
   },
   "adset:120255647397480547": {
    "name": "FIT U - Unreachable on WhatsApp",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "12000",
    "camp": "FIT CTWA Leads v2"
   },
   "adset:120255647304890547": {
    "name": "FIT R - Reminder after WhatsApp",
-   "status": "ACTIVE",
+   "status": "PAUSED",
    "budget": "12000",
    "camp": "FIT CTWA Leads v2"
   },
