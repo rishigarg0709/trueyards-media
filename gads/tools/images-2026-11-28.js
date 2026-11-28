@@ -8,6 +8,7 @@ var IMGS = ['fit-gate-191x1', 'fit-gate-1x1', 'fit-drone-191x1', 'fit-drone-1x1'
   'fit-ai-factory-night-191x1', 'fit-ai-model-township-191x1'];
 function main() {
   var ops = [];
+  dgFix();
   IMGS.forEach(function (f, i) {
     var rn = C + '/assets/-' + (20 + i);
     var b = UrlFetchApp.fetch(RAW + f + '.jpg').getBlob().getBytes();
@@ -25,4 +26,23 @@ function main() {
   while (it.hasNext()) { var r = it.next(); Logger.log('DG ' + JSON.stringify({ c: r.campaign.id, g: r.adGroup.name, gs: r.adGroup.status, s: r.adGroupAd.status, ap: r.adGroupAd.policySummary.approvalStatus, ad: r.adGroupAd.ad })); }
   var v = AdsApp.search("SELECT asset.resource_name, asset.youtube_video_asset.youtube_video_id, asset.name FROM asset WHERE asset.type = 'YOUTUBE_VIDEO'");
   while (v.hasNext()) { var a = v.next().asset; Logger.log('VID ' + a.resourceName + ' ' + a.youtubeVideoAsset.youtubeVideoId + ' ' + a.name); }
+}
+
+// Fix the existing YouTube Demand Gen ad (campaign 24568159373, built earlier today): YouTube tracking on the landing URL
+// (so /fit tags leads GY, not GS), selling line instead of the HRERA-number line (D77), and the FIT logo.
+function dgFix() {
+  var it = AdsApp.search("SELECT ad_group_ad.ad.resource_name, ad_group_ad.ad.demand_gen_video_responsive_ad.descriptions FROM ad_group_ad WHERE campaign.id = 24568159373");
+  var logo = C + '/assets/-90', ops = [];
+  ops.push({ assetOperation: { create: { resourceName: logo, name: 'FIT logo square', type: 'IMAGE', imageAsset: { data: Utilities.base64Encode(UrlFetchApp.fetch(RAW + 'fit-logo-1x1.jpg').getBlob().getBytes()) } } } });
+  while (it.hasNext()) {
+    var r = it.next(), d = r.adGroupAd.ad.demandGenVideoResponsiveAd.descriptions || [];
+    d = d.filter(function (x) { return x.text.indexOf('HRERA-PKL') < 0; }).map(function (x) { return { text: x.text }; });
+    d.unshift({ text: 'Industrial plots from 400 to 4,000 sq yd. Get the site plan on WhatsApp in minutes.' });
+    ops.push({ adOperation: { update: { resourceName: r.adGroupAd.ad.resourceName,
+      finalUrls: ['https://trueyards.in/fit?utm_source=youtube&utm_medium=video&utm_campaign=fit_youtube_demandgen'],
+      demandGenVideoResponsiveAd: { descriptions: d.slice(0, 5), logoImages: [{ asset: logo }] } },
+      updateMask: 'final_urls,demand_gen_video_responsive_ad.descriptions,demand_gen_video_responsive_ad.logo_images' } });
+  }
+  var res = AdsApp.mutateAll(ops, { partialFailure: true });
+  res.forEach(function (x, i) { Logger.log('DGFIX op ' + i + ': ' + (x.isSuccessful() ? 'OK' : 'ERROR ' + x.getErrorMessages().join('; '))); });
 }
