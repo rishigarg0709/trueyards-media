@@ -1,0 +1,73 @@
+{
+ "op": "tactics_setup",
+ "ran_at": "2026-11-28T05:10:04.295519Z",
+ "result": {
+  "warm_campaign": "120255647260270547",
+  "R": {
+   "adset": {
+    "id": "120255647304890547"
+   },
+   "deleted": [
+    "R11 reel 3 things HQ",
+    "R10 reel Hinglish HQ: mil gaya"
+   ],
+   "R10 reel Hinglish HQ: mil gaya": {
+    "ad": {
+     "id": "120255847271150547"
+    },
+    "creative_id": "2329471637787254",
+    "video_id": "2251924768726615",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "R12 reel A1: factory ka address": {
+    "ad": {
+     "id": "120255847273310547"
+    },
+    "creative_id": "892616857242877",
+    "video_id": "2396243641134101",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "U": {
+   "adset": {
+    "id": "120255647397480547"
+   },
+   "deleted": [
+    "U10 reel Hinglish HQ: mil gaya",
+    "U11 reel 3 things HQ"
+   ],
+   "U10 reel Hinglish HQ: mil gaya": {
+    "ad": {
+     "id": "120255847275040547"
+    },
+    "creative_id": "1053427434434359",
+    "video_id": "1713927006809650",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "U12 reel A1: factory ka address": {
+    "ad": {
+     "id": "120255847278450547"
+    },
+    "creative_id": "1171468101912265",
+    "video_id": "1158757316570597",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  }
+ }
+}

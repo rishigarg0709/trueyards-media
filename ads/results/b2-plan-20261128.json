@@ -1,0 +1,82 @@
+{
+ "op": "plan",
+ "ran_at": "2026-11-28T05:10:28.240888Z",
+ "result": {
+  "date": "2026-11-28",
+  "status": "ok",
+  "product": "FIT",
+  "total": 1500,
+  "wa_budget_inr": 705,
+  "meta_budget_inr": 795,
+  "meta_tactics": {
+   "prospect_A": 366,
+   "prospect_B": 0,
+   "warm": 159,
+   "remind": 135,
+   "unreach": 135
+  },
+  "meta_shares": {
+   "prospect_A": 0.46,
+   "prospect_B": 0.0,
+   "warm": 0.2,
+   "remind": 0.17,
+   "unreach": 0.17
+  },
+  "warm": {
+   "cellsPerDay": 1,
+   "waveSize": 400,
+   "leadDays": 4
+  },
+  "evidence": {
+   "window_days": 14,
+   "channels": {
+    "wa": {
+     "spend": 11655,
+     "leads": 274,
+     "qualified": 11,
+     "visit_planned": 6,
+     "visit_done": 2,
+     "booked": 0,
+     "per_visit": 1942,
+     "per_qualified": 1060,
+     "per_lead": 43
+    },
+    "meta": {
+     "spend": 6036,
+     "leads": 108,
+     "qualified": 15,
+     "visit_planned": 13,
+     "visit_done": 8,
+     "booked": 0,
+     "per_visit": 464,
+     "per_qualified": 402,
+     "per_lead": 56
+    }
+   },
+   "meta_spend": {
+    "other": {
+     "spend": 5139.09,
+     "chats": 59
+    },
+    "remind": {
+     "spend": 586.85,
+     "chats": 0
+    },
+    "unreach": {
+     "spend": 309.78,
+     "chats": 1
+    }
+   },
+   "lift": {
+    "all": {},
+    "zone": {},
+    "industry": {}
+   },
+   "summary": "ok"
+  },
+  "reasons": [
+   "Moved INR 300/day to Meta: INR 464 vs 1942 per site visit planned.",
+   "Warm-up lift not measurable yet (needs 3 waves a week old); shares held."
+  ]
+ }
+}

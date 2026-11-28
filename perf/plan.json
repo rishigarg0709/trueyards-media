@@ -1,16 +1,16 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-28",
  "status": "ok",
  "product": "FIT",
  "total": 1500,
- "wa_budget_inr": 1005,
- "meta_budget_inr": 495,
+ "wa_budget_inr": 705,
+ "meta_budget_inr": 795,
  "meta_tactics": {
-  "prospect_A": 247,
+  "prospect_A": 366,
   "prospect_B": 0,
-  "warm": 124,
-  "remind": 124,
-  "unreach": 0
+  "warm": 159,
+  "remind": 135,
+  "unreach": 135
  },
  "meta_shares": {
   "prospect_A": 0.46,
@@ -28,40 +28,40 @@
   "window_days": 14,
   "channels": {
    "wa": {
-    "spend": 9135,
-    "leads": 235,
-    "qualified": 48,
-    "visit_planned": 34,
+    "spend": 11655,
+    "leads": 274,
+    "qualified": 11,
+    "visit_planned": 6,
     "visit_done": 2,
     "booked": 0,
-    "per_visit": 269,
-    "per_qualified": 190,
-    "per_lead": 39
+    "per_visit": 1942,
+    "per_qualified": 1060,
+    "per_lead": 43
    },
    "meta": {
-    "spend": 4209,
-    "leads": 88,
-    "qualified": 20,
-    "visit_planned": 15,
+    "spend": 6036,
+    "leads": 108,
+    "qualified": 15,
+    "visit_planned": 13,
     "visit_done": 8,
     "booked": 0,
-    "per_visit": 281,
-    "per_qualified": 210,
-    "per_lead": 48
+    "per_visit": 464,
+    "per_qualified": 402,
+    "per_lead": 56
    }
   },
   "meta_spend": {
    "other": {
-    "spend": 4023.24,
-    "chats": 41
+    "spend": 5139.09,
+    "chats": 59
    },
    "remind": {
-    "spend": 118.61,
+    "spend": 586.85,
     "chats": 0
    },
    "unreach": {
-    "spend": 67.14,
-    "chats": 0
+    "spend": 309.78,
+    "chats": 1
    }
   },
   "lift": {
@@ -72,7 +72,7 @@
   "summary": "ok"
  },
  "reasons": [
-  "Cost per site visit planned is close (WhatsApp INR 269, Meta INR 281); no shift.",
+  "Moved INR 300/day to Meta: INR 464 vs 1942 per site visit planned.",
   "Warm-up lift not measurable yet (needs 3 waves a week old); shares held."
  ]
 }
