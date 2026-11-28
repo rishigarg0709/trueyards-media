@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-28 11:32",
+ "checked_at": "2026-11-28 12:08",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "ok",
-   "left": 1599,
+   "left": 1547,
    "burn_per_day": 300,
-   "runway_days": 5.3,
-   "detail": "About INR 1599 left of the INR 2000 top-up on 2026-11-27",
-   "spent_today": 147
+   "runway_days": 5.2,
+   "detail": "About INR 1547 left of the INR 2000 top-up on 2026-11-27",
+   "spent_today": 198
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 3937,
+   "left": 3924,
    "burn_per_day": 1052,
    "runway_days": 3.7,
-   "detail": "About INR 3937 left, spending about INR 1052 a day"
+   "detail": "About INR 3924 left, spending about INR 1052 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "check",
-   "left": -734,
+   "left": -801,
    "burn_per_day": 760,
-   "runway_days": -1.0,
-   "detail": "Estimate is INR -734, below zero while sends still go through: enter the real balance in the inbox app"
+   "runway_days": -1.1,
+   "detail": "Estimate is INR -801, below zero while sends still go through: enter the real balance in the inbox app"
   },
   {
    "id": "elevenlabs",
@@ -45,10 +45,10 @@
    "link": "https://elevenlabs.io/app/subscription",
    "action": "Buy extra credits or upgrade the ElevenLabs plan, or wait for the monthly reset",
    "status": "ok",
-   "left": 82387,
+   "left": 81975,
    "burn_per_day": 5000,
-   "runway_days": 16.5,
-   "detail": "82,387 credits left, resets 2026-12-16 11:59 IST"
+   "runway_days": 16.4,
+   "detail": "81,975 credits left, resets 2026-12-16 11:59 IST"
   },
   {
    "id": "apify",
