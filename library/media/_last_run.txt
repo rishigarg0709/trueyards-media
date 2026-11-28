@@ -1,7 +1,2 @@
-2026-11-28 10:13 UTC
-fit-r3-fix-a1 [voice]: voice ok
-fit-r3-fix-b1 [voice]: voice ok
-fit-r3-fix-a2 [voice]: voice ok
-fit-r3-fix-b2 [voice]: voice ok
-fit-r3-fix-a3 [voice]: voice ok
-fit-r3-fix-b3 [voice]: voice ok
+2026-11-28 11:59 UTC
+2026-11-28-carousel-3b [image]: image ok
