@@ -120,6 +120,15 @@
      "prefill": "Hi, FIT industrial plot ki details bhejiye."
     },
     {
+     "video": "ads/creatives/fit-reel-03-vo-hg-v2.mp4",
+     "thumb": "ads/creatives/fit-reel-03-vo-hg-thumb.jpg",
+     "name": "P10b reel Hinglish: mil gayi",
+     "headline": "Rohtak mein industrial plot",
+     "text": "Factory ke liye land? Forteasia Industrial Township, Kalanaur, Rohtak. 400 se 4,000 sq yd ke plots, 18 m aur 24 m wide roads, NH-152D se 10 min. HRERA-PKL-ROH-653-2025, www.haryanarera.gov.in. Neeche button par click karke aur jaaniye.",
+     "prefill": "Hi, FIT industrial plot ki details bhejiye.",
+     "_added": "2026-11-28 by Rishi (D75): fixed P10, runs next to P10 until it proves itself"
+    },
+    {
      "video": "ads/creatives/fit-reel-04-three-things-hq.mp4",
      "thumb": "ads/creatives/fit-reel-04-three-things-thumb.jpg",
      "name": "P11 reel 3 things HQ",
@@ -361,7 +370,7 @@
    "audience_window": "warm",
    "ads_from": "P",
    "max_frequency_7d": 3,
-   "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask. Ads: P10 and P12 only (Rishi, 28 Nov 2026)."
+   "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask. Ads: P10 and P12 only (Rishi, 28 Nov 2026). Plus P10b (mil gayi) from 28 Nov."
   },
   "R": {
    "name": "FIT R - Reminder after WhatsApp",
@@ -369,7 +378,7 @@
    "kind": "ctwa",
    "audience_window": "remind",
    "ads_from": "P",
-   "_note": "Warm halves after their WhatsApp first touch (D0 to D0+10). Small budget, P10 and P12 (Rishi, 28 Nov 2026)."
+   "_note": "Warm halves after their WhatsApp first touch (D0 to D0+10). Small budget, P10 and P12 (Rishi, 28 Nov 2026). Plus P10b (mil gayi) from 28 Nov."
   },
   "U": {
    "name": "FIT U - Unreachable on WhatsApp",
@@ -379,7 +388,7 @@
     "FITU|unreachable"
    ],
    "ads_from": "P",
-   "_note": "Pool numbers WhatsApp cannot deliver to (131026). Small budget, P10 and P12 (Rishi, 28 Nov 2026)."
+   "_note": "Pool numbers WhatsApp cannot deliver to (131026). Small budget, P10 and P12 (Rishi, 28 Nov 2026). Plus P10b (mil gayi) from 28 Nov."
   }
  },
  "tester": {
