@@ -15,7 +15,8 @@ function setup() {
   ScriptApp.getProjectTriggers().forEach(function (t) { ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger('run').timeBased().everyMinutes(15).create();
   PropertiesService.getScriptProperties().deleteAllProperties();
-  Logger.log('GA4 property: ' + ga4Property() + ' | Search Console site: ' + gscSite());
+  Logger.log('GA4 property: ' + ga4Property());
+  try { Logger.log('Search Console site: ' + gscSite()); } catch (e) { Logger.log('Search Console not reachable yet: ' + e); }
   run(true);
 }
 
@@ -137,11 +138,14 @@ function runOp(ss, op, a) {
 function writeData(ss) {
   var stamp = Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm');
   var m = ['sessions', 'totalUsers', 'newUsers', 'engagedSessions', 'keyEvents'];
-  put(ss, 'GA4_Daily', ['date'].concat(m), ga4Run(['date'], m, '30daysAgo', 'today', 100).sort().reverse(), stamp);
-  put(ss, 'GA4_Sources', ['source_medium', 'campaign'].concat(m), ga4Run(['sessionSourceMedium', 'sessionCampaignName'], m, '7daysAgo', 'today', 500), stamp);
-  put(ss, 'GA4_Pages', ['page', 'views', 'sessions', 'keyEvents'], ga4Run(['pagePath'], ['screenPageViews', 'sessions', 'keyEvents'], '7daysAgo', 'today', 500), stamp);
-  put(ss, 'GSC_Queries', ['query', 'clicks', 'impressions', 'ctr_pct', 'position'], gscRun(['query'], day(-30), day(-2), 1000), stamp);
-  put(ss, 'GSC_Pages', ['page', 'clicks', 'impressions', 'ctr_pct', 'position'], gscRun(['page'], day(-30), day(-2), 500), stamp);
+  var jobs = [
+    function () { put(ss, 'GA4_Daily', ['date'].concat(m), ga4Run(['date'], m, '30daysAgo', 'today', 100).sort().reverse(), stamp); },
+    function () { put(ss, 'GA4_Sources', ['source_medium', 'campaign'].concat(m), ga4Run(['sessionSourceMedium', 'sessionCampaignName'], m, '7daysAgo', 'today', 500), stamp); },
+    function () { put(ss, 'GA4_Pages', ['page', 'views', 'sessions', 'keyEvents'], ga4Run(['pagePath'], ['screenPageViews', 'sessions', 'keyEvents'], '7daysAgo', 'today', 500), stamp); },
+    function () { put(ss, 'GSC_Queries', ['query', 'clicks', 'impressions', 'ctr_pct', 'position'], gscRun(['query'], day(-30), day(-2), 1000), stamp); },
+    function () { put(ss, 'GSC_Pages', ['page', 'clicks', 'impressions', 'ctr_pct', 'position'], gscRun(['page'], day(-30), day(-2), 500), stamp); }
+  ];
+  jobs.forEach(function (f, i) { try { f(); } catch (e) { Logger.log('data job ' + i + ': ' + e); } });
 }
 
 function put(ss, name, head, rows, stamp) {
