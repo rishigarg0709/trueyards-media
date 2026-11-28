@@ -230,7 +230,7 @@ function main() {
   processQueue(ss, state);
   var hour = Number(Utilities.formatDate(new Date(), OPS.TZ, 'H'));
   if (hour === OPS.COORD_HOUR || state.coordination) coordinationMain();
-  try { writeData(ss); } catch (e) { Logger.log('Data tabs not written: ' + e); }
+  writeData(ss);
 }
 
 // ---------------------------------------------------------------- queue
@@ -384,17 +384,23 @@ function activity(ss, by, detail) {
 
 // ---------------------------------------------------------------- data tabs
 function writeData(ss) {
+  [dataCampaigns, dataAds, dataKeywords, dataTerms].forEach(function (f) {
+    try { f(ss); } catch (e) { Logger.log(f.name + ' not written: ' + e); }
+  });
+}
+
+function dataCampaigns(ss) {
   var stamp = Utilities.formatDate(new Date(), OPS.TZ, 'yyyy-MM-dd HH:mm');
   var ranges = ['TODAY', 'YESTERDAY', 'LAST_7_DAYS', 'LAST_30_DAYS'], camp = {};
   ranges.forEach(function (rg) {
     var it = AdsApp.search('SELECT campaign.id, campaign.name, campaign.status, campaign.advertising_channel_type, ' +
       'campaign_budget.amount_micros, metrics.cost_micros, metrics.impressions, metrics.clicks, metrics.conversions, ' +
-      'metrics.video_views FROM campaign WHERE campaign.status != REMOVED AND segments.date DURING ' + rg);
+      'metrics.video_trueview_views FROM campaign WHERE campaign.status != REMOVED AND segments.date DURING ' + rg);
     while (it.hasNext()) {
       var x = it.next(), id = x.campaign.id;
       var c = camp[id] || (camp[id] = { name: x.campaign.name, status: x.campaign.status, type: x.campaign.advertisingChannelType,
         budget: micros(x.campaignBudget && x.campaignBudget.amountMicros), m: {} });
-      c.m[rg] = [micros(x.metrics.costMicros), num(x.metrics.impressions), num(x.metrics.clicks), num(x.metrics.conversions), num(x.metrics.videoViews)];
+      c.m[rg] = [micros(x.metrics.costMicros), num(x.metrics.impressions), num(x.metrics.clicks), num(x.metrics.conversions), num(x.metrics.videoTrueviewViews)];
     }
   });
   // Campaigns with no traffic in a range do not come back for it; list them anyway.
@@ -414,7 +420,10 @@ function writeData(ss) {
     return r;
   });
   writeTable(ss, 'G_Campaigns', head, rows);
+}
 
+function dataAds(ss) {
+  var stamp = Utilities.formatDate(new Date(), OPS.TZ, 'yyyy-MM-dd HH:mm');
   table(ss, 'G_Ads', ['campaign', 'ad_group', 'ad_id', 'type', 'status', 'approval', 'ad_strength', 'final_url', 'spend_7d', 'impr_7d', 'clicks_7d', 'conv_7d', 'updated_at'],
     'SELECT campaign.name, ad_group.name, ad_group_ad.ad.id, ad_group_ad.ad.type, ad_group_ad.status, ad_group_ad.policy_summary.approval_status, ' +
     'ad_group_ad.ad_strength, ad_group_ad.ad.final_urls, metrics.cost_micros, metrics.impressions, metrics.clicks, metrics.conversions ' +
@@ -424,7 +433,10 @@ function writeData(ss) {
       (x.adGroupAd.ad.finalUrls || []).join(' '), micros(x.metrics.costMicros), num(x.metrics.impressions), num(x.metrics.clicks), num(x.metrics.conversions), stamp]; },
     'SELECT campaign.name, ad_group.name, ad_group_ad.ad.id, ad_group_ad.ad.type, ad_group_ad.status, ad_group_ad.policy_summary.approval_status, ' +
     'ad_group_ad.ad_strength, ad_group_ad.ad.final_urls FROM ad_group_ad WHERE ad_group_ad.status != REMOVED', 3);
+}
 
+function dataKeywords(ss) {
+  var stamp = Utilities.formatDate(new Date(), OPS.TZ, 'yyyy-MM-dd HH:mm');
   table(ss, 'G_Keywords', ['campaign', 'ad_group', 'keyword', 'match', 'status', 'quality_score', 'spend_7d', 'impr_7d', 'clicks_7d', 'conv_7d', 'updated_at'],
     'SELECT campaign.name, ad_group.name, ad_group_criterion.keyword.text, ad_group_criterion.keyword.match_type, ad_group_criterion.status, ' +
     'ad_group_criterion.quality_info.quality_score, metrics.cost_micros, metrics.impressions, metrics.clicks, metrics.conversions ' +
@@ -434,7 +446,10 @@ function writeData(ss) {
       num(x.metrics.clicks), num(x.metrics.conversions), stamp]; },
     'SELECT campaign.name, ad_group.name, ad_group_criterion.keyword.text, ad_group_criterion.keyword.match_type, ad_group_criterion.status, ' +
     'ad_group_criterion.quality_info.quality_score FROM keyword_view WHERE ad_group_criterion.status != REMOVED', 4);
+}
 
+function dataTerms(ss) {
+  var stamp = Utilities.formatDate(new Date(), OPS.TZ, 'yyyy-MM-dd HH:mm');
   table(ss, 'G_SearchTerms', ['search_term', 'campaign', 'ad_group', 'term_status', 'spend_7d', 'impr_7d', 'clicks_7d', 'conv_7d', 'updated_at'],
     'SELECT search_term_view.search_term, campaign.name, ad_group.name, search_term_view.status, metrics.cost_micros, metrics.impressions, ' +
     'metrics.clicks, metrics.conversions FROM search_term_view WHERE segments.date DURING LAST_7_DAYS ORDER BY metrics.impressions DESC LIMIT 1000',
