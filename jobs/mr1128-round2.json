@@ -1,0 +1,19 @@
+[
+ {
+  "kind": "image",
+  "name": "mr1128-after",
+  "hero": true,
+  "inputs": [
+   "library/media/mr1128-1.png"
+  ],
+  "prompt": "Edit this photo. Same house, same street, same camera position and framing, about 20 years later: the asphalt road in front has been relaid again and again and is now raised about 70 cm, so the road surface is clearly ABOVE the house's doorstep and plinth. The front steps are buried under the road; the bottom of the wooden door sits below road level, with a small sunken concrete pit and two steps going DOWN from the road to the door. The lower 40 cm of the walls show dark damp and flood stains, paint a little faded. The road is one thick black asphalt slab right up to the house; its cut edge in the foreground shows many stacked layers. Keep the house design, windows and colours identical. Bright natural daylight, clean and crisp, true colours, photorealistic, looks like a real news photo, no text, no logos, no people. Vertical 9:16."
+ },
+ {
+  "kind": "image",
+  "name": "mr1128-3b",
+  "inputs": [
+   "library/media/mr1128-3.png"
+  ],
+  "prompt": "Edit this photo: remove every brand name, word and lettering from the road roller and paver (plain yellow panels), and remove the people. Keep everything else identical. Bright natural daylight, clean and crisp, true colours, photorealistic, looks like a real news photo, no text, no logos, no people. Vertical 9:16."
+ }
+]
