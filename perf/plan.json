@@ -13,11 +13,11 @@
   "unreach": 0
  },
  "meta_shares": {
-  "prospect_A": 0.5,
+  "prospect_A": 0.46,
   "prospect_B": 0.0,
-  "warm": 0.25,
-  "remind": 0.25,
-  "unreach": 0.0
+  "warm": 0.2,
+  "remind": 0.17,
+  "unreach": 0.17
  },
  "warm": {
   "cellsPerDay": 1,

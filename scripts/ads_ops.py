@@ -750,6 +750,8 @@ def op_tactics_setup(req):
     base_t = {"age_min": 25, "age_max": 65, "geo_locations": {"countries": ["IN"]}, "publisher_platforms": ["facebook", "instagram"],
               "targeting_automation": {"advantage_audience": 0}}
     for key, t in CFG["tactics"].items():
+        if req.get("only") and key not in req["only"]:
+            continue  # {"only": ["R", "U"]} sets up or refreshes just those tactics
         if t["name"] in existing:
             st["adsets"][key] = existing[t["name"]]["id"]
             if not req.get("refresh_ads"):

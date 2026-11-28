@@ -13,20 +13,20 @@
  "min_visits_to_compare": 3,
  "min_qualified_to_compare": 5,
  "meta_tactics_start": {
-  "prospect_A": 0.75,
+  "prospect_A": 0.46,
   "prospect_B": 0.0,
-  "warm": 0.25,
-  "remind": 0.0,
-  "unreach": 0.0
+  "warm": 0.2,
+  "remind": 0.17,
+  "unreach": 0.17
  },
  "meta_tactics_without_waves": {
-  "prospect_A": 0.6,
-  "prospect_B": 0.4,
-  "remind": 0.0,
+  "prospect_A": 0.66,
+  "prospect_B": 0.0,
+  "remind": 0.17,
   "warm": 0.0,
-  "unreach": 0.0
+  "unreach": 0.17
  },
- "min_tactic_inr": 100,
+ "min_tactic_inr": 80,
  "warm_min_waves_to_judge": 3,
  "warm": {
   "cellsPerDay": 1,
@@ -35,5 +35,5 @@
  },
  "_set_by_rishi": "17 Nov 2026: FIT, INR 1,500/day total; ads from the TrueYards Facebook page and Instagram.",
  "_tactics_note": "18 Nov: one prospecting ad set (P). Tactic budgets with no live audience flow back to prospecting in the daily run.",
- "_rishi_28nov": "No reminder or unreachable list ads (Rishi, 28 Nov 2026); warm-up only, with P10 and P12."
+ "_rishi_28nov": "Rishi, 28 Nov 2026: discovery, warm-up, and R and U on a little budget (about INR 100 a day each)."
 }
