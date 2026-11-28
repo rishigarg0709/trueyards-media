@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-28 21:41",
+ "checked_at": "2026-11-28 21:50",
  "checks": [
   {
    "id": "gemini",
@@ -8,11 +8,11 @@
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
    "status": "low",
-   "left": 1316,
+   "left": 1248,
    "burn_per_day": 300,
-   "runway_days": 4.4,
-   "detail": "Spent about INR 430 on images today, above the INR 400 daily budget. About INR 1316 left of the INR 2000 top-up on 2026-11-27",
-   "spent_today": 430
+   "runway_days": 4.2,
+   "detail": "Spent about INR 498 on images today, above the INR 400 daily budget. About INR 1248 left of the INR 2000 top-up on 2026-11-27",
+   "spent_today": 498
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 3333,
+   "left": 3325,
    "burn_per_day": 1270,
    "runway_days": 2.6,
-   "detail": "About INR 3333 left, spending about INR 1270 a day"
+   "detail": "About INR 3325 left, spending about INR 1270 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "check",
-   "left": -1394,
+   "left": -1406,
    "burn_per_day": 760,
-   "runway_days": -1.8,
-   "detail": "Estimate is INR -1394, below zero while sends still go through: enter the real balance in the inbox app"
+   "runway_days": -1.9,
+   "detail": "Estimate is INR -1406, below zero while sends still go through: enter the real balance in the inbox app"
   },
   {
    "id": "elevenlabs",
