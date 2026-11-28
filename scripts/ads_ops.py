@@ -1112,3 +1112,36 @@ OPS["archive_stale"] = op_archive_stale
 
 if __name__ == "__main__":
     main()
+
+# ---------- region learning and targeting refresh (28 Nov 2026) ----------
+def op_region_report(req):
+    """{"preset": "last_14d"}: spend, chats and cost per chat by region for this product's campaign (Meta's region breakdown)."""
+    camp = find_campaign()
+    if not camp:
+        return {"error": "no campaign"}
+    r = call(f"{camp['id']}/insights", {"level": "adset", "date_preset": req.get("preset", "last_14d"), "breakdowns": "region", "limit": 500,
+             "fields": "adset_name,spend,impressions,actions"})
+    rows = []
+    for row in r.get("data", []):
+        sp = float(row.get("spend", 0)); ch = conversations(row)
+        rows.append({"adset": row.get("adset_name"), "region": row.get("region"), "spend": round(sp), "chats": ch,
+                     "per_chat": round(sp / ch) if ch else None, "impressions": int(row.get("impressions", 0))})
+    rows.sort(key=lambda x: -x["spend"])
+    return {"rows": rows, "error": err(r) if "error" in r else None}
+OPS["region_report"] = op_region_report
+
+def op_retarget_adset(req):
+    """{"adset_key": "P"}: rebuild that ad set's targeting (cities, ages, interests) from config/ads.json and apply it."""
+    camp = find_campaign()
+    a = next((x for x in CFG["adsets"] if x["key"] == req.get("adset_key")), None)
+    if not camp or not a:
+        return {"error": "campaign or ad set key missing"}
+    s_ = next((x for x in adsets_of(camp["id"]) if x["name"] == a["name"]), None)
+    if not s_:
+        return {"error": f"ad set {a['name']} not in this campaign"}
+    t, notes = targeting(a)
+    if req.get("dry"):
+        return {"dry": True, "targeting": t, **notes}
+    r = call(s_["id"], {"targeting": t}, "POST")
+    return {"result": r, "cities": [c["q"] for c in a["cities"]], **notes}
+OPS["retarget_adset"] = op_retarget_adset
