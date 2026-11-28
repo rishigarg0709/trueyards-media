@@ -1,3 +1,6 @@
 2026-11-28 15:39 UTC
 fitweb-gate-fac-wh-1 [image]: image ok
 fitweb-gate-fac-wh-2 [image]: image ok
+2026-11-28 15:41 UTC
+fitweb-gate-mainroad-1 [image]: image ok
+fitweb-gate-mainroad-2 [image]: image ok
