@@ -3,6 +3,8 @@ Static areas come from the sharp still (exact logos, crisp gate), moving areas (
 import sys, subprocess, numpy as np, cv2
 still_path, out_prefix, clips = sys.argv[1], sys.argv[2], sys.argv[3:]
 OW, OH = 2560, 1440
+# boxes (fractions of the frame) that always show the sharp still: FIT logo+plaque, Forteasia logo, canopy letters
+PROTECT = [(0.195, 0.41, 0.285, 0.55), (0.695, 0.52, 0.785, 0.635), (0.33, 0.345, 0.645, 0.43)]
 S = cv2.imread(still_path)
 H, W = S.shape[:2]
 
@@ -48,6 +50,8 @@ for clip in clips:
         m = cv2.GaussianBlur(m, (0, 0), 3)
         m[:4, :] = 0; m[-4:, :] = 0; m[:, :4] = 0; m[:, -4:] = 0
         m[int(360*0.93):, int(640*0.92):] = 0   # Veo watermark corner
+        for (x0, y0, x1, y1) in PROTECT:          # logos and canopy lettering always come from the still
+            m[int(y0*360):int(y1*360), int(x0*640):int(x1*640)] = 0
         if prev is not None: m = np.maximum(m, prev * 0.6)
         prev = m
         M = cv2.resize(m, (OW, OH), interpolation=cv2.INTER_LINEAR)[..., None]
