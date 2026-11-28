@@ -1137,6 +1137,44 @@ def op_region_report(req):
     return {"rows": rows, "error": err(r) if "error" in r else None}
 OPS["region_report"] = op_region_report
 
+def op_insights(req):
+    """{"preset": "last_14d", "level": "ad", "campaigns": "fit+warm"}: read-only reach, engagement and video watch by ad (aggregates only)."""
+    def act(row, key, types=None):
+        tot = 0.0
+        for a in row.get(key, []) or []:
+            if types is None or a.get("action_type") in types:
+                tot += float(a.get("value", 0))
+        return tot
+    camps = [c for c in [find_campaign()] if c]
+    try:
+        st = op_status({})
+        if st.get("warm_campaign", {}).get("id"):
+            camps.append(st["warm_campaign"])
+    except Exception:
+        pass
+    out = []
+    fields = ("ad_name,adset_name,spend,impressions,reach,frequency,clicks,ctr,cpm,inline_post_engagement,actions,"
+              "video_play_actions,video_thruplay_watched_actions,video_p25_watched_actions,video_p50_watched_actions,"
+              "video_p75_watched_actions,video_p100_watched_actions,video_avg_time_watched_actions")
+    for c in camps:
+        r = call(f"{c['id']}/insights", {"level": req.get("level", "ad"), "date_preset": req.get("preset", "last_14d"), "limit": 500, "fields": fields})
+        for row in r.get("data", []):
+            imp = float(row.get("impressions", 0) or 0); plays = act(row, "video_play_actions")
+            out.append({"campaign": c.get("name"), "adset": row.get("adset_name"), "ad": row.get("ad_name"),
+                        "spend": round(float(row.get("spend", 0) or 0)), "impressions": int(imp), "reach": int(float(row.get("reach", 0) or 0)),
+                        "frequency": round(float(row.get("frequency", 0) or 0), 2), "clicks": int(float(row.get("clicks", 0) or 0)),
+                        "ctr": round(float(row.get("ctr", 0) or 0), 2), "cpm": round(float(row.get("cpm", 0) or 0)),
+                        "engagement": int(float(row.get("inline_post_engagement", 0) or 0)), "chats": conversations(row),
+                        "video_plays": int(plays), "thruplays": int(act(row, "video_thruplay_watched_actions")),
+                        "p25": int(act(row, "video_p25_watched_actions")), "p50": int(act(row, "video_p50_watched_actions")),
+                        "p75": int(act(row, "video_p75_watched_actions")), "p100": int(act(row, "video_p100_watched_actions")),
+                        "avg_watch_s": round(act(row, "video_avg_time_watched_actions"), 1)})
+        if "error" in r:
+            out.append({"campaign": c.get("name"), "error": err(r)})
+    out.sort(key=lambda x: -x.get("spend", 0))
+    return {"preset": req.get("preset", "last_14d"), "rows": out}
+OPS["insights"] = op_insights
+
 def op_retarget_adset(req):
     """{"adset_key": "P"}: rebuild that ad set's targeting (cities, ages, interests) from config/ads.json and apply it."""
     camp = find_campaign()
