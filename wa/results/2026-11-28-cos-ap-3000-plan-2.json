@@ -1,0 +1,2011 @@
+{
+ "at": "2026-11-28 11:02",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.config",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "cfg": {
+     "on": true,
+     "budgetInr": 900,
+     "costPerDelivered": 1.02,
+     "maxLeadsPerDay": 25,
+     "minRelValue": 0.3,
+     "followShare": 0.25,
+     "firstOnly": true,
+     "coldRetry": true,
+     "retryMaxShare": 0.3,
+     "coldFollow": "learn",
+     "followLearn": {
+      "floor": 0.05,
+      "lowRatio": 0.3,
+      "max": 0.05,
+      "minDelivered": 300,
+      "minLeads": 15
+     },
+     "maxRetries": 3,
+     "retryGapDays": [
+      4,
+      6,
+      8
+     ],
+     "retryShare": 0.1,
+     "retryPrior": {
+      "ratio": 0.9,
+      "strength": 400,
+      "deliver": 0.4
+     },
+     "explore": 0.2,
+     "maxCellShare": 0.35,
+     "testCellSends": 120,
+     "maxTestCells": 20,
+     "provenTouches": 5,
+     "testTouches": 2,
+     "hotScore": 75,
+     "hotTouches": 4,
+     "slots": [
+      "08:15",
+      "10:00",
+      "11:45",
+      "13:30",
+      "15:15",
+      "17:00",
+      "20:30",
+      "21:15"
+     ],
+     "minSlotShare": 0.08,
+     "slotPrior": {
+      "08:15": [
+       4,
+       550
+      ],
+      "10:00": [
+       8,
+       380
+      ],
+      "11:45": [
+       8,
+       380
+      ],
+      "13:30": [
+       4,
+       550
+      ],
+      "15:15": [
+       4,
+       550
+      ],
+      "17:00": [
+       6,
+       440
+      ],
+      "18:45": [
+       5,
+       470
+      ],
+      "20:30": [
+       5,
+       470
+      ],
+      "21:15": [
+       5,
+       470
+      ]
+     },
+     "sequence": [
+      "fit_industry",
+      "fit_industry_carousel",
+      "fit_video_nudge",
+      "fit_subsidy_nudge"
+     ],
+     "firstTemplates": [
+      "fit_industry",
+      "fit_video_nudge"
+     ],
+     "learnFirst": true,
+     "followTemplates": [
+      "fit_video_nudge",
+      "fit_industry_carousel",
+      "fit_subsidy_nudge",
+      "fit_industry"
+     ],
+     "videoTemplates": [
+      "fit_video_nudge",
+      "fit_walkthrough_video"
+     ],
+     "points": {
+      "lead": 1,
+      "fu": 4,
+      "sv": 10,
+      "vdone": 25,
+      "stop": -3
+     },
+     "festivalDays": [],
+     "festivalShare": 0.5,
+     "pausedCells": [
+      "G",
+      "NWD",
+      "WD",
+      "D.eng.lo",
+      "D.elec.lo",
+      "D.chem.lo",
+      "D.oth.lo",
+      "D.trd.lo",
+      "W.eng.lo",
+      "W.elec.lo",
+      "W.chem.lo",
+      "W.oth.lo",
+      "W.trd.lo",
+      "N.eng.lo",
+      "N.elec.lo",
+      "N.chem.lo",
+      "N.oth.lo",
+      "N.trd.lo"
+     ],
+     "planAt": "07:30",
+     "reportTo": [
+      "[number]"
+     ],
+     "warm": {
+      "on": true,
+      "reengage": {
+       "gapDays": 3,
+       "max": 8,
+       "rotation": [
+        "fit_industry",
+        "fit_industry_carousel",
+        "fit_video_nudge",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_walkthrough_video",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "visit": {
+       "gapDays": 4,
+       "max": 6,
+       "rotation": [
+        "fit_fact_card",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "quietDays": 2,
+      "stopAfterUnread": 3
+     },
+     "reportTemplate": "fit_autopilot_daily"
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-28T05:32:42.242Z"
+  },
+  {
+   "ok": true,
+   "op": "autopilot",
+   "changes": false,
+   "result": {
+    "cfg": {
+     "on": true,
+     "budgetInr": 900,
+     "costPerDelivered": 1.02,
+     "maxLeadsPerDay": 25,
+     "minRelValue": 0.3,
+     "followShare": 0.25,
+     "firstOnly": true,
+     "coldRetry": true,
+     "retryMaxShare": 0.3,
+     "coldFollow": "learn",
+     "followLearn": {
+      "floor": 0.05,
+      "lowRatio": 0.3,
+      "max": 0.05,
+      "minDelivered": 300,
+      "minLeads": 15
+     },
+     "maxRetries": 3,
+     "retryGapDays": [
+      4,
+      6,
+      8
+     ],
+     "retryShare": 0.1,
+     "retryPrior": {
+      "ratio": 0.9,
+      "strength": 400,
+      "deliver": 0.4
+     },
+     "explore": 0.2,
+     "maxCellShare": 0.35,
+     "testCellSends": 120,
+     "maxTestCells": 20,
+     "provenTouches": 5,
+     "testTouches": 2,
+     "hotScore": 75,
+     "hotTouches": 4,
+     "slots": [
+      "08:15",
+      "10:00",
+      "11:45",
+      "13:30",
+      "15:15",
+      "17:00",
+      "20:30",
+      "21:15"
+     ],
+     "minSlotShare": 0.08,
+     "slotPrior": {
+      "08:15": [
+       4,
+       550
+      ],
+      "10:00": [
+       8,
+       380
+      ],
+      "11:45": [
+       8,
+       380
+      ],
+      "13:30": [
+       4,
+       550
+      ],
+      "15:15": [
+       4,
+       550
+      ],
+      "17:00": [
+       6,
+       440
+      ],
+      "18:45": [
+       5,
+       470
+      ],
+      "20:30": [
+       5,
+       470
+      ],
+      "21:15": [
+       5,
+       470
+      ]
+     },
+     "sequence": [
+      "fit_industry",
+      "fit_industry_carousel",
+      "fit_video_nudge",
+      "fit_subsidy_nudge"
+     ],
+     "firstTemplates": [
+      "fit_industry",
+      "fit_video_nudge"
+     ],
+     "learnFirst": true,
+     "followTemplates": [
+      "fit_video_nudge",
+      "fit_industry_carousel",
+      "fit_subsidy_nudge",
+      "fit_industry"
+     ],
+     "videoTemplates": [
+      "fit_video_nudge",
+      "fit_walkthrough_video"
+     ],
+     "points": {
+      "lead": 1,
+      "fu": 4,
+      "sv": 10,
+      "vdone": 25,
+      "stop": -3
+     },
+     "festivalDays": [],
+     "festivalShare": 0.5,
+     "pausedCells": [
+      "G",
+      "NWD",
+      "WD",
+      "D.eng.lo",
+      "D.elec.lo",
+      "D.chem.lo",
+      "D.oth.lo",
+      "D.trd.lo",
+      "W.eng.lo",
+      "W.elec.lo",
+      "W.chem.lo",
+      "W.oth.lo",
+      "W.trd.lo",
+      "N.eng.lo",
+      "N.elec.lo",
+      "N.chem.lo",
+      "N.oth.lo",
+      "N.trd.lo"
+     ],
+     "planAt": "07:30",
+     "reportTo": [
+      "[number]"
+     ],
+     "warm": {
+      "on": true,
+      "reengage": {
+       "gapDays": 3,
+       "max": 8,
+       "rotation": [
+        "fit_industry",
+        "fit_industry_carousel",
+        "fit_video_nudge",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_walkthrough_video",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "visit": {
+       "gapDays": 4,
+       "max": 6,
+       "rotation": [
+        "fit_fact_card",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "quietDays": 2,
+      "stopAfterUnread": 3
+     },
+     "reportTemplate": "fit_autopilot_daily"
+    },
+    "pool": {
+     "rows": 66381,
+     "at": "2026-11-11T14:05:22.524Z"
+    },
+    "report": {
+     "broadcasts": [
+      {
+       "id": "C#2026-11-28T02:45:00.000Z#apcef818",
+       "n": 192,
+       "slot": "08:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T06:15:00.000Z#ap1ff16d",
+       "n": 192,
+       "slot": "11:45",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T04:30:00.000Z#ap1e05ff",
+       "n": 121,
+       "slot": "10:00",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T06:15:00.000Z#ap647ff6",
+       "n": 68,
+       "slot": "11:45",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T08:00:00.000Z#ap75e9b7",
+       "n": 57,
+       "slot": "13:30",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T09:45:00.000Z#ap9aa1ed",
+       "n": 32,
+       "slot": "15:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T11:30:00.000Z#ap9f6fff",
+       "n": 54,
+       "slot": "17:00",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T02:45:00.000Z#ap60431b",
+       "n": 79,
+       "slot": "08:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T15:00:00.000Z#ap7a0255",
+       "n": 36,
+       "slot": "20:30",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T15:45:00.000Z#ape1254f",
+       "n": 57,
+       "slot": "21:15",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T09:45:00.000Z#ap773d9e",
+       "n": 110,
+       "slot": "15:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T04:30:00.000Z#ap180426",
+       "n": 45,
+       "slot": "10:00",
+       "template": "fit_video_nudge"
+      },
+      {
+       "id": "C#2026-11-28T08:00:00.000Z#ap18fd21",
+       "n": 133,
+       "slot": "13:30",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T15:00:00.000Z#ap37d2ac",
+       "n": 83,
+       "slot": "20:30",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T11:30:00.000Z#ap3e32d7",
+       "n": 120,
+       "slot": "17:00",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T15:45:00.000Z#ap2a5c4a",
+       "n": 127,
+       "slot": "21:15",
+       "template": "fit_industry"
+      },
+      {
+       "id": "C#2026-11-28T06:15:00.000Z#ap166933",
+       "n": 16,
+       "slot": "11:45",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T15:00:00.000Z#apab4f42",
+       "n": 3,
+       "slot": "20:30",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T11:30:00.000Z#apa71eff",
+       "n": 10,
+       "slot": "17:00",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T04:30:00.000Z#ap1db62e",
+       "n": 11,
+       "slot": "10:00",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T15:45:00.000Z#apef54bf",
+       "n": 11,
+       "slot": "21:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T02:45:00.000Z#ap75d25a",
+       "n": 14,
+       "slot": "08:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T04:30:00.000Z#apfcd590",
+       "n": 3,
+       "slot": "10:00",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T15:00:00.000Z#ap9f406f",
+       "n": 2,
+       "slot": "20:30",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T15:45:00.000Z#ap0ca49e",
+       "n": 1,
+       "slot": "21:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T09:45:00.000Z#ap1114a2",
+       "n": 2,
+       "slot": "15:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T02:45:00.000Z#ap483f89",
+       "n": 3,
+       "slot": "08:15",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T06:15:00.000Z#ap15914c",
+       "n": 3,
+       "slot": "11:45",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T08:00:00.000Z#ap185c8a",
+       "n": 4,
+       "slot": "13:30",
+       "template": "fit_subsidy_nudge"
+      },
+      {
+       "id": "C#2026-11-28T09:45:00.000Z#ap7a2688",
+       "n": 12,
+       "slot": "15:15",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "id": "C#2026-11-28T08:00:00.000Z#ape48129",
+       "n": 9,
+       "slot": "13:30",
+       "template": "fit_industry_carousel"
+      },
+      {
+       "card": "08-plots",
+       "id": "C#2026-11-28T02:45:00.000Z#aw975ac3",
+       "n": 1,
+       "slot": "08:15",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T09:45:00.000Z#awdbf695",
+       "n": 1,
+       "slot": "15:15",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-28T04:30:00.000Z#aw9851d7",
+       "n": 1,
+       "slot": "10:00",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-28T15:00:00.000Z#awf2dd33",
+       "n": 1,
+       "slot": "20:30",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-28T08:00:00.000Z#aw3bea55",
+       "n": 1,
+       "slot": "13:30",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T02:45:00.000Z#aw7e8b8b",
+       "n": 1,
+       "slot": "08:15",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T11:30:00.000Z#aw67f7a0",
+       "n": 1,
+       "slot": "17:00",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-28T06:15:00.000Z#awf840d4",
+       "n": 1,
+       "slot": "11:45",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "02-highways",
+       "id": "C#2026-11-28T15:45:00.000Z#aw73b13f",
+       "n": 1,
+       "slot": "21:15",
+       "template": "fit_fact_card",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T08:00:00.000Z#awf996f2",
+       "n": 1,
+       "slot": "13:30",
+       "template": "fit_industry_carousel",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T04:30:00.000Z#awb12e4f",
+       "n": 1,
+       "slot": "10:00",
+       "template": "fit_video_nudge",
+       "warm": true
+      },
+      {
+       "card": "",
+       "id": "C#2026-11-28T15:00:00.000Z#aw4e9165",
+       "n": 1,
+       "slot": "20:30",
+       "template": "fit_industry",
+       "warm": true
+      },
+      {
+       "card": "08-plots",
+       "id": "C#2026-11-28T06:15:00.000Z#awf313b5",
+       "n": 1,
+       "slot": "11:45",
+       "template": "fit_fact_card",
+       "warm": true
+      }
+     ],
+     "budgetDeliv": 972,
+     "cells": [
+      {
+       "c": "a.chem.hi",
+       "delivered": 263,
+       "freshLeft": 0,
+       "fu": 3,
+       "label": "Within 30 km, plastics/pharma/chem, score 75+",
+       "leads": 6,
+       "optouts": 0,
+       "proven": true,
+       "q": 6.3,
+       "rate": 2.07,
+       "today": {
+        "first": 0,
+        "follow": 1,
+        "retry": 0
+       },
+       "visits": 3
+      },
+      {
+       "c": "a.chem.lo",
+       "delivered": 3,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, plastics/pharma/chem, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 4.9,
+       "rate": 1.67,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.eng.mid",
+       "delivered": 491,
+       "freshLeft": 0,
+       "fu": 3,
+       "label": "Other 51 to 75 km, engineering/auto, score 55-74",
+       "leads": 9,
+       "optouts": 0,
+       "proven": false,
+       "q": 4.1,
+       "rate": 1.84,
+       "today": {
+        "first": 0,
+        "follow": 26,
+        "retry": 0
+       },
+       "visits": 2
+      },
+      {
+       "c": "a.oth.hi",
+       "delivered": 954,
+       "freshLeft": 0,
+       "fu": 6,
+       "label": "Within 30 km, textile/furniture/other mfg, score 75+",
+       "leads": 25,
+       "optouts": 3,
+       "proven": true,
+       "q": 2.8,
+       "rate": 2.56,
+       "today": {
+        "first": 0,
+        "follow": 27,
+        "retry": 10
+       },
+       "visits": 5
+      },
+      {
+       "c": "a.elec.hi",
+       "delivered": 139,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, electrical, score 75+",
+       "leads": 5,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.3,
+       "rate": 2.85,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.chem.mid",
+       "delivered": 237,
+       "freshLeft": 85,
+       "fu": 1,
+       "label": "Within 30 km, plastics/pharma/chem, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 5.1,
+       "rate": 1.18,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.trd.hi",
+       "delivered": 465,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Within 30 km, traders/warehousing, score 75+",
+       "leads": 13,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.1,
+       "rate": 2.63,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 42
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.oth.lo",
+       "delivered": 12,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, textile/furniture/other mfg, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.7,
+       "rate": 2.03,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 4
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.elec.lo",
+       "delivered": 8,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, electrical, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.6,
+       "rate": 2.04,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.oth.mid",
+       "delivered": 435,
+       "freshLeft": 149,
+       "fu": 3,
+       "label": "31 to 50 km, textile/furniture/other mfg, score 55-74",
+       "leads": 6,
+       "optouts": 0,
+       "proven": false,
+       "q": 3.5,
+       "rate": 1.45,
+       "today": {
+        "first": 149,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 2
+      },
+      {
+       "c": "O.eng.lo",
+       "delivered": 530,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Other 51 to 75 km, engineering/auto, score <55",
+       "leads": 10,
+       "optouts": 1,
+       "proven": false,
+       "q": 2.6,
+       "rate": 1.88,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "a.eng.hi",
+       "delivered": 568,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Within 30 km, engineering/auto, score 75+",
+       "leads": 16,
+       "optouts": 2,
+       "proven": true,
+       "q": 1.8,
+       "rate": 2.71,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 2
+      },
+      {
+       "c": "a.elec.mid",
+       "delivered": 221,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Within 30 km, electrical, score 55-74",
+       "leads": 3,
+       "optouts": 2,
+       "proven": false,
+       "q": 2.8,
+       "rate": 1.68,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "b.oth.lo",
+       "delivered": 174,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, textile/furniture/other mfg, score <55",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.2,
+       "rate": 1.99,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 4
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.trd.mid",
+       "delivered": 199,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "Rest of Delhi, traders/warehousing, score 55-74",
+       "leads": 5,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.1,
+       "rate": 2.07,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 33
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.oth.mid",
+       "delivered": 445,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Within 30 km, textile/furniture/other mfg, score 55-74",
+       "leads": 6,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.7,
+       "rate": 1.56,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "b.oth.hi",
+       "delivered": 10,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, textile/furniture/other mfg, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 2.7,
+       "rate": 1.54,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.eng.lo",
+       "delivered": 4,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, engineering/auto, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 2.26,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.chem.mid",
+       "delivered": 135,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, plastics/pharma/chem, score 55-74",
+       "leads": 5,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 2.89,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 1
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.trd.lo",
+       "delivered": 8,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, traders/warehousing, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2,
+       "rate": 2.01,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.eng.lo",
+       "delivered": 73,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score <55",
+       "leads": 3,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.5,
+       "rate": 2.6,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 2
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.trd.hi",
+       "delivered": 1,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, traders/warehousing, score 75+",
+       "leads": 1,
+       "optouts": 0,
+       "proven": true,
+       "q": 1.6,
+       "rate": 2.4,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.trd.lo",
+       "delivered": 43,
+       "freshLeft": 523,
+       "fu": 0,
+       "label": "West Delhi industrial, traders/warehousing, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 2.69,
+       "today": {
+        "first": 120,
+        "follow": 0,
+        "retry": 14
+       },
+       "visits": 0
+      },
+      {
+       "c": "G.elec.mid",
+       "delivered": 40,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "Gurugram/Manesar, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.5,
+       "rate": 1.32,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 26
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.trd.mid",
+       "delivered": 258,
+       "freshLeft": 183,
+       "fu": 1,
+       "label": "31 to 50 km, traders/warehousing, score 55-74",
+       "leads": 5,
+       "optouts": 0,
+       "proven": true,
+       "q": 1.7,
+       "rate": 1.87,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 89
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.elec.lo",
+       "delivered": 259,
+       "freshLeft": 0,
+       "fu": 2,
+       "label": "West cluster, electrical, score <55",
+       "leads": 5,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.7,
+       "rate": 1.84,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 5
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.eng.hi",
+       "delivered": 4,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 1.7,
+       "rate": 1.81,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 5
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.chem.mid",
+       "delivered": 67,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, plastics/pharma/chem, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 2.31,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.elec.mid",
+       "delivered": 79,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, electrical, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 2.03,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.oth.mid",
+       "delivered": 892,
+       "freshLeft": 73,
+       "fu": 1,
+       "label": "Rest of Delhi, textile/furniture/other mfg, score 55-74",
+       "leads": 15,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.7,
+       "rate": 1.64,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "b.elec.mid",
+       "delivered": 56,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.51,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 26
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.oth.mid",
+       "delivered": 191,
+       "freshLeft": 328,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score 55-74",
+       "leads": 4,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 1.93,
+       "today": {
+        "first": 328,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "NWD.chem.mid",
+       "delivered": 123,
+       "freshLeft": 0,
+       "fu": 1,
+       "label": "North-West Delhi industrial, plastics/pharma/chem, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 2,
+       "rate": 1.31,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.trd.mid",
+       "delivered": 10,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "West Delhi industrial, traders/warehousing, score 55-74",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 2,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.oth.lo",
+       "delivered": 22,
+       "freshLeft": 1152,
+       "fu": 0,
+       "label": "West Delhi industrial, textile/furniture/other mfg, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 1.98,
+       "today": {
+        "first": 16,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.trd.mid",
+       "delivered": 425,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, traders/warehousing, score 55-74",
+       "leads": 6,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.6,
+       "rate": 1.59,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "G.oth.mid",
+       "delivered": 159,
+       "freshLeft": 570,
+       "fu": 1,
+       "label": "Gurugram/Manesar, textile/furniture/other mfg, score 55-74",
+       "leads": 3,
+       "optouts": 1,
+       "proven": false,
+       "q": 1.7,
+       "rate": 1.49,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "N.eng.mid",
+       "delivered": 158,
+       "freshLeft": 6,
+       "fu": 1,
+       "label": "North cluster, engineering/auto, score 55-74",
+       "leads": 4,
+       "optouts": 1,
+       "proven": false,
+       "q": 1.2,
+       "rate": 2.08,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.elec.hi",
+       "delivered": 2,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score 75+",
+       "leads": 0,
+       "optouts": 0,
+       "proven": true,
+       "q": 1.8,
+       "rate": 1.38,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.trd.mid",
+       "delivered": 100,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, traders/warehousing, score 55-74",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.7,
+       "rate": 1.44,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.chem.lo",
+       "delivered": 66,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, plastics/pharma/chem, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.6,
+       "rate": 1.5,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 12
+       },
+       "visits": 0
+      },
+      {
+       "c": "N.elec.mid",
+       "delivered": 38,
+       "freshLeft": 138,
+       "fu": 0,
+       "label": "North cluster, electrical, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.2,
+       "rate": 1.86,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.oth.lo",
+       "delivered": 162,
+       "freshLeft": 1208,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.5,
+       "rate": 1.46,
+       "today": {
+        "first": 16,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.eng.lo",
+       "delivered": 237,
+       "freshLeft": 254,
+       "fu": 0,
+       "label": "West cluster, engineering/auto, score <55",
+       "leads": 5,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.1,
+       "rate": 1.99,
+       "today": {
+        "first": 16,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.eng.mid",
+       "delivered": 128,
+       "freshLeft": 55,
+       "fu": 0,
+       "label": "31 to 50 km, engineering/auto, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.6,
+       "rate": 1.36,
+       "today": {
+        "first": 16,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.elec.lo",
+       "delivered": 430,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, electrical, score <55",
+       "leads": 7,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 1.66,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.oth.mid",
+       "delivered": 367,
+       "freshLeft": 188,
+       "fu": 1,
+       "label": "West cluster, textile/furniture/other mfg, score 55-74",
+       "leads": 5,
+       "optouts": 2,
+       "proven": false,
+       "q": 1.5,
+       "rate": 1.38,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 1
+      },
+      {
+       "c": "N.elec.lo",
+       "delivered": 59,
+       "freshLeft": 828,
+       "fu": 0,
+       "label": "North cluster, electrical, score <55",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.2,
+       "rate": 1.67,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "O.chem.lo",
+       "delivered": 460,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Other 51 to 75 km, plastics/pharma/chem, score <55",
+       "leads": 9,
+       "optouts": 1,
+       "proven": false,
+       "q": 1,
+       "rate": 1.97,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.chem.lo",
+       "delivered": 109,
+       "freshLeft": 414,
+       "fu": 0,
+       "label": "West cluster, plastics/pharma/chem, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1,
+       "rate": 1.96,
+       "today": {
+        "first": 16,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "a.eng.mid",
+       "delivered": 277,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "Within 30 km, engineering/auto, score 55-74",
+       "leads": 4,
+       "optouts": 2,
+       "proven": false,
+       "q": 1.1,
+       "rate": 1.75,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "b.elec.lo",
+       "delivered": 49,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "31 to 50 km, electrical, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.8,
+       "rate": 1.06,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.oth.mid",
+       "delivered": 36,
+       "freshLeft": 121,
+       "fu": 0,
+       "label": "West Delhi industrial, textile/furniture/other mfg, score 55-74",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 1.29,
+       "today": {
+        "first": 112,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.trd.lo",
+       "delivered": 252,
+       "freshLeft": 3783,
+       "fu": 0,
+       "label": "Rest of Delhi, traders/warehousing, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.7,
+       "rate": 1.05,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.oth.lo",
+       "delivered": 154,
+       "freshLeft": 835,
+       "fu": 0,
+       "label": "West cluster, textile/furniture/other mfg, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.3,
+       "rate": 1.36,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "D.chem.lo",
+       "delivered": 134,
+       "freshLeft": 2522,
+       "fu": 0,
+       "label": "Rest of Delhi, plastics/pharma/chem, score <55",
+       "leads": 2,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.4,
+       "rate": 1.26,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.eng.mid",
+       "delivered": 82,
+       "freshLeft": 338,
+       "fu": 0,
+       "label": "West cluster, engineering/auto, score 55-74",
+       "leads": 1,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.1,
+       "rate": 1.6,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "G.elec.lo",
+       "delivered": 40,
+       "freshLeft": 908,
+       "fu": 0,
+       "label": "Gurugram/Manesar, electrical, score <55",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 2.2,
+       "rate": 0.79,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      },
+      {
+       "c": "WD.chem.mid",
+       "delivered": 14,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "West Delhi industrial, plastics/pharma/chem, score 55-74",
+       "leads": 0,
+       "optouts": 0,
+       "proven": false,
+       "q": 1.1,
+       "rate": 1.56,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 10
+       },
+       "visits": 0
+      },
+      {
+       "c": "W.chem.mid",
+       "delivered": 105,
+       "freshLeft": 0,
+       "fu": 0,
+       "label": "West cluster, plastics/pharma/chem, score 55-74",
+       "leads": 3,
+       "optouts": 1,
+       "proven": false,
+       "q": 0.7,
+       "rate": 2.39,
+       "today": {
+        "first": 0,
+        "follow": 0,
+        "retry": 0
+       },
+       "visits": 0
+      }
+     ],
+     "changes": [
+      {
+       "c": "D.eng.lo",
+       "delivered": 324,
+       "fu": 0,
+       "label": "Rest of Delhi, engineering/auto, score <55",
+       "leads": 2,
+       "now": 0,
+       "rate": 0.68,
+       "visits": 0,
+       "was": 400
+      },
+      {
+       "c": "O.oth.mid",
+       "delivered": 191,
+       "fu": 0,
+       "label": "Other 51 to 75 km, textile/furniture/other mfg, score 55-74",
+       "leads": 4,
+       "now": 328,
+       "rate": 1.93,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "b.oth.mid",
+       "delivered": 435,
+       "fu": 3,
+       "label": "31 to 50 km, textile/furniture/other mfg, score 55-74",
+       "leads": 6,
+       "now": 149,
+       "rate": 1.45,
+       "visits": 2,
+       "was": 369
+      },
+      {
+       "c": "NWD.trd.lo",
+       "delivered": 34,
+       "fu": 0,
+       "label": "North-West Delhi industrial, traders/warehousing, score <55",
+       "leads": 0,
+       "now": 141,
+       "rate": 0.51,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "WD.trd.lo",
+       "delivered": 43,
+       "fu": 0,
+       "label": "West Delhi industrial, traders/warehousing, score <55",
+       "leads": 2,
+       "now": 134,
+       "rate": 2.69,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "b.oth.lo",
+       "delivered": 174,
+       "fu": 0,
+       "label": "31 to 50 km, textile/furniture/other mfg, score <55",
+       "leads": 4,
+       "now": 4,
+       "rate": 1.99,
+       "visits": 0,
+       "was": 136
+      },
+      {
+       "c": "b.trd.lo",
+       "delivered": 141,
+       "fu": 0,
+       "label": "31 to 50 km, traders/warehousing, score <55",
+       "leads": 1,
+       "now": 114,
+       "rate": 1.24,
+       "visits": 0,
+       "was": 0
+      },
+      {
+       "c": "WD.oth.mid",
+       "delivered": 36,
+       "fu": 0,
+       "label": "West Delhi industrial, textile/furniture/other mfg, score 55-74",
+       "leads": 0,
+       "now": 112,
+       "rate": 1.29,
+       "visits": 0,
+       "was": 0
+      }
+     ],
+     "counts": {
+      "first": 1197,
+      "follow": 54,
+      "hot": 28,
+      "retry": 359
+     },
+     "date": "2026-11-28",
+     "dry": false,
+     "expectedCost": 1004,
+     "expectedDelivered": 972,
+     "expectedLeads": 16.3,
+     "festival": false,
+     "firstTemplates": {
+      "D": {
+       "fit_industry": 19,
+       "fit_video_nudge": 13
+      },
+      "G": {
+       "fit_industry": 14,
+       "fit_video_nudge": 60
+      },
+      "N": {
+       "fit_industry": 20,
+       "fit_video_nudge": 12
+      },
+      "NWD": {
+       "fit_industry": 93,
+       "fit_video_nudge": 75
+      },
+      "O": {
+       "fit_industry": 332,
+       "fit_video_nudge": 12
+      },
+      "W": {
+       "fit_industry": 35,
+       "fit_video_nudge": 13
+      },
+      "WD": {
+       "fit_industry": 198,
+       "fit_video_nudge": 71
+      },
+      "b": {
+       "fit_industry": 172,
+       "fit_video_nudge": 58
+      }
+     },
+     "followEvidence": {
+      "delivered": 3166,
+      "leads": 54,
+      "proven": true,
+      "ratio": 1.26
+     },
+     "followMode": "learn",
+     "followShare": 0.05,
+     "fuRatio": 1,
+     "planner": {
+      "budget": 1005,
+      "clamped": false,
+      "from": "2026-11-25",
+      "ok": true,
+      "prev": 1005,
+      "warm": {
+       "cellsPerDay": 1,
+       "leadDays": 4,
+       "waveSize": 400
+      }
+     },
+     "rescoreNote": "",
+     "rescoredAt": "2026-11-26T02:01:18.053Z",
+     "retryDelivery": 0.47,
+     "retryOn": true,
+     "retryRatio": 1.4,
+     "retryStats": {
+      "delivered": 1024,
+      "leads": 22,
+      "sent": 2158
+     },
+     "sheetSync": {
+      "changed": 341,
+      "rows": 641
+     },
+     "slotShares": {
+      "08:15": 17.3,
+      "10:00": 11.1,
+      "11:45": 17.2,
+      "13:30": 11,
+      "15:15": 9.9,
+      "17:00": 11.4,
+      "20:30": 9.1,
+      "21:15": 13
+     },
+     "slotStats": {
+      "08:15": {
+       "d": 1257,
+       "l": 25
+      },
+      "10:00": {
+       "d": 1589,
+       "l": 22
+      },
+      "11:45": {
+       "d": 1687,
+       "l": 25
+      },
+      "13:30": {
+       "d": 1099,
+       "l": 12
+      },
+      "15:15": {
+       "d": 1212,
+       "l": 17
+      },
+      "17:00": {
+       "d": 1359,
+       "l": 18
+      },
+      "18:45": {
+       "d": 258,
+       "l": 2
+      },
+      "20:30": {
+       "d": 1347,
+       "l": 16
+      },
+      "21:15": {
+       "d": 1416,
+       "l": 25
+      }
+     },
+     "testCells": 25,
+     "tplStats": {
+      "fit_industry": {
+       "d": 4380,
+       "l": 63
+      },
+      "fit_industry_carousel": {
+       "d": 412,
+       "l": 5
+      },
+      "fit_subsidy_nudge": {
+       "d": 513,
+       "l": 10
+      },
+      "fit_video_nudge": {
+       "d": 2753,
+       "l": 30
+      }
+     },
+     "warm": {
+      "cost": 13,
+      "reengage": 12,
+      "retry": 11,
+      "total": 13,
+      "visit": 1
+     },
+     "waveHeld": 800,
+     "waveSends": 328,
+     "yesterday": {
+      "cost": 714,
+      "date": "2026-11-27",
+      "delivered": 700,
+      "fu": 5,
+      "leads": 7,
+      "optouts": 0,
+      "read": 382,
+      "sent": 1572
+     }
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-28T05:32:42.868Z"
+  }
+ ]
+}
