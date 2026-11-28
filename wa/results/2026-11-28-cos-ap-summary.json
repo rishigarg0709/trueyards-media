@@ -1,0 +1,1363 @@
+{
+ "at": "2026-11-28 10:56",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.summary",
+   "changes": false,
+   "result": {
+    "days": {
+     "12 Nov": {
+      "new": {
+       "s": 988,
+       "d": 626,
+       "r": 452,
+       "l": 12,
+       "f": 355
+      },
+      "follow": {
+       "s": 273,
+       "d": 218,
+       "r": 171,
+       "l": 6,
+       "f": 54
+      },
+      "retry": {
+       "s": 279,
+       "d": 55,
+       "r": 46,
+       "l": 2,
+       "f": 223
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 452,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 159,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 21,
+        "retry": false
+       }
+      },
+      "date": "2026-11-12"
+     },
+     "18 Nov": {
+      "new": {
+       "s": 773,
+       "d": 440,
+       "r": 297,
+       "l": 4,
+       "f": 328
+      },
+      "follow": {
+       "s": 405,
+       "d": 337,
+       "r": 274,
+       "l": 4,
+       "f": 64
+      },
+      "retry": {
+       "s": 248,
+       "d": 118,
+       "r": 67,
+       "l": 2,
+       "f": 128
+      },
+      "warm": {
+       "s": 36,
+       "d": 24,
+       "r": 20,
+       "l": 0,
+       "f": 12
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 18,
+        "d": 12,
+        "r": 10,
+        "l": 0,
+        "f": 6
+       },
+       "fit_video_nudge": {
+        "s": 5,
+        "d": 4,
+        "r": 4,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 5,
+        "d": 4,
+        "r": 2,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry_carousel": {
+        "s": 6,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 4
+       },
+       "fit_subsidy_nudge": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 416,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 104,
+        "retry": false
+       },
+       "Person stopped marketing messages (131050)": {
+        "n": 1,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 11,
+        "retry": false
+       }
+      },
+      "date": "2026-11-18"
+     },
+     "23 Nov": {
+      "new": {
+       "s": 1192,
+       "d": 621,
+       "r": 424,
+       "l": 7,
+       "f": 559
+      },
+      "follow": {
+       "s": 53,
+       "d": 47,
+       "r": 42,
+       "l": 2,
+       "f": 6
+      },
+      "retry": {
+       "s": 285,
+       "d": 136,
+       "r": 97,
+       "l": 1,
+       "f": 146
+      },
+      "warm": {
+       "s": 23,
+       "d": 14,
+       "r": 10,
+       "l": 1,
+       "f": 9
+      },
+      "wretry": {
+       "s": 10,
+       "d": 4,
+       "r": 4,
+       "l": 0,
+       "f": 6
+      },
+      "warmTpl": {
+       "fit_industry_carousel": {
+        "s": 8,
+        "d": 4,
+        "r": 3,
+        "l": 0,
+        "f": 4
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 10,
+        "d": 5,
+        "r": 4,
+        "l": 0,
+        "f": 5
+       },
+       "fit_industry": {
+        "s": 7,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 1
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 7,
+        "d": 3,
+        "r": 3,
+        "l": 0,
+        "f": 4
+       },
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 530,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 173,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 23,
+        "retry": false
+       }
+      },
+      "date": "2026-11-23"
+     },
+     "28 Nov": {
+      "new": {
+       "s": 347,
+       "d": 159,
+       "r": 63,
+       "l": 2,
+       "f": 178
+      },
+      "follow": {
+       "s": 17,
+       "d": 10,
+       "r": 4,
+       "l": 0,
+       "f": 7
+      },
+      "retry": {
+       "s": 104,
+       "d": 27,
+       "r": 11,
+       "l": 0,
+       "f": 75
+      },
+      "warm": {
+       "s": 1,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 1
+      },
+      "wretry": {
+       "s": 3,
+       "d": 2,
+       "r": 0,
+       "l": 0,
+       "f": 1
+      },
+      "warmTpl": {
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry_carousel": {
+        "s": 1,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 1,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 221,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 35,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 6,
+        "retry": false
+       }
+      },
+      "date": "2026-11-28"
+     },
+     "16 Nov": {
+      "new": {
+       "s": 158,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 158
+      },
+      "follow": {
+       "s": 72,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 72
+      },
+      "retry": {
+       "s": 41,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 41
+      },
+      "warm": {
+       "s": 8,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 8
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 4,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 4
+       },
+       "fit_industry_carousel": {
+        "s": 2,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 2
+       },
+       "fit_industry": {
+        "s": 2,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 2
+       }
+      },
+      "fails": {
+       "Sent too fast for Meta (rate limit), safe to retry (130429)": {
+        "n": 254,
+        "retry": true
+       },
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 2,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 23,
+        "retry": false
+       }
+      },
+      "date": "2026-11-16"
+     },
+     "21 Nov": {
+      "new": {
+       "s": 1213,
+       "d": 717,
+       "r": 488,
+       "l": 9,
+       "f": 487
+      },
+      "follow": {
+       "s": 54,
+       "d": 41,
+       "r": 28,
+       "l": 0,
+       "f": 12
+      },
+      "retry": {
+       "s": 337,
+       "d": 194,
+       "r": 141,
+       "l": 1,
+       "f": 141
+      },
+      "warm": {
+       "s": 10,
+       "d": 9,
+       "r": 8,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 6,
+       "d": 4,
+       "r": 3,
+       "l": 0,
+       "f": 2
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 5,
+        "d": 4,
+        "r": 4,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry_carousel": {
+        "s": 2,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 0
+       },
+       "fit_industry": {
+        "s": 9,
+        "d": 7,
+        "r": 6,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 474,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 150,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 18,
+        "retry": false
+       }
+      },
+      "date": "2026-11-21"
+     },
+     "13 Nov": {
+      "new": {
+       "s": 1010,
+       "d": 592,
+       "r": 418,
+       "l": 10,
+       "f": 415
+      },
+      "follow": {
+       "s": 273,
+       "d": 206,
+       "r": 154,
+       "l": 2,
+       "f": 66
+      },
+      "retry": {
+       "s": 245,
+       "d": 95,
+       "r": 53,
+       "l": 0,
+       "f": 148
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 436,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 177,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 16,
+        "retry": false
+       }
+      },
+      "date": "2026-11-13"
+     },
+     "20 Nov": {
+      "new": {
+       "s": 763,
+       "d": 446,
+       "r": 309,
+       "l": 5,
+       "f": 313
+      },
+      "follow": {
+       "s": 259,
+       "d": 195,
+       "r": 140,
+       "l": 4,
+       "f": 59
+      },
+      "retry": {
+       "s": 445,
+       "d": 175,
+       "r": 90,
+       "l": 3,
+       "f": 264
+      },
+      "warm": {
+       "s": 2,
+       "d": 2,
+       "r": 1,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 54,
+       "d": 36,
+       "r": 26,
+       "l": 0,
+       "f": 14
+      },
+      "warmTpl": {
+       "fit_industry": {
+        "s": 21,
+        "d": 11,
+        "r": 8,
+        "l": 0,
+        "f": 7
+       },
+       "fit_industry_carousel": {
+        "s": 32,
+        "d": 24,
+        "r": 18,
+        "l": 0,
+        "f": 7
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 520,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 115,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 15,
+        "retry": false
+       }
+      },
+      "date": "2026-11-20"
+     },
+     "14 Nov": {
+      "new": {
+       "s": 975,
+       "d": 586,
+       "r": 391,
+       "l": 11,
+       "f": 384
+      },
+      "follow": {
+       "s": 273,
+       "d": 223,
+       "r": 151,
+       "l": 4,
+       "f": 44
+      },
+      "retry": {
+       "s": 299,
+       "d": 117,
+       "r": 79,
+       "l": 3,
+       "f": 180
+      },
+      "warm": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {},
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 391,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 194,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 23,
+        "retry": false
+       }
+      },
+      "date": "2026-11-14"
+     },
+     "15 Nov": {
+      "new": {
+       "s": 848,
+       "d": 83,
+       "r": 53,
+       "l": 1,
+       "f": 764
+      },
+      "follow": {
+       "s": 251,
+       "d": 19,
+       "r": 13,
+       "l": 1,
+       "f": 232
+      },
+      "retry": {
+       "s": 225,
+       "d": 13,
+       "r": 6,
+       "l": 0,
+       "f": 212
+      },
+      "warm": {
+       "s": 79,
+       "d": 5,
+       "r": 2,
+       "l": 0,
+       "f": 74
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry": {
+        "s": 29,
+        "d": 2,
+        "r": 0,
+        "l": 0,
+        "f": 27
+       },
+       "fit_industry_carousel": {
+        "s": 45,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 43
+       },
+       "fit_video_nudge": {
+        "s": 5,
+        "d": 1,
+        "r": 1,
+        "l": 0,
+        "f": 4
+       }
+      },
+      "fails": {
+       "Sent too fast for Meta (rate limit), safe to retry (130429)": {
+        "n": 1130,
+        "retry": true
+       },
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 34,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 117,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 1,
+        "retry": false
+       }
+      },
+      "date": "2026-11-15"
+     },
+     "24 Nov": {
+      "new": {
+       "s": 1177,
+       "d": 515,
+       "r": 355,
+       "l": 10,
+       "f": 654
+      },
+      "follow": {
+       "s": 52,
+       "d": 41,
+       "r": 26,
+       "l": 0,
+       "f": 11
+      },
+      "retry": {
+       "s": 267,
+       "d": 88,
+       "r": 65,
+       "l": 2,
+       "f": 175
+      },
+      "warm": {
+       "s": 52,
+       "d": 36,
+       "r": 26,
+       "l": 3,
+       "f": 12
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry_carousel": {
+        "s": 10,
+        "d": 7,
+        "r": 6,
+        "l": 1,
+        "f": 3
+       },
+       "fit_industry": {
+        "s": 8,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 2
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 32,
+        "d": 23,
+        "r": 16,
+        "l": 1,
+        "f": 6
+       },
+       "fit_subsidy_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 728,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 113,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 9,
+        "retry": false
+       },
+       "131000 Something went wrong": {
+        "n": 2,
+        "retry": true
+       }
+      },
+      "date": "2026-11-24"
+     },
+     "22 Nov": {
+      "new": {
+       "s": 1292,
+       "d": 833,
+       "r": 564,
+       "l": 8,
+       "f": 450
+      },
+      "follow": {
+       "s": 54,
+       "d": 44,
+       "r": 33,
+       "l": 0,
+       "f": 9
+      },
+      "retry": {
+       "s": 179,
+       "d": 96,
+       "r": 59,
+       "l": 5,
+       "f": 82
+      },
+      "warm": {
+       "s": 27,
+       "d": 24,
+       "r": 19,
+       "l": 4,
+       "f": 3
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_subsidy_nudge": {
+        "s": 6,
+        "d": 4,
+        "r": 3,
+        "l": 1,
+        "f": 2
+       },
+       "fit_industry_carousel": {
+        "s": 7,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 10,
+        "d": 10,
+        "r": 8,
+        "l": 2,
+        "f": 0
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 2,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 391,
+        "retry": true
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 16,
+        "retry": false
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 137,
+        "retry": false
+       }
+      },
+      "date": "2026-11-22"
+     },
+     "19 Nov": {
+      "new": {
+       "s": 1560,
+       "d": 937,
+       "r": 645,
+       "l": 11,
+       "f": 613
+      },
+      "follow": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "retry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warm": {
+       "s": 2,
+       "d": 1,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 461,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 127,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 22,
+        "retry": false
+       },
+       "131000 Something went wrong": {
+        "n": 2,
+        "retry": true
+       },
+       "2 Something went wrong.": {
+        "n": 1,
+        "retry": false
+       }
+      },
+      "date": "2026-11-19"
+     },
+     "27 Nov": {
+      "new": {
+       "s": 964,
+       "d": 494,
+       "r": 288,
+       "l": 5,
+       "f": 458
+      },
+      "follow": {
+       "s": 53,
+       "d": 45,
+       "r": 30,
+       "l": 0,
+       "f": 8
+      },
+      "retry": {
+       "s": 555,
+       "d": 166,
+       "r": 90,
+       "l": 2,
+       "f": 380
+      },
+      "warm": {
+       "s": 34,
+       "d": 25,
+       "r": 14,
+       "l": 1,
+       "f": 9
+      },
+      "wretry": {
+       "s": 17,
+       "d": 5,
+       "r": 2,
+       "l": 0,
+       "f": 12
+      },
+      "warmTpl": {
+       "fit_subsidy_nudge": {
+        "s": 4,
+        "d": 1,
+        "r": 1,
+        "l": 0,
+        "f": 3
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 2,
+        "d": 2,
+        "r": 1,
+        "l": 0,
+        "f": 0
+       },
+       "fit_industry_carousel": {
+        "s": 21,
+        "d": 10,
+        "r": 6,
+        "l": 0,
+        "f": 11
+       },
+       "fit_video_nudge": {
+        "s": 6,
+        "d": 5,
+        "r": 2,
+        "l": 1,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 18,
+        "d": 12,
+        "r": 6,
+        "l": 0,
+        "f": 6
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 706,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 141,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 20,
+        "retry": false
+       }
+      },
+      "date": "2026-11-27"
+     },
+     "26 Nov": {
+      "new": {
+       "s": 1103,
+       "d": 594,
+       "r": 394,
+       "l": 5,
+       "f": 498
+      },
+      "follow": {
+       "s": 53,
+       "d": 40,
+       "r": 23,
+       "l": 1,
+       "f": 13
+      },
+      "retry": {
+       "s": 381,
+       "d": 154,
+       "r": 83,
+       "l": 2,
+       "f": 226
+      },
+      "warm": {
+       "s": 50,
+       "d": 36,
+       "r": 25,
+       "l": 2,
+       "f": 13
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_fact_card · 08-plots": {
+        "s": 7,
+        "d": 3,
+        "r": 2,
+        "l": 0,
+        "f": 4
+       },
+       "fit_industry_carousel": {
+        "s": 18,
+        "d": 14,
+        "r": 8,
+        "l": 1,
+        "f": 3
+       },
+       "fit_video_nudge": {
+        "s": 3,
+        "d": 2,
+        "r": 2,
+        "l": 0,
+        "f": 1
+       },
+       "fit_industry": {
+        "s": 13,
+        "d": 8,
+        "r": 5,
+        "l": 1,
+        "f": 5
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 6,
+        "d": 6,
+        "r": 6,
+        "l": 0,
+        "f": 0
+       },
+       "fit_subsidy_nudge": {
+        "s": 3,
+        "d": 3,
+        "r": 2,
+        "l": 0,
+        "f": 0
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 575,
+        "retry": true
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 24,
+        "retry": false
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 151,
+        "retry": false
+       }
+      },
+      "date": "2026-11-26"
+     },
+     "25 Nov": {
+      "new": {
+       "s": 986,
+       "d": 580,
+       "r": 353,
+       "l": 10,
+       "f": 396
+      },
+      "follow": {
+       "s": 54,
+       "d": 48,
+       "r": 36,
+       "l": 0,
+       "f": 5
+      },
+      "retry": {
+       "s": 559,
+       "d": 255,
+       "r": 136,
+       "l": 7,
+       "f": 300
+      },
+      "warm": {
+       "s": 29,
+       "d": 20,
+       "r": 14,
+       "l": 2,
+       "f": 8
+      },
+      "wretry": {
+       "s": 0,
+       "d": 0,
+       "r": 0,
+       "l": 0,
+       "f": 0
+      },
+      "warmTpl": {
+       "fit_industry_carousel": {
+        "s": 13,
+        "d": 9,
+        "r": 7,
+        "l": 1,
+        "f": 3
+       },
+       "fit_fact_card · 08-plots": {
+        "s": 6,
+        "d": 4,
+        "r": 3,
+        "l": 0,
+        "f": 2
+       },
+       "fit_industry": {
+        "s": 8,
+        "d": 6,
+        "r": 4,
+        "l": 1,
+        "f": 2
+       },
+       "fit_fact_card · 02-highways": {
+        "s": 1,
+        "d": 1,
+        "r": 0,
+        "l": 0,
+        "f": 0
+       },
+       "fit_video_nudge": {
+        "s": 1,
+        "d": 0,
+        "r": 0,
+        "l": 0,
+        "f": 1
+       }
+      },
+      "fails": {
+       "Meta's limit on marketing messages to this person (131049)": {
+        "n": 554,
+        "retry": true
+       },
+       "Number can't receive WhatsApp messages (131026)": {
+        "n": 130,
+        "retry": false
+       },
+       "Meta test group (not delivered) (130472)": {
+        "n": 25,
+        "retry": false
+       }
+      },
+      "date": "2026-11-25"
+     }
+    },
+    "retry": {
+     "waiting": 7105,
+     "dueToday": 4881,
+     "dueTomorrow": 412,
+     "dueLater": 1812,
+     "byDay": {
+      "28 Nov": 4881,
+      "29 Nov": 412,
+      "30 Nov": 587,
+      "01 Dec": 640,
+      "02 Dec": 272,
+      "03 Dec": 199,
+      "04 Dec": 56,
+      "05 Dec": 55,
+      "06 Dec": 3
+     },
+     "gaveUp": 0,
+     "permanent": 2297,
+     "permReasons": {
+      "Number can't receive WhatsApp messages (131026)": 2045,
+      "Meta test group (not delivered) (130472)": 250,
+      "2 Something went wrong.": 1,
+      "Person stopped marketing messages (131050)": 1
+     },
+     "sent": {
+      "s": 4449,
+      "d": 1689,
+      "r": 1023,
+      "l": 30,
+      "f": 2721
+     },
+     "earlier": 1248
+    },
+    "warmRetry": {
+     "waiting": 70,
+     "dueToday": 20,
+     "dueTomorrow": 14,
+     "dueLater": 36,
+     "byDay": {
+      "28 Nov": 20,
+      "29 Nov": 14,
+      "30 Nov": 13,
+      "01 Dec": 9,
+      "02 Dec": 1,
+      "03 Dec": 3,
+      "05 Dec": 9,
+      "06 Dec": 1
+     },
+     "gaveUp": 0,
+     "permanent": 1,
+     "permReasons": {
+      "Number can't receive WhatsApp messages (131026)": 1
+     },
+     "sent": {
+      "s": 90,
+      "d": 51,
+      "r": 35,
+      "l": 0,
+      "f": 35
+     }
+    },
+    "warm": {
+     "reengage": 256,
+     "visit": 7,
+     "stopped": 271,
+     "total": 534,
+     "sent": {
+      "s": 443,
+      "d": 247,
+      "r": 174,
+      "l": 13,
+      "f": 184
+     },
+     "neverSent": 68
+    },
+    "readers": {
+     "total": 8232,
+     "hot": 738,
+     "due": 4710,
+     "hotDue": 392,
+     "done": 3353
+    },
+    "gaps": [
+     4,
+     6,
+     8
+    ]
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-28T05:26:23.952Z"
+  }
+ ]
+}
