@@ -1,5 +1,5 @@
 {
- "last_sha": "8cd32473ed7394166efcdb9842b6ea6038ffa6ce",
+ "last_sha": "7d45e89e3f9cdc46ba0958844f279cf8cdeaeb9a",
  "meta": {
   "campaign:120255720333370547": {
    "name": "FIT Business Meet 29 Nov",
@@ -27,7 +27,7 @@
   },
   "campaign:120255647260270547": {
    "name": "FIT Warm v1",
-   "status": "PAUSED",
+   "status": "ACTIVE",
    "budget": "",
    "camp": ""
   },
@@ -111,7 +111,7 @@
   },
   "adset:120255647446550547": {
    "name": "FIT W - Warm-up before WhatsApp",
-   "status": "CAMPAIGN_PAUSED",
+   "status": "ACTIVE",
    "budget": "30000",
    "camp": "FIT Warm v1"
   },

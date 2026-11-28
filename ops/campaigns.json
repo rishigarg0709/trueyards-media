@@ -1,5 +1,5 @@
 {
- "at": "2026-11-28 12:01",
+ "at": "2026-11-28 12:10",
  "rows": [
   {
    "id": "120255645738970547",
@@ -8,13 +8,28 @@
    "objective": "OUTCOME_LEADS",
    "created": "2026-11-17",
    "budget_day_inr": 750,
-   "spend_inr": 4927,
-   "spend_today_inr": 178,
-   "impressions": 26264,
+   "spend_inr": 4933,
+   "spend_today_inr": 182,
+   "impressions": 26292,
    "reach": 9495,
    "clicks": 119,
    "chats": 60,
    "chats_today": 3
+  },
+  {
+   "id": "120255647260270547",
+   "name": "FIT Warm v1",
+   "status": "active",
+   "objective": "OUTCOME_AWARENESS",
+   "created": "2026-11-18",
+   "budget_day_inr": 300,
+   "spend_inr": 0,
+   "spend_today_inr": 0,
+   "impressions": 0,
+   "reach": 0,
+   "clicks": 0,
+   "chats": 0,
+   "chats_today": 0
   },
   {
    "id": "120255718171540547",
@@ -23,11 +38,11 @@
    "objective": "OUTCOME_TRAFFIC",
    "created": "2026-11-21",
    "budget_day_inr": 200,
-   "spend_inr": 1398,
-   "spend_today_inr": 78,
-   "impressions": 34226,
-   "reach": 28890,
-   "clicks": 1764,
+   "spend_inr": 1400,
+   "spend_today_inr": 80,
+   "impressions": 34293,
+   "reach": 28908,
+   "clicks": 1770,
    "chats": 0,
    "chats_today": 0
   },
@@ -43,21 +58,6 @@
    "impressions": 4771,
    "reach": 2624,
    "clicks": 32,
-   "chats": 0,
-   "chats_today": 0
-  },
-  {
-   "id": "120255647260270547",
-   "name": "FIT Warm v1",
-   "status": "paused",
-   "objective": "OUTCOME_AWARENESS",
-   "created": "2026-11-18",
-   "budget_day_inr": 0,
-   "spend_inr": 0,
-   "spend_today_inr": 0,
-   "impressions": 0,
-   "reach": 0,
-   "clicks": 0,
    "chats": 0,
    "chats_today": 0
   },
