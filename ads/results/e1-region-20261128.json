@@ -1,0 +1,193 @@
+{
+ "op": "region_report",
+ "ran_at": "2026-11-28T05:50:43.361037Z",
+ "result": {
+  "rows": [
+   {
+    "adset": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+    "region": "Delhi",
+    "spend": 1868,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 7008
+   },
+   {
+    "adset": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+    "region": "Haryana",
+    "spend": 1821,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 15098
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Delhi",
+    "spend": 331,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 835
+   },
+   {
+    "adset": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+    "region": "Uttar Pradesh",
+    "spend": 214,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 745
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Haryana",
+    "spend": 167,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 592
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Delhi",
+    "spend": 148,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 176
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Haryana",
+    "spend": 133,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 491
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Uttar Pradesh",
+    "spend": 29,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 95
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Madhya Pradesh",
+    "spend": 6,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 14
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Odisha",
+    "spend": 6,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 2
+   },
+   {
+    "adset": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+    "region": "Maharashtra",
+    "spend": 3,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 24
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Karnataka",
+    "spend": 3,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 2
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Maharashtra",
+    "spend": 3,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 3
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Madhya Pradesh",
+    "spend": 3,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 6
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Punjab region",
+    "spend": 2,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 10
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Tamil Nadu",
+    "spend": 2,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 14
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Telangana",
+    "spend": 2,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 13
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Maharashtra",
+    "spend": 2,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 28
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Punjab region",
+    "spend": 2,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 19
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Himachal Pradesh",
+    "spend": 1,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 2
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Rajasthan",
+    "spend": 1,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 12
+   },
+   {
+    "adset": "FIT R - Reminder after WhatsApp",
+    "region": "Goa",
+    "spend": 0,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 3
+   },
+   {
+    "adset": "FIT U - Unreachable on WhatsApp",
+    "region": "Rajasthan",
+    "spend": 0,
+    "chats": 0,
+    "per_chat": null,
+    "impressions": 4
+   }
+  ],
+  "error": null
+ }
+}

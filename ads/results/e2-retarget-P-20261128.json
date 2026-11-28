@@ -1,0 +1,40 @@
+{
+ "op": "retarget_adset",
+ "ran_at": "2026-11-28T05:50:56.615373Z",
+ "result": {
+  "result": {
+   "success": true
+  },
+  "cities": [
+   "Rohtak",
+   "Bahadurgarh",
+   "Sonipat",
+   "Panipat",
+   "Jhajjar",
+   "Gurgaon",
+   "Faridabad",
+   "New Delhi",
+   "Noida",
+   "Ghaziabad",
+   "Bhiwani",
+   "Hisar",
+   "Jind",
+   "Charkhi Dadri"
+  ],
+  "excluded_audiences": 2,
+  "cities_not_found": [],
+  "interests_not_found": [],
+  "behaviors_not_found": [],
+  "interests_used": [
+   "Small business (business and finance)",
+   "Manufacturing (industry)",
+   "Warehouse (industry)",
+   "Logistics (business and finance)",
+   "Entrepreneurship (business and finance)",
+   "industrial engineering (engineering)",
+   "Supply chain management (business and finance)",
+   "Factory (manufacturing)",
+   "Small business owners"
+  ]
+ }
+}
