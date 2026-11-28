@@ -1,0 +1,186 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:IN;font-weight:900;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-900-normal.woff2)}
+@font-face{font-family:IN;font-weight:800;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:100;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-100-normal.woff2)}
+@font-face{font-family:IN;font-weight:200;src:url(../../engine/node_modules/@fontsource/inter/files/inter-latin-200-normal.woff2)}
+@font-face{font-family:FR;font-weight:600;src:url(../../engine/node_modules/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2)}
+@font-face{font-family:PM;font-weight:500;src:url(../../engine/node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0C2340}
+#s{position:relative;width:1080px;height:1920px;overflow:hidden;background:#0C2340;color:#FFFFFF;font-family:IN}
+.sc{position:absolute;inset:0;overflow:hidden;background:#0C2340}
+.sc>*{position:absolute}
+.ph{left:0;top:0;width:1080px;height:1920px;object-fit:cover}
+.sh{left:0;top:0;width:1080px;height:1920px}
+.H{font:800 100px/1.02 IN;letter-spacing:-.035em}
+.HK{font:900 100px/1.0 IN;letter-spacing:-.035em;color:#fff;text-shadow:0 6px 34px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.7)}
+.HK .hl{padding:0 .1em;border-radius:12px;text-shadow:none}
+.M{font:800 76px/1.08 IN;letter-spacing:-.035em}
+.B{font:500 44px/1.3 IN;letter-spacing:-.005em}
+.K{font:500 24px/1.2 PM;letter-spacing:.24em;text-transform:uppercase}
+.N{font:100 330px/1 IN;letter-spacing:-.06em}
+.Y{font:600 230px/1 FR;letter-spacing:-.03em;color:#fff}
+.w{display:inline-block;white-space:pre}
+.c{color:#4FD1FF}
+.dg{background:#4FD1FF;color:#0C2340;padding:0 .12em;border-radius:8px}
+#fol{position:absolute;inset:0;z-index:22;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(12,35,64,.92);color:#fff;font-family:IN}
+.hl{background:#4FD1FF;color:#0C2340;padding:0 .12em;border-radius:8px;text-shadow:none}
+.ts{text-shadow:0 4px 30px rgba(0,0,0,.8),0 1px 3px rgba(0,0,0,.6)}
+.tag{display:inline-block;background:#4FD1FF;color:#0C2340;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.tagw{display:inline-block;background:#FFFFFF;color:#0C2340;padding:12px 20px 10px;font:500 26px/1 PM;letter-spacing:.2em;border-radius:4px;text-transform:uppercase;white-space:nowrap}
+.stamp{border:6px solid #4FD1FF;color:#fff;font:900 60px/1 IN;letter-spacing:.01em;padding:16px 28px 12px;border-radius:8px;background:rgba(12,35,64,.62);white-space:nowrap}
+#brand{position:absolute;left:70px;top:150px;font:800 32px/1 IN;letter-spacing:-.02em;z-index:21;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.6)}
+#brand b{color:#28c39d}
+#fine{position:absolute;left:70px;width:860px;top:1612px;font:500 19px/1.35 PM;letter-spacing:.04em;z-index:21;color:rgba(246,241,230,.62)}
+#flash{position:absolute;inset:0;background:#F2FBFF;opacity:0;z-index:30}
+#grain{position:absolute;inset:0;width:1080px;height:1920px;opacity:.07;mix-blend-mode:overlay;z-index:25}
+#vig{position:absolute;inset:0;z-index:24;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 58%,rgba(4,12,24,.30) 100%)}
+</style></head><body><div id="s">
+<div id="brand"><img src="img/logo.png" style="width:48px;height:48px;vertical-align:-12px;margin-right:12px;border-radius:10px">True<b>Yards</b></div>
+<div id="fol"><img src="img/logo.png" style="width:170px;height:170px;border-radius:34px;margin-bottom:40px"><div style="font:800 64px/1.15 IN;letter-spacing:-.03em;text-align:center">Follow for one real estate<br>story a day</div><div style="margin-top:34px;font:500 34px/1 PM;letter-spacing:.08em;color:#4FD1FF">@trueyards.in</div></div><div id="fine"></div><div id="vig"></div><div id="flash"></div>
+<img id="grain" src="img/grain.png">
+</div>
+<script>
+const WS=[["Why", 0.0, 0.214], ["are", 0.268, 0.429], ["Indian", 0.47, 0.714], ["poles", 0.797, 1.214], ["buried", 1.265, 1.571], ["in", 1.619, 1.714], ["wires?", 1.81, 2.39], ["Here's", 2.569, 3.326], ["the", 3.344, 3.397], ["twist.", 3.457, 3.85], ["A", 4.029, 4.154], ["lot", 4.189, 4.296], ["of", 4.321, 4.368], ["these", 4.392, 4.511], ["wires...", 4.594, 5.085], ["don't", 5.263, 5.513], ["carry", 5.561, 5.799], ["electricity", 5.859, 6.513], ["at", 6.561, 6.656], ["all.", 6.728, 7.013], ["The", 7.192, 7.781], ["power", 7.829, 8.067], ["lines", 8.114, 8.353], ["usually", 8.388, 8.638], ["run", 8.71, 8.924], ["at", 8.971, 9.067], ["the", 9.085, 9.138], ["top.", 9.228, 9.487], ["The", 9.656, 9.924], ["tangle", 9.96, 10.21], ["below?", 10.27, 10.638], ["Cable", 10.805, 11.638], ["TV.", 11.757, 12.067], ["Internet.", 12.146, 12.771], ["Optical", 12.862, 13.424], ["fibre.", 13.496, 13.888], ["Hung", 14.067, 14.638], ["on", 14.686, 14.781], ["electricity", 14.823, 15.281], ["poles.", 15.353, 15.826], ["In", 16.004, 16.48], ["July", 16.552, 16.837], ["twenty", 16.868, 17.052], ["twenty-four,", 17.082, 17.734], ["Bengaluru's", 17.807, 18.337], ["power", 18.385, 18.623], ["company", 18.677, 19.052], ["told", 19.109, 19.337], ["operators:", 19.409, 20.337], ["remove", 20.429, 20.98], ["your", 21.023, 21.195], ["unauthorised", 21.242, 21.837], ["cables", 21.899, 22.266], ["from", 22.295, 22.409], ["our", 22.462, 22.623], ["poles", 22.695, 23.052], ["by", 23.147, 23.337], ["July", 23.423, 23.766], ["eighth.", 23.828, 24.229], ["Or", 24.408, 24.884], ["we", 24.955, 25.098], ["will.", 25.155, 25.441], ["Its", 25.62, 25.995], ["survey", 26.046, 26.352], ["counted", 26.405, 26.78], ["about", 26.84, 27.137], ["two", 27.173, 27.28], ["thousand", 27.336, 27.78], ["three", 27.804, 27.923], ["hundred", 27.977, 28.352], ["and", 28.441, 28.709], ["thirty-five", 28.739, 29.209], ["kilometres", 29.274, 29.923], ["of", 29.971, 30.066], ["illegal", 30.137, 30.637], ["wires.", 30.733, 31.287], ["In", 31.465, 31.477], ["one", 31.566, 31.834], ["city.", 31.92, 32.33], ["Some", 32.509, 33.48], ["came", 33.537, 33.766], ["down.", 33.823, 34.136], ["On", 34.314, 34.481], ["one", 34.535, 34.696], ["street,", 34.737, 35.094], ["they", 35.272, 35.329], ["were", 35.358, 35.472], ["back", 35.515, 35.687], ["the", 35.722, 35.829], ["very", 35.887, 36.115], ["next", 36.172, 36.401], ["day.", 36.472, 36.758], ["Every", 36.937, 37.889], ["new", 37.943, 38.104], ["connection", 38.149, 38.604], ["can", 38.657, 38.818], ["mean", 38.861, 39.032], ["one", 39.121, 39.389], ["more", 39.432, 39.604], ["wire.", 39.689, 40.154], ["So", 40.332, 40.808], ["next", 40.851, 41.022], ["time", 41.065, 41.237], ["you", 41.254, 41.308], ["look", 41.351, 41.522], ["up...", 41.618, 41.725], ["you're", 41.904, 42.029], ["not", 42.064, 42.171], ["looking", 42.207, 42.457], ["at", 42.481, 42.529], ["power.", 42.588, 42.999], ["You're", 43.178, 43.262], ["looking", 43.289, 43.477], ["at", 43.524, 43.62], ["your", 43.634, 43.691], ["Wi-Fi.", 43.762, 44.334]];
+const BEATS=[0.022, 0.626, 1.23, 1.81, 2.414, 3.017, 3.621, 4.225, 4.829, 5.409, 6.013, 6.617, 7.22, 7.824, 8.428, 9.008, 9.612, 10.216, 10.819, 11.423, 12.027, 12.63, 13.211, 13.815, 14.418, 15.022, 15.626, 16.23, 16.81, 17.414, 18.018, 18.621, 19.225, 19.829, 20.409, 21.013, 21.617, 22.22, 22.824, 23.428, 24.008, 24.612, 25.216, 25.819, 26.377, 26.98, 27.584, 28.188, 28.768, 29.372, 29.976, 30.58, 31.183, 31.787, 32.391, 32.971, 33.575, 34.179, 34.782, 35.386, 35.967, 36.57, 37.174, 37.778, 38.381, 38.985, 39.589, 40.169, 40.773, 41.377, 41.981, 42.584, 43.188, 43.768, 44.372, 44.976, 45.58, 46.183];
+const S=document.getElementById('s');
+const CO='#4FD1FF',IV='#FFFFFF',NV='#0C2340';
+const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eo=x=>1-Math.pow(1-cl(x),3),eio=x=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const w=i=>WS[i][1];
+const mk=(p,cls,css,html)=>{const e=document.createElement('div');if(cls)e.className=cls;e.style.cssText=css||'';if(html!=null)e.innerHTML=html;p.appendChild(e);return e};
+const T=(p,cls,css,toks)=>{const e=mk(p,cls,css);e.ts=[];toks.forEach(k=>{if(k[0]==='\n'){e.appendChild(document.createElement('br'));return}const s=document.createElement('span');s.className='w'+(k[2]?' '+k[2]:'');s.textContent=k[0];e.appendChild(s);e.appendChild(document.createTextNode(' '));s.t=k[1];s.pop=k[3];e.ts.push(s)});return e};
+const rv=(e,_t,out)=>{const t=window.GT;let o2=1;if(out!=null)o2=1-cl((t-out)/.18);e.ts.forEach(s=>{const p=(t-s.t)/.2;const q=eo(p);s.style.opacity=cl(p*2)*o2;s.style.transform=s.pop?`scale(${.6+.4*eb((t-s.t)/.28)})`:`translateY(${(1-q)*30}px)`;s.style.filter=p<1&&p>0?`blur(${(1-q)*6}px)`:'none'})};
+const fade=(e,t,a,du=.25,dy=24)=>{const p=eo((t-a)/du);e.style.opacity=cl((t-a)/du);e.style.transform=`translateY(${(1-p)*dy}px)`};
+const slam=(e,t,a,s0=1.8,rot=-5)=>{const p=eo((t-a)/.18);e.style.opacity=cl((t-a)/.06);e.style.transform=`scale(${s0-(s0-1)*p}) rotate(${rot}deg)`};
+const shake=(t,a,amp=9)=>t>=a&&t<a+.38?Math.sin(t*97)*amp*(1-(t-a)/.38):0;
+const SN=t=>{if(t<=0)return t;let b=BEATS.reduce((a,x)=>Math.abs(x-t)<Math.abs(a-t)?x:a,1e9);return Math.abs(b-t)<=.2?b:t};
+const SC=[];const add=(t0,fn,wipe)=>SC.push({t0:t0<=0?0:SN(t0),raw:t0,fn,wipe});
+const END=WS[WS.length-1][2]+2.3;const OST=END;
+const svg=(p,css,inner)=>{const e=document.createElementNS('http://www.w3.org/2000/svg','svg');e.setAttribute('viewBox','0 0 1080 1920');e.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;'+(css||'');e.innerHTML=inner;p.appendChild(e);return e};
+// full-bleed image in a transformable box
+const box=(p,src,ox,oy,pos)=>{const b=mk(p,'',`left:0;top:0;width:1080px;height:1920px;transform-origin:${ox}px ${oy}px`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText='position:absolute;left:0;top:0;width:1080px;height:1920px;object-fit:cover;object-position:'+(pos||'50% 50%');b.appendChild(i);b.im=i;return b};
+// framed image: a 1080 x h window at top y (keeps 2+ source px per layout px for landscape photos), feathered into navy
+const frm=(p,src,y,h,pos,ox,oy)=>{const b=mk(p,'',`left:0;top:${y}px;width:1080px;height:${h}px;overflow:hidden`);const i=document.createElement('img');i.src='img/'+src+'.jpg';i.style.cssText=`position:absolute;left:0;top:0;width:1080px;height:${h}px;object-fit:cover;object-position:${pos||'50% 50%'};transform-origin:${ox||540}px ${oy||h/2}px`;b.appendChild(i);b.im=i;return b};
+const GTOP='linear-gradient(180deg,rgba(12,35,64,.9) 0%,rgba(12,35,64,.55) 17%,rgba(12,35,64,0) 30%';
+const GB=(a)=>GTOP+`,rgba(12,35,64,0) ${a}%,rgba(12,35,64,.82) ${a+16}%,rgba(12,35,64,.96) ${a+28}%,#0C2340 100%)`;
+const corners=(sc,x0,y0,x1,y1,L=56,th=6)=>{const r=[];[[x0,y0,'border-left','border-top'],[x1-L,y0,'border-right','border-top'],[x0,y1-L,'border-left','border-bottom'],[x1-L,y1-L,'border-right','border-bottom']].forEach(([x,y,a,c])=>r.push(mk(sc,'',`position:absolute;left:${x}px;top:${y}px;width:${L}px;height:${L}px;${a}:${th}px solid ${CO};${c}:${th}px solid ${CO}`)));return r};
+const crn=(br,t,a)=>br.forEach((e,n)=>{const p=eo((t-a-n*.04)/.3);e.style.opacity=cl(p*1.5);e.style.transform=`scale(${1.6-.6*p})`});
+// word lookup by text (nth occurrence), so scenes survive re-alignment
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9\-']/g,'');
+const F=(s,n=1)=>{let c=0;for(let i=0;i<WS.length;i++){if(nz(WS[i][0])===s&&++c===n)return i}throw new Error('no word '+s+' '+n)};
+const wt=(s,n)=>w(F(s,n));
+const HOOKEV=wt('electricity');
+// ================= SCENES (look E Blueprint: ink #0C2340, white line work, one cyan #4FD1FF; Inter 800/900, Plex Mono labels) =================
+const BG='#0C2340';const KC='#BFEFFF';
+const panel=(sc,src,y,h,pos,ox,oy)=>{const b=frm(sc,src,y,h,pos,ox,oy);mk(sc,'sh',`background:linear-gradient(180deg,${BG} ${y-2}px,rgba(12,35,64,0) ${y+140}px,rgba(12,35,64,0) ${y+h-220}px,${BG} ${y+h}px)`);return b};
+const num=(p,css)=>mk(p,'H ts',css+';opacity:0','');
+const cnt=(e,t,a,du,f)=>{e.style.opacity=cl((t-a+.1)/.15);const p=eo((t-a)/du);e.innerHTML=f(p);return p};
+// cyan leader label: a dot, a thin line and a mono tag that draws on at time a (scene-local)
+const lab=(sc,x,y,len,txt,dir)=>{const l=mk(sc,'',`left:${dir<0?x-len:x}px;top:${y}px;width:0px;height:4px;background:#4FD1FF;box-shadow:0 0 12px rgba(79,209,255,.8)`);const d=mk(sc,'',`left:${x-11}px;top:${y-9}px;width:22px;height:22px;border-radius:50%;background:#4FD1FF;box-shadow:0 0 16px #4FD1FF;opacity:0`);const g=mk(sc,'tag',`top:${y-26}px;opacity:0;font-size:30px;${dir<0?'right:'+(1080-(x-len)+12)+'px':'left:'+(x+len+12)+'px'}`,txt);
+ return (t,a)=>{const p=eo((t-a)/.3);d.style.opacity=cl((t-a)/.08);l.style.width=(len*p)+'px';if(dir<0)l.style.left=(x-len*p)+'px';g.style.opacity=cl((t-a-.2)/.15)}};
+const heroBox=(sc,ox,oy,pos)=>box(sc,'h1',ox||540,oy||700,pos||'50% 50%');
+// 1. HOOK: bright pole buried in cables, blue sky, slow tilt up from frame 0; BIG hook text already on screen at frame 0 (D73), question spoken from 0 s
+add(0,sc=>{const b=heroBox(sc,540,560);b.im.style.filter='brightness(1.08) saturate(1.08) contrast(1.03)';
+ mk(sc,'sh','background:linear-gradient(180deg,rgba(12,35,64,.35) 0%,rgba(12,35,64,0) 30%)');
+ const h=mk(sc,'HK ts','left:64px;top:262px;width:960px','<div style="font-size:90px;line-height:1.05;white-space:nowrap">Why are Indian poles</div><div style="font-size:190px;line-height:1.0;margin-top:22px"><span class="hl">buried</span></div><div style="font-size:190px;line-height:1.0;margin-top:22px;white-space:nowrap">in&nbsp;<span class="hl">wires?</span></div>');
+ const t1=wt("here's")-.15;
+ return t=>{const p=eio(t/3.2);b.style.transform=`scale(${1.16+.06*p}) translateY(${70-110*p}px)`;const q=eo(t/.16);h.style.transform=`scale(${1.06-.06*q})`;h.style.transformOrigin='0 50%';h.style.opacity=1-cl((t-t1)/.15)}});
+// 2. Real pole tangle (photo), push-in on the knot. "Here's the twist. A lot of these wires... don't carry electricity at all."
+add(wt("here's")-.1,sc=>{const b=panel(sc,'pt',200,1180,'50% 45%',540,560);b.im.style.filter='brightness(1.08) saturate(1.05)';
+ const b0=wt("here's")-.1;
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt("here's"),'c'],["Here's",wt("here's")],['the',wt('the',1)],['twist',wt('twist')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:960px;font-size:118px',[['Not',wt("don't")],['\n'],['electricity.',wt('electricity'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.05+.16*eio(t/3.4)})`;rv(k,t);rv(h,t)}},true);
+// 3. Cutaway (AI): power layer on top. "The power lines usually run at the top."
+add(wt('the',2)-.1,sc=>{const b=box(sc,'cut',540,520,'50% 20%');b.im.style.filter='brightness(1.15) saturate(1.05)';mk(sc,'sh','background:'+GB(56));
+ const b0=wt('the',2)-.1;
+ const L1=lab(sc,640,560,170,'POWER',1);
+ const h=T(sc,'H ts','left:70px;top:1290px;width:960px;font-size:112px',[['Power',wt('power',1)],['\n'],['on',wt('top')-.2],['top.',wt('top'),'hl',1]]);
+ const k=T(sc,'K ts','left:72px;top:1240px;color:'+KC,[['usually',wt('usually')]]);
+ return t=>{b.style.transform=`scale(${1.9+.12*eio(t/2.6)}) translateY(${120}px)`;L1(t,wt('power',1)-b0);rv(h,t);rv(k,t)}},true);
+// 4. Cutaway, the bundles below, with labels. "The tangle below? Cable TV. Internet. Optical fibre."
+add(wt('the',4)-.1,sc=>{const b=box(sc,'cut',540,900,'50% 30%');b.im.style.filter='brightness(1.18) saturate(1.05)';mk(sc,'sh','background:'+GB(60));
+ const b0=wt('the',4)-.1;
+ const a=lab(sc,440,520,150,'CABLE TV',-1),c=lab(sc,640,690,150,'INTERNET',1);
+ const h=T(sc,'H ts','left:70px;top:1330px;width:960px;font-size:112px',[['The',wt('the',4)],['tangle',wt('tangle'),'hl',1],['\n'],['below?',wt('below')]]);
+ return t=>{b.style.transform=`scale(${1.45+.1*eio(t/4)}) translateY(${-40*eio(t/4)}px)`;rv(h,t);a(t,wt('cable')-b0);c(t,wt('internet')-b0)}},true);
+// 5. Macro: optical fibre strands (AI), framed panel. "Optical fibre." then "Hung on electricity poles."
+add(wt('optical')-.12,sc=>{const b=panel(sc,'fib',380,860,'50% 50%',600,430);b.im.style.filter='brightness(1.15) saturate(1.05)';
+ const b0=wt('optical')-.12;
+ const k=T(sc,'K ts','left:72px;top:1250px;color:'+KC,[['●',wt('optical'),'c'],['Optical',wt('optical')],['fibre',wt('fibre')]]);
+ const h=T(sc,'H ts','left:70px;top:1300px;width:960px;font-size:108px',[['Hung',wt('hung')],['on',wt('on',1)],['\n'],['power',wt('electricity',2)],['poles.',wt('poles',2),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.08+.14*eio(t/2.6)}) rotate(${-2+3*eio(t/2.6)}deg)`;rv(k,t);rv(h,t)}},true);
+// 6. Real old facade with wires (photo), tilt down. "In July 2024, Bengaluru's power company told operators:"
+add(wt('in',2)-.1,sc=>{const b=panel(sc,'hw',200,1180,'50% 30%',540,590);b.im.style.filter='brightness(1.06) saturate(1.04)';
+ const b0=wt('in',2)-.1;
+ const tg=mk(sc,'tag','left:72px;top:1180px;opacity:0','Bengaluru · July 2024');
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:100px',[['Power',wt('power',2)],['company',wt('company')],['\n'],['to',wt('told')],['operators:',wt('operators'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.1+.06*eio(t/3.4)}) translateY(${-60+80*eio(t/3.4)}px)`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+// 7. Cut cables and a coil on the kerb (AI). "remove your unauthorised cables from our poles by July eighth. Or we will."
+add(wt('remove')-.1,sc=>{const b=box(sc,'coil',600,1100,'50% 60%');b.im.style.filter='brightness(1.1) saturate(1.04)';mk(sc,'sh','background:'+GB(54));
+ const b0=wt('remove')-.1;
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:112px',[['Remove',wt('remove')],['by',wt('by')],['\n'],['8',wt('eighth')],['July.',wt('eighth'),'hl',1]]);
+ const st=mk(sc,'stamp','left:330px;top:960px;opacity:0;font-size:80px','OR WE WILL.');
+ return t=>{b.style.transform=`scale(${1.08+.1*eio(t/4)})`;rv(h,t);const ts=wt('or')-b0;if(t>=ts)slam(st,t,ts,1.7,-4);else st.style.opacity=0}},true);
+// 8. Counter over the blurred hero street, a cyan cable line draws on. "Its survey counted about 2,335 kilometres of illegal wires."
+add(wt('its')-.1,sc=>{const b=box(sc,'h1',540,960,'50% 50%');b.im.style.filter='brightness(.95) saturate(1.0) blur(10px)';mk(sc,'sh','background:rgba(12,35,64,.45)');
+ const b0=wt('its')-.1;
+ const ln=svg(sc,'','<path id="cw" d="M-40 760 C 200 640, 330 900, 540 780 S 880 640, 1120 820" stroke="#4FD1FF" stroke-width="9" fill="none" stroke-linecap="round" style="filter:drop-shadow(0 0 14px #4FD1FF)"/>');const P=ln.querySelector('path');const PL=P.getTotalLength();P.style.strokeDasharray=PL;
+ const k=T(sc,'K ts','left:72px;top:880px;color:'+KC,[['●',wt('survey'),'c'],['BESCOM',wt('survey')],['survey',wt('survey')]]);
+ const n=num(sc,'left:62px;top:930px;font-size:230px;letter-spacing:-.04em;white-space:nowrap');
+ const u=T(sc,'H ts','left:70px;top:1180px;width:960px;font-size:104px',[['km',wt('kilometres')],['of',wt('of',2)],['\n'],['illegal',wt('illegal'),'hl',1],['wires',wt('wires',3)]]);
+ const tn=wt('two')-b0;
+ return t=>{b.style.transform=`scale(${1.25+.08*eio(t/4)})`;P.style.strokeDashoffset=PL*(1-eo((t-tn)/2.2));rv(k,t);cnt(n,t,tn,1.6,p=>Math.round(2335*p).toLocaleString('en-IN'));n.style.color=t>tn+1.6?'#4FD1FF':'#fff';rv(u,t)}},true);
+// 9. Real street of wires (photo, cropped to the sky band, no people). "In one city."
+add(wt('in',3)-.1,sc=>{const b=panel(sc,'sw',200,1100,'50% 8%',540,300);b.im.style.filter='brightness(1.18) saturate(1.04) contrast(1.04)';
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:170px',[['In',wt('in',3)],['one',wt('one',1),'hl',1],['\n'],['city.',wt('city')]]);
+ return t=>{b.im.style.transform=`scale(${1.12+.08*eio(t/2)}) translateX(${30-60*eio(t/2)}px)`;rv(h,t)}},true);
+// 10. Cut ends close (AI). "Some came down."
+add(wt('some')-.1,sc=>{const b=box(sc,'coil',600,1300,'50% 60%');b.im.style.filter='brightness(1.1) saturate(1.04)';mk(sc,'sh','background:'+GB(54));
+ const h=T(sc,'H ts','left:70px;top:1280px;width:960px;font-size:118px',[['Some',wt('some')],['came',wt('came')],['\n'],['down.',wt('down'),'hl',1]]);
+ return t=>{b.style.transform=`scale(${1.9+.12*eio(t/1.6)}) translateY(${-40}px)`;rv(h,t)}},true);
+// 11. Real pole tangle again, other crop. "On one street, they were back the very next day."
+add(wt('on',2)-.1,sc=>{const b=panel(sc,'pt',200,1180,'70% 30%',760,400);b.im.style.filter='brightness(1.1) saturate(1.05)';
+ const b0=wt('on',2)-.1;
+ const tg=mk(sc,'tagw','left:72px;top:1180px;opacity:0','One street');
+ const h=T(sc,'H ts','left:70px;top:1250px;width:960px;font-size:112px',[['Back',wt('back')],['the',wt('the',5)],['\n'],['next',wt('next',1)],['day.',wt('day'),'hl',1]]);
+ return t=>{b.im.style.transform=`scale(${1.3+.12*eio(t/3)})`;fade(tg,t,.05,.2,10);rv(h,t)}},true);
+// 12. Hero mid crop, one new cyan cable draws on. "Every new connection can mean one more wire."
+add(wt('every')-.1,sc=>{const b=heroBox(sc,540,820);b.im.style.filter='brightness(1.08) saturate(1.06)';mk(sc,'sh','background:'+GB(56));
+ const b0=wt('every')-.1;
+ const ln=svg(sc,'','<path d="M1120 360 C 860 420, 700 520, 600 760 C 560 860, 640 980, 520 1060" stroke="#4FD1FF" stroke-width="10" fill="none" stroke-linecap="round" style="filter:drop-shadow(0 0 16px #4FD1FF)"/>');const P=ln.querySelector('path');const PL=P.getTotalLength();P.style.strokeDasharray=PL;
+ const h=T(sc,'H ts','left:70px;top:1270px;width:960px;font-size:104px',[['+1',wt('new'),'hl'],['connection',wt('connection')],['\n'],['=',wt('mean')],['+1',wt('one',3),'hl'],['wire.',wt('wire')]]);
+ return t=>{b.style.transform=`scale(${1.75+.1*eio(t/3)})`;P.style.strokeDashoffset=PL*(1-eo((t-(wt('new')-b0))/1.6));rv(h,t)}},true);
+// 13. Impossible-real: the street with every wire gone (AI). "So next time you look up..."
+add(wt('so')-.1,sc=>{const b=box(sc,'clean',540,500,'50% 40%');b.im.style.filter='brightness(1.06) saturate(1.06)';mk(sc,'sh','background:'+GB(60));
+ const k=T(sc,'K ts','left:72px;top:1300px;color:'+KC,[['●',wt('so'),'c'],['Without',wt('so')],['them',wt('so')]]);
+ const h=T(sc,'H ts','left:70px;top:1350px;width:960px;font-size:120px',[['Look',wt('look')],['up.',wt('up'),'hl',1]]);
+ return t=>{const p=eio(t/2.4);b.style.transform=`scale(${1.12+.04*p}) translateY(${60-80*p}px)`;rv(k,t);rv(h,t)}},true);
+// 14. Loop: back to the frame-0 tangle. "you're not looking at power. You're looking at your Wi-Fi."
+add(wt("you're")-.1,sc=>{const b=heroBox(sc,540,560);b.im.style.filter='brightness(1.08) saturate(1.08) contrast(1.03)';mk(sc,'sh','background:'+GB(54));
+ const b0=wt("you're")-.1;
+ const k=T(sc,'M ts','left:70px;top:1160px;width:960px;font-size:72px;color:#fff',[['Not',wt('not')],['power.',wt('power',3)]]);
+ const h=T(sc,'H ts','left:70px;top:1260px;width:960px;font-size:140px',[['Your',wt('your',2)],['\n'],['Wi-Fi.',wt('wi-fi'),'hl',1]]);
+ const tg=mk(sc,'tagw','left:72px;top:1075px;opacity:0','Why India looks like this · #7');
+ return t=>{const p=eio(t/3.4);b.style.transform=`scale(${1.3-.14*p}) translateY(${-40+110*p}px)`;rv(k,t);rv(h,t);fade(tg,t,wt('wi-fi')-b0+.3,.25,14)}},true);
+const scenes=SC.map((o,i)=>{const sc=mk(S,'sc','');S.insertBefore(sc,document.getElementById('brand'));return {sc,u:o.fn(sc),t0:o.t0,raw:o.raw,t1:i+1<SC.length?SC[i+1].t0:END,wipe:o.wipe}});
+window.DUR=END;
+const AIL='AI visualisation.';const REAL='Real photo: Unsplash.';const FINE=[[0,AIL],[SC[1].t0,REAL],[SC[2].t0,AIL+' Power lines usually on top; not every pole.'],[SC[3].t0,AIL],[SC[4].t0,AIL],[SC[5].t0,REAL+' BESCOM via PTI, 6 Jul 2024.'],[SC[6].t0,AIL+' BESCOM via PTI, 6 Jul 2024.'],[SC[7].t0,AIL+' BESCOM survey, Deccan Herald, 19 Jul 2024.'],[SC[8].t0,REAL+' BESCOM survey, Deccan Herald, 19 Jul 2024.'],[SC[9].t0,AIL],[SC[10].t0,REAL+' Deccan Herald, Jul 2024.'],[SC[11].t0,AIL],[SC[12].t0,AIL+' Not a real street.'],[SC[13].t0,AIL+' Education only, not advice.'],[END-1.8,'']];
+scenes.forEach(s=>{s.imgs=[...s.sc.querySelectorAll('img')];s.imgs.forEach(i=>{i.dataset.src=i.getAttribute('src');i.removeAttribute('src')})});
+window.ready=Promise.all([document.fonts.ready,...[...document.images].filter(i=>i.getAttribute('src')).map(i=>i.decode().catch(()=>{}))]);
+window.setT=t=>{const P=[];scenes.forEach((s,i)=>{const near=t>=s.t0-.4&&t<s.t1+.4;s.imgs.forEach(im=>{if(near&&!im.getAttribute('src')){im.src=im.dataset.src;P.push(im.decode().catch(()=>{}))}else if(!near&&im.getAttribute('src'))im.removeAttribute('src')})});
+ draw(t);return P.length?Promise.all(P).then(()=>{draw(t)}):undefined};
+const draw=t=>{window.GT=t;
+ scenes.forEach((s,i)=>{const on=t>=s.t0&&t<s.t1;s.sc.style.display=on?'block':'none';s.sc.style.opacity=1;
+  if(on){const lt=t-s.t0;const n=8;if(i>0&&s.wipe&&lt<.32){const p=lt/.32;const prev=scenes[i-1];prev.sc.style.display='block';prev.u(t-prev.raw);
+    s.sc.style.clipPath=`polygon(${(()=>{let a=[];for(let c=0;c<n;c++){const q=eo(cl(p*1.6-c*.07));const x0=c*1080/n,x1=(c+1)*1080/n+1;a.push(`${x0}px 0px`,`${x1}px 0px`,`${x1}px ${1920*q}px`,`${x0}px ${1920*q}px`,`${x0}px 0px`)}return a.join(',')})()})`}
+   else s.sc.style.clipPath='none';
+   s.u(t-s.raw)}});
+
+ let ft='';FINE.forEach(([tt,s])=>{if(t>=tt)ft=s});const fe=document.getElementById('fine');fe.textContent=ft;
+ let fl=0;scenes.forEach((s,i)=>{if(i&&t>=s.t0&&!s.wipe)fl=Math.max(fl,.14*Math.exp(-(t-s.t0)/.06))});
+ [HOOKEV,wt('two'),wt('or'),wt('back'),wt('wi-fi')].forEach((e,j)=>{if(e!=null&&t>=e)fl=Math.max(fl,(j<1?.4:.28)*Math.exp(-(t-e)/.08))});document.getElementById('flash').style.opacity=fl;
+ const fo=cl((t-(END-1.75))/.2)*(1-cl((t-(END-.42))/.25));document.getElementById('fol').style.opacity=fo;scenes[scenes.length-1].sc.style.opacity=1-cl(fo*1.4);document.getElementById('brand').style.opacity=1-fo;
+};
+</script></body></html>
