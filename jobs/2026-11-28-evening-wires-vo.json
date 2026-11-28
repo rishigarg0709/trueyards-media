@@ -1,0 +1,32 @@
+[
+ {
+  "kind": "usage",
+  "name": "el-usage"
+ },
+ {
+  "kind": "voice",
+  "name": "wires-vo-1",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Why are Indian poles buried in wires? Here's the twist. A lot of these wires... don't carry electricity at all. The power lines usually run at the top. The tangle below? Cable TV. Internet. Optical fibre. Hung on electricity poles. In July twenty twenty-four, Bengaluru's power company told operators: remove your unauthorised cables from our poles by July eighth. Or we will. Its survey counted about two thousand three hundred and thirty-five kilometres of illegal wires. [short pause] In one city. Some came down. On one street, they were back the very next day. Every new connection can mean one more wire. So next time you look up... you're not looking at power. [whispers] You're looking at your Wi-Fi.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ },
+ {
+  "kind": "voice",
+  "name": "wires-vo-2",
+  "voice_id": "yj30vwTGJxSHezdAGsv9",
+  "model": "eleven_v3",
+  "text": "Why are Indian poles buried in wires? Here's the twist. A lot of these wires... don't carry electricity at all. The power lines usually run at the top. The tangle below? Cable TV. Internet. Optical fibre. Hung on electricity poles. In July twenty twenty-four, Bengaluru's power company told operators: remove your unauthorised cables from our poles by July eighth. Or we will. Its survey counted about two thousand three hundred and thirty-five kilometres of illegal wires. [short pause] In one city. Some came down. On one street, they were back the very next day. Every new connection can mean one more wire. So next time you look up... you're not looking at power. [whispers] You're looking at your Wi-Fi.",
+  "settings": {
+   "stability": 0.5,
+   "similarity_boost": 0.8,
+   "style": 0.3,
+   "use_speaker_boost": true
+  }
+ }
+]
