@@ -883,6 +883,10 @@ def apply_tactics_and_plan(rep, summary, dry):
             if not dry:
                 call(s["id"], {"status": "PAUSED"}, "POST")
             rep["actions"].append(f"Paused {t['name']}: {'no audiences in its window today' if not ids else 'not approved'}")
+    if warm and live_warm and any(CFG["tactics"][k]["campaign"] == "warm" for k in active_tactics) and warm.get("status") != "ACTIVE":
+        if not dry:
+            call(warm["id"], {"status": "ACTIVE"}, "POST")
+        rep["actions"].append(f"Warm campaign {warm.get('name')}: PAUSED -> ACTIVE (W tactic has audiences today)")
     plan = current_plan()
     if not plan or not live_main:
         rep["plan"] = "no current plan (planner awaiting total)" if not plan else "plan waiting for launch approval"
