@@ -1,10 +1,10 @@
 {
  "_note": "Media planner settings. Rishi sets product and total_daily_inr (spend before GST). Everything else is Claude's to tune within the rules in strategy/CHANNEL_COORDINATION.md.",
  "product": "FIT",
- "total_daily_inr": 1500,
+ "total_daily_inr": 2100,
  "start_share": {
-  "wa": 0.67,
-  "meta": 0.33
+  "wa": 0.43,
+  "meta": 0.57
  },
  "floor_of_start": 0.3,
  "max_shift_share": 0.2,
@@ -13,18 +13,18 @@
  "min_visits_to_compare": 3,
  "min_qualified_to_compare": 5,
  "meta_tactics_start": {
-  "prospect_A": 0.46,
+  "prospect_A": 0.542,
   "prospect_B": 0.0,
-  "warm": 0.2,
-  "remind": 0.17,
-  "unreach": 0.17
+  "warm": 0.292,
+  "remind": 0.083,
+  "unreach": 0.083
  },
  "meta_tactics_without_waves": {
-  "prospect_A": 0.66,
+  "prospect_A": 0.834,
   "prospect_B": 0.0,
-  "remind": 0.17,
+  "remind": 0.083,
   "warm": 0.0,
-  "unreach": 0.17
+  "unreach": 0.083
  },
  "min_tactic_inr": 80,
  "warm_min_waves_to_judge": 3,
@@ -35,5 +35,6 @@
  },
  "_set_by_rishi": "17 Nov 2026: FIT, INR 1,500/day total; ads from the TrueYards Facebook page and Instagram.",
  "_tactics_note": "18 Nov: one prospecting ad set (P). Tactic budgets with no live audience flow back to prospecting in the daily run.",
- "_rishi_28nov": "Rishi, 28 Nov 2026: discovery, warm-up, and R and U on a little budget (about INR 100 a day each)."
+ "_rishi_28nov": "Rishi, 28 Nov 2026: discovery, warm-up, and R and U on a little budget (about INR 100 a day each).",
+ "_set_by_rishi_28nov": "Rishi 28 Nov 2026 11:00 IST: total INR 3,000/day across WhatsApp, Meta (FB+Insta), Google Search and YouTube. This planner covers WhatsApp INR 900 + Meta INR 1,200 = INR 2,100; Google Search INR 500 and YouTube INR 400 are run by the Google Ads agent (Directive D71) until Google joins the planner. Meta split: discovery 650, warm-up 350, R 100, U 100."
 }

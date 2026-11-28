@@ -1,0 +1,1 @@
+{"by": "Chief of Staff", "ops": [{"op": "autopilot.config", "args": {"budgetInr": 900, "pausedCells": ["G", "NWD", "WD", "D.eng.lo", "D.elec.lo", "D.chem.lo", "D.oth.lo", "D.trd.lo", "W.eng.lo", "W.elec.lo", "W.chem.lo", "W.oth.lo", "W.trd.lo", "N.eng.lo", "N.elec.lo", "N.chem.lo", "N.oth.lo", "N.trd.lo"]}}, {"op": "autopilot", "args": {}}]}

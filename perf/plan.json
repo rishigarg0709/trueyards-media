@@ -2,22 +2,22 @@
  "date": "2026-11-28",
  "status": "ok",
  "product": "FIT",
- "total": 1500,
- "wa_budget_inr": 705,
- "meta_budget_inr": 795,
+ "total": 2100,
+ "wa_budget_inr": 900,
+ "meta_budget_inr": 1200,
  "meta_tactics": {
-  "prospect_A": 366,
+  "prospect_A": 650,
   "prospect_B": 0,
-  "warm": 159,
-  "remind": 135,
-  "unreach": 135
+  "warm": 350,
+  "remind": 100,
+  "unreach": 100
  },
  "meta_shares": {
-  "prospect_A": 0.46,
+  "prospect_A": 0.542,
   "prospect_B": 0.0,
-  "warm": 0.2,
-  "remind": 0.17,
-  "unreach": 0.17
+  "warm": 0.292,
+  "remind": 0.083,
+  "unreach": 0.083
  },
  "warm": {
   "cellsPerDay": 1,
@@ -72,7 +72,6 @@
   "summary": "ok"
  },
  "reasons": [
-  "Moved INR 300/day to Meta: INR 464 vs 1942 per site visit planned.",
-  "Warm-up lift not measurable yet (needs 3 waves a week old); shares held."
+  "Rishi 28 Nov: INR 3,000/day total. WhatsApp 900, Meta 1,200 (discovery 650, warm-up 350, R 100, U 100); Google Search 500 and YouTube 400 run by the Google Ads agent."
  ]
 }

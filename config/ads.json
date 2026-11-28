@@ -15,8 +15,8 @@
  },
  "budget_approved": true,
  "launch_approved": true,
- "daily_cap_inr": 1200,
- "monthly_cap_inr": 30000,
+ "daily_cap_inr": 1300,
+ "monthly_cap_inr": 38000,
  "min_adset_daily_inr": 100,
  "max_shift_pct_per_day": 20,
  "target_cost_per_conversation_inr": 60,
@@ -76,6 +76,22 @@
     },
     {
      "q": "Ghaziabad",
+     "radius_km": 17
+    },
+    {
+     "q": "Bhiwani",
+     "radius_km": 20
+    },
+    {
+     "q": "Hisar",
+     "radius_km": 25
+    },
+    {
+     "q": "Jind",
+     "radius_km": 20
+    },
+    {
+     "q": "Charkhi Dadri",
      "radius_km": 17
     }
    ],
@@ -418,12 +434,13 @@
  "_warm_note": "Rishi switched on the joint plan 18 Nov 2026 00:45 IST. Warm-up, reminder and unreachable tactics go live when their audiences exist, within the planner's Meta budget and the caps.",
  "_ice_breakers_note": "Each tap triggers the bot's ad flow (Lambda ai66): carousel, plan, plot size, then visit / brochure / subsidies.",
  "meta_ramp": {
-  "target_inr": 1000,
+  "target_inr": 1200,
   "step_pct": 20,
   "min_days": 3,
   "start_on": "2026-11-20",
   "min_delivery": 0.7,
-  "_note": "Rishi (18 Nov 2026 12:15 IST): autonomy to take Meta from INR 500 to 1,000/day. Rishi (20 Nov 2026 11:29 IST): no fixed cost-per-chat threshold, do what is optimal. So: step up 20% every 3 days while cost per qualified lead (per chat until there are qualified leads) has not risen more than 25% since the last step and delivery is >= 70%; step back 20% if it rose more than 50%; caps still apply. On top of the planner's Meta share."
+  "_note": "Rishi (18 Nov 2026 12:15 IST): autonomy to take Meta from INR 500 to 1,000/day. Rishi (20 Nov 2026 11:29 IST): no fixed cost-per-chat threshold, do what is optimal. So: step up 20% every 3 days while cost per qualified lead (per chat until there are qualified leads) has not risen more than 25% since the last step and delivery is >= 70%; step back 20% if it rose more than 50%; caps still apply. On top of the planner's Meta share.",
+  "_note_28nov": "28 Nov: Meta is INR 1,200/day by plan; the ramp adds nothing above that."
  },
  "_tactics_28nov_note": "Rishi, 28 Nov 2026: Meta and Google each run (a) discovery, (b) warm-up and (c) small reminder (R) and unreachable (U) budgets. All list ads use P10 and P12 only (never P11)."
 }
