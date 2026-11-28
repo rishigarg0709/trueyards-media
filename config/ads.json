@@ -338,24 +338,6 @@
  "warm_campaign_name": "FIT Warm v1",
  "warm_launch_approved": true,
  "tactics": {
-  "R": {
-   "name": "FIT R - Reminder after WhatsApp",
-   "campaign": "main",
-   "kind": "ctwa",
-   "audience_window": "remind",
-   "ads_from": "P",
-   "_note": "Warm halves after their WhatsApp first touch (D0 to D0+10): CTWA reminders between follow-ups."
-  },
-  "U": {
-   "name": "FIT U - Unreachable on WhatsApp",
-   "campaign": "main",
-   "kind": "ctwa",
-   "audiences": [
-    "FITU|unreachable"
-   ],
-   "ads_from": "P",
-   "_note": "Pool numbers WhatsApp cannot deliver to (131026)."
-  },
   "W": {
    "name": "FIT W - Warm-up before WhatsApp",
    "campaign": "warm",
@@ -363,7 +345,7 @@
    "audience_window": "warm",
    "ads_from": "P",
    "max_frequency_7d": 3,
-   "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask."
+   "_note": "Warm halves of upcoming joint waves (D0-4 to D0-1). Reach, no ask. Ads: P10 and P12 only (Rishi, 28 Nov 2026)."
   }
  },
  "tester": {
@@ -424,5 +406,6 @@
   "start_on": "2026-11-20",
   "min_delivery": 0.7,
   "_note": "Rishi (18 Nov 2026 12:15 IST): autonomy to take Meta from INR 500 to 1,000/day. Rishi (20 Nov 2026 11:29 IST): no fixed cost-per-chat threshold, do what is optimal. So: step up 20% every 3 days while cost per qualified lead (per chat until there are qualified leads) has not risen more than 25% since the last step and delivery is >= 70%; step back 20% if it rose more than 50%; caps still apply. On top of the planner's Meta share."
- }
+ },
+ "_tactics_removed_note": "28 Nov 2026, Rishi: no reminder (R) or unreachable (U) list ads on Meta or Google; the only list-based ads are warm-up (W) with P10 and P12. R and U ad sets paused and removed from tactics, so the daily run never re-enables them."
 }

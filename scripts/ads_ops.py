@@ -772,6 +772,8 @@ def op_tactics_setup(req):
                 continue
         st["adsets"][key] = s["id"]
         for ad in src_ads.get(t["ads_from"], []):
+            if ad.get("_paused"):
+                continue  # an ad Rishi paused (e.g. P11) is never copied into a tactic
             ad2 = dict(ad, name=key + ad["name"][1:])
             try:
                 if t["kind"] == "photo" and "video" in ad2:
