@@ -6,7 +6,7 @@
 - Language test (D61 point 4): English voiceover (Jessa). Midday is Hinglish.
 - Test: **X19 control** (D56: usual plan, no send line).
 - Publishing: main grid (D54), one Instagram copy, "share_to_feed": true, never "trial". Platform texts fresh per platform (D53). X and Threads: Bengaluru plus the 2,335 km number in line one (LEARNINGS Platform fit: famous Indian place plus a puzzle does best on X).
-- Opening (D41, D61 point 5, D1 bright): frame 0 is a bright, full-frame daylight shot looking up at an Indian street pole buried in a black tangle of cables against a clear blue sky, slow tilt up from 0 s, the question SPOKEN from 0 s; no text card before 1.5 s; "a lot of these wires" reveal at about 4 s, "2,335 km" at about 20 s. First 2 s YAVG at least 90 (blue sky behind the wires).
+- Opening (D41, D61 point 5, D1 bright): frame 0 is a bright, full-frame daylight shot looking up at an Indian street pole buried in a black tangle of cables against a clear blue sky, slow tilt up from 0 s, the question SPOKEN from 0 s; BIG HOOK TEXT ON FRAME 0 (Directive D73, Rishi 28 Nov 15:24): "Why are Indian poles buried in wires?" in very large white type with a dark shadow, the two key words in a solid highlight block, already on screen and readable in the very first frame over the moving shot (a quick pop settle in the first 0.2 s is fine, never a fade or a delay), held until about 2 s; not a text card, the photo stays full frame behind it; "a lot of these wires" reveal at about 4 s, "2,335 km" at about 20 s. First 2 s YAVG at least 90 (blue sky behind the wires).
 - Outro (D49, X15 alternation): SILENT 1.5 s follow card (midday is voiced).
 - Length: about 44 s of story plus the silent card.
 
@@ -50,8 +50,8 @@ Every new connection can mean one more wire.
 So next time you look up... you're not looking at power. [whispers] You're looking at your Wi-Fi.
 (loop: "your Wi-Fi" cuts back to frame 0, the same tangle)
 
-## On-screen text (word-timed, English, look E: white type, cyan #4FD1FF labels and dimension lines from 1.5 s only)
-"Why does it look like this?" (from 1.5 s) / "Not electricity" / "POWER: top" / "Cable TV. Internet. Fibre." / "Bengaluru, July 2024" / "Remove by 8 July. Or we cut." / "2,335 km of illegal wires" / "ONE city" / "Back the next day" / "+1 connection = +1 wire" / "It's your Wi-Fi" / "Why India looks like this #7". Small "AI visualisation" on AI shots. Fine print: "BESCOM via PTI (6 Jul 2024); Deccan Herald (19 Jul 2024)".
+## On-screen text (word-timed, English, look E: white type, cyan #4FD1FF labels and dimension lines from 1.5 s; the hook text itself is on frame 0, see Opening and Directive D73)
+"Why are Indian poles buried in wires?" (BIG, on frame 0, held to about 2 s) / "Not electricity" / "POWER: top" / "Cable TV. Internet. Fibre." / "Bengaluru, July 2024" / "Remove by 8 July. Or we cut." / "2,335 km of illegal wires" / "ONE city" / "Back the next day" / "+1 connection = +1 wire" / "It's your Wi-Fi" / "Why India looks like this #7". Small "AI visualisation" on AI shots. Fine print: "BESCOM via PTI (6 Jul 2024); Deccan Herald (19 Jul 2024)".
 
 ## Caption draft (Instagram)
 Why does every Indian street have a tangle of wires? 🔌
