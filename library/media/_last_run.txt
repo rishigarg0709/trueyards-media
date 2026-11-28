@@ -1,4 +1,3 @@
-2026-11-28 15:16 UTC
-fitweb-gate-real-1 [image]: image ok
-fitweb-gate-real-2 [image]: image ok
-fitweb-gate-real-3 [image]: image ok
+2026-11-28 15:31 UTC
+fitweb-gate-real-3-factory-1 [image]: image ok
+fitweb-gate-real-3-factory-2 [image]: image ok
