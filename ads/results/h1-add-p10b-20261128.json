@@ -1,0 +1,21 @@
+{
+ "op": "add_video_ads",
+ "ran_at": "2026-11-28T11:15:53.470046Z",
+ "result": {
+  "status_used": "ACTIVE",
+  "ads": {
+   "P10b reel Hinglish: mil gayi": {
+    "ad": {
+     "id": "120255850191060547"
+    },
+    "creative_id": "1197822695904512",
+    "video_id": "1704390334727599",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  }
+ }
+}

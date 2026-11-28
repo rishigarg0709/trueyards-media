@@ -1,0 +1,115 @@
+{
+ "op": "tactics_setup",
+ "ran_at": "2026-11-28T11:20:38.753079Z",
+ "result": {
+  "warm_campaign": "120255647260270547",
+  "W": {
+   "adset": {
+    "id": "120255647446550547"
+   },
+   "deleted": [
+    "W12 reel A1: factory ka address",
+    "W10 reel Hinglish HQ: mil gaya"
+   ],
+   "W10 reel Hinglish HQ: mil gaya": {
+    "id": "120255850200080547"
+   },
+   "W10b reel Hinglish: mil gayi": {
+    "id": "120255850213870547"
+   },
+   "W12 reel A1: factory ka address": {
+    "id": "120255850225490547"
+   }
+  },
+  "R": {
+   "adset": {
+    "id": "120255647304890547"
+   },
+   "deleted": [
+    "R12 reel A1: factory ka address",
+    "R10 reel Hinglish HQ: mil gaya"
+   ],
+   "R10 reel Hinglish HQ: mil gaya": {
+    "ad": {
+     "id": "120255850231580547"
+    },
+    "creative_id": "1839684727777755",
+    "video_id": "29697171193239748",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "R10b reel Hinglish: mil gayi": {
+    "ad": {
+     "id": "120255850233720547"
+    },
+    "creative_id": "1103041022785210",
+    "video_id": "1197539169520662",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "R12 reel A1: factory ka address": {
+    "ad": {
+     "id": "120255850235560547"
+    },
+    "creative_id": "1515474323763629",
+    "video_id": "1167160862480107",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  },
+  "U": {
+   "adset": {
+    "id": "120255647397480547"
+   },
+   "deleted": [
+    "U12 reel A1: factory ka address",
+    "U10 reel Hinglish HQ: mil gaya"
+   ],
+   "U10 reel Hinglish HQ: mil gaya": {
+    "ad": {
+     "id": "120255850237420547"
+    },
+    "creative_id": "1159226463168072",
+    "video_id": "2234600630773573",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "U10b reel Hinglish: mil gayi": {
+    "ad": {
+     "id": "120255850239650547"
+    },
+    "creative_id": "2583737552040213",
+    "video_id": "1167801935756209",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   },
+   "U12 reel A1: factory ka address": {
+    "ad": {
+     "id": "120255850252610547"
+    },
+    "creative_id": "1603817721742901",
+    "video_id": "1460916888869685",
+    "creative_notes": {
+     "welcome": "ice_breakers",
+     "opt_outs": true
+    },
+    "earlier_errors": []
+   }
+  }
+ }
+}
