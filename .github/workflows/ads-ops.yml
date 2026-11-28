@@ -4,7 +4,7 @@ name: ads-ops
 # Planner Mondays 06:30 IST -> perf/plan.json (read by the WhatsApp Lambda at 07:30 and by the ads agent).
 # GitHub's own timer barely fires in this repo (no daily run from 19 to 20 Nov 2026), so the check also starts after
 # other agent workflows: the first one after 08:00 IST that finds no daily result for today runs it, once a day; the
-# planner runs when perf/plan.json is 7 or more days old. Pending ad requests are processed on every run.
+# planner runs on Mondays when perf/plan.json is 5 or more days old (or any day once it is 9 days old). Pending ad requests are processed on every run.
 # Secrets: META_TOKEN; PERF_URL + PERF_KEY (Lambda /perf/summary, aggregates only).
 on:
   push:
@@ -38,7 +38,9 @@ jobs:
           if [ ! -f "ads/results/daily-$D.json" ] && { [ "${{ github.event.schedule }}" = "30 2 * * *" ] || [ "$H" -ge 8 ]; }; then daily=1; fi
           PD=$(python3 -c "import json;print(json.load(open('perf/plan.json')).get('date',''))" 2>/dev/null || true)
           AGE=999; [ -n "$PD" ] && AGE=$(( ( $(date -d "$D" +%s) - $(date -d "$PD" +%s) ) / 86400 ))
-          if [ "${{ github.event.schedule }}" = "0 1 * * 1" ] || { [ "$AGE" -ge 7 ] && [ "$H" -ge 6 ]; }; then plan=1; fi
+          # Rishi 28 Nov (D80): the rebalance runs on Mondays (first 7 Dec), never on a plan younger than 5 days; a missed Monday is caught up after 9 days.
+          DOW=$(TZ=Asia/Kolkata date +%u)
+          if { [ "$DOW" = "1" ] && [ "$AGE" -ge 5 ] && [ "$H" -ge 6 ]; } || [ "$AGE" -ge 9 ]; then plan=1; fi
           echo "daily=$daily plan=$plan (IST $D $H:00, plan age $AGE days)"
           echo "daily=$daily" >> "$GITHUB_OUTPUT"; echo "plan=$plan" >> "$GITHUB_OUTPUT"
       - name: Weekly media plan
