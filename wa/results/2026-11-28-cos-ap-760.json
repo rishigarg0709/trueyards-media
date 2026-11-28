@@ -1,0 +1,190 @@
+{
+ "at": "2026-11-28 11:08",
+ "by": "Chief of Staff",
+ "results": [
+  {
+   "ok": true,
+   "op": "autopilot.config",
+   "changes": true,
+   "result": {
+    "ok": true,
+    "cfg": {
+     "on": true,
+     "budgetInr": 760,
+     "costPerDelivered": 1.02,
+     "maxLeadsPerDay": 25,
+     "minRelValue": 0.3,
+     "followShare": 0.25,
+     "firstOnly": true,
+     "coldRetry": true,
+     "retryMaxShare": 0.3,
+     "coldFollow": "learn",
+     "followLearn": {
+      "floor": 0.05,
+      "lowRatio": 0.3,
+      "max": 0.05,
+      "minDelivered": 300,
+      "minLeads": 15
+     },
+     "maxRetries": 3,
+     "retryGapDays": [
+      4,
+      6,
+      8
+     ],
+     "retryShare": 0.1,
+     "retryPrior": {
+      "ratio": 0.9,
+      "strength": 400,
+      "deliver": 0.4
+     },
+     "explore": 0.2,
+     "maxCellShare": 0.35,
+     "testCellSends": 120,
+     "maxTestCells": 20,
+     "provenTouches": 5,
+     "testTouches": 2,
+     "hotScore": 75,
+     "hotTouches": 4,
+     "slots": [
+      "08:15",
+      "10:00",
+      "11:45",
+      "13:30",
+      "15:15",
+      "17:00",
+      "20:30",
+      "21:15"
+     ],
+     "minSlotShare": 0.08,
+     "slotPrior": {
+      "08:15": [
+       4,
+       550
+      ],
+      "10:00": [
+       8,
+       380
+      ],
+      "11:45": [
+       8,
+       380
+      ],
+      "13:30": [
+       4,
+       550
+      ],
+      "15:15": [
+       4,
+       550
+      ],
+      "17:00": [
+       6,
+       440
+      ],
+      "18:45": [
+       5,
+       470
+      ],
+      "20:30": [
+       5,
+       470
+      ],
+      "21:15": [
+       5,
+       470
+      ]
+     },
+     "sequence": [
+      "fit_industry",
+      "fit_industry_carousel",
+      "fit_video_nudge",
+      "fit_subsidy_nudge"
+     ],
+     "firstTemplates": [
+      "fit_industry",
+      "fit_video_nudge"
+     ],
+     "learnFirst": true,
+     "followTemplates": [
+      "fit_video_nudge",
+      "fit_industry_carousel",
+      "fit_subsidy_nudge",
+      "fit_industry"
+     ],
+     "videoTemplates": [
+      "fit_video_nudge",
+      "fit_walkthrough_video"
+     ],
+     "points": {
+      "lead": 1,
+      "fu": 4,
+      "sv": 10,
+      "vdone": 25,
+      "stop": -3
+     },
+     "festivalDays": [],
+     "festivalShare": 0.5,
+     "pausedCells": [
+      "G",
+      "NWD",
+      "WD",
+      "D.eng.lo",
+      "D.elec.lo",
+      "D.chem.lo",
+      "D.oth.lo",
+      "D.trd.lo",
+      "W.eng.lo",
+      "W.elec.lo",
+      "W.chem.lo",
+      "W.oth.lo",
+      "W.trd.lo",
+      "N.eng.lo",
+      "N.elec.lo",
+      "N.chem.lo",
+      "N.oth.lo",
+      "N.trd.lo"
+     ],
+     "planAt": "07:30",
+     "reportTo": [
+      "[number]"
+     ],
+     "warm": {
+      "on": true,
+      "reengage": {
+       "gapDays": 3,
+       "max": 8,
+       "rotation": [
+        "fit_industry",
+        "fit_industry_carousel",
+        "fit_video_nudge",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_walkthrough_video",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "visit": {
+       "gapDays": 4,
+       "max": 6,
+       "rotation": [
+        "fit_fact_card",
+        "fit_subsidy_nudge",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card",
+        "fit_fact_card"
+       ]
+      },
+      "quietDays": 2,
+      "stopAfterUnread": 3
+     },
+     "reportTemplate": "fit_autopilot_daily"
+    }
+   },
+   "by": "Chief of Staff",
+   "at": "2026-11-28T05:38:30.826Z"
+  }
+ ]
+}
