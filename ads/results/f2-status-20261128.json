@@ -1,0 +1,162 @@
+{
+ "op": "status",
+ "ran_at": "2026-11-28T06:25:55.680303Z",
+ "result": {
+  "config": {
+   "budget_approved": true,
+   "launch_approved": true,
+   "daily_cap_inr": 1100,
+   "monthly_cap_inr": 32000
+  },
+  "account": {
+   "name": "TrueYards Ads",
+   "account_status": 1,
+   "currency": "INR",
+   "amount_spent": "1023411",
+   "balance": "23915",
+   "spend_cap": "1355932",
+   "disable_reason": 0,
+   "id": "act_1101758352688996"
+  },
+  "campaign": {
+   "id": "120255645738970547",
+   "name": "FIT CTWA Leads v2",
+   "status": "ACTIVE",
+   "effective_status": "ACTIVE",
+   "spend_cap": "3200000",
+   "created_time": "2026-11-17T22:47:55+0530"
+  },
+  "adsets": [
+   {
+    "id": "120255647397480547",
+    "name": "FIT U - Unreachable on WhatsApp",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "daily_budget": "10000"
+   },
+   {
+    "id": "120255647304890547",
+    "name": "FIT R - Reminder after WhatsApp",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "daily_budget": "10000"
+   },
+   {
+    "id": "120255645739620547",
+    "name": "FIT P - Advantage+ prospecting, NCR and Haryana belts",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "daily_budget": "55000"
+   }
+  ],
+  "ads": [
+   {
+    "id": "120255646885790547",
+    "name": "P8 reel voiceover Hinglish: mil gaya",
+    "status": "PAUSED",
+    "effective_status": "PAUSED",
+    "adset_id": "120255645739620547",
+    "created_time": "2026-11-18T00:18:25+0530"
+   },
+   {
+    "id": "120255647736550547",
+    "name": "P10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255645739620547",
+    "created_time": "2026-11-18T01:17:53+0530"
+   },
+   {
+    "id": "120255646891470547",
+    "name": "P9 reel 3 things: planned industrial plot",
+    "status": "PAUSED",
+    "effective_status": "PAUSED",
+    "adset_id": "120255645739620547",
+    "created_time": "2026-11-18T00:19:08+0530"
+   },
+   {
+    "id": "120255828357900547",
+    "name": "P12 reel A1: factory ka address",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255645739620547",
+    "created_time": "2026-11-27T09:44:32+0530"
+   },
+   {
+    "id": "120255647744560547",
+    "name": "P11 reel 3 things HQ",
+    "status": "PAUSED",
+    "effective_status": "PAUSED",
+    "adset_id": "120255645739620547",
+    "created_time": "2026-11-18T01:18:33+0530"
+   },
+   {
+    "id": "120255847275040547",
+    "name": "U10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255647397480547",
+    "created_time": "2026-11-28T10:39:32+0530"
+   },
+   {
+    "id": "120255847278450547",
+    "name": "U12 reel A1: factory ka address",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255647397480547",
+    "created_time": "2026-11-28T10:40:02+0530"
+   },
+   {
+    "id": "120255847273310547",
+    "name": "R12 reel A1: factory ka address",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255647304890547",
+    "created_time": "2026-11-28T10:39:00+0530"
+   },
+   {
+    "id": "120255847271150547",
+    "name": "R10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "effective_status": "ACTIVE",
+    "adset_id": "120255647304890547",
+    "created_time": "2026-11-28T10:38:31+0530"
+   }
+  ],
+  "spend_today_inr": 176.62,
+  "spend_month_inr": 4925.48,
+  "warm_campaign": {
+   "id": "120255647260270547",
+   "name": "FIT Warm v1",
+   "status": "PAUSED",
+   "effective_status": "PAUSED"
+  },
+  "warm_adsets": [
+   {
+    "id": "120255647446550547",
+    "name": "FIT W - Warm-up before WhatsApp",
+    "status": "ACTIVE",
+    "effective_status": "CAMPAIGN_PAUSED",
+    "daily_budget": "30000"
+   }
+  ],
+  "warm_ads": [
+   {
+    "id": "120255847186410547",
+    "name": "W12 reel A1: factory ka address",
+    "status": "ACTIVE",
+    "effective_status": "CAMPAIGN_PAUSED",
+    "adset_id": "120255647446550547",
+    "created_time": "2026-11-28T10:28:12+0530"
+   },
+   {
+    "id": "120255847178380547",
+    "name": "W10 reel Hinglish HQ: mil gaya",
+    "status": "ACTIVE",
+    "effective_status": "CAMPAIGN_PAUSED",
+    "adset_id": "120255647446550547",
+    "created_time": "2026-11-28T10:27:38+0530"
+   }
+  ]
+ }
+}
