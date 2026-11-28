@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-28 21:26",
+ "checked_at": "2026-11-28 21:41",
  "checks": [
   {
    "id": "gemini",
@@ -7,12 +7,12 @@
    "unit": "INR",
    "link": "https://ai.studio/projects",
    "action": "Top up prepaid credits in Google AI Studio (TrueYards Autopilot project, Billing), then tell any project chat the amount so the estimate resets",
-   "status": "ok",
-   "left": 1361,
+   "status": "low",
+   "left": 1316,
    "burn_per_day": 300,
-   "runway_days": 4.5,
-   "detail": "About INR 1361 left of the INR 2000 top-up on 2026-11-27",
-   "spent_today": 384
+   "runway_days": 4.4,
+   "detail": "Spent about INR 430 on images today, above the INR 400 daily budget. About INR 1316 left of the INR 2000 top-up on 2026-11-27",
+   "spent_today": 430
   },
   {
    "id": "meta",
@@ -21,10 +21,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1101758352688996",
    "action": "Add prepaid funds in Meta Billing for the TrueYards ad account (FIT ads, Jind ads and the TrueYards boost all draw on it)",
    "status": "ok",
-   "left": 3348,
+   "left": 3333,
    "burn_per_day": 1270,
    "runway_days": 2.6,
-   "detail": "About INR 3348 left, spending about INR 1270 a day"
+   "detail": "About INR 3333 left, spending about INR 1270 a day"
   },
   {
    "id": "whatsapp",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "check",
-   "left": -1297,
+   "left": -1394,
    "burn_per_day": 760,
-   "runway_days": -1.7,
-   "detail": "Estimate is INR -1297, below zero while sends still go through: enter the real balance in the inbox app"
+   "runway_days": -1.8,
+   "detail": "Estimate is INR -1394, below zero while sends still go through: enter the real balance in the inbox app"
   },
   {
    "id": "elevenlabs",
@@ -75,5 +75,7 @@
    "detail": "Today's free allowance is used up; resets 05:30 IST"
   }
  ],
- "alerted": {}
+ "alerted": {
+  "gemini": "2026-11-28T16:11:49.525226+00:00"
+ }
 }
