@@ -165,3 +165,18 @@ Active after this run: spread ad sets Balcony grill (ad 120255814288050547) and 
 | Steel rods (18508881529100400) | 8.9 days | 1,684 | 35.0% | 42.2% | 1.8 | FB top, YT 691 | Ages out 28 Nov; paid 19 to 25 Nov |
 | Flat or plot, pols, Steinway, Carpet, Shani | | 112 to 163 | 52 to 83% | | 0 | | Not candidates (skip or off-lane) |
 | Forteasia project reel | | | | | | | Never boost |
+
+## 2026-11-28 (pull 05:26 UTC)
+Active after this run: spread ad sets Balcony grill (ad 120255814288050547) and Chandigarh (ad 120255814289510547), INR 100 a day each since 26 Nov 17:17 (2-day turn ends 28 Nov 17:17). All-India TrueYards Follow paused (D60). D61: paid growth only for lane reels under 45% organic skip. Account lost 2 followers on 27 Nov with about INR 260 spent (holdout proposal N70 open).
+
+| Post | Age | Reach (organic) | Skip | Hold | Sends per 1,000 | Other platforms | Status |
+|---|---|---|---|---|---|---|---|
+| Balcony grill (18114493301598863) | 87 h | 878 | 38.3% | 52.7% | 1.1 | X p90, YT 100 | ACTIVE in spread (eligible to 4 Dec) |
+| Chandigarh Sector 13 (18038784548709035) | 94 h | 1,044 | 38.7% | 21.0% | 1.0 | X p97, YT 116 | ACTIVE in spread (eligible to 4 Dec) |
+| Why India looks like this #4 refuge floor (17954290689055853) | 15 h | 316 | 41.8% | 37.1% | 0 (1 save) | FB 75, YT 112, X p77 | Next in line: lane reel under 45% skip, eligible from 28 Nov 20:21 IST (needs follow_spread) |
+| Mumbai no-OC (17970572490219322) | 89 h | 157 | 41.9% | 28.0% | 25.5 | X p77 | Under 45% skip but a real case, not the D61 lane; reserve |
+| Why India looks like this #2 black tops (18105852527384261) | 21 h | 180 | 54.5% | 17.1% | 0 | Threads p80 | Not eligible (skip over 45%) |
+| Why India looks like this #1 Dharavi (18125641003737710) | 38 h | 167 | 58.1% | 10.9% | 0 | FB p76, YT p76 | Not eligible (skip over 45%) |
+| Gold or property, Flat or plot, pols, Steinway | | 114 to 147 | 55 to 84% | | 0 | | Not candidates (skip or off-lane) |
+| Steel rods (18508881529100400) | 10 days | 1,684 | 35.0% | 42.1% | 1.8 | FB top, YT 692 | Ages out today |
+| Forteasia project reel | | | | | | | Never boost |
