@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-28 19:37",
+ "checked_at": "2026-11-28 19:45",
  "checks": [
   {
    "id": "gemini",
@@ -33,10 +33,10 @@
    "link": "https://business.facebook.com/billing_hub/accounts/details?asset_id=1088176977434603",
    "action": "Top up the WhatsApp wallet in Meta Billing, then enter the new balance in the inbox app (Funds box)",
    "status": "check",
-   "left": -1226,
+   "left": -1227,
    "burn_per_day": 760,
    "runway_days": -1.6,
-   "detail": "Estimate is INR -1226, below zero while sends still go through: enter the real balance in the inbox app"
+   "detail": "Estimate is INR -1227, below zero while sends still go through: enter the real balance in the inbox app"
   },
   {
    "id": "elevenlabs",
