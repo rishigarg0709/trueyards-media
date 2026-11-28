@@ -105,12 +105,15 @@ function districtEvidence(ss, log) {
   var v = sh.getDataRange().getValues();
   var h = v[0], iTown = h.indexOf('town'), iLead = h.indexOf('lead_at'), iStage = h.indexOf('stage'), iSrc = h.indexOf('source');
   var since = new Date(Date.now() - CFG.LOOKBACK_DAYS * 864e5);
-  var out = {};
+  var out = {}, seen = { rows: v.length - 1, leads: 0, unmapped: {} };
   for (var r = 1; r < v.length; r++) {
     var town = String(v[r][iTown] || '').trim().toLowerCase();
+    var raw = v[r][iLead];
+    if (raw) seen.leads++;
     var d = TOWN_TO_DISTRICT[town];
-    if (!d || !v[r][iLead]) continue;
-    var t = new Date(String(v[r][iLead]).replace(' ', 'T') + ':00+05:30');
+    if (town && !d) seen.unmapped[town] = (seen.unmapped[town] || 0) + 1;
+    if (!d || !raw) continue;
+    var t = raw instanceof Date ? raw : new Date(String(raw).trim().replace(' ', 'T') + (String(raw).length <= 16 ? ':00' : '') + '+05:30');
     if (isNaN(t) || t < since) continue;
     var e = out[d] || (out[d] = { leads: 0, qualified: 0, bySource: {} });
     e.leads++;
@@ -118,6 +121,7 @@ function districtEvidence(ss, log) {
     var s = String(v[r][iSrc] || 'other');
     e.bySource[s] = (e.bySource[s] || 0) + 1;
   }
+  log.push('People rows ' + seen.rows + ', with a lead date ' + seen.leads + '; towns not mapped to a district: ' + JSON.stringify(seen.unmapped));
   return out;
 }
 
