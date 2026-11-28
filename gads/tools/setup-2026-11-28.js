@@ -84,7 +84,7 @@ function main() {
 
   // ---- 2. languages English + Hindi on both
   var langOps = [];
-  [IND, BRAND].forEach(function (id) { ['1000', '1023'].forEach(function (l) { langOps.push({ campaignCriterionOperation: { create: { campaign: R('campaigns', id), language: { languageConstant: 'languageConstants/' + l } } } }); }); });
+  [IND, BRAND].forEach(function (id) { ['1000', '1023'].forEach(function (l) { langOps.push({ campaignCriterionOperation: { create: { resourceName: R('campaignCriteria', id + '~' + l), campaign: R('campaigns', id), language: { languageConstant: 'languageConstants/' + l } } } }); }); });
   run('languages', langOps);
 
   // ---- 3. brand locations = category locations (no bid adjustments), drop all-India
@@ -92,8 +92,8 @@ function main() {
     .map(function (r) { return r.campaignCriterion.location.geoTargetConstant; });
   var bLoc = q("SELECT campaign_criterion.resource_name, campaign_criterion.location.geo_target_constant FROM campaign_criterion WHERE campaign.id = " + BRAND + " AND campaign_criterion.type = 'LOCATION'");
   var have = bLoc.map(function (r) { return r.campaignCriterion.location.geoTargetConstant; });
-  run('brand locations', locs.filter(function (g) { return have.indexOf(g) < 0; }).map(function (g) { return { campaignCriterionOperation: { create: { campaign: R('campaigns', BRAND), location: { geoTargetConstant: g } } } }; }));
-  run('brand drop India', bLoc.filter(function (r) { return r.campaignCriterion.location.geoTargetConstant === 'geoTargetConstants/2356'; }).map(function (r) { return { campaignCriterionOperation: { remove: r.campaignCriterion.resourceName } }; }));
+  var added = run('brand locations', locs.filter(function (g) { return have.indexOf(g) < 0; }).map(function (g) { return { campaignCriterionOperation: { create: { resourceName: R('campaignCriteria', BRAND + '~' + g.split('/')[1]), campaign: R('campaigns', BRAND), location: { geoTargetConstant: g } } } }; }));
+  if (added.filter(function (x) { return x; }).length || have.length > 1) run('brand drop India', bLoc.filter(function (r) { return r.campaignCriterion.location.geoTargetConstant === 'geoTargetConstants/2356'; }).map(function (r) { return { campaignCriterionOperation: { remove: r.campaignCriterion.resourceName } }; }));
 
   // ---- 4. brand: "fit ..." keywords exact only; brand-only negatives
   var bk = q("SELECT ad_group_criterion.resource_name, ad_group_criterion.keyword.text, ad_group_criterion.keyword.match_type FROM ad_group_criterion WHERE campaign.id = " + BRAND + " AND ad_group_criterion.type = 'KEYWORD' AND ad_group_criterion.negative = FALSE AND ad_group_criterion.status != 'REMOVED'");
