@@ -3,20 +3,20 @@
 // "HRERA registered" stays as a short trust phrase. Only enabled ad groups in the two FIT Search campaigns.
 var NEW = {
   'Haryana industrial plots': [
-    'Industrial plots from 400 to 4,000 sq yd in a planned 138-acre township near Rohtak.',
-    '18 m and 24 m roads, own substation and STP. Get the site plan on WhatsApp today.'],
+    'Own substation, STP, CCTV and 18 m and 24 m roads. 10 min from NH-152D.',
+    'HRERA registered. Get the site plan and plot sizes on WhatsApp in minutes.'],
   'Rohtak industrial plots': [
-    'Industrial plots at Kalanaur, Rohtak, 10 min from NH-152D. Get the site plan on WhatsApp.',
-    'HRERA registered township with wide roads, own substation and STP. Book a site visit.'],
+    'Own substation, STP, CCTV and fire safety inside one gated industrial township.',
+    'HRERA registered. Get the site plan and plot sizes on WhatsApp in minutes.'],
   'Factory land and MSME': [
-    'Build your factory on a ready plot: 400 to 4,000 sq yd, wide roads, power and STP.',
-    'Haryana MSME Policy 2026 benefits, subject to eligibility. Get details on WhatsApp.'],
+    'Own substation, STP and 24 m roads for trucks. 10 min from NH-152D, near IMT Rohtak.',
+    'HRERA registered. Get the site plan and plot sizes on WhatsApp in minutes.'],
   'Warehouse and logistics land': [
-    'Truck-ready plots for warehousing: 24 m roads, 10 min from NH-152D. See the site plan.',
-    'Logistics land in a planned 138-acre HRERA registered park near Rohtak. Visit today.'],
+    'Rohtak to Bhiwani highway 5 min, Delhi to Hisar highway 15 min, KMP 40 min.',
+    'HRERA registered. Get the site plan and plot sizes on WhatsApp in minutes.'],
   'Brand searches': [
     'Official FIT page: site plan, plot sizes and free site visits. Chat with us on WhatsApp.',
-    'Forteasia Industrial Township, Kalanaur, Rohtak. 138 acres, HRERA registered.']
+    'Own substation, STP and 18 m and 24 m roads. HRERA registered.']
 };
 
 function main() {
