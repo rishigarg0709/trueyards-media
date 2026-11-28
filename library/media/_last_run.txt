@@ -1,4 +1,4 @@
-2026-11-28 14:03 UTC
-el-usage [usage]: usage ok
-wires-vo-1 [voice]: voice ok
-wires-vo-2 [voice]: voice ok
+2026-11-28 14:47 UTC
+fitweb-gate-model-a [image]: image ok
+fitweb-gate-model-b [image]: image ok
+fitweb-gate-model-c [image]: image ok
