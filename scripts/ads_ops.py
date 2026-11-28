@@ -267,6 +267,12 @@ def op_status(req):
         out["ads"] = ads_of(camp["id"])
         out["spend_today_inr"] = spend(camp["id"], "today")
         out["spend_month_inr"] = spend(camp["id"], "this_month")
+    wn = CFG.get("warm_campaign_name")
+    warm = find_campaign_named(wn) if wn else None
+    if warm:
+        out["warm_campaign"] = warm
+        out["warm_adsets"] = adsets_of(warm["id"])
+        out["warm_ads"] = ads_of(warm["id"])
     return out
 
 def op_setup(req):
