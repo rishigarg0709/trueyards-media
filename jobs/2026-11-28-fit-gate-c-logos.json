@@ -1,0 +1,30 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-gate-c-logos-1",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-model-c.png",
+   "jobs/refs/fit-gate/fit-logo.png",
+   "jobs/refs/fit-gate/forteasia-logo.png"
+  ],
+  "prompt": "Edit image 1 and keep everything else in it exactly the same: same camera, framing, model, trucks, people, palms, flags, colours and light. Make only these changes. 1) On the left tower, remove the letters FIT and mount in their place the exact logo from image 2, reproduced faithfully in its exact shapes and colours: the italic blue and red 'fit' monogram with the small blue words FORTEASIA INDUSTRIAL TOWNSHIP to its right, as a raised 3D sign on the vertical slats, slightly larger than the old letters, crisp and sharp. 2) On the right tower, remove the red F mark and the word Forteasia and mount in their place the exact logo from image 3, reproduced faithfully: the blue circle with the white F mark above the red serif word FORTEASIA in capitals, as a raised 3D sign on the slats, crisp and sharp. 3) The model must not end in a hard cut edge at the front: let the front of the road, the grass strips and the low walls fade softly and naturally into the plain warm beige background, like a vignette, so the bottom of the image is only smooth beige. No other text, no watermark."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-gate-c-logos-2",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-model-c.png",
+   "jobs/refs/fit-gate/fit-logo.png",
+   "jobs/refs/fit-gate/forteasia-logo.png"
+  ],
+  "prompt": "Edit image 1 and keep everything else in it exactly the same: same camera, framing, model, trucks, people, palms, flags, colours and light. Make only these changes. 1) On the left tower, remove the letters FIT and mount in their place the exact logo from image 2, reproduced faithfully in its exact shapes and colours: the italic blue and red 'fit' monogram with the small blue words FORTEASIA INDUSTRIAL TOWNSHIP to its right, as a raised 3D sign on the vertical slats, slightly larger than the old letters, crisp and sharp. 2) On the right tower, remove the red F mark and the word Forteasia and mount in their place the exact logo from image 3, reproduced faithfully: the blue circle with the white F mark above the red serif word FORTEASIA in capitals, as a raised 3D sign on the slats, crisp and sharp. 3) The model must not end in a hard cut edge at the front: let the front of the road, the grass strips and the low walls fade softly and naturally into the plain warm beige background, like a vignette, so the bottom of the image is only smooth beige. No other text, no watermark."
+ }
+]
