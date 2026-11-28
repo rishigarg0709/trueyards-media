@@ -17,7 +17,7 @@
  "launch_approved": true,
  "daily_cap_inr": 1400,
  "monthly_cap_inr": 42000,
- "min_adset_daily_inr": 100,
+ "min_adset_daily_inr": 50,
  "max_shift_pct_per_day": 20,
  "target_cost_per_conversation_inr": 60,
  "target_cost_per_qualified_lead_inr": 400,
@@ -452,5 +452,6 @@
   "_note_28nov": "28 Nov: Meta is INR 1,020/day before GST by plan (INR 3,000 incl GST total); the ramp adds nothing above that."
  },
  "_tactics_28nov_note": "Rishi, 28 Nov 2026: Meta and Google each run (a) discovery, (b) warm-up and (c) small reminder (R) and unreachable (U) budgets. All list ads use P10 and P12 only (never P11).",
- "_cap_note_28nov": "Rishi 28 Nov 19:21 (D80): the Monday rebalance may take FIT Meta up to INR 1,400 a day before GST (INR 42,000 a month) when cost per qualified lead or per visit says so; the FIT total ceiling is unchanged."
+ "_cap_note_28nov": "Rishi 28 Nov 19:21 (D80): the Monday rebalance may take FIT Meta up to INR 1,400 a day before GST (INR 42,000 a month) when cost per qualified lead or per visit says so; the FIT total ceiling is unchanged.",
+ "_floor_note_28nov": "Rishi 28 Nov 19:50: R and U at INR 50 a day each (they spent INR 846 in 7 days for 1 chat on audiences of 252 and 67 people); the rest goes to prospecting P."
 }

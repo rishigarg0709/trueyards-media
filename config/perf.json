@@ -13,11 +13,11 @@
  "min_visits_to_compare": 3,
  "min_qualified_to_compare": 5,
  "meta_tactics_start": {
-  "prospect_A": 0.539,
+  "prospect_A": 0.608,
   "prospect_B": 0.0,
   "warm": 0.294,
-  "remind": 0.0835,
-  "unreach": 0.0835
+  "remind": 0.049,
+  "unreach": 0.049
  },
  "meta_tactics_without_waves": {
   "prospect_A": 0.833,
@@ -26,7 +26,7 @@
   "warm": 0.0,
   "unreach": 0.0835
  },
- "min_tactic_inr": 80,
+ "min_tactic_inr": 50,
  "warm_min_waves_to_judge": 3,
  "warm": {
   "cellsPerDay": 1,

@@ -6,18 +6,18 @@
  "wa_budget_inr": 760,
  "meta_budget_inr": 1020,
  "meta_tactics": {
-  "prospect_A": 550,
+  "prospect_A": 620,
   "prospect_B": 0,
   "warm": 300,
-  "remind": 85,
-  "unreach": 85
+  "remind": 50,
+  "unreach": 50
  },
  "meta_shares": {
-  "prospect_A": 0.539,
+  "prospect_A": 0.608,
   "prospect_B": 0.0,
   "warm": 0.294,
-  "remind": 0.0835,
-  "unreach": 0.0835
+  "remind": 0.049,
+  "unreach": 0.049
  },
  "warm": {
   "cellsPerDay": 1,
@@ -73,7 +73,8 @@
  },
  "reasons": [
   "Rishi 28 Nov: INR 3,000/day incl GST (2,540 before GST). WhatsApp 760, Meta 1,020 (discovery 550, warm-up 300, R 85, U 85); Google Search 420 and YouTube 340 by the Google Ads agent.",
-  "Chief of Staff 28 Nov 18:55: focus and google blocks added (D76, D77): Google Search 310 (category 225, brand 85) and YouTube 450 before GST."
+  "Chief of Staff 28 Nov 18:55: focus and google blocks added (D76, D77): Google Search 310 (category 225, brand 85) and YouTube 450 before GST.",
+  "Rishi 28 Nov 19:50: R and U cut to INR 50 a day each (INR 846 in 7 days for 1 chat, frequency 6 to 11); INR 70 moved to prospecting P."
  ],
  "focus": {
   "districts": [
