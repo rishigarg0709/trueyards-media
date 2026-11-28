@@ -1,0 +1,8 @@
+{
+ "op": "pause_adset",
+ "ran_at": "2026-11-28T04:57:03.357140Z",
+ "result": {
+  "success": true,
+  "name": "FIT R - Reminder after WhatsApp"
+ }
+}

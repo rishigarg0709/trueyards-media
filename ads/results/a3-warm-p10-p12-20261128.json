@@ -1,0 +1,22 @@
+{
+ "op": "tactics_setup",
+ "ran_at": "2026-11-28T04:58:13.843594Z",
+ "result": {
+  "warm_campaign": "120255647260270547",
+  "W": {
+   "adset": {
+    "id": "120255647446550547"
+   },
+   "deleted": [
+    "W11 reel 3 things HQ",
+    "W10 reel Hinglish HQ: mil gaya"
+   ],
+   "W10 reel Hinglish HQ: mil gaya": {
+    "id": "120255847178380547"
+   },
+   "W12 reel A1: factory ka address": {
+    "id": "120255847186410547"
+   }
+  }
+ }
+}
