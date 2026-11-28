@@ -1,0 +1,26 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-gate-fac-wh-1",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-factory-1.png"
+  ],
+  "prompt": "Edit this image and keep everything already in it exactly the same: the camera, framing, the gate canopy, the left guard block with its glass cabin, the FIT logo and copper plaque, the right pillar with the Forteasia logo, the canopy lettering FORTEASIA INDUSTRIAL TOWNSHIP, the single red-and-white boom barrier at the guard cabin (exactly one barrier, add no other barrier or pole), the working factory with its trucks, forklift and workers on the LEFT, the container truck, tipper truck, pickup, flags, workers, grass, walls, colours and soft light. Make these changes, built as a miniature scale model in exactly the same style as the rest: 1) A CROSS ROAD just inside the gate: a few metres past the canopy, add a wide two-lane asphalt road with white dashed markings and kerbs that runs straight across the township, perpendicular to the entry road, from the far left edge of the model to the far right edge, meeting the entry road in a clean four-way junction. Open the central green median at the junction so trucks can turn left or right, with curved turning lanes and arrow markings at the corners. The factory yard on the left connects to this cross road. Both ends of the cross road fade softly into the beige background like the rest of the model, never a hard cut. 2) A WAREHOUSE on the RIGHT side of the image, on the empty beige area to the right of the entry road and behind the right Forteasia pillar, with its own paved yard connected to the new cross road: a long logistics warehouse with a navy and light-grey ribbed metal facade, a low pitched roof with skylights, a row of four loading docks with roller shutters, two open with warm light inside, a couple of container trucks parked at the docks, pallets, a forklift and a few tiny workers in hi-vis vests, plus a few trees. It sits firmly on the ground at the same scale as the factory, not floating. No text or logos on the new buildings or road, no watermark."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-gate-fac-wh-2",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-factory-1.png"
+  ],
+  "prompt": "Edit this image and keep everything already in it exactly the same: the camera, framing, the gate canopy, the left guard block with its glass cabin, the FIT logo and copper plaque, the right pillar with the Forteasia logo, the canopy lettering FORTEASIA INDUSTRIAL TOWNSHIP, the single red-and-white boom barrier at the guard cabin (exactly one barrier, add no other barrier or pole), the working factory with its trucks, forklift and workers on the LEFT, the container truck, tipper truck, pickup, flags, workers, grass, walls, colours and soft light. Make these changes, built as a miniature scale model in exactly the same style as the rest: 1) A CROSS ROAD just inside the gate: a few metres past the canopy, add a wide two-lane asphalt road with white dashed markings and kerbs that runs straight across the township, perpendicular to the entry road, from the far left edge of the model to the far right edge, meeting the entry road in a clean four-way junction. Open the central green median at the junction so trucks can turn left or right, with curved turning lanes and arrow markings at the corners. The factory yard on the left connects to this cross road. Both ends of the cross road fade softly into the beige background like the rest of the model, never a hard cut. 2) A WAREHOUSE on the RIGHT side of the image, on the empty beige area to the right of the entry road and behind the right Forteasia pillar, with its own paved yard connected to the new cross road: a long logistics warehouse with a navy and light-grey ribbed metal facade, a low pitched roof with skylights, a row of four loading docks with roller shutters, two open with warm light inside, a couple of container trucks parked at the docks, pallets, a forklift and a few tiny workers in hi-vis vests, plus a few trees. It sits firmly on the ground at the same scale as the factory, not floating. No text or logos on the new buildings or road, no watermark."
+ }
+]
