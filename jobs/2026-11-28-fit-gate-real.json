@@ -1,0 +1,56 @@
+[
+ {
+  "kind": "image",
+  "name": "fitweb-gate-real-1",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-model-c.png",
+   "jobs/refs/fit-gate/gate-front.jpg",
+   "jobs/refs/fit-gate/gate-air.jpg",
+   "jobs/refs/fit-gate/gate-sign.jpg",
+   "jobs/refs/fit-gate/gate-fit-tower.jpg",
+   "jobs/refs/fit-gate/fit-logo.png",
+   "jobs/refs/fit-gate/forteasia-logo.png"
+  ],
+  "prompt": "Image 1 sets the STYLE, CAMERA ANGLE and SCENE: a premium architect's miniature scale model on a plain warm beige background, high three-quarter view looking diagonally through the gate along the road into the township, soft warm daylight, palms, purple and pink flags, a navy factory shed behind, trucks, a pickup, a forklift and tiny workers. Keep that camera angle, composition, scene and look. But the gate structure in image 1 is wrong. Rebuild the gate so it matches the REAL gate in photos 2 to 5 exactly: (a) The left support is a box-shaped guard-room block, wider than it is deep, about as tall as the underside of the canopy and NOT rising above it, clad all round in evenly spaced vertical silver-grey aluminium rods/louvres with gaps you can see through, on a low white plinth, with a white-framed glass guard-cabin window at its lower front corner facing the road and a boom barrier beside it. (b) The right support is a single slim tall pillar with a dark grey core wrapped in open vertical silver rods, also exactly as tall as the underside of the canopy, on a white base. (c) On top of both rests one long, thin, flat cantilevered canopy slab that projects well beyond both supports on each side: thin white-silver edge fascia, warm wood-finish soffit underneath, two small floodlights on top. (d) Standing on top of the canopy along its front edge are separate navy-blue serif capital letters reading FORTEASIA \u00b7 INDUSTRIAL TOWNSHIP. (e) On the front face of the left block: the exact logo from image 6 (the italic blue and red 'fit' monogram) with a copper wood-finish plaque beside it reading FORTEASIA INDUSTRIAL TOWNSHIP, as in photo 5. On the front face of the right pillar: the exact logo from image 7 (blue circle with white F mark above the red serif word FORTEASIA), as in photo 4. Reproduce both logos faithfully in shape and colour, crisp and sharp. No towers or office floors above the canopy, no extra windows. The front of the model must not end in a hard cut: the road, grass and walls fade softly into the plain beige background at the bottom and sides. Ultra-detailed photoreal miniature, 16:9, no other text, no watermark."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-gate-real-2",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-model-c.png",
+   "jobs/refs/fit-gate/gate-front.jpg",
+   "jobs/refs/fit-gate/gate-air.jpg",
+   "jobs/refs/fit-gate/gate-sign.jpg",
+   "jobs/refs/fit-gate/gate-fit-tower.jpg",
+   "jobs/refs/fit-gate/fit-logo.png",
+   "jobs/refs/fit-gate/forteasia-logo.png"
+  ],
+  "prompt": "Image 1 sets the STYLE, CAMERA ANGLE and SCENE: a premium architect's miniature scale model on a plain warm beige background, high three-quarter view looking diagonally through the gate along the road into the township, soft warm daylight, palms, purple and pink flags, a navy factory shed behind, trucks, a pickup, a forklift and tiny workers. Keep that camera angle, composition, scene and look. But the gate structure in image 1 is wrong. Rebuild the gate so it matches the REAL gate in photos 2 to 5 exactly: (a) The left support is a box-shaped guard-room block, wider than it is deep, about as tall as the underside of the canopy and NOT rising above it, clad all round in evenly spaced vertical silver-grey aluminium rods/louvres with gaps you can see through, on a low white plinth, with a white-framed glass guard-cabin window at its lower front corner facing the road and a boom barrier beside it. (b) The right support is a single slim tall pillar with a dark grey core wrapped in open vertical silver rods, also exactly as tall as the underside of the canopy, on a white base. (c) On top of both rests one long, thin, flat cantilevered canopy slab that projects well beyond both supports on each side: thin white-silver edge fascia, warm wood-finish soffit underneath, two small floodlights on top. (d) Standing on top of the canopy along its front edge are separate navy-blue serif capital letters reading FORTEASIA \u00b7 INDUSTRIAL TOWNSHIP. (e) On the front face of the left block: the exact logo from image 6 (the italic blue and red 'fit' monogram) with a copper wood-finish plaque beside it reading FORTEASIA INDUSTRIAL TOWNSHIP, as in photo 5. On the front face of the right pillar: the exact logo from image 7 (blue circle with white F mark above the red serif word FORTEASIA), as in photo 4. Reproduce both logos faithfully in shape and colour, crisp and sharp. No towers or office floors above the canopy, no extra windows. The front of the model must not end in a hard cut: the road, grass and walls fade softly into the plain beige background at the bottom and sides. Ultra-detailed photoreal miniature, 16:9, no other text, no watermark."
+ },
+ {
+  "kind": "image",
+  "name": "fitweb-gate-real-3",
+  "model": "gemini-3-pro-image",
+  "aspect": "16:9",
+  "size": "4K",
+  "keep_size": true,
+  "inputs": [
+   "jobs/refs/fit-gate/gate-model-c.png",
+   "jobs/refs/fit-gate/gate-front.jpg",
+   "jobs/refs/fit-gate/gate-air.jpg",
+   "jobs/refs/fit-gate/gate-sign.jpg",
+   "jobs/refs/fit-gate/gate-fit-tower.jpg",
+   "jobs/refs/fit-gate/fit-logo.png",
+   "jobs/refs/fit-gate/forteasia-logo.png"
+  ],
+  "prompt": "Image 1 sets the STYLE, CAMERA ANGLE and SCENE: a premium architect's miniature scale model on a plain warm beige background, high three-quarter view looking diagonally through the gate along the road into the township, soft warm daylight, palms, purple and pink flags, a navy factory shed behind, trucks, a pickup, a forklift and tiny workers. Keep that camera angle, composition, scene and look. But the gate structure in image 1 is wrong. Rebuild the gate so it matches the REAL gate in photos 2 to 5 exactly: (a) The left support is a box-shaped guard-room block, wider than it is deep, about as tall as the underside of the canopy and NOT rising above it, clad all round in evenly spaced vertical silver-grey aluminium rods/louvres with gaps you can see through, on a low white plinth, with a white-framed glass guard-cabin window at its lower front corner facing the road and a boom barrier beside it. (b) The right support is a single slim tall pillar with a dark grey core wrapped in open vertical silver rods, also exactly as tall as the underside of the canopy, on a white base. (c) On top of both rests one long, thin, flat cantilevered canopy slab that projects well beyond both supports on each side: thin white-silver edge fascia, warm wood-finish soffit underneath, two small floodlights on top. (d) Standing on top of the canopy along its front edge are separate navy-blue serif capital letters reading FORTEASIA \u00b7 INDUSTRIAL TOWNSHIP. (e) On the front face of the left block: the exact logo from image 6 (the italic blue and red 'fit' monogram) with a copper wood-finish plaque beside it reading FORTEASIA INDUSTRIAL TOWNSHIP, as in photo 5. On the front face of the right pillar: the exact logo from image 7 (blue circle with white F mark above the red serif word FORTEASIA), as in photo 4. Reproduce both logos faithfully in shape and colour, crisp and sharp. No towers or office floors above the canopy, no extra windows. The front of the model must not end in a hard cut: the road, grass and walls fade softly into the plain beige background at the bottom and sides. Ultra-detailed photoreal miniature, 16:9, no other text, no watermark."
+ }
+]
